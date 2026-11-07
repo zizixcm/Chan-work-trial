@@ -2,7 +2,7 @@
 
 This is the maintained design for document matching and requirement assessment in Proximity. It explains application and model responsibilities, interfaces, concurrency, failure handling and architectural tradeoffs. The two product outcomes are to associate uploads with requirements and assess each requirement using its combined evidence.
 
-Implementation baseline: `1c54354`, reviewed November 7, 2026. This describes source behavior, not a deployed environment. Migration 013 and compatible server/worker configuration are required before rollout.
+Implementation baseline: `1c54354` plus the November 7, 2026 coverage/freshness fixes described below. This describes source behavior, not a deployed environment. Migration 013 and compatible server/worker configuration are required before rollout.
 
 ## Document ownership and maintenance
 
@@ -11,6 +11,7 @@ The AI integration chat maintains this document alongside implementation. The **
 | Document | Responsibility |
 | --- | --- |
 | [Requirements](AI_WORKFLOW_REQUIREMENTS.md) | Intended functional behavior and nonfunctional requirements |
+| [Feature support](AI_FEATURE_STATUS.md) | Product-facing inventory of supported features, limitations and next work |
 | This design | Architecture, interfaces, decisions, current behavior and deliberate limitations |
 | [Edge cases](AI_WORKFLOW_EDGE_CASES.md) | Stable E01–E43 scenario IDs, expected behavior, user recovery and implementation gaps; F01–F20 fault-injection plans |
 | [Test plan](AI_WORKFLOW_TEST_PLAN.md) | Traceability to actual tests, verification evidence and remaining coverage gaps |
@@ -141,11 +142,11 @@ For each newly discovered failure, the design must answer: what state changes, w
 
 ### Open correctness issues from the edge case review
 
-**Unassigned abandoned batch coverage (E11).** An open batch contributes a global limitation, but once it expires the assessment snapshot includes it only if a member was explicitly assigned to the requirement or a saved member is linked to it. An entirely unassigned, unsuccessful batch can therefore disappear from coverage limitations. The intended behavior is to keep unresolved intake coverage visible until the user resolves or explicitly abandons it under a defined policy. Add a regression with a previously fulfilled requirement and an expired unassigned manifest whose members never saved; it must not silently imply that the attempted batch was fully reviewed. This remains an implementation gap, not a passing acceptance claim.
+**Unassigned abandoned batch coverage (E11), corrected.** Unsaved members with no selected requirement remain application-wide coverage limitations after either expiry or finalization. Previously they could disappear if no saved member linked the batch to a requirement. Saving matching bytes through the same-user recovery path resolves the member and triggers reassessment. The regression suite exercises both closure paths starting from a fulfilled requirement and verifies recovery. This conservative rule may hold unrelated requirements at unable-to-determine; explicit acknowledgment/abandonment and narrower dependencies remain future product work. Expiry alone never means the user withdrew the missing evidence.
 
 **Continuous arrivals (E10/E35).** Five minutes bounds each individual batch/matching wait; repeated arrivals can keep the application-wide barrier closed longer. A per-requirement maximum deferral and explicit provisional snapshot policy are still needed before claiming bounded user-visible completion latency.
 
-**Cross-user matching uncertainty (E21/E30).** The latest-match lookup used to derive limitations spans users and does not independently require a current fingerprint. It also excludes failed documents linked anywhere from the unassigned-failure branch. Define which authorized actor and current attempt can resolve uncertainty, then test two borrowers with divergent outcomes and changed requirements. Current conservative limitations do not establish precise requirement dependencies or full multi-user correctness.
+**Cross-user matching uncertainty (E21/E30), corrected.** Use the latest match per document and currently enabled, active borrower, checking each against its current input fingerprint and consent epoch. One actor's clear result cannot erase another actor's ambiguity. Outdated match findings remain unresolved until current work resolves them; revoked/disabled actors do not supply authoritative findings. Reuse each document's current match snapshot within the assessment snapshot calculation to limit duplicate reads. Failed matches on human-linked documents still permit assessment of those explicit links. Tests cover divergent actor outcomes, disabling the ambiguous actor, and changed definitions invalidating old successful findings. This is conservative multi-actor handling, not a complete semantic dependency model; a failed document linked elsewhere can still need a more precise assignment policy.
 
 **Source evidence versus semantic truth (E24/E27).** Correctly quoted cells and deterministic aggregation cannot detect every false criterion finding. Keep false-fulfilled examples in the evaluation corpus even after switching models; do not count a passing output schema as a quality pass.
 
@@ -183,3 +184,5 @@ Rollback checkpoint: `66db429`, tagged `checkpoint/pre-ai-workflow`. Migration 0
 | `67544c2` | Latest pending assessment coalescing with scoped isolation and preserved manual priority |
 | `1c54354` | Durable manifests, bounded readiness, mutation reconciliation, derived fulfillment and explicit model profiles; workflow/HTTP tests and bounded live fixtures |
 | Current documentation review | Consolidate this maintained design; edge-case chat independently reconciles scenario claims and residual risks |
+
+November 7, 2026 follow-up: preserved unassigned missing intake across batch closure and made matching uncertainty actor-aware and freshness-checked. Regression fixtures reproduce the previous failures. Maintain the feature inventory with these behavior changes.

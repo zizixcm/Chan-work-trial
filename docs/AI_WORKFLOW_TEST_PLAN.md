@@ -30,7 +30,7 @@ The workflow fixture increases admission limits only inside its isolated simulat
 | E08 missing/corrupt source | preparation hash/size tests and storage tests | Background scrubbing/restoration drill |
 | E09 reusable extraction | No artifact cache implemented | Durable extraction cache and version invalidation tests |
 | E10 combined batch evidence | workflow suite asserts one assessment containing both saved sources | Large concurrent-batch load experiment |
-| E11 partial/abandoned batch | workflow suite expires manifest, preserves saved members, checks limitation and late arrival | Browser reopen/reselection journey; unsent bytes cannot be recovered automatically |
+| E11 partial/abandoned batch | workflow suite expires manifest, preserves saved members, checks limitation and late arrival | Includes unassigned expiry/finalization and save recovery; browser reopen journey remains; unsent bytes cannot be recovered automatically |
 | E12 refresh/history failure | HTTP status path; scoped latest-per-target query | Browser network-loss injection and >100-job UI fixture |
 | E13 failed matching with human links | workflow suite malformed matching response still yields aggregate check | Exhaustive preparation-failure UX |
 | E14 mid-processing additions | jobs coalescing and workflow stale pickup tests | Broad interleaving stress test |
@@ -66,7 +66,7 @@ The workflow fixture increases admission limits only inside its isolated simulat
 
 ## Model evaluation policy
 
-The subsequent documentation review identified priority additions to the existing fault-injection plans: F09 needs an expired general-upload manifest with no saved members or explicit requirement association; F18 needs unrelated batches and continuous arrivals that extend the application-wide barrier; F11/F12 need multiple enabled borrowers with divergent latest-match outcomes and broad reconciliation. These cases are not established by the passing integration sequence. See the [design's open correctness issues](AI_WORKFLOW_DESIGN.md#open-correctness-issues-from-the-edge-case-review) and the [dated edge-case review](AI_WORKFLOW_EDGE_CASES.md#dated-implementation-review--november-7-2026-1c54354).
+The follow-up regression suite now covers F09 expired **and finalized** general-upload manifests with all members unsaved and no requirement association, plus normal-save recovery. F11 covers a newer clear match failing to hide another enabled borrower's ambiguity and resolution after that actor disables AI. F12 checks that old successful matches cannot resolve changed definitions. Both original defects were reproduced before the fixes. Remaining priorities include unrelated/continuous arrivals (F18), sustained multi-borrower reconciliation and finer dependency policies. See the [maintained design](AI_WORKFLOW_DESIGN.md).
 
 Gemini Flash is the new code/example-configuration default. Flash-Lite produced a false-fulfilled result on the missing-rent fixture, twice, including after prompt clarification. Flash correctly found the missing criterion but initially contradicted it in the legacy summary; the application now derives aggregate status from validated findings and retains contradictory provider summaries for diagnostics. This follows the specification's application-owned status rule; the expected partial-fulfillment test outcome was not weakened. Synthetic failure and success evidence is retained in `artifacts/ai-evaluations/`.
 
@@ -92,3 +92,7 @@ Tests run migrations only in disposable schemas. Shared preview deployment and s
 - Flash-Lite's two observed false-fulfilled negative-fixture attempts and Flash's initial contradictory-summary rejection informed the model/default and aggregation changes. Retained artifacts distinguish failures from subsequent passing results.
 
 No shared-database migration, preview restart or production deployment was performed for this integration. Concurrent frontend changes in the shared workspace are excluded from the integration commit and the staged-tree build.
+
+## Coverage/freshness follow-up validation — November 7, 2026
+
+All 42 unit tests, PostgreSQL jobs integration, expanded workflow integration (67 synthetic calls) and TypeScript checks pass. Added assertions cover expired/finalized unassigned manifests, late-save recovery, cross-user ambiguity, disabled-actor exclusion and outdated matching after definition changes. The first two regressions failed on the prior implementation before fixes. No paid model calls, migration changes or deployment were performed for this increment. The earlier build/live results above apply to the earlier integration baseline, not a new build of these fixes.

@@ -65,19 +65,39 @@ export async function snapshot(db: PoolClient, applicationId: string, task: Task
   const batches=task==='verify_requirement.v1'?(await db.query(`SELECT b.id,b.state,
     (SELECT count(*)::int FROM upload_batch_members m WHERE m.batch_id=b.id AND m.state<>'saved') missing
     FROM upload_batches b WHERE b.application_id=$1 AND (b.state='open' OR EXISTS(
+      SELECT 1 FROM upload_batch_members missing WHERE missing.batch_id=b.id AND missing.requirement_id IS NULL AND missing.state<>'saved') OR EXISTS(
       SELECT 1 FROM upload_batch_members m WHERE m.batch_id=b.id AND (m.requirement_id=$2 OR EXISTS(
         SELECT 1 FROM requirement_documents rd WHERE rd.document_id=m.document_id AND rd.requirement_id=$2 AND rd.unlinked_at IS NULL)))) ORDER BY b.id`,[applicationId,targetId])).rows:[];
   const pendingMatches=task==='verify_requirement.v1'?(await db.query(`SELECT DISTINCT document_id FROM analysis_jobs WHERE application_id=$1
     AND task='match_document.v1' AND state IN ('queued','running','retry_wait','blocked') ORDER BY document_id`,[applicationId])).rows:[];
-  const unresolvedMatches=task==='verify_requirement.v1'?(await db.query(`SELECT d.id FROM documents d
-    JOIN LATERAL (SELECT state,result FROM analysis_jobs j WHERE j.application_id=d.application_id AND j.document_id=d.id
-      AND j.task='match_document.v1' ORDER BY created_at DESC,id DESC LIMIT 1) latest ON true
-    WHERE d.application_id=$1 AND NOT EXISTS(SELECT 1 FROM documents successor WHERE successor.replaces_document_id=d.id)
-    AND ((latest.state IN ('failed','dead_letter','expired','cancelled') AND NOT EXISTS(
-      SELECT 1 FROM requirement_documents rd WHERE rd.document_id=d.id AND rd.unlinked_at IS NULL))
-      OR (latest.state='succeeded' AND EXISTS(SELECT 1 FROM jsonb_array_elements(latest.result->'requirements') candidate
-        WHERE candidate->>'requirementId'=$2 AND candidate->'relevance'->>'state'='ambiguous')))
-    ORDER BY d.id`,[applicationId,targetId])).rows:[];
+  const unresolvedMatches: Array<{id:string}> = [];
+  if(task==='verify_requirement.v1') {
+    // Resolve uncertainty per currently authorized actor, never by whichever
+    // user's job happens to be newest. Old definitions/consent cannot resolve it.
+    const matches=(await db.query(`SELECT DISTINCT ON (j.document_id,j.initiated_by)
+      j.document_id,j.initiated_by,j.state,j.result,j.fingerprint,j.result_fingerprint,
+      j.consent_epoch::text,p.epoch::text,
+      EXISTS(SELECT 1 FROM requirement_documents rd WHERE rd.document_id=j.document_id
+        AND rd.unlinked_at IS NULL) AS linked
+      FROM analysis_jobs j JOIN application_memberships m ON m.application_id=j.application_id
+        AND m.user_id=j.initiated_by AND m.active AND m.role='borrower'
+      JOIN user_ai_preferences p ON p.user_id=j.initiated_by AND p.enabled
+      WHERE j.application_id=$1 AND j.task='match_document.v1' AND j.consent_scope='borrower'
+        AND NOT EXISTS(SELECT 1 FROM documents successor WHERE successor.replaces_document_id=j.document_id)
+      ORDER BY j.document_id,j.initiated_by,j.created_at DESC,j.id DESC`,[applicationId])).rows;
+    const inputs=new Map<string,PinnedSnapshot>();
+    const unresolved=new Set<string>();
+    for(const match of matches) {
+      let input=inputs.get(match.document_id);
+      if(!input){input=await snapshot(db,applicationId,'match_document.v1',match.document_id);inputs.set(match.document_id,input);}
+      const current=match.consent_epoch===match.epoch &&
+        analysisFingerprint(input,'match_document.v1','borrower',match.epoch,match.initiated_by)===(match.result_fingerprint||match.fingerprint);
+      const ambiguous=match.state==='succeeded' && match.result?.requirements?.some(
+        (candidate:{requirementId:string;relevance:{state:string}})=>candidate.requirementId===targetId && candidate.relevance.state==='ambiguous');
+      if(!current || ambiguous || (!match.linked && ['failed','dead_letter','expired','cancelled','stale'].includes(match.state)))unresolved.add(match.document_id);
+    }
+    unresolvedMatches.push(...[...unresolved].sort().map(id=>({id})));
+  }
   const processingLimitations:string[]=[];
   const replacedLinks=task==='verify_requirement.v1'?(await db.query(`SELECT rd.document_id FROM requirement_documents rd
     WHERE rd.application_id=$1 AND rd.requirement_id=$2 AND rd.unlinked_at IS NULL AND EXISTS(

@@ -33,7 +33,7 @@ async function main(){
  const access:Access={applicationId:'a',userId:'u',role:'borrower',displayName:'Fixture'};
  const batches=new UploadBatchService(access,db),service=new AnalysisService(access,db),repo=new PostgresJobRepository(db,storage);
  const calls:Array<{task:string;documents:number}>=[];
- let failMatch=false,duringCall:(()=>Promise<void>)|undefined;
+ let failMatch=false,ambiguousMatch=false,duringCall:(()=>Promise<void>)|undefined;
  const transport:ProviderTransport={generate:async args=>{
    const parsed=JSON.parse(args.prompt),scope=parsed.evidence||parsed,matching=!parsed.evidence;
    calls.push({task:matching?'match':'verify',documents:scope.documents.length});
@@ -42,7 +42,7 @@ async function main(){
    const doc=scope.documents[0];
    const evidence=doc?[{documentId:doc.id,record:2,column:1,quote:doc.records[1].cells[0].value}]:[];
    const checks=(r:any)=>r.criteria.map((c:any)=>({criterionId:c.id,state:doc?'met':'unknown',reason:'Synthetic fixture',evidence}));
-   const value=matching?{schemaVersion:'match.v1',classification:{kind:'rent_roll',reason:'Fixture',evidence},requirements:scope.requirements.map((r:any)=>({requirementId:r.id,relevance:{state:'relevant',reason:'Fixture',evidence},checks:checks(r)}))}:
+   const value=matching?{schemaVersion:'match.v1',classification:{kind:'rent_roll',reason:'Fixture',evidence},requirements:scope.requirements.map((r:any)=>({requirementId:r.id,relevance:{state:ambiguousMatch?'ambiguous':'relevant',reason:'Fixture',evidence},checks:checks(r)}))}:
      {schemaVersion:'verify.v1',requirementId:scope.requirements[0].id,assessment:doc&&!parsed.preparationLimitations.length?'appears_complete':'unknown',checks:checks(scope.requirements[0]),missingEvidence:[],conflicts:[],limitations:parsed.preparationLimitations};
    return {text:JSON.stringify(value),usage:{inputTokens:100,outputTokens:100}};
  }};
@@ -96,6 +96,38 @@ async function main(){
   assert((await batches.status('abandoned')).members.every((m:{state:string})=>m.state==='saved'),'reselection resolves matching abandoned members');
   assert.equal((await current())?.result.fulfillment,'fulfilled','late member clears limitation and refreshes');
 
+  // E11/F09: an unassigned manifest must not disappear merely because it closes.
+  for(const close of ['expired','finalized'] as const){
+    const unsent=spec('unassigned-'+close),batch='unassigned-'+close;
+    await batches.create(batch,[{...unsent,requirementId:undefined}]);
+    if(close==='expired')await db.query("UPDATE upload_batches SET deadline_at=now()-interval '1 second' WHERE id=$1",[batch]);
+    else await batches.finalize(batch);
+    await drain();
+    assert.equal((await current())?.result.fulfillment,'unable_to_determine',`F09: ${close} unassigned intake blocks false completion`);
+    assert((await current())?.result.limitations.some((s:string)=>s.includes('not saved')));
+    // Recover through the normal save path, which resolves same-user/hash members.
+    await batches.create(batch+'-recovery',[unsent]);await save(batch+'-recovery',unsent);
+    await batches.finalize(batch+'-recovery');await drain();
+    assert.equal((await batches.status(batch)).members[0].state,'saved');
+    assert.equal((await current())?.result.fulfillment,'fulfilled','resolved intake restores current fulfillment');
+  }
+
+  // E21/E30: a newer clear match from another actor cannot erase ambiguity.
+  const otherService=new AnalysisService({...access,userId:'other'},db);
+  await otherService.setPreference(true,'0');
+  await otherService.request('match_document.v1',first.id,randomUUID());
+  ambiguousMatch=true;
+  const ambiguous=await repo.claim('interactive','ambiguous');assert(ambiguous);await run(ambiguous);
+  ambiguousMatch=false;
+  const ownMatch=(await service.status()).jobs.find(j=>j.task==='match_document.v1'&&j.targetId===first.id&&j.state==='succeeded');assert(ownMatch);
+  await service.request('match_document.v1',first.id,randomUUID(),undefined,ownMatch.id);
+  const clear=await repo.claim('interactive','clear');assert(clear);await run(clear);
+  const uncertain=await transaction(db,client=>snapshot(client,'a','verify_requirement.v1','r'));
+  assert(uncertain.processingLimitations?.some(s=>s.includes('confidently assigned')),'F11: newer other-actor success cannot hide unresolved ambiguity');
+  const otherPref=(await otherService.status()).preference;await otherService.setPreference(false,otherPref.epoch);
+  await drain();
+  assert.equal((await current())?.result.fulfillment,'fulfilled','F11: revoked actor does not keep assessment uncertain');
+
   // A failed matcher cannot strand evidence that the human explicitly linked.
   const bad=spec('bad-match');await batches.create('failed-match',[bad]);await save('failed-match',bad);await batches.finalize('failed-match');
   failMatch=true;const beforeFailure=calls.length;await drain();
@@ -105,6 +137,8 @@ async function main(){
   // Stale queued work is disposed before any provider call; mutation marker owns replacement.
   await db.query("UPDATE requirements SET purpose='Changed definition' WHERE id='r'");
   assert.equal(await current(),undefined,'F12: successful old assessment becomes visibly stale');
+  const outdatedMatches=await transaction(db,client=>snapshot(client,'a','verify_requirement.v1','r'));
+  assert(outdatedMatches.processingLimitations?.some(s=>s.includes('confidently assigned')),'F12: old successful matches cannot resolve changed definitions');
   await repo.recover();
   const stale=await repo.claim('shared','stale');assert(stale);
   await db.query("UPDATE requirements SET period='Next period' WHERE id='r'");
@@ -141,7 +175,7 @@ async function main(){
   const pref=(await service.status()).preference;await service.setPreference(false,pref.epoch);
   await db.query("UPDATE requirements SET period='Consent off change' WHERE id='r'");const offCalls=calls.length;await drain();assert.equal(calls.length,offCalls,'F03: off blocks automatic refresh');
   await transaction(db,client=>snapshot(client,'a','verify_requirement.v1','r')); // snapshot remains readable without dispatch
-  console.log(JSON.stringify({ok:true,syntheticCalls:calls.length,scenarios:['E14 stale pickup','F01 mid-call change','F03 consent','F09 batch barrier','F09 abandoned batch and late arrival','F10 failed matching','F12 definition refresh','F02 evidence removal','manifest idempotency and ownership','derived fulfillment']}));
+  console.log(JSON.stringify({ok:true,syntheticCalls:calls.length,scenarios:['E14 stale pickup','F01 mid-call change','F03 consent','F09 batch barrier','F09 abandoned batch and late arrival','F09 unassigned expiry/finalization/recovery','F11 cross-user ambiguity','F12 stale match findings','F10 failed matching','F12 definition refresh','F02 evidence removal','manifest idempotency and ownership','derived fulfillment']}));
  }finally{await pool().end();await db.end();await admin.query(`DROP SCHEMA IF EXISTS ${schema} CASCADE`);await admin.end();await rm(root,{recursive:true,force:true});}
 }
 main().catch(e=>{console.error(e instanceof Error?e.stack:'Workflow suite failed');process.exitCode=1;});
