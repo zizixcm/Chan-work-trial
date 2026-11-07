@@ -1,0 +1,41 @@
+{
+  "changed_files": [
+    "app/components/borrower-portal.tsx",
+    "app/components/batch-upload.tsx",
+    "app/globals.css"
+  ],
+  "features": [
+    "Each request has visible Upload and separate Details actions; all attention items remain visible",
+    "Multiple file picker with one authenticated POST per file, per-file validation/progress/success/failure, retry-only-failed behavior",
+    "Successful uploads remain saved and visible through details/add-more navigation; pending/failed File selections stay in page memory",
+    "Lost-response retry reconciles exact SHA-256 and current request link before resending",
+    "Request details show purpose, period, lender feedback, all active linked files, authorized Preview, Download, Remove document and Add more documents",
+    "Removal confirms scoped unlink consequence; DELETE carries captured evidence_revision and consumes returned snapshot; shared and submitted history preserved by backend contract",
+    "Global upload retains file-first selection and explicit request mapping"
+  ],
+  "verification": [
+    "TypeScript passed",
+    "Eight existing tests passed",
+    "Final production build passed in isolated temporary copy, shared .next untouched",
+    "Existing authenticated PostgreSQL HTTP integration passed: six file types, exact bytes, shared links, immutable submitted receipt/references, authorization, stale requests, idempotent unlink and no stale-acceptance resurrection",
+    "Browser route override rendered latest borrower source against canonical authenticated API: two-file batch, one simulated transport failure, retry sent only failed file; successful file POST count 1, failed file POST count 2",
+    "Real authorized borrower CSV preview and byte-identical download; details/add-more preserved uploaded batch entries",
+    "Live lost-response test: server saved one file, browser response aborted; retry reconciled it without a second POST",
+    "Browser removal contract fixture: confirmation/Keep focus, stale response retention, refresh/retry and correct scoped DELETE URL/snapshot handling",
+    "Mobile 390px and 200% CSS zoom reflow; preview close and Escape focus behavior"
+  ],
+  "publication": "Platform owner must rebuild/restart canonical http://127.0.0.1:3001 with both frontend and backend changes. No frontend-owned runtime/configuration/restart changes.",
+  "limitations": [
+    "Browser removal UI used controlled responses because canonical production has not yet loaded the new backend route; real unlink/shared/history behavior passed authenticated PostgreSQL HTTP integration in its disposable schema",
+    "Pending or failed native File selections survive modal navigation while the page stays open, not browser refresh; completed files persist server-side",
+    "No batch endpoint or background worker: requests are sequential per file",
+    "XLSX preview remains download-only through shared DocumentPreview",
+    "Three synthetic CSV files were added to the live demo by upload verification; no demo files were deleted or unlinked"
+  ],
+  "screenshots": [
+    "borrower-batch-partial-failure.png",
+    "borrower-details-preview.png",
+    "borrower-details-mobile.png",
+    "borrower-remove-confirmation.png"
+  ]
+}

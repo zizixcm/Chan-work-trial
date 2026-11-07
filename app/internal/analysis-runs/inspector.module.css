@@ -1,0 +1,17 @@
+.main { max-width: 1100px; margin: 0 auto; padding: 40px 24px; font-size: 16px; line-height: 1.6; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 24px; }
+.header a { text-decoration: underline; }
+.header h1 { font-size: 32px; margin: 12px 0; }
+.header button { min-height: 44px; padding: 8px 20px; background: var(--green); color: white; border-radius: 8px; }
+.notice { background: #edf1e8; padding: 16px 20px; border-radius: 10px; margin-bottom: 24px; }
+.panel { border: 1px solid var(--line); background: white; border-radius: 10px; padding: 20px; margin: 16px 0; overflow-wrap: anywhere; }
+.panel h2 { font-size: 20px; margin-bottom: 8px; }
+.panel summary { font-weight: 600; cursor: pointer; min-height: 44px; }
+.panel pre { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; font-size: 14px; padding: 16px; background: #f4f6f3; max-height: 600px; overflow-y: auto; }
+.muted { color: #53645d; font-size: 14px; }
+.list { list-style: none; padding: 0; }
+.runLink { display: flex; justify-content: space-between; gap: 16px; min-height: 44px; text-decoration: underline; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; }
+.facts dt { color: #53645d; font-size: 14px; }
+.facts dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 600px) { .facts { grid-template-columns: 1fr; } .header { flex-direction: column; } .main { padding: 24px 16px; } }

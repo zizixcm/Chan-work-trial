@@ -1,0 +1,16 @@
+{
+  "status": 400,
+  "message": {
+    "text": "[Google AI Studio] The specified schema produces a constraint that has too many states for serving. Typical causes of this error are schemas with lots of text (for example, very long property or enum names), schemas with long array length limits (especially when nested), or schemas using complex value matchers (for example, integers or numbers with minimum/maximum bounds or strings with complex formats like date-time)",
+    "bytes": 421,
+    "truncated": false,
+    "redacted": false
+  },
+  "body": {
+    "text": "{\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\n  \\\"error\\\": {\\n    \\\"code\\\": 400,\\n    \\\"message\\\": \\\"The specified schema produces a constraint that has too many states for serving. Typical causes of this error are schemas with lots of text (for example, very long property or enum names), schemas with long array length limits (especially when nested), or schemas using complex value matchers (for example, integers or numbers with minimum/maximum bounds or strings with complex formats like date-time)\\\",\\n    \\\"status\\\": \\\"INVALID_ARGUMENT\\\"\\n  }\\n}\\n\",\"provider_name\":\"Google AI Studio\",\"is_byok\":false,\"provider_error_code\":\"400\"}},\"user_id\":\"[REDACTED_ORG]\"}",
+    "bytes": 714,
+    "truncated": false,
+    "redacted": false
+  },
+  "cause": null
+}

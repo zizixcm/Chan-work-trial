@@ -1,0 +1,47 @@
+{
+  "name": "proximity-borrower-portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3001",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3001",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:integration": "tsx tests/http.integration.ts",
+    "setup:local": "node scripts/setup-local.mjs",
+    "db:up": "node scripts/compose.mjs up -d --wait",
+    "db:stop": "node scripts/compose.mjs stop",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "preview": "npm run build && npm run start",
+    "db:verify": "tsx scripts/verify-schema.ts",
+    "worker:analysis": "tsx scripts/analysis-worker.ts",
+    "test:ai-integration": "tsx tests/ai.integration.ts",
+    "test:jobs-integration": "tsx tests/jobs.integration.ts"
+  },
+  "dependencies": {
+    "@mastra/core": "^1.82.0",
+    "better-auth": "^1.7.18",
+    "fast-xml-parser": "^5.12.0",
+    "fflate": "^0.8.2",
+    "lucide-react": "^0.468.0",
+    "next": "^16.0.0",
+    "papaparse": "^5.5.3",
+    "pdf-lib": "^1.17.1",
+    "pg": "^8.23.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "server-only": "^0.0.1",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/papaparse": "^5.3.16",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.3"
+  }
+}

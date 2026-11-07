@@ -1,0 +1,57 @@
+{
+  "changed_files": [
+    "app/lender/review/page.tsx",
+    "app/lender/lender.css",
+    "app/components/document-preview.tsx"
+  ],
+  "implemented": [
+    "Persistent left document navigation groups individual filenames by request; selecting a file updates request context, file, Preview tab and expansion together. The dropdown was replaced by a clear current filename. Collapse leaves navigation visible; narrow screens stack navigation above workspace.",
+    "Collapsible workspace with Preview / Review / Notes tabs, roving tab focus, arrow/Home/End navigation, tab selection expands panel",
+    "Authorized original-file fetch; typed PDF/image blobs; UTF-8 CSV and plain text previews; no uploaded HTML rendering or spreadsheet execution",
+    "Focused change-request form replaces decision content; Back restores decision focus and retains text",
+    "Account/application/request-scoped browser review drafts; separate private note draft; retained across Back/tabs/collapse/refresh/failure",
+    "Existing server review and note POST contracts and optimistic concurrency fields retained; review scope is all current files for the request"
+  ],
+  "checks_passed": [
+    "Final isolated Next.js production build with TypeScript",
+    "Seven existing tests",
+    "Real authenticated canonical API reads with latest frontend rendered by browser route override: CSV, PNG and PDF originals displayed",
+    "Real anonymous document request denied with HTTP 401",
+    "Actual PDF content inspected in rendered screenshot",
+    "Keyboard tab arrow/Home/End navigation; Back focus; collapse/expand; draft persistence through reload and simulated save failure",
+    "Unsupported XLSX fallback; simulated preview failure and successful retry",
+    "390px mobile and 200% CSS zoom without page horizontal overflow",
+    "Controlled malicious CSV: HTML and formulas rendered as literal text; 100-row/20-column bound with truncation notice",
+    "Latest navigation update: real authenticated multi-file switching within and across requests; one selected state; selecting while collapsed expands Preview; review and note drafts retained; 390px stacking and 200% CSS zoom checked; TypeScript passed."
+  ],
+  "limitations": [
+    "Canonical production preview not rebuilt/restarted by frontend; platform owner must refresh to publish locally at http://127.0.0.1:3001",
+    "No public hosting or runtime/auth/port/dependency changes",
+    "Preview fetched real authenticated originals; saved review/note writes were not sent in the new browser walkthrough; failure responses were simulated",
+    "One synthetic workspace-preview-check.pdf uploaded through authorized borrower endpoint for PDF verification; no data reset/deletion",
+    "XLSX is download-only; plain text path implemented but not exercised with a stored TXT (uploads currently do not accept TXT)",
+    "Native PDF browser controls vary; unsupported browsers get download fallback; PDF generation/rendering service is not added",
+    "Formal version-history DTO and per-file review API are absent; selected original previews use existing document IDs, decisions explicitly cover current request file set",
+    "Drafts are scoped browser storage, not cross-device server drafts; legacy unscoped browser drafts are untouched and not automatically imported",
+    "No external participant usability study or native browser zoom certification"
+  ],
+  "references": {
+    "pdf_embedding": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe"
+  },
+  "screenshots": [
+    "workspace-preview-csv.png",
+    "workspace-preview-image.png",
+    "workspace-preview-pdf.png",
+    "workspace-change-request.png",
+    "workspace-collapsed.png",
+    "workspace-private-notes.png",
+    "workspace-unsupported.png",
+    "workspace-preview-failure.png",
+    "workspace-mobile.png",
+    "workspace-200-percent.png",
+    "workspace-document-list.png",
+    "workspace-document-list-collapsed.png",
+    "workspace-document-list-pdf.png",
+    "workspace-document-list-mobile.png"
+  ]
+}

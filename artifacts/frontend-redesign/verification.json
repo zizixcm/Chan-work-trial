@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-07T01:05:04.689Z",
+  "checks": [
+    "Lender change request saves, survives refresh, and textarea receives focus.",
+    "Lender has no horizontal overflow at 390px or 200% CSS zoom.",
+    "Saved lender feedback appears in borrower task.",
+    "Acceptance saves and survives refresh.",
+    "Sign-in failure preserves email and displays an error; retry with valid account opens borrower portal; lender redirect also verified.",
+    "PNG upload/download byte equality; multiple files remain under one request; adding a file clears current acceptance; Escape restores task-opener focus.",
+    "Optimized Next.js production build with Webpack passed in an isolated temporary source copy; shared .next output untouched."
+  ],
+  "alsoVerified": [
+    "Attention-first list and full-list navigation",
+    "Upload invalid-format validation",
+    "Simulated network failure preserves selected file; retry saves CSV",
+    "Downloaded original bytes match upload",
+    "Borrower at 390px and 200% CSS zoom has no horizontal overflow",
+    "TypeScript no-emit and seven existing tests pass"
+  ],
+  "limits": [
+    "One transient isolated-preview lender login redirect was retried successfully in a fresh browser.",
+    "Real PostgreSQL demo received one synthetic CSV, one PNG, and lender change/accept decisions. No seed reset or deletion.",
+    "200% uses CSS zoom, not native browser zoom.",
+    "Shared production preview unchanged; platform owner must rebuild/restart before canonical URL reflects source changes.",
+    "Formal submissions, replacement/version APIs, and borrower explanation persistence are not implemented by this presentation increment."
+  ],
+  "changedFiles": [
+    "app/page.tsx",
+    "app/components/borrower-portal.tsx",
+    "app/globals.css",
+    "app/lender/page.tsx",
+    "app/lender/review/page.tsx",
+    "app/lender/lender.css",
+    "app/login/page.tsx"
+  ],
+  "preview": "Temporary QA preview stopped. Canonical preview remains http://127.0.0.1:3001 and requires platform-owner rebuild/restart.",
+  "integrationDependencies": [
+    "Explicit replacement/version history endpoints",
+    "Borrower explanation save/read endpoints",
+    "Immutable submission preview/send/receipt/resubmission endpoints",
+    "Server-backed user/application-scoped drafts; existing lender browser drafts remain limited",
+    "Lender-added requests and waivers"
+  ]
+}

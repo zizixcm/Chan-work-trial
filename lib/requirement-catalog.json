@@ -1,0 +1,796 @@
+[
+  {
+    "id": "33000000-0000-4000-8000-000000000010",
+    "title": "Commercial loan application",
+    "category": "Application & LOI",
+    "purpose": "Identify the borrowing parties, collateral and requested financing.",
+    "period": "Current signed application",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 0,
+    "criteria": [
+      "Exact legal names, entity type and ownership are complete.",
+      "Loan amount, purpose and collateral are identified.",
+      "Disclosure questions are answered; authorized signers sign and date.",
+      "Borrower and guarantor roles match the accepted LOI and legal documents."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000011",
+    "title": "Accepted LOI / term sheet",
+    "category": "Application & LOI",
+    "purpose": "Document the proposed terms and acceptance.",
+    "period": "Latest accepted version, including all pages",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 1,
+    "criteria": [
+      "Borrower, guarantors, property and proposed terms are correct.",
+      "Required acceptance signatures and dates are present.",
+      "Handwritten edits are acknowledged and subsequent changes reconciled.",
+      "Final credit approval is tracked separately from LOI acceptance."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000012",
+    "title": "Loan purpose / cash-out explanation",
+    "category": "Application & LOI",
+    "purpose": "Explain how loan proceeds will be used.",
+    "period": "Current proposed sources and uses",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Conditional",
+    "sort_order": 2,
+    "criteria": [
+      "Uses and recipients of proceeds are identified.",
+      "Amounts reconcile with existing balances, costs and requested proceeds.",
+      "Unexplained differences are resolved."
+    ],
+    "condition": "Cash-out is requested or the application does not adequately explain the use of proceeds.",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000013",
+    "title": "Business membership & account agreement",
+    "category": "Application & LOI",
+    "purpose": "Complete lender-required entity account setup.",
+    "period": "Current lender forms",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Conditional",
+    "sort_order": 3,
+    "criteria": [
+      "Entity name and authorized signers match legal documents.",
+      "Required signatures and dates are present.",
+      "Lender confirms required accounts are opened."
+    ],
+    "condition": "Required by the lender\u2019s membership/account policy.",
+    "collection": "borrower",
+    "stage": "Before funding"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000014",
+    "title": "Trust / fiduciary account agreement",
+    "category": "Application & LOI",
+    "purpose": "Complete account setup for an applicable trust.",
+    "period": "Current lender forms",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Conditional",
+    "sort_order": 4,
+    "criteria": [
+      "Trust name and acting trustees match trust documents.",
+      "Trustee authority and required signatures are verified.",
+      "Required account setup is confirmed."
+    ],
+    "condition": "A trust is a borrower or guarantor and the lender requires a fiduciary account.",
+    "collection": "borrower",
+    "stage": "Before funding"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000006",
+    "title": "Year-end financial statements & business tax returns",
+    "category": "Borrower Package",
+    "purpose": "Support the borrowing entity\u2019s historical financial position and income.",
+    "period": "2023\u20132025 year-end financials and complete returns; lender confirms required years",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 5,
+    "criteria": [
+      "Correct entity and all requested years are covered.",
+      "Returns include schedules and amendments; financials include income statements and balance sheets.",
+      "Balance sheets balance; material trends and tax-to-book differences are explained.",
+      "Tax verification reconciles to the submitted returns; a documented filing exception is required for missing returns."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000015",
+    "title": "Current YTD financial statements",
+    "category": "Borrower Package",
+    "purpose": "Show the borrowing entity\u2019s current performance and position.",
+    "period": "Latest available YTD income statement and matching balance sheet",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 6,
+    "criteria": [
+      "Income statement start/end dates and balance-sheet as-of date are clear.",
+      "Entity and accounting basis are consistent.",
+      "Statements meet lender freshness policy.",
+      "Unusual income, expenses, distributions and related-party balances are explained."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000016",
+    "title": "Tax extension / filing-status evidence",
+    "category": "Borrower Package",
+    "purpose": "Explain a requested return that is not yet available.",
+    "period": "Each missing requested tax year",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Conditional",
+    "sort_order": 7,
+    "criteria": [
+      "Missing year and filing status are identified.",
+      "Extension or non-filing evidence is supplied as applicable.",
+      "Current financials accompany the request.",
+      "Lender records whether the exception permits underwriting to proceed."
+    ],
+    "condition": "A requested return is unavailable or has not been filed.",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000017",
+    "title": "Business debt schedule",
+    "category": "Borrower Package",
+    "purpose": "Disclose borrowing obligations and commitments.",
+    "period": "Current signed and dated schedule",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 8,
+    "criteria": [
+      "All loans and credit facilities are disclosed.",
+      "Creditor, balance, payment, rate, maturity and collateral are identified.",
+      "Balances and payments reconcile with financial statements and credit evidence.",
+      "Contingent obligations and material discrepancies are explained."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000018",
+    "title": "Borrower real estate schedule (SREO)",
+    "category": "Borrower Package",
+    "purpose": "Identify properties vested in the borrowing entity.",
+    "period": "Current signed and dated schedule",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 9,
+    "criteria": [
+      "Correct owning entity and ownership interests are shown.",
+      "Property income, debt and payments are identified.",
+      "Subject property and totals reconcile with the application and financials.",
+      "If no properties apply, provide a signed N/A declaration."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000019",
+    "title": "Borrower bank & brokerage statements",
+    "category": "Borrower Package",
+    "purpose": "Verify entity cash, investments and account activity.",
+    "period": "Latest three consecutive statement periods for all entity accounts; lender confirms dates",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 10,
+    "criteria": [
+      "Account ownership matches the borrower.",
+      "All pages and requested consecutive periods are supplied.",
+      "Balances reconcile with financials, allowing explained timing differences.",
+      "Restrictions, pledged assets and material unexplained transfers are reviewed.",
+      "If no accounts exist, provide an explicit declaration for lender review."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000020",
+    "title": "Borrower Form 4506-C",
+    "category": "Borrower Package",
+    "purpose": "Authorize verification of business tax returns.",
+    "period": "Current accepted form covering requested tax years",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 11,
+    "criteria": [
+      "Taxpayer, return type, years and recipient information are correct.",
+      "Signer has authority; required signatures and dates are present.",
+      "Signature method is accepted by the lender and IVES provider.",
+      "Authorization is within the applicable submission window."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000021",
+    "title": "Business tax transcripts / TRV",
+    "category": "Borrower Package",
+    "purpose": "Independently verify submitted business returns.",
+    "period": "Same years as the requested business returns",
+    "owner": "Lender / approved provider",
+    "applicability": "Required",
+    "sort_order": 12,
+    "criteria": [
+      "Taxpayer and years match the requirement.",
+      "Transcript results reconcile with returns.",
+      "Rejections, unavailable records and differences are resolved.",
+      "Lender records its review; authorization alone is insufficient."
+    ],
+    "condition": "",
+    "collection": "lender",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000022",
+    "title": "Business credit report",
+    "category": "Borrower Package",
+    "purpose": "Review entity credit history and undisclosed obligations.",
+    "period": "Current under lender policy",
+    "owner": "Lender / approved provider",
+    "applicability": "Required",
+    "sort_order": 13,
+    "criteria": [
+      "Report identifies the correct entity.",
+      "Debts, payment history and adverse records are reviewed.",
+      "Material discrepancies reconcile with application and debt schedule.",
+      "Exceptions and reviewer conclusions are documented."
+    ],
+    "condition": "",
+    "collection": "lender",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000007",
+    "title": "Formation, ownership & signing authority",
+    "category": "Borrower Package",
+    "purpose": "Establish the entity\u2019s identity, ownership and authority to borrow.",
+    "period": "Current governing documents and all relevant amendments",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 14,
+    "criteria": [
+      "Applicable formation and governing documents are complete and executed.",
+      "Legal name, ownership/control and authorized signers reconcile across the package.",
+      "EIN evidence or applicable explanation is supplied.",
+      "Lender verifies legal status and applicable beneficial-owner information.",
+      "Apply current customer-due-diligence rules; do not universally require a FinCEN BOI filing."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000008",
+    "title": "Personal financial statement",
+    "category": "Guarantor Package",
+    "purpose": "Summarize each individual guarantor\u2019s financial support.",
+    "period": "Current signed statement; self-prepared attachment within 30 days for this template",
+    "owner": "Each guarantor",
+    "applicability": "Required",
+    "sort_order": 15,
+    "criteria": [
+      "Assets, liabilities, income and contingent obligations are disclosed.",
+      "Totals reconcile and joint/partial ownership is clear.",
+      "Required declarations and signatures are complete.",
+      "Self-prepared attachments include completed lender-form identity, declarations and signatures.",
+      "Cash, retirement assets, securities and entity interests are distinguished."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000023",
+    "title": "Guarantor real estate schedule (SREO)",
+    "category": "Guarantor Package",
+    "purpose": "Support the guarantor\u2019s real estate income, equity and debt.",
+    "period": "Current signed and dated schedule",
+    "owner": "Each guarantor",
+    "applicability": "Required",
+    "sort_order": 16,
+    "criteria": [
+      "Ownership percentages and legal owners are identified.",
+      "Values, income, expenses, balances and payments are supported.",
+      "Schedule reconciles with PFS and tax schedules.",
+      "Personally owned and entity-owned properties are distinguished without double counting."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000009",
+    "title": "Guarantor personal tax returns",
+    "category": "Guarantor Package",
+    "purpose": "Verify reported income and identify recurring obligations.",
+    "period": "Complete 2023\u20132025 returns; lender confirms required years",
+    "owner": "Each guarantor",
+    "applicability": "Required",
+    "sort_order": 17,
+    "criteria": [
+      "Correct taxpayer and all requested years are covered.",
+      "All schedules and amendments are included.",
+      "Recurring income and losses are identified; unusual gains/losses explained.",
+      "Income reconciles with PFS and tax verification results."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000024",
+    "title": "K-1s & supporting tax schedules",
+    "category": "Guarantor Package",
+    "purpose": "Support income and ownership from related entities.",
+    "period": "Each applicable entity for the requested three tax years",
+    "owner": "Each guarantor",
+    "applicability": "Conditional",
+    "sort_order": 18,
+    "criteria": [
+      "Applicable interests in the tax returns are supported.",
+      "Entity, recipient and year match; ownership reconciles.",
+      "Taxable pass-through income is distinguished from cash distributions.",
+      "Losses and additional funding obligations are considered."
+    ],
+    "condition": "Returns disclose partnership, S-corporation, trust or other applicable pass-through interests.",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000025",
+    "title": "W-2 statements",
+    "category": "Guarantor Package",
+    "purpose": "Support employment income relied on in underwriting.",
+    "period": "Three requested tax years",
+    "owner": "Each guarantor",
+    "applicability": "Conditional",
+    "sort_order": 19,
+    "criteria": [
+      "Correct taxpayer and employers are covered.",
+      "Wages reconcile with returns.",
+      "Employment changes and material variances are explained."
+    ],
+    "condition": "Employment income is relevant to the guarantor\u2019s financial support.",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000026",
+    "title": "Recent pay statements",
+    "category": "Guarantor Package",
+    "purpose": "Verify current employment income.",
+    "period": "Three most current paystubs",
+    "owner": "Each guarantor",
+    "applicability": "Conditional",
+    "sort_order": 20,
+    "criteria": [
+      "Employee, employer and pay dates are identifiable.",
+      "Gross/net pay and year-to-date earnings are shown.",
+      "Pay periods demonstrate continuity.",
+      "Variable pay and discrepancies are reviewed separately."
+    ],
+    "condition": "Employment income is relevant to the guarantor\u2019s financial support.",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000027",
+    "title": "Guarantor bank, investment & retirement statements",
+    "category": "Guarantor Package",
+    "purpose": "Substantiate assets reported on the personal financial statement.",
+    "period": "Latest three consecutive statement periods; lender confirms dates",
+    "owner": "Each guarantor",
+    "applicability": "Required",
+    "sort_order": 21,
+    "criteria": [
+      "Correct individual/trust ownership and all pages/periods are verified.",
+      "Balances support the corresponding PFS categories.",
+      "Unrestricted cash is distinguished from retirement and pledged assets.",
+      "Access restrictions and margin debt are considered.",
+      "Entity assets are not automatically counted as personal cash."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000028",
+    "title": "Guarantor Form 4506-C",
+    "category": "Guarantor Package",
+    "purpose": "Authorize verification of guarantor tax returns.",
+    "period": "Current accepted form covering requested tax years",
+    "owner": "Each guarantor",
+    "applicability": "Required",
+    "sort_order": 22,
+    "criteria": [
+      "Taxpayer, return type, years and recipient details are correct.",
+      "Required signatures, date and capacity are valid.",
+      "Execution method is accepted by lender/provider.",
+      "Authorization covers the intended verification and submission window."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000029",
+    "title": "Guarantor tax transcripts / TRV",
+    "category": "Guarantor Package",
+    "purpose": "Independently verify each guarantor\u2019s submitted returns.",
+    "period": "Same years as requested personal returns",
+    "owner": "Lender / approved provider",
+    "applicability": "Required",
+    "sort_order": 23,
+    "criteria": [
+      "Taxpayer and years are verified from contents, not filename.",
+      "Results reconcile with the personal returns.",
+      "Mismatches, missing results and rejections are resolved.",
+      "Lender records its review."
+    ],
+    "condition": "",
+    "collection": "lender",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000030",
+    "title": "Government-issued identification",
+    "category": "Guarantor Package",
+    "purpose": "Verify the identity of the individual guarantor.",
+    "period": "Current identification acceptable under lender policy",
+    "owner": "Each guarantor",
+    "applicability": "Required",
+    "sort_order": 24,
+    "criteria": [
+      "Identification is legible and acceptable under lender policy.",
+      "Validity/expiry is checked.",
+      "Identity matches the application; name differences are resolved.",
+      "Verification is recorded without unnecessary disclosure of identifiers."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000031",
+    "title": "Personal credit report",
+    "category": "Guarantor Package",
+    "purpose": "Review guarantor credit history and obligations.",
+    "period": "Current under lender policy",
+    "owner": "Lender / approved provider",
+    "applicability": "Required",
+    "sort_order": 25,
+    "criteria": [
+      "Correct individual and appropriate authorization are verified.",
+      "Undisclosed debts and adverse credit history are evaluated.",
+      "Debt payments are included in the financial analysis.",
+      "Discrepancies and exceptions are documented."
+    ],
+    "condition": "",
+    "collection": "lender",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000032",
+    "title": "Sponsor resume / biography",
+    "category": "Guarantor Package",
+    "purpose": "Assess relevant ownership and property-management experience.",
+    "period": "Current biography",
+    "owner": "Each guarantor",
+    "applicability": "Required",
+    "sort_order": 26,
+    "criteria": [
+      "Relevant ownership and management experience is described.",
+      "Material claims are supportable.",
+      "Experience gaps are assessed against property complexity and management arrangements."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000033",
+    "title": "Trust agreement / certification",
+    "category": "Guarantor Package",
+    "purpose": "Establish trustee authority and access to trust assets.",
+    "period": "Current trust documents and relevant amendments",
+    "owner": "Each guarantor",
+    "applicability": "Conditional",
+    "sort_order": 27,
+    "criteria": [
+      "Exact trust and current acting trustees are identified.",
+      "Lender/legal reviewer confirms guarantee or borrowing authority.",
+      "Assets relied upon are legally accessible as required.",
+      "Certification is accepted only where sufficient for the lender\u2019s review."
+    ],
+    "condition": "A trust guarantees the loan or trust assets are relied upon.",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000034",
+    "title": "Affiliated-entity financial support",
+    "category": "Guarantor Package",
+    "purpose": "Substantiate material support from related businesses.",
+    "period": "Current financials, debt and distributions for each relevant entity",
+    "owner": "Each guarantor",
+    "applicability": "Conditional",
+    "sort_order": 28,
+    "criteria": [
+      "Ownership and claimed support reconcile with the PFS and returns.",
+      "Financial statements, debt and distributions substantiate available support.",
+      "Transfer restrictions and competing obligations are assessed.",
+      "Income and assets are not double counted."
+    ],
+    "condition": "Repayment or guarantor support materially depends on another entity.",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000035",
+    "title": "Entity-guarantor financial & legal package",
+    "category": "Guarantor Package",
+    "purpose": "Review a non-individual guarantor using the applicable entity documents.",
+    "period": "Requested historical years and current interim period",
+    "owner": "Each guarantor",
+    "applicability": "Conditional",
+    "sort_order": 29,
+    "criteria": [
+      "Entity financials, tax evidence, debt schedule and accounts are supplied as applicable.",
+      "Formation/governing documents and signing authority are verified.",
+      "Tax status and any filing exception are documented.",
+      "Available support and competing obligations are assessed."
+    ],
+    "condition": "A corporation, LLC or partnership is a guarantor; apply the trust request separately for trusts.",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000036",
+    "title": "Appraisal engagement / order",
+    "category": "Appraisal & Site Visits",
+    "purpose": "Establish the lender-approved appraisal scope and provider.",
+    "period": "Current assignment",
+    "owner": "Lender / approved provider",
+    "applicability": "Required",
+    "sort_order": 30,
+    "criteria": [
+      "Property and scope are correct.",
+      "Lender-approved engagement, appraiser qualifications and independence are verified.",
+      "Required valuation premises, intended use and intended user are specified."
+    ],
+    "condition": "",
+    "collection": "lender",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000037",
+    "title": "Final appraisal report",
+    "category": "Appraisal & Site Visits",
+    "purpose": "Support the collateral valuation used for underwriting.",
+    "period": "Latest complete report; effective date acceptable to lender",
+    "owner": "Lender / approved provider",
+    "applicability": "Required",
+    "sort_order": 31,
+    "criteria": [
+      "Correct property/unit, parcel and property rights are appraised.",
+      "Intended user/use and effective date are appropriate.",
+      "Complete analysis and appraiser certification are present.",
+      "Valuation assumptions, leases, occupancy and condition are reviewed.",
+      "Required valuation bases are included; collateral value is distinct from insurance replacement cost."
+    ],
+    "condition": "",
+    "collection": "lender",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000038",
+    "title": "Appraisal review & acceptance",
+    "category": "Appraisal & Site Visits",
+    "purpose": "Document the lender\u2019s review of the valuation.",
+    "period": "Review of the exact report version used for approval",
+    "owner": "Lender / approved provider",
+    "applicability": "Required",
+    "sort_order": 32,
+    "criteria": [
+      "Review identifies the appraisal version and effective date.",
+      "Credibility and material assumptions are evaluated.",
+      "Accepted value and conditions are documented.",
+      "Deficiencies are corrected or formally resolved.",
+      "Lender acceptance covers the report actually used in underwriting."
+    ],
+    "condition": "",
+    "collection": "lender",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000039",
+    "title": "Revised appraisal / update",
+    "category": "Appraisal & Site Visits",
+    "purpose": "Resolve a change to the valuation report.",
+    "period": "Latest revision and corresponding review",
+    "owner": "Lender / approved provider",
+    "applicability": "Conditional",
+    "sort_order": 33,
+    "criteria": [
+      "Revision reason and predecessor report are identifiable.",
+      "Changed conclusions and assumptions are explained.",
+      "Lender review explicitly covers the revised report.",
+      "Underwriting is updated where affected."
+    ],
+    "condition": "The appraisal is revised or an update is required.",
+    "collection": "lender",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000040",
+    "title": "Site inspection report & photographs",
+    "category": "Appraisal & Site Visits",
+    "purpose": "Verify observed property use, occupancy and condition.",
+    "period": "Current lender-accepted inspection",
+    "owner": "Lender / approved provider",
+    "applicability": "Required",
+    "sort_order": 34,
+    "criteria": [
+      "Property, inspection date and inspector are identified.",
+      "Access limitations are disclosed.",
+      "Occupancy/use, condition, repairs, access and surroundings are documented with photos.",
+      "Differences from the application/appraisal are escalated.",
+      "Visual inspection does not substitute for required environmental or engineering reports."
+    ],
+    "condition": "",
+    "collection": "lender",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000041",
+    "title": "Parcel / unit identification support",
+    "category": "Appraisal & Site Visits",
+    "purpose": "Confirm the exact collateral being pledged.",
+    "period": "Current parcel and legal-description evidence",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 35,
+    "criteria": [
+      "Address, unit, parcel and legal description reconcile.",
+      "Title/survey and appraisal identify the same collateral.",
+      "Parent tract is distinguished from any individual condominium unit."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000042",
+    "title": "Inspection / appraisal follow-up evidence",
+    "category": "Appraisal & Site Visits",
+    "purpose": "Resolve material findings before acceptance or funding.",
+    "period": "Evidence addressing each outstanding finding",
+    "owner": "Lender / approved provider",
+    "applicability": "Conditional",
+    "sort_order": 36,
+    "criteria": [
+      "Each finding has appropriate supporting evidence or specialist review.",
+      "Repairs, reinspection and access limitations are resolved as required.",
+      "Lender records resolution and any remaining funding conditions."
+    ],
+    "condition": "Inspection or appraisal identifies unresolved repairs, inconsistencies or other material findings.",
+    "collection": "lender",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000001",
+    "title": "Current rent roll",
+    "category": "Property & Refinance Support",
+    "purpose": "Support current rental income and occupancy.",
+    "period": "Current as-of date acceptable to lender",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 37,
+    "criteria": [
+      "Property, tenants, units and vacant areas are identified.",
+      "Lease dates, rent, reimbursements and concessions are shown.",
+      "Totals and occupancy reconcile with leases and operating statements."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000002",
+    "title": "Property operating statements",
+    "category": "Property & Refinance Support",
+    "purpose": "Support recurring property cash flow.",
+    "period": "2023\u20132025 full years and current YTD; lender confirms periods",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 38,
+    "criteria": [
+      "Property and reporting periods are identified.",
+      "Base rent is separated from reimbursements and other income.",
+      "Recurring expenses and landlord obligations under net leases are captured.",
+      "Financing costs and one-time items are distinguishable.",
+      "Amounts reconcile with leases, rent roll and entity financials without double counting."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000003",
+    "title": "Lease agreements & amendments",
+    "category": "Property & Refinance Support",
+    "purpose": "Verify enforceable tenancy terms and landlord obligations.",
+    "period": "All current executed leases and amendments",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 39,
+    "criteria": [
+      "All parties, premises and lease terms are identified.",
+      "Required signatures and all amendments are included.",
+      "Rent, renewal/termination rights and expense responsibilities reconcile with underwriting."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000004",
+    "title": "Debt service evidence",
+    "category": "Property & Refinance Support",
+    "purpose": "Support principal and interest obligations used in repayment analysis.",
+    "period": "Current obligations and requested historical periods",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 40,
+    "criteria": [
+      "Creditor, borrower, balance and payment obligations are identifiable.",
+      "Principal and interest are distinguished from other charges.",
+      "Amounts reconcile with the debt schedule and underwriting period."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  },
+  {
+    "id": "33000000-0000-4000-8000-000000000005",
+    "title": "Mortgage statement / payoff",
+    "category": "Property & Refinance Support",
+    "purpose": "Identify and settle the existing debt being refinanced.",
+    "period": "Most recent statement; payoff valid through closing when requested",
+    "owner": "Borrower / authorized representative",
+    "applicability": "Required",
+    "sort_order": 41,
+    "criteria": [
+      "Correct borrower, collateral and loans are identified.",
+      "Balances, payments and maturity reconcile with the application.",
+      "Required payoff covers closing date, fees and per-diem interest."
+    ],
+    "condition": "",
+    "collection": "borrower",
+    "stage": "Underwriting"
+  }
+]
