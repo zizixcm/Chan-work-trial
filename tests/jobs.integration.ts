@@ -12,6 +12,7 @@ import type {Access} from '../lib/authorization';
 import {runJob} from '../lib/backend/job-runner';
 import {createAnalysisPreparer} from '../lib/backend/prepare-analysis';
 import {DEFAULT_BUDGET} from '../lib/backend/provider-executor';
+import {enqueue,transaction} from '../lib/jobs/core';
 
 async function main(){
  const schema='jobs_'+randomUUID().replaceAll('-','');
@@ -172,6 +173,31 @@ async function main(){
   assert.equal(toggles.filter(r=>r.status==='fulfilled').length,1,'cross-app preference CAS is serialized');
   await db.query("INSERT INTO requirements(id,application_id,title,category,purpose,period,owner,applicability,sort_order,collection) VALUES('lender-r','a','Lender report','Other','Evidence','Current','Lender','Required',2,'lender')");
   await assert.rejects(portal.setDocumentRequirement(doc,'lender-r',true,'0'),{status:403},'borrower organize cannot link lender-owned requirements');
+  // Coalescing keeps only the latest pending snapshot without cancelling running work.
+  await db.query("UPDATE analysis_jobs SET state='cancelled',slot=NULL WHERE state IN ('queued','running','retry_wait','blocked')");
+  await db.query("UPDATE requirements SET evidence_revision=evidence_revision+1 WHERE id='r'");
+  const first=await service.request('verify_requirement.v1','r',token());
+  const inFlight=await repo.claim('interactive','coalescing');assert(inFlight);assert.equal(inFlight.id,first.id);
+  await db.query("UPDATE requirements SET evidence_revision=evidence_revision+1 WHERE id='r'");
+  const pending=await service.request('verify_requirement.v1','r',token());
+  const isolated=await otherBorrower.request('verify_requirement.v1','r',token());
+  await db.query("UPDATE requirements SET evidence_revision=evidence_revision+1 WHERE id='r'");
+  const latest=await transaction(db,client=>enqueue(client,'a','u','verify_requirement.v1','r','background'));
+  assert(latest);assert.notEqual(latest,pending.id);
+  assert.equal((await service.get(pending.id!)).state,'stale','obsolete pending check retained as stale history');
+  assert.equal((await service.get(inFlight.id)).state,'running','running attempt remains intact');
+  assert.equal((await otherBorrower.get(isolated.id!)).state,'queued','other user is not superseded');
+  assert.equal((await db.query('SELECT lane FROM analysis_jobs WHERE id=$1',[latest])).rows[0].lane,'interactive','successor preserves manual priority');
+  await otherBorrower.cancel(isolated.id!);
+  assert.equal(await repo.claim('shared','parallel-successor'),null,'same-target successor waits for running predecessor');
+  const duplicates=await Promise.all([service.request('verify_requirement.v1','r',token()),service.request('verify_requirement.v1','r',token())]);
+  assert(duplicates.every(job=>job.id===latest),'concurrent requests reuse latest successor');
+  assert.equal((await db.query("SELECT count(*)::int n FROM analysis_jobs WHERE initiated_by='u' AND target_id='r' AND state IN ('queued','retry_wait','blocked')")).rows[0].n,1);
+  assert.equal(await repo.commit(inFlight,{model:DEFAULT_BUDGET.model,usage:{},value:verified}),false,'obsolete running result cannot become current');
+  const successor=await repo.claim('interactive','latest');assert(successor);assert.equal(successor.id,latest);
+  assert.equal(await repo.commit(successor,{model:DEFAULT_BUDGET.model,usage:{},value:verified}),true);
+  assert.equal((await service.get(latest)).freshness,'current');
+  console.log('PASS: latest-snapshot coalescing, interactive priority, user isolation, concurrent dedup, predecessor serialization and stale commit protection.');
   console.log('PASS: independent lender worker dispatch/commit, preference changes, scoped dedup/cache/receipts, cancel/retry ownership, membership and evidence guards.');
   console.log('PASS: durable upload, concurrent receipt/claim, revocation, recovery fencing, idempotent commit, aggregate enqueue, human rejection, off gate, cross-app privacy, stale definition, blocked recovery. No provider calls.');
  }finally{

@@ -45,6 +45,12 @@ export class PostgresJobRepository implements JobRepository<AnalysisSnapshot> {
       }
       if(!lane)return null;
       const row=(await db.query(`SELECT j.* FROM analysis_jobs j WHERE j.lane=$1 AND j.state IN ('queued','retry_wait','blocked') AND j.available_at<=now() AND j.expires_at>now() AND j.attempt<5 AND j.provider_attempts<3
+        AND (j.task<>'verify_requirement.v1' OR NOT EXISTS (
+          SELECT 1 FROM analysis_jobs predecessor WHERE predecessor.application_id=j.application_id
+          AND predecessor.initiated_by=j.initiated_by AND predecessor.consent_scope=j.consent_scope
+          AND predecessor.task=j.task AND predecessor.target_id=j.target_id
+          AND predecessor.state='running' AND predecessor.lease_expires_at>now()
+          AND predecessor.attempt_deadline>now()))
         AND (SELECT count(*) FROM analysis_jobs active WHERE active.application_id=j.application_id AND active.state='running' AND active.lease_expires_at>now())<2
         ORDER BY (j.application_id IS NOT DISTINCT FROM $2),j.created_at,j.id FOR UPDATE SKIP LOCKED LIMIT 1`,[lane,schedule.last_application])).rows[0];
       if(!row)return null;

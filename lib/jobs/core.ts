@@ -66,12 +66,27 @@ export async function snapshot(db: PoolClient, applicationId: string, task: Task
   };
 }
 export async function enqueue(db: PoolClient, applicationId: string, userId: string, task: TaskKind, targetId: string, lane: Lane, retryOf?: string, scope: ConsentScope = 'borrower') {
+  // Serialize snapshot selection and successor creation with application mutations.
+  await db.query('SELECT id FROM applications WHERE id=$1 FOR UPDATE',[applicationId]);
   const member=(await db.query('SELECT role FROM application_memberships WHERE application_id=$1 AND user_id=$2 AND active FOR SHARE',[applicationId,userId])).rows[0];
   if(!member || member.role!==scope || (scope==='lender' && (task!=='verify_requirement.v1' || lane!=='interactive')))throw new UploadError('Your account cannot request this analysis.',403);
   const pref = await preference(db,userId);
   if (scope==='borrower' && !pref.enabled) return null;
   const input = await snapshot(db,applicationId,task,targetId,scope);
   const fingerprint = analysisFingerprint(input,task,scope,pref.epoch,userId);
+  if(task==='verify_requirement.v1') {
+    // Preserve immutable attempt inputs and history. Only pending obsolete work is
+    // superseded; a running attempt is fenced by the normal freshness gate.
+    const superseded=(await db.query(`UPDATE analysis_jobs SET state='stale',token=token+1,
+      slot=NULL,lease_expires_at=NULL,updated_at=now(),revision=revision+1
+      WHERE application_id=$1 AND initiated_by=$2 AND consent_scope=$3 AND task=$4
+      AND target_id=$5 AND fingerprint<>$6 AND state IN ('queued','retry_wait','blocked')
+      RETURNING id,token,lane`,[applicationId,userId,scope,task,targetId,fingerprint])).rows;
+    for(const prior of superseded) {
+      await db.query("INSERT INTO analysis_events(application_id,job_id,event,token) VALUES($1,$2,'stale',$3)",[applicationId,prior.id,prior.token]);
+      if(prior.lane==='interactive')lane='interactive';
+    }
+  }
   const existing = (await db.query(`SELECT * FROM analysis_jobs WHERE application_id=$1 AND task=$2 AND fingerprint=$3 AND consent_scope=$5 AND state=ANY($4::text[]) ORDER BY created_at DESC LIMIT 1 FOR UPDATE`,[applicationId,task,fingerprint,liveStates,scope])).rows[0];
   if (existing) {
     if (lane==='interactive' && existing.lane==='background') await db.query("UPDATE analysis_jobs SET lane='interactive',updated_at=now(),revision=revision+1 WHERE id=$1",[existing.id]);
