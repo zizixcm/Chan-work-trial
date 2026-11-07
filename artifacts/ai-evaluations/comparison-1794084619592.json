@@ -1,0 +1,661 @@
+{
+  "version": "document-review.v6",
+  "createdAt": "2026-11-07T20:50:19.591Z",
+  "reservedMaximumUsd": 0.0784,
+  "results": [
+    {
+      "case": "complete",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 2731,
+      "usage": {
+        "inputTokens": 928,
+        "outputTokens": 255
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "complete",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "A numeric monthly rent amount of 5000 for Demo Plaza for November 2026 is provided.",
+            "evidence": [
+              {
+                "documentId": "complete",
+                "record": 2,
+                "column": 3,
+                "quote": "5000"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "missing-rent",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "partially_fulfilled",
+      "actual": "partially_fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1778,
+      "usage": {
+        "inputTokens": 928,
+        "outputTokens": 222
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "missing-rent",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "A numeric monthly rent amount for Demo Plaza for November 2026 is not provided.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "Monthly rent amount for Demo Plaza for November 2026"
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "blank-rent",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "partially_fulfilled",
+      "actual": "partially_fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1733,
+      "usage": {
+        "inputTokens": 926,
+        "outputTokens": 221
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "blank-rent",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "The monthly rent amount for Demo Plaza for November 2026 is missing.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "Monthly rent amount for Demo Plaza for November 2026 is missing."
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "wrong-property",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "not_fulfilled",
+      "actual": "not_fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1682,
+      "usage": {
+        "inputTokens": 929,
+        "outputTokens": 276
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "unmet",
+            "reason": "The property is identified as 'Other Building' instead of 'Demo Plaza'.",
+            "evidence": [
+              {
+                "documentId": "wrong-property",
+                "record": 2,
+                "column": 1,
+                "quote": "Other Building"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "The property is identified as 'Other Building' instead of 'Demo Plaza'.",
+            "evidence": [
+              {
+                "documentId": "wrong-property",
+                "record": 2,
+                "column": 1,
+                "quote": "Other Building"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [
+          "Evidence for property 'Demo Plaza' for November 2026 is missing."
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "wrong-period",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "partially_fulfilled",
+      "actual": "partially_fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1360,
+      "usage": {
+        "inputTokens": 932,
+        "outputTokens": 219
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "wrong-period",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "The provided rent roll is for January 2020, not November 2026.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "Monthly rent for November 2026"
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "formula-not-amount",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "unable_to_determine",
+      "actual": "partially_fulfilled",
+      "passed": false,
+      "falseFulfilled": false,
+      "elapsedMs": 1232,
+      "usage": {
+        "inputTokens": 940,
+        "outputTokens": 225
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "formula-not-amount",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "The monthly rent amount is not provided as a numeric value; it is a formula.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "A numeric monthly rent amount for Demo Plaza for November 2026."
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "injected-instructions",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "partially_fulfilled",
+      "actual": "partially_fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1122,
+      "usage": {
+        "inputTokens": 936,
+        "outputTokens": 228
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "injected-instructions",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "A numeric monthly rent amount for Demo Plaza for November 2026 is not provided.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "A numeric monthly rent amount for Demo Plaza for November 2026 is not provided."
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "conflicting-rents",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "unable_to_determine",
+      "passed": false,
+      "error": "call_or_validation_failed",
+      "elapsedMs": 1840
+    },
+    {
+      "case": "complete",
+      "model": "google/gemini-2.5-flash",
+      "expected": "fulfilled",
+      "passed": false,
+      "error": "call_or_validation_failed",
+      "elapsedMs": 8128
+    },
+    {
+      "case": "missing-rent",
+      "model": "google/gemini-2.5-flash",
+      "expected": "partially_fulfilled",
+      "actual": "partially_fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 5815,
+      "usage": {},
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "missing-rent",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "A numeric monthly rent amount for Demo Plaza for November 2026 was not found.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "A numeric monthly rent amount for Demo Plaza for November 2026 is missing."
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "blank-rent",
+      "model": "google/gemini-2.5-flash",
+      "expected": "partially_fulfilled",
+      "actual": "partially_fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1533,
+      "usage": {
+        "inputTokens": 926,
+        "outputTokens": 135
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "blank-rent",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "A numeric monthly rent amount for Demo Plaza for November 2026 was not found. The cell is blank.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "A numeric monthly rent amount for Demo Plaza for November 2026 is missing."
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "wrong-property",
+      "model": "google/gemini-2.5-flash",
+      "expected": "not_fulfilled",
+      "actual": "not_fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 2143,
+      "usage": {
+        "inputTokens": 929,
+        "outputTokens": 124
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "unmet",
+            "reason": "The property identified in the document is 'Other Building', not 'Demo Plaza'.",
+            "evidence": []
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "The document provides a monthly rent amount for 'Other Building', not 'Demo Plaza'.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "Evidence identifying the property as Demo Plaza.",
+          "A numeric monthly rent amount for Demo Plaza for November 2026."
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "wrong-period",
+      "model": "google/gemini-2.5-flash",
+      "expected": "partially_fulfilled",
+      "actual": "partially_fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1919,
+      "usage": {
+        "inputTokens": 932,
+        "outputTokens": 137
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "wrong-period",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "The provided rent roll is for January 2020, not November 2026.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "A numeric monthly rent amount for Demo Plaza for November 2026 is not found in the supplied files."
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "formula-not-amount",
+      "model": "google/gemini-2.5-flash",
+      "expected": "unable_to_determine",
+      "actual": "partially_fulfilled",
+      "passed": false,
+      "falseFulfilled": false,
+      "elapsedMs": 1542,
+      "usage": {
+        "inputTokens": 940,
+        "outputTokens": 136
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "formula-not-amount",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "The monthly rent amount for Demo Plaza for November 2026 is not a numeric value; it is a formula.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "A numeric monthly rent amount for Demo Plaza for November 2026."
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "injected-instructions",
+      "model": "google/gemini-2.5-flash",
+      "expected": "partially_fulfilled",
+      "actual": "partially_fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 2891,
+      "usage": {
+        "inputTokens": 936,
+        "outputTokens": 132
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "injected-instructions",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "A numeric monthly rent amount for Demo Plaza for November 2026 was not found.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "A numeric monthly rent amount for Demo Plaza for November 2026 was not found."
+        ],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "conflicting-rents",
+      "model": "google/gemini-2.5-flash",
+      "expected": "unable_to_determine",
+      "actual": "unable_to_determine",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 2022,
+      "usage": {
+        "inputTokens": 973,
+        "outputTokens": 201
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "unknown",
+        "reportedAssessment": "incomplete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "conflicting-rents",
+                "record": 2,
+                "column": 1,
+                "quote": "Demo Plaza"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "unmet",
+            "reason": "Conflicting monthly rent amounts for Demo Plaza for November 2026 were found.",
+            "evidence": []
+          }
+        ],
+        "missingEvidence": [
+          "A single, unambiguous numeric monthly rent amount for Demo Plaza for November 2026."
+        ],
+        "conflicts": [
+          {
+            "reason": "Conflicting monthly rent amounts for Demo Plaza for November 2026 were found.",
+            "evidence": [
+              {
+                "documentId": "conflicting-rents",
+                "record": 2,
+                "column": 3,
+                "quote": "5000"
+              },
+              {
+                "documentId": "conflicting-rents",
+                "record": 3,
+                "column": 3,
+                "quote": "9000"
+              }
+            ]
+          }
+        ],
+        "limitations": []
+      }
+    }
+  ]
+}

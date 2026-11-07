@@ -127,7 +127,7 @@ test('shared slot gives background its turn and ages old work', () => {
 test('unsupported linked file is an explicit Verify limitation, never silently omitted', async () => {
   const prepare = createAnalysisPreparer(async () => {throw Error('must not read unsupported file');});
   const job: JobLease<AnalysisSnapshot> = {...lease(), task: 'verify_requirement.v1', input: {
-    documents: [{id: 'pdf', sha256: 'a'.repeat(64), contentType: 'application/pdf'}],
+    documents: [{id: 'archive', sha256: 'a'.repeat(64), contentType: 'application/zip'}],
     requirements: [{id: 'r', title: 'Rent roll', subject: 'property', period: '2026', criteria: [{id: 'c', description: 'Current roll'}]}],
   }};
   const built = await prepare(job, signal());

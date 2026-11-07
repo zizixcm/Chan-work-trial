@@ -1,3 +1,4 @@
+import { ANALYSIS_FORMATS } from '../analysis/formats';
 import type { Pool } from 'pg';
 import { analysisFingerprint, enqueue, preference, snapshot, transaction } from './core';
 import type { TaskKind } from '../backend/contracts';
@@ -21,8 +22,8 @@ export async function reconcileAnalysis(database:Pool) {
     const users=(await db.query(`SELECT m.user_id FROM application_memberships m JOIN user_ai_preferences p ON p.user_id=m.user_id
       WHERE m.application_id=$1 AND m.active AND m.role='borrower' AND p.enabled
       AND p.updated_at<=(SELECT changed_at FROM analysis_invalidations WHERE application_id=$1)`,[app])).rows;
-    const documents=(await db.query(`SELECT d.id FROM documents d WHERE d.application_id=$1 AND split_part(d.content_type,';',1)='text/csv'
-      AND NOT EXISTS(SELECT 1 FROM documents successor WHERE successor.replaces_document_id=d.id) ORDER BY d.id`,[app])).rows;
+    const documents=(await db.query(`SELECT d.id FROM documents d WHERE d.application_id=$1 AND split_part(d.content_type,';',1)=ANY($2::text[])
+      AND NOT EXISTS(SELECT 1 FROM documents successor WHERE successor.replaces_document_id=d.id) ORDER BY d.id`,[app,ANALYSIS_FORMATS])).rows;
     const requirements=(await db.query("SELECT id FROM requirements WHERE application_id=$1 AND lifecycle='active' AND collection='borrower' ORDER BY id",[app])).rows;
     for(const {user_id:user} of users) {
       const pref=await preference(db,user);

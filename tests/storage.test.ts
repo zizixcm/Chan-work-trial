@@ -61,7 +61,7 @@ test("all three supported formats are structurally validated", async () => {
 
 test("empty, unsupported, oversized, corrupt, protected and inconsistent files give recoverable errors", async () => {
   await assert.rejects(validateFile("file.csv", new Uint8Array()), /empty/);
-  await assert.rejects(validateFile("file.exe", csv), /PDF, XLSX, CSV/);
+  await assert.rejects(validateFile("file.exe", csv), /PDF, DOCX, XLSX, EML, TXT, CSV/);
   await assert.rejects(
     validateFile("large.pdf", new Uint8Array(MAX_FILE_SIZE + 1)),
     /25 MB/,

@@ -26,7 +26,7 @@ export default function BatchUpload({ dropzone=false, disabled=false, onPendingC
   function choose(files: FileList | null) {
     if (!files?.length || busy || disabled) return;
     const additions = Array.from(files).map(file => {
-      const message = !/\.(pdf|xlsx|csv|jpg|jpeg|png|webp)$/i.test(file.name) ? "Choose a PDF, XLSX, CSV, JPG, PNG or WebP file." : !file.size ? "This file is empty. Choose a file with content." : file.size > MAX_FILE_SIZE ? "This file exceeds 25 MB. Choose a smaller copy." : undefined;
+      const message = !/\.(pdf|docx|xlsx|eml|txt|csv|jpg|jpeg|png|webp)$/i.test(file.name) ? "Choose a PDF, DOCX, XLSX, EML, TXT, CSV, JPG, PNG or WebP file." : !file.size ? "This file is empty. Choose a file with content." : file.size > MAX_FILE_SIZE ? "This file exceeds 25 MB. Choose a smaller copy." : undefined;
       return { id: crypto.randomUUID(), file, state: message ? "invalid" : "pending", progress: 0, message } as Entry;
     });
     setBatches(all => {
@@ -110,8 +110,8 @@ export default function BatchUpload({ dropzone=false, disabled=false, onPendingC
   const pending = entries.filter(entry => entry.state === "pending");
   const failures = entries.filter(entry => entry.state === "failed");
   return <section hidden={hidden} className="batch-upload" aria-label="Upload files" onDragOver={event=>{if(dropzone)event.preventDefault();}} onDrop={event=>{if(dropzone){event.preventDefault();setDragging(false);choose(event.dataTransfer.files);}}}>
-    {!dropzone && <h3>Add documents</h3>}<p id={`${prefix}-file-help`}>PDF, XLSX, CSV, JPG, PNG or WebP · Up to 25 MB per file. You can choose several files at once.</p>
-    <input ref={input} id={`${prefix}-files`} className="batch-file-input" type="file" hidden tabIndex={-1} aria-label="Choose files" multiple accept=".pdf,.xlsx,.csv,.jpg,.jpeg,.png,.webp" disabled={busy || disabled} onChange={event => choose(event.target.files)} />
+    {!dropzone && <h3>Add documents</h3>}<p id={`${prefix}-file-help`}>PDF, DOCX, XLSX, EML, TXT, CSV, JPG, PNG or WebP · Up to 25 MB per file. You can choose several files at once.</p>
+    <input ref={input} id={`${prefix}-files`} className="batch-file-input" type="file" hidden tabIndex={-1} aria-label="Choose files" multiple accept=".pdf,.docx,.xlsx,.eml,.txt,.csv,.jpg,.jpeg,.png,.webp" disabled={busy || disabled} onChange={event => choose(event.target.files)} />
     <button type="button" className={dropzone ? `bulk-dropzone${dragging?" is-dragging":""}` : "secondary"} onDragOver={event=>{if(dropzone){event.preventDefault();setDragging(true);}}} onDragLeave={()=>setDragging(false)} onDrop={event=>{if(dropzone){event.preventDefault();event.stopPropagation();setDragging(false);choose(event.dataTransfer.files);}}} aria-describedby={`${prefix}-file-help ${prefix}-selection`} disabled={busy || disabled} onClick={() => input.current?.click()}>{dropzone?<><strong>Drop your files here</strong><span>Choose files</span><small>Add several documents at once</small></>:"Choose files"}</button>
     <p id={`${prefix}-selection`} role="status">{entries.length ? `${entries.length} file${entries.length === 1 ? "" : "s"} in your upload list${entries.some(entry => entry.state === "saved") ? ` · ${entries.filter(entry => entry.state === "saved").length} uploaded` : ""}. See filenames and status below.` : "No files selected yet."}</p>
     {mapping}

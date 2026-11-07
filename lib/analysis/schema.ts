@@ -11,7 +11,7 @@ const sources=array(source,8);
 const check=object({criterionId:id,state:enumeration(['met','unmet','unknown']),reason:text,evidence:sources});
 export const matchOutputSchema:JSONSchema7=object({
  schemaVersion:{type:'string',const:'match.v1'},
- classification:object({kind:enumeration(['rent_roll','other_table','unknown']),reason:text,evidence:sources}),
+ classification:object({kind:enumeration(['rent_roll','other_table','other_document','unknown']),reason:text,evidence:sources}),
  requirements:array(object({requirementId:id,relevance:object({state:enumeration(['relevant','not_relevant','ambiguous']),reason:text,evidence:sources}),checks:array(check,20)}),50),
 });
 export const verifyOutputSchema:JSONSchema7=object({

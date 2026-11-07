@@ -1,0 +1,587 @@
+{
+  "version": "document-review.v6",
+  "createdAt": "2026-11-07T20:53:36.201Z",
+  "reservedMaximumUsd": 0.0588,
+  "results": [
+    {
+      "case": "native-pdf",
+      "sourceHash": "2e07cd4feaea4a7238bd7b824130fd550a86b0484fbe8929d8ac1624042615c7",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 3768,
+      "usage": {
+        "inputTokens": 955,
+        "outputTokens": 261
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "native-pdf",
+                "record": 1,
+                "column": 1,
+                "quote": "Property: Demo Plaza",
+                "sourceLocation": "Page 1, text item 1"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "A numeric monthly rent amount of 5000 dollars is provided for November 2026.",
+            "evidence": [
+              {
+                "documentId": "native-pdf",
+                "record": 3,
+                "column": 1,
+                "quote": "Monthly rent: 5000 dollars",
+                "sourceLocation": "Page 1, text item 3"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "scanned-pdf",
+      "sourceHash": "637c89940004ac87a5fef16b00c830c189a5a01c8bd3fbf8ba848b279dcb77e8",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 2218,
+      "usage": {
+        "inputTokens": 958,
+        "outputTokens": 264
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "scanned-pdf",
+                "record": 1,
+                "column": 1,
+                "quote": "Property: Demo Plaza",
+                "sourceLocation": "Page 1, OCR line 1"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "A numeric monthly rent amount of 5000 dollars is provided for November 2026.",
+            "evidence": [
+              {
+                "documentId": "scanned-pdf",
+                "record": 3,
+                "column": 1,
+                "quote": "Monthly rent: 5000 dollars",
+                "sourceLocation": "Page 1, OCR line 3"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "xlsx",
+      "sourceHash": "acb384c7e2c280d167dbbfa0a0d7ccaeaf4f9c2131b30d0ba1af1df10b85e477",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "fulfilled",
+      "passed": false,
+      "error": "call_or_validation_failed",
+      "elapsedMs": 60013
+    },
+    {
+      "case": "png",
+      "sourceHash": "b897bc75fe20697c166265191e91bf7a236682f44f93477a64ea665a351d2b59",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1094,
+      "usage": {
+        "inputTokens": 957,
+        "outputTokens": 259
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "png",
+                "record": 1,
+                "column": 1,
+                "quote": "Property: Demo Plaza",
+                "sourceLocation": "Image 1, OCR line 1"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "A numeric monthly rent amount of 5000 dollars is provided for November 2026.",
+            "evidence": [
+              {
+                "documentId": "png",
+                "record": 3,
+                "column": 1,
+                "quote": "Monthly rent: 5000 dollars",
+                "sourceLocation": "Image 1, OCR line 3"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "jpeg",
+      "sourceHash": "d99b757b17a038a1c392684bf7442a6ae26947f936cd509b41b4950606c20e03",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 992,
+      "usage": {
+        "inputTokens": 958,
+        "outputTokens": 259
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "jpeg",
+                "record": 1,
+                "column": 1,
+                "quote": "Property: Demo Plaza",
+                "sourceLocation": "Image 1, OCR line 1"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "A numeric monthly rent amount of 5000 dollars is provided for November 2026.",
+            "evidence": [
+              {
+                "documentId": "jpeg",
+                "record": 3,
+                "column": 1,
+                "quote": "Monthly rent: 5000 dollars",
+                "sourceLocation": "Image 1, OCR line 3"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "webp",
+      "sourceHash": "a9e23e0e89e5688c2491c92704511e469faafc6122dfb57743960042c095153c",
+      "model": "google/gemini-2.5-flash-lite",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 842,
+      "usage": {
+        "inputTokens": 958,
+        "outputTokens": 259
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "webp",
+                "record": 1,
+                "column": 1,
+                "quote": "Property: Demo Plaza",
+                "sourceLocation": "Image 1, OCR line 1"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "A numeric monthly rent amount of 5000 dollars is provided for November 2026.",
+            "evidence": [
+              {
+                "documentId": "webp",
+                "record": 3,
+                "column": 1,
+                "quote": "Monthly rent: 5000 dollars",
+                "sourceLocation": "Image 1, OCR line 3"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "native-pdf",
+      "sourceHash": "2e07cd4feaea4a7238bd7b824130fd550a86b0484fbe8929d8ac1624042615c7",
+      "model": "google/gemini-2.5-flash",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1116,
+      "usage": {
+        "inputTokens": 955,
+        "outputTokens": 174
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The document identifies the property as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "native-pdf",
+                "record": 1,
+                "column": 1,
+                "quote": "Property: Demo Plaza",
+                "sourceLocation": "Page 1, text item 1"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "The document provides a monthly rent amount of 5000 dollars for Demo Plaza for November 2026.",
+            "evidence": [
+              {
+                "documentId": "native-pdf",
+                "record": 3,
+                "column": 1,
+                "quote": "Monthly rent: 5000 dollars",
+                "sourceLocation": "Page 1, text item 3"
+              },
+              {
+                "documentId": "native-pdf",
+                "record": 2,
+                "column": 1,
+                "quote": "Period: November 2026",
+                "sourceLocation": "Page 1, text item 2"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "scanned-pdf",
+      "sourceHash": "637c89940004ac87a5fef16b00c830c189a5a01c8bd3fbf8ba848b279dcb77e8",
+      "model": "google/gemini-2.5-flash",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1053,
+      "usage": {
+        "inputTokens": 958,
+        "outputTokens": 175
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The document identifies the property as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "scanned-pdf",
+                "record": 1,
+                "column": 1,
+                "quote": "Property: Demo Plaza",
+                "sourceLocation": "Page 1, OCR line 1"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "The document provides a monthly rent amount of 5000 dollars for November 2026.",
+            "evidence": [
+              {
+                "documentId": "scanned-pdf",
+                "record": 2,
+                "column": 1,
+                "quote": "Period: November 2026",
+                "sourceLocation": "Page 1, OCR line 2"
+              },
+              {
+                "documentId": "scanned-pdf",
+                "record": 3,
+                "column": 1,
+                "quote": "Monthly rent: 5000 dollars",
+                "sourceLocation": "Page 1, OCR line 3"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "xlsx",
+      "sourceHash": "acb384c7e2c280d167dbbfa0a0d7ccaeaf4f9c2131b30d0ba1af1df10b85e477",
+      "model": "google/gemini-2.5-flash",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1023,
+      "usage": {
+        "inputTokens": 1020,
+        "outputTokens": 173
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The property is identified as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "xlsx",
+                "record": 4,
+                "column": 1,
+                "quote": "Demo Plaza",
+                "sourceLocation": "Sheet Rent!A2"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "The monthly rent amount for Demo Plaza for November 2026 is 5000.",
+            "evidence": [
+              {
+                "documentId": "xlsx",
+                "record": 6,
+                "column": 1,
+                "quote": "5000",
+                "sourceLocation": "Sheet Rent!C2"
+              },
+              {
+                "documentId": "xlsx",
+                "record": 5,
+                "column": 1,
+                "quote": "November 2026",
+                "sourceLocation": "Sheet Rent!B2"
+              },
+              {
+                "documentId": "xlsx",
+                "record": 4,
+                "column": 1,
+                "quote": "Demo Plaza",
+                "sourceLocation": "Sheet Rent!A2"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "png",
+      "sourceHash": "b897bc75fe20697c166265191e91bf7a236682f44f93477a64ea665a351d2b59",
+      "model": "google/gemini-2.5-flash",
+      "expected": "fulfilled",
+      "passed": false,
+      "error": "call_or_validation_failed",
+      "elapsedMs": 1130
+    },
+    {
+      "case": "jpeg",
+      "sourceHash": "d99b757b17a038a1c392684bf7442a6ae26947f936cd509b41b4950606c20e03",
+      "model": "google/gemini-2.5-flash",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1012,
+      "usage": {
+        "inputTokens": 958,
+        "outputTokens": 166
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The document identifies the property as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "jpeg",
+                "record": 1,
+                "column": 1,
+                "quote": "Property: Demo Plaza",
+                "sourceLocation": "Image 1, OCR line 1"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "The document provides a monthly rent amount of 5000 dollars for November 2026.",
+            "evidence": [
+              {
+                "documentId": "jpeg",
+                "record": 2,
+                "column": 1,
+                "quote": "Period: November 2026",
+                "sourceLocation": "Image 1, OCR line 2"
+              },
+              {
+                "documentId": "jpeg",
+                "record": 3,
+                "column": 1,
+                "quote": "Monthly rent: 5000 dollars",
+                "sourceLocation": "Image 1, OCR line 3"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    },
+    {
+      "case": "webp",
+      "sourceHash": "a9e23e0e89e5688c2491c92704511e469faafc6122dfb57743960042c095153c",
+      "model": "google/gemini-2.5-flash",
+      "expected": "fulfilled",
+      "actual": "fulfilled",
+      "passed": true,
+      "falseFulfilled": false,
+      "elapsedMs": 1065,
+      "usage": {
+        "inputTokens": 958,
+        "outputTokens": 166
+      },
+      "output": {
+        "schemaVersion": "verify.v1",
+        "requirementId": "rent",
+        "assessment": "appears_complete",
+        "checks": [
+          {
+            "criterionId": "identity",
+            "state": "met",
+            "reason": "The document identifies the property as Demo Plaza.",
+            "evidence": [
+              {
+                "documentId": "webp",
+                "record": 1,
+                "column": 1,
+                "quote": "Property: Demo Plaza",
+                "sourceLocation": "Image 1, OCR line 1"
+              }
+            ]
+          },
+          {
+            "criterionId": "rent",
+            "state": "met",
+            "reason": "The document provides a monthly rent amount of 5000 dollars for November 2026.",
+            "evidence": [
+              {
+                "documentId": "webp",
+                "record": 2,
+                "column": 1,
+                "quote": "Period: November 2026",
+                "sourceLocation": "Image 1, OCR line 2"
+              },
+              {
+                "documentId": "webp",
+                "record": 3,
+                "column": 1,
+                "quote": "Monthly rent: 5000 dollars",
+                "sourceLocation": "Image 1, OCR line 3"
+              }
+            ]
+          }
+        ],
+        "missingEvidence": [],
+        "conflicts": [],
+        "limitations": []
+      }
+    }
+  ]
+}

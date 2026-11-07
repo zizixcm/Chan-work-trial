@@ -1,3 +1,4 @@
+import {wordParts,plainText} from './analysis/readers/office-text';
 import sharp from "sharp";
 import { PDFDocument } from "pdf-lib";
 import { unzipSync } from "fflate";
@@ -25,13 +26,28 @@ export async function validateFile(
     );
   const extension = name.split(".").pop()?.toLowerCase();
   if (
-    !["pdf", "xlsx", "csv", "jpg", "jpeg", "png", "webp"].includes(
+    !["pdf", "docx", "xlsx", "eml", "txt", "csv", "jpg", "jpeg", "png", "webp"].includes(
       extension || "",
     )
   )
     throw new UploadError(
-      "Choose a PDF, XLSX, CSV, JPG, PNG, or WebP file. For HEIC photos, export a JPG copy.",
+      "Choose PDF, DOCX, XLSX, EML, TXT, CSV, JPG, PNG, or WebP. For HEIC photos, export a JPG copy.",
     );
+  if(extension==='docx'){
+    try{wordParts(bytes);}catch{throw new UploadError('This Word file is damaged, protected, or contains unsupported embedded objects. Export an unlocked DOCX or PDF.');}
+    return 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+  }
+  if(extension==='txt'){
+    try{plainText(bytes);}catch{throw new UploadError('Export this text file as nonempty UTF-8 plain text.');}
+    return 'text/plain';
+  }
+  if(extension==='eml'){
+    // Parse in the isolated reader later; first require an RFC-style header/body boundary.
+    const prefix=Buffer.from(bytes.subarray(0,65536)).toString('latin1');
+    const header=prefix.split(/\r?\n\r?\n/)[0];
+    if(!/\r?\n\r?\n/.test(prefix)||!/^From:/im.test(header)||!/^Subject:|^Date:|^To:/im.test(header))throw new UploadError('Choose a complete EML email export with headers and message body.');
+    return 'message/rfc822';
+  }
   if (["jpg", "jpeg", "png", "webp"].includes(extension!)) {
     try {
       const image = sharp(bytes, {

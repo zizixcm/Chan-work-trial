@@ -134,3 +134,5 @@ Uploads now declare durable batch manifests. Matching runs per document; assessm
 Run `npm run test:workflow-integration` for isolated failure/convergence scenarios. `AI_SMOKE_CASE=missing-rent` selects the negative HTTP/model fixture. Start with the maintained [workflow design](docs/AI_WORKFLOW_DESIGN.md), then consult [requirements](docs/AI_WORKFLOW_REQUIREMENTS.md), [edge cases](docs/AI_WORKFLOW_EDGE_CASES.md) and [test coverage and rollout](docs/AI_WORKFLOW_TEST_PLAN.md). The source checkpoint is tagged `checkpoint/pre-ai-workflow`; it does not back up database contents or private uploads.
 
 Current AI capabilities and remaining work: [AI feature support](docs/AI_FEATURE_STATUS.md). This inventory is updated alongside workflow implementation and design.
+
+AI reader formats, prompt strategy, evaluation commands, human-feedback API and metrics plan: [AI prompts, evaluations and metrics](docs/AI_PROMPTS_EVALS_AND_METRICS.md).

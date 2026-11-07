@@ -1,6 +1,7 @@
 import { buildMatchTask } from '../analysis/match';
 import { buildVerifyTask } from '../analysis/verify';
-import { prepareCsv } from '../analysis/prepare-csv';
+import { prepareDocument } from '../analysis/prepare-document';
+import { supportsAnalysis } from '../analysis/formats';
 import { AnalysisError, type AnalysisRequirement, type PreparedDocument } from '../analysis/types';
 import type { AnalysisTask, JobLease } from './contracts';
 import { AnalysisFailure } from './failures';
@@ -14,7 +15,7 @@ export interface AnalysisSnapshot {
 export type ReadEvidence = (job: JobLease<AnalysisSnapshot>, documentId: string, signal: AbortSignal) => Promise<Uint8Array>;
 
 /** Reader must reauthorize the private key resolution; do not pass a public URL
- * fetcher here. CSV preparation validates the exact pinned SHA-256 itself. */
+ * fetcher here. Document preparation validates the exact pinned SHA-256 itself. */
 export function createAnalysisPreparer(read: ReadEvidence) {
   return async (job: JobLease<AnalysisSnapshot>, signal: AbortSignal): Promise<AnalysisTask> => {
     const {documents, requirements} = job.input;
@@ -27,7 +28,7 @@ export function createAnalysisPreparer(read: ReadEvidence) {
     const limitations: string[] = [...(job.input.processingLimitations||[])];
     for (const document of documents) {
       if (signal.aborted) throw new AnalysisFailure('cancelled');
-      if (document.contentType.split(';')[0].trim() !== 'text/csv') {
+      if (!supportsAnalysis(document.contentType)) {
         if (job.task === 'match_document.v1') throw new AnalysisFailure('unsupported_input');
         limitations.push(`Document ${document.id} is linked but its file format is not supported for analysis.`);
         continue;
@@ -35,7 +36,10 @@ export function createAnalysisPreparer(read: ReadEvidence) {
       const bytes = await read(job, document.id, signal);
       // Integrity failures are not evidence gaps. Fail the task rather than
       // turning corrupted/unreadable bytes into an apparently valid assessment.
-      try { prepared.push(prepareCsv(document, bytes)); }
+      try {
+        const value=await prepareDocument(document,bytes,signal);prepared.push(value);
+        limitations.push(...(value.limitations||[]).map(l=>`Document ${document.id}: ${l}`));
+      }
       catch (error) {
         if (error instanceof AnalysisError) throw new AnalysisFailure('unsupported_input');
         throw error;

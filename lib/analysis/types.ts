@@ -1,19 +1,19 @@
 import type { JSONSchema7 } from 'json-schema';
 /** Runtime-neutral contracts shared by web/worker code. No provider, DB or secrets. */
 export const ANALYSIS_MODEL = 'google/gemini-2.5-flash';
-export const ANALYSIS_VERSION = 'csv-review.v5';
+export const ANALYSIS_VERSION = 'document-review.v6';
 export class AnalysisError extends Error {
   constructor(public readonly code: 'UNSUPPORTED_INPUT' | 'INVALID_OUTPUT' | 'INPUT_TOO_LARGE') { super(code); }
 }
-export type PreparedDocument = { id: string; sha256: string; records: string[][] };
+export type PreparedDocument = { id: string; sha256: string; records: string[][]; format?: string; locations?: string[]; limitations?: string[] };
 export type Criterion = { id: string; description: string };
 export type AnalysisRequirement = { id: string; title: string; subject: string; period: string; criteria: Criterion[] };
-export type Evidence = { documentId: string; record: number; column: number; quote: string };
+export type Evidence = { documentId: string; record: number; column: number; quote: string; sourceLocation?: string };
 export type Check = { criterionId: string; state: 'met' | 'unmet' | 'unknown'; reason: string; evidence: Evidence[] };
 export type Relevance = { state: 'relevant' | 'not_relevant' | 'ambiguous'; reason: string; evidence: Evidence[] };
 export type MatchResult = {
   schemaVersion: 'match.v1';
-  classification: { kind: 'rent_roll' | 'other_table' | 'unknown'; reason: string; evidence: Evidence[] };
+  classification: { kind: 'rent_roll' | 'other_table' | 'other_document' | 'unknown'; reason: string; evidence: Evidence[] };
   requirements: { requirementId: string; relevance: Relevance; checks: Check[] }[];
 };
 export type VerifyResult = {

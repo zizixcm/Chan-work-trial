@@ -184,3 +184,11 @@ This section supersedes the dated review's gap statements for the two cases belo
 - **E21/E30 / F11/F12:** Assessment uncertainty uses the latest match per active, AI-enabled borrower and document, checks the current fingerprint and consent epoch, and unions unresolved findings. A newer clear finding cannot hide another actor's ambiguity. Tests cover that ordering, disabling the ambiguous actor, and definition changes invalidating previously successful matches. Failed human-linked matching still permits assessment. Finer assignment policy for files linked elsewhere and sustained multi-user stress tests remain open.
 
 No migration or live model call is needed for these fixes. The current [feature support inventory](AI_FEATURE_STATUS.md) distinguishes source support from rollout.
+
+## Generalized reader follow-up — November 7, 2026
+
+E01–E05/E09: the supported reader boundary now includes modern PDF/DOCX/XLSX/EML/TXT plus CSV/images. See the [format matrix and limits](AI_PROMPTS_EVALS_AND_METRICS.md#implemented-document-reading-boundary), which supersedes older CSV-only statements. Unsupported/omitted visual content and email attachments remain explicit limitations. Every non-CSV parser runs in a disposable process with timeout/cancellation; a small per-process cache is implemented, while durable extraction artifacts remain absent.
+
+E24–E27: 28 live synthetic evaluations retain six failures rather than treating schema validity as semantic accuracy. Private human-feedback candidates are captured idempotently with scoped authorization, but are not automatically promoted to ground truth or sent to models. Adjudication/UI/export remain gaps.
+
+E10/E35 and manual lender refresh are accepted documented behaviors for now per the user; they remain limits, not defects silently declared fixed.

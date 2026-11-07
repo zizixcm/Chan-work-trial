@@ -186,3 +186,11 @@ Rollback checkpoint: `66db429`, tagged `checkpoint/pre-ai-workflow`. Migration 0
 | Current documentation review | Consolidate this maintained design; edge-case chat independently reconciles scenario claims and residual risks |
 
 November 7, 2026 follow-up: preserved unassigned missing intake across batch closure and made matching uncertainty actor-aware and freshness-checked. Regression fixtures reproduce the previous failures. Maintain the feature inventory with these behavior changes.
+
+## Generalized readers and evaluation follow-up — November 7, 2026
+
+This section supersedes the earlier CSV-only implementation boundary. The shared format registry now includes PDF, DOCX, XLSX, EML, TXT, CSV, JPEG, PNG and WebP. Upload-triggered matching, explicit checks and reconciliation use that registry. Legacy DOC/XLS/MSG are outside the initial scope by user choice. Extraction is local and bounded in disposable processes; the existing evidence/criterion contract is reused with application-derived source locations. Low-quality or omitted content is explicit, not silently absent.
+
+`document-review.v6` pins the reader/prompt changes. A 32-entry process-local cache avoids repeated parsing in a worker, while authority and byte integrity still precede reuse. This is not a cross-worker durable cache. No provider extraction call or automatic model escalation is introduced. Native-text PDF pages with embedded imagery/forms, Word embedded visuals/changes, Excel formulas/images, email attachments and low-confidence OCR are limitations. See the full [reader/prompt/evaluation/metrics contract](AI_PROMPTS_EVALS_AND_METRICS.md).
+
+Continuous-upload deferral and manual lender refresh are now accepted documented behavior, not immediate remediation priorities. Modern format support, evaluation quality, human-feedback capture and visibility are prioritized instead. The new private feedback API creates pending-review candidates without changing authoritative results; promotion requires review and remains future work.

@@ -1,3 +1,4 @@
+import { supportsAnalysis } from '../analysis/formats';
 import { createHash, randomUUID } from 'node:crypto';
 import type { Pool, PoolClient } from 'pg';
 import type { Access, Role } from '../authorization';
@@ -155,7 +156,7 @@ export async function enqueue(db: PoolClient, applicationId: string, userId: str
 }
 export async function enqueueForDocument(db:PoolClient, applicationId:string, userId:string, documentId:string) {
   const d = (await db.query('SELECT content_type FROM documents WHERE application_id=$1 AND id=$2',[applicationId,documentId])).rows[0];
-  if (d?.content_type?.split(';')[0].trim()==='text/csv') return enqueue(db,applicationId,userId,'match_document.v1',documentId,'background');
+  if (d?.content_type && supportsAnalysis(d.content_type)) return enqueue(db,applicationId,userId,'match_document.v1',documentId,'background');
   return null;
 }
 export async function enqueueForRequirement(db:PoolClient, applicationId:string,userId:string,requirementId:string) {

@@ -1,3 +1,5 @@
+import {captureDisagreement} from '../lib/evals/feedback';
+import {PDFDocument,StandardFonts} from 'pdf-lib';
 /** Behavioral acceptance suite: real PostgreSQL/worker/validators, synthetic model.
  * Isolated schema and blobs. No paid calls or shared fixture mutations. */
 import '../scripts/env';
@@ -75,6 +77,15 @@ async function main(){
   assert.deepEqual(calls.filter(c=>c.task==='verify').map(c=>c.documents),[2],'F09: one aggregate assessment uses both files');
   const current=()=>service.status().then(s=>s.jobs.find(j=>j.task==='verify_requirement.v1'&&j.targetId==='r'&&j.state==='succeeded'&&j.freshness==='current'));
   assert.equal((await current())?.result.fulfillment,'fulfilled');
+  const feedback={requestId:'feedback-one',jobId:(await current())!.id,expected:'not_fulfilled',reason:'Synthetic human correction pending adjudication'};
+  const candidate=await captureDisagreement(access,feedback,db,path.join(root,'evals'));
+  assert.equal(candidate.status,'pending_review');
+  assert.deepEqual(await captureDisagreement(access,feedback,db,path.join(root,'evals')),candidate,'feedback replay is idempotent');
+  await assert.rejects(captureDisagreement(access,{...feedback,reason:'Different correction'},db,path.join(root,'evals')),{status:409});
+  await assert.rejects(captureDisagreement({...access,userId:'other'},feedback,db,path.join(root,'evals')),{status:404});
+  const captured=JSON.parse(await readFile(path.join(root,'evals',candidate.id),'utf8'));
+  assert(captured.output.checks.length);assert.equal(captured.expected,'not_fulfilled');assert(captured.input.documents.length);
+  assert.equal((await current())?.result.fulfillment,'fulfilled','feedback does not rewrite authoritative assessment');
   const before=calls.length;await drain();assert.equal(calls.length,before,'unchanged snapshots do not repeat provider calls');
   await batches.attachExisting({batchId:'batch',memberId:first.id},first.id,first.sha256,first.name,['r']);
   await assert.rejects(batches.attachExisting({batchId:'batch',memberId:first.id},second.id,second.sha256,second.name,['r']),{status:409});
@@ -133,6 +144,15 @@ async function main(){
   failMatch=true;const beforeFailure=calls.length;await drain();
   assert.equal(calls.slice(beforeFailure).filter(c=>c.task==='match').length,1,'F10: invalid output is not retried forever');
   assert(await current(),'F10: failed match still schedules aggregate human-linked evidence check');
+
+  // Non-CSV upload uses the same durable scheduling and worker pipeline.
+  const pdf=await PDFDocument.create(),font=await pdf.embedFont(StandardFonts.Helvetica),page=pdf.addPage();
+  page.drawText('Property: Demo',{font,y:700});page.drawText('Tenant: PDF fixture',{font,y:660});
+  const pdfBytes=await pdf.save(),pdfId=randomUUID();await storage.put(pdfId,pdfBytes);
+  await new PostgresRepository(access).insertMany({id:pdfId,application_id:'a',original_name:'evidence.pdf',storage_key:pdfId,content_type:'application/pdf',size_bytes:pdfBytes.length,sha256:createHash('sha256').update(pdfBytes).digest('hex'),uploaded_by:'Fixture',created_at:new Date().toISOString()},['r']);
+  await drain();
+  assert((await service.status()).jobs.some(j=>j.targetId===pdfId&&j.task==='match_document.v1'&&j.state==='succeeded'),'PDF upload is automatically matched through real extraction');
+  assert(await current(),'PDF evidence reaches aggregate assessment');
 
   // Stale queued work is disposed before any provider call; mutation marker owns replacement.
   await db.query("UPDATE requirements SET purpose='Changed definition' WHERE id='r'");

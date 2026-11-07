@@ -1,3 +1,4 @@
+import { supportsAnalysis } from '../analysis/formats';
 import { latestSubmission, publishedSnapshot } from '../publication';
 import type { Pool } from 'pg';
 import type { Access } from '../authorization';
@@ -50,7 +51,7 @@ export class AnalysisService {
    if(task==='match_document.v1') {
      const d=(await db.query('SELECT content_type FROM documents WHERE application_id=$1 AND id=$2',[this.access.applicationId,targetId])).rows[0];
      if(!d)throw new UploadError('Document not found.',404);
-     if(d.content_type.split(';')[0].trim()!=='text/csv')throw new UploadError('AI analysis currently supports CSV documents. You can link this file manually.',422);
+     if(!supportsAnalysis(d.content_type))throw new UploadError('This format is not supported for AI analysis. You can link this file manually.',422);
    }
    if(retryOf) {
      const prior=(await db.query('SELECT * FROM analysis_jobs WHERE application_id=$1 AND id=$2 FOR UPDATE',[this.access.applicationId,retryOf])).rows[0];
