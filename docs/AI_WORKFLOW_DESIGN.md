@@ -189,8 +189,12 @@ November 7, 2026 follow-up: preserved unassigned missing intake across batch clo
 
 ## Generalized readers and evaluation follow-up — November 7, 2026
 
-This section supersedes the earlier CSV-only implementation boundary. The shared format registry now includes PDF, DOCX, XLSX, EML, TXT, CSV, JPEG, PNG and WebP. Upload-triggered matching, explicit checks and reconciliation use that registry. Legacy DOC/XLS/MSG are outside the initial scope by user choice. Extraction is local and bounded in disposable processes; the existing evidence/criterion contract is reused with application-derived source locations. Low-quality or omitted content is explicit, not silently absent.
+This section supersedes the earlier CSV-only implementation boundary. The shared format registry now includes PDF, DOCX, XLSX, EML, TXT, CSV, JPEG, PNG and WebP. Upload-triggered matching, explicit checks and reconciliation use that registry. Legacy DOC/XLS remain outside the initial scope. MSG was subsequently requested and is supported as described below. Extraction is local and bounded in disposable processes; the existing evidence/criterion contract is reused with application-derived source locations. Low-quality or omitted content is explicit, not silently absent.
 
 `document-review.v6` pins the reader/prompt changes. A 32-entry process-local cache avoids repeated parsing in a worker, while authority and byte integrity still precede reuse. This is not a cross-worker durable cache. No provider extraction call or automatic model escalation is introduced. Native-text PDF pages with embedded imagery/forms, Word embedded visuals/changes, Excel formulas/images, email attachments and low-confidence OCR are limitations. See the full [reader/prompt/evaluation/metrics contract](AI_PROMPTS_EVALS_AND_METRICS.md).
 
 Continuous-upload deferral and manual lender refresh are now accepted documented behavior, not immediate remediation priorities. Modern format support, evaluation quality, human-feedback capture and visibility are prioritized instead. The new private feedback API creates pending-review candidates without changing authoritative results; promotion requires review and remains future work.
+
+### Outlook MSG follow-up
+
+`document-review.v7` adds `application/vnd.ms-outlook` to the shared registry and upload picker. MSG validation and extraction run in the same disposable process boundary, preserving Unicode/plain/HTML body text and header locations. Embedded attachments are not analyzed; RTF-only/protected content remains limited. No migration or model routing change is required.

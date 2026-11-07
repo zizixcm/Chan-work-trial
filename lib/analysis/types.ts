@@ -1,7 +1,7 @@
 import type { JSONSchema7 } from 'json-schema';
 /** Runtime-neutral contracts shared by web/worker code. No provider, DB or secrets. */
 export const ANALYSIS_MODEL = 'google/gemini-2.5-flash';
-export const ANALYSIS_VERSION = 'document-review.v6';
+export const ANALYSIS_VERSION = 'document-review.v7';
 export class AnalysisError extends Error {
   constructor(public readonly code: 'UNSUPPORTED_INPUT' | 'INVALID_OUTPUT' | 'INPUT_TOO_LARGE') { super(code); }
 }

@@ -23,6 +23,7 @@
     "eval:ai": "tsx scripts/evaluate-models.ts"
   },
   "dependencies": {
+    "@kenjiuno/msgreader": "^1.29.0",
     "@mastra/core": "^1.82.0",
     "@napi-rs/canvas": "^1.1.0",
     "@tesseract.js-data/eng": "^1.0.0",
@@ -51,6 +52,7 @@
     "@types/pg": "^8.23.1",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
+    "cfb": "^1.2.2",
     "tsx": "^4.20.0",
     "typescript": "^5.9.3"
   },

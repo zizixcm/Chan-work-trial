@@ -7,7 +7,7 @@ Updated November 7, 2026. This document separates implemented behavior from prop
 Use three layers, composed by application code:
 
 1. **Shared evidence rules:** source content is data, exact citations, subject/period checks, no invented facts, uncertainty and human authority. Implemented in `lib/analysis/validation.ts`.
-2. **Task rubric:** matching asks relevance; assessment checks every required condition across all linked evidence. `lib/analysis/rubrics.ts` adds explicit field/value/period and visual-evidence rules. All are pinned by `ANALYSIS_VERSION` (`document-review.v6`).
+2. **Task rubric:** matching asks relevance; assessment checks every required condition across all linked evidence. `lib/analysis/rubrics.ts` adds explicit field/value/period and visual-evidence rules. All are pinned by `ANALYSIS_VERSION` (`document-review.v7`; recorded live evaluations below used v6).
 3. **Requirement-specific policy:** current requirement criteria, entity and period are supplied as data. Future approved policy packs should specify acceptable evidence, mandatory fields, time windows and exceptions, referenced by stable ID/version in the requirement definition. Do not select a pack merely by fuzzy title or let uploaded text choose it.
 
 A short versioned document per *requirement family* is useful as a reviewable policy source. It should compile into a small trusted rubric and tests. It should not be an autonomous tool-using skill or a large collection loaded into every prompt. For example, a rent-roll policy can require property identity, as-of period, tenancy and rent fields; a bank-statement policy has account holder, statement period, currency and balance rules. These domain policy packs are a proposal, not new hidden requirements in today's app.
@@ -23,7 +23,7 @@ Keep calls fast by extracting locally, reusing a bounded process-local extractio
 | PDF | .pdf | Native text items by page; local OCR for textless pages | 12-page cap; mixed images/text and form widgets are flagged; no signature/authenticity validation |
 | Word | .docx | Paragraphs in document, headers, footers, notes/comments; source part and paragraph | Embedded visuals/objects and tracked changes flagged; no legacy .doc |
 | Excel | .xlsx, .csv | Sheet/cell addresses including hidden sheets; CSV record/cell addresses | Formulas not executed, cached values unverified; images flagged; no legacy .xls |
-| Email | .eml | Decoded headers and plain/HTML-derived body lines | Attachments remain unreviewed and must be uploaded separately; no Outlook .msg; sender headers are not identity proof |
+| Email | .eml, .msg | Decoded headers and plain/HTML-derived body lines | Attachments remain unreviewed and must be uploaded separately; MSG RTF-only/protected bodies are limited; sender headers are not identity proof |
 | Text | .txt | UTF-8 lines | Other encodings require export as UTF-8 |
 | Images | .jpg/.jpeg, .png, .webp | Local English OCR lines | Low-confidence/empty OCR becomes a limitation; handwriting and visual semantics are not certified |
 
@@ -71,3 +71,5 @@ Continuous arrivals may extend the application-wide wait indefinitely. The user 
 Browser close: saved files/manifests survive, but browser-held unsent bytes do not. A recovery UI must list missing members and let the user reselect exact files. Missing-file abandonment needs an explicit action with provenance; timeout alone must not silently withdraw missing evidence.
 
 Concurrent backend work adds draft soft-removal and explicit same-byte reupload/restoration; these are separate from full immutable version replacement. Version replacement still needs a UI/API contract for successor identity, link confirmation and historical lender submissions. Do not equate unlinking a file, removing it from a draft and deleting retained bytes.
+
+MSG upload validation also uses the isolated reader and its bounds; malformed or non-email compound containers are rejected. No attachment extraction or network fetching is performed. Synthetic MSG tests do not replace representative real-world Outlook fixtures or live model evaluation.

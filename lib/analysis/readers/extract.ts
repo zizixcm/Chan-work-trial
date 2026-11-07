@@ -1,3 +1,4 @@
+import {outlookMessage} from './outlook';
 import {wordParagraphs,plainText} from './office-text';
 import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
@@ -11,9 +12,10 @@ export async function extract(document:{id:string;sha256:string;contentType:stri
   if(createHash('sha256').update(bytes).digest('hex')!==document.sha256)throw new AnalysisError('UNSUPPORTED_INPUT');
   const mime=document.contentType.split(';')[0].trim().toLowerCase();
   if(mime==='text/csv')return prepareCsv(document,bytes);
-  const extensions:Record<string,string>={'text/plain':'txt','message/rfc822':'eml','application/vnd.openxmlformats-officedocument.wordprocessingml.document':'docx','application/pdf':'pdf','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':'xlsx','image/png':'png','image/jpeg':'jpg','image/webp':'webp'};
+  const extensions:Record<string,string>={'application/vnd.ms-outlook':'msg','text/plain':'txt','message/rfc822':'eml','application/vnd.openxmlformats-officedocument.wordprocessingml.document':'docx','application/pdf':'pdf','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':'xlsx','image/png':'png','image/jpeg':'jpg','image/webp':'webp'};
   if(!extensions[mime])throw new AnalysisError('UNSUPPORTED_INPUT');
-  await validateFile('evidence.'+extensions[mime],bytes);
+  // MSG upload validation invokes this isolated reader; do not recurse.
+  if(mime!=='application/vnd.ms-outlook')await validateFile('evidence.'+extensions[mime],bytes);
   const records:string[][]=[],locations:string[]=[],limitations:string[]=[];
   const add=(location:string,value:string)=>{
     if(!value.trim())return;
@@ -35,7 +37,11 @@ export async function extract(document:{id:string;sha256:string;contentType:stri
     data.text.split(/\r?\n/).forEach((line,index)=>add(`${location}, OCR line ${index+1}`,line));
   };
   try {
-    if(mime==='text/plain'){
+    if(mime==='application/vnd.ms-outlook'){
+      const email=outlookMessage(bytes);email.headers.forEach(h=>add(h.location,h.text));
+      email.body.split(/\r?\n/).forEach((line,index)=>add(`Outlook body line ${index+1}`,line));
+      limitations.push(...email.limitations);
+    }else if(mime==='text/plain'){
       plainText(bytes).split(/\r?\n/).forEach((line,index)=>add(`Line ${index+1}`,line));
     }else if(mime==='application/vnd.openxmlformats-officedocument.wordprocessingml.document'){
       const word=wordParagraphs(bytes);word.paragraphs.forEach(p=>add(p.location,p.text));limitations.push(...word.limitations);

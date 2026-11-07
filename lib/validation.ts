@@ -26,12 +26,12 @@ export async function validateFile(
     );
   const extension = name.split(".").pop()?.toLowerCase();
   if (
-    !["pdf", "docx", "xlsx", "eml", "txt", "csv", "jpg", "jpeg", "png", "webp"].includes(
+    !["pdf", "docx", "xlsx", "eml", "msg", "txt", "csv", "jpg", "jpeg", "png", "webp"].includes(
       extension || "",
     )
   )
     throw new UploadError(
-      "Choose PDF, DOCX, XLSX, EML, TXT, CSV, JPG, PNG, or WebP. For HEIC photos, export a JPG copy.",
+      "Choose PDF, DOCX, XLSX, EML, MSG, TXT, CSV, JPG, PNG, or WebP. For HEIC photos, export a JPG copy.",
     );
   if(extension==='docx'){
     try{wordParts(bytes);}catch{throw new UploadError('This Word file is damaged, protected, or contains unsupported embedded objects. Export an unlocked DOCX or PDF.');}
@@ -40,6 +40,14 @@ export async function validateFile(
   if(extension==='txt'){
     try{plainText(bytes);}catch{throw new UploadError('Export this text file as nonempty UTF-8 plain text.');}
     return 'text/plain';
+  }
+  if(extension==='msg'){
+    try{
+      const {prepareDocument}=await import('./analysis/prepare-document');
+      const {createHash}=await import('node:crypto');
+      await prepareDocument({id:'upload-msg-validation',sha256:createHash('sha256').update(bytes).digest('hex'),contentType:'application/vnd.ms-outlook'},bytes,new AbortController().signal);
+    }catch{throw new UploadError('This Outlook MSG is damaged, not an email, or exceeds safe reading limits. Export it as EML or PDF and try again.');}
+    return 'application/vnd.ms-outlook';
   }
   if(extension==='eml'){
     // Parse in the isolated reader later; first require an RFC-style header/body boundary.

@@ -5,7 +5,7 @@ Updated November 7, 2026. This is the working product inventory for the AI docum
 | Feature | Current support | Limits / what is still needed |
 | --- | --- | --- |
 | Upload validation | Structural checks for accepted document formats; private immutable storage and integrity checks | Structural validity does not prove business completeness or authenticity |
-| AI document reading | PDF (native/scanned), DOCX, XLSX, EML, UTF-8 TXT/CSV and JPG/PNG/WebP; source locations and exact extracted-text citations | Bounded local extraction; English OCR; email attachments, mixed PDF visuals/forms and formulas have explicit limitations; no legacy DOC/XLS/MSG |
+| AI document reading | PDF (native/scanned), DOCX, XLSX, EML/MSG, UTF-8 TXT/CSV and JPG/PNG/WebP; source locations and exact extracted-text citations | Bounded local extraction; English OCR; email attachments, mixed PDF visuals/forms and formulas have explicit limitations; no legacy DOC/XLS; MSG plain/HTML bodies supported, RTF-only/protected bodies limited |
 | Automatic classification and matching | One document can match multiple application requirements; validated relevance findings | Supported readers; bounded candidate count; larger semantic evaluation corpus needed |
 | Requirement assessment | Combined associated evidence; application-derived fulfilled, partially fulfilled, not fulfilled, unable-to-determine | All criteria mandatory; optional/alternative rules not supported |
 | Bulk uploads | Durable manifests, individual saves, finalization/expiry, late-save reconciliation | No full cross-session recovery UI; API uploads can omit manifests |
@@ -39,3 +39,5 @@ Accepted behavior for now: continuous uploads can extend application-wide waitin
 Details: [design](AI_WORKFLOW_DESIGN.md), [requirements](AI_WORKFLOW_REQUIREMENTS.md), [edge cases](AI_WORKFLOW_EDGE_CASES.md), [test evidence](AI_WORKFLOW_TEST_PLAN.md).
 
 November 7 reader increment: modern PDF/Word/Excel/Email/Text families are wired into upload validation and analysis. See [prompts, evaluations and metrics](AI_PROMPTS_EVALS_AND_METRICS.md) for exact bounds, API details and measured outcomes. Source support does not certify deployment.
+
+Outlook MSG follow-up: `.msg` upload validation, header/body extraction and scheduling are implemented. Synthetic fixtures cover Unicode/plain text, HTML, attachments, RTF-only limitations and corrupt/non-email rejection. This is source support, not a deployment claim.
