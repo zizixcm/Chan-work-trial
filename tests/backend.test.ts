@@ -158,3 +158,10 @@ test('real CSV task preparation and provider validation compose for both job kin
     await assert.rejects(executeProvider(built, DEFAULT_BUDGET, {generate: async () => ({text: JSON.stringify(output).replaceAll('2026-11-01', 'invented')})}, signal()), {code: 'invalid_output'});
   }
 });
+
+
+test('phase telemetry failure cannot fail an otherwise valid analysis',async()=>{
+ const state=repository();state.repo.recordPhase=async()=>{throw Error('metrics unavailable');};
+ await runJob(lease(),{repository:state.repo,prepare:async()=>task,transport,budget:DEFAULT_BUDGET},signal());
+ assert(state.committed());assert.equal(state.failure(),undefined);
+});

@@ -20,7 +20,8 @@
     "test:ai-integration": "tsx tests/ai.integration.ts",
     "test:jobs-integration": "tsx tests/jobs.integration.ts",
     "test:workflow-integration": "tsx tests/workflow.integration.ts",
-    "eval:ai": "tsx scripts/evaluate-models.ts"
+    "eval:ai": "tsx scripts/evaluate-models.ts",
+    "metrics:export": "tsx scripts/export-ai-metrics.ts"
   },
   "dependencies": {
     "@kenjiuno/msgreader": "^1.29.0",

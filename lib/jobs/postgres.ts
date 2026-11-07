@@ -15,6 +15,11 @@ type Row=Record<string,any>;
 const numberEnv=(name:string,fallback:number)=>{const n=Number(process.env[name]??fallback);return Number.isFinite(n)&&n>0?n:fallback;};
 export class PostgresJobRepository implements JobRepository<AnalysisSnapshot> {
   constructor(private database:Pool=pool(), private storage=new LocalBlobStorage()) {}
+  async recordPhase(job:JobLease<AnalysisSnapshot>,phase:'preparing'|'prepared'|'responded') {
+    const query={text:`INSERT INTO analysis_events(application_id,job_id,event,token)
+      SELECT application_id,id,$3,token FROM analysis_jobs WHERE id=$1 AND token=$2 AND state='running' AND lease_expires_at>now()`,values:[job.id,job.token,phase],query_timeout:1000};
+    await this.database.query(query);
+  }
   private lease(row:Row):JobLease<AnalysisSnapshot> { return {id:row.id,applicationId:row.application_id,task:row.task,lane:row.lane,token:String(row.token),attempt:row.attempt,providerAttempts:row.provider_attempts,deadlineAt:new Date(row.attempt_deadline).toISOString(),input:row.input}; }
   private async event(db:PoolClient,row:Row,event:string,code?:string) {await db.query('INSERT INTO analysis_events(application_id,job_id,event,token,safe_code) VALUES($1,$2,$3,$4,$5)',[row.application_id,row.id,event,row.token,code||null]);}
   private async state(db:PoolClient,row:Row,state:string,code?:string,availableAt?:string) {

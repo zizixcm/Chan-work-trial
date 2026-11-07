@@ -33,6 +33,7 @@ export function Inspector({id}: {id?: string}) {
   return <main className={styles.main}>
     <header className={styles.header}>
       <div><a href="/internal/analysis-runs">Developer tools / Analysis runs</a>
+        <p><a href="/internal/ai-workflows">Workflow metrics and exports</a></p>
         <h1>{id ? 'Analysis run' : 'Analysis runs'}</h1>
         <p>Private diagnostics · Read only · Retained for up to seven days</p></div>
       <button onClick={() => setReload(value => value + 1)}>Refresh</button>

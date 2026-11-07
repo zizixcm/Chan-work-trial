@@ -198,3 +198,7 @@ Continuous-upload deferral and manual lender refresh are now accepted documented
 ### Outlook MSG follow-up
 
 `document-review.v7` adds `application/vnd.ms-outlook` to the shared registry and upload picker. MSG validation and extraction run in the same disposable process boundary, preserving Unicode/plain/HTML body text and header locations. Embedded attachments are not analyzed; RTF-only/protected content remains limited. No migration or model routing change is required.
+
+## Visibility dashboard follow-up
+
+`/internal/ai-workflows` reads scoped operational metadata and exports JSON/CSV. Optional metadata-only phase events enable preparation and model-plus-validation timings for new attempts without requiring raw capture. The existing event table is reused; telemetry failures cannot fail analysis. The dashboard distinguishes historical success from current fulfillment, pending work from terminal latency, and known cost from unknown reservations. See [metric definitions/access/export boundaries](AI_WORKFLOW_METRICS.md).

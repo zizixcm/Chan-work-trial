@@ -77,6 +77,8 @@ export interface JobRepository<Input = unknown> {
   /** Sweep expired leases, revoke tokens and retry/dead-letter using DB time.
    * Also expire old queued jobs; browser polling never performs recovery. */
   recover(): Promise<void>;
+  /** Optional metadata-only telemetry; failures must not change domain outcomes. */
+  recordPhase?(job:JobLease<Input>,phase:'preparing'|'prepared'|'responded'):Promise<void>;
 }
 export interface DispatchBudget {
   model: string;

@@ -136,3 +136,5 @@ Run `npm run test:workflow-integration` for isolated failure/convergence scenari
 Current AI capabilities and remaining work: [AI feature support](docs/AI_FEATURE_STATUS.md). This inventory is updated alongside workflow implementation and design.
 
 AI reader formats, prompt strategy, evaluation commands, human-feedback API and metrics plan: [AI prompts, evaluations and metrics](docs/AI_PROMPTS_EVALS_AND_METRICS.md).
+
+Workflow visibility: `/internal/ai-workflows`. Download JSON/CSV there, or run `npm run metrics:export`. See [metrics access and definitions](docs/AI_WORKFLOW_METRICS.md).

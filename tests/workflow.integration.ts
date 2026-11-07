@@ -1,3 +1,4 @@
+import {workflowMetrics} from '../lib/analysis-metrics/data';
 import {captureDisagreement} from '../lib/evals/feedback';
 import {PDFDocument,StandardFonts} from 'pdf-lib';
 /** Behavioral acceptance suite: real PostgreSQL/worker/validators, synthetic model.
@@ -86,6 +87,13 @@ async function main(){
   const captured=JSON.parse(await readFile(path.join(root,'evals',candidate.id),'utf8'));
   assert(captured.output.checks.length);assert.equal(captured.expected,'not_fulfilled');assert(captured.input.documents.length);
   assert.equal((await current())?.result.fulfillment,'fulfilled','feedback does not rewrite authoritative assessment');
+  const metrics=await workflowMetrics('u',{days:7},db);
+  assert(metrics.summary.preparation.count>0,'worker records durable preparation phases');
+  assert(metrics.summary.modelAndValidation.count>0,'worker records model/validation phases');
+  assert(metrics.summary.knownCostUsd>0);assert(metrics.jobs.some(j=>j.id===(candidate&&feedback.jobId)));
+  assert(!JSON.stringify(metrics).includes('Synthetic fixture'),'metrics omit source/reason text');
+  assert.equal((await workflowMetrics('not-a-member',{days:7},db)).jobs.length,0,'metrics enforce membership');
+  assert.equal((await workflowMetrics('u',{days:7,applicationId:'foreign'},db)).jobs.length,0,'metrics cannot cross application filter');
   const before=calls.length;await drain();assert.equal(calls.length,before,'unchanged snapshots do not repeat provider calls');
   await batches.attachExisting({batchId:'batch',memberId:first.id},first.id,first.sha256,first.name,['r']);
   await assert.rejects(batches.attachExisting({batchId:'batch',memberId:first.id},second.id,second.sha256,second.name,['r']),{status:409});

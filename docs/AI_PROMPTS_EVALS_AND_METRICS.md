@@ -73,3 +73,7 @@ Browser close: saved files/manifests survive, but browser-held unsent bytes do n
 Concurrent backend work adds draft soft-removal and explicit same-byte reupload/restoration; these are separate from full immutable version replacement. Version replacement still needs a UI/API contract for successor identity, link confirmation and historical lender submissions. Do not equate unlinking a file, removing it from a draft and deleting retained bytes.
 
 MSG upload validation also uses the isolated reader and its bounds; malformed or non-email compound containers are rejected. No attachment extraction or network fetching is performed. Synthetic MSG tests do not replace representative real-world Outlook fixtures or live model evaluation.
+
+### Implemented visibility follow-up
+
+The first dashboard and exports described above are now implemented. `/internal/ai-workflows` shows scoped job counts, latency percentiles, outcomes, daily cohorts and timelines. Authenticated JSON/CSV and `npm run metrics:export` make the data directly readable. Preparation/response phase timestamps are recorded by new workers using existing durable events. Upload-to-final correlation and external observability remain future work. [Full access and measurement contract](AI_WORKFLOW_METRICS.md).

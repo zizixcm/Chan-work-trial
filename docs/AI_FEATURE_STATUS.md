@@ -13,6 +13,7 @@ Updated November 7, 2026. This is the working product inventory for the AI docum
 | Automatic refresh | Borrower mutation reconciliation, stale-input rejection, latest pending check coalescing | Broad scans can revisit historical files; no automatic lender refresh |
 | Concurrent borrowers | Actor-scoped jobs; uncertainty retained per enabled active borrower; current-fingerprint checks | Multi-user stress coverage and precise dependency rules still needed |
 | Manual checks | Authenticated borrower/lender check service and retry support; lender checks use submitted evidence | Button placement may differ in the concurrent UI redesign; this inventory does not certify each screen |
+| Workflow visibility and exports | Developer dashboard, authenticated JSON/CSV, private CLI exports, durable phase timestamps for new attempts | Membership-scoped; newest 2,000 jobs; no upload-to-final correlation or external alerts yet |
 | Worker resilience | Durable jobs, leases/fencing, bounded retries, cancellation, budget/rate limits | Process-kill/restore drills, measured throughput, alerts and production SLOs needed |
 | Batch readiness | Wait for uploads/matches before aggregate checks; limitations after individual wait bounds | Application-wide waiting; continuous arrivals can extend total wait indefinitely |
 | Human decisions | AI findings separate from lender acceptance/waiver; human link rejection takes precedence | More correction actions and replacement/delete product flows needed |
@@ -24,7 +25,7 @@ Updated November 7, 2026. This is the working product inventory for the AI docum
 ## Next work, in priority order
 
 1. Expand model/extraction evaluations, investigate retained failures, and connect the disagreement UI to candidate capture/adjudication.
-2. Add stage-duration metrics and the workflow-runs dashboard.
+2. Extend the implemented dashboard with upload/batch-to-current-assessment correlation and alerting.
 3. Improve recovery UX and requirement policy packs, with explicit coverage tests.
 4. Broaden supported document complexity and OCR languages based on fixtures, not a universal-file claim.
 
@@ -41,3 +42,5 @@ Details: [design](AI_WORKFLOW_DESIGN.md), [requirements](AI_WORKFLOW_REQUIREMENT
 November 7 reader increment: modern PDF/Word/Excel/Email/Text families are wired into upload validation and analysis. See [prompts, evaluations and metrics](AI_PROMPTS_EVALS_AND_METRICS.md) for exact bounds, API details and measured outcomes. Source support does not certify deployment.
 
 Outlook MSG follow-up: `.msg` upload validation, header/body extraction and scheduling are implemented. Synthetic fixtures cover Unicode/plain text, HTML, attachments, RTF-only limitations and corrupt/non-email rejection. This is source support, not a deployment claim.
+
+Dashboard access, metric definitions and export commands: [AI workflow metrics](AI_WORKFLOW_METRICS.md).
