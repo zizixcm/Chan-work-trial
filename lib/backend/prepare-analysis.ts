@@ -9,6 +9,7 @@ import { AnalysisFailure } from './failures';
 export interface AnalysisSnapshot {
   documents: Array<{id: string; sha256: string; contentType: string}>;
   requirements: AnalysisRequirement[];
+  processingLimitations?: string[];
 }
 export type ReadEvidence = (job: JobLease<AnalysisSnapshot>, documentId: string, signal: AbortSignal) => Promise<Uint8Array>;
 
@@ -23,7 +24,7 @@ export function createAnalysisPreparer(read: ReadEvidence) {
       throw new AnalysisFailure('unsupported_input');
     }
     const prepared: PreparedDocument[] = [];
-    const limitations: string[] = [];
+    const limitations: string[] = [...(job.input.processingLimitations||[])];
     for (const document of documents) {
       if (signal.aborted) throw new AnalysisFailure('cancelled');
       if (document.contentType.split(';')[0].trim() !== 'text/csv') {

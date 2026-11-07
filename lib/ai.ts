@@ -1,11 +1,12 @@
 import "server-only";
 import { Agent } from "@mastra/core/agent";
 import { noopLogger } from "@mastra/core/logger";
+import { configuredModel } from './backend/models';
 
 export function aiConfiguration() {
   return {
     configured: Boolean(process.env.OPENROUTER_API_KEY?.trim()),
-    model: process.env.OPENROUTER_MODEL?.trim() || "google/gemini-2.5-flash-lite",
+    model: configuredModel(),
   };
 }
 

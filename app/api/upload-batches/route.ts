@@ -1,0 +1,21 @@
+import { accessFor } from '@/lib/authorization';
+import { UploadBatchService, type BatchMember } from '@/lib/jobs/batches';
+import { body, json, key } from '@/lib/jobs/http';
+import { failure, localRequest } from '@/lib/http';
+export const runtime='nodejs';
+export async function POST(request:Request) {
+  try {
+    localRequest(request,true);
+    const service=new UploadBatchService(await accessFor(request,['borrower']));
+    const input=await body(request,32768);
+    if(input.action==='finalize')return json(await service.finalize(key(input.id)));
+    return json(await service.create(key(input.id),input.members as BatchMember[]),201);
+  }catch(error){return failure(error);}
+}
+export async function GET(request:Request) {
+  try {
+    localRequest(request);
+    const service=new UploadBatchService(await accessFor(request,['borrower']));
+    return json(await service.status(key(new URL(request.url).searchParams.get('id'))));
+  }catch(error){return failure(error);}
+}

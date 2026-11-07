@@ -2,6 +2,7 @@ import { createHash, randomUUID } from 'node:crypto';
 import type { PoolClient } from 'pg';
 import { pool } from './db';
 import { enqueueForDocument, enqueueForRequirement } from './jobs/core';
+import { batchMember, resolveSavedBatchMembers, type BatchReference } from './jobs/batches';
 import type { Access, Role } from './authorization';
 import { UploadError } from './validation';
 import type { DocumentRepository, ReviewRepository, DocumentRecord, ApplicationSnapshot, LenderSnapshot, RequirementReview } from './model';
@@ -12,7 +13,7 @@ import { LocalBlobStorage } from './storage/local';
 const iso = (value: string | Date) => value instanceof Date ? value.toISOString() : value;
 
 export class PostgresRepository implements DocumentRepository, ReviewRepository {
-  constructor(readonly access: Access) {}
+  constructor(readonly access: Access, readonly uploadBatch?:BatchReference) {}
   private async tx<T>(roles: readonly Role[], work: (db: PoolClient) => Promise<T>): Promise<T> {
     const db = await pool().connect();
     try {
@@ -61,6 +62,9 @@ export class PostgresRepository implements DocumentRepository, ReviewRepository 
   async insertMany(d: DocumentRecord, requirementIds: string[]) {
     return this.tx(['borrower'], async db=>{
       if (d.application_id !== this.access.applicationId) throw new UploadError('Invalid application.',403);
+      const member=this.uploadBatch?await batchMember(db,this.access,this.uploadBatch):null;
+      if(member&&(member.sha256!==d.sha256||member.name!==d.original_name||JSON.stringify(requirementIds)!==JSON.stringify(member.requirement_id?[member.requirement_id]:[])))throw new UploadError('File does not match the upload manifest.',409);
+      if(member?.document_id)throw new UploadError('This batch member is already saved.',409);
       for (const requirementId of requirementIds) {
         const r=(await db.query("SELECT collection FROM requirements WHERE application_id=$1 AND id=$2 AND lifecycle='active'",[this.access.applicationId,requirementId])).rows[0];
         if(!r)throw new UploadError('Request not found.',404);
@@ -73,6 +77,8 @@ export class PostgresRepository implements DocumentRepository, ReviewRepository 
       }
       await db.query('INSERT INTO draft_document_selections(application_id,document_id,included,updated_by_user_id) VALUES($1,$2,true,$3)',[this.access.applicationId,d.id,this.access.userId]);
       await this.audit(db,'document.uploaded',d.id);
+      if(member)await db.query("UPDATE upload_batch_members SET state='saved',document_id=$3 WHERE batch_id=$1 AND id=$2",[this.uploadBatch!.batchId,this.uploadBatch!.memberId,d.id]);
+      await resolveSavedBatchMembers(db,this.access,d.id,d.sha256);
       const job=await enqueueForDocument(db,this.access.applicationId,this.access.userId,d.id);
       if(!job)for(const requirementId of requirementIds)await enqueueForRequirement(db,this.access.applicationId,this.access.userId,requirementId);
     });

@@ -8,6 +8,8 @@ export default function BatchUpload({ dropzone=false, disabled=false, onPendingC
   const [batches, setBatches] = useState<Record<string, Entry[]>>({});
   const [busy, setBusy] = useState(false);
   const running = useRef(false);
+  const batchRefs=useRef<Record<string,string>>({});
+  const manifests=useRef<Record<string,Array<{id:string;name:string;sha256:string;requirementId?:string}>>>({});
   const [notice, setNotice] = useState("");
   const input = useRef<HTMLInputElement>(null);
   const [dragging,setDragging]=useState(false);
@@ -40,6 +42,7 @@ export default function BatchUpload({ dropzone=false, disabled=false, onPendingC
   function send(entry: Entry, target: string | null, key: string) {
     return new Promise<void>((resolve, reject) => {
       const form = new FormData(); form.set("file", entry.file); if (target) form.set("requirementId", target);
+      if(batchRefs.current[entry.id]){form.set('batchId',batchRefs.current[entry.id]);form.set('memberId',entry.id);}
       const xhr = new XMLHttpRequest(); xhr.open("POST", `/api/documents?applicationId=${encodeURIComponent(applicationId)}`); xhr.timeout = 120000;
       xhr.upload.onprogress = event => { if (event.lengthComputable) update(key, entry.id, { progress: Math.round(event.loaded / event.total * 100) }); };
       xhr.onload = () => {
@@ -60,7 +63,20 @@ export default function BatchUpload({ dropzone=false, disabled=false, onPendingC
     running.current = true; setBusy(true); onBusy(true); setNotice("");
     const key = batchKey, target = requirementId;
     let saved = 0, failed = 0;
+    const batchCommand=async(value:unknown)=>{
+      const response=await fetch(`/api/upload-batches?applicationId=${encodeURIComponent(applicationId)}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});
+      const result=await response.json();if(!response.ok)throw new Error(result.error||'Could not update upload batch.');
+    };
     try {
+      const fresh=candidates.filter(entry=>!batchRefs.current[entry.id]);
+      if(fresh.length){
+        const id=crypto.randomUUID();
+        const manifest=await Promise.all(fresh.map(async entry=>({id:entry.id,name:entry.file.name,
+          sha256:Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',await entry.file.arrayBuffer())),byte=>byte.toString(16).padStart(2,'0')).join(''),
+          ...(target?{requirementId:target}:{})})));
+        manifests.current[id]=manifest;for(const entry of fresh)batchRefs.current[entry.id]=id;
+      }
+      for(const id of new Set(candidates.map(entry=>batchRefs.current[entry.id])))await batchCommand({id,members:manifests.current[id]});
       // A lost response may follow a successful save. Confirm exact bytes and mapping before resending.
       let snapshot: ApplicationSnapshot | undefined;
       if (candidates.some(entry => entry.state === "failed")) {
@@ -76,12 +92,13 @@ export default function BatchUpload({ dropzone=false, disabled=false, onPendingC
             const hash = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", await entry.file.arrayBuffer())), byte => byte.toString(16).padStart(2, "0")).join("");
             alreadySaved = snapshot.documents.some(document => document.sha256 === hash && (!target || document.requirement_ids.includes(target)));
           }
-          if (!alreadySaved) await send(entry, target, key);
+          if (!alreadySaved||batchRefs.current[entry.id]) await send(entry, target, key);
           saved++; update(key, entry.id, { state: "saved", progress: 100, message: alreadySaved ? "Already saved to this request." : undefined });
         } catch (error) {
           failed++; update(key, entry.id, { state: "failed", message: error instanceof Error ? error.message : "Upload failed. Please retry." });
         }
       }
+      for(const id of new Set(candidates.map(entry=>batchRefs.current[entry.id])))await batchCommand({action:'finalize',id});
       let refreshWarning = "";
       try { await onComplete(); }
       catch { refreshWarning = " The document list could not refresh. Use Refresh uploaded files below; saved files are safe."; }

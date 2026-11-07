@@ -2,6 +2,9 @@ import { adapters } from "@/lib/runtime";
 import { boundedFormData, failure, localRequest } from "@/lib/http";
 import { UploadError } from "@/lib/validation";
 import { saveUpload } from "@/lib/upload";
+import { PostgresRepository } from '@/lib/postgres';
+import { UploadBatchService } from '@/lib/jobs/batches';
+import { createHash } from 'node:crypto';
 export const runtime = "nodejs";
 export async function POST(request: Request) {
   try {
@@ -22,12 +25,21 @@ export async function POST(request: Request) {
       const requirement = await repository.requirement(requirementId);
       if (requirement?.collection === "lender")throw new UploadError("Your lender or approved provider supplies this document.", 403);
     }
+    const bytes=new Uint8Array(await file.arrayBuffer());
+    const batchId=form.get('batchId'),memberId=form.get('memberId');
+    if((batchId||memberId)&&(typeof batchId!=='string'||!batchId||typeof memberId!=='string'||!memberId))throw new UploadError('Invalid batch reference.');
+    const ref=typeof batchId==='string'&&typeof memberId==='string'?{batchId,memberId}:undefined;
+    if(ref) {
+      const hash=createHash('sha256').update(bytes).digest('hex');
+      const prior=await repository.byChecksum(hash);
+      if(prior)return Response.json({id:await new UploadBatchService(access).attachExisting(ref,prior.id,hash,file.name,requirementIds)},{status:201});
+    }
     const id = await saveUpload(
-      repository,
+      ref?new PostgresRepository(access,ref):repository,
       storage,
       requirementIds,
       file.name,
-      new Uint8Array(await file.arrayBuffer()),
+      bytes,
       { applicationId: access.applicationId, actor: access.displayName },
     );
     return Response.json({ id }, { status: 201 });

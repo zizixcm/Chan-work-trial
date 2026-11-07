@@ -1,7 +1,7 @@
 import type { AnalysisTask, DispatchBudget, ProviderResult, ProviderUsage } from './contracts';
 import { AnalysisFailure, safeFailure } from './failures';
 
-export const DEFAULT_ANALYSIS_MODEL = 'google/gemini-2.5-flash-lite';
+export const DEFAULT_ANALYSIS_MODEL = 'google/gemini-2.5-flash';
 export const DEFAULT_BUDGET: Readonly<DispatchBudget> = Object.freeze({
   model: DEFAULT_ANALYSIS_MODEL, maxInputTokens: 24_000, maxOutputTokens: 4_000, timeoutMs: 60_000,
 });

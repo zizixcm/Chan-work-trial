@@ -1,0 +1,50 @@
+{
+  "fixture": "complete",
+  "requirementId": "ai-req",
+  "model": "google/gemini-2.5-flash",
+  "expected": "fulfilled",
+  "actual": "fulfilled",
+  "result": {
+    "checks": [
+      {
+        "state": "met",
+        "reason": "The document identifies 'Demo Plaza' as the property.",
+        "evidence": [
+          {
+            "quote": "Demo Plaza",
+            "column": 1,
+            "record": 2,
+            "documentId": "6eb65719-98c2-4fac-b488-9ecf8ec00140"
+          }
+        ],
+        "criterionId": "ai-req:criterion:1"
+      },
+      {
+        "state": "met",
+        "reason": "The document shows 'Synthetic Bakery' as a tenant and '3500' as the monthly rent.",
+        "evidence": [
+          {
+            "quote": "Synthetic Bakery",
+            "column": 2,
+            "record": 2,
+            "documentId": "6eb65719-98c2-4fac-b488-9ecf8ec00140"
+          },
+          {
+            "quote": "3500",
+            "column": 3,
+            "record": 2,
+            "documentId": "6eb65719-98c2-4fac-b488-9ecf8ec00140"
+          }
+        ],
+        "criterionId": "ai-req:criterion:2"
+      }
+    ],
+    "conflicts": [],
+    "assessment": "appears_complete",
+    "limitations": [],
+    "requirementId": "ai-req",
+    "schemaVersion": "verify.v1",
+    "missingEvidence": [],
+    "fulfillment": "fulfilled"
+  }
+}

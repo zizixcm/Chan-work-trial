@@ -18,7 +18,8 @@
     "db:verify": "tsx scripts/verify-schema.ts",
     "worker:analysis": "tsx scripts/analysis-worker.ts",
     "test:ai-integration": "tsx tests/ai.integration.ts",
-    "test:jobs-integration": "tsx tests/jobs.integration.ts"
+    "test:jobs-integration": "tsx tests/jobs.integration.ts",
+    "test:workflow-integration": "tsx tests/workflow.integration.ts"
   },
   "dependencies": {
     "@mastra/core": "^1.82.0",

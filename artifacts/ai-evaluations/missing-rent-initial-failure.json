@@ -1,0 +1,11 @@
+{
+  "fixture": "missing-rent",
+  "provider": "OpenRouter",
+  "model": "google/gemini-2.5-flash-lite",
+  "requirement": "Identifies Demo Plaza as the property; shows tenants and monthly rent",
+  "inputColumns": ["Property", "Tenant", "As of date"],
+  "expected": "partially_fulfilled",
+  "actual": "fulfilled",
+  "outcome": "failed",
+  "note": "Observed by the live HTTP integration test before tightening conjunctive-criterion and missing-field instructions. The original detailed model response was not retained by this assertion path. This record preserves only verified fixture and assertion facts."
+}

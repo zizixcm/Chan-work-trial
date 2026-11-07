@@ -55,22 +55,22 @@ test('verification validates complete evidence and rejects unsupported positive 
   const out = verify(); out.checks = [{ ...check, evidence: [] }];
   assert.throws(() => task.validate(out));
   assert.throws(() => task.validate({ ...verify(), checks: [] }));
-  assert.throws(() => task.validate({ ...verify(), checks: [{ ...check, state: 'unknown' }] }));
-  assert.throws(() => task.validate({ ...verify(), missingEvidence: ['Missing amendment'] }));
+  assert.equal(task.validate({ ...verify(), checks: [{ ...check, state: 'unknown' }] }).assessment,'unknown');
+  assert.equal(task.validate({ ...verify(), missingEvidence: ['Missing amendment'] }).assessment,'unknown');
 });
 test('empty criteria, no evidence and unsupported linked files cannot appear complete', () => {
-  assert.throws(() => buildVerifyTask([doc()], { ...requirement, criteria: [] }).validate({ ...verify(), checks: [] }));
-  assert.throws(() => buildVerifyTask([], { ...requirement, criteria: [] }).validate({ ...verify(), checks: [] }));
+  assert.equal(buildVerifyTask([doc()], { ...requirement, criteria: [] }).validate({ ...verify(), checks: [] }).assessment,'unknown');
+  assert.equal(buildVerifyTask([], { ...requirement, criteria: [] }).validate({ ...verify(), checks: [] }).assessment,'unknown');
   const task = buildVerifyTask([doc()], requirement, ['Linked PDF cannot be inspected']);
   assert.throws(() => task.validate(verify()));
-  assert.throws(() => task.validate({ ...verify(), limitations: ['Linked PDF cannot be inspected'] }));
+  assert.equal(task.validate({ ...verify(), limitations: ['Linked PDF cannot be inspected'] }).assessment,'unknown');
   assert.equal(task.validate({ ...verify(), assessment: 'unknown', limitations: ['Linked PDF cannot be inspected'] }).assessment, 'unknown');
 });
 test('verification accepts complementary files but requires both cited sides of conflicts', () => {
   const other = doc('Property,Tenant,Monthly rent,As of date\nDemo Plaza,Demo Bakery,4500,2026-11-01', 'doc2');
   const task = buildVerifyTask([doc(), other], requirement);
   const conflict = { reason: 'Rent differs', evidence: [{ documentId: 'doc1', record: 2, column: 3, quote: '3500' }, { documentId: 'doc2', record: 2, column: 3, quote: '4500' }] };
-  assert.throws(() => task.validate({ ...verify(), conflicts: [conflict] }));
+  assert.equal(task.validate({ ...verify(), conflicts: [conflict] }).assessment,'unknown');
   assert.equal(task.validate({ ...verify(), assessment: 'unknown', conflicts: [conflict] }).assessment, 'unknown');
   assert.throws(() => task.validate({ ...verify(), assessment: 'unknown', conflicts: [{ ...conflict, evidence: [conflict.evidence[0]] }] }));
 });
@@ -79,6 +79,9 @@ test('unmet check needs a concrete gap and preserves incomplete status', () => {
   const out = { ...verify(), assessment: 'incomplete', checks: [{ ...check, state: 'unmet', evidence: [] }] };
   assert.throws(() => task.validate(out));
   assert.equal(task.validate({ ...out, missingEvidence: ['Required reporting date not found in supplied files'] }).assessment, 'incomplete');
+  const contradictory=task.validate({...out,assessment:'appears_complete',missingEvidence:['Required reporting date not found in supplied files']});
+  assert.equal(contradictory.assessment,'incomplete','model summary cannot override unmet criterion');
+  assert.equal(contradictory.reportedAssessment,'appears_complete','contradiction retained for debugging');
 });
 test('two partial documents can jointly support all explicit criteria', () => {
   const other = doc('Property,Signature status\nDemo Plaza,Executed\n', 'doc2');

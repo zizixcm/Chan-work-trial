@@ -7,11 +7,11 @@ export async function service(request:Request,applicationId?:string) {
  return new AnalysisService(await accessFor(scoped,['borrower','lender']));
 }
 export const json=(value:unknown,status=200)=>Response.json(value,{status,headers:{'Cache-Control':'private, no-store'}});
-export async function body(request:Request):Promise<Record<string,unknown>> {
- if(Number(request.headers.get('content-length'))>8192)throw new UploadError('Request too large.',413);
+export async function body(request:Request,limit=8192):Promise<Record<string,unknown>> {
+ if(Number(request.headers.get('content-length'))>limit)throw new UploadError('Request too large.',413);
  const reader=request.body?.getReader();if(!reader)throw new UploadError('Request body required.');
  const chunks:Uint8Array[]=[];let size=0;
- for(;;){const r=await reader.read();if(r.done)break;size+=r.value.byteLength;if(size>8192){await reader.cancel();throw new UploadError('Request too large.',413);}chunks.push(r.value);}
+ for(;;){const r=await reader.read();if(r.done)break;size+=r.value.byteLength;if(size>limit){await reader.cancel();throw new UploadError('Request too large.',413);}chunks.push(r.value);}
  try {const value=JSON.parse(Buffer.concat(chunks).toString('utf8'));if(!value||typeof value!=='object'||Array.isArray(value))throw Error();return value;}catch{throw new UploadError('Invalid request.');}
 }
 export function key(value:unknown) {if(typeof value!=='string'||value.length<1||value.length>160)throw new UploadError('A request key is required.');return value;}

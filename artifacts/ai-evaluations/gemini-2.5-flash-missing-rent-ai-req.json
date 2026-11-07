@@ -1,0 +1,40 @@
+{
+  "fixture": "missing-rent",
+  "requirementId": "ai-req",
+  "model": "google/gemini-2.5-flash",
+  "expected": "partially_fulfilled",
+  "actual": "partially_fulfilled",
+  "result": {
+    "checks": [
+      {
+        "state": "met",
+        "reason": "The document identifies 'Demo Plaza' as the property.",
+        "evidence": [
+          {
+            "quote": "Demo Plaza",
+            "column": 1,
+            "record": 2,
+            "documentId": "7c03c470-9511-48d7-aac8-5047bce8ba9b"
+          }
+        ],
+        "criterionId": "ai-req:criterion:1"
+      },
+      {
+        "state": "unmet",
+        "reason": "The document shows tenants but does not include monthly rent amounts.",
+        "evidence": [],
+        "criterionId": "ai-req:criterion:2"
+      }
+    ],
+    "conflicts": [],
+    "assessment": "incomplete",
+    "limitations": [],
+    "requirementId": "ai-req",
+    "schemaVersion": "verify.v1",
+    "missingEvidence": [
+      "Monthly rent amounts are not found in the supplied document."
+    ],
+    "reportedAssessment": "appears_complete",
+    "fulfillment": "partially_fulfilled"
+  }
+}

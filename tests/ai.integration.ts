@@ -1,7 +1,7 @@
 import '../scripts/env';
 import {Pool} from 'pg';
 import {betterAuth} from 'better-auth';
-import {randomUUID} from 'node:crypto';
+import {randomUUID,createHash} from 'node:crypto';
 import {mkdtemp,readFile,readdir,rm,mkdir,writeFile} from 'node:fs/promises';
 import {spawn,type ChildProcess} from 'node:child_process';
 import {once} from 'node:events';
@@ -13,6 +13,7 @@ import {runAnalysisWorker} from '../workers/analysis-worker';
 import {createAnalysisPreparer} from '../lib/backend/prepare-analysis';
 import {DEFAULT_BUDGET,type ProviderTransport} from '../lib/backend/provider-executor';
 import {mastraTransport} from '../lib/backend/mastra-transport';
+import { configuredModel } from '../lib/backend/models';
 
 async function main(){
  const originalUrl=process.env.DATABASE_URL!;
@@ -28,12 +29,15 @@ async function main(){
  let server:ChildProcess|undefined;let worker:Promise<void>|undefined;const shutdown=new AbortController();
  let calls=0;let privateDocumentId:string|undefined;
  const real=process.env.AI_SMOKE_REAL==='1';
+ const budget={...DEFAULT_BUDGET,model:configuredModel()};
+ const missingRent=process.env.AI_SMOKE_CASE==='missing-rent';
  if(!real)process.env.OPENROUTER_API_KEY='synthetic-admission-only-no-provider-call';
  const transport:ProviderTransport={async generate(args){calls++;if(calls>5)throw new Error('Smoke call cap reached');if(real)return mastraTransport.generate(args);
    if(privateDocumentId)assert(!args.prompt.includes(privateDocumentId),'lender prompt excludes unsent upload');
    const parsed=JSON.parse(args.prompt);const scope=parsed.evidence||parsed;const document=scope.documents[0];const evidence=document?[{documentId:document.id,record:2,column:1,quote:document.records[1].cells[0].value}]:[];
-   const checks=(r:{criteria:{id:string}[]})=>r.criteria.map(c=>({criterionId:c.id,state:'met',reason:'Synthetic fixture supports this criterion.',evidence}));
-   const result=parsed.evidence?{schemaVersion:'verify.v1',requirementId:scope.requirements[0].id,assessment:'appears_complete',checks:checks(scope.requirements[0]),missingEvidence:[],conflicts:[],limitations:parsed.preparationLimitations}:{schemaVersion:'match.v1',classification:{kind:'rent_roll',reason:'Synthetic table.',evidence},requirements:scope.requirements.map((r:{id:string;criteria:{id:string}[]})=>({requirementId:r.id,relevance:{state:'relevant',reason:'Matching property table.',evidence},checks:checks(r)}))};
+   const checks=(r:{criteria:{id:string;description?:string}[]})=>r.criteria.map(c=>({criterionId:c.id,state:missingRent&&c.description?.includes('monthly rent')?'unmet':'met',reason:'Synthetic fixture criterion result.',evidence}));
+   const incomplete=missingRent&&scope.requirements[0].id==='ai-req';
+   const result=parsed.evidence?{schemaVersion:'verify.v1',requirementId:scope.requirements[0].id,assessment:incomplete?'incomplete':'appears_complete',checks:checks(scope.requirements[0]),missingEvidence:incomplete?['Monthly rent amounts are missing.']:[],conflicts:[],limitations:parsed.preparationLimitations}:{schemaVersion:'match.v1',classification:{kind:'rent_roll',reason:'Synthetic table.',evidence},requirements:scope.requirements.map((r:{id:string;criteria:{id:string}[]})=>({requirementId:r.id,relevance:{state:'relevant',reason:'Matching property table.',evidence},checks:checks(r)}))};
    return {text:JSON.stringify(result),usage:{inputTokens:100,outputTokens:100}};
  }};
  async function request(route:string,cookie:string,body?:unknown,method=body?'POST':'GET'){
@@ -54,19 +58,31 @@ async function main(){
   server=spawn(process.execPath,['node_modules/next/dist/bin/next','start','--hostname','127.0.0.1','--port',String(port)],{cwd:process.env.PORTAL_TEST_BUILD_DIR||process.cwd(),env:{...process.env,LOCAL_DEMO_MODE:"0",BETTER_AUTH_URL:base},stdio:['ignore','ignore','ignore']});
   for(let i=0;i<100;i++){try{const r=await fetch(base+'/api/application');if(r.status===401)break;}catch{}await new Promise(r=>setTimeout(r,200));}
   const borrowerCookie=await signIn('borrower@ai.test'),lenderCookie=await signIn('lender@ai.test');
-  const status=async()=>{const r=await request('/api/applications/ai-app/analysis',borrowerCookie);assert.equal(r.status,200);return r.json();};
+  const status=async(cookie=borrowerCookie)=>{const r=await request('/api/applications/ai-app/analysis',cookie);assert.equal(r.status,200);return r.json();};
   assert.equal((await status()).preference.enabled,false);
   assert.equal((await request('/api/internal/analysis-runs',borrowerCookie)).status,403);
   let r=await request('/api/applications/ai-app/ai-preference',borrowerCookie,{enabled:true,expectedEpoch:(await status()).preference.epoch},'PUT');assert.equal(r.status,200);
-  const form=new FormData();form.set('file',new File(['Property,Tenant,Monthly rent,As of date\nDemo Plaza,Synthetic Bakery,3500,2026-11-01\n'],'synthetic-rent-roll.csv',{type:'text/csv'}));
+  const fileText=missingRent?'Property,Tenant,As of date\nDemo Plaza,Synthetic Bakery,2026-11-01\n':'Property,Tenant,Monthly rent,As of date\nDemo Plaza,Synthetic Bakery,3500,2026-11-01\n';
+  const batchId=randomUUID(),memberId=randomUUID();
+  const manifest={id:batchId,members:[{id:memberId,name:'synthetic-rent-roll.csv',sha256:createHash('sha256').update(fileText).digest('hex')}]};
+  r=await request('/api/upload-batches?applicationId=ai-app',borrowerCookie,manifest);assert.equal(r.status,201,await r.clone().text());
+  assert.equal((await request('/api/upload-batches?applicationId=ai-app',lenderCookie,manifest)).status,403);
+  const form=new FormData();form.set('file',new File([fileText],'synthetic-rent-roll.csv',{type:'text/csv'}));form.set('batchId',batchId);form.set('memberId',memberId);
   r=await fetch(base+'/api/documents?applicationId=ai-app',{method:'POST',headers:{cookie:borrowerCookie,origin:base},body:form});assert.equal(r.status,201,await r.clone().text());const upload=await r.json();
+  r=await fetch(base+'/api/documents?applicationId=ai-app',{method:'POST',headers:{cookie:borrowerCookie,origin:base},body:form});assert.equal(r.status,201);assert.equal((await r.json()).id,upload.id,'lost-response replay reuses saved batch member');
+  r=await request('/api/upload-batches?applicationId=ai-app',borrowerCookie,{action:'finalize',id:batchId});assert.equal(r.status,200);
+  r=await request('/api/upload-batches?applicationId=ai-app&id='+batchId,borrowerCookie);assert.equal(r.status,200);assert.equal((await r.json()).members[0].state,'saved');
   const {PostgresJobRepository}=await import('../lib/jobs/postgres');const repository=new PostgresJobRepository();
-  worker=runAnalysisWorker('integration-'+randomUUID(),{repository,prepare:createAnalysisPreparer(repository.readEvidence.bind(repository)),transport,budget:DEFAULT_BUDGET},shutdown.signal);
-  async function waitFor(predicate:(s:any)=>boolean){for(let i=0;i<180;i++){const s=await status();if(predicate(s))return s;if(s.jobs.some((j:any)=>['failed','dead_letter','blocked'].includes(j.state))){const {LocalDebugStore}=await import('../lib/analysis-debug/store');const store=new LocalDebugStore(path.join(root,'analysis-debug'));const runs=await store.list();await mkdir('artifacts/ai-smoke',{recursive:true});await writeFile('artifacts/ai-smoke/last-failure.json',JSON.stringify(await Promise.all(runs.map(run=>store.get(run.id))),null,2));throw new Error('Analysis failed: '+s.jobs.map((j:any)=>j.state+':'+j.safeCode).join(',')+'; synthetic diagnostic saved in artifacts/ai-smoke/last-failure.json');}await new Promise(r=>setTimeout(r,500));}throw new Error('Timed out waiting for analysis');}
+  worker=runAnalysisWorker('integration-'+randomUUID(),{repository,prepare:createAnalysisPreparer(repository.readEvidence.bind(repository)),transport,budget},shutdown.signal);
+  async function waitFor(predicate:(s:any)=>boolean,cookie=borrowerCookie){for(let i=0;i<180;i++){const s=await status(cookie);if(predicate(s))return s;if(s.jobs.some((j:any)=>['failed','dead_letter','blocked'].includes(j.state))){const {LocalDebugStore}=await import('../lib/analysis-debug/store');const store=new LocalDebugStore(path.join(root,'analysis-debug'));const runs=await store.list();await mkdir('artifacts/ai-smoke',{recursive:true});await writeFile('artifacts/ai-smoke/last-failure.json',JSON.stringify(await Promise.all(runs.map(run=>store.get(run.id))),null,2));throw new Error('Analysis failed: '+s.jobs.map((j:any)=>j.state+':'+j.safeCode).join(',')+'; synthetic diagnostic saved in artifacts/ai-smoke/last-failure.json');}await new Promise(r=>setTimeout(r,500));}throw new Error('Timed out waiting for analysis');}
   const completed=await waitFor(s=>['ai-req','ai-req2'].every(id=>s.jobs.some((j:any)=>j.task==='verify_requirement.v1'&&j.targetId===id&&j.state==='succeeded'&&j.freshness==='current')));
   for(const id of ['ai-req','ai-req2']){
     assert(completed.links.some((l:any)=>l.documentId===upload.id&&l.requirementId===id&&l.origin==='model'),'unassigned upload can match multiple requirements');
-    const assessment=completed.jobs.find((j:any)=>j.task==='verify_requirement.v1'&&j.targetId===id&&j.state==='succeeded'&&j.freshness==='current');assert(assessment.ownedByCurrentUser);assert.equal(assessment.consentScope,'borrower');assert.equal(assessment.result.schemaVersion,'verify.v1');assert.equal(assessment.result.assessment,'appears_complete');
+    const assessment=completed.jobs.find((j:any)=>j.task==='verify_requirement.v1'&&j.targetId===id&&j.state==='succeeded'&&j.freshness==='current');assert(assessment.ownedByCurrentUser);assert.equal(assessment.consentScope,'borrower');assert.equal(assessment.result.schemaVersion,'verify.v1');
+    const expected=missingRent&&id==='ai-req'?'partially_fulfilled':'fulfilled';
+    if(real){await mkdir('artifacts/ai-evaluations',{recursive:true});await writeFile(`artifacts/ai-evaluations/${budget.model.split('/')[1]}-${missingRent?'missing-rent':'complete'}-${id}.json`,JSON.stringify({fixture:missingRent?'missing-rent':'complete',requirementId:id,model:budget.model,expected,actual:assessment.result.fulfillment,result:assessment.result},null,2));}
+    assert.equal(assessment.result.fulfillment,expected,'labeled fixture outcome');
+    if(missingRent&&id==='ai-req')assert(assessment.result.missingEvidence.length>0,'missing rent is explained');
   }
   const snapshot=await (await request('/api/application?applicationId=ai-app',borrowerCookie)).json();const req=snapshot.requirements[0];
   r=await request('/api/requirements/ai-req/verify-completeness?applicationId=ai-app',borrowerCookie,{idempotencyKey:randomUUID(),expectedDefinitionRevision:req.definition_revision,expectedEvidenceRevision:req.evidence_revision});assert.equal(r.status,202);
@@ -77,14 +93,15 @@ async function main(){
   r=await fetch(base+'/api/documents?applicationId=ai-app',{method:'POST',headers:{cookie:borrowerCookie,origin:base},body:privateForm});assert.equal(r.status,201);privateDocumentId=(await r.json()).id;
   assert.equal((await request('/api/documents/'+privateDocumentId,lenderCookie)).status,404);
   r=await request('/api/requirements/ai-req/verify-completeness?applicationId=ai-app',lenderCookie,{idempotencyKey:randomUUID(),expectedSubmissionId:sent.id,expectedDefinitionRevision:req.definition_revision,expectedEvidenceRevision:req.evidence_revision});assert.equal(r.status,202,await r.clone().text());
-  await waitFor(s=>s.jobs.every((j:any)=>!['queued','running','retry_wait'].includes(j.state)));
+  await waitFor(s=>s.jobs.some((j:any)=>j.state==='succeeded'&&j.freshness==='current')&&s.jobs.every((j:any)=>!['queued','running','retry_wait'].includes(j.state)),lenderCookie);
+  shutdown.abort();await worker;worker=undefined; // Wait for diagnostic flush after the authoritative commit.
   const diagnostics=await request('/api/internal/analysis-runs',lenderCookie);assert.equal(diagnostics.status,200);const visibleRuns=(await diagnostics.json()).runs;assert(visibleRuns.length>0);assert(visibleRuns.every((run:any)=>run.task==='verify_requirement.v1'));
   const {LocalDebugStore}=await import('../lib/analysis-debug/store');const captured=await new LocalDebugStore(path.join(root,'analysis-debug')).list();const draftRun=captured.find(run=>run.task==='match_document.v1');assert(draftRun);assert.equal((await request('/api/internal/analysis-runs/'+draftRun.id,lenderCookie)).status,404,'direct diagnostic draft trace denied');
   assert.equal((await request('/internal/analysis-runs',lenderCookie)).status,200);
   const pref=(await status()).preference;
   r=await request('/api/applications/ai-app/ai-preference',borrowerCookie,{enabled:false,expectedEpoch:pref.epoch},'PUT');assert.equal(r.status,200);
   const before=calls;r=await request(`/api/documents/${upload.id}/coverage-analysis?applicationId=ai-app`,borrowerCookie,{idempotencyKey:randomUUID()});assert(r.status>=400);assert.equal(calls,before);
-  console.log(JSON.stringify({ok:true,provider:real?'real OpenRouter':'simulated',providerCalls:calls,checks:['authenticated upload','background match','AI link provenance','multi-requirement aggregate verification and current borrower result DTO','borrower and lender Verify','developer inspector authorization','AI off gate','submitted-only lender prompt','unsent document and diagnostic URL denial']}));
+  console.log(JSON.stringify({ok:true,provider:real?'real OpenRouter':'simulated',fixture:missingRent?'missing-rent':'complete',providerCalls:calls,checks:['authenticated batch upload and replay','background match','AI link provenance','labeled full/partial fulfillment','multi-requirement aggregate verification and current borrower result DTO','borrower and lender Verify','developer inspector authorization','AI off gate','submitted-only lender prompt','unsent document and diagnostic URL denial']}));
  }finally{
   shutdown.abort();await worker?.catch(()=>{});
   if(server&&server.exitCode===null){const stopped=once(server,'exit');server.kill('SIGTERM');await stopped;}

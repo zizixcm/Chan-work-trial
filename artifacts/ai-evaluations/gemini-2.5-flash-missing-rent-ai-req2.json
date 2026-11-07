@@ -1,0 +1,31 @@
+{
+  "fixture": "missing-rent",
+  "requirementId": "ai-req2",
+  "model": "google/gemini-2.5-flash",
+  "expected": "fulfilled",
+  "actual": "fulfilled",
+  "result": {
+    "checks": [
+      {
+        "state": "met",
+        "reason": "The document identifies tenant names.",
+        "evidence": [
+          {
+            "quote": "Synthetic Bakery",
+            "column": 2,
+            "record": 2,
+            "documentId": "7c03c470-9511-48d7-aac8-5047bce8ba9b"
+          }
+        ],
+        "criterionId": "ai-req2:criterion:1"
+      }
+    ],
+    "conflicts": [],
+    "assessment": "appears_complete",
+    "limitations": [],
+    "requirementId": "ai-req2",
+    "schemaVersion": "verify.v1",
+    "missingEvidence": [],
+    "fulfillment": "fulfilled"
+  }
+}

@@ -34,7 +34,7 @@ function repository() {
 test('one bounded call validates JSON and reports only safe usage', async () => {
   let calls = 0;
   const result = await executeProvider(task, DEFAULT_BUDGET, {generate: async input => {
-    calls++; assert.equal(input.budget.model, 'google/gemini-2.5-flash-lite');
+    calls++; assert.equal(input.budget.model, DEFAULT_BUDGET.model);
     return {text: '{"ok":true}', usage: {inputTokens: 9, outputTokens: -1}};
   }}, signal());
   assert.equal(calls, 1); assert.deepEqual(result.usage, {inputTokens: 9});

@@ -1,0 +1,44 @@
+{
+  "fixture": "missing-rent",
+  "requirementId": "ai-req",
+  "model": "google/gemini-2.5-flash-lite",
+  "expected": "partially_fulfilled",
+  "actual": "fulfilled",
+  "result": {
+    "checks": [
+      {
+        "state": "met",
+        "reason": "The property 'Demo Plaza' is identified.",
+        "evidence": [
+          {
+            "quote": "Demo Plaza",
+            "column": 1,
+            "record": 2,
+            "documentId": "62c5ed06-ad5a-44f6-80eb-13d5ac1dc70b"
+          }
+        ],
+        "criterionId": "ai-req:criterion:1"
+      },
+      {
+        "state": "met",
+        "reason": "The rent roll shows tenants and monthly rent.",
+        "evidence": [
+          {
+            "quote": "Synthetic Bakery",
+            "column": 2,
+            "record": 2,
+            "documentId": "62c5ed06-ad5a-44f6-80eb-13d5ac1dc70b"
+          }
+        ],
+        "criterionId": "ai-req:criterion:2"
+      }
+    ],
+    "conflicts": [],
+    "assessment": "appears_complete",
+    "limitations": [],
+    "requirementId": "ai-req",
+    "schemaVersion": "verify.v1",
+    "missingEvidence": [],
+    "fulfillment": "fulfilled"
+  }
+}

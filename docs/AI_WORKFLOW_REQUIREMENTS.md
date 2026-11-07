@@ -89,10 +89,13 @@ Existing development defaults are two global slots, 20 provider calls/minute, a 
 ## Implementation increments
 
 - First increment implemented: coalesce obsolete pending requirement jobs; preserve interactive priority, history and user/scope isolation; serialize same-target assessment claims. The isolated PostgreSQL integration suite, 40 existing unit tests and TypeScript checks pass. No provider calls or schema migrations were used. This is source-level integration, not a deployment.
-- Next: persistent upload batch lifecycle and bounded assessment barrier, integrated with the upload UI.
-- Then: durable invalidation reconciliation for all mutation paths, reusable extraction artifacts, criterion-derived status contract and UI.
+- Second increment implemented in source: persistent upload manifests, explicit finalization, five-minute expiry/barrier, retry/reselection reconciliation and upload UI integration. Worker reconciliation consumes durable markers for document, mapping, definition, subject and application-context changes. Failed matching no longer strands manually linked evidence. Pending work is coalesced and stale workers only dispose of work; they do not schedule replacements.
+- Criterion-derived full/partial/not-fulfilled/unknown status is now presented for the existing all-mandatory catalog. Conflicts, unknown criteria, unsupported evidence and incomplete processing prevent fulfilled. Optional/alternative criterion definitions remain a future schema change.
+- Remaining: reusable extraction artifacts, wider-format analysis, replacement/removal product endpoints, comprehensive semantic evaluation and operational drills. Existing immutable replacement records are excluded from current evidence and unresolved predecessor links prevent fulfilled; this does not add a replacement UI.
 - Production readiness: labeled quality evaluation, latency/throughput measurements, operational dashboards and failure drills.
 
 Current content analysis remains bounded CSV. PDF, spreadsheet and image extraction must be implemented and evaluated before those uploads are advertised as fully AI-reviewed.
 
 The separate [edge case analysis](AI_WORKFLOW_EDGE_CASES.md) details expected behavior, recovery and implementation gaps by failure scenario.
+
+The investigation is a historical snapshot. [AI_WORKFLOW_TEST_PLAN.md](AI_WORKFLOW_TEST_PLAN.md) traces all 43 scenarios to automated checks and remaining gaps after implementation. Migration `013_analysis_workflow.sql` must precede rollout of the second increment; validation applies it only to isolated test schemas. No shared preview deployment is implied.

@@ -30,7 +30,7 @@ export default function AiReview({applicationId,requirement,borrower=false,onUpd
   }catch(e){setError(e instanceof Error?e.message:'Please try again.');}finally{setBusy(false);}}
   const jobs=(state?.jobs||[]).filter(j=>j.ownedByCurrentUser === true && (j.consentScope || 'borrower') === (borrower ? 'borrower' : 'lender') && (!requirement||j.requirementId===requirement.id));
   const current=jobs[0];
-  const output=current?.result as {value?:unknown;assessment?:string;checks?:Array<{criterionId:string;state:string;reason:string;evidence?:Array<{documentId:string;record:number;column:number;quote:string}>}>;missingEvidence?:string[];limitations?:string[];conflicts?:Array<{reason:string}>}|undefined;
+  const output=current?.result as {value?:unknown;assessment?:string;fulfillment?:string;checks?:Array<{criterionId:string;state:string;reason:string;evidence?:Array<{documentId:string;record:number;column:number;quote:string}>}>;missingEvidence?:string[];limitations?:string[];conflicts?:Array<{reason:string}>}|undefined;
   const result=(output?.value||output) as typeof output;
   return <section className={compact ? styles.compact : styles.panel} aria-label={requirement?'AI requirement assessment':'AI assistance'}>
     <div className={styles.heading}><strong>{requirement?'AI assessment':'AI assistance'}</strong>
@@ -43,7 +43,7 @@ export default function AiReview({applicationId,requirement,borrower=false,onUpd
     {current&&<p role="status">{current.freshness==='stale'?'Documents changed; check again':labels[current.state]||current.state}{current.message?` — ${current.message}`:''}</p>}
     {current&&(current.canCancel||current.canRetry)&&<button type="button" disabled={busy} onClick={()=>void command(`/api/jobs/${current.id}/${current.canCancel?'cancel':'retry'}?applicationId=${applicationId}`,'POST',{expectedJobRevision:current.revision,idempotencyKey:crypto.randomUUID()})}>{current.canCancel?'Cancel check':'Retry check'}</button>}
     {requirement&&state?.links?.filter(link=>link.requirementId===requirement.id&&link.origin==='model').map(link=><p key={link.documentId}><a href={`/api/documents/${link.documentId}?applicationId=${encodeURIComponent(applicationId)}`}>Document</a> · Linked by AI. You can remove an incorrect link in the document list.</p>)}
-    {requirement&&result&&<div><strong>{result.assessment==='appears_complete'?'Appears complete':result.assessment==='incomplete'?'Missing information':'Needs review'}</strong><p>This is an AI assessment, not lender acceptance.</p>
+    {requirement&&result&&<div><strong>{current?.freshness==='stale'?'Previous assessment — outdated':({fulfilled:'Appears fulfilled',partially_fulfilled:'Partially fulfilled',not_fulfilled:'Not fulfilled',unable_to_determine:'Unable to determine'}[result.fulfillment||'']||'Needs review')}</strong><p>This is an AI assessment, not lender acceptance.</p>
       {result.missingEvidence?.map((item,i)=><p key={`missing-${i}`}>Missing: {item}</p>)}
       {result.limitations?.map((item,i)=><p key={`limitation-${i}`}>{item}</p>)}
       {result.conflicts?.map((item,i)=><p key={`conflict-${i}`}>Conflict: {item.reason}</p>)}

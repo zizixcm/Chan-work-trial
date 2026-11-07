@@ -114,7 +114,7 @@ Earlier cutover checks verified both accounts, anonymous/wrong-role denial, sign
 
 ## Document AI worker and review controls
 
-The optional CSV analysis path uses `google/gemini-2.5-flash-lite` through Mastra/OpenRouter. Run migrations before starting the worker:
+The optional CSV analysis path defaults to `google/gemini-2.5-flash` through Mastra/OpenRouter. Existing `OPENROUTER_MODEL` settings override that default. Flash-Lite remains available for evaluation, but failed the missing-rent quality fixture; use Flash for the new workflow. Both models have explicit admission prices pinned per reservation. Run migrations (including `013_analysis_workflow.sql`) before starting the new server and worker:
 
 ```sh
 npm run db:migrate
@@ -128,3 +128,7 @@ Borrowers opt in under **AI assistance**. New supported CSV uploads then enqueue
 For developer diagnostics, `ANALYSIS_DEBUG_CAPTURE=1` enables bounded private captures under the configured data directory; `ANALYSIS_DEBUG_USER_IDS` is a comma-separated allowlist of exact signed-in user IDs permitted to open `/internal/analysis-runs`. It does not grant lender authority or bypass application AI consent. Capture is off and access denied when unconfigured. Never expose this page publicly or put raw prompts/responses into console logs. See `docs/ANALYSIS_DEBUG.md` for retention and redaction limits.
 
 `npm run test:ai-integration` uses a disposable PostgreSQL schema and temporary private file directory with a simulated provider to check the actual authenticated routes/worker/repository flow. `AI_SMOKE_REAL=1 npm run test:ai-integration` instead makes a maximum of five synthetic provider calls and incurs a small charge; it requires the configured provider key. It never resets the seeded demo or deletes persistent volumes.
+
+Uploads now declare durable batch manifests. Matching runs per document; assessments wait for finalization and matching, with a five-minute bounded wait and explicit incomplete-processing limitations. A worker recovery sweep reconciles persisted mutation markers independently from stale-job disposal. Repeated changes coalesce into the latest pending assessment. Criterion findings determine full, partial, unfulfilled or unknown status; model summaries cannot override missing evidence.
+
+Run `npm run test:workflow-integration` for isolated failure/convergence scenarios. `AI_SMOKE_CASE=missing-rent` selects the negative HTTP/model fixture. See [workflow requirements](docs/AI_WORKFLOW_REQUIREMENTS.md), [edge cases](docs/AI_WORKFLOW_EDGE_CASES.md) and [test coverage and rollout](docs/AI_WORKFLOW_TEST_PLAN.md). The source checkpoint is tagged `checkpoint/pre-ai-workflow`; it does not back up database contents or private uploads.

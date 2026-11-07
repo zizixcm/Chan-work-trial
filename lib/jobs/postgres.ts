@@ -1,11 +1,12 @@
 import { randomUUID } from 'node:crypto';
+import { reconcileAnalysis } from './reconcile';
 import type { Pool, PoolClient } from 'pg';
 import { pool } from '../db';
 import { LocalBlobStorage } from '../storage/local';
 import type { JobRepository, JobLease, Slot, DispatchBudget, DispatchReservation, ProviderResult, ProviderUsage, FailureDisposition } from '../backend/contracts';
 import type { AnalysisSnapshot } from '../backend/prepare-analysis';
 import { AnalysisFailure } from '../backend/failures';
-import { DEFAULT_ANALYSIS_MODEL } from '../backend/provider-executor';
+import { MODEL_PROFILES } from '../backend/models';
 import { selectSharedLane } from '../backend/scheduler';
 import type { MatchResult } from '../analysis/types';
 import { analysisFingerprint, enqueueForRequirement, preference, snapshot, transaction } from './core';
@@ -37,21 +38,28 @@ export class PostgresJobRepository implements JobRepository<AnalysisSnapshot> {
     return transaction(this.database,async db=>{
       const schedule=(await db.query('SELECT * FROM analysis_scheduler WHERE id=1 FOR UPDATE')).rows[0];
       if((await db.query("SELECT 1 FROM analysis_jobs WHERE slot=$1 AND state='running' AND lease_expires_at>now() LIMIT 1",[slot])).rowCount) return null;
-      const available=(await db.query(`SELECT lane,min(created_at) oldest FROM analysis_jobs WHERE state IN ('queued','retry_wait','blocked') AND available_at<=now() AND expires_at>now() AND attempt<5 AND provider_attempts<3 GROUP BY lane`)).rows;
-      let lane='interactive';
-      if(slot==='shared') {
-        const background=available.find(r=>r.lane==='background');
-        lane=selectSharedLane({interactiveReady:available.some(r=>r.lane==='interactive'),backgroundReady:!!background,consecutiveInteractive:schedule.interactive_streak,oldestBackgroundWaitMs:background?Date.now()-new Date(background.oldest).getTime():0})||'';
-      }
-      if(!lane)return null;
-      const row=(await db.query(`SELECT j.* FROM analysis_jobs j WHERE j.lane=$1 AND j.state IN ('queued','retry_wait','blocked') AND j.available_at<=now() AND j.expires_at>now() AND j.attempt<5 AND j.provider_attempts<3
+      // Lane selection must exclude barrier-held work, or an interactive verify
+      // can starve the background matching that would release its own barrier.
+      const eligible=`j.state IN ('queued','retry_wait','blocked') AND j.available_at<=now() AND j.expires_at>now() AND j.attempt<5 AND j.provider_attempts<3
+        AND (j.task<>'verify_requirement.v1' OR j.consent_scope='lender' OR (
+          NOT EXISTS(SELECT 1 FROM upload_batches b WHERE b.application_id=j.application_id AND b.state='open' AND b.deadline_at>now())
+          AND NOT EXISTS(SELECT 1 FROM analysis_jobs m WHERE m.application_id=j.application_id AND m.task='match_document.v1'
+            AND m.state IN ('queued','running','retry_wait','blocked') AND m.created_at>now()-interval '5 minutes')))
         AND (j.task<>'verify_requirement.v1' OR NOT EXISTS (
           SELECT 1 FROM analysis_jobs predecessor WHERE predecessor.application_id=j.application_id
           AND predecessor.initiated_by=j.initiated_by AND predecessor.consent_scope=j.consent_scope
           AND predecessor.task=j.task AND predecessor.target_id=j.target_id
           AND predecessor.state='running' AND predecessor.lease_expires_at>now()
           AND predecessor.attempt_deadline>now()))
-        AND (SELECT count(*) FROM analysis_jobs active WHERE active.application_id=j.application_id AND active.state='running' AND active.lease_expires_at>now())<2
+        AND (SELECT count(*) FROM analysis_jobs active WHERE active.application_id=j.application_id AND active.state='running' AND active.lease_expires_at>now())<2`;
+      const available=(await db.query(`SELECT j.lane,min(j.created_at) oldest FROM analysis_jobs j WHERE ${eligible} GROUP BY j.lane`)).rows;
+      let lane='interactive';
+      if(slot==='shared') {
+        const background=available.find(r=>r.lane==='background');
+        lane=selectSharedLane({interactiveReady:available.some(r=>r.lane==='interactive'),backgroundReady:!!background,consecutiveInteractive:schedule.interactive_streak,oldestBackgroundWaitMs:background?Date.now()-new Date(background.oldest).getTime():0})||'';
+      }
+      if(!lane)return null;
+      const row=(await db.query(`SELECT j.* FROM analysis_jobs j WHERE j.lane=$1 AND ${eligible}
         ORDER BY (j.application_id IS NOT DISTINCT FROM $2),j.created_at,j.id FOR UPDATE SKIP LOCKED LIMIT 1`,[lane,schedule.last_application])).rows[0];
       if(!row)return null;
       const claimed=(await db.query(`UPDATE analysis_jobs SET state='running',attempt=attempt+1,token=token+1,lease_owner=$2,slot=$3,lease_expires_at=now()+interval '45 seconds',attempt_deadline=now()+interval '90 seconds',updated_at=now(),revision=revision+1 WHERE id=$1 RETURNING *`,[row.id,owner,slot])).rows[0];
@@ -78,16 +86,15 @@ export class PostgresJobRepository implements JobRepository<AnalysisSnapshot> {
   async admitDispatch(job:JobLease<AnalysisSnapshot>,budget:DispatchBudget):Promise<DispatchReservation|null> {
     return transaction(this.database,async db=>{
       const row=await this.gated(db,job);if(!row)return null;
-      if(!process.env.OPENROUTER_API_KEY?.trim() || budget.model!==DEFAULT_ANALYSIS_MODEL){await this.state(db,row,'blocked','configuration_required',new Date(Date.now()+60_000).toISOString());return null;}
+      const pricing=MODEL_PROFILES[budget.model];
+      if(!process.env.OPENROUTER_API_KEY?.trim() || !pricing || budget.model!==row.input.model){await this.state(db,row,'blocked','configuration_required',new Date(Date.now()+60_000).toISOString());return null;}
       const schedule=(await db.query('SELECT * FROM analysis_scheduler WHERE id=1 FOR UPDATE')).rows[0];
       const stats=(await db.query(`SELECT count(*) FILTER(WHERE active_until>now() AND NOT finished)::int active,
         count(*) FILTER(WHERE created_at>now()-interval '1 minute')::int recent,
         coalesce(sum(coalesce(accounted_usd,reserved_usd)) FILTER(WHERE created_at>=date_trunc('day',now() AT TIME ZONE 'UTC') AT TIME ZONE 'UTC'),0)::float8 daily,
         coalesce(sum(coalesce(accounted_usd,reserved_usd)) FILTER(WHERE application_id=$1 AND created_at>=date_trunc('day',now() AT TIME ZONE 'UTC') AT TIME ZONE 'UTC'),0)::float8 app_daily
         FROM analysis_reservations`,[row.application_id])).rows[0];
-      // Pin prices to this one cheap model. Unsupported custom models fail closed
-      // until their explicit accounting config is implemented.
-      const cost=(budget.maxInputTokens*0.10+budget.maxOutputTokens*0.40)/1_000_000;
+      const cost=(budget.maxInputTokens*pricing.input+budget.maxOutputTokens*pricing.output)/1_000_000;
       const daily=numberEnv('AI_DAILY_BUDGET_USD',0.10),perApp=numberEnv('AI_APPLICATION_DAILY_BUDGET_USD',0.05);
       const rpm=Math.max(2,Math.floor(numberEnv('AI_REQUESTS_PER_MINUTE',20)));
       const budgetBlocked=stats.daily+cost>daily || stats.app_daily+cost>perApp;
@@ -95,15 +102,16 @@ export class PostgresJobRepository implements JobRepository<AnalysisSnapshot> {
         await this.state(db,row,'blocked',budgetBlocked?'budget_exhausted':'rate_limited',new Date(Date.now()+30_000).toISOString());return null;
       }
       const id=randomUUID();
-      await db.query(`INSERT INTO analysis_reservations(id,application_id,job_id,token,active_until,model,input_limit,output_limit,reserved_usd) VALUES($1,$2,$3,$4,now()+($5::integer+10000)*interval '1 millisecond',$6,$7,$8,$9)`,[id,row.application_id,row.id,row.token,budget.timeoutMs,budget.model,budget.maxInputTokens,budget.maxOutputTokens,cost]);
+      await db.query(`INSERT INTO analysis_reservations(id,application_id,job_id,token,active_until,model,input_limit,output_limit,reserved_usd,input_usd_per_million,output_usd_per_million) VALUES($1,$2,$3,$4,now()+($5::integer+10000)*interval '1 millisecond',$6,$7,$8,$9,$10,$11)`,[id,row.application_id,row.id,row.token,budget.timeoutMs,budget.model,budget.maxInputTokens,budget.maxOutputTokens,cost,pricing.input,pricing.output]);
       await db.query('UPDATE analysis_jobs SET provider_attempts=provider_attempts+1 WHERE id=$1',[row.id]);
       await this.event(db,row,'dispatch');return {id};
     });
   }
   async finishReservation(reservation:DispatchReservation,usage:ProviderUsage|null) {
     const known=usage?.inputTokens!==undefined && usage.outputTokens!==undefined;
-    const cost=known?(usage.inputTokens!*0.10+usage.outputTokens!*0.40)/1_000_000:null;
-    await this.database.query(`UPDATE analysis_reservations SET finished=$5,input_tokens=$2,output_tokens=$3,accounted_usd=$4 WHERE id=$1 AND NOT finished`,[reservation.id,usage?.inputTokens??null,usage?.outputTokens??null,cost,known]);
+    await this.database.query(`UPDATE analysis_reservations SET finished=$4,input_tokens=$2,output_tokens=$3,
+      accounted_usd=CASE WHEN $4 THEN ($2::integer*input_usd_per_million+$3::integer*output_usd_per_million)/1000000 ELSE NULL END
+      WHERE id=$1 AND NOT finished`,[reservation.id,usage?.inputTokens??null,usage?.outputTokens??null,known]);
   }
   async commit(job:JobLease<AnalysisSnapshot>,result:ProviderResult) {
     return transaction(this.database,async db=>{
@@ -129,7 +137,8 @@ export class PostgresJobRepository implements JobRepository<AnalysisSnapshot> {
           affected.add(match.requirementId);
         }
         // Include manually-linked requests even if this model could not match them.
-        const linked=(await db.query('SELECT requirement_id FROM requirement_documents WHERE application_id=$1 AND document_id=$2 AND unlinked_at IS NULL',[row.application_id,row.document_id])).rows;
+        const linked=(await db.query(`SELECT rd.requirement_id FROM requirement_documents rd JOIN requirements r ON r.application_id=rd.application_id AND r.id=rd.requirement_id
+          WHERE rd.application_id=$1 AND rd.document_id=$2 AND rd.unlinked_at IS NULL AND r.lifecycle='active' AND r.collection='borrower'`,[row.application_id,row.document_id])).rows;
         for(const link of linked)affected.add(link.requirement_id);
       } else if((result.value as {schemaVersion?:string})?.schemaVersion!=='verify.v1')throw new AnalysisFailure('invalid_output');
       const pref=await preference(db,row.initiated_by);
@@ -159,5 +168,6 @@ export class PostgresJobRepository implements JobRepository<AnalysisSnapshot> {
         await this.state(db,row,state,state==='retry_wait'?'lease_lost':undefined,new Date(Date.now()+2000).toISOString());
       }
     });
+    await reconcileAnalysis(this.database);
   }
 }

@@ -1,0 +1,31 @@
+{
+  "fixture": "complete",
+  "requirementId": "ai-req2",
+  "model": "google/gemini-2.5-flash",
+  "expected": "fulfilled",
+  "actual": "fulfilled",
+  "result": {
+    "checks": [
+      {
+        "state": "met",
+        "reason": "Tenant names are identified in the document.",
+        "evidence": [
+          {
+            "quote": "Synthetic Bakery",
+            "column": 2,
+            "record": 2,
+            "documentId": "6eb65719-98c2-4fac-b488-9ecf8ec00140"
+          }
+        ],
+        "criterionId": "ai-req2:criterion:1"
+      }
+    ],
+    "conflicts": [],
+    "assessment": "appears_complete",
+    "limitations": [],
+    "requirementId": "ai-req2",
+    "schemaVersion": "verify.v1",
+    "missingEvidence": [],
+    "fulfillment": "fulfilled"
+  }
+}

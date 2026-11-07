@@ -10,8 +10,12 @@ export class AnalysisService {
  constructor(private access:Access,private database:Pool=pool()){}
  async status() {return transaction(this.database,async db=>{
    const role=await authorize(db,this.access);
-   const rows=(await db.query('SELECT * FROM analysis_jobs WHERE application_id=$1 ORDER BY created_at DESC,id DESC LIMIT 100',[this.access.applicationId])).rows;
    const sent=role==='lender'?await latestSubmission(db,this.access.applicationId):null;
+   const rows=(await db.query(`WITH scoped AS (SELECT * FROM analysis_jobs WHERE application_id=$1 AND initiated_by=$2 AND consent_scope=$3
+      AND ($3<>'lender' OR input->'observed'->>'submissionId'=$4)),
+      latest AS (SELECT DISTINCT ON(task,target_id) * FROM scoped ORDER BY task,target_id,created_at DESC,id DESC),
+      recent AS (SELECT * FROM scoped ORDER BY created_at DESC,id DESC LIMIT 100)
+      SELECT * FROM (SELECT * FROM latest UNION SELECT * FROM recent) visible ORDER BY created_at DESC,id DESC`,[this.access.applicationId,this.access.userId,role,sent?.id||null])).rows;
    const visible=role==='lender'?rows.filter(row=>row.consent_scope==='lender'&&sent&&row.input?.observed?.submissionId===sent.id):rows;
    const jobs=[];for(const row of visible)jobs.push(await jobDTO(db,row,{...this.access,role}));
    const links=(await db.query(`SELECT document_id AS "documentId",requirement_id AS "requirementId",origin,analysis_job_id AS "jobId" FROM requirement_documents WHERE application_id=$1 AND unlinked_at IS NULL`,[this.access.applicationId])).rows;
@@ -54,7 +58,7 @@ export class AnalysisService {
      if(prior.state==='blocked')await db.query("UPDATE analysis_jobs SET state='cancelled',cancel_requested=true,token=token+1,slot=NULL,lease_expires_at=NULL,revision=revision+1,updated_at=now() WHERE id=$1",[prior.id]);
      else if(liveStates.includes(prior.state))throw new UploadError('This check is still active. Cancel it before retrying.',409);
    }
-   const recent=(await db.query("SELECT count(*)::int count FROM analysis_jobs WHERE application_id=$1 AND initiated_by=$2 AND created_at>now()-interval '1 minute'",[this.access.applicationId,this.access.userId])).rows[0].count;
+   const recent=(await db.query("SELECT count(*)::int count FROM analysis_jobs WHERE application_id=$1 AND initiated_by=$2 AND lane='interactive' AND created_at>now()-interval '1 minute'",[this.access.applicationId,this.access.userId])).rows[0].count;
    if(recent>=20)throw new UploadError('Too many checks requested. Wait a minute before trying again.',429);
    const id=await enqueue(db,this.access.applicationId,this.access.userId,task,targetId,'interactive',retryOf,role);
    await db.query('INSERT INTO mutation_receipts(application_id,actor_user_id,operation,idempotency_key,request_hash,result) VALUES($1,$2,$3,$4,$5,$6)',[this.access.applicationId,this.access.userId,operation,idempotencyKey,requestHash,JSON.stringify({id})]);
