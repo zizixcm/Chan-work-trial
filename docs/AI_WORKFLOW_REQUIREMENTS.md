@@ -4,6 +4,8 @@ The application must connect uploaded documents to relevant requirements and ass
 
 This specification records the design agreed on November 7, 2026. It supersedes conflicting workflow proposals in AI_PLAN.md; it does not imply every requirement below is implemented.
 
+The maintained [workflow design](AI_WORKFLOW_DESIGN.md) explains the implementation, architectural tradeoffs and edge-case recovery. Requirements describe the target; the design and test plan distinguish current behavior from remaining work.
+
 ## Delivery and rollback
 
 The pre-integration code is preserved in commit `66db429`, tagged `checkpoint/pre-ai-workflow`, on `main`. Implementation proceeds on `codex/ai-workflow-integration`. The checkpoint contains source, migrations, tests and existing project artifacts. It excludes local credentials, private uploaded files and database contents. It is a code rollback point, not a database backup.
@@ -52,7 +54,7 @@ Immediate assessment after every match gives early feedback but wastes work. A s
 
 Across overlapping batches, retain at most one pending successor per application, initiating user, visibility scope and requirement. Supersede older pending snapshots while preserving their history. Do not rewrite a running attempt's input. Serialize assessment execution for that same scope and target. If versions 12, 13 and 14 arrive while version 11 runs, its successor checks version 14. Preserve interactive priority when automatic work replaces an obsolete manual request.
 
-Before publishing, compare the exact snapshot with current state atomically. Retain outdated responses for diagnostics without presenting them as current. A future durable reconciliation mechanism must also recover invalidations that arrive without an explicit enqueue, including definition changes. Coalescing alone does not implement this reconciliation or the upload batch barrier.
+Before publishing, compare the exact snapshot with current state atomically. Retain outdated responses for diagnostics without presenting them as current, subject to capture and retention policy. Durable reconciliation must recover invalidations that arrive without an explicit enqueue, including definition changes. The second implementation increment provides mutation-marker reconciliation separately from stale-job disposal; its application-wide barrier and broad scan boundaries are documented in the design.
 
 ## Nonfunctional requirements
 
@@ -71,7 +73,7 @@ Before publishing, compare the exact snapshot with current state atomically. Ret
 | Operations | Worker health monitoring, cancellation, targeted replay, dead-letter inspection and recovery drills. Upload and manual review remain available during AI outages. |
 | Compatibility | Version contracts and extractors; evaluate prompt/model changes on fixtures before rollout. Preserve rollback without destroying history. |
 
-Existing development defaults are two global slots, 20 provider calls/minute, a 60-second provider timeout, a 90-second attempt deadline, three provider attempts and small daily budgets. These are limits, not measured performance guarantees. Retain the existing inexpensive model for the initial increment.
+Existing development defaults are two global slots, 20 provider calls/minute, a 60-second provider timeout, a 90-second attempt deadline, three provider attempts and small daily budgets. These are limits, not measured performance guarantees. Model choice follows labeled evaluation: the initial Flash-Lite default was replaced with Flash after a false-fulfilled missing-rent result; existing configuration overrides require review before rollout.
 
 ## Acceptance scenarios
 

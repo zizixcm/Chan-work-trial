@@ -2,6 +2,8 @@
 
 The requirements and edge-case matrix define expected behavior. Tests encode those expectations; they are not an independent guarantee that a model's interpretation is correct. Deterministic workflow tests use a simulated provider with the real queue, PostgreSQL transactions, preparation and output validators. Live-provider smoke checks use synthetic evidence and retain durable admission and spend controls.
 
+The maintained [workflow design](AI_WORKFLOW_DESIGN.md) records the decisions and recovery behavior these tests exercise. Behavior changes must update design, scenario status and test evidence together.
+
 ## Repeatable checks
 
 - `npm test`: input/output validation, citation integrity, bounded execution, retries, diagnostics, storage, review separation and criterion-derived fulfillment.
@@ -63,6 +65,8 @@ The workflow fixture increases admission limits only inside its isolated simulat
 | E43 rollback/restore | Baseline Git checkpoint; all DB workflow tests apply migrations to disposable schemas | Full compatible database/blob restore drill; source tag is not data backup |
 
 ## Model evaluation policy
+
+The subsequent documentation review identified priority additions to the existing fault-injection plans: F09 needs an expired general-upload manifest with no saved members or explicit requirement association; F18 needs unrelated batches and continuous arrivals that extend the application-wide barrier; F11/F12 need multiple enabled borrowers with divergent latest-match outcomes and broad reconciliation. These cases are not established by the passing integration sequence. See the [design's open correctness issues](AI_WORKFLOW_DESIGN.md#open-correctness-issues-from-the-edge-case-review) and the [dated edge-case review](AI_WORKFLOW_EDGE_CASES.md#dated-implementation-review--november-7-2026-1c54354).
 
 Gemini Flash is the new code/example-configuration default. Flash-Lite produced a false-fulfilled result on the missing-rent fixture, twice, including after prompt clarification. Flash correctly found the missing criterion but initially contradicted it in the legacy summary; the application now derives aggregate status from validated findings and retains contradictory provider summaries for diagnostics. This follows the specification's application-owned status rule; the expected partial-fulfillment test outcome was not weakened. Synthetic failure and success evidence is retained in `artifacts/ai-evaluations/`.
 
