@@ -202,3 +202,12 @@ Continuous-upload deferral and manual lender refresh are now accepted documented
 ## Visibility dashboard follow-up
 
 `/internal/ai-workflows` reads scoped operational metadata and exports JSON/CSV. Optional metadata-only phase events enable preparation and model-plus-validation timings for new attempts without requiring raw capture. The existing event table is reused; telemetry failures cannot fail analysis. The dashboard distinguishes historical success from current fulfillment, pending work from terminal latency, and known cost from unknown reservations. See [metric definitions/access/export boundaries](AI_WORKFLOW_METRICS.md).
+
+
+## Evaluation oracle audit — 2026-11-07
+
+The independent GPT-6 Astra review is recorded in [AI_EVAL_ORACLE_AUDIT.md](AI_EVAL_ORACLE_AUDIT.md). The old 22/28 result is an original-label count, not a reliable accuracy estimate: two formula labels were incorrect and four attempts failed before a validated result. Original reports remain unchanged.
+
+The new suite has 30 completion coverage cases and four matching cases, authored against the package mapping specification. It covers full evidence, each individual omission, redundant copies, and duplicates that cannot replace missing evidence across financial statements, bank statements, tax documents and lease chains. These are narrow content-coverage slices, not full catalog or legal completeness. Conditional applicability, signatures, authority, full-format negative cases and real reviewed holdouts remain outstanding.
+
+Scoring now checks criterion states and source groups. Eight scorer tests exercise false completion, incorrect citations, duplicate substitution, conflict states, prompt leakage, and explanation paraphrases/negation. Missing-reason lexical screens remain provisional and require semantic adjudication; passing that screen does not establish a correct explanation. Ambiguous correspondence relevance is unscored. New reports preserve synthetic fixtures, hashes, exact task prompts/schemas, and safe failure stages. Compare models only on the same executed cases. No new live model accuracy is claimed from this audit.

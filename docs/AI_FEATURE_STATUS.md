@@ -44,3 +44,12 @@ November 7 reader increment: modern PDF/Word/Excel/Email/Text families are wired
 Outlook MSG follow-up: `.msg` upload validation, header/body extraction and scheduling are implemented. Synthetic fixtures cover Unicode/plain text, HTML, attachments, RTF-only limitations and corrupt/non-email rejection. This is source support, not a deployment claim.
 
 Dashboard access, metric definitions and export commands: [AI workflow metrics](AI_WORKFLOW_METRICS.md).
+
+
+## Evaluation oracle audit — 2026-11-07
+
+The independent GPT-6 Astra review is recorded in [AI_EVAL_ORACLE_AUDIT.md](AI_EVAL_ORACLE_AUDIT.md). The old 22/28 result is an original-label count, not a reliable accuracy estimate: two formula labels were incorrect and four attempts failed before a validated result. Original reports remain unchanged.
+
+The new suite has 30 completion coverage cases and four matching cases, authored against the package mapping specification. It covers full evidence, each individual omission, redundant copies, and duplicates that cannot replace missing evidence across financial statements, bank statements, tax documents and lease chains. These are narrow content-coverage slices, not full catalog or legal completeness. Conditional applicability, signatures, authority, full-format negative cases and real reviewed holdouts remain outstanding.
+
+Scoring now checks criterion states and source groups. Eight scorer tests exercise false completion, incorrect citations, duplicate substitution, conflict states, prompt leakage, and explanation paraphrases/negation. Missing-reason lexical screens remain provisional and require semantic adjudication; passing that screen does not establish a correct explanation. Ambiguous correspondence relevance is unscored. New reports preserve synthetic fixtures, hashes, exact task prompts/schemas, and safe failure stages. Compare models only on the same executed cases. No new live model accuracy is claimed from this audit.
