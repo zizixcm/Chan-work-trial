@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-11-08T23:42:05.451722+00:00",
+  "goalComplete": true,
+  "requirements": [
+    {
+      "requirement": "Two native Mastra agents and durable tool contracts",
+      "status": "deployed; final native/offline integration verified",
+      "evidence": [
+        "lib/agents/definitions.ts",
+        "tests/borrower-agents.integration.ts"
+      ],
+      "limitation": "Known live semantic errors are preserved in recovery review; no quality certification."
+    },
+    {
+      "requirement": "Local borrower app wired to both agents without sign-in",
+      "status": "deployed and offline integration verified",
+      "evidence": [
+        "artifacts/testing/isolated-deployment/HERITAGE_HANDOFF.md",
+        ".data/heritage-pilot/deployed-bridge.json",
+        "artifacts/testing/isolated-deployment/UNIFIED_PILOT_VERIFICATION.txt"
+      ],
+      "limitation": "Live recovery yielded one partial and two blocked assessments; no full live journey quality pass."
+    },
+    {
+      "requirement": "Pilot requirements match actual upload files",
+      "status": "configured",
+      "evidence": [
+        ".data/heritage-pilot/configuration.json",
+        ".data/heritage-pilot/upload-manifest.json"
+      ],
+      "limitation": "No real file acceptance is preseeded; five-group historical MVP subset only."
+    },
+    {
+      "requirement": "Support real pilot PDF and spreadsheet evidence",
+      "status": "deployed; all25 local reader/upload checks pass",
+      "evidence": [
+        ".data/heritage-pilot/reader-verification.json",
+        ".data/heritage-pilot/manifest-reader-verification.json",
+        ".data/heritage-pilot/xlsx-reader-verification.log",
+        ".data/heritage-pilot/format-regression.log",
+        ".data/heritage-pilot/upload-validation.json",
+        ".data/heritage-pilot/pdf-upload-regression.log",
+        ".data/heritage-pilot/quick-after-pdf-validation.log",
+        "artifacts/testing/isolated-deployment/UNIFIED_PILOT_VERIFICATION.txt"
+      ],
+      "limitation": "PDF opening/reader compatibility is not document correctness. Password-required PDFs remain rejected. Latest quick run131unit tests+TypeScript pass."
+    },
+    {
+      "requirement": "Native end-to-end eval integration",
+      "status": "offline integration verified; additional live journeys explicitly deferred",
+      "evidence": [
+        "lib/evaluation-observability/dataset-driver.ts",
+        "scripts/evaluate-dataset-journey.ts",
+        "artifacts/testing/dataset-driver-audit-2026-11-08/FINAL_OFFLINE_SUMMARY.json"
+      ],
+      "limitation": "Full16 scripted execution is not accuracy evidence; D01 live planned in frozen separate candidate."
+    },
+    {
+      "requirement": "Bounded live evaluations with actual results",
+      "status": "bounded diagnostic runs executed and reviewed; additional live journeys explicitly deferred",
+      "evidence": [
+        "artifacts/testing/live-b01-20261108-first/report.json",
+        "artifacts/testing/live-b01-20261108-revised/report.json",
+        "artifacts/testing/investigation-recovery/live-recovery.log",
+        "artifacts/testing/live-investigator-journeys-2026-11-08/RECOVERY_REVIEW.md"
+      ],
+      "limitation": "B01 guidance and two investigator recovery rounds executed/reviewed. Recovery produced1partial/2blocked, with unnecessary entity-amendment request semantic error. New full D01/D03 live journeys explicitly deferred by user; no accuracy claim."
+    },
+    {
+      "requirement": "Usable native Mastra Studio and traces",
+      "status": "restored and browser verified",
+      "evidence": [
+        "artifacts/testing/isolated-deployment/mastra-live-b01-studio.png",
+        "lib/agents/studio-server.ts",
+        "artifacts/testing/isolated-deployment/UNIFIED_PILOT_VERIFICATION.txt"
+      ],
+      "limitation": "Separate offline eval stores remain separate. New paid progress UI run not performed."
+    }
+  ],
+  "userDecision": "Leave live evals pending; finish deployment only (explicit current reply).",
+  "deploymentVerification": "artifacts/testing/isolated-deployment/UNIFIED_PILOT_VERIFICATION.txt",
+  "pending": "Additional D01/D03 live journeys remain deferred. A newly requested stronger-model comparison is separate follow-up work in the evaluation chat; it does not switch the deployed pilot model.",
+  "completionBasis": "Local deployment, native agent/eval integration, Studio, offline verification and bounded live diagnostic executions are delivered and verified. The user explicitly deferred new full-journey live evaluations and requested deployment only. This is not an agent-quality certification.",
+  "qualityCertified": false
+}

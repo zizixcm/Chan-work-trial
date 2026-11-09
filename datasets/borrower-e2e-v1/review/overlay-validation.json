@@ -1,0 +1,17 @@
+{
+  "version": "journey-overlays.1",
+  "overlays": 4,
+  "boundaries": 18,
+  "offlineTests": {
+    "overlay": 32,
+    "coreScorer": 15,
+    "coreExport": 3,
+    "total": 50,
+    "status": "pass"
+  },
+  "coreAdmissionsStillMatch": 12,
+  "holdoutFreeze": "unchanged and verified",
+  "repositoryQuickCheck": "unit tests pass; TypeScript failed on duplicate generated .next/types/routes.d 2.ts declarations",
+  "liveExecution": false,
+  "runtimeChanged": false
+}

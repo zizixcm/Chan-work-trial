@@ -1,0 +1,32 @@
+{
+  "caseId": "heldout-approval",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "No. Saving your document does not mean the lender has approved it. \n\nSaving a file confirms it is stored in your application records. In general, having a file saved does not equate to lender review or approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response explains the policy distinction between saving a file and lender approval without claiming an unsupported actual review or approval status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "It directly and accurately answers the user's question regarding whether saving a lease equates to lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No extraneous or inappropriate next steps were offered."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and does not engage in excessive repetition."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 37,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 2426,
+  "elapsedMs": 4735
+}

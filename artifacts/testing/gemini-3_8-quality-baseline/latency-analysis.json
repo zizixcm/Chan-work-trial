@@ -1,0 +1,87 @@
+{
+  "traceId": "30b2298687458b17beddd543fa5ad6fc",
+  "scope": "One synthetic PDF investigator case; excludes borrower-agent followthrough and browser latency",
+  "sourceDirectory": "/Users/chanrao/Developer/proximity-releases/investigator-model-comparison-20261108-v2/artifacts/testing/live-quality-3_8-flash-v2",
+  "wallSeconds": 75.747,
+  "calls": [
+    {
+      "call": 1,
+      "action": "inspect_document",
+      "inferenceSeconds": 5.419,
+      "inputTokens": 3797,
+      "outputTokens": 305,
+      "reasoningTokens": 286,
+      "costUsd": 0.0039915
+    },
+    {
+      "call": 2,
+      "action": "read_pages",
+      "inferenceSeconds": 2.947,
+      "inputTokens": 3981,
+      "outputTokens": 133,
+      "reasoningTokens": 104,
+      "costUsd": 0.0034845
+    },
+    {
+      "call": 3,
+      "action": "propose_mapping",
+      "inferenceSeconds": 6.582,
+      "inputTokens": 4320,
+      "outputTokens": 1582,
+      "reasoningTokens": 1263,
+      "costUsd": 0.0091725
+    },
+    {
+      "call": 4,
+      "action": "assess",
+      "inferenceSeconds": 58.047,
+      "inputTokens": 4670,
+      "outputTokens": 11722,
+      "reasoningTokens": 9304,
+      "costUsd": 0.04746
+    }
+  ],
+  "inferenceSeconds": 72.99499999999999,
+  "tools": [
+    {
+      "name": "tool: 'inspect_document'",
+      "seconds": 1.17
+    },
+    {
+      "name": "tool: 'read_evidence'",
+      "seconds": 0.79
+    },
+    {
+      "name": "tool: 'propose_document_mapping'",
+      "seconds": 0.038
+    },
+    {
+      "name": "tool: 'publish_assessment'",
+      "seconds": 0.065
+    }
+  ],
+  "observations": [
+    "Final publish assessment contains 14 criterion findings.",
+    "No OCR action was used.",
+    "Model inference spans include provider/network latency; server-only compute cannot be isolated.",
+    "Reasoning token counts show output volume; traces do not separate reasoning wall time from answer generation.",
+    "Higher output limit prevented previous truncation; no demonstrated latency improvement."
+  ],
+  "pilotCodeFindings": [
+    {
+      "file": "lib/agents/runner.ts",
+      "finding": "Main turn and full investigation are awaited sequentially. Borrower messages arriving during an investigation wait until the next tick.",
+      "status": "Architectural queueing limit; not measured by the isolated investigator trace."
+    },
+    {
+      "file": "scripts/mastra-pilot-server.ts",
+      "finding": "Next tick is scheduled 2000ms after the previous tick completes.",
+      "status": "Additional scheduling delay, not the dominant measured inference cost."
+    },
+    {
+      "file": "scripts/live-evaluation-fetch.mjs",
+      "finding": "Deployment owner is replacing buffered provider stream with passthrough streaming.",
+      "status": "Changes perceived responsiveness; does not eliminate reasoning latency."
+    }
+  ]
+}

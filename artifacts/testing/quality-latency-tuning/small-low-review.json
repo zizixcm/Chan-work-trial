@@ -1,0 +1,79 @@
+[
+  {
+    "caseId": "EMPTY-REQUESTED",
+    "profile": "borrower-low",
+    "quality": "pass",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": 2019.2006660000002,
+    "completionMs": 3115.2788330000003,
+    "latencyPassed": true,
+    "combinedPassed": true,
+    "costMicros": 3010,
+    "trace": {
+      "traceId": "320884a3d1b29fac2271509685bff460",
+      "spanId": "368271725f934031"
+    },
+    "notes": [
+      "Five groups, exact periods and declared account/units correct; no fabricated upload or approval.",
+      "Useful2.019s and complete3.115s meet targets in this one sample."
+    ]
+  },
+  {
+    "caseId": "EMPTY-UPLOADED",
+    "profile": "borrower-low",
+    "quality": "fail",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": 1254.061334,
+    "completionMs": 2040.4111669999998,
+    "latencyPassed": true,
+    "combinedPassed": false,
+    "costMicros": 2656,
+    "trace": {
+      "traceId": "0d3e1d6f422b7325be980bb881069fb6",
+      "spanId": "a4a7bd12d823d7b6"
+    },
+    "notes": [
+      "Factual zero-upload answer is correct and latency passes.",
+      "Focus fails: still appends five-bullet requirements checklist despite pure inventory question."
+    ]
+  },
+  {
+    "caseId": "EMPTY-MISSING",
+    "profile": "borrower-low",
+    "quality": "pass",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": 1805.628459,
+    "completionMs": 2925.5431250000006,
+    "latencyPassed": true,
+    "combinedPassed": true,
+    "costMicros": 3009,
+    "trace": {
+      "traceId": "509f574f18dce87399cf96f147f807f7",
+      "spanId": "2626e541b6ba01f4"
+    },
+    "notes": [
+      "Correct five remaining groups and periods; no nonexistent amendments demanded.",
+      "Useful1.806s and complete2.926s meet targets in this one sample."
+    ]
+  },
+  {
+    "caseId": "ONE-UPLOAD",
+    "profile": "both-low",
+    "quality": "pass",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": null,
+    "completionMs": 29273.365083999997,
+    "latencyPassed": false,
+    "combinedPassed": false,
+    "costMicros": 29098,
+    "trace": {
+      "traceId": "f9f92ace8114bc7f99bc95118461eea7",
+      "spanId": "561860f850c914ef"
+    },
+    "notes": [
+      "Correct annual2025criterion and source citation, remaining YTD and other requested documents accurately described.",
+      "Seven calls include an unnecessary repeated inspection;29.273s fails20s ceiling despite improvement over58.065s baseline.",
+      "UI receipt latency is unmeasured and not certified by this controller fixture."
+    ]
+  }
+]

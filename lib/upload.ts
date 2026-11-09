@@ -53,8 +53,8 @@ export async function saveUpload(
     else await repository.insert(record, requirementIds[0]);
   } catch (error) {
     // Reconcile an uncertain commit before removing any bytes.
-    const committed = await repository.document(id);
-    if (committed) return id;
+    const committed = await repository.document(id) || await repository.byChecksum(sha256);
+    if (committed?.id===id) return id;
     await storage.remove(id).catch(() => {});
     if (await repository.byChecksum(sha256))
       throw new UploadError(

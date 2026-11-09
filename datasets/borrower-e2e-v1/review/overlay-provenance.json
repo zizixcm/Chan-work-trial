@@ -1,0 +1,24 @@
+{
+  "version": "journey-overlays.1",
+  "files": {
+    "overlays/DEV-BUDGET/oracle.json": "0c5b2f5635b85e49199646bb0ea6f9c43e333d973b9d1bfc5f6a3297b8040560",
+    "overlays/DEV-BUDGET/scenario.json": "35df612a080de4a6185f63d3b99ee0551f3be35ec7e81e5afdc2092d4c0cf4c4",
+    "overlays/DEV-DIALOGUE/oracle.json": "11579134bb76b8c5a07b5e1b5ac7fda00eb4e2970ddd0ba2eee896c9204ebb9e",
+    "overlays/DEV-DIALOGUE/scenario.json": "263da9e6fef8f39a87df210073403b26ef37152b07e0cd5e8c1b34f99101a560",
+    "overlays/DEV-HISTORY/oracle.json": "f6474d519173c26d9ebc084a3f1d7ad41cb534aaa6065e51a9310a71bac703b4",
+    "overlays/DEV-HISTORY/scenario.json": "ca2ef0772df2ca8571c2e48792658044f4a04a8c3627bf18950b6ee520d4cfd1",
+    "overlays/DEV-UPLOAD-RACE/oracle.json": "ce5b4a5178e0fccf869a1a6a8a0c6cf9456c07839ca64ac0ab4005ed66ee794a",
+    "overlays/DEV-UPLOAD-RACE/scenario.json": "23e6ffb588c6b23d58fc2fdeda6be281cb926b837348aa8448735d4ff02019aa",
+    "overlays/README.md": "a5e347ae7c5a3785a25f06985aed1d7b797ac6611436adb66ccb5d7e9cf5dd4b",
+    "overlays/index.json": "f17e90eac8e5c0ea42b2331de20fb36ff570a46235ab91fbc0988fcab6cb3cb7",
+    "overlays/review/message-review.template.json": "26290ec97c39632f665c2f2edac9b33b03702d0426388d97afcbea67473604fc",
+    "tools/authorization.py": "88559429c92c65c1d1ec6052a907b4d27fcb7e5674ba5edd7bffd9be059bc2a1",
+    "tools/build_overlays.py": "d9065573310af4bc7392f81c6c9a65f82a9d1aa635d30f06fd302c944759e7c9",
+    "tools/export_overlay.py": "24f1c35f8f882b9ffe6c94d50505a9d9a4a4cb0db8f233c28d9673390e412151",
+    "tools/score.py": "56c513375f0ce023655f0b8ba44d2163135a5e9442ef59b1b8c0dafdef5cb734",
+    "tools/score_overlay.py": "3201c3b701c4e5ba6397155148ff3bd08dd435d9b750950e6ecfcd8599ea7d29",
+    "tools/test_overlays.py": "a1cd2d5840e5fa1bdeaa266aca8c8dac9c70483170f6a7b5436b2ac73446f991"
+  },
+  "coreHoldoutFreezeSha256": "8d072bbfa04fd6634a30116b8f371122e96c9a5486147d03a8d8a70cc49e7147",
+  "scope": "Offline development overlays only; no core corpus change"
+}

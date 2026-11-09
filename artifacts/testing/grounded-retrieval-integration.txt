@@ -1,0 +1,5 @@
+
+> proximity-borrower-portal@0.1.0 test:chat-integration
+> tsx tests/borrower-chat.integration.ts
+
+PASS: borrower context and conversation isolated integration (authorization, races, replay, pagination, freshness, LOI isolation, upload anchors/backfill, grounded answers, citations, stale-source fences, polling/retrieval without dispatch).

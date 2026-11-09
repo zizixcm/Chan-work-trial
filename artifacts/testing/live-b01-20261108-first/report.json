@@ -1,0 +1,47 @@
+{
+  "caseId": "B01",
+  "mode": "live",
+  "configurationDigest": "2e2bd5d97e08c9c6c9b46ec3be292e4ffe0c10351647a719acef84fe84d5d2b5",
+  "approvalFileSha256": "eae524052a34a5af4ac82999247205accd10694788dfa1dce41cd829d10a062a",
+  "elapsedMs": 1975,
+  "dispatches": 1,
+  "structuralPassed": false,
+  "semanticReview": "pending independent review; structural score is not a quality pass",
+  "response": {
+    "state": "completed",
+    "decision": {
+      "goal": "Determine all documents required for the loan application.",
+      "kind": "investigate",
+      "message": "The borrower is asking what documents are needed. I need to investigate all requirements to provide a comprehensive list.",
+      "documentIds": [],
+      "requirementIds": [
+        "b01-r1",
+        "b01-r2",
+        "b01-r3",
+        "b01-r4",
+        "b01-r5"
+      ]
+    },
+    "response_text": "The borrower is asking what documents are needed. I need to investigate all requirements to provide a comprehensive list.",
+    "reason_code": null,
+    "actual_micros": "1122"
+  },
+  "trace": {
+    "traceId": "53d587a368a28657628611ad5df60614",
+    "spanId": "b5d8a7e42b6ed34c"
+  },
+  "budgetBefore": {
+    "limitMicros": 20000000,
+    "accountedMicros": 4,
+    "knownMicros": 4,
+    "heldMicros": 0,
+    "calls": 1
+  },
+  "budgetAfter": {
+    "limitMicros": 20000000,
+    "accountedMicros": 1126,
+    "knownMicros": 1126,
+    "heldMicros": 0,
+    "calls": 2
+  }
+}

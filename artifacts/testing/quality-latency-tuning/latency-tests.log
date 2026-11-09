@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: quality and user-visible elapsed time must both pass; queue time counts
+ok 1 - quality and user-visible elapsed time must both pass; queue time counts
+  ---
+  duration_ms: 0.429333
+  type: 'test'
+  ...
+# Subtest: missing, misbound, offline and impossible timing cannot become a speed pass
+ok 2 - missing, misbound, offline and impossible timing cannot become a speed pass
+  ---
+  duration_ms: 0.136
+  type: 'test'
+  ...
+# Subtest: investigation timing uses final result; fast progress alone is insufficient
+ok 3 - investigation timing uses final result; fast progress alone is insufficient
+  ---
+  duration_ms: 0.050375
+  type: 'test'
+  ...
+# Subtest: native Mastra gate accepts reviewed fast result and rejects fast wrong result
+ok 4 - native Mastra gate accepts reviewed fast result and rejects fast wrong result
+  ---
+  duration_ms: 5.9545
+  type: 'test'
+  ...
+# Subtest: small-sample summaries retain failures and do not claim p95 stability
+ok 5 - small-sample summaries retain failures and do not claim p95 stability
+  ---
+  duration_ms: 0.684834
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1343.383166

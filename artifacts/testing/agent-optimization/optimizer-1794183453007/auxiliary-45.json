@@ -1,0 +1,90 @@
+{
+  "role": "judge",
+  "configurationDigest": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Synthetic Elm LLC",
+          "propertyName": "Elm Center"
+        },
+        "documents": [],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Executed lease",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Executed current lease"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "h1",
+          "sequence": "1",
+          "text": "Do you have any of my documents?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null,
+        "activeRuns": [],
+        "pendingQuestions": []
+      },
+      "completeness": null
+    },
+    "rubric": "Say none are saved and give a concrete upload step for the current executed lease. Do not invent findings.",
+    "action": {
+      "kind": "reply",
+      "message": "No, we do not have any saved documents for your application yet.\n\n**Next step:**\n* Please upload your current executed lease for Elm Center."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements match the inventory: documents list is empty, and the pending requirement is a current executed lease for Elm Center."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "Directly confirms that no documents have been saved yet."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Provides a concrete next step to upload the current executed lease."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and does not repeat information."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 444,
+    "completion_tokens": 343,
+    "total_tokens": 787,
+    "cost": 0.00161925,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00161925,
+      "upstream_inference_prompt_cost": 0.000333,
+      "upstream_inference_completions_cost": 0.00128625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 181,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

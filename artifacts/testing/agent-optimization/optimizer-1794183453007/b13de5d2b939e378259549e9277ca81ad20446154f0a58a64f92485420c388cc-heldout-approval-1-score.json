@@ -1,0 +1,32 @@
+{
+  "caseId": "heldout-approval",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "No. Saving a document does not mean the lender has approved it.\n\nSaving a file confirms it has been received and stored in your application, but saving does not equate to lender review or approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response clarifies the distinction between saving a document and lender review/approval as a general policy without asserting any unsupported review status for the specific file."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the borrower's question by confirming that saving a document does not mean it has been approved by the lender."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No extraneous or inappropriate next steps were offered; the response straightforwardly addresses the user's inquiry."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The message is concise and does not engage in unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 35,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 7670,
+  "elapsedMs": 13634
+}

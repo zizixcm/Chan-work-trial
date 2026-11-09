@@ -1,0 +1,100 @@
+{
+  "caseId": "BATCH-01",
+  "title": "Readable initial batch with partial package support",
+  "reviewer": "coordinating chat, independent actual-output and gold review",
+  "artifact": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v2/artifacts/testing/batch-live-01-r3/report.json",
+  "overallPassed": false,
+  "nativeReview": {
+    "provenance": "evaluator",
+    "status": "complete",
+    "checks": [
+      {
+        "id": "file_identity",
+        "passed": true
+      },
+      {
+        "id": "readability_grounded",
+        "passed": true
+      },
+      {
+        "id": "mapping_grounded",
+        "passed": true
+      },
+      {
+        "id": "document_errors_grounded",
+        "passed": true
+      },
+      {
+        "id": "all_files_covered",
+        "passed": true
+      },
+      {
+        "id": "all_requirements_covered",
+        "passed": true
+      },
+      {
+        "id": "saved_not_missing",
+        "passed": true
+      },
+      {
+        "id": "unknown_not_fulfilled",
+        "passed": true
+      },
+      {
+        "id": "partial_not_complete",
+        "passed": true
+      },
+      {
+        "id": "no_internal_ids",
+        "passed": true
+      },
+      {
+        "id": "no_approval_claim",
+        "passed": true
+      },
+      {
+        "id": "citations_valid",
+        "passed": true
+      },
+      {
+        "id": "completed_requirement_checkmark",
+        "passed": true
+      }
+    ]
+  },
+  "nativeReviewScope": "Only named checks; not a full semantic pass. Supplemental next-step and gold-state checks below remain independently binding. Citation references accepted by unchanged backend validator; semantic support reviewed against private gold.",
+  "nextStepsVerdict": "mostly correct; unsupported qualifier",
+  "supplementalNextStepsPassed": false,
+  "goldStateMismatches": [
+    {
+      "criterion": "R5.consistency",
+      "expected": "unmet",
+      "actual": "unknown",
+      "explanation": "Entity ownership and manager signing authority cannot be evaluated without entity documents."
+    }
+  ],
+  "notes": [
+    "Correct exact remaining documents and dates; reconciliation remains unknown.",
+    "Unsupported additional executed qualifier on requested operating agreement.",
+    "Entity consistency unknown versus gold unmet is conservative, not false completeness."
+  ],
+  "durableAcknowledgementSeconds": 5.472,
+  "controllerCompletionSeconds": 25.294,
+  "finalReplyCommitSeconds": 25.265,
+  "reportCeilingSeconds": 20,
+  "latencyPassed": false,
+  "modelCalls": 4,
+  "costUSD": 0.029018,
+  "browserTimingMeasured": false,
+  "actualFinalReply": "Here is the update on your uploaded files and current application status:\n\n### What Your Uploads Established\n* **`ffa0b3c48c21f.pdf`**: \u2705 **Current rent roll** is fully satisfied. It identifies Aster Quay as of September 30, 2026, and lists all declared units (101 and 102), tenants, lease dates, and monthly rents.\n* **`f7dbacda2c2f3.pdf`**: Partially satisfies **Property operating statements** by providing actual operating results for calendar year 2025 (2025-01-01 through 2025-12-31).\n\n---\n\n### Outstanding Requirements\n\n* **Property operating statements** (Partially satisfied):\n  * Missing actual operating results for Aster Quay covering year-to-date 2026 (2026-01-01 through 2026-09-30).\n  * Reconciliation between contractual rent and operating revenue remains pending review of the 2026 operating statement and executed leases.\n\n* **Leases and applicable amendments** (Unsatisfied):\n  * Your declaration confirmed zero lease amendments exist.\n  * Executed lease copies are still needed for both declared occupied units (Unit 101 and Unit 102), including party names, property identification, rent amounts, terms, and signature dates.\n\n* **Borrower bank statements** (Unsatisfied):\n  * Complete monthly statements for account ending in **7317** for **July 2026**, **August 2026**, and **September 2026**.\n\n* **Entity ownership and signing authority** (Unsatisfied):\n  * Certificate of Formation for Aster Quay Holdings LLC.\n  * Executed Operating Agreement for Aster Quay Holdings LLC showing full ownership and signing authority.",
+  "costAttribution": {
+    "source": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v2/artifacts/testing/batch-live-01-r3/case-cost.json",
+    "callIds": [
+      "45d143cd-a60f-46c0-be94-ccafb124366c",
+      "a98971c3-813f-4013-aa17-6c730837514c",
+      "f256cbd2-adf9-443b-9c30-6594afe75df8",
+      "395f1e6c-8a87-477d-8648-486f74a9b2c0"
+    ],
+    "heldMicros": 0
+  }
+}

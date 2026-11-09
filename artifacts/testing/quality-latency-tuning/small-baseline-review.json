@@ -1,0 +1,83 @@
+[
+  {
+    "caseId": "EMPTY-REQUESTED",
+    "profile": "baseline",
+    "quality": "pass",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": 7109.792333000001,
+    "completionMs": 8177.144208,
+    "latencyPassed": false,
+    "combinedPassed": false,
+    "costMicros": 7603,
+    "trace": {
+      "traceId": "c7e4afa1385553e172392fe68ae29750",
+      "spanId": "d924cfb9d4441d73"
+    },
+    "notes": [
+      "All five groups and exact periods/account/units correct.",
+      "Declared zero amendments are not unnecessarily requested.",
+      "Operating statements is accepted equivalent wording; explicit actuals would improve clarity."
+    ]
+  },
+  {
+    "caseId": "EMPTY-UPLOADED",
+    "profile": "baseline",
+    "quality": "fail",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": 3985.217583,
+    "completionMs": 5007.8017500000005,
+    "latencyPassed": false,
+    "combinedPassed": false,
+    "costMicros": 4175,
+    "trace": {
+      "traceId": "47c0ccef0479b7a596b44c610ab82237",
+      "spanId": "a2cf2c64bde20976"
+    },
+    "notes": [
+      "Factual accuracy passes: zero saved files and no pending uploads.",
+      "Focus/conciseness fails: expands the simple inventory answer into a three-bullet full requirements checklist, contrary to the borrower instruction.",
+      "Completion is only 8ms above5s; do not overinterpret that margin. Useful content at3.985s still misses3s."
+    ]
+  },
+  {
+    "caseId": "EMPTY-MISSING",
+    "profile": "baseline",
+    "quality": "pass",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": 7180.674083000001,
+    "completionMs": 8206.682207999998,
+    "latencyPassed": false,
+    "combinedPassed": false,
+    "costMicros": 6909,
+    "trace": {
+      "traceId": "84f377b7a8520741086740f03728c4a4",
+      "spanId": "1f40576432c6e8ec"
+    },
+    "notes": [
+      "Correctly explains all five document groups still needed and exact periods.",
+      "No fabricated upload, inspection, completion or approval claim."
+    ]
+  },
+  {
+    "caseId": "ONE-UPLOAD",
+    "profile": "baseline",
+    "quality": "pass",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": null,
+    "completionMs": 58064.786541,
+    "latencyPassed": false,
+    "combinedPassed": false,
+    "costMicros": 48270,
+    "trace": {
+      "traceId": "25fef1f2a8d34934a6eb6c54280ae9da",
+      "spanId": "3712c35e7ba2b0ba"
+    },
+    "notes": [
+      "Document identification, annual criterion fulfillment and R3 relevance correct.",
+      "Faithful citation supports actual2025property results; only annual criterion met,13unchecked criteria remain unknown as allowed by incremental contract.",
+      "Final report identifies uploaded filename/type and correctly lists YTD2026andremainingroll/leases/bank/entitydocuments; does not claim entire operating-statements requirement fulfilled.",
+      "UI acknowledgement within1s is unmeasured; controller/database fixture cannot certify browser upload receipt.",
+      "Six calls and58.065s fail20s completion ceiling."
+    ]
+  }
+]

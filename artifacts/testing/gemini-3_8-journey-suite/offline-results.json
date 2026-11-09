@@ -1,0 +1,171 @@
+[
+  {
+    "caseId": "D01",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 30,
+    "configurationDigest": "c8d79a7bb7f34d0093df8974824572817aabf5a43287041ddffd3263cf8c0851",
+    "trace": {
+      "traceId": "4095b12be00f4494f01c4d693b14fde0",
+      "spanId": "4cef7211570e651a"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-v9-offline-D01/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "D02",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 32,
+    "configurationDigest": "c730d827de27844ecb29ea2ad19f8228aa84b3c454b76975fe4dbdad242deb1f",
+    "trace": {
+      "traceId": "91bc1b82d64b64aa6b90eb4f632cc5db",
+      "spanId": "88c04bf2fac57a45"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-D02/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "D03",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 32,
+    "configurationDigest": "3ea82f4f2bf271a60078b9d929c7ad3a825f8dfc15d2f1bbdb6142c8582aaae1",
+    "trace": {
+      "traceId": "01112865be41bf2de49fedf707dde2a2",
+      "spanId": "d75da0806fa663bb"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-v9-offline-D03/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "D04",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 32,
+    "configurationDigest": "9d41edd3167c3e9c5e35f6b56ae40655ca3c1839b18facac323018ba41953462",
+    "trace": {
+      "traceId": "db6cf5f1b6933d5892918045cdd4bcc1",
+      "spanId": "f773fc105f303ffa"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-D04/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "D05",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 34,
+    "configurationDigest": "d9235a59e474859d20a174ba6f9a32b9d6ad256e345a7587a669f82ad9160beb",
+    "trace": {
+      "traceId": "46b99f584221afb680a974fd298dee7e",
+      "spanId": "385bd0e610b4882d"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-D05/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "D06",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 33,
+    "configurationDigest": "8fa128d08e7ff6a21d9a9ccb4c03462eebf7388760b52f23011fc84881bd4880",
+    "trace": {
+      "traceId": "d88a6e681f000d5d3743a7a081f61f24",
+      "spanId": "c95c50dee27e71a9"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-D06/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "D07",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 32,
+    "configurationDigest": "92930a6776f26517c226700d74aed27cc1d7d88022d7f1223d3ea2a961832fb6",
+    "trace": {
+      "traceId": "7cad88e3bf4270157a8353d863248266",
+      "spanId": "a69678689d09a23c"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-D07/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "D08",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 32,
+    "configurationDigest": "e6517976ad9a1246d4c330e3bee85c5b79cb2200342e4366ba0c35ed5daec393",
+    "trace": {
+      "traceId": "d310fc275ce8343a8b4c2eac15fa695b",
+      "spanId": "0b3b95e557a76781"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-D08/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "H01",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 24,
+    "configurationDigest": "ef4aa57664d3546656d0dea7ede5e8bbfc724fa567960b50900e2d1328dd8605",
+    "trace": {
+      "traceId": "ce65545b8f56b400a7a741b0bc71cb07",
+      "spanId": "cd36a5fc788ed880"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-H01/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "H02",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 26,
+    "configurationDigest": "a47654fabede879667f2c37b10a97226bc9169f7611175746542f9e81d62c1d6",
+    "trace": {
+      "traceId": "c64d3b310eae6f295228130fb4f9a0f3",
+      "spanId": "1fe35fa6d06355cb"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-H02/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "H03",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 34,
+    "configurationDigest": "cc010a3200b9ae63ec9fe0b9ab5bb5dcdab15add978f7e323abe2da95fa17cf0",
+    "trace": {
+      "traceId": "7174f26ebeeb00a429d832dc70c80a7a",
+      "spanId": "66c26a73dc6bbdf4"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-H03/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "H04",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 36,
+    "configurationDigest": "ff80e9142188ea4578c759666575a483ad58d1b878f7cf21010a6e5b2afba6b3",
+    "trace": {
+      "traceId": "ea87076bdc0391ee2d8a12588a18a2e3",
+      "spanId": "c1911daae9f0dd99"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-H04/report.json",
+    "liveStatus": "not-run-window-blocked"
+  },
+  {
+    "caseId": "DEV-HISTORY",
+    "offlineStatus": "pass",
+    "boundaries": 3,
+    "dispatches": 29,
+    "configurationDigest": "14643ea5aae040dd9878dd588e50cbb8c989eae2630ae2e702dbfe7e6a5e4286",
+    "trace": {
+      "traceId": "f3e5ec5394c31df7d77582df4cc59298",
+      "spanId": "b4307759bc51d7d4"
+    },
+    "report": "/Users/chanrao/Developer/proximity-releases/dataset-3_8-suite-20261108-v1/artifacts/testing/suite-offline-DEV-HISTORY/report.json",
+    "liveStatus": "not-run-window-blocked"
+  }
+]

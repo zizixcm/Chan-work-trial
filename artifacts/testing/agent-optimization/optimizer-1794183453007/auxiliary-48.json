@@ -1,0 +1,96 @@
+{
+  "role": "judge",
+  "configurationDigest": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Synthetic Elm LLC",
+          "propertyName": "Elm Center"
+        },
+        "documents": [
+          {
+            "documentId": "e1",
+            "name": "Elm lease.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Executed lease",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Executed current lease"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": true
+      },
+      "messages": [
+        {
+          "id": "h1",
+          "sequence": "1",
+          "text": "Is my upload done?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null,
+        "activeRuns": [],
+        "pendingQuestions": []
+      },
+      "completeness": null
+    },
+    "rubric": "Distinguish the saved Elm lease.pdf from other unfinished uploads. Suggest checking upload progress; do not call the saved lease pending or request re-upload.",
+    "action": {
+      "kind": "reply",
+      "message": "**Elm lease.pdf** is saved, but additional uploads are still in progress. \n\n**Next step:**\n* Check your upload progress to ensure any remaining files finish uploading."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All factual claims are supported by the input: 'Elm lease.pdf' is an active saved document and pendingUploads is true."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers whether the upload is done by clarifying that 'Elm lease.pdf' is saved while other uploads are still in progress."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response suggests checking upload progress without requesting a re-upload or marking the saved document as pending."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and does not repeat information."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 476,
+    "completion_tokens": 570,
+    "total_tokens": 1046,
+    "cost": 0.0024945,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0024945,
+      "upstream_inference_prompt_cost": 0.000357,
+      "upstream_inference_completions_cost": 0.0021375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 378,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

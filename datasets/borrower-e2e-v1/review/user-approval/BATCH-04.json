@@ -1,0 +1,49 @@
+{
+  "caseId": "BATCH-04",
+  "approval": {
+    "status": "approved",
+    "source": "explicit user answer in evaluation chat",
+    "answer": "Approve BATCH-04 as written",
+    "approvedScope": "Four-file D07 initial batch; obscured tenant execution page remains unknown, request clearer page not new lease; preserve valid findings and bulk/parallel/stages/barrier/UI/latency checks."
+  },
+  "files": [
+    {
+      "documentId": "f9c8235aa530d",
+      "filename": "f9c8235aa530d.pdf",
+      "pageCount": 1,
+      "path": "development/D07/files/f9c8235aa530d.pdf",
+      "seriesId": "f9c8235aa530d",
+      "sha256": "1b5cda07a6f443563aee449dfea629838938854257e7ef5264057e165af02cbf",
+      "version": 1
+    },
+    {
+      "documentId": "f388078a12c6b",
+      "filename": "f388078a12c6b.pdf",
+      "pageCount": 1,
+      "path": "development/D07/files/f388078a12c6b.pdf",
+      "seriesId": "f388078a12c6b",
+      "sha256": "68fb0f847dbfc228608245e5715668c5b1ee76820357ac02ad668fdcc9077dd8",
+      "version": 1
+    },
+    {
+      "documentId": "fe5a03a9509f0",
+      "filename": "fe5a03a9509f0.pdf",
+      "pageCount": 1,
+      "path": "development/D07/files/fe5a03a9509f0.pdf",
+      "seriesId": "fe5a03a9509f0",
+      "sha256": "68d3f516ebc4278a978a06c2893eeab9bf84e99c953091d430a45fcf7d75e769",
+      "version": 1
+    },
+    {
+      "documentId": "f5bd96f6fb9cb",
+      "filename": "f5bd96f6fb9cb.pdf",
+      "pageCount": 2,
+      "path": "development/D07/files/f5bd96f6fb9cb.pdf",
+      "seriesId": "f5bd96f6fb9cb",
+      "sha256": "5d64d7047d635afa25edfc67c425ddf549a001bf358b79e089d0367b946e5d9b",
+      "version": 1
+    }
+  ],
+  "specPath": "/Users/chanrao/Documents/ChatGPT/proximity/artifacts/testing/quality-latency-tuning/batch-upload-eval-spec.json",
+  "approvedCaseSha256": "1e081c86ae5e904e49fd621ac40a47c6078e92b271565dc4aa6f111c1d2cfcc2"
+}

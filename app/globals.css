@@ -1881,3 +1881,106 @@ progress {
 @media(max-width:800px) {.bulk-workspace {grid-template-columns:1fr;gap:28px}.borrower-view-tabs {gap:0}.borrower-view-tabs button {font-size:16px;flex:1;padding:12px 8px}.organize-heading {align-items:flex-start;flex-direction:column}.batch-upload .bulk-dropzone {min-height:230px;padding:24px}.bulk-dropzone strong {font-size:24px}}
 .portal-simple .requirement-tile {align-items:stretch;justify-content:flex-start;text-align:left}
 .borrower-workspace .simple-identity {margin-bottom:20px}
+/* Fixed desktop workspaces; narrow viewports and zoom retain natural page flow. */
+.workspace-list {min-width:0;display:flex;flex-direction:column;gap:6px;background:#f7f9f5;padding:10px;border:1px solid #d9e2d7;border-radius:8px}
+.portal-simple .workspace-list button {display:flex;flex-direction:column;align-items:stretch;text-align:left;gap:4px;padding:10px 12px;min-height:48px;border:1px solid transparent;border-radius:6px;background:transparent;font-size:16px;color:#243c32}
+.workspace-list button span {font-size:14px;color:#52665c}.workspace-list button strong {overflow-wrap:anywhere}
+.portal-simple .workspace-list button[aria-pressed=true] {border-color:#8ba482;background:#eaf1e5}
+.requirement-workspace,.organize-workspace {display:grid;grid-template-columns:260px minmax(0,1fr);gap:16px}
+.requirement-file-pane,.organize-selected {min-width:0;border:1px solid #d9e2d7;border-radius:8px;padding:18px}
+.pane-heading {display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}.pane-heading h2 {font-size:21px;overflow-wrap:anywhere}.pane-heading p {font-size:15px;color:#52665c;margin-top:6px}.pane-actions {display:flex;gap:8px;flex-shrink:0}.pane-actions button {min-height:44px;padding:8px 14px;font-size:16px}
+.requirement-file-list {list-style:none;padding:0;margin:12px 0}.requirement-file-list li {display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #e1e8de;padding:8px 0}.requirement-file-list button {text-align:left;overflow-wrap:anywhere;min-width:0}.compact-guidance {font-size:16px;margin:12px 0}.compact-guidance summary {cursor:pointer;padding:8px 0;min-height:40px}
+.organize-editor {display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:18px}.organize-preview,.organize-links {min-width:0}.organize-links h3 {font-size:18px}.organize-links p {font-size:14px;margin:6px 0}.organize-links fieldset {border:0;padding:0}.organize-links label {display:flex;align-items:center;gap:10px;min-height:44px;font-size:15px;line-height:1.4;padding:6px 0}.organize-links input {flex-shrink:0;width:20px;height:20px;accent-color:#315f45}.visually-hidden {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.bulk-workspace.has-files .bulk-dropzone {min-height:76px;padding:12px;flex-direction:row;gap:16px}.bulk-workspace.has-files .bulk-dropzone strong {font-size:20px}.bulk-workspace.has-files .bulk-dropzone small {display:none}
+@media(min-width:1100px) and (min-height:650px) {
+  .borrower-workspace {height:100dvh;min-height:0;padding:0;display:grid;grid-template-rows:60px minmax(0,1fr) auto;overflow:hidden}
+  .borrower-workspace>.simple-header {width:100%;max-width:none;height:60px;padding:8px 24px;margin:0}.borrower-workspace>.simple-header .brand {font-size:26px}
+  .borrower-workspace>.simple-main {width:100%;max-width:none;padding:12px 24px;margin:0;min-height:0;display:flex;flex-direction:column;overflow:hidden;position:relative}
+  .borrower-workspace .borrower-back {position:absolute;top:12px;left:24px;margin:0;min-height:32px;font-size:14px}
+  .borrower-workspace .simple-identity {padding-left:180px;margin:0 0 8px;min-height:42px;align-items:center;gap:16px}.borrower-workspace .simple-identity h1 {font-size:24px;line-height:1.25}.borrower-workspace .simple-identity>div>p {font-size:14px;margin-top:2px}.borrower-workspace .simple-identity details {position:relative;font-size:14px}.borrower-workspace .simple-identity details[open] {z-index:25;background:white;box-shadow:0 3px 15px #193a2820;padding:10px;position:absolute;right:24px;top:12px;width:320px}
+  .borrower-view-tabs {flex-shrink:0;margin:0 0 12px}.borrower-view-tabs button {min-height:42px;padding:8px 16px;font-size:16px}
+  .borrower-workspace [role=tabpanel] {flex:1;min-height:0;overflow:hidden}
+  .bulk-workspace,.requirement-workspace,.organize-workspace {height:100%;min-height:0}
+  .bulk-workspace {gap:20px;grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr)}
+  .bulk-upload-column,.bulk-requirements,.workspace-list,.requirement-file-pane {min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+  .bulk-workspace h2 {font-size:21px}.bulk-workspace p {font-size:15px;margin:6px 0}.bulk-upload-column>.batch-upload {margin-top:8px}.batch-upload .bulk-dropzone {min-height:170px;padding:20px}.bulk-dropzone strong {font-size:24px}.bulk-ai-option {margin:8px 0;gap:12px}.bulk-ai-option details p {font-size:14px}.bulk-format-note {font-size:14px!important}.batch-upload>p {font-size:14px}.upload-queue {margin:8px 0}.upload-queue li {padding:10px 0}.upload-queue span,.upload-queue p {font-size:14px}.bulk-file-processing {margin-top:12px}
+  .requirement-tiles {gap:6px;margin-top:10px}.portal-simple .requirement-tile {padding:10px 12px;gap:4px;min-height:64px}.requirement-tile strong {font-size:16px}.requirement-tile span {font-size:14px}.requirement-tile b {font-size:16px}
+  .borrower-send-dock {position:static;padding:10px 24px;border-top:1px solid #d9e2d7;max-height:140px;overflow:auto}.borrower-send-content {max-width:none;gap:16px}.borrower-send-content p {font-size:14px}.borrower-send-actions button {min-height:44px;font-size:16px;padding:8px 18px}
+  .organize-selected {display:flex;flex-direction:column;min-height:0;padding:14px}.organize-selected>.pane-heading {flex-shrink:0}.organize-editor {flex:1;min-height:0}.organize-preview,.organize-links {overflow:auto;min-height:0;overscroll-behavior:contain}.organize-preview .document-pdf {height:100%;display:flex;flex-direction:column}.organize-preview .document-pdf iframe {height:100%;min-height:0;flex:1}.organize-preview .document-pdf p,.requirement-inline-preview .document-pdf p {font-size:14px;margin:0 0 8px}.organize-preview .document-table {font-size:14px}
+}
+@media(max-width:1099px) {.requirement-workspace,.organize-workspace {grid-template-columns:1fr}.workspace-list {max-height:240px;overflow:auto}.organize-editor {grid-template-columns:1fr}.pane-heading {align-items:flex-start;flex-wrap:wrap}.organize-preview .document-pdf iframe {min-height:300px}.organize-links {border-top:1px solid #d9e2d7;padding-top:16px}}
+
+.portal-simple .workspace-list button {flex-shrink:0}
+
+/* Keep the upload surface focused; reveal file and consent detail on demand. */
+.upload-format-help {display:flex;align-items:baseline;gap:4px;flex-wrap:wrap;font-size:14px;color:#52665c;margin:8px 0}
+.upload-format-help details {position:relative}.portal-simple .upload-format-help summary {font-size:14px;padding:0;min-height:28px}
+.upload-format-help details p {font-size:14px;max-width:340px;margin:4px 0}
+.bulk-ai-option {display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:15px}
+.bulk-ai-option .auto-check-format {font-size:14px;color:#52665c}
+.portal-simple .bulk-ai-option summary {font-size:14px;min-height:32px;padding:4px 0}
+.bulk-upload-column>.batch-upload {margin-top:0}
+.bulk-file-processing {font-size:16px}
+.portal-simple .upload-format-help summary,.portal-simple .bulk-ai-option summary {min-height:44px;padding:10px 0}
+@media(max-width:1099px),(max-height:649px) {
+ .borrower-workspace {padding-bottom:0}
+ .borrower-send-dock {position:static;max-height:none;overflow:visible}
+}
+/* One bounded preview shared by the file and requirement workspaces. */
+.file-editor.organize-selected {padding:0;border:0}
+.file-editor .organize-editor {gap:16px;grid-template-columns:minmax(0,1fr) 260px}
+.file-preview-pane {display:flex;flex-direction:column;min-width:0;min-height:0;border:1px solid #d9e2d7;border-radius:8px;overflow:hidden;background:#fff}
+.file-preview-toolbar {display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid #d9e2d7;flex-shrink:0;min-height:60px}
+.file-preview-toolbar>strong {font-size:16px;min-width:0;overflow-wrap:anywhere}
+.file-preview-toolbar select {min-width:0;max-width:100%;flex:1;border:1px solid #c4d0c4;border-radius:6px;padding:8px}
+.file-preview-actions {display:flex;align-items:center;gap:14px;flex-shrink:0;font-size:15px}
+.file-preview-actions a {display:inline-flex;align-items:center;min-height:44px}
+.file-preview-content {min-height:0;flex:1;overflow:auto;padding:10px}
+.file-editor .organize-links {border:1px solid #d9e2d7;border-radius:8px;padding:14px;background:#f7f9f5}
+.file-editor .organize-links h2 {font-size:18px}
+.file-remove-confirm {flex-shrink:0;border:1px solid #d6b985;border-radius:8px;padding:12px;margin-bottom:12px;background:#fff7e9;font-size:15px;max-height:40%;overflow:auto}
+.file-remove-confirm>div {display:flex;gap:12px;margin-top:8px}
+.requirement-editor {display:flex;flex-direction:column;min-height:0;padding:14px;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.requirement-editor>* {flex-shrink:0}
+.requirement-editor>.pane-heading {flex-shrink:0}.requirement-editor .pane-heading h2 {font-size:20px}
+.requirement-editor>.file-preview-pane {flex:0 0 auto;height:max(360px,60dvh)}
+.requirement-feedback {font-size:15px;background:#fff5e8;border-left:3px solid #a97838;padding:10px 12px;margin:0 0 12px;flex-shrink:0;max-height:110px;overflow:auto}
+.requirement-details-pane,.requirement-associations {min-height:0;overflow:auto;font-size:16px}
+.requirement-associations fieldset {padding:0;border:0}.requirement-associations label {display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 0;border-bottom:1px solid #e1e8de;overflow-wrap:anywhere}
+.requirement-associations input {width:22px;height:22px;flex-shrink:0;accent-color:#315f45}
+.empty-file-preview {font-size:16px;padding:12px 0}
+@media(min-width:1100px) and (min-height:650px) {
+ .bulk-upload-column .batch-upload .bulk-dropzone {min-height:230px}
+ .file-preview-content .document-pdf {height:100%;display:flex;flex-direction:column}
+ .file-preview-content .document-pdf iframe {height:100%;min-height:0;flex:1}
+ .file-preview-content .document-pdf p {font-size:14px;margin:0 0 8px}
+ .file-preview-toolbar>strong {white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+}
+@media(max-width:1099px),(max-height:649px) {
+ .file-editor .organize-editor {grid-template-columns:1fr}
+ .file-preview-toolbar {flex-wrap:wrap}.file-preview-toolbar>strong {flex-basis:100%}
+ .requirement-editor>.pane-heading {align-items:flex-start;flex-wrap:wrap}
+ .requirement-editor .pane-actions {flex-wrap:wrap}
+ .file-preview-content .document-pdf iframe {height:55vh;min-height:320px}
+ .file-remove-confirm {max-height:none}
+}
+
+/* Keep every upload and assessment reachable when bulk content grows. */
+@media(min-width:1100px) and (min-height:650px) {
+  .borrower-workspace #borrower-view-0 {overflow:auto;scrollbar-gutter:stable}
+  #borrower-view-0 .bulk-workspace {height:auto;min-height:100%;align-items:start}
+  #borrower-view-0 .bulk-upload-column,
+  #borrower-view-0 .bulk-requirements {overflow:visible;scrollbar-gutter:auto}
+}
+
+.upload-processing-layout {display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-items:start}
+.upload-processing-layout.has-processing {grid-template-columns:minmax(0,1fr) minmax(240px,.9fr)}
+.upload-drop-area {min-width:0}
+.bulk-upload-column .upload-processing-layout.has-processing .bulk-dropzone {padding:20px 14px}
+.upload-processing-layout.has-processing .bulk-dropzone strong {font-size:22px}
+@media(max-width:1200px) {.upload-processing-layout.has-processing {grid-template-columns:1fr}}
+
+/* The processing summary replaces the bulk requirement column. */
+.bulk-workspace.bulk-processing-workspace {grid-template-columns:minmax(0,1fr)}
+.bulk-processing-workspace .upload-processing-layout.has-processing {grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:24px}
+@media(max-width:800px) {.bulk-processing-workspace .upload-processing-layout.has-processing {grid-template-columns:minmax(0,1fr)}}

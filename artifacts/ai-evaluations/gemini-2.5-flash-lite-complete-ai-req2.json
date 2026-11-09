@@ -1,0 +1,31 @@
+{
+  "fixture": "complete",
+  "requirementId": "ai-req2",
+  "model": "google/gemini-2.5-flash-lite",
+  "expected": "fulfilled",
+  "actual": "fulfilled",
+  "result": {
+    "checks": [
+      {
+        "state": "met",
+        "reason": "The tenant name 'Synthetic Bakery' is identified in the provided tenant schedule.",
+        "evidence": [
+          {
+            "quote": "Synthetic Bakery",
+            "column": 2,
+            "record": 2,
+            "documentId": "13405231-788d-490b-8c40-7baa1d1e02ab"
+          }
+        ],
+        "criterionId": "ai-req2:criterion:1"
+      }
+    ],
+    "conflicts": [],
+    "assessment": "appears_complete",
+    "limitations": [],
+    "requirementId": "ai-req2",
+    "schemaVersion": "verify.v1",
+    "missingEvidence": [],
+    "fulfillment": "fulfilled"
+  }
+}

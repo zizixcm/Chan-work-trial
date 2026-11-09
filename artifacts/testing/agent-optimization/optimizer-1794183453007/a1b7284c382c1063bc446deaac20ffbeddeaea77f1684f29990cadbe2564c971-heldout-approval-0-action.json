@@ -1,0 +1,52 @@
+{
+  "candidateId": "a1b7284c382c1063bc446deaac20ffbeddeaea77f1684f29990cadbe2564c971",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Synthetic Elm LLC",
+        "propertyName": "Elm Center"
+      },
+      "documents": [
+        {
+          "documentId": "e1",
+          "name": "Elm lease.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Executed lease",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Executed current lease"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "messages": [
+      {
+        "id": "h1",
+        "sequence": "1",
+        "text": "Does saving my lease mean the lender approved it?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null,
+      "activeRuns": [],
+      "pendingQuestions": []
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "No, saving your lease does not mean the lender has approved it.\n\nHere is how the stages differ:\n- **Saved:** Your file (`Elm lease.pdf`) is securely uploaded and stored in your application.\n- **Document review:** The file must still be checked to verify it meets the lender's requirement for a current executed lease.\n- **Lender approval:** Final loan approval is granted by the lender's underwriting team after all necessary documents are reviewed and accepted."
+  },
+  "actualMicros": 7521,
+  "executed": true
+}

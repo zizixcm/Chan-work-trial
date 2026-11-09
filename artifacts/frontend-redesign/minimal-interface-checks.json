@@ -1,0 +1,489 @@
+{
+  "measurements": [
+    {
+      "name": "borrower-applications",
+      "w": 1280,
+      "width": 1280,
+      "scrollWidth": 1280,
+      "height": 720,
+      "scrollHeight": 720,
+      "heading": {
+        "x": 104,
+        "y": 88,
+        "width": 1072,
+        "height": 35
+      },
+      "row": {
+        "x": 104,
+        "y": 147,
+        "width": 1072,
+        "height": 104
+      },
+      "button": {
+        "x": 988.078125,
+        "y": 176.796875,
+        "width": 166.921875,
+        "height": 44.390625
+      }
+    },
+    {
+      "name": "lender-applications",
+      "w": 1280,
+      "width": 1280,
+      "scrollWidth": 1280,
+      "height": 720,
+      "scrollHeight": 720,
+      "heading": {
+        "x": 104,
+        "y": 88,
+        "width": 1072,
+        "height": 35
+      },
+      "row": {
+        "x": 104,
+        "y": 147,
+        "width": 1072,
+        "height": 104
+      },
+      "button": {
+        "x": 988.078125,
+        "y": 176.796875,
+        "width": 166.921875,
+        "height": 44.390625
+      }
+    },
+    {
+      "name": "borrower-empty",
+      "w": 1280,
+      "width": 1280,
+      "scrollWidth": 1280,
+      "height": 720,
+      "scrollHeight": 720,
+      "heading": {
+        "x": 104,
+        "y": 88,
+        "width": 1072,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "lender-empty",
+      "w": 1280,
+      "width": 1280,
+      "scrollWidth": 1280,
+      "height": 720,
+      "scrollHeight": 720,
+      "heading": {
+        "x": 104,
+        "y": 88,
+        "width": 1072,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "bulk-empty",
+      "w": 1280,
+      "width": 1280,
+      "scrollWidth": 1280,
+      "height": 720,
+      "scrollHeight": 720,
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "bulk-saved",
+      "w": 1280,
+      "width": 1280,
+      "scrollWidth": 1280,
+      "height": 720,
+      "scrollHeight": 720,
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "borrower-applications",
+      "w": 1440,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 900,
+      "scrollHeight": 900,
+      "heading": {
+        "x": 184,
+        "y": 88,
+        "width": 1072,
+        "height": 35
+      },
+      "row": {
+        "x": 184,
+        "y": 147,
+        "width": 1072,
+        "height": 104
+      },
+      "button": {
+        "x": 1068.078125,
+        "y": 176.796875,
+        "width": 166.921875,
+        "height": 44.390625
+      }
+    },
+    {
+      "name": "lender-applications",
+      "w": 1440,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 900,
+      "scrollHeight": 900,
+      "heading": {
+        "x": 184,
+        "y": 88,
+        "width": 1072,
+        "height": 35
+      },
+      "row": {
+        "x": 184,
+        "y": 147,
+        "width": 1072,
+        "height": 104
+      },
+      "button": {
+        "x": 1068.078125,
+        "y": 176.796875,
+        "width": 166.921875,
+        "height": 44.390625
+      }
+    },
+    {
+      "name": "borrower-empty",
+      "w": 1440,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 900,
+      "scrollHeight": 900,
+      "heading": {
+        "x": 184,
+        "y": 88,
+        "width": 1072,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "lender-empty",
+      "w": 1440,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 900,
+      "scrollHeight": 900,
+      "heading": {
+        "x": 184,
+        "y": 88,
+        "width": 1072,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "bulk-empty",
+      "w": 1440,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 900,
+      "scrollHeight": 900,
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "bulk-saved",
+      "w": 1440,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 900,
+      "scrollHeight": 900,
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "borrower-applications",
+      "w": 390,
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 844,
+      "scrollHeight": 844,
+      "heading": {
+        "x": 20,
+        "y": 123.390625,
+        "width": 350,
+        "height": 35
+      },
+      "row": {
+        "x": 20,
+        "y": 182.390625,
+        "width": 350,
+        "height": 144.890625
+      },
+      "button": {
+        "x": 186.078125,
+        "y": 265.890625,
+        "width": 166.921875,
+        "height": 44.390625
+      }
+    },
+    {
+      "name": "lender-applications",
+      "w": 390,
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 844,
+      "scrollHeight": 844,
+      "heading": {
+        "x": 20,
+        "y": 123.390625,
+        "width": 350,
+        "height": 35
+      },
+      "row": {
+        "x": 20,
+        "y": 182.390625,
+        "width": 350,
+        "height": 144.890625
+      },
+      "button": {
+        "x": 186.078125,
+        "y": 265.890625,
+        "width": 166.921875,
+        "height": 44.390625
+      }
+    },
+    {
+      "name": "borrower-empty",
+      "w": 390,
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 844,
+      "scrollHeight": 844,
+      "heading": {
+        "x": 20,
+        "y": 123.390625,
+        "width": 350,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "lender-empty",
+      "w": 390,
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 844,
+      "scrollHeight": 844,
+      "heading": {
+        "x": 20,
+        "y": 123.390625,
+        "width": 350,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "bulk-empty",
+      "w": 390,
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 844,
+      "scrollHeight": 1888,
+      "heading": {
+        "x": 20,
+        "y": 186.578125,
+        "width": 274.390625,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "bulk-saved",
+      "w": 390,
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 844,
+      "scrollHeight": 1750,
+      "heading": {
+        "x": 20,
+        "y": 186.578125,
+        "width": 274.390625,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "borrower-applications",
+      "w": 320,
+      "width": 320,
+      "scrollWidth": 320,
+      "height": 740,
+      "scrollHeight": 740,
+      "heading": {
+        "x": 20,
+        "y": 165.1875,
+        "width": 280,
+        "height": 35
+      },
+      "row": {
+        "x": 20,
+        "y": 224.1875,
+        "width": 280,
+        "height": 144.890625
+      },
+      "button": {
+        "x": 116.078125,
+        "y": 307.6875,
+        "width": 166.921875,
+        "height": 44.390625
+      }
+    },
+    {
+      "name": "lender-applications",
+      "w": 320,
+      "width": 320,
+      "scrollWidth": 320,
+      "height": 740,
+      "scrollHeight": 740,
+      "heading": {
+        "x": 20,
+        "y": 165.1875,
+        "width": 280,
+        "height": 35
+      },
+      "row": {
+        "x": 20,
+        "y": 224.1875,
+        "width": 280,
+        "height": 144.890625
+      },
+      "button": {
+        "x": 116.078125,
+        "y": 307.6875,
+        "width": 166.921875,
+        "height": 44.390625
+      }
+    },
+    {
+      "name": "borrower-empty",
+      "w": 320,
+      "width": 320,
+      "scrollWidth": 320,
+      "height": 740,
+      "scrollHeight": 740,
+      "heading": {
+        "x": 20,
+        "y": 165.1875,
+        "width": 280,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "lender-empty",
+      "w": 320,
+      "width": 320,
+      "scrollWidth": 320,
+      "height": 740,
+      "scrollHeight": 740,
+      "heading": {
+        "x": 20,
+        "y": 165.1875,
+        "width": 280,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "bulk-empty",
+      "w": 320,
+      "width": 320,
+      "scrollWidth": 320,
+      "height": 740,
+      "scrollHeight": 2085,
+      "heading": {
+        "x": 20,
+        "y": 228.375,
+        "width": 274.390625,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "bulk-saved",
+      "w": 320,
+      "width": 320,
+      "scrollWidth": 320,
+      "height": 740,
+      "scrollHeight": 1923,
+      "heading": {
+        "x": 20,
+        "y": 228.375,
+        "width": 274.390625,
+        "height": 35
+      },
+      "row": null,
+      "button": null
+    },
+    {
+      "name": "bulk-queue",
+      "w": 1280,
+      "width": 1280,
+      "scrollWidth": 1280,
+      "height": 720,
+      "scrollHeight": 720,
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      },
+      "row": null,
+      "button": null
+    }
+  ],
+  "errors": [],
+  "notes": [
+    "Lender empty state exercised with shared list fixture; existing lender API supplies one scoped application, no empty-list DTO.",
+    "Uploads and submissions were not sent. Pending/invalid selections tested locally."
+  ]
+}

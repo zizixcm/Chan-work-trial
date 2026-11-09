@@ -1,0 +1,60 @@
+{
+  "candidateId": "8d8011d6ce307a03457820236d9569690ac9676f36d3a7b75c28a18459a6955a",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [
+        {
+          "documentId": "d1",
+          "name": "Rent roll.pdf",
+          "active": true
+        },
+        {
+          "documentId": "d2",
+          "name": "2025 operating statement.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": true
+    },
+    "messages": [
+      {
+        "id": "m1",
+        "sequence": "1",
+        "text": "What's been uploaded?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "You have 2 documents currently saved:\n\n* **Rent roll.pdf**\n* **2025 operating statement.pdf**\n\nOther uploads are still in progress, so please check your upload progress. As a reminder, having files saved does not equate to lender review or approval."
+  },
+  "actualMicros": 3786,
+  "replyText": "You have 2 documents currently saved:\n\n* **Rent roll.pdf**\n* **2025 operating statement.pdf**\n\nOther uploads are still in progress, so please check your upload progress. As a reminder, having files saved does not equate to lender review or approval.",
+  "executed": true
+}

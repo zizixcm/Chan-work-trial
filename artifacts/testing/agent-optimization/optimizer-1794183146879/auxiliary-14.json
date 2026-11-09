@@ -1,0 +1,92 @@
+{
+  "role": "judge",
+  "configurationDigest": "2351594ecb7a33908a402fb0e39449b08ad8753bdbfe6198629fbbed1fead63b",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "What's been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Say no files are saved. Briefly suggest uploading the requested current rent roll. Do not pretend to inspect evidence or report an assessment.",
+    "action": {
+      "kind": "reply",
+      "message": "No documents have been uploaded yet.\n\n**Next step:**\n* Please upload a current Rent Roll to get started."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements accurately reflect the inventory, which contains no uploaded documents and has an outstanding requirement for a current rent roll."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response clearly answers what has been uploaded by stating that no documents have been uploaded yet."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response appropriately instructs the borrower to upload the requested current rent roll as the next step."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no repetitive phrasing or loops."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 310,
+    "completion_tokens": 519,
+    "total_tokens": 829,
+    "cost": 0.00217875,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00217875,
+      "upstream_inference_prompt_cost": 0.0002325,
+      "upstream_inference_completions_cost": 0.00194625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 400,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

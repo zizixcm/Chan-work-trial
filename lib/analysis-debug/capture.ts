@@ -1,3 +1,4 @@
+import { AnalysisValidationError } from '../analysis/types';
 import { randomUUID } from 'node:crypto';
 import type { AnalysisTask } from '../backend/contracts';
 import type { ProviderTransport } from '../backend/provider-executor';
@@ -56,7 +57,7 @@ export function createDebugRecorder(metadata: DebugMetadata, store: DebugStore) 
         } catch (error) {
           if (!closed) {
             run.state = 'invalid';
-            run.validation = {status: 'invalid_schema', message: 'Schema or evidence validation failed. Current validators do not expose safe field-level diagnostics.'};
+            run.validation = {status: 'invalid_schema', message: error instanceof AnalysisValidationError ? `Schema or evidence validation failed: ${error.issue}.` : 'Schema or evidence validation failed.'};
             void persist();
           }
           throw error;

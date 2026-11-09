@@ -46,3 +46,13 @@ export async function GET(
     return failure(e);
   }
 }
+
+export async function DELETE(request:Request,{params}:{params:Promise<{id:string}>}) {
+  try {
+    const {id}=await params;
+    const {repository}=await adapters(request,['borrower'],id);
+    const expected=new URL(request.url).searchParams.get('expectedContentRevision');
+    if(!expected||!/^\d{1,20}$/.test(expected))throw new UploadError('Refresh before removing this file.');
+    return Response.json(await repository.removeDocument(id,expected),{headers:{'Cache-Control':'private, no-store'}});
+  }catch(error){return failure(error);}
+}

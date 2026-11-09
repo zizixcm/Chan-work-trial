@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: all 12 admitted journeys and 4 overlays load with pinned sources and 54 boundaries
+ok 1 - all 12 admitted journeys and 4 overlays load with pinned sources and 54 boundaries
+  ---
+  duration_ms: 137.532625
+  type: 'test'
+  ...
+# Subtest: native semantic scorer rejects missing/stale review, false states, irrelevant sources and fabricated quotes
+ok 2 - native semantic scorer rejects missing/stale review, false states, irrelevant sources and fabricated quotes
+  ---
+  duration_ms: 38.717417
+  type: 'test'
+  ...
+# Subtest: native Mastra tool, eval score, redacted trace, error and durable parent survive reopen
+ok 3 - native Mastra tool, eval score, redacted trace, error and durable parent survive reopen
+  ---
+  duration_ms: 713.914666
+  type: 'test'
+  ...
+# Subtest: required native scorer rejects omitted, duplicated, failed and incomplete checks
+ok 4 - required native scorer rejects omitted, duplicated, failed and incomplete checks
+  ---
+  duration_ms: 3.64375
+  type: 'test'
+  ...
+# Subtest: native workflow harness records per-case failure instead of averaging or skipping
+ok 5 - native workflow harness records per-case failure instead of averaging or skipping
+  ---
+  duration_ms: 182.335125
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2634.317458

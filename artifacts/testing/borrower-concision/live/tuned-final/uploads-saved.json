@@ -1,0 +1,85 @@
+{
+  "mode": "live",
+  "model": "openrouter/google/gemini-2.5-flash",
+  "configurationDigest": "01209da8670c575c93304ccd968b76d0930d6b9ab693accb414b21d306e57ec6",
+  "fixture": {
+    "id": "uploads-saved",
+    "question": "What's been uploaded?",
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [
+        {
+          "documentId": "d1",
+          "name": "Rent roll.pdf",
+          "active": true
+        },
+        {
+          "documentId": "d2",
+          "name": "2025 operating statement.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "maxWords": 120,
+    "rubric": "Identify both saved files. Do not turn the answer into a missing-document checklist, infer completeness or approval, or invent a next step. No action is required by this snapshot."
+  },
+  "createdAt": "2026-11-08T23:58:16.789Z",
+  "action": {
+    "kind": "reply",
+    "message": "You have uploaded the following documents:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf"
+  },
+  "actualMicros": 493,
+  "score": {
+    "caseId": "uploads-saved",
+    "wordCount": 13,
+    "maxWords": 120,
+    "checks": [
+      {
+        "id": "direct_reply",
+        "passed": true
+      },
+      {
+        "id": "concise",
+        "passed": true
+      },
+      {
+        "id": "answersQuestion",
+        "passed": false
+      },
+      {
+        "id": "grounded",
+        "passed": false
+      },
+      {
+        "id": "appropriateNextSteps",
+        "passed": false
+      },
+      {
+        "id": "noRepetition",
+        "passed": false
+      }
+    ],
+    "status": "needs_review"
+  }
+}

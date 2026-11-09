@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-detail",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "You have 2 saved files:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nSaving a document simply confirms it has been uploaded and stored in your file inventory. It does not equate to lender review or approval, which is a separate evaluation process conducted by the lender."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All listed documents match the inventory, and the response accurately explains the policy distinction that saving does not equate to lender approval without making unsupported claims about the actual review status of the specific files."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response names both uploaded files and clearly explains whether saving a document means lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response answers the prompt directly without offering or executing unauthorized actions."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 46,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 2384,
+  "elapsedMs": 4711
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "heldout-empty",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "No documents have been saved yet for your application.\n\nTo get started, please upload:\n* **Executed lease** (Current)"
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately reflects that no documents are in the inventory and references the open requirement for an Executed lease (Current)."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the borrower's inquiry about whether any documents have been received."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response provides clear and appropriate next steps by requesting the upload of the current executed lease."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repeated text or looping information."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 18,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 4249,
+  "elapsedMs": 6891
+}

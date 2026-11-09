@@ -1,4 +1,4 @@
-import AccountMenu from "../account-menu";
+import WorkspaceHeader from "../components/workspace-header";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { getPortalSession } from "@/lib/portal-session";
@@ -17,21 +17,7 @@ export default async function LenderLayout({
   if (!membership.rows.length) redirect("/");
   return (
     <div className="lender">
-      <header className="l-header">
-        <a className="l-brand" href="/lender">
-          proximitty<span>.</span>
-        </a>
-        <span className="l-workspace">Lender workspace</span>
-        <div className="l-header-account">
-        <div className="l-identity">
-          <span className="l-avatar">{session.user.name.slice(0,1)}</span>
-          <span>
-            {session.user.name}<small>Lender</small>
-          </span>
-        </div>
-        <AccountMenu />
-        </div>
-      </header>
+      <WorkspaceHeader role="lender" />
       {children}
       <footer className="l-footer">
         Documents are private. Reviews save in PostgreSQL. External notifications are not connected.

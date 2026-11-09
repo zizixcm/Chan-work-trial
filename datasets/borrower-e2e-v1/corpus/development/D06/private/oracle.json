@@ -1,0 +1,2081 @@
+{
+  "checkpoints": [
+    {
+      "activeDocumentIds": [
+        "f13c2af39b8a4",
+        "f09524dc31cd0"
+      ],
+      "checkpoint": 1,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Fable Yard"
+          },
+          "missingDocumentIds": [
+            "f01da45a39edc"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7402 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Fable Yard"
+          },
+          "missingDocumentIds": [
+            "f01da45a39edc"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f09524dc31cd0",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 65808; other income USD 0.",
+                "Operating expenses USD 21936; NOI USD 43872.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f09524dc31cd0",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Fable Yard"
+          },
+          "missingDocumentIds": [
+            "f768ba10c4c5f"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Fable Yard"
+          },
+          "missingDocumentIds": [
+            "f01da45a39edc",
+            "f768ba10c4c5f"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f09524dc31cd0",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 65808; other income USD 0.",
+                "Operating expenses USD 21936; NOI USD 43872.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f09524dc31cd0",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete July 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-07",
+            "subject": "Fable Yard Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fb11105d8fc0c"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-08",
+            "subject": "Fable Yard Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f75a8d5130dde"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete September 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09",
+            "subject": "Fable Yard Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f2e07f9bf42c9"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Formation certificate identifies the declared borrower.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Fable Yard Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f9313bb961834"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Fable Yard Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f610681203a7d"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Fable Yard Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f610681203a7d"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f13c2af39b8a4",
+        "f09524dc31cd0",
+        "f01da45a39edc",
+        "f768ba10c4c5f",
+        "fb11105d8fc0c",
+        "f75a8d5130dde",
+        "f2e07f9bf42c9"
+      ],
+      "checkpoint": 2,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f01da45a39edc",
+              "page": 31,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D06-101. Property: Fable Yard; unit 101.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2622.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f01da45a39edc",
+              "page": 32,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D06-102. Property: Fable Yard; unit 102.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2862.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 32
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7402 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f01da45a39edc",
+              "page": 31,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D06-101. Property: Fable Yard; unit 101.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2622.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f01da45a39edc",
+              "page": 32,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D06-102. Property: Fable Yard; unit 102.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2862.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 32
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f09524dc31cd0",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 65808; other income USD 0.",
+                "Operating expenses USD 21936; NOI USD 43872.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f09524dc31cd0",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f768ba10c4c5f",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 49356; other income USD 0.",
+                "Operating expenses USD 16452; NOI USD 32904.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f768ba10c4c5f",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f01da45a39edc",
+              "page": 31,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D06-101. Property: Fable Yard; unit 101.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2622.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f01da45a39edc",
+              "page": 32,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D06-102. Property: Fable Yard; unit 102.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2862.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f09524dc31cd0",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 65808; other income USD 0.",
+                "Operating expenses USD 21936; NOI USD 43872.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f768ba10c4c5f",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 49356; other income USD 0.",
+                "Operating expenses USD 16452; NOI USD 32904.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 32
+              }
+            ],
+            [
+              {
+                "documentId": "f09524dc31cd0",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f768ba10c4c5f",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fb11105d8fc0c",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7402.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "fb11105d8fc0c",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Account ending 7402. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fb11105d8fc0c",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fb11105d8fc0c",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f75a8d5130dde",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7402.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f75a8d5130dde",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Account ending 7402. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f75a8d5130dde",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f75a8d5130dde",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f2e07f9bf42c9",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7402.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f2e07f9bf42c9",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Account ending 7402. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f2e07f9bf42c9",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f2e07f9bf42c9",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0",
+              "f01da45a39edc",
+              "f768ba10c4c5f",
+              "fb11105d8fc0c",
+              "f75a8d5130dde",
+              "f2e07f9bf42c9"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Formation certificate identifies the declared borrower.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Fable Yard Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f9313bb961834"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0",
+              "f01da45a39edc",
+              "f768ba10c4c5f",
+              "fb11105d8fc0c",
+              "f75a8d5130dde",
+              "f2e07f9bf42c9"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Fable Yard Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f610681203a7d"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f13c2af39b8a4",
+              "f09524dc31cd0",
+              "f01da45a39edc",
+              "f768ba10c4c5f",
+              "fb11105d8fc0c",
+              "f75a8d5130dde",
+              "f2e07f9bf42c9"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Fable Yard Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f610681203a7d"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f13c2af39b8a4",
+        "f09524dc31cd0",
+        "f01da45a39edc",
+        "f768ba10c4c5f",
+        "fb11105d8fc0c",
+        "f75a8d5130dde",
+        "f2e07f9bf42c9",
+        "f9313bb961834",
+        "f610681203a7d"
+      ],
+      "checkpoint": 3,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f01da45a39edc",
+              "page": 31,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D06-101. Property: Fable Yard; unit 101.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2622.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f01da45a39edc",
+              "page": 32,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D06-102. Property: Fable Yard; unit 102.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2862.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 32
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7402 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f01da45a39edc",
+              "page": 31,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D06-101. Property: Fable Yard; unit 101.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2622.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f01da45a39edc",
+              "page": 32,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D06-102. Property: Fable Yard; unit 102.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2862.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 32
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f09524dc31cd0",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 65808; other income USD 0.",
+                "Operating expenses USD 21936; NOI USD 43872.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f09524dc31cd0",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f768ba10c4c5f",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 49356; other income USD 0.",
+                "Operating expenses USD 16452; NOI USD 32904.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f768ba10c4c5f",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f13c2af39b8a4",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f01da45a39edc",
+              "page": 31,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D06-101. Property: Fable Yard; unit 101.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2622.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f01da45a39edc",
+              "page": 32,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D06-102. Property: Fable Yard; unit 102.",
+                "Landlord: Fable Yard Holdings LLC; tenant: Fable Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2862.",
+                "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f09524dc31cd0",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 65808; other income USD 0.",
+                "Operating expenses USD 21936; NOI USD 43872.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f768ba10c4c5f",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 49356; other income USD 0.",
+                "Operating expenses USD 16452; NOI USD 32904.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f13c2af39b8a4",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f01da45a39edc",
+                "page": 32
+              }
+            ],
+            [
+              {
+                "documentId": "f09524dc31cd0",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f768ba10c4c5f",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fb11105d8fc0c",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7402.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "fb11105d8fc0c",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Account ending 7402. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fb11105d8fc0c",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fb11105d8fc0c",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f75a8d5130dde",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7402.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f75a8d5130dde",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Account ending 7402. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f75a8d5130dde",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f75a8d5130dde",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f2e07f9bf42c9",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7402.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f2e07f9bf42c9",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Fable Yard Holdings LLC. Account ending 7402. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f2e07f9bf42c9",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f2e07f9bf42c9",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9313bb961834",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Fable Yard Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Zena Tor. Fictional registry reference D06-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9313bb961834",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f610681203a7d",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Fable Yard Holdings LLC. Effective 2024-10-01.",
+                "Members: Zena Tor 60%; Bram Uli 40%. Total ownership 100%.",
+                "Manager: Zena Tor. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Zena Tor; member signature /s/ Bram Uli; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f610681203a7d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f610681203a7d",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Fable Yard Holdings LLC. Effective 2024-10-01.",
+                "Members: Zena Tor 60%; Bram Uli 40%. Total ownership 100%.",
+                "Manager: Zena Tor. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Zena Tor; member signature /s/ Bram Uli; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f610681203a7d",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    }
+  ],
+  "crossDocumentArithmetic": {
+    "annualBaseRent": 65808,
+    "calculation": "2025: sum original monthly rents *12. 2026: original *9 plus amendment 1 uplift for April-September and amendment 2 uplift for July-September when applicable.",
+    "currentMonthlyRent": 5484,
+    "currentPeriodBaseRent": 49356
+  },
+  "roles": {
+    "annual": "f09524dc31cd0",
+    "bank7": "fb11105d8fc0c",
+    "bank8": "f75a8d5130dde",
+    "bank9": "f2e07f9bf42c9",
+    "current": "f768ba10c4c5f",
+    "formation": "f9313bb961834",
+    "governing": "f610681203a7d",
+    "leases": "f01da45a39edc",
+    "roll": "f13c2af39b8a4"
+  },
+  "semanticReviewRequired": true,
+  "sourcePages": {
+    "f01da45a39edc": [
+      {
+        "lines": [
+          "Pages 2-30: operating provisions.",
+          "Pages 31-32: lease parties, economics and execution pages.",
+          "Contents identifies locations only; inspect the cited evidence."
+        ],
+        "title": "Lease collection contents"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 1.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 1 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 2.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 2 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 3.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 3 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 4.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 4 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 5.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 5 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 6.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 6 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 7.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 7 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 8.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 8 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 9.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 9 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 10.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 10 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 11.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 11 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 12.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 12 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 13.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 13 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 14.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 14 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 15.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 15 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 16.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 16 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 17.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 17 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 18.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 18 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 19.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 19 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 20.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 20 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 21.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 21 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 22.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 22 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 23.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 23 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 24.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 24 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 25.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 25 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 26.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 26 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 27.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 27 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 28.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 28 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Fable Yard. Lease appendix section 29.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 29 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Lease D06-101. Property: Fable Yard; unit 101.",
+          "Landlord: Fable Yard Holdings LLC; tenant: Fable Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2622.",
+          "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease D06-102. Property: Fable Yard; unit 102.",
+          "Landlord: Fable Yard Holdings LLC; tenant: Fable Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2862.",
+          "Landlord signature: /s/ Zena Tor, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Bram Uli, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      }
+    ],
+    "f09524dc31cd0": [
+      {
+        "lines": [
+          "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 65808; other income USD 0.",
+          "Operating expenses USD 21936; NOI USD 43872.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f13c2af39b8a4": [
+      {
+        "lines": [
+          "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Fable Studio; monthly base rent USD 2622; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Fable Supply; monthly base rent USD 2862; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      }
+    ],
+    "f2e07f9bf42c9": [
+      {
+        "lines": [
+          "Holder: Fable Yard Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7402.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Fable Yard Holdings LLC. Account ending 7402. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f610681203a7d": [
+      {
+        "lines": [
+          "Entity: Fable Yard Holdings LLC. Effective 2024-10-01.",
+          "Members: Zena Tor 60%; Bram Uli 40%. Total ownership 100%.",
+          "Manager: Zena Tor. Manager may execute refinancing documents for this company.",
+          "Member signature /s/ Zena Tor; member signature /s/ Bram Uli; dated 2024-10-01."
+        ],
+        "title": "Operating agreement"
+      }
+    ],
+    "f75a8d5130dde": [
+      {
+        "lines": [
+          "Holder: Fable Yard Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7402.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Fable Yard Holdings LLC. Account ending 7402. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f768ba10c4c5f": [
+      {
+        "lines": [
+          "Property: Fable Yard. Owner: Fable Yard Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 49356; other income USD 0.",
+          "Operating expenses USD 16452; NOI USD 32904.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f9313bb961834": [
+      {
+        "lines": [
+          "Entity: Fable Yard Holdings LLC. Entity type: limited liability company.",
+          "Formed 2024-10-01. Organizer: Zena Tor. Fictional registry reference D06-REG.",
+          "This document establishes the named entity; it does not itself establish current manager authority."
+        ],
+        "title": "Certificate of formation"
+      }
+    ],
+    "fb11105d8fc0c": [
+      {
+        "lines": [
+          "Holder: Fable Yard Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7402.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Fable Yard Holdings LLC. Account ending 7402. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ]
+  },
+  "status": "provisional",
+  "version": "CRE-E2E-oracle.1"
+}

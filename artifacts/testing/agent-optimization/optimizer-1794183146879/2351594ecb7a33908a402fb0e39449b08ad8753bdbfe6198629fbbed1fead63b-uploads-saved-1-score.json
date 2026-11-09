@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-saved",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "You currently have 2 files uploaded:\n\n- Rent roll.pdf\n- 2025 operating statement.pdf\n\nPlease note that receipt confirms these files are saved, but does not mean they have been reviewed or approved yet."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately identifies the two uploaded documents without making unsubstantiated claims."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers what has been uploaded by listing both active files without assuming completeness or approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No unrequested next steps or actions were suggested, adhering to the snapshot status."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response contains no repetitive content."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 33,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6447,
+  "elapsedMs": 21874
+}

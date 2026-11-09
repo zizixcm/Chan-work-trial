@@ -1,0 +1,893 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Batch evaluation results</title><style>body{font:16px/1.5 system-ui;margin:32px auto;padding:0 20px;max-width:1000px;color:#24312b;background:#f7f9f8}h1{font-size:30px}section{background:white;border:1px solid #dbe3de;border-radius:14px;padding:24px;margin:22px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.6 system-ui;background:#f4f6f5;border-radius:8px;padding:16px}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:10px;border-bottom:1px solid #dbe3de}.notice{border-left:4px solid #ae503d;padding:12px 18px;background:#fff0e9}small{color:#53625a}summary{cursor:pointer}</style><h1>Actual batch evaluation results</h1><p class="notice"><b>Budget raised to $100. Agent candidate not published.</b> All four cases exceeded the 20-second report ceiling. Quality and browser-verification gaps remain.</p><p>Latest frozen candidate: Gemini 3.8 Flash, low reasoning, 24,000 output-token allowance. No expected outcomes were relaxed. Times below are single-run measurements from upload finalization to persisted agent replies; browser-visible upload receipt was not measured.</p><table><tr><th>Case</th><th>Acknowledgment</th><th>Report</th><th>Overall</th></tr><tr><td>BATCH-01</td><td>5.47s</td><td>25.29s</td><td>FAIL</td></tr><tr><td>BATCH-02</td><td>3.05s</td><td>37.97s</td><td>FAIL</td></tr><tr><td>BATCH-03</td><td>3.24s</td><td>26.08s</td><td>FAIL</td></tr><tr><td>BATCH-04</td><td>3.59s</td><td>54.67s</td><td>FAIL</td></tr></table><p>Latest four runs cost $0.170425; all six attempts cost $0.332924. These figures exclude concurrent borrower activity.</p><section><h2>BATCH-01 · Rent roll + 2025 actuals</h2><p><b>Expected:</b> Support the rent roll and 2025 actuals; preserve missing leases, 2026 actuals, bank statements and entity documents.</p><p><b>Observed:</b> Core findings corrected; adds an unsupported executed operating-agreement requirement.</p><p>Saved acknowledgment: 5.47s · Final report: 25.29s · 4 model calls · $0.029018 · peak 2 concurrent local reads</p><h3>Actual acknowledgment</h3><pre>Investigating newly uploaded documents ffa0b3c48c21f.pdf and f7dbacda2c2f3.pdf against application requirements.</pre><h3>Actual final borrower reply</h3><pre>Here is the update on your uploaded files and current application status:
+
+### What Your Uploads Established
+* **`ffa0b3c48c21f.pdf`**: ✅ **Current rent roll** is fully satisfied. It identifies Aster Quay as of September 30, 2026, and lists all declared units (101 and 102), tenants, lease dates, and monthly rents.
+* **`f7dbacda2c2f3.pdf`**: Partially satisfies **Property operating statements** by providing actual operating results for calendar year 2025 (2025-01-01 through 2025-12-31).
+
+---
+
+### Outstanding Requirements
+
+* **Property operating statements** (Partially satisfied):
+  * Missing actual operating results for Aster Quay covering year-to-date 2026 (2026-01-01 through 2026-09-30).
+  * Reconciliation between contractual rent and operating revenue remains pending review of the 2026 operating statement and executed leases.
+
+* **Leases and applicable amendments** (Unsatisfied):
+  * Your declaration confirmed zero lease amendments exist.
+  * Executed lease copies are still needed for both declared occupied units (Unit 101 and Unit 102), including party names, property identification, rent amounts, terms, and signature dates.
+
+* **Borrower bank statements** (Unsatisfied):
+  * Complete monthly statements for account ending in **7317** for **July 2026**, **August 2026**, and **September 2026**.
+
+* **Entity ownership and signing authority** (Unsatisfied):
+  * Certificate of Formation for Aster Quay Holdings LLC.
+  * Executed Operating Agreement for Aster Quay Holdings LLC showing full ownership and signing authority.</pre><details><summary>Per-file persisted checks</summary><pre>[
+  {
+    &quot;runId&quot;: &quot;fa4a5dbe-2706-4fa2-879a-2b7a91426493&quot;,
+    &quot;batchId&quot;: &quot;approved-batch&quot;,
+    &quot;snapshotRevision&quot;: &quot;8c84bc631ee1cc4b67cbb1e5e16aca18ce3de76e9e583efd992734df8d697cdf&quot;,
+    &quot;revision&quot;: 5,
+    &quot;state&quot;: &quot;partial&quot;,
+    &quot;files&quot;: [
+      {
+        &quot;documentId&quot;: &quot;f7dbacda2c2f3&quot;,
+        &quot;sha256&quot;: &quot;22f55161bd508ab78385eceb4fc257142b2540b5495e04f874bd485a913065fe&quot;,
+        &quot;filename&quot;: &quot;f7dbacda2c2f3.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:37:15.964Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Operating statement reporting actual 2025 accrual results for Aster Quay.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;5e6422d7-0ca5-4f81-98e3-55e2656e1277&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:37:30.105Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Operating statement reporting actual 2025 accrual results for Aster Quay.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;5e6422d7-0ca5-4f81-98e3-55e2656e1277&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:37:30.105Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r3&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Operating statement reporting actual 2025 accrual results for Aster Quay.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;5e6422d7-0ca5-4f81-98e3-55e2656e1277&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:37:30.105Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;58641fa1-d67e-4ad1-adfe-c4c3cce8298c&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:37:17.798Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:37:19.166Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;ffa0b3c48c21f&quot;,
+        &quot;sha256&quot;: &quot;4004a3f98cb87ff6708084b1c11fcda73ab3281cee365a69617311672f726587&quot;,
+        &quot;filename&quot;: &quot;ffa0b3c48c21f.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:37:15.964Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Rent roll occupancy schedule for Aster Quay dated 2026-09-30 covering units 101 and 102.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;157486f1-9f05-496a-9efc-23963654b0bd&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:37:30.105Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Rent roll occupancy schedule for Aster Quay dated 2026-09-30 covering units 101 and 102.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;157486f1-9f05-496a-9efc-23963654b0bd&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:37:30.105Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r1&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Rent roll occupancy schedule for Aster Quay dated 2026-09-30 covering units 101 and 102.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;157486f1-9f05-496a-9efc-23963654b0bd&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:37:30.105Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;0cc16d6f-a140-4148-87c9-57a0bda54340&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:37:17.798Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:37:19.171Z&quot;
+          }
+        ]
+      }
+    ],
+    &quot;freshness&quot;: &quot;current&quot;
+  }
+]</pre></details></section><section><h2>BATCH-02 · Six files; incomplete August statement</h2><p><b>Expected:</b> Preserve qualifying files; request August page 2, September statement and entity documents.</p><p><b>Observed:</b> All 14 criterion states match expected; adds unsupported executed operating-agreement qualifier.</p><p>Saved acknowledgment: 3.05s · Final report: 37.97s · 4 model calls · $0.044595 · peak 3 concurrent local reads</p><h3>Actual acknowledgment</h3><pre>Submitting newly uploaded files for investigation against requested lender criteria.</pre><h3>Actual final borrower reply</h3><pre>Here is an update on your uploaded documents and the current status of your requirements:
+
+### What Your Uploads Established
+* **f367a4f796b28.pdf**: Satisfies the rent roll request with property details, reporting date of 2026-09-30, and occupancy schedule for units 101 and 102.
+* **fecd8a7c31cff.pdf**: Provides executed leases for units 101 and 102 matching the rent roll, alongside your confirmation of zero lease amendments.
+* **f143bba0e0f4f.pdf** &amp; **f786ca0fb2e75.pdf**: Provide actual accrual operating statements for Brindle Arcade for calendar year 2025 and 2026 YTD through September 30, reconciling with contractual rent.
+* **ffcf0f403cac5.pdf**: Satisfies the complete July 2026 bank statement for account ending 7334.
+* **ffe64a92e0fe1.pdf**: Partially covers August 2026 for account ending 7334, but is missing page 2 of 2.
+
+---
+
+### Requirement Status
+* ✅ **Current rent roll**
+* ✅ **Leases and applicable amendments**
+* ✅ **Property operating statements**
+* **Borrower bank statements** (Partially satisfied; July 2026 complete)
+* **Entity ownership and signing authority** (Unmet; no entity documents evaluated)
+
+---
+
+### Outstanding Items Needed
+* **Borrower bank statements**:
+  * Complete August 2026 statement including page 2 of 2 for account ending 7334 (to replace the incomplete copy).
+  * Complete September 2026 statement for account ending 7334.
+* **Entity ownership and signing authority**:
+  * Certificate of formation identifying Brindle Arcade Holdings LLC.
+  * Executed operating agreement for Brindle Arcade Holdings LLC demonstrating 100% ownership and manager/signing authority provisions.</pre><details><summary>Per-file persisted checks</summary><pre>[
+  {
+    &quot;runId&quot;: &quot;150cd48b-0a1f-4017-9d0f-fc2b308de1c4&quot;,
+    &quot;batchId&quot;: &quot;approved-batch&quot;,
+    &quot;snapshotRevision&quot;: &quot;4287fb2b753fbe987ff7a08e440f6adacf3ad60c5902680c2cf69ad6413e97e6&quot;,
+    &quot;revision&quot;: 13,
+    &quot;state&quot;: &quot;completed&quot;,
+    &quot;files&quot;: [
+      {
+        &quot;documentId&quot;: &quot;f143bba0e0f4f&quot;,
+        &quot;sha256&quot;: &quot;6c23501bfb356f718945d1960af964bfde20eea371e68a71269fa207e2dacd27&quot;,
+        &quot;filename&quot;: &quot;f143bba0e0f4f.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:37:57.735Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Accrual operating statement showing actual results for Brindle Arcade for calendar year 2025.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;6da9abe4-1784-4da0-b530-ccb31fd1508c&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Accrual operating statement showing actual results for Brindle Arcade for calendar year 2025.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;6da9abe4-1784-4da0-b530-ccb31fd1508c&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r3&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Accrual operating statement showing actual results for Brindle Arcade for calendar year 2025.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;6da9abe4-1784-4da0-b530-ccb31fd1508c&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;aa08aacc-10fb-4134-86ee-dd96d1f2d39e&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:37:59.571Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:38:01.091Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;f367a4f796b28&quot;,
+        &quot;sha256&quot;: &quot;b85ec6ac203efee5003be8ea60dea336769507eb19196ba19eae723afa74426c&quot;,
+        &quot;filename&quot;: &quot;f367a4f796b28.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:37:57.735Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Rent roll for Brindle Arcade as of 2026-09-30 detailing units 101 and 102.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;b30942bb-e85f-432f-9d48-ff35bf0a7e71&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Rent roll for Brindle Arcade as of 2026-09-30 detailing units 101 and 102.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;b30942bb-e85f-432f-9d48-ff35bf0a7e71&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r1&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Rent roll for Brindle Arcade as of 2026-09-30 detailing units 101 and 102.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;b30942bb-e85f-432f-9d48-ff35bf0a7e71&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;a11413b5-a8b7-45b0-9a0c-f7562cf57f0e&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:37:59.571Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:38:01.102Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;f786ca0fb2e75&quot;,
+        &quot;sha256&quot;: &quot;ca8bcf07e0a05ce8caf12aa83e906a2e5f424899e6336b2760c71eda60676fde&quot;,
+        &quot;filename&quot;: &quot;f786ca0fb2e75.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:37:57.735Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Accrual operating statement showing actual results for Brindle Arcade for 2026 YTD through September 30.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;55104602-1297-41dc-ad2e-979d91645696&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Accrual operating statement showing actual results for Brindle Arcade for 2026 YTD through September 30.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;55104602-1297-41dc-ad2e-979d91645696&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r3&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Accrual operating statement showing actual results for Brindle Arcade for 2026 YTD through September 30.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;55104602-1297-41dc-ad2e-979d91645696&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;9711fd51-46fc-486a-9c49-7fa315ac5204&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:37:59.571Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:38:01.083Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;fecd8a7c31cff&quot;,
+        &quot;sha256&quot;: &quot;e03f23cf0a40da7e6888c5d9c7fb54a9b80fd26864f4becb419ca5f8d4ba5f67&quot;,
+        &quot;filename&quot;: &quot;fecd8a7c31cff.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:37:57.735Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Executed leases for units 101 and 102 with party signatures and dates.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;44d9398f-251f-4fe7-b57e-786cfdc6ec8d&quot;,
+            &quot;69712436-ff91-4d0c-8bc2-8266a95ee673&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Executed leases for units 101 and 102 with party signatures and dates.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;44d9398f-251f-4fe7-b57e-786cfdc6ec8d&quot;,
+            &quot;69712436-ff91-4d0c-8bc2-8266a95ee673&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r2&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Executed leases for units 101 and 102 with party signatures and dates.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;44d9398f-251f-4fe7-b57e-786cfdc6ec8d&quot;,
+            &quot;69712436-ff91-4d0c-8bc2-8266a95ee673&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;7d5c903a-79b4-4c63-aa8e-45a257fb4175&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:38:01.103Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:38:03.146Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;ffcf0f403cac5&quot;,
+        &quot;sha256&quot;: &quot;79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6&quot;,
+        &quot;filename&quot;: &quot;ffcf0f403cac5.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:37:57.735Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Complete two-page July 2026 bank statement for account suffix 7334.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;92b9e889-17fa-4233-bbbc-657e78f2d69a&quot;,
+            &quot;c2529492-7398-43af-816b-844de7e0c0ad&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Complete two-page July 2026 bank statement for account suffix 7334.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;92b9e889-17fa-4233-bbbc-657e78f2d69a&quot;,
+            &quot;c2529492-7398-43af-816b-844de7e0c0ad&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r4&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Complete two-page July 2026 bank statement for account suffix 7334.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;92b9e889-17fa-4233-bbbc-657e78f2d69a&quot;,
+            &quot;c2529492-7398-43af-816b-844de7e0c0ad&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;be54685b-79b4-431a-986e-5adc61cfa236&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:38:01.115Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:38:03.205Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;ffe64a92e0fe1&quot;,
+        &quot;sha256&quot;: &quot;b62b2e6c08c4b843d2e54d2c5394913756c082ebf26f7129cf9d23ac118cb7c2&quot;,
+        &quot;filename&quot;: &quot;ffe64a92e0fe1.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:37:57.735Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Incomplete August 2026 bank statement missing page 2 of 2.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;aef3813d-7b5d-4bdf-be7a-a266a7baddbb&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Incomplete August 2026 bank statement missing page 2 of 2.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;aef3813d-7b5d-4bdf-be7a-a266a7baddbb&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r4&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Incomplete August 2026 bank statement missing page 2 of 2.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;aef3813d-7b5d-4bdf-be7a-a266a7baddbb&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:38:28.394Z&quot;,
+          &quot;issues&quot;: [
+            &quot;Statement indicates page 1 of 2 but only page 1 was provided.&quot;
+          ],
+          &quot;missingInformation&quot;: [
+            &quot;Page 2 of August 2026 bank statement is missing.&quot;
+          ]
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;cb8d6312-d5db-498d-9de1-68df15631c0b&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:38:01.123Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:38:02.290Z&quot;
+          }
+        ]
+      }
+    ],
+    &quot;freshness&quot;: &quot;current&quot;
+  }
+]</pre></details></section><section><h2>BATCH-03 · Wrong year + budget instead of actuals</h2><p><b>Expected:</b> Keep valid rent roll/leases; request 2025 actuals and Jan–Sep2026 actuals, bank and entity documents.</p><p><b>Observed:</b> Core semantic checks and next steps pass; latency fails.</p><p>Saved acknowledgment: 3.24s · Final report: 26.08s · 4 model calls · $0.034252 · peak 3 concurrent local reads</p><h3>Actual acknowledgment</h3><pre>Investigating newly uploaded documents against your loan requirements.</pre><h3>Actual final borrower reply</h3><pre>The review of your uploaded files is complete. Here is what they established:
+
+* **f103456061297.pdf** satisfied the rent roll request as of September 30, 2026.
+* **f9c7159e3f5b1.pdf** provided fully executed leases for units 101 and 102, which match the rent roll and satisfy the leases request alongside your confirmed declaration of no lease amendments.
+* **f942674fe7c1a.pdf** covers operating figures for 2024 rather than the requested periods.
+* **fd40c4495f2f4.pdf** provides a budget projection rather than actual operating results for 2026.
+
+### Current Status
+
+* ✅ **Current rent roll**
+* ✅ **Leases and applicable amendments**
+
+### Outstanding Requests
+
+* **Property operating statements**: Actual operating results for Ember Landing covering 2025-01-01 through 2025-12-31, and actual year-to-date operating results covering 2026-01-01 through 2026-09-30 (budget projections and 2024 reports cannot be used).
+* **Borrower bank statements**: Complete statements for July 2026, August 2026, and September 2026 for account ending in 7385.
+* **Entity ownership and signing authority**: Formation certificate and operating agreement for Ember Landing Holdings LLC demonstrating 100% ownership and manager signing authority (along with any applicable entity amendments, though you declared zero).</pre><details><summary>Per-file persisted checks</summary><pre>[
+  {
+    &quot;runId&quot;: &quot;4e428d46-d2d4-4e06-81e4-b764bef4f268&quot;,
+    &quot;batchId&quot;: &quot;approved-batch&quot;,
+    &quot;snapshotRevision&quot;: &quot;fe05c5d8c7c20296d541c5858c8095189563bff3c2b3050b61f4ee7e6f28d1cc&quot;,
+    &quot;revision&quot;: 9,
+    &quot;state&quot;: &quot;partial&quot;,
+    &quot;files&quot;: [
+      {
+        &quot;documentId&quot;: &quot;f103456061297&quot;,
+        &quot;sha256&quot;: &quot;ea710e528658edf0179e22ba289f95f280e552d6fff435d763a6a97316ac7a13&quot;,
+        &quot;filename&quot;: &quot;f103456061297.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:39:16.236Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Rent roll for Ember Landing as of 2026-09-30 covering units 101 and 102.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;bab2a35d-84ca-4c87-b1ae-3fcf3acfadaa&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Rent roll for Ember Landing as of 2026-09-30 covering units 101 and 102.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;bab2a35d-84ca-4c87-b1ae-3fcf3acfadaa&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r1&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Rent roll for Ember Landing as of 2026-09-30 covering units 101 and 102.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;bab2a35d-84ca-4c87-b1ae-3fcf3acfadaa&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;4f7aa5d0-aa9e-4e15-a05a-7bc6a903dda6&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:39:18.414Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:39:19.938Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;f942674fe7c1a&quot;,
+        &quot;sha256&quot;: &quot;2c06f2cd967949e788141cc6d2ec4ea663165f16572a71e7aa3e34c9851f1dfa&quot;,
+        &quot;filename&quot;: &quot;f942674fe7c1a.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:39:16.236Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Operating report for Ember Landing covering 2024 actual results.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;55fb12fd-d931-408e-903a-e06adef39c67&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Operating report for Ember Landing covering 2024 actual results.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;55fb12fd-d931-408e-903a-e06adef39c67&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r3&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Operating report for Ember Landing covering 2024 actual results.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;55fb12fd-d931-408e-903a-e06adef39c67&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;issues&quot;: [
+            &quot;Covers 2024 instead of requested 2025 or 2026 actual operating periods.&quot;
+          ],
+          &quot;missingInformation&quot;: [
+            &quot;Actual operating statements for 2025 and 2026 YTD.&quot;
+          ]
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;88a612e2-81c3-4c46-be6f-80aa7129ec3f&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:39:18.414Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:39:19.941Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;f9c7159e3f5b1&quot;,
+        &quot;sha256&quot;: &quot;0a00c8db85e2cd2515987c0c14d0ea1ed52781c5468e8900b433b0861164ba81&quot;,
+        &quot;filename&quot;: &quot;f9c7159e3f5b1.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:39:16.236Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Executed leases for units 101 and 102 at Ember Landing.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;a792215c-6e79-4804-ba2c-34b07f323509&quot;,
+            &quot;252b89ff-9b4e-4fce-b3e4-2790588650bc&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Executed leases for units 101 and 102 at Ember Landing.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;a792215c-6e79-4804-ba2c-34b07f323509&quot;,
+            &quot;252b89ff-9b4e-4fce-b3e4-2790588650bc&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r2&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Executed leases for units 101 and 102 at Ember Landing.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;a792215c-6e79-4804-ba2c-34b07f323509&quot;,
+            &quot;252b89ff-9b4e-4fce-b3e4-2790588650bc&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;fb1cf1a4-361f-481c-8d8b-cfa4ef96901d&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:39:18.414Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:39:21.211Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;fd40c4495f2f4&quot;,
+        &quot;sha256&quot;: &quot;88f3be9bdf270e6c3d517fdd163bbfb62a7a142e6a7fc7ed04d8a6cf932644df&quot;,
+        &quot;filename&quot;: &quot;fd40c4495f2f4.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:39:16.237Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Operating budget projection for Ember Landing covering 2026-01-01 through 2026-09-30.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;32c93828-ac9a-4d9c-b522-0640f92c2fe2&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Operating budget projection for Ember Landing covering 2026-01-01 through 2026-09-30.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;32c93828-ac9a-4d9c-b522-0640f92c2fe2&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r3&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Operating budget projection for Ember Landing covering 2026-01-01 through 2026-09-30.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;32c93828-ac9a-4d9c-b522-0640f92c2fe2&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:39:34.899Z&quot;,
+          &quot;issues&quot;: [
+            &quot;Budget projection provided instead of actual operating results.&quot;
+          ],
+          &quot;missingInformation&quot;: [
+            &quot;Actual operating results for 2026-01-01 through 2026-09-30.&quot;
+          ]
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;c8dea43d-abe2-40f5-acf8-807d482d9d8f&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:39:19.970Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:39:21.259Z&quot;
+          }
+        ]
+      }
+    ],
+    &quot;freshness&quot;: &quot;current&quot;
+  }
+]</pre></details></section><section><h2>BATCH-04 · Obscured lease execution page</h2><p><b>Expected:</b> Keep readable evidence; request a clearer copy of affected page 2, keep lease execution/comparisons unknown.</p><p><b>Observed:</b> Detects obscured page but marks lease unmet/calls it missing and asks for complete lease rather than clearer page 2.</p><p>Saved acknowledgment: 3.59s · Final report: 54.67s · 5 model calls · $0.062560 · peak 3 concurrent local reads</p><h3>Actual acknowledgment</h3><pre>Investigating newly uploaded documents against application requirements.</pre><h3>Actual final borrower reply</h3><pre>The investigation of your uploaded files is complete. Here is what they established and what remains needed:
+
+### Upload Findings
+* **`f9c8235aa530d.pdf`**: Satisfies the rent roll requirement for Garnet Walk as of 2026-09-30.
+* **`f388078a12c6b.pdf` &amp; `fe5a03a9509f0.pdf`**: Provide actual accrual operating results for 2025 (2025-01-01 through 2025-12-31) and 2026 year-to-date (2026-01-01 through 2026-09-30). However, full contractual rent reconciliation remains pending verification against the unit 102 lease.
+* **`f5bd96f6fb9cb.pdf`**: Confirms the executed lease for Unit 101, but page 2 is obscured, leaving the Unit 102 lease unreadable and unverified.
+
+---
+
+### Requirement Status
+
+* ✅ **Current rent roll**: Fully satisfied by your rent roll dated 2026-09-30.
+* **Leases and applicable amendments**: Partially supported. Your declaration confirms no lease amendments exist, and Unit 101 is verified. A legible executed copy of the lease for Unit 102 is still required.
+* **Property operating statements**: Partially supported. Operating figures for 2025 and 2026 YTD are supplied, but full contractual rent reconciliation requires the missing Unit 102 lease.
+* **Borrower bank statements**: Outstanding. Complete monthly bank statements for account ending in 7419 are required for July 2026, August 2026, and September 2026.
+* **Entity ownership and signing authority**: Outstanding. A formation certificate and operating agreement for Garnet Walk Holdings LLC verifying 100% ownership and manager/signing authority are required.
+
+---
+
+### Next Steps
+1. Upload a complete, legible executed lease for **Unit 102**.
+2. Upload complete bank statements for **account ending in 7419** covering **July, August, and September 2026**.
+3. Upload the **Certificate of Formation** and **Operating Agreement** for **Garnet Walk Holdings LLC**.</pre><details><summary>Per-file persisted checks</summary><pre>[
+  {
+    &quot;runId&quot;: &quot;4ca822e7-fcd4-4df5-a8c0-a82dd9c9703d&quot;,
+    &quot;batchId&quot;: &quot;approved-batch&quot;,
+    &quot;snapshotRevision&quot;: &quot;7404fe8926e95c8e4ccc2e93a837099c0c261713cd843994ec78ae23ea542a24&quot;,
+    &quot;revision&quot;: 9,
+    &quot;state&quot;: &quot;partial&quot;,
+    &quot;files&quot;: [
+      {
+        &quot;documentId&quot;: &quot;f388078a12c6b&quot;,
+        &quot;sha256&quot;: &quot;68fb0f847dbfc228608245e5715668c5b1ee76820357ac02ad668fdcc9077dd8&quot;,
+        &quot;filename&quot;: &quot;f388078a12c6b.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:40:12.245Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Actual 2025 property operating statement for Garnet Walk on accrual basis.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;3eb11649-9bf2-4e4f-b2f6-c29c96cbc086&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Actual 2025 property operating statement for Garnet Walk on accrual basis.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;3eb11649-9bf2-4e4f-b2f6-c29c96cbc086&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r3&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Actual 2025 property operating statement for Garnet Walk on accrual basis.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;3eb11649-9bf2-4e4f-b2f6-c29c96cbc086&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;4a3fb9f2-8df3-4ae2-b215-b753f4886f92&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:40:14.450Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:40:15.836Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;f5bd96f6fb9cb&quot;,
+        &quot;sha256&quot;: &quot;5d64d7047d635afa25edfc67c425ddf549a001bf358b79e089d0367b946e5d9b&quot;,
+        &quot;filename&quot;: &quot;f5bd96f6fb9cb.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:40:12.245Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Lease instrument with executed unit 101 lease and obscured second page.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;083409fe-5952-437d-b638-92bde708dcc4&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;result&quot;: &quot;partly_readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Lease instrument with executed unit 101 lease and obscured second page.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;083409fe-5952-437d-b638-92bde708dcc4&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r2&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Lease instrument with executed unit 101 lease and obscured second page.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;083409fe-5952-437d-b638-92bde708dcc4&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;issues&quot;: [
+            &quot;Page 2 is obscured by a black rectangle.&quot;
+          ],
+          &quot;missingInformation&quot;: [
+            &quot;Legible lease instrument for unit 102.&quot;
+          ]
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;9c9d0ac7-a15e-40d9-8397-d849e38ead45&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:40:14.450Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:40:16.604Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;f9c8235aa530d&quot;,
+        &quot;sha256&quot;: &quot;1b5cda07a6f443563aee449dfea629838938854257e7ef5264057e165af02cbf&quot;,
+        &quot;filename&quot;: &quot;f9c8235aa530d.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:40:12.245Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Occupancy schedule for Garnet Walk as of reporting date 2026-09-30.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;cbe924ea-f122-4327-a483-810f93a286f1&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Occupancy schedule for Garnet Walk as of reporting date 2026-09-30.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;cbe924ea-f122-4327-a483-810f93a286f1&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r1&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Occupancy schedule for Garnet Walk as of reporting date 2026-09-30.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;cbe924ea-f122-4327-a483-810f93a286f1&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;01ed2787-4c27-4bbb-9b90-5f92cc786e53&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:40:14.450Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:40:15.844Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;documentId&quot;: &quot;fe5a03a9509f0&quot;,
+        &quot;sha256&quot;: &quot;68d3f516ebc4278a978a06c2893eeab9bf84e99c953091d430a45fcf7d75e769&quot;,
+        &quot;filename&quot;: &quot;fe5a03a9509f0.pdf&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;identifiedAt&quot;: &quot;2026-11-09T02:40:12.245Z&quot;,
+        &quot;readability&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Actual 2026 nine-month operating statement for Garnet Walk on accrual basis.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;e99d6663-8c8b-422a-85ae-a36b855db0df&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;result&quot;: &quot;readable&quot;
+        },
+        &quot;requirementRelevance&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Actual 2026 nine-month operating statement for Garnet Walk on accrual basis.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;e99d6663-8c8b-422a-85ae-a36b855db0df&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;requirementIds&quot;: [
+            &quot;b01-r3&quot;
+          ],
+          &quot;match&quot;: &quot;clear&quot;
+        },
+        &quot;documentQuality&quot;: {
+          &quot;status&quot;: &quot;completed&quot;,
+          &quot;summary&quot;: &quot;Actual 2026 nine-month operating statement for Garnet Walk on accrual basis.&quot;,
+          &quot;evidenceRefs&quot;: [
+            &quot;e99d6663-8c8b-422a-85ae-a36b855db0df&quot;
+          ],
+          &quot;updatedAt&quot;: &quot;2026-11-09T02:40:58.289Z&quot;,
+          &quot;issues&quot;: [],
+          &quot;missingInformation&quot;: []
+        },
+        &quot;execution&quot;: [
+          {
+            &quot;spanId&quot;: &quot;ce863176-03a1-48d0-8efa-7efef320fbdc&quot;,
+            &quot;kind&quot;: &quot;local&quot;,
+            &quot;startedAt&quot;: &quot;2026-11-09T02:40:15.853Z&quot;,
+            &quot;endedAt&quot;: &quot;2026-11-09T02:40:16.639Z&quot;
+          }
+        ]
+      }
+    ],
+    &quot;freshness&quot;: &quot;current&quot;
+  }
+]</pre></details></section><section><h2>Verification and remaining gaps</h2><p>170unit tests+TypeScript+production build+all simulated integration suites PASS</p><p>Final-candidate saved terminal stages, refresh,1280/390layout and left checkmarks verified. Live stage timing,1sreceipt,active reconnect/replay/failure remain unmeasured/not run.</p><p>R5 consistency unknown vs gold unmet may be a reasonable conservative judgment; do not equate with false completeness.</p><p>Native Mastra workflows/tools/traces/scorers; exact costs attributed per call, not shared-ledger deltas. Per-file parallelism measured for local reads, not parallel semantic model calls.</p></section></html>

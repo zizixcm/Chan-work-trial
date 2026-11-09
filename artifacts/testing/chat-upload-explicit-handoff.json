@@ -1,0 +1,12 @@
+{
+  "migrations/postgres/027_explicit_chat_upload_processing.sql": "1efc85a5e5e4420eb67da5b46c899ac9cbb986163e293e8d8d3bc1216172fea3",
+  "lib/jobs/batches.ts": "c9d81a0a66603feb3ae40237bb70b790e1a78ff4a924b53e939d86830bd899ce",
+  "app/api/upload-batches/route.ts": "63d6d9d87a40f3a8ba6872d7e1f9e1d026780748c31ef3b8027c3f3f4193b432",
+  "app/components/batch-upload.tsx": "25db1bb5ee247813d8762b20c662832a3257ece03e37d331a039fdcf59ac63df",
+  "lib/agents/upload-admission.ts": "931e5112e55356bcef3c3e91ed40bacdf5fbbfe030ea8f0f98cfe1e73d879b8c",
+  "lib/agents/borrower-service.ts": "dfe1058d94d35c4f7d2b38e5f857ba0d2e9955aaa51a2fc9ca38595e22f5dfb5",
+  "tests/chat-upload-journey.eval.ts": "2b4de43d680c25de11517b01a31ef940fb14073e1473a139f1416ecee4655e09",
+  "tests/chat-upload-agents.integration.ts": "a7f1163164a8737f618736a941997c20f9b60c053a4465a0e332d3efda064b07",
+  "tests/chat-upload-upgrade.integration.ts": "07a010bf7db46d45b78679418efdf1730283332058585675289b0adc98e5b55a",
+  "docs/evals/chat-upload.md": "73032cc02401d04df6ffa40fe8d149d17bd5293c088b91ae85dfb59a75ffae60"
+}

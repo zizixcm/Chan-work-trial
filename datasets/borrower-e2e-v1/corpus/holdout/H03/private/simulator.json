@@ -1,0 +1,95 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "f8d1144ce753c",
+    "f3821243f8687",
+    "f928d4ead82c6",
+    "f6ee02caa2a4a",
+    "f3ea3694aec15",
+    "fe50f7c40bd97",
+    "fe1ecc1e00c99",
+    "fd5fa6474cdbc",
+    "fa28fbf4a529a",
+    "f51544d6f7564",
+    "f6a5432e4398b"
+  ],
+  "budgetInterrupt": {
+    "eligible": false,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7487",
+    "baseRents": [
+      3307,
+      3547,
+      3787
+    ],
+    "borrower": "Lumen Forge Holdings LLC",
+    "currentRents": [
+      3557,
+      3547,
+      3787
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 2,
+    "manager": "Mavi Esk",
+    "otherOwner": "Olin Raye",
+    "property": "Lumen Forge",
+    "tenants": [
+      "Lumen Studio",
+      "Lumen Supply",
+      "Lumen Atelier"
+    ],
+    "units": [
+      "101",
+      "102",
+      "103"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 3 units occupied by the tenants listed; only account ending 7487 is requested. There are 2 lease amendments and 0 entity amendments. I will look for the amendments.",
+      "uploadIds": [
+        "f8d1144ce753c",
+        "f3821243f8687",
+        "f3ea3694aec15",
+        "fe50f7c40bd97"
+      ]
+    },
+    {
+      "borrowerText": "Company records and statements are attached; I found amendment 2 too.",
+      "uploadIds": [
+        "fe1ecc1e00c99",
+        "fd5fa6474cdbc",
+        "fa28fbf4a529a",
+        "f51544d6f7564",
+        "f6a5432e4398b",
+        "f6ee02caa2a4a"
+      ]
+    },
+    {
+      "borrowerText": "These are all the declared lease amendments. Please compare the effective dates.",
+      "uploadIds": [
+        "f928d4ead82c6",
+        "f6ee02caa2a4a"
+      ]
+    }
+  ]
+}

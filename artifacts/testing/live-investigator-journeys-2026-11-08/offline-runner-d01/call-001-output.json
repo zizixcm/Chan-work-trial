@@ -1,0 +1,414 @@
+{
+  "text": "",
+  "toolCalls": [
+    {
+      "type": "tool-call",
+      "runId": "4467f891-ad74-4de8-809c-187b10ff8e7a",
+      "from": "AGENT",
+      "payload": {
+        "toolCallId": "offline-call",
+        "toolName": "investigate_documents",
+        "args": {
+          "goal": "Assess the requested documentary criteria using saved evidence.",
+          "documentIds": [
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+          ],
+          "requirementIds": [
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+          ],
+          "message": "I will investigate the saved documents."
+        }
+      },
+      "traceId": "11f61aab34c931035ce5f43e4cc834b8"
+    }
+  ],
+  "toolResults": [
+    {
+      "type": "tool-result",
+      "runId": "4467f891-ad74-4de8-809c-187b10ff8e7a",
+      "from": "AGENT",
+      "payload": {
+        "args": {
+          "goal": "Assess the requested documentary criteria using saved evidence.",
+          "documentIds": [
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+          ],
+          "requirementIds": [
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+            "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+          ],
+          "message": "I will investigate the saved documents."
+        },
+        "toolCallId": "offline-call",
+        "toolName": "investigate_documents",
+        "result": {
+          "runId": "2f6288bd-7d23-4a04-a436-7132aaefda8c",
+          "runRevision": "1",
+          "artifactId": "cea152b0-33de-432e-8967-d0004fdcded2",
+          "acceptedAt": "2026-11-08T23:16:35.313Z",
+          "state": "queued",
+          "inputFingerprint": "0bca624e8e07421f62b2bd4a66773860fe81759374aadbfcfa0b6ebe50604157"
+        }
+      },
+      "traceId": "11f61aab34c931035ce5f43e4cc834b8"
+    }
+  ],
+  "steps": [
+    {
+      "stepType": "initial",
+      "sources": [],
+      "files": [],
+      "toolCalls": [
+        {
+          "type": "tool-call",
+          "runId": "4467f891-ad74-4de8-809c-187b10ff8e7a",
+          "from": "AGENT",
+          "payload": {
+            "toolCallId": "offline-call",
+            "toolName": "investigate_documents",
+            "args": {
+              "goal": "Assess the requested documentary criteria using saved evidence.",
+              "documentIds": [
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+              ],
+              "requirementIds": [
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+              ],
+              "message": "I will investigate the saved documents."
+            }
+          },
+          "traceId": "11f61aab34c931035ce5f43e4cc834b8"
+        }
+      ],
+      "toolResults": [
+        {
+          "type": "tool-result",
+          "runId": "4467f891-ad74-4de8-809c-187b10ff8e7a",
+          "from": "AGENT",
+          "payload": {
+            "args": {
+              "goal": "Assess the requested documentary criteria using saved evidence.",
+              "documentIds": [
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+              ],
+              "requirementIds": [
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+                "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+              ],
+              "message": "I will investigate the saved documents."
+            },
+            "toolCallId": "offline-call",
+            "toolName": "investigate_documents",
+            "result": {
+              "runId": "2f6288bd-7d23-4a04-a436-7132aaefda8c",
+              "runRevision": "1",
+              "artifactId": "cea152b0-33de-432e-8967-d0004fdcded2",
+              "acceptedAt": "2026-11-08T23:16:35.313Z",
+              "state": "queued",
+              "inputFingerprint": "0bca624e8e07421f62b2bd4a66773860fe81759374aadbfcfa0b6ebe50604157"
+            }
+          },
+          "traceId": "11f61aab34c931035ce5f43e4cc834b8"
+        }
+      ],
+      "content": [
+        {
+          "type": "tool-call",
+          "toolCallId": "offline-call",
+          "toolName": "investigate_documents",
+          "input": {
+            "goal": "Assess the requested documentary criteria using saved evidence.",
+            "documentIds": [
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+            ],
+            "requirementIds": [
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+            ],
+            "message": "I will investigate the saved documents."
+          }
+        },
+        {
+          "type": "tool-result",
+          "input": {
+            "goal": "Assess the requested documentary criteria using saved evidence.",
+            "documentIds": [
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+            ],
+            "requirementIds": [
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+              "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+            ],
+            "message": "I will investigate the saved documents."
+          },
+          "output": {
+            "type": "json",
+            "value": {
+              "runId": "2f6288bd-7d23-4a04-a436-7132aaefda8c",
+              "runRevision": "1",
+              "artifactId": "cea152b0-33de-432e-8967-d0004fdcded2",
+              "acceptedAt": "2026-11-08T23:16:35.313Z",
+              "state": "queued",
+              "inputFingerprint": "0bca624e8e07421f62b2bd4a66773860fe81759374aadbfcfa0b6ebe50604157"
+            }
+          },
+          "toolCallId": "offline-call",
+          "toolName": "investigate_documents"
+        }
+      ],
+      "text": "",
+      "reasoningText": "",
+      "reasoning": [],
+      "staticToolCalls": [],
+      "dynamicToolCalls": [],
+      "staticToolResults": [],
+      "dynamicToolResults": [],
+      "finishReason": "tool-calls",
+      "usage": {
+        "inputTokens": 1,
+        "outputTokens": 1,
+        "totalTokens": 2,
+        "raw": {
+          "inputTokens": 1,
+          "outputTokens": 1,
+          "totalTokens": 2
+        }
+      },
+      "warnings": [],
+      "request": {},
+      "response": {
+        "id": "03dbfce1-2528-4228-8070-8c839ed24706",
+        "timestamp": "2026-11-08T23:16:35.176Z",
+        "modelId": "scripted-tools",
+        "modelMetadata": {
+          "modelId": "scripted-tools",
+          "modelVersion": "v2",
+          "modelProvider": "offline"
+        },
+        "messages": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool-call",
+                "toolCallId": "offline-call",
+                "toolName": "investigate_documents",
+                "input": {
+                  "goal": "Assess the requested documentary criteria using saved evidence.",
+                  "documentIds": [
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+                  ],
+                  "requirementIds": [
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+                  ],
+                  "message": "I will investigate the saved documents."
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "offline-call",
+                "toolName": "investigate_documents",
+                "output": {
+                  "type": "json",
+                  "value": {
+                    "runId": "2f6288bd-7d23-4a04-a436-7132aaefda8c",
+                    "runRevision": "1",
+                    "artifactId": "cea152b0-33de-432e-8967-d0004fdcded2",
+                    "acceptedAt": "2026-11-08T23:16:35.313Z",
+                    "state": "queued",
+                    "inputFingerprint": "0bca624e8e07421f62b2bd4a66773860fe81759374aadbfcfa0b6ebe50604157"
+                  }
+                },
+                "input": {
+                  "goal": "Assess the requested documentary criteria using saved evidence.",
+                  "documentIds": [
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+                  ],
+                  "requirementIds": [
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+                  ],
+                  "message": "I will investigate the saved documents."
+                }
+              }
+            ]
+          }
+        ],
+        "dbMessages": [
+          {
+            "id": "b738bf5d-0382-4451-8e86-4dd4ca39dacc",
+            "role": "assistant",
+            "content": {
+              "format": 2,
+              "parts": [
+                {
+                  "type": "tool-invocation",
+                  "toolInvocation": {
+                    "state": "result",
+                    "result": {
+                      "runId": "2f6288bd-7d23-4a04-a436-7132aaefda8c",
+                      "runRevision": "1",
+                      "artifactId": "cea152b0-33de-432e-8967-d0004fdcded2",
+                      "acceptedAt": "2026-11-08T23:16:35.313Z",
+                      "state": "queued",
+                      "inputFingerprint": "0bca624e8e07421f62b2bd4a66773860fe81759374aadbfcfa0b6ebe50604157"
+                    },
+                    "toolCallId": "offline-call",
+                    "toolName": "investigate_documents",
+                    "args": {
+                      "goal": "Assess the requested documentary criteria using saved evidence.",
+                      "documentIds": [
+                        "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+                        "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+                      ],
+                      "requirementIds": [
+                        "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+                        "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+                        "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+                        "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+                        "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+                      ],
+                      "message": "I will investigate the saved documents."
+                    }
+                  },
+                  "updatedAt": 1794179795327,
+                  "createdAt": 1794179795370
+                }
+              ],
+              "metadata": {
+                "modelId": "scripted-tools",
+                "provider": "offline",
+                "traceId": "11f61aab34c931035ce5f43e4cc834b8"
+              },
+              "toolInvocations": [
+                {
+                  "state": "result",
+                  "result": {
+                    "runId": "2f6288bd-7d23-4a04-a436-7132aaefda8c",
+                    "runRevision": "1",
+                    "artifactId": "cea152b0-33de-432e-8967-d0004fdcded2",
+                    "acceptedAt": "2026-11-08T23:16:35.313Z",
+                    "state": "queued",
+                    "inputFingerprint": "0bca624e8e07421f62b2bd4a66773860fe81759374aadbfcfa0b6ebe50604157"
+                  },
+                  "toolCallId": "offline-call",
+                  "toolName": "investigate_documents",
+                  "args": {
+                    "goal": "Assess the requested documentary criteria using saved evidence.",
+                    "documentIds": [
+                      "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+                      "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+                    ],
+                    "requirementIds": [
+                      "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+                      "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+                      "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+                      "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+                      "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+                    ],
+                    "message": "I will investigate the saved documents."
+                  }
+                }
+              ]
+            },
+            "createdAt": "2026-11-08T23:16:35.295Z"
+          }
+        ],
+        "uiMessages": [
+          {
+            "id": "b738bf5d-0382-4451-8e86-4dd4ca39dacc",
+            "role": "assistant",
+            "metadata": {
+              "modelId": "scripted-tools",
+              "provider": "offline",
+              "traceId": "11f61aab34c931035ce5f43e4cc834b8",
+              "createdAt": "2026-11-08T23:16:35.295Z"
+            },
+            "parts": [
+              {
+                "type": "tool-investigate_documents",
+                "toolCallId": "offline-call",
+                "input": {
+                  "goal": "Assess the requested documentary criteria using saved evidence.",
+                  "documentIds": [
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-f7dbacda2c2f3",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-ffa0b3c48c21f"
+                  ],
+                  "requirementIds": [
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R1",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R2",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R3",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R4",
+                    "3cc100bb-aee6-41b3-8333-1607cb0ead68-R5"
+                  ],
+                  "message": "I will investigate the saved documents."
+                },
+                "output": {
+                  "runId": "2f6288bd-7d23-4a04-a436-7132aaefda8c",
+                  "runRevision": "1",
+                  "artifactId": "cea152b0-33de-432e-8967-d0004fdcded2",
+                  "acceptedAt": "2026-11-08T23:16:35.313Z",
+                  "state": "queued",
+                  "inputFingerprint": "0bca624e8e07421f62b2bd4a66773860fe81759374aadbfcfa0b6ebe50604157"
+                },
+                "state": "output-available"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "finishReason": "tool-calls",
+  "usage": {
+    "inputTokens": 1,
+    "outputTokens": 1,
+    "totalTokens": 2,
+    "raw": {
+      "inputTokens": 1,
+      "outputTokens": 1,
+      "totalTokens": 2
+    }
+  },
+  "error": null
+}

@@ -1,0 +1,47 @@
+{
+  "candidateId": "8d8011d6ce307a03457820236d9569690ac9676f36d3a7b75c28a18459a6955a",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Synthetic Elm LLC",
+        "propertyName": "Elm Center"
+      },
+      "documents": [],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Executed lease",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Executed current lease"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "messages": [
+      {
+        "id": "h1",
+        "sequence": "1",
+        "text": "Do you have any of my documents?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null,
+      "activeRuns": [],
+      "pendingQuestions": []
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "No, we do not have any documents saved for your application yet.\n\n**Next step:**\n* Please upload your **current executed lease** for Elm Center to get started."
+  },
+  "actualMicros": 2156,
+  "executed": true,
+  "replayOrigin": "/Users/chanrao/Documents/ChatGPT/proximity/artifacts/testing/agent-optimization/optimizer-1794184216241"
+}

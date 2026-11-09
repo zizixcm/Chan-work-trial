@@ -1,0 +1,59 @@
+{
+  "candidateId": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [
+        {
+          "documentId": "d1",
+          "name": "Rent roll.pdf",
+          "active": true
+        },
+        {
+          "documentId": "d2",
+          "name": "2025 operating statement.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": true
+    },
+    "messages": [
+      {
+        "id": "m1",
+        "sequence": "1",
+        "text": "What's been uploaded?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "You have 2 documents currently saved:\n\n* **Rent roll.pdf**\n* **2025 operating statement.pdf**\n\nOther uploads are still in progress, so please check your upload progress to ensure they complete. Please note that having a document saved does not mean it has been reviewed or approved."
+  },
+  "actualMicros": 4709,
+  "executed": true
+}

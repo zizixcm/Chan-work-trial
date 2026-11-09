@@ -1,0 +1,10 @@
+Candidate: 144f5a8c6ba43bc9dfbeca0fac2eaf690bf2037e plus existing dirty workspace; this turn changed borrower instructions, added live runner, and documented results. Unrelated edits preserved.
+Check time: 2026-11-08T15:59:30.935283-08:00
+Automated: npm run test:agent PASS; 136 tests and TypeScript. git diff --check PASS.
+Full: BLOCKED; npm run test:agent -- --full refused because shared port 3001 is occupied.
+Preview: existing http://127.0.0.1:3001, candidate freshness unverified.
+Browser: all checklist items NOT RUN; no UI verification claimed.
+Live: 15 real Gemini 2.5 Flash calls with synthetic inventory through native borrower planner and metered transport. Total settled cost $0.006424; no unknown charges. No application mutations.
+Semantic reviews: baseline 3/5; tuned 4/5; tuned-final 4/5. Evaluator reviews are separate from responding agent, not its self-scores.
+Remaining failure: empty inventory sometimes omits the required current-rent-roll upload suggestion. Do not treat latest candidate as a full quality pass.
+Stopped tuning after two unsuccessful fix/reverify attempts, following docs/TESTING.md. Decision: deterministic enforcement of empty-inventory guidance versus further authorized prompt experimentation.

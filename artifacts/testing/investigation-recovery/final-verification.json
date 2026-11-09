@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-08T23:32:55.001Z",
+  "states": [
+    {
+      "runId": "1481616c-346b-47b8-9ba1-148a8be20ef6",
+      "state": "superseded"
+    },
+    {
+      "runId": "40899326-38e2-4e2e-81e5-fe63eb412ecd",
+      "state": "superseded"
+    },
+    {
+      "runId": "9693e6a8-6810-4b5f-a568-0947f39fa324",
+      "state": "partial"
+    }
+  ],
+  "budget": {
+    "limitMicros": 5000000,
+    "knownMicros": 89542,
+    "reservedMicros": 0,
+    "unknownCost": false
+  },
+  "currentResult": {
+    "id": "55f4ea61-52df-4dd1-82d8-6967048496a8",
+    "freshness": "current",
+    "preparationRevision": "8",
+    "requirements": 5,
+    "citations": 2
+  },
+  "agentBlocked": false,
+  "resyncRequired": false,
+  "fileSha256": "22f55161bd508ab78385eceb4fc257142b2540b5495e04f874bd485a913065fe"
+}

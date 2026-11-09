@@ -1,0 +1,19 @@
+Unified stable pilot — 2026-11-08
+App: http://localhost:3102/ (Heritage default; loopback IPv6)
+Studio: http://127.0.0.1:4111/ (single Studio/worker process)
+Release: /Users/chanrao/Developer/proximity-releases/unified-pilot-20261108-v6
+Owner chat: 01a1b986-f2db-7551-993b-905946b69c64
+Portal PID28270; Studio worker PID28275; launcher PID28271. Verify actual ownership before stopping.
+Candidate: 144f5a8c6ba43bc9dfbeca0fac2eaf690bf2037e plus 844 frozen files; candidate.json hashes identify exact source. No commit/push.
+Included: recovery cost/validation/reuse fixes; 25MiB evidence support; XLSX merged-cell fix; no-password encrypted PDF upload validation; Markdown replies; historical-context disclosure; compact composer; actual tool activity/history.
+Migration: additive024_agent_activity.sql applied only to preview_v6; prior migrations checksum verified.
+Automated PASS: 131 unit tests, TypeScript, fresh Webpack production build, HTTP, jobs, workflow, borrower chat, complete/missing simulated AI; expanded native borrower-agent integration.
+Browser PASS: actual deployed Heritage default and preserved reply; five formatted bullets; simplified composer; historical-context disclosure; refresh persistence; keyboard focus to attachment; 1280x900 and390x844 DOM dimensions/no horizontal overflow; no observed app warning/error logs. Studio loads both registered agents.
+Browser NOT RUN: new actual paid agent turn/live progress history (intentionally pending); new upload/unsupported-file recovery, full sign-in/role matrix, link/unlink, submission/lender review. These are not claimed verified by this deployment. Simulated suites and prior UI fixtures cover activity stages; no live model-quality certification.
+Preservation: exact fingerprints unchanged for applications/documents/requirements/borrower turns/conversations/messages and authoritative ledger. 3 apps,1 document,14 requirements,10 turns,2 conversations,6 messages. No data reset/seed. All pilot work terminal before/after. Old3001/3101 untouched.
+Spend: shared$0.093934,33 calls,$0 held; $5 batch/$2 investigation/$20 cumulative unchanged. No deployment provider calls or D01 dispatch. Live evaluations remain pending by explicit user request.
+Operational pointer: /Users/chanrao/Developer/proximity-releases/stable-pilot.json
+Guarded restart: node /Users/chanrao/Developer/proximity-releases/start-stable-pilot.cjs
+Launcher refuses occupied3102/4111; gracefully stop only verified current owners first, never start two store writers. Pointer selects immutable release; dependencies are physical, not shared.
+Rollback: previous v4 retained; additive024 is compatible. After graceful service stop, change only release pointer to v4 and run guarded launcher; retain existing database, registry, storage and spend ledger.
+Detailed logs: release verification/; screenshots unified-v6-desktop.png and unified-v6-mobile.png beside this report.

@@ -1,0 +1,88 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "fd24848d5cf71",
+    "f0db90ec5efdd",
+    "ff6f79b564b4d",
+    "f962bb18ef1e7",
+    "fbf47f089d3dd",
+    "f093596343f77",
+    "f344b48098254",
+    "f464d19c9cb88",
+    "f15b50f9857ef",
+    "fe9718b5a12a6"
+  ],
+  "budgetInterrupt": {
+    "eligible": false,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7453",
+    "baseRents": [
+      3033,
+      3273,
+      3513
+    ],
+    "borrower": "Juniper Loom Holdings LLC",
+    "currentRents": [
+      3033,
+      3273,
+      3513
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 0,
+    "manager": "Kira Mott",
+    "otherOwner": "Davi Senn",
+    "property": "Juniper Loom",
+    "tenants": [
+      "Juniper Studio",
+      "Juniper Supply",
+      "Juniper Atelier"
+    ],
+    "units": [
+      "101",
+      "102",
+      "103"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 3 units occupied by the tenants listed; only account ending 7453 is requested. There are 0 lease amendments and 0 entity amendments. I have the company records first.",
+      "uploadIds": [
+        "f464d19c9cb88",
+        "f15b50f9857ef"
+      ]
+    },
+    {
+      "borrowerText": "Here are two monthly statements.",
+      "uploadIds": [
+        "fbf47f089d3dd",
+        "f344b48098254"
+      ]
+    },
+    {
+      "borrowerText": "Here is the income binder and remaining statement.",
+      "uploadIds": [
+        "fe9718b5a12a6",
+        "f093596343f77"
+      ]
+    }
+  ]
+}

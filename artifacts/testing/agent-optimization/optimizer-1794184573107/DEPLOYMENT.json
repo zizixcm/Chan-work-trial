@@ -1,0 +1,14 @@
+{
+  "release": "unified-pilot-20261108-v13",
+  "app": "http://localhost:3102/",
+  "studio": "http://127.0.0.1:4111/",
+  "deployedDefinitionsSha256": "9e07ee93f18825ac71876fc3a733580879a73cafd147b093285083fc2c399901",
+  "verification": "artifacts/testing/isolated-deployment/PROMPT_V13_VERIFICATION.txt",
+  "independentlyChecked": [
+    "stable release pointer",
+    "deployed source hash",
+    "portal HTTP 200",
+    "Studio ready HTTP 200"
+  ],
+  "recordedAt": "2026-11-09T00:47:46.794856+00:00"
+}

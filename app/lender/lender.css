@@ -1192,3 +1192,62 @@
 .l-waiting-submission {padding:24px;border:1px solid #d9e2d7;border-radius:8px;margin:24px 0}.l-waiting-submission h2 {font-size:24px}.l-waiting-submission p {font-size:18px;margin-top:12px}
 .l-header-account>.account-control {flex-shrink:0;align-self:center;max-width:100%}
 @media(max-width:380px) {.l-header-account {flex-wrap:wrap}.l-header-account>.account-control {margin-left:auto}}
+.lender-requirement-list {display:flex;flex-direction:column;gap:4px;margin-bottom:14px}.lender-requirement-list button {text-align:left;padding:9px 10px;border:1px solid transparent;border-radius:6px;font-size:15px;line-height:1.4;background:none;color:#243c32;min-height:44px}.lender-requirement-list button[aria-pressed=true] {background:#eaf1e5;border-color:#8ba482;font-weight:600}
+.workspace-requirement-context {font-size:14px;color:#52665c;margin:4px 0 0}
+.l-workspace-dialog[open] {display:flex;flex-direction:column;padding:0;overflow:hidden;max-height:90dvh}
+.l-dialog-heading {flex-shrink:0;padding:16px 20px;margin:0;border-bottom:1px solid #d9e2d7}.l-dialog-heading h2 {font-size:22px}
+.l-dialog-body {padding:18px 20px;overflow:auto;min-height:0;overscroll-behavior:contain}.l-dialog-footer {display:flex;align-items:center;justify-content:space-between;gap:16px;flex-shrink:0;padding:14px 20px;border-top:1px solid #d9e2d7;background:#f8faf6}.l-dialog-footer .workspace-decisions {display:flex;justify-content:flex-end;width:100%;margin:0}.l-dialog-body .requirement-review-scope {margin-bottom:14px}.l-dialog-body .requirement-review-scope h3 {font-size:22px}.l-dialog-body .l-saved-review {padding:12px 16px;margin:14px 0}.l-dialog-body p {font-size:16px}.l-dialog-body .review-criteria {margin:8px 0}
+@media(min-width:1100px) and (min-height:650px) {
+  .lender:has(.l-review-main) {height:100dvh;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+  .lender:has(.l-review-main)>.l-header {height:60px;min-height:60px;flex-shrink:0;padding:8px 24px}.lender:has(.l-review-main) .l-brand {font-size:26px}.lender:has(.l-review-main)>.l-footer {display:none}
+  .lender .l-review-main {display:flex;flex-direction:column;flex:1;min-height:0;max-width:none;width:100%;padding:12px 24px;margin:0;overflow:hidden;position:relative}
+  .l-review-main>.l-back {position:absolute;top:12px;left:24px;margin:0;min-height:32px;font-size:14px}
+  .lender .l-review-heading {padding-left:180px;min-height:42px;margin:0 0 12px;flex-shrink:0}.lender .l-review-heading h1 {font-size:24px}.l-review-heading details[open] {position:absolute;right:24px;top:12px;background:white;padding:12px;box-shadow:0 3px 15px #193a2820;z-index:25}
+  .l-review-main .document-review-layout {flex:1;min-height:0;grid-template-columns:260px minmax(0,1fr);gap:16px;align-items:stretch;margin:0}
+  .document-navigation {min-height:0;padding:12px;display:flex;flex-direction:column;overflow:hidden}.document-navigation>h2 {flex-shrink:0;margin:0 0 6px;font-size:18px}.document-navigation .lender-requirement-list {min-height:0;max-height:55%;overflow:auto;flex-shrink:1;scrollbar-gutter:stable}.document-navigation nav[aria-label="Documents for selected requirement"] {overflow:auto;min-height:0;flex:1;scrollbar-gutter:stable}.document-navigation-file span {font-size:13px}.lender .document-navigation-file {padding:8px;gap:2px}.document-navigation-file strong {font-size:15px}
+  .document-review-content {min-height:0;display:flex;flex-direction:column;overflow:hidden}.document-workspace {display:flex;flex-direction:column;flex:1;min-height:0;margin:0}.document-review-content .workspace-heading {padding:10px 16px;flex-shrink:0;min-height:60px}.document-workspace>.workspace-panel {padding:12px;flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}.document-workspace .document-pdf {height:100%;display:flex;flex-direction:column}.document-workspace .document-pdf iframe {min-height:0;height:100%;flex:1}.document-workspace .document-pdf p {font-size:14px;margin:0 0 8px}
+  .review-action-dock {position:static;padding:10px 0;background:transparent;border:0;flex-shrink:0}.lender .review-action-dock .floating-review {min-height:44px;padding:10px 20px;font-size:16px;box-shadow:none}.workspace-history {margin:0;padding:0;flex-shrink:0;max-height:160px;overflow:auto}.workspace-history summary {padding:6px 0;font-size:14px;min-height:32px}
+}
+@media(max-width:1099px) {.lender-requirement-list {max-height:220px;overflow:auto}.l-dialog-footer {flex-wrap:wrap}.l-dialog-footer .workspace-decisions {flex-wrap:wrap;flex-direction:row}.l-dialog-footer button {flex:1}}
+
+/* Match borrower panels and keep requirement rows readable while scrolling. */
+.lender .document-navigation {border:1px solid #d9e2d7;border-radius:8px;background:#f7f9f5;padding:10px}
+.lender .document-navigation .lender-requirement-list {gap:6px;overflow-y:scroll;scrollbar-width:auto;border-bottom:1px solid #d9e2d7;padding-bottom:10px}
+.lender .lender-requirement-list button {flex-shrink:0;min-height:48px;padding:10px 12px;font-size:16px;border-radius:6px}
+.lender .document-workspace {border-color:#d9e2d7;border-radius:8px}
+.lender .l-primary,.lender .l-secondary {min-height:44px;border-radius:7px;font-size:16px}
+
+.document-navigation .requirement-scroll-hint {flex-shrink:0;font-size:13px;color:#52665c;margin:0 0 8px}
+
+.lender .lender-requirement-list button {justify-content:flex-start}
+.lender .l-review-heading {align-items:flex-start}
+.lender .l-review-heading h1 {margin:0;line-height:1.25}
+.lender .workspace-app-description {font-size:14px;line-height:1.6;color:#52665c;margin:2px 0 0}
+.lender .document-navigation .lender-requirement-list {display:flex;flex-direction:column;gap:6px}
+
+/* One requirement picker and a compact document toolbar preserve preview space. */
+.requirement-picker {display:flex;align-items:center;gap:12px;flex-shrink:0;margin-bottom:12px;min-width:0}
+.requirement-picker label {font-size:16px;font-weight:600;flex-shrink:0}
+.lender .requirement-picker select {min-width:0;flex:1;min-height:44px;margin:0;padding:8px 12px;font:inherit;border:1px solid #c4d0c4;border-radius:7px;background:#fff;color:#243c32}
+.requirement-position {font-size:14px;color:#52665c;white-space:nowrap}
+.requirement-step-controls,.preview-toolbar-actions {display:flex;align-items:center;gap:8px;flex-shrink:0}
+.lender .requirement-step-controls button {padding:8px 14px;white-space:nowrap}
+.lender .compact-preview-toolbar {display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 12px;min-height:60px}
+.compact-preview-toolbar .workspace-file-name {min-width:0;font-size:16px;overflow-wrap:anywhere}
+.lender .preview-toolbar-actions button {padding:8px 14px;white-space:nowrap}
+@media(min-width:1100px) and (min-height:650px) {
+ .compact-preview-toolbar .workspace-file-name {overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .document-workspace:has(.compact-preview-toolbar)>.workspace-panel {padding:8px}
+}
+@media(max-width:700px) {
+ .requirement-picker {display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:16px}
+ .requirement-picker label {grid-row:1;grid-column:1}.requirement-position {grid-row:1;grid-column:2;text-align:right}
+ .requirement-picker select {grid-row:2;grid-column:1 / -1;width:100%}
+ .requirement-step-controls {grid-column:1 / -1;justify-content:space-between}
+ .lender .compact-preview-toolbar {align-items:stretch;flex-direction:column}
+ .preview-toolbar-actions {flex-wrap:wrap}.preview-toolbar-actions button {flex:1}
+}
+
+/* Review applies to the selected requirement, independent of its preview. */
+.lender .requirement-review-action {flex-shrink:0;white-space:nowrap;min-height:44px;padding:8px 14px}
+@media(max-width:700px) {.requirement-review-action {grid-column:1 / -1;width:100%}}

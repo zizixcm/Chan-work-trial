@@ -1,0 +1,259 @@
+{
+  "snapshotAt": "2026-11-09T01:36:32.865Z",
+  "sourceSha256": "f220a58e69aa8cae19502632dc2a71d2a561f957fa01dc9cc3c4cdcfabae4b7e",
+  "sourcePath": "/Users/chanrao/Developer/proximity-releases/unified-pilot-20261108-v16/verification/live-recovery.json",
+  "timingCaveat": "Wall-clock durable timestamps, queue-inclusive from simultaneous recovery enqueue, not first streamed token or fresh-upload benchmark. Historical upload wait excluded. Investigation time excludes prior queue and final reply queue.",
+  "qualityReview": "Manual evaluation chat; not author-independent. Positive findings not fully independently reverified; failures suffice to reject overall journey.",
+  "rows": [
+    {
+      "batchId": "892f7840-df37-4b16-94f4-a6e2d14106ea",
+      "files": [
+        "2024 YE Rental Income & Expense.pdf"
+      ],
+      "originalBatchCreatedAt": "2026-11-09T01:04:28.813Z",
+      "recoveryQueuedAt": "2026-11-09T01:22:35.173Z",
+      "acknowledgedAt": "2026-11-09T01:22:44.253Z",
+      "investigationAcceptedAt": "2026-11-09T01:22:44.075Z",
+      "investigationTerminalAt": "2026-11-09T01:23:15.935Z",
+      "finalReplyAt": null,
+      "recoveryToAckSeconds": 9.08,
+      "investigationSeconds": 31.86,
+      "recoveryToFinalSeconds": null,
+      "acknowledgement": "Investigating the newly uploaded 2024 YE Rental Income & Expense statement against the property operating statements requirement.",
+      "investigationState": "partial",
+      "followupState": "blocked",
+      "followupDecision": {
+        "goal": "Evaluate 2024 YE Rental Income & Expense.pdf for Heritage Partners III, LLC against property operating statement requirements for 2023 and 2024.",
+        "kind": "investigate",
+        "message": "Evaluating 2024 YE Rental Income & Expense.pdf against property operating statement requirements.",
+        "documentIds": [
+          "b21724b0-653b-4b2c-a988-05bfc4e5dfe9"
+        ],
+        "requirementIds": [
+          "72c6c552-f642-4989-80de-79d4fc81487f"
+        ]
+      },
+      "finalReply": null,
+      "quality": "fail",
+      "qualityReason": "No final borrower report; followup redelegation blocked.",
+      "trace": {
+        "spanId": "e8d7a452a3780993",
+        "traceId": "bdde690a9ca3097bb603a89f16f9b99a"
+      }
+    },
+    {
+      "batchId": "6645bc55-d71c-4d57-b67f-11c575c61038",
+      "files": [
+        "2023 YE Rental Income & Expense.pdf"
+      ],
+      "originalBatchCreatedAt": "2026-11-09T01:06:28.903Z",
+      "recoveryQueuedAt": "2026-11-09T01:22:35.173Z",
+      "acknowledgedAt": "2026-11-09T01:29:32.898Z",
+      "investigationAcceptedAt": "2026-11-09T01:29:32.579Z",
+      "investigationTerminalAt": "2026-11-09T01:30:05.973Z",
+      "finalReplyAt": "2026-11-09T01:31:06.023Z",
+      "recoveryToAckSeconds": 417.725,
+      "investigationSeconds": 33.394,
+      "recoveryToFinalSeconds": 510.85,
+      "acknowledgement": "Evaluating 2023 YE Rental Income & Expense.pdf against property operating statement requirements.",
+      "investigationState": "partial",
+      "followupState": "completed",
+      "followupDecision": {
+        "kind": "reply",
+        "message": "The newly uploaded file **2023 YE Rental Income & Expense.pdf** has been evaluated.\n\n### What This Established\n* **Property Operating Statements:** The uploaded file consists of a single blank page with no readable text or data, so it does not add usable evidence. Note that your actual operating results for both 2023 and 2024 are already provided on the previously saved **2024 YE Rental Income & Expense.pdf**. Full-year 2025 operating results and complete 2026 year-to-date operating results remain outstanding.\n\n---\n\n### Remaining Outstanding Requests\nSaving files to the portal does not equate to lender review or approval. Based on the authoritative lender requirements and current validated findings, the following items remain open across the requested groups:\n\n* **Entity ownership and signing authority:** Governing documents effective as of June 2026 for Heritage Partners III, LLC, including formation articles, the executed operating agreement and any applicable amendments (establishing current members, ownership percentages, and signing provisions), and an IRS EIN assignment letter (or written confirmation that no separate EIN exists). *(Note: Articles of organization have been saved but are not yet validated).*\n* **Current rent roll:** A rent roll snapshot as of June 2026 for 290 Miron Drive #4, Southlake, TX, specifying occupied and vacant spaces, tenant names, rents, lease terms, and tenant expense responsibilities. *(A rent roll spreadsheet has been saved but is not yet validated).*\n* **Leases, assignment, and applicable amendments:** Complete lease chain effective for June 2026, including the executed original lease for 290 Miron Drive #4, the executed April 4, 2016 assignment and assumption to Heritage Partners III, LLC, and all applicable amendments (including the first amendment). *(Lease documents have been saved but are not yet validated).*\n* **Property operating statements:** Full calendar year 2025 property operating statement (rental income and expenses) and complete 2026 year-to-date actual operating results with specified reporting cutoff dates.\n* **Borrower bank and brokerage statements:** While March, April, and May 2026 statements are verified for Morgan Stanley account `187-064512-084`, your balance sheet reflects accounts at City National Bank and UBS Financial. Complete monthly statements for March, April, and May 2026 are required for any additional borrower accounts in underwriting scope (or clarification confirming which accounts are active for the borrower entity).\n\n### Next Steps\n1. Upload the **2025 full year-end property operating statement** (income and expenses).\n2. Upload the **executed operating agreement** (with any amendments) and the **EIN assignment letter** for Heritage Partners III, LLC."
+      },
+      "finalReply": "The newly uploaded file **2023 YE Rental Income & Expense.pdf** has been evaluated.\n\n### What This Established\n* **Property Operating Statements:** The uploaded file consists of a single blank page with no readable text or data, so it does not add usable evidence. Note that your actual operating results for both 2023 and 2024 are already provided on the previously saved **2024 YE Rental Income & Expense.pdf**. Full-year 2025 operating results and complete 2026 year-to-date operating results remain outstanding.\n\n---\n\n### Remaining Outstanding Requests\nSaving files to the portal does not equate to lender review or approval. Based on the authoritative lender requirements and current validated findings, the following items remain open across the requested groups:\n\n* **Entity ownership and signing authority:** Governing documents effective as of June 2026 for Heritage Partners III, LLC, including formation articles, the executed operating agreement and any applicable amendments (establishing current members, ownership percentages, and signing provisions), and an IRS EIN assignment letter (or written confirmation that no separate EIN exists). *(Note: Articles of organization have been saved but are not yet validated).*\n* **Current rent roll:** A rent roll snapshot as of June 2026 for 290 Miron Drive #4, Southlake, TX, specifying occupied and vacant spaces, tenant names, rents, lease terms, and tenant expense responsibilities. *(A rent roll spreadsheet has been saved but is not yet validated).*\n* **Leases, assignment, and applicable amendments:** Complete lease chain effective for June 2026, including the executed original lease for 290 Miron Drive #4, the executed April 4, 2016 assignment and assumption to Heritage Partners III, LLC, and all applicable amendments (including the first amendment). *(Lease documents have been saved but are not yet validated).*\n* **Property operating statements:** Full calendar year 2025 property operating statement (rental income and expenses) and complete 2026 year-to-date actual operating results with specified reporting cutoff dates.\n* **Borrower bank and brokerage statements:** While March, April, and May 2026 statements are verified for Morgan Stanley account `187-064512-084`, your balance sheet reflects accounts at City National Bank and UBS Financial. Complete monthly statements for March, April, and May 2026 are required for any additional borrower accounts in underwriting scope (or clarification confirming which accounts are active for the borrower entity).\n\n### Next Steps\n1. Upload the **2025 full year-end property operating statement** (income and expenses).\n2. Upload the **executed operating agreement** (with any amendments) and the **EIN assignment letter** for Heritage Partners III, LLC.",
+      "quality": "fail",
+      "qualityReason": "Final report wrongly treats saved 2025 operating evidence as outstanding; not all saved evidence analyzed.",
+      "trace": {
+        "spanId": "ccaa4d0d4c0cd607",
+        "traceId": "bdde690a9ca3097bb603a89f16f9b99a"
+      }
+    },
+    {
+      "batchId": "4acddc5b-f81d-42c5-8162-b5ab7626971b",
+      "files": [
+        "Morgan Stanley Heritage III 2026-05-31.pdf"
+      ],
+      "originalBatchCreatedAt": "2026-11-09T01:11:44.093Z",
+      "recoveryQueuedAt": "2026-11-09T01:22:35.173Z",
+      "acknowledgedAt": "2026-11-09T01:23:24.966Z",
+      "investigationAcceptedAt": "2026-11-09T01:23:24.765Z",
+      "investigationTerminalAt": "2026-11-09T01:23:47.642Z",
+      "finalReplyAt": "2026-11-09T01:30:18.361Z",
+      "recoveryToAckSeconds": 49.793,
+      "investigationSeconds": 22.877,
+      "recoveryToFinalSeconds": 463.188,
+      "acknowledgement": "Evaluating Morgan Stanley Heritage III 2026-05-31.pdf against borrower bank and brokerage statement requirements.",
+      "investigationState": "partial",
+      "followupState": "completed",
+      "followupDecision": {
+        "kind": "reply",
+        "message": "The upload of **Morgan Stanley Heritage III 2026-05-31.pdf** has been evaluated alongside your previously saved March and April statements.\n\n### What This Established\n* **Borrower Account Statements:** Complete monthly statements for March, April, and May 2026 are verified for Morgan Stanley account `187-064512-084`, confirming **Heritage Partners III, LLC** as the account holder.\n\n### Outstanding Items\nWhile several files have been saved across your other requests (saving does not equate to lender review or approval), the following items remain open based on current validated results:\n\n* **Entity ownership and signing authority:** Governing documents effective as of June 2026, including formation documents/articles identifying Heritage Partners III, LLC, the executed operating agreement (with any amendments) establishing current members, ownership percentages, and signing authority, plus an EIN assignment letter (or written confirmation that no separate EIN exists).\n* **Current rent roll:** A rent roll snapshot as of June 2026 for 290 Miron Drive #4 showing occupied and vacant spaces, tenants, rents, lease terms, and expense responsibilities.\n* **Leases, assignment, and applicable amendments:** The complete lease chain effective for June 2026, including the executed original lease, the April 4, 2016 assignment and assumption to Heritage Partners III, LLC, and all applicable amendments.\n* **Property operating statements:** Actual property operating results for full years 2023, 2024, and 2025, plus 2026 year-to-date operating results (the uploaded `2023 YE Rental Income & Expense.pdf` was blank/unreadable, though 2023 and 2024 results appear on your 2024 statement; 2025 year-end and complete 2026 YTD income/expense remain needed).\n* **Additional bank or brokerage accounts:** Your 2026 balance sheet indicates balances at City National Bank and UBS Financial. If these are active borrower accounts in underwriting scope, complete monthly statements for March, April, and May 2026 are required (or clarification that Morgan Stanley is the only active underwriting account).\n\n### Next Step\nUpload the **executed operating agreement** (and any amendments) along with the **EIN letter** for Heritage Partners III, LLC."
+      },
+      "finalReply": "The upload of **Morgan Stanley Heritage III 2026-05-31.pdf** has been evaluated alongside your previously saved March and April statements.\n\n### What This Established\n* **Borrower Account Statements:** Complete monthly statements for March, April, and May 2026 are verified for Morgan Stanley account `187-064512-084`, confirming **Heritage Partners III, LLC** as the account holder.\n\n### Outstanding Items\nWhile several files have been saved across your other requests (saving does not equate to lender review or approval), the following items remain open based on current validated results:\n\n* **Entity ownership and signing authority:** Governing documents effective as of June 2026, including formation documents/articles identifying Heritage Partners III, LLC, the executed operating agreement (with any amendments) establishing current members, ownership percentages, and signing authority, plus an EIN assignment letter (or written confirmation that no separate EIN exists).\n* **Current rent roll:** A rent roll snapshot as of June 2026 for 290 Miron Drive #4 showing occupied and vacant spaces, tenants, rents, lease terms, and expense responsibilities.\n* **Leases, assignment, and applicable amendments:** The complete lease chain effective for June 2026, including the executed original lease, the April 4, 2016 assignment and assumption to Heritage Partners III, LLC, and all applicable amendments.\n* **Property operating statements:** Actual property operating results for full years 2023, 2024, and 2025, plus 2026 year-to-date operating results (the uploaded `2023 YE Rental Income & Expense.pdf` was blank/unreadable, though 2023 and 2024 results appear on your 2024 statement; 2025 year-end and complete 2026 YTD income/expense remain needed).\n* **Additional bank or brokerage accounts:** Your 2026 balance sheet indicates balances at City National Bank and UBS Financial. If these are active borrower accounts in underwriting scope, complete monthly statements for March, April, and May 2026 are required (or clarification that Morgan Stanley is the only active underwriting account).\n\n### Next Step\nUpload the **executed operating agreement** (and any amendments) along with the **EIN letter** for Heritage Partners III, LLC.",
+      "quality": "fail",
+      "qualityReason": "Final report wrongly treats saved 2025 operating evidence as outstanding; not all saved evidence analyzed.",
+      "trace": {
+        "spanId": "b26712d386a7c07f",
+        "traceId": "bdde690a9ca3097bb603a89f16f9b99a"
+      }
+    },
+    {
+      "batchId": "8ac5232f-94b8-49e9-a4cd-b973926eadd1",
+      "files": [
+        "Morgan Stanley Heritage III 2026-03-31.pdf",
+        "Morgan Stanley Heritage III 2026-04-30.pdf"
+      ],
+      "originalBatchCreatedAt": "2026-11-09T01:14:04.567Z",
+      "recoveryQueuedAt": "2026-11-09T01:22:35.173Z",
+      "acknowledgedAt": "2026-11-09T01:28:31.012Z",
+      "investigationAcceptedAt": "2026-11-09T01:28:30.767Z",
+      "investigationTerminalAt": "2026-11-09T01:29:27.391Z",
+      "finalReplyAt": null,
+      "recoveryToAckSeconds": 355.839,
+      "investigationSeconds": 56.624,
+      "recoveryToFinalSeconds": null,
+      "acknowledgement": "Evaluating Morgan Stanley Heritage III 2026-03-31.pdf and Morgan Stanley Heritage III 2026-04-30.pdf against borrower bank and brokerage statement requirements.",
+      "investigationState": "partial",
+      "followupState": "blocked",
+      "followupDecision": {
+        "goal": "Evaluate newly uploaded Morgan Stanley statements for March 2026 and April 2026 against borrower bank and brokerage statement requirements.",
+        "kind": "investigate",
+        "message": "Evaluating Morgan Stanley statements for March and April 2026 against bank and brokerage statement requirements.",
+        "documentIds": [
+          "9dd0e707-9d97-4bc0-bcc9-959a5aec8562",
+          "056b37f2-599f-4791-9338-e2889f3fc892"
+        ],
+        "requirementIds": [
+          "7fecbda0-2354-4a96-a917-3a4990b0c581"
+        ]
+      },
+      "finalReply": null,
+      "quality": "fail",
+      "qualityReason": "No final borrower report; followup redelegation blocked.",
+      "trace": {
+        "spanId": "12b3accdaca85e6a",
+        "traceId": "bdde690a9ca3097bb603a89f16f9b99a"
+      }
+    },
+    {
+      "batchId": "39e26a73-fb5d-41d8-8876-77f4862e84f2",
+      "files": [
+        "2015-10-01 THR STT Southlake ASC Lease Exp 12-31-25.pdf",
+        "2016-04-04 Assignment and Assumption of Lease_EX.pdf",
+        "2024-12-31 1st Amendment to Lease Exp 12-31-35.pdf"
+      ],
+      "originalBatchCreatedAt": "2026-11-09T01:18:50.191Z",
+      "recoveryQueuedAt": "2026-11-09T01:22:35.173Z",
+      "acknowledgedAt": "2026-11-09T01:25:25.194Z",
+      "investigationAcceptedAt": "2026-11-09T01:25:25.013Z",
+      "investigationTerminalAt": "2026-11-09T01:27:21.791Z",
+      "finalReplyAt": null,
+      "recoveryToAckSeconds": 170.021,
+      "investigationSeconds": 116.778,
+      "recoveryToFinalSeconds": null,
+      "acknowledgement": "Evaluating the newly uploaded lease, assignment and assumption agreement, and first lease amendment against the lease chain requirement.",
+      "investigationState": "waiting_input",
+      "followupState": "blocked",
+      "followupDecision": {
+        "goal": "Evaluate the newly uploaded lease documents (original lease, assignment and assumption agreement, and first lease amendment) against the lease chain requirement.",
+        "kind": "investigate",
+        "message": "Evaluating the newly uploaded lease documents against the lease chain requirement.",
+        "documentIds": [
+          "b105f859-3274-4a25-9e8c-e985897edbfd",
+          "f0a5cd4f-0fbe-48fb-a615-1e32db129da6",
+          "10f97c6e-42ec-4bbb-8d43-a6f378f0469b"
+        ],
+        "requirementIds": [
+          "65919672-c12a-407f-bde9-ec36abcebaa4"
+        ]
+      },
+      "finalReply": null,
+      "quality": "fail",
+      "qualityReason": "No final borrower report; followup redelegation blocked.",
+      "trace": {
+        "spanId": "76d39ed3470a069b",
+        "traceId": "bdde690a9ca3097bb603a89f16f9b99a"
+      }
+    },
+    {
+      "batchId": "0ad48c9a-c666-4bea-b10b-ecf8efb6b5b9",
+      "files": [
+        "2026 Rent vs NNN & Expense Breakdown.pdf",
+        "2026 YTD Rental Income & Expense.pdf",
+        "2025 YE Rental Income & Expense.pdf",
+        "2026 YTD Balance Sheet.pdf"
+      ],
+      "originalBatchCreatedAt": "2026-11-09T01:19:52.842Z",
+      "recoveryQueuedAt": "2026-11-09T01:22:35.173Z",
+      "acknowledgedAt": "2026-11-09T01:23:53.444Z",
+      "investigationAcceptedAt": "2026-11-09T01:23:53.154Z",
+      "investigationTerminalAt": "2026-11-09T01:25:12.507Z",
+      "finalReplyAt": null,
+      "recoveryToAckSeconds": 78.271,
+      "investigationSeconds": 79.353,
+      "recoveryToFinalSeconds": null,
+      "acknowledgement": "Evaluating newly uploaded 2025 YE and 2026 YTD property financial documents against the property operating statement requirements.",
+      "investigationState": "waiting_input",
+      "followupState": "blocked",
+      "followupDecision": {
+        "goal": "Evaluate newly uploaded 2025 YE Rental Income & Expense, 2026 YTD Rental Income & Expense, 2026 Rent vs NNN & Expense Breakdown, and 2026 YTD Balance Sheet against property operating statements requirements.",
+        "kind": "investigate",
+        "message": "Evaluating newly uploaded 2025 year-end and 2026 YTD property financial documents against the property operating statements requirement.",
+        "documentIds": [
+          "4f763d26-f2f3-48dc-96f4-b0e6414a3927",
+          "e3a312fe-c6c7-4eb3-bb3f-47789ee28db4",
+          "9e1f5daa-b79e-4a3b-81b3-34c8f130a42f",
+          "b6d1a88e-243b-4294-a3b5-68e20bcc3c4e"
+        ],
+        "requirementIds": [
+          "72c6c552-f642-4989-80de-79d4fc81487f"
+        ]
+      },
+      "finalReply": null,
+      "quality": "fail",
+      "qualityReason": "No final borrower report; followup redelegation blocked.",
+      "trace": {
+        "spanId": "8e405f1bb3bb2851",
+        "traceId": "bdde690a9ca3097bb603a89f16f9b99a"
+      }
+    },
+    {
+      "batchId": "0427a9d3-df07-42ed-bd40-4ffc32eb7f9a",
+      "files": [
+        "2006-04-20 CA Articles of Organization.pdf"
+      ],
+      "originalBatchCreatedAt": "2026-11-09T01:21:36.556Z",
+      "recoveryQueuedAt": "2026-11-09T01:22:35.173Z",
+      "acknowledgedAt": "2026-11-09T01:27:28.782Z",
+      "investigationAcceptedAt": "2026-11-09T01:27:28.501Z",
+      "investigationTerminalAt": "2026-11-09T01:28:22.393Z",
+      "finalReplyAt": null,
+      "recoveryToAckSeconds": 293.609,
+      "investigationSeconds": 53.892,
+      "recoveryToFinalSeconds": null,
+      "acknowledgement": "Evaluating 2006-04-20 CA Articles of Organization.pdf against the entity ownership and signing authority requirements.",
+      "investigationState": "waiting_input",
+      "followupState": "blocked",
+      "followupDecision": {
+        "goal": "Evaluate the newly uploaded 2006-04-20 CA Articles of Organization against entity ownership and signing authority requirements.",
+        "kind": "investigate",
+        "message": "Evaluating 2006-04-20 CA Articles of Organization.pdf against entity ownership and signing authority requirements.",
+        "documentIds": [
+          "054d6184-57ff-4862-9a62-2e8bc27ef855"
+        ],
+        "requirementIds": [
+          "39143eb6-09de-46ae-9d6d-319b5b0ae89b"
+        ]
+      },
+      "finalReply": null,
+      "quality": "fail",
+      "qualityReason": "No final borrower report; followup redelegation blocked.",
+      "trace": {
+        "spanId": "eb2d43bf622511a0",
+        "traceId": "bdde690a9ca3097bb603a89f16f9b99a"
+      }
+    }
+  ]
+}

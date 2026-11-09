@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "8d8011d6ce307a03457820236d9569690ac9676f36d3a7b75c28a18459a6955a",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "production-check",
+          "sequence": "1",
+          "text": "Are my files still awaiting lender review?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Lender review status is not supplied. State that this status cannot be confirmed from saved-file inventory. Do not assert awaiting review, not reviewed, reviewed, approved or rejected. Do not investigate documents merely to establish lender workflow status.",
+    "action": {
+      "kind": "reply",
+      "message": "I cannot confirm whether your files are awaiting lender review, as our system does not receive the lender's evaluation status. \n\nAs a general rule, having files saved in your application does not equate to lender review or approval.\n\nYour currently saved files are:\n- **Rent roll.pdf**\n- **2025 operating statement.pdf**"
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All claims are supported by the provided data and rubric guidelines; the assistant correctly notes that lender review status cannot be confirmed, explains policy distinctions without asserting actual status, and lists currently saved files accurately."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly addresses the user's question regarding whether their files are awaiting lender review."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response appropriately clarifies the boundary of system data and provides relevant file inventory context without triggering unnecessary workflow steps."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 639,
+    "completion_tokens": 503,
+    "total_tokens": 1142,
+    "cost": 0.0023655,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0023655,
+      "upstream_inference_prompt_cost": 0.00047925,
+      "upstream_inference_completions_cost": 0.00188625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 314,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

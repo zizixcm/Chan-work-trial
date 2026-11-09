@@ -1,0 +1,52 @@
+{
+  "candidateId": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Synthetic Elm LLC",
+        "propertyName": "Elm Center"
+      },
+      "documents": [
+        {
+          "documentId": "e1",
+          "name": "Elm lease.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Executed lease",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Executed current lease"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": true
+    },
+    "messages": [
+      {
+        "id": "h1",
+        "sequence": "1",
+        "text": "Is my upload done?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null,
+      "activeRuns": [],
+      "pendingQuestions": []
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "**Elm lease.pdf** is saved, but additional uploads are still in progress. \n\n**Next step:**\n* Check your upload progress to ensure any remaining files finish uploading."
+  },
+  "actualMicros": 4973,
+  "executed": true
+}

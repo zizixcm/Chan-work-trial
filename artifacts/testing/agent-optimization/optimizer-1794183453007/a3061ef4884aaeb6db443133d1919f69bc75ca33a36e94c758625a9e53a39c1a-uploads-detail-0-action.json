@@ -1,0 +1,59 @@
+{
+  "candidateId": "a3061ef4884aaeb6db443133d1919f69bc75ca33a36e94c758625a9e53a39c1a",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [
+        {
+          "documentId": "d1",
+          "name": "Rent roll.pdf",
+          "active": true
+        },
+        {
+          "documentId": "d2",
+          "name": "2025 operating statement.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "messages": [
+      {
+        "id": "m1",
+        "sequence": "1",
+        "text": "List every uploaded file by name and explain whether saving means lender approval."
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "Here are the files currently saved in your inventory:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nSaving a file does not mean lender approval. It confirms that the document has been successfully uploaded and stored, but it has not yet been reviewed or approved by the lender."
+  },
+  "actualMicros": 3420,
+  "executed": true
+}

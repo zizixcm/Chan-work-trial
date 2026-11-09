@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-specific",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "Yes, your rent roll has been uploaded as **Rent roll.pdf**.\n\nPlease note that file presence confirms receipt, but not qualitative acceptance or lender review."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements are fully supported by the document inventory, and the response accurately clarifies that upload does not equal review or acceptance."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response clearly confirms that the rent roll was uploaded and identifies the specific file name (Rent roll.pdf)."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No unnecessary next steps were suggested, in accordance with the rubric."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no repetitive text."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 24,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6330,
+  "elapsedMs": 9737
+}

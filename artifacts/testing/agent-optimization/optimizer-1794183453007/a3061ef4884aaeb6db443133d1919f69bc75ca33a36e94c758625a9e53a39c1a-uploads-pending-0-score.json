@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-pending",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "You have 2 saved files:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nOther uploads are still in progress. Please check your upload progress to confirm those files finish transferring."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements accurately reflect the provided facts: the two active documents are correctly listed, and the mention of in-progress uploads corresponds to pendingUploads being true."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers what has been uploaded by listing the saved files and clarifying that additional uploads are pending."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response suggests checking upload progress to ensure pending transfers finish, without improperly requesting re-uploads of saved files."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and does not repeat information."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 29,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 5422,
+  "elapsedMs": 7880
+}

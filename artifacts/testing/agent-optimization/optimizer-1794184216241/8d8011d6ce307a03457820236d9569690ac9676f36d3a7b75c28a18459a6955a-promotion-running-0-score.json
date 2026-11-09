@@ -1,0 +1,32 @@
+{
+  "caseId": "promotion-running",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "Not yet—the review of your uploaded documents is currently in progress.\n\nWe have saved:\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nI will update you as soon as the review is complete."
+  },
+  "review": {
+    "grounded": {
+      "passed": false,
+      "reason": "The response asserts that review of the uploaded documents is 'Not yet' finished and 'currently in progress'. There is an active system run investigating saved evidence, but there is no explicit lender review status established in the data. Asserting that documents have not yet been reviewed or are undergoing review conflates system investigation with lender review and asserts an unsupported review status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly addresses the user's inquiry regarding the progress of the document review."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "It clearly outlines the documents currently saved and indicates that an update will follow once processing concludes."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response does not duplicate information or repeat previous messages."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 32,
+  "hardPassed": false,
+  "passed": false,
+  "costMicros": 8783,
+  "elapsedMs": 12968
+}

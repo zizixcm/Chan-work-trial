@@ -1,0 +1,1964 @@
+{
+  "checkpoints": [
+    {
+      "activeDocumentIds": [
+        "f255f21eba0d6",
+        "f447b92b54259"
+      ],
+      "checkpoint": 1,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f255f21eba0d6",
+              "f447b92b54259"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Kestrel Basin"
+          },
+          "missingDocumentIds": [
+            "fdd8a7b2899dd"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f255f21eba0d6",
+              "f447b92b54259"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Kestrel Basin"
+          },
+          "missingDocumentIds": [
+            "fdd8a7b2899dd"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f255f21eba0d6",
+              "f447b92b54259"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Kestrel Basin"
+          },
+          "missingDocumentIds": [
+            "f6fdf7d4d20d3"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 4 units occupied by the tenants listed; only account ending 7470 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Kestrel Basin"
+          },
+          "missingDocumentIds": [
+            "f6fdf7d4d20d3",
+            "fdd8a7b2899dd"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f447b92b54259",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 169440; other income USD 0.",
+                "Operating expenses USD 56480; NOI USD 112960.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f447b92b54259",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f255f21eba0d6",
+              "f447b92b54259"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Kestrel Basin"
+          },
+          "missingDocumentIds": [
+            "fa1678da85c28"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Kestrel Basin"
+          },
+          "missingDocumentIds": [
+            "f6fdf7d4d20d3",
+            "fa1678da85c28",
+            "fdd8a7b2899dd"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f447b92b54259",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 169440; other income USD 0.",
+                "Operating expenses USD 56480; NOI USD 112960.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f447b92b54259",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 3,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 3
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 4,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 5,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 4
+              }
+            ],
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 5
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 6,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 7,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 6
+              }
+            ],
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 7
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f255f21eba0d6",
+              "f447b92b54259"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Formation certificate identifies the declared borrower.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Kestrel Basin Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fb477645f50fa"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f255f21eba0d6",
+              "f447b92b54259"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Kestrel Basin Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f5d6e97d44fbd"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f255f21eba0d6",
+              "f447b92b54259"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Kestrel Basin Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f5d6e97d44fbd"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f255f21eba0d6",
+        "f447b92b54259",
+        "f5d6e97d44fbd",
+        "fb477645f50fa",
+        "fdd8a7b2899dd"
+      ],
+      "checkpoint": 2,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fdd8a7b2899dd",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Kestrel Studio; monthly base rent USD 3170; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Kestrel Supply; monthly base rent USD 3410; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Kestrel Atelier; monthly base rent USD 3650; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Kestrel Market; monthly base rent USD 3890; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fdd8a7b2899dd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fdd8a7b2899dd",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Kestrel Studio; monthly base rent USD 3170; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Kestrel Supply; monthly base rent USD 3410; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Kestrel Atelier; monthly base rent USD 3650; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Kestrel Market; monthly base rent USD 3890; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fdd8a7b2899dd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f255f21eba0d6",
+              "f447b92b54259",
+              "f5d6e97d44fbd",
+              "fb477645f50fa",
+              "fdd8a7b2899dd"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Kestrel Basin"
+          },
+          "missingDocumentIds": [
+            "f6fdf7d4d20d3"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 4 units occupied by the tenants listed; only account ending 7470 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Kestrel Basin"
+          },
+          "missingDocumentIds": [
+            "f6fdf7d4d20d3"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "fdd8a7b2899dd",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Kestrel Studio; monthly base rent USD 3170; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Kestrel Supply; monthly base rent USD 3410; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Kestrel Atelier; monthly base rent USD 3650; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Kestrel Market; monthly base rent USD 3890; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fdd8a7b2899dd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f447b92b54259",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 169440; other income USD 0.",
+                "Operating expenses USD 56480; NOI USD 112960.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f447b92b54259",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f255f21eba0d6",
+              "f447b92b54259",
+              "f5d6e97d44fbd",
+              "fb477645f50fa",
+              "fdd8a7b2899dd"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Kestrel Basin"
+          },
+          "missingDocumentIds": [
+            "fa1678da85c28"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Kestrel Basin"
+          },
+          "missingDocumentIds": [
+            "f6fdf7d4d20d3",
+            "fa1678da85c28"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "fdd8a7b2899dd",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Kestrel Studio; monthly base rent USD 3170; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Kestrel Supply; monthly base rent USD 3410; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Kestrel Atelier; monthly base rent USD 3650; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Kestrel Market; monthly base rent USD 3890; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f447b92b54259",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 169440; other income USD 0.",
+                "Operating expenses USD 56480; NOI USD 112960.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fdd8a7b2899dd",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f447b92b54259",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 3,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 3
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 4,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 5,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 4
+              }
+            ],
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 5
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 6,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 7,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 6
+              }
+            ],
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 7
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fb477645f50fa",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Kestrel Basin Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Fenn Arlo. Fictional registry reference H02-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fb477645f50fa",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f5d6e97d44fbd",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Kestrel Basin Holdings LLC. Effective 2024-10-01.",
+                "Members: Fenn Arlo 60%; Zuri Hask 40%. Total ownership 100%.",
+                "Manager: Fenn Arlo. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Fenn Arlo; member signature /s/ Zuri Hask; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f5d6e97d44fbd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f5d6e97d44fbd",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Kestrel Basin Holdings LLC. Effective 2024-10-01.",
+                "Members: Fenn Arlo 60%; Zuri Hask 40%. Total ownership 100%.",
+                "Manager: Fenn Arlo. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Fenn Arlo; member signature /s/ Zuri Hask; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f5d6e97d44fbd",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f255f21eba0d6",
+        "f447b92b54259",
+        "f5d6e97d44fbd",
+        "fb477645f50fa",
+        "fdd8a7b2899dd",
+        "f6fdf7d4d20d3",
+        "fa1678da85c28"
+      ],
+      "checkpoint": 3,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fdd8a7b2899dd",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Kestrel Studio; monthly base rent USD 3170; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Kestrel Supply; monthly base rent USD 3410; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Kestrel Atelier; monthly base rent USD 3650; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Kestrel Market; monthly base rent USD 3890; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fdd8a7b2899dd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fdd8a7b2899dd",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Kestrel Studio; monthly base rent USD 3170; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Kestrel Supply; monthly base rent USD 3410; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Kestrel Atelier; monthly base rent USD 3650; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Kestrel Market; monthly base rent USD 3890; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fdd8a7b2899dd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H02-101. Property: Kestrel Basin; unit 101.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3170.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H02-102. Property: Kestrel Basin; unit 102.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3410.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 3,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H02-103. Property: Kestrel Basin; unit 103.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3650.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 4,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H02-104. Property: Kestrel Basin; unit 104.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Market.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3890.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 4
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 4 units occupied by the tenants listed; only account ending 7470 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fdd8a7b2899dd",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Kestrel Studio; monthly base rent USD 3170; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Kestrel Supply; monthly base rent USD 3410; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Kestrel Atelier; monthly base rent USD 3650; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Kestrel Market; monthly base rent USD 3890; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H02-101. Property: Kestrel Basin; unit 101.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3170.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H02-102. Property: Kestrel Basin; unit 102.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3410.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 3,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H02-103. Property: Kestrel Basin; unit 103.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3650.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 4,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H02-104. Property: Kestrel Basin; unit 104.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Market.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3890.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fdd8a7b2899dd",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 4
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f447b92b54259",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 169440; other income USD 0.",
+                "Operating expenses USD 56480; NOI USD 112960.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f447b92b54259",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fa1678da85c28",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 127080; other income USD 0.",
+                "Operating expenses USD 42360; NOI USD 84720.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fa1678da85c28",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fdd8a7b2899dd",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Kestrel Studio; monthly base rent USD 3170; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Kestrel Supply; monthly base rent USD 3410; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Kestrel Atelier; monthly base rent USD 3650; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Kestrel Market; monthly base rent USD 3890; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H02-101. Property: Kestrel Basin; unit 101.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3170.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H02-102. Property: Kestrel Basin; unit 102.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3410.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 3,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H02-103. Property: Kestrel Basin; unit 103.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3650.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f6fdf7d4d20d3",
+              "page": 4,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H02-104. Property: Kestrel Basin; unit 104.",
+                "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Market.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3890.",
+                "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f447b92b54259",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 169440; other income USD 0.",
+                "Operating expenses USD 56480; NOI USD 112960.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "fa1678da85c28",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 127080; other income USD 0.",
+                "Operating expenses USD 42360; NOI USD 84720.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fdd8a7b2899dd",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "f6fdf7d4d20d3",
+                "page": 4
+              }
+            ],
+            [
+              {
+                "documentId": "f447b92b54259",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fa1678da85c28",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 3,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 3
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 4,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 5,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 4
+              }
+            ],
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 5
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 6,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f255f21eba0d6",
+              "page": 7,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 6
+              }
+            ],
+            [
+              {
+                "documentId": "f255f21eba0d6",
+                "page": 7
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fb477645f50fa",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Kestrel Basin Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Fenn Arlo. Fictional registry reference H02-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fb477645f50fa",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f5d6e97d44fbd",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Kestrel Basin Holdings LLC. Effective 2024-10-01.",
+                "Members: Fenn Arlo 60%; Zuri Hask 40%. Total ownership 100%.",
+                "Manager: Fenn Arlo. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Fenn Arlo; member signature /s/ Zuri Hask; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f5d6e97d44fbd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f5d6e97d44fbd",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Kestrel Basin Holdings LLC. Effective 2024-10-01.",
+                "Members: Fenn Arlo 60%; Zuri Hask 40%. Total ownership 100%.",
+                "Manager: Fenn Arlo. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Fenn Arlo; member signature /s/ Zuri Hask; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f5d6e97d44fbd",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    }
+  ],
+  "crossDocumentArithmetic": {
+    "annualBaseRent": 169440,
+    "calculation": "2025: sum original monthly rents *12. 2026: original *9 plus amendment 1 uplift for April-September and amendment 2 uplift for July-September when applicable.",
+    "currentMonthlyRent": 14120,
+    "currentPeriodBaseRent": 127080
+  },
+  "roles": {
+    "annual": "f447b92b54259",
+    "bank7": "ffcf70ee8cf6e",
+    "bank8": "f3b31cd4a67d0",
+    "bank9": "ffd19e3beddf7",
+    "current": "fa1678da85c28",
+    "formation": "fb477645f50fa",
+    "governing": "f5d6e97d44fbd",
+    "leases": "f6fdf7d4d20d3",
+    "quarter_archive": "f255f21eba0d6",
+    "roll": "fdd8a7b2899dd"
+  },
+  "semanticReviewRequired": true,
+  "sourcePages": {
+    "f255f21eba0d6": [
+      {
+        "lines": [
+          "July: pages 2-3; August: pages 4-5; September: pages 6-7."
+        ],
+        "title": "Quarterly account archive"
+      },
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      },
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "scan": true,
+        "title": "Account activity"
+      },
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f3b31cd4a67d0": [
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f447b92b54259": [
+      {
+        "lines": [
+          "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 169440; other income USD 0.",
+          "Operating expenses USD 56480; NOI USD 112960.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f5d6e97d44fbd": [
+      {
+        "lines": [
+          "Entity: Kestrel Basin Holdings LLC. Effective 2024-10-01.",
+          "Members: Fenn Arlo 60%; Zuri Hask 40%. Total ownership 100%.",
+          "Manager: Fenn Arlo. Manager may execute refinancing documents for this company.",
+          "Member signature /s/ Fenn Arlo; member signature /s/ Zuri Hask; dated 2024-10-01."
+        ],
+        "title": "Operating agreement"
+      }
+    ],
+    "f6fdf7d4d20d3": [
+      {
+        "lines": [
+          "Lease H02-101. Property: Kestrel Basin; unit 101.",
+          "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3170.",
+          "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H02-102. Property: Kestrel Basin; unit 102.",
+          "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3410.",
+          "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H02-103. Property: Kestrel Basin; unit 103.",
+          "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Atelier.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3650.",
+          "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H02-104. Property: Kestrel Basin; unit 104.",
+          "Landlord: Kestrel Basin Holdings LLC; tenant: Kestrel Market.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3890.",
+          "Landlord signature: /s/ Fenn Arlo, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Zuri Hask, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "scan": true,
+        "title": "Lease instrument"
+      }
+    ],
+    "fa1678da85c28": [
+      {
+        "lines": [
+          "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 127080; other income USD 0.",
+          "Operating expenses USD 42360; NOI USD 84720.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "fb477645f50fa": [
+      {
+        "lines": [
+          "Entity: Kestrel Basin Holdings LLC. Entity type: limited liability company.",
+          "Formed 2024-10-01. Organizer: Fenn Arlo. Fictional registry reference H02-REG.",
+          "This document establishes the named entity; it does not itself establish current manager authority."
+        ],
+        "title": "Certificate of formation"
+      }
+    ],
+    "fdd8a7b2899dd": [
+      {
+        "lines": [
+          "Property: Kestrel Basin. Owner: Kestrel Basin Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Kestrel Studio; monthly base rent USD 3170; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Kestrel Supply; monthly base rent USD 3410; lease 2025-01-01 to 2029-12-31.",
+          "Unit 103: Kestrel Atelier; monthly base rent USD 3650; lease 2025-01-01 to 2029-12-31.",
+          "Unit 104: Kestrel Market; monthly base rent USD 3890; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      }
+    ],
+    "ffcf70ee8cf6e": [
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "ffd19e3beddf7": [
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7470.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Kestrel Basin Holdings LLC. Account ending 7470. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ]
+  },
+  "status": "provisional",
+  "version": "CRE-E2E-oracle.1"
+}

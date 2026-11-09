@@ -1,0 +1,106 @@
+{
+  "role": "judge-calibration",
+  "configurationDigest": "0f0a3dc2ad4733b985a942cfec2a945df21042fb60607d000022c27291c0786a",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "What's been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Identify both saved files. Do not turn the answer into a missing-document checklist, infer completeness or approval, or invent a next step. No action is required by this snapshot.",
+    "action": {
+      "kind": "reply",
+      "message": "Rent roll.pdf and 2025 operating statement.pdf are saved and approved by the lender."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": false,
+      "reason": "The response claims that the documents are 'approved by the lender', but the snapshot contains no evidence regarding lender review or approval status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response identifies both uploaded documents as requested."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response does not invent unnecessary next steps."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text."
+    },
+    "criticalFailures": [
+      "approval_claim",
+      "invented_evidence"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 495,
+    "completion_tokens": 537,
+    "total_tokens": 1032,
+    "cost": 0.002385,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002385,
+      "upstream_inference_prompt_cost": 0.00037125,
+      "upstream_inference_completions_cost": 0.00201375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 364,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

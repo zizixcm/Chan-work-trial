@@ -1,0 +1,22 @@
+{
+  "migrations/postgres/026_chat_upload_admission.sql": "e196bc05249813682eeb95e5edcb9d9df123a27a38f45b30a1db9e97c0222faf",
+  "lib/agents/upload-admission.ts": "18d851fff5b7149d74831e86169875cbf8b584e0c09bb9aa3633eaef180ab48e",
+  "lib/agents/borrower-service.ts": "eb654487a34187d3537f8e4a3b727250b86930c5e63adb1a0a1bd60b6c40cac2",
+  "lib/borrower-chat/processing-bridge.ts": "412f019c230d9d7addd4ed30b41db215ae582eee6ff0cb3bfcb0a001205bef92",
+  "lib/borrower-chat/conversation-ui.ts": "7caf8f4659314e86cb1c780e51e0b40385db482350d2581f3aabb935f5c55b40",
+  "lib/borrower-chat/stream-browser.ts": "0c6b8b7e481a06dad3c1e8699466b091acae4e8806f7916851b7fea26e513854",
+  "app/components/batch-upload.tsx": "24be6704f27728af0da65e48ef0bd8e9b44cf617a9a1856f5a61f89b59936780",
+  "app/components/loan-chat-workspace.tsx": "d1d1f07422c93ddd91ae1042a2366c5897574e5426b4a0a7f5b21f0a34bdcf2a",
+  "app/components/loan-chat-workspace.module.css": "32cc206dd95f48173ebf0357c8dbfb31158b872ec5493f75df180b46836fc36a",
+  "app/components/processing-conversation.tsx": "2336c9f053ec816e56b6da0f8851b1b378af34f6503525c7927122a672a41769",
+  "app/components/processing-conversation.module.css": "e027f89b662991d14bec3de33e91ab77a89b9cb38bf0d55fabf2a97c457f3873",
+  "app/components/response-progress.tsx": "54e11cf2d0fd069ef4c21d54370b28a0ecdc93c5358665aeb5d06dd8262f21f1",
+  "tests/chat-upload-agents.integration.ts": "544b08cb01c218b83325d30a500e0f59545d1067711ac72859f70d1c01089d83",
+  "tests/chat-upload-upgrade.integration.ts": "8a1a7fd0c017a4b7951fe5fc132bb2d67b888b97a83fe48e5a2a38db81c10059",
+  "lib/agents/pilot-evidence.ts": "fc9ab0f2ea705ccc065441a7895e373217ed6fa51c610ca5faa557f4dbde20e8",
+  "scripts/borrower-agents-worker.ts": "beb58ed93a8c2bb3166b037bb33b2049581b36d9b58c97ea7c59b2812c632803",
+  "lib/evaluation-observability/index.ts": "b94b2bd951c82bdf860965b0a66d37cb81ba5df8046cc025d096ca2c402434b7",
+  "tests/pilot-upload-evidence.integration.ts": "15ff41a3ebb202627a4f2238efcd1a68b1802b0bfe5c13fafa83c4e25cf018ee",
+  "tests/chat-upload-journey.eval.ts": "a3ae33e73d47c23c6bcdb3916d06e0d2b6c6869f5c9813137351a090c0310b57",
+  "docs/evals/chat-upload.md": "f35d8e3451913787719af9d822d0e5d14f5153cce583da4d0afd6a1819bf4418"
+}

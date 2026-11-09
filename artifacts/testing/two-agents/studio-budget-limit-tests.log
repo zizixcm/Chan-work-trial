@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: reader scope cannot disappear; informational notices do not block
+ok 1 - reader scope cannot disappear; informational notices do not block
+  ---
+  duration_ms: 2.015791
+  type: 'test'
+  ...
+# Subtest: selective visual inspection resolves OCR uncertainty only on the same version and page
+ok 2 - selective visual inspection resolves OCR uncertainty only on the same version and page
+  ---
+  duration_ms: 0.298291
+  type: 'test'
+  ...
+# Subtest: failed reads preserve uncertainty until usable evidence is available
+ok 3 - failed reads preserve uncertainty until usable evidence is available
+  ---
+  duration_ms: 0.076833
+  type: 'test'
+  ...
+# Subtest: batch cap is atomic within cumulative ledger and unknown costs stay reserved
+ok 4 - batch cap is atomic within cumulative ledger and unknown costs stay reserved
+  ---
+  duration_ms: 29.212666
+  type: 'test'
+  ...
+# Subtest: native Studio exposes agent configs and traces but cannot bypass the metered controller
+ok 5 - native Studio exposes agent configs and traces but cannot bypass the metered controller
+  ---
+  duration_ms: 6075.247708
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7675.525167

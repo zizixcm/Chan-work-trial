@@ -1,0 +1,93 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "f367a4f796b28",
+    "fecd8a7c31cff",
+    "f143bba0e0f4f",
+    "f786ca0fb2e75",
+    "ffcf0f403cac5",
+    "f9c6bb6de47d5",
+    "f5357122b5284",
+    "f17dc927cc1b2",
+    "fda71241b691d",
+    "ffe64a92e0fe1",
+    "fe1dc1996b18e"
+  ],
+  "budgetInterrupt": {
+    "eligible": false,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7334",
+    "baseRents": [
+      2074,
+      2314
+    ],
+    "borrower": "Brindle Arcade Holdings LLC",
+    "currentRents": [
+      2074,
+      2314
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 0,
+    "manager": "Tavi Orr",
+    "otherOwner": "Nela Kest",
+    "property": "Brindle Arcade",
+    "tenants": [
+      "Brindle Studio",
+      "Brindle Supply"
+    ],
+    "units": [
+      "101",
+      "102"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 2 units occupied by the tenants listed; only account ending 7334 is requested. There are 0 lease amendments and 0 entity amendments. These are the files I found.",
+      "uploadIds": [
+        "f367a4f796b28",
+        "fecd8a7c31cff",
+        "f143bba0e0f4f",
+        "f786ca0fb2e75",
+        "ffcf0f403cac5",
+        "ffe64a92e0fe1"
+      ]
+    },
+    {
+      "borrowerText": "I renamed one statement. Does that finish the missing month?",
+      "uploadIds": [
+        "fe1dc1996b18e",
+        "f17dc927cc1b2",
+        "fda71241b691d",
+        "f5357122b5284"
+      ]
+    },
+    {
+      "borrowerText": "Here is the complete August statement.",
+      "supersedes": {
+        "ffe64a92e0fe1": "f9c6bb6de47d5"
+      },
+      "uploadIds": [
+        "f9c6bb6de47d5"
+      ]
+    }
+  ]
+}

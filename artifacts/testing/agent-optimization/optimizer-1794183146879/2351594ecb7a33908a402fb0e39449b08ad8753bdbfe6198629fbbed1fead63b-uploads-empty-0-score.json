@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-empty",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "No documents have been uploaded yet.\n\n**Next step:**\n* Please upload a current Rent Roll to get started."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements accurately reflect the inventory, which contains no uploaded documents and has an outstanding requirement for a current rent roll."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response clearly answers what has been uploaded by stating that no documents have been uploaded yet."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response appropriately instructs the borrower to upload the requested current rent roll as the next step."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no repetitive phrasing or loops."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 18,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 4270,
+  "elapsedMs": 7454
+}

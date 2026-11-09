@@ -1,0 +1,9 @@
+Candidate: 144f5a8c6ba43bc9dfbeca0fac2eaf690bf2037e + dirty workspace; 2026-11-08T15:27:23.389927
+Changes in this task: chat-message.tsx, response-progress.tsx, processing-conversation.tsx/.module.css, conversation-ui.ts, processing-bridge.ts, definitions.ts, chat-conversation-ui.test.ts, package.json/package-lock.json (react-markdown). Unrelated existing edits preserved.
+Preview: localhost:3102 is a separate release checkout; it does NOT represent this candidate and was not restarted.
+Automated: npm run test:agent PASS (128 tests + TypeScript). Formatting, unsafe content, queued/running/completed and historical-context rendering regression assertions PASS.
+Full: BLOCKED, shared previews active on ports 3001, 3101, 3102; no coordinated quiet window.
+Browser: UI quality and changed behavior PASS within a synthetic bundled component fixture at 1280x900 and 390x844. Verified bullet formatting, visible waiting indicator, slow-response text, disclosure, keyboard focus, no horizontal overflow on mobile, no console errors. Not production or live-agent verification. Temporary fixture/server cleaned up.
+Browser checklist: sign-in/access, borrower navigation, uploads/persistence, validation/recovery, organization, submission/lender review, live AI behavior NOT RUN. Network recovery and full live lifecycle NOT RUN in browser; static state assertions only.
+Existing duplicate generated .next/types/routes.d 2.ts caused initial TypeScript failure; preserved outside repo in /var/folders/lp/bmh4d0yd50sfpnmvk5qlhz7h0000gn/T/proximity-generated-types-wmufu3ax and rerun passed.
+Result: verified within listed scope; release promotion and full integration/browser checklist remain outstanding.

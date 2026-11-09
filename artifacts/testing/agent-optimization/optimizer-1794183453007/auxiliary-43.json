@@ -1,0 +1,96 @@
+{
+  "role": "judge",
+  "configurationDigest": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Synthetic Elm LLC",
+          "propertyName": "Elm Center"
+        },
+        "documents": [
+          {
+            "documentId": "e1",
+            "name": "Elm lease.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Executed lease",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Executed current lease"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "h1",
+          "sequence": "1",
+          "text": "Which files do you have?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null,
+        "activeRuns": [],
+        "pendingQuestions": []
+      },
+      "completeness": null
+    },
+    "rubric": "Name Elm lease.pdf as saved. No unsupported review, approval, missing-document or next-step claim.",
+    "action": {
+      "kind": "reply",
+      "message": "You have 1 saved file in your application for Elm Center:\n\n* **Elm lease.pdf**\n\nPlease note that a file being saved does not equate to lender review or approval."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements are grounded in the inventory facts, and the note clarifies policy without claiming an unverified review status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly identifies 'Elm lease.pdf' as the saved document in the application."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No inappropriate or premature next steps are pushed."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no repetitive content."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 471,
+    "completion_tokens": 446,
+    "total_tokens": 917,
+    "cost": 0.00202575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00202575,
+      "upstream_inference_prompt_cost": 0.00035325,
+      "upstream_inference_completions_cost": 0.0016725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 338,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

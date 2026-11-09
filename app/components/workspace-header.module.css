@@ -1,0 +1,21 @@
+.header {box-sizing:border-box;display:grid;grid-template-columns:160px minmax(0,1fr) auto;align-items:center;gap:20px;width:100%;min-height:60px;padding:7px 24px;background:#fff;border-bottom:1px solid #d9e2d7;flex-shrink:0;color:#243c32;}
+.header .brand {font-family:Manrope,Arial,sans-serif;font-size:26px;font-weight:800;letter-spacing:-1.4px;min-height:0;line-height:1.3;text-decoration:none;color:#243c32;}
+.brand span {color:#89a65b;}
+.role {font-size:16px;font-weight:600;line-height:1.4;}
+.account {min-width:0;justify-self:end;}
+.header .account button {min-height:44px;border:1px solid #c4d0c4;border-radius:7px;background:#fff;color:#31543d;font-size:16px;line-height:1.4;cursor:pointer;}
+.header :focus-visible {outline:3px solid #3d794f;outline-offset:4px;}
+@media(max-width:700px) {
+  .header {grid-template-columns:1fr auto;gap:8px 12px;padding:12px 20px;}
+  .header .brand {grid-column:1;grid-row:1;}
+  .role {grid-column:1 / -1;grid-row:2;font-size:16px;}
+  .account {grid-column:2;grid-row:1;}
+  .header .account button {max-width:155px;}
+}
+@media(max-width:360px) {
+  .header {grid-template-columns:1fr;}
+  .account {grid-column:1;grid-row:3;justify-self:start;}
+  .header .account button {max-width:none;}
+}
+
+@media(min-width:701px) {.header {height:60px;}}

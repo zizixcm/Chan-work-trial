@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-pending",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "You have 2 documents currently saved:\n\n* **Rent roll.pdf**\n* **2025 operating statement.pdf**\n\nOther uploads are still in progress, so please check your upload progress. As a reminder, having files saved does not equate to lender review or approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements match the facts: the two saved files are accurately listed, pending uploads are correctly noted as in progress, and the statement regarding saved files not equating to review or approval correctly states a policy distinction rather than making an unsupported status claim."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers what has been uploaded by listing the two saved documents and noting active pending uploads."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response appropriately suggests checking the status of unfinished uploads without asking to re-upload saved documents."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The message is concise and contains no redundant text."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 39,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 2461,
+  "elapsedMs": 4108
+}

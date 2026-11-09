@@ -1,0 +1,225 @@
+{"caseId":"D01","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"D02","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"D03","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"D04","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"D05","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"D06","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"D07","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"D08","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"H01","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"H02","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"H03","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"H04","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"DEV-HISTORY","boundaries":3,"nativeTrace":true,"qualityPassed":false,"controllerErrors":[]}
+{"caseId":"DEV-BUDGET","boundaries":4,"nativeTrace":true,"qualityPassed":false,"controllerErrors":["C-lifecycle:partial-publication-and-identification-pause-not-forced","C-lifecycle:partial-publication-and-identification-pause-not-forced"]}
+Error executing model scripted-tools Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js'
+}
+Exhausted all fallback models. Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js'
+}
+Error executing step workflow.executionWorkflow.step.llm-execution: Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)
+Error executing step workflow.agentic-loop.step.executionWorkflow: undefined
+Error executing model scripted-tools Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'p-map' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:314:9)
+    at packageResolve (node:internal/modules/esm/resolve:768:81)
+    at moduleResolve (node:internal/modules/esm/resolve:855:18)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+Exhausted all fallback models. Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'p-map' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:314:9)
+    at packageResolve (node:internal/modules/esm/resolve:768:81)
+    at moduleResolve (node:internal/modules/esm/resolve:855:18)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+Error executing step workflow.executionWorkflow.step.llm-execution: Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'p-map' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:314:9)
+    at packageResolve (node:internal/modules/esm/resolve:768:81)
+    at moduleResolve (node:internal/modules/esm/resolve:855:18)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+Error executing step workflow.agentic-loop.step.executionWorkflow: undefined
+Error executing model scripted-tools Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'p-map' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:314:9)
+    at packageResolve (node:internal/modules/esm/resolve:768:81)
+    at moduleResolve (node:internal/modules/esm/resolve:855:18)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+Exhausted all fallback models. Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'p-map' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:314:9)
+    at packageResolve (node:internal/modules/esm/resolve:768:81)
+    at moduleResolve (node:internal/modules/esm/resolve:855:18)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+Error executing step workflow.executionWorkflow.step.llm-execution: Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'p-map' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:314:9)
+    at packageResolve (node:internal/modules/esm/resolve:768:81)
+    at moduleResolve (node:internal/modules/esm/resolve:855:18)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+Error executing step workflow.agentic-loop.step.executionWorkflow: undefined
+Error executing model scripted-tools Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js'
+}
+Exhausted all fallback models. Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js'
+}
+Error executing step workflow.executionWorkflow.step.llm-execution: Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)
+Error executing step workflow.agentic-loop.step.executionWorkflow: undefined
+Error executing model scripted-tools Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js'
+}
+Exhausted all fallback models. Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js'
+}
+Error executing step workflow.executionWorkflow.step.llm-execution: Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/message-list-KTwc1Ivx.cjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)
+Error executing step workflow.agentic-loop.step.executionWorkflow: undefined
+{"caseId":"DEV-UPLOAD-RACE","boundaries":5,"nativeTrace":true,"qualityPassed":false,"controllerErrors":["C-lifecycle:stale-worker-interleaving-requires-injected-worker-race"]}
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js' imported from /Users/chanrao/Documents/ChatGPT/proximity/node_modules/@mastra/core/dist/agent-3djrMSaa.cjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:10494)
+    at resolveDirectory (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:11581)
+    at resolveTsPaths (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:13222)
+    at resolve (file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/tsx/dist/register-nyXW-TH3.mjs:2:15453)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///Users/chanrao/Documents/ChatGPT/proximity/node_modules/p-map/index.js'
+}

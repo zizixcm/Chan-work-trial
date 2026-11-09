@@ -1,0 +1,97 @@
+{
+  "checks": [
+    "real match relevance.state and shared verify completeness green",
+    "unmatched ambiguous partial failure unknown stale states",
+    "new upload reopens; failed registration does not poison new scope",
+    "failed upload retry same manifest; no fake validity pass on upload failure",
+    "auto-open minimize Escape focus restore background lock polling while minimized five viewports"
+  ],
+  "layouts": [
+    {
+      "w": 1280,
+      "h": 720,
+      "dimensions": {
+        "x": 300,
+        "y": 180.796875,
+        "width": 680,
+        "height": 358.390625,
+        "viewport": 720,
+        "scrollWidth": 1280,
+        "viewportWidth": 1280
+      },
+      "outside": {
+        "height": 720,
+        "width": 1280
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "dimensions": {
+        "x": 380,
+        "y": 270.796875,
+        "width": 680,
+        "height": 358.390625,
+        "viewport": 900,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "outside": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "dimensions": {
+        "x": 20,
+        "y": 233.296875,
+        "width": 350,
+        "height": 377.390625,
+        "viewport": 844,
+        "scrollWidth": 390,
+        "viewportWidth": 390
+      },
+      "outside": {
+        "height": 1194,
+        "width": 390
+      }
+    },
+    {
+      "w": 320,
+      "h": 740,
+      "dimensions": {
+        "x": 20,
+        "y": 179.90625,
+        "width": 280,
+        "height": 380.171875,
+        "viewport": 740,
+        "scrollWidth": 320,
+        "viewportWidth": 320
+      },
+      "outside": {
+        "height": 1271,
+        "width": 320
+      }
+    },
+    {
+      "w": 640,
+      "h": 360,
+      "dimensions": {
+        "x": 20,
+        "y": 18,
+        "width": 600,
+        "height": 324,
+        "viewport": 360,
+        "scrollWidth": 640,
+        "viewportWidth": 640
+      },
+      "outside": {
+        "height": 1108,
+        "width": 640
+      }
+    }
+  ],
+  "errors": []
+}

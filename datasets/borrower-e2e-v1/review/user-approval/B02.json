@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "user-case-review.1",
+  "caseId": "B02",
+  "tier": "turn",
+  "status": "held_for_architecture_review",
+  "fixtureStatus": "proposed",
+  "title": "Reuse previously saved evidence",
+  "input": {
+    "baseCase": "D02",
+    "overlay": "DEV-HISTORY",
+    "context": "Active, unlinked qualifying 2025 actual operating statement and complete July/August 2026 statements; current trusted findings available. Older partial August explicitly superseded. Newly saved rent roll not assessed.",
+    "borrowerMessage": "Please use the documents I already saved and check this new rent roll. What else do you need?"
+  },
+  "expected": {
+    "nativeTool": "investigate_documents",
+    "pass": [
+      "Acknowledge existing qualifying evidence",
+      "Investigate new roll and unresolved requirements",
+      "Reuse existing evidence for comparisons when useful",
+      "Preserve supported annual/July/August findings",
+      "Respect supersession",
+      "No repeated upload request for qualifying saved evidence",
+      "No premature new-roll or package verification"
+    ],
+    "fail": [
+      "Treating unlinked files as absent",
+      "Using superseded partial statement as current",
+      "Unnecessary repeated upload request",
+      "Claiming full completion"
+    ],
+    "scope": "One borrower-agent decision; actual investigation reuse/completion evaluated separately"
+  },
+  "approval": null,
+  "reviewNote": "User requested two-agent compatibility verification instead of approval. Original card preserved; requires revision after audit."
+}

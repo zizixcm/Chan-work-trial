@@ -1,0 +1,94 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "f436587b9d9c9",
+    "f617d0c2cdedf",
+    "f0d59e534f310",
+    "f557b4ef01666",
+    "f1db9f18acdc7",
+    "f7198c6bc028e",
+    "f1cb5ade214be",
+    "f58d620a49571",
+    "fb2a26f5d74e3",
+    "fe130401d7c4e"
+  ],
+  "budgetInterrupt": {
+    "eligible": false,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7368",
+    "baseRents": [
+      2348,
+      2588
+    ],
+    "borrower": "Dapple Works Holdings LLC",
+    "currentRents": [
+      2348,
+      2588
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 0,
+    "manager": "Elin Vos",
+    "otherOwner": "Pax Neri",
+    "property": "Dapple Works",
+    "tenants": [
+      "Dapple Studio",
+      "Dapple Supply"
+    ],
+    "units": [
+      "101",
+      "102"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 2 units occupied by the tenants listed; only account ending 7368 is requested. There are 0 lease amendments and 0 entity amendments.",
+      "uploadIds": [
+        "f436587b9d9c9",
+        "f617d0c2cdedf",
+        "f0d59e534f310",
+        "f557b4ef01666",
+        "f1db9f18acdc7",
+        "fe130401d7c4e",
+        "f1cb5ade214be"
+      ]
+    },
+    {
+      "borrowerText": "That August file belongs to another company. Do not match it to my bank request.",
+      "rejectedMatches": [
+        {
+          "documentId": "fe130401d7c4e",
+          "requirementId": "R4"
+        }
+      ],
+      "uploadIds": [
+        "f58d620a49571",
+        "fb2a26f5d74e3"
+      ]
+    },
+    {
+      "borrowerText": "Here is the correct account statement.",
+      "uploadIds": [
+        "f7198c6bc028e"
+      ]
+    }
+  ]
+}

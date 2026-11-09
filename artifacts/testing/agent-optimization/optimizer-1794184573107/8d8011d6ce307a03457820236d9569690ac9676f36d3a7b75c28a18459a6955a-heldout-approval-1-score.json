@@ -1,0 +1,32 @@
+{
+  "caseId": "heldout-approval",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "No, saving your document does not mean the lender has approved it. \n\nSaving simply stores the file in your application record. Document review and final loan approval are separate decisions made by the lender."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response explains general system behavior and lender review policy without asserting any unsupported review or approval status for the borrower's documents."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly and accurately answers the user's question regarding whether saving a document equates to lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No next steps were required for this conceptual clarification question, and none were inappropriately forced."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 34,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 1875,
+  "elapsedMs": 3466
+}

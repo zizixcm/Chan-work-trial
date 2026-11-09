@@ -1,0 +1,30 @@
+{
+  "createdAt": "2026-11-08T23:35:50.004720+00:00",
+  "stablePilotUrl": "http://localhost:3102",
+  "ready": true,
+  "files": {
+    "app/components/chat-message.tsx": "3f4aefbafb98ee51a1a7545138595161567f60a22c88a7c9de0a88d75b24015c",
+    "app/components/response-progress.tsx": "96a0e7f8572a9e7c87b82079299a157a6a7e9b65d7dcd74bc5ee0a9dcac6a54d",
+    "app/components/processing-conversation.tsx": "90967f7186326b41e8634b52c91816912a6a4e6ae2520853fcf735ff3df704db",
+    "app/components/processing-conversation.module.css": "b7878ba7a69098f506dc70be3bbad42a3419f6804b42267af9d1c5f41b36759d",
+    "app/components/loan-chat-workspace.tsx": "e8775cfb60c2e93755b5f09f332c4df5d426549df34d8589ee28e1744ddac7ff",
+    "lib/borrower-chat/conversation-ui.ts": "d5931e2209809135969f3f3f8cc7bff5f15615817689fa4f4143cb70050ebcde",
+    "lib/borrower-chat/processing-bridge.ts": "e1c0cdc0deed847ba612dd0b184c88b64543f9e8512fec3a8030de3e643c79d2",
+    "lib/agents/definitions.ts": "097e9ff62ddab36d10cca5e2e6236cc13ac81c5203686bfd9fb9d4e2e316e879",
+    "lib/agents/activity.ts": "8ab6749f14a7e7cf48934a79b23eef79cd41a59c6a57c479149904b07238e8f9",
+    "lib/agents/borrower-service.ts": "dbde68fd8c4f9966635d4ffa18dc67e0abf94a85110c562dc82ec5e4724eec2e",
+    "lib/preparation/worker.ts": "088796a7fd9a3649e4f12e34d2c7fc1eccdeafdb7669be562947396c0ebd7a76",
+    "migrations/postgres/024_agent_activity.sql": "0fcc64551343f4a9666ca447160457c88a16ba0b3b65bc891863e5b45051a247",
+    "tests/chat-conversation-ui.test.ts": "744c179a43733845ed8213b7173e9bab2715997af56a468356d8180f904e030b",
+    "tests/borrower-agents.integration.ts": "bb8631b816f93693d80edf1fefc1ad2225e78473bf9a972efb1463f127d43efd",
+    "package.json": "122b79b701b4a13eedd98433f56e2754efaec72fedb6b8f9fdc445970d1927d6",
+    "package-lock.json": "cae409c23c472bd7f94af313cc2a69fc6bf1b13711d2f303de994bfebeebc7c9"
+  },
+  "migration": "024_agent_activity.sql required before portal/worker start",
+  "checks": {
+    "quick": "PASS 131 tests + TypeScript",
+    "nativeIntegration": "PASS simulated native Mastra, lifecycle + authorization + expired leases",
+    "browser": "PASS synthetic desktop 1280x900 and mobile 390x844; history expansion/no overflow/no console errors"
+  },
+  "streamingScope": "Real tool stages persisted around native durable tool execution, refreshed by existing authorized polling. Final replies remain atomic validated messages; no partial model tool arguments exposed."
+}

@@ -1,0 +1,11 @@
+Candidate: 144f5a8c6ba43bc9dfbeca0fac2eaf690bf2037e + existing dirty checkout + new borrower-chat foundation (November 7, 2026).
+Scope: grounded context projection, borrower conversation/messages, migration 017, route handlers, focused tests.
+Preview: existing 127.0.0.1:3001; not restarted, not used for candidate verification.
+Automated: quick wrapper PASS, 83 tests + TypeScript. Focused isolated PostgreSQL integration PASS.
+Environment: original workspace npm run test:agent and integration starts stalled reading local node_modules; stopped only owned test process trees. An isolated test view linked exact candidate source inodes and used release-20261107-integrated node_modules. Dependency declarations and package-lock.json hashes matched. Quick wrapper then passed normally. Workspace node_modules unchanged.
+Fixture fixes: requirement criteria uses PostgreSQL text[]; cross-application FK test uses a noncolliding sequence to isolate the intended constraint.
+Reverification: quick wrapper and focused integration passed after those fixture fixes; no product code changed afterward.
+Full: BLOCKED by wrapper's running-preview guard. Fresh production build and HTTP checks NOT RUN.
+Browser: all checklist items NOT RUN; no UI changed or verified.
+Database: migration 017 exercised only in uniquely named disposable schemas, removed on completion. No shared migration/data edits.
+Result: backend foundation verified within unit/type/database scope. Route HTTP/build verification and coordinated shared migration remain outstanding. No conversation UI, model turns, upload linkage, or provider calls implemented in this slice.

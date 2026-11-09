@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-empty",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "No documents have been uploaded yet (0 files saved).\n\n**Next step:**\n* Please upload your current rent roll for Example Plaza to get started."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All stated facts are directly supported by the inventory; no files are saved and current rent roll is requested for Example Plaza."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response clearly answers what has been uploaded by stating that no documents have been uploaded yet."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response provides the appropriate next step to upload the current rent roll as specified in the requirements and rubric."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text or duplicate statements."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 24,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 4361,
+  "elapsedMs": 8001
+}

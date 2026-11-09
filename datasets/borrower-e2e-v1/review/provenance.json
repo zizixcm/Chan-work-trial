@@ -1,0 +1,29 @@
+{
+  "dataset": "1.0.0",
+  "fictional": true,
+  "python": "3.12.14",
+  "libraries": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0",
+    "Pillow": "13.0.0",
+    "pypdfium2": "5.14.0"
+  },
+  "scanFont": {
+    "path": "/System/Library/Fonts/Supplemental/Courier New.ttf",
+    "sha256": "c886ca3172d8ce9189976992d145ec090500a4ff516ecb9d4df56b1a78336247"
+  },
+  "authoringTools": {
+    "tools/generate.py": "384f069bb3be3bf5d93ba3c022faba1a50b76a06ff1c00c03e518e33b71dcd7c",
+    "tools/export_checkpoint.py": "97e749bcd80bb6f6a871dc818dc17ad79c4502093131e0f6a7cc74ce90d9217f",
+    "tools/test_score.py": "10cb7d1a0f25723be6cc16121c2176fcd454a58532d4dde3cfb1a19ef085e658",
+    "tools/validate.py": "1cf25df01690f8024613b81b61fe99a1b255c903e63bc223b02a3049600fab25",
+    "tools/test_export.py": "406f932120afbe28b7268f2d78bdd859ea778bfe3e448e53d178f48b36d1ba9e",
+    "tools/score.py": "357c11d072b7d4ea1f5df4d8737558ee778fda31d3ffce623f2d4b2f257fdab8"
+  },
+  "reproducibility": {
+    "filesCompared": 172,
+    "allIdentical": true
+  },
+  "holdoutFreezeSha256": "8d072bbfa04fd6634a30116b8f371122e96c9a5486147d03a8d8a70cc49e7147",
+  "scope": "No private artifacts copied; domain context only. No provider execution."
+}

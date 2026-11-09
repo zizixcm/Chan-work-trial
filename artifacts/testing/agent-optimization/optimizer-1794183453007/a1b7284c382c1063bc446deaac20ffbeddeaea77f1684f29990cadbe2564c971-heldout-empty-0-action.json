@@ -1,0 +1,46 @@
+{
+  "candidateId": "a1b7284c382c1063bc446deaac20ffbeddeaea77f1684f29990cadbe2564c971",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Synthetic Elm LLC",
+        "propertyName": "Elm Center"
+      },
+      "documents": [],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Executed lease",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Executed current lease"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "messages": [
+      {
+        "id": "h1",
+        "sequence": "1",
+        "text": "Do you have any of my documents?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null,
+      "activeRuns": [],
+      "pendingQuestions": []
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "We do not have any documents saved for your application yet.\n\n**Next step:**\n* Please upload your **current executed lease** for Elm Center to get started."
+  },
+  "actualMicros": 2222,
+  "executed": true
+}

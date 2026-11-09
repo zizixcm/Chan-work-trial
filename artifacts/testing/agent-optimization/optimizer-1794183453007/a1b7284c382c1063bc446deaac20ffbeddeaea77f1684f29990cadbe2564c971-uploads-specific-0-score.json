@@ -1,0 +1,34 @@
+{
+  "caseId": "uploads-specific",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "Yes, your rent roll has been uploaded. **Rent roll.pdf** is saved in your file inventory. \n\nPlease note that a saved file has not yet been reviewed or approved by the lender."
+  },
+  "review": {
+    "grounded": {
+      "passed": false,
+      "reason": "The response states that 'a saved file has not yet been reviewed or approved by the lender', which asserts an actual review/approval status ('has not yet been reviewed') without explicit evidence in the inventory."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly confirms that the rent roll was uploaded and identifies 'Rent roll.pdf' as saved."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No next steps were required or inappropriately suggested."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text."
+    },
+    "criticalFailures": [
+      "invented_evidence"
+    ]
+  },
+  "wordCount": 31,
+  "hardPassed": false,
+  "passed": false,
+  "costMicros": 11017,
+  "elapsedMs": 20275
+}

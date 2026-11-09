@@ -1,0 +1,5 @@
+
+> proximity-borrower-portal@0.1.0 eval:chat-upload
+> tsx tests/chat-upload-journey.eval.ts
+
+PASS critical chat-upload journey eval; report /Users/chanrao/Documents/ChatGPT/proximity/artifacts/evals/chat-upload/explicit-auto-disabled/report.json

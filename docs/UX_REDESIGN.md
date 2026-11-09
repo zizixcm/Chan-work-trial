@@ -252,3 +252,41 @@ On entering a selected application, default to **Bulk upload**: a large multi-fi
 Requirement tiles reflect actual current AI completeness, not file count or lender acceptance. Use text and icons with color: checking/queued, complete, partially covered, missing information, unsupported/unknown, and recoverable error. Never promise results after a fixed number of seconds. Personal AI-enabled uploads may use the existing analysis pipeline; show a compact contextual personal preference control if needed, without restoring the large AI assistance box. Unsupported formats and AI-off users retain manual organization and targeted uploads. Any green check must be tied to a current assessment of the requirement evidence; stale results cannot appear fulfilled.
 
 Keep the floating **Send for review** action and private-draft boundary across all three views. Manual organization supports zero or multiple requirement links per document, persists through authorized APIs, and preserves revision checking and user unlink decisions. Bulk upload handles per-file success/failure and retries without duplicating successful files. Requirement detail remains available for understanding gaps and previewing documents.
+
+### Fixed workspace (Option B) and automatic-only AI — approved
+
+Use a compact desktop workspace with persistent navigation and action row. At 1280×720, ordinary navigation, upload entry, requirement selection, and review decisions should not require outer-page scrolling. Bound long lists and previews to available space; preserve natural reflow/scrolling on mobile and at enlarged text sizes. Never achieve fit by clipping requirements, hiding actions, or shrinking essential text.
+
+Retain the three borrower views unless further simplified by explicit choice. Bulk upload is prominent on first use and compact once files exist. Requirement statuses become concise rows. By requirement uses list/detail navigation with files and actionable lender feedback before collapsed guidance. Organize files uses one selected-file editor with preview and requirement links rather than repeated expanded file cards. Preserve pending uploads and drafts across navigation.
+
+Lender requirements move out of the wrapping top strip into persistent compact navigation, leaving height for associated documents and preview. Keep the existing review dialog, with visible decision actions; Request changes replaces its content with a focused form instead of retaining the preceding AI and scope stack. Keep a concise requirement-scope label.
+
+Remove manual AI check/recheck/retry controls from borrower and lender interfaces. Retain automatic upload analysis, personal automatic-analysis preference, honest status/results, and unsupported/manual organization paths. Do not infer new automatic lender model calls. Existing server endpoints and stored assessments need not be deleted. This supersedes earlier guidance requiring an always-visible lender Verify button.
+
+### Shared role styling — additional approved refinement
+
+Borrower and lender workspaces share header height, content alignment, typography hierarchy, panel treatments, button dimensions, spacing and action-row placement. Show a persistent textual **Borrower workspace** / **Lender workspace** identifier in the same location with the same role-switch position. A subtle accent may reinforce role identity, but color is never the only distinction. Keep role-specific workflows within this common shell; do not restore redundant demo banners.
+
+### Taller lender preview and separated navigation — approved A + 1
+
+Replace the stacked requirements/documents sidebar with a compact labeled **Requirement** picker above the workspace, with Previous/Next controls. Keep only the selected requirement's documents in the left sidebar. Use a slim preview toolbar containing filename, Download and **Review requirement**; remove the separate bottom review bar. Move period and detailed guidance into the review dialog. Fit the preview to the remaining workspace height, with scrolling inside document content and long lists. Preserve shared role headers, submitted-only evidence, feedback drafts, and accessible narrow-screen reflow. No fullscreen expansion feature is included in this selection.
+
+### Minimal bulk upload and consistent application rows — approved A + 1
+
+Bulk upload shows one drop-zone instruction (**Drop files here**) and **Choose files**, with a compact **25 MB per file · Supported formats** disclosure. Remove repeated introduction, empty-selection prose and permanent operational warnings; show progress/errors when relevant. Rename saved processing disclosure **Files · N**. Keep a compact personal **Auto-check uploads** toggle, truthful CSV-only note and accessible explanation. Preserve accessible upload labels, automatic-only AI, draft privacy and actual assessment states. The send bar uses concise Private draft / Unsent changes / Sent status while retaining actionable errors and pending-file guidance.
+
+Both roles' application landing screens share compact application rows and consistent title alignment, widths, typography, padding and Open application button placement. Each row has property name and a short secondary identity line; show only verified role-relevant status, never infer Draft/Sent without data. Move address/loan detail stacks out of the list and keep them available inside the application. Retain explicit workspace role identification and existing access/navigation behavior.
+
+### Upload / By file / By requirement — latest simplification
+
+Use three obvious borrower views: **Upload**, **By file**, **By requirement**. Upload contains a prominent dashed **Drag and drop files here** target, Choose files, concise upload constraints, and requirement states. Remove the automatic-analysis switch/info and saved-files section entirely. Automatic processing for supported new uploads must be enforced server-side independent of legacy disabled preferences; no retroactive processing on deployment. Show only active upload progress/failures here, not a second file manager.
+
+By file supports selecting and previewing a saved file, removing it from the draft application, and editing zero/many requirement links. By requirement supports selecting a requirement and associating/deassociating existing files, with preview and targeted upload. Share editor patterns and keep guidance secondary. File removal preserves stored originals and previously submitted evidence; lenders continue seeing the last sent package until the borrower resends. Distinguish **Remove file** from removing a single requirement association. Retain version checks, selection continuity, and compact desktop/mobile layouts.
+
+### Batch processing panel — upload progress
+
+Open a processing dialog when a bulk upload starts. Minimize to a compact panel adjacent to the drop zone; expand on demand. Minimize/Escape must never cancel processing. Show each selected document with two independently labeled stages: **Validity** and **Matching**. Pending is neutral, running is active, pass is green, failure is red; text/icons convey every state. Unknown, unmatched and stale results must never be presented as success. Confirmed validity means readable/processable, with evidence sufficiency assessed separately.
+
+A separate **Requirements** section reports completeness for requirements whose evidence changed in this batch, after document processing settles. Show waiting, active, complete and needs-attention states from the actual server workflow. Do not synthesize progress or trigger checks for untouched requirements. Failed uploads retain retry paths; no-files-changed and partial-failure batches have explicit outcomes. Keep batch identity across retries and refresh where supported. Preserve private draft/submission boundaries and automatic-only processing.
+
+Use restrained headings, filenames and status marks. Expanded content scrolls within a focus-trapped dialog; the minimized panel and long requirement lists remain reachable within the bulk pane. On narrow screens stack the compact panel beneath the drop zone. The header and Send for review action retain their established placement.

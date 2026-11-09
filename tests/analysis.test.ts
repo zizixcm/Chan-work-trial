@@ -62,9 +62,23 @@ test('empty criteria, no evidence and unsupported linked files cannot appear com
   assert.equal(buildVerifyTask([doc()], { ...requirement, criteria: [] }).validate({ ...verify(), checks: [] }).assessment,'unknown');
   assert.equal(buildVerifyTask([], { ...requirement, criteria: [] }).validate({ ...verify(), checks: [] }).assessment,'unknown');
   const task = buildVerifyTask([doc()], requirement, ['Linked PDF cannot be inspected']);
-  assert.throws(() => task.validate(verify()));
+  assert.equal(task.validate(verify()).assessment,'unknown');
+  assert.deepEqual(task.validate(verify()).limitations,['Linked PDF cannot be inspected']);
   assert.equal(task.validate({ ...verify(), limitations: ['Linked PDF cannot be inspected'] }).assessment,'unknown');
   assert.equal(task.validate({ ...verify(), assessment: 'unknown', limitations: ['Linked PDF cannot be inspected'] }).assessment, 'unknown');
+});
+test('preparation warnings survive omitted document prefixes and empty model limitations', () => {
+  const warning='Document doc1: Page 1: OCR is empty or low confidence; verify against the original.';
+  const task=buildVerifyTask([doc()],requirement,[warning]);
+  for(const limitations of [[],['Page 1: OCR is empty or low confidence; verify against the original.'],[warning]]) {
+    const result=task.validate({...verify(),limitations});
+    assert.equal(result.assessment,'unknown');
+    assert.ok(result.limitations.includes(warning));
+    assert.equal(result.limitations.filter(l=>l===warning).length,1);
+  }
+  assert.throws(()=>task.validate({...verify(),limitations:[12]}),'malformed model warnings still fail');
+  const invalidEvidence={...verify(),checks:[{...check,evidence:[{...check.evidence[0],quote:'invented'}]}]};
+  assert.throws(()=>task.validate(invalidEvidence),'preserving warnings cannot bypass citation validation');
 });
 test('verification accepts complementary files but requires both cited sides of conflicts', () => {
   const other = doc('Property,Tenant,Monthly rent,As of date\nDemo Plaza,Demo Bakery,4500,2026-11-01', 'doc2');
@@ -94,4 +108,31 @@ test('two partial documents can jointly support all explicit criteria', () => {
 test('task preparation refuses oversized combined input rather than truncating evidence', () => {
   const large = doc('a,b\n' + Array.from({ length: 40 }, () => 'x'.repeat(1000) + ',y').join('\n'));
   assert.throws(() => buildVerifyTask([large, { ...large, id: 'second' }], requirement));
+});
+
+test('no linked documents still requires a reason for every criterion', () => {
+  const task = buildVerifyTask([], requirement);
+  assert.throws(() => task.validate({...verify(), checks: []}), {issue:'missing_criteria'});
+  const result = task.validate({...verify(), assessment:'incomplete', checks:[{...check,state:'unmet',reason:'No linked evidence was supplied.',evidence:[]}],missingEvidence:['Provide a rent roll for the required reporting period.']});
+  assert.equal(result.assessment,'unknown');
+  assert.equal(result.checks.length,1);
+});
+
+test('citation limit reports an actionable diagnostic without weakening exact evidence validation', () => {
+  const document = doc('a,b\n' + Array.from({length:9},(_,i)=>`${i},value`).join('\n'));
+  const citations = Array.from({length:9},(_,i)=>({documentId:'doc1',record:i+2,column:1,quote:String(i)}));
+  const task = buildVerifyTask([document], requirement);
+  assert.throws(() => task.validate({...verify(),checks:[{...check,evidence:citations}]}),{issue:'too_many_citations'});
+  assert.equal(task.validate({...verify(),checks:[{...check,evidence:citations.slice(0,8)}]}).assessment,'appears_complete');
+  assert.throws(() => task.validate({...verify(),checks:[{...check,evidence:[{...citations[0],quote:'invented'}]}]}),{issue:'invalid_citation'});
+});
+
+test('matching schema preserves opaque requirement IDs with version suffixes', () => {
+ const versioned={...requirement,id:'r1:demo-v4'};
+ const task=buildMatchTask(doc(),[versioned]);
+ const schema=task.outputSchema as any;
+ assert.deepEqual(schema.properties.requirements.items.properties.requirementId.enum,['r1:demo-v4']);
+ assert.throws(()=>task.validate(match()),{issue:'invalid_requirement'});
+ const output=match();output.requirements[0].requirementId=versioned.id;
+ assert.equal(task.validate(output).requirements[0].requirementId,versioned.id);
 });

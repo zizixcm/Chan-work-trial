@@ -1,0 +1,61 @@
+{
+  "applied": true,
+  "alreadyApplied": false,
+  "before": {
+    "knownMicros": 9967,
+    "limitMicros": 5000000,
+    "unknownCost": true,
+    "reservedMicros": 4200000
+  },
+  "after": {
+    "knownMicros": 24452,
+    "limitMicros": 5000000,
+    "unknownCost": false,
+    "reservedMicros": 0
+  },
+  "releasedMicros": 4200000,
+  "confirmedMicros": 14485,
+  "runs": [
+    {
+      "id": "1481616c-346b-47b8-9ba1-148a8be20ef6",
+      "stepId": "3a93ab43-d943-4543-8f32-ac76f47cc2f3",
+      "actualMicros": 1653
+    },
+    {
+      "id": "40899326-38e2-4e2e-81e5-fe63eb412ecd",
+      "stepId": "ecb5bbcb-c944-4dca-8c6d-2a775df11c5f",
+      "actualMicros": 1666
+    },
+    {
+      "id": "9693e6a8-6810-4b5f-a568-0947f39fa324",
+      "stepId": "11739e3d-a1db-4965-9953-662c8ccdc8f1",
+      "actualMicros": 1681
+    }
+  ],
+  "turns": [
+    {
+      "id": "event:f1976143-aaf2-419c-a2d8-2f705a0f5cc7",
+      "actualMicros": 2234,
+      "state": "superseded",
+      "reasonCode": "pilot-inspection-recovery-20261108-v1"
+    },
+    {
+      "id": "event:22aa3f1c-fe18-46b2-8761-fe94b556210e",
+      "actualMicros": 2355,
+      "state": "superseded",
+      "reasonCode": "pilot-inspection-recovery-20261108-v1"
+    },
+    {
+      "id": "529fd8a9-134b-4bb7-8a98-9f7924d276d5",
+      "actualMicros": 2403,
+      "state": "superseded",
+      "reasonCode": "pilot-inspection-recovery-20261108-v1"
+    },
+    {
+      "id": "event:27dcdc22-295a-4ba2-bd4e-314b1e139287",
+      "actualMicros": 2493,
+      "state": "superseded",
+      "reasonCode": "pilot-inspection-recovery-20261108-v1"
+    }
+  ]
+}

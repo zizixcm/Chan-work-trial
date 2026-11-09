@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-specific",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "Yes, your rent roll has been uploaded as **Rent roll.pdf**.\n\nPlease note that file receipt confirms it has been saved, but not qualitative acceptance or lender review."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All stated facts are supported by the provided inventory."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers 'yes' and identifies 'Rent roll.pdf' as saved without claiming qualitative approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No unnecessary next steps were provided, adhering to the rubric."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response does not repeat information unnecessarily."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 27,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6296,
+  "elapsedMs": 8614
+}

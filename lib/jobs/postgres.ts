@@ -1,3 +1,4 @@
+import { processorMode } from '../preparation/ownership';
 import { randomUUID } from 'node:crypto';
 import { reconcileAnalysis } from './reconcile';
 import type { Pool, PoolClient } from 'pg';
@@ -31,12 +32,13 @@ export class PostgresJobRepository implements JobRepository<AnalysisSnapshot> {
     await db.query('SELECT id FROM applications WHERE id=$1 FOR UPDATE',[job.applicationId]);
     const row=(await db.query(`SELECT *,lease_expires_at>now() AND attempt_deadline>now() AND expires_at>now() AS lease_valid FROM analysis_jobs WHERE application_id=$1 AND id=$2 FOR UPDATE`,[job.applicationId,job.id])).rows[0];
     if (!row || row.state!=='running' || String(row.token)!==job.token || !row.lease_valid) return null;
+    if(row.consent_scope==='borrower' && (await processorMode(db,row.application_id)).mode!=='baseline'){await this.state(db,row,'stale');return null;}
     if(row.cancel_requested){await this.state(db,row,'cancelled','cancelled');return null;}
     const membership=(await db.query('SELECT role FROM application_memberships WHERE application_id=$1 AND user_id=$2 AND active FOR SHARE',[row.application_id,row.initiated_by])).rows[0];
     const pref=await preference(db,row.initiated_by);
     let current=false;
-    try {current=analysisFingerprint(await snapshot(db,row.application_id,row.task,row.target_id,row.consent_scope),row.task,row.consent_scope,pref.epoch,row.initiated_by)===row.fingerprint;} catch {current=false;}
-    if(!membership || membership.role!==row.consent_scope || (row.consent_scope==='lender' && row.task!=='verify_requirement.v1') || (row.consent_scope==='borrower' && (!pref.enabled || String(row.consent_epoch)!==pref.epoch)) || !current){await this.state(db,row,'stale');return null;}
+    try {current=analysisFingerprint(await snapshot(db,row.application_id,row.task,row.target_id,row.consent_scope),row.task,row.consent_scope,pref.epoch,row.initiated_by,row.automatic)===row.fingerprint;} catch {current=false;}
+    if(!membership || membership.role!==row.consent_scope || (row.consent_scope==='lender' && row.task!=='verify_requirement.v1') || (row.consent_scope==='borrower' && !row.automatic && (!pref.enabled || String(row.consent_epoch)!==pref.epoch)) || !current){await this.state(db,row,'stale');return null;}
     return row;
   }
   async claim(slot:Slot,owner:string) {
@@ -47,9 +49,9 @@ export class PostgresJobRepository implements JobRepository<AnalysisSnapshot> {
       // can starve the background matching that would release its own barrier.
       const eligible=`j.state IN ('queued','retry_wait','blocked') AND j.available_at<=now() AND j.expires_at>now() AND j.attempt<5 AND j.provider_attempts<3
         AND (j.task<>'verify_requirement.v1' OR j.consent_scope='lender' OR (
-          NOT EXISTS(SELECT 1 FROM upload_batches b WHERE b.application_id=j.application_id AND b.state='open' AND b.deadline_at>now())
+          NOT EXISTS(SELECT 1 FROM upload_batches b WHERE b.application_id=j.application_id AND b.state='open')
           AND NOT EXISTS(SELECT 1 FROM analysis_jobs m WHERE m.application_id=j.application_id AND m.task='match_document.v1'
-            AND m.state IN ('queued','running','retry_wait','blocked') AND m.created_at>now()-interval '5 minutes')))
+            AND m.state IN ('queued','running','retry_wait','blocked'))))
         AND (j.task<>'verify_requirement.v1' OR NOT EXISTS (
           SELECT 1 FROM analysis_jobs predecessor WHERE predecessor.application_id=j.application_id
           AND predecessor.initiated_by=j.initiated_by AND predecessor.consent_scope=j.consent_scope
@@ -148,7 +150,7 @@ export class PostgresJobRepository implements JobRepository<AnalysisSnapshot> {
       } else if((result.value as {schemaVersion?:string})?.schemaVersion!=='verify.v1')throw new AnalysisFailure('invalid_output');
       const pref=await preference(db,row.initiated_by);
       const after=await snapshot(db,row.application_id,row.task,row.target_id,row.consent_scope);
-      await db.query(`UPDATE analysis_jobs SET state='succeeded',result=$2,result_fingerprint=$3,slot=NULL,lease_expires_at=NULL,updated_at=now(),revision=revision+1 WHERE id=$1`,[row.id,JSON.stringify(result.value),analysisFingerprint(after,row.task,row.consent_scope,pref.epoch,row.initiated_by)]);
+      await db.query(`UPDATE analysis_jobs SET state='succeeded',result=$2,result_fingerprint=$3,slot=NULL,lease_expires_at=NULL,updated_at=now(),revision=revision+1 WHERE id=$1`,[row.id,JSON.stringify(result.value),analysisFingerprint(after,row.task,row.consent_scope,pref.epoch,row.initiated_by,row.automatic)]);
       await this.event(db,row,'succeeded');
       await db.query(`INSERT INTO audit_events(id,application_id,actor,action,target_id,created_at,actor_kind,target_type,details,visibility) VALUES($1,$2,'AI assistant','analysis.completed',$3,now(),'system','analysis_job',$4,'borrower_visible')`,[randomUUID(),row.application_id,row.id,JSON.stringify({task:row.task,target_id:row.target_id})]);
       for(const id of affected)await enqueueForRequirement(db,row.application_id,row.initiated_by,id);

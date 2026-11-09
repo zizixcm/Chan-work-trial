@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-empty",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "No documents have been uploaded yet.\n\n**Next step:**\n* Please upload a current rent roll for Example Plaza to get started."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements are fully supported by the inventory data showing an empty document list and a pending current rent roll requirement."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "Directly and accurately answers the user's question regarding uploaded files by confirming none have been uploaded."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Appropriately suggests uploading the current rent roll requirement as requested by the rubric."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no repetitive content."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 21,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 1871,
+  "elapsedMs": 3076
+}

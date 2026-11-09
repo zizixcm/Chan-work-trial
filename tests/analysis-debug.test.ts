@@ -128,3 +128,13 @@ test('HTTP denies access before touching storage and sends no-store for every ou
   assert.equal(failed.status, 503);
   assert.equal((await failed.text()).includes('private error payload'), false);
 });
+
+test('validation diagnostics retain safe issue identifiers rather than upstream error text', async () => {
+  const {AnalysisValidationError} = await import('../lib/analysis/types');
+  const {store,records}=memoryStore();
+  const recorder=createDebugRecorder(metadata,store);
+  const wrapped=recorder.wrapTask({...task,validate(){throw new AnalysisValidationError('missing_criteria');}});
+  assert.throws(()=>wrapped.validate({}),{issue:'missing_criteria'});
+  await recorder.flush();
+  assert.equal(records.at(-1)?.validation?.message,'Schema or evidence validation failed: missing_criteria.');
+});

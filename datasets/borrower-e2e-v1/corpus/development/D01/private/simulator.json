@@ -1,0 +1,86 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "ffa0b3c48c21f",
+    "f579283d48fd2",
+    "f7dbacda2c2f3",
+    "fd4a941c4a7fd",
+    "f29fa53f522e3",
+    "fd4d1a1e0d1fe",
+    "f2e7557f5c23e",
+    "ffeef3efb9ffe",
+    "f0c52da4cd6b3"
+  ],
+  "budgetInterrupt": {
+    "eligible": false,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7317",
+    "baseRents": [
+      1937,
+      2177
+    ],
+    "borrower": "Aster Quay Holdings LLC",
+    "currentRents": [
+      1937,
+      2177
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 0,
+    "manager": "Mira Fen",
+    "otherOwner": "Sol Venn",
+    "property": "Aster Quay",
+    "tenants": [
+      "Aster Studio",
+      "Aster Supply"
+    ],
+    "units": [
+      "101",
+      "102"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 2 units occupied by the tenants listed; only account ending 7317 is requested. There are 0 lease amendments and 0 entity amendments.",
+      "uploadIds": [
+        "ffa0b3c48c21f",
+        "f7dbacda2c2f3"
+      ]
+    },
+    {
+      "borrowerText": "Here are leases, current results and statements.",
+      "uploadIds": [
+        "f579283d48fd2",
+        "fd4a941c4a7fd",
+        "f29fa53f522e3",
+        "fd4d1a1e0d1fe",
+        "f2e7557f5c23e"
+      ]
+    },
+    {
+      "borrowerText": "Here is the company file.",
+      "uploadIds": [
+        "ffeef3efb9ffe",
+        "f0c52da4cd6b3"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "candidateId": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Synthetic Elm LLC",
+        "propertyName": "Elm Center"
+      },
+      "documents": [
+        {
+          "documentId": "e1",
+          "name": "Elm lease.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Executed lease",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Executed current lease"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "messages": [
+      {
+        "id": "h1",
+        "sequence": "1",
+        "text": "Which files do you have?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null,
+      "activeRuns": [],
+      "pendingQuestions": []
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "You have 1 saved file in your application for Elm Center:\n\n* **Elm lease.pdf**\n\nPlease note that a file being saved does not equate to lender review or approval."
+  },
+  "actualMicros": 4846,
+  "executed": true
+}

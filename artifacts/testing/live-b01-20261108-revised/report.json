@@ -1,0 +1,64 @@
+{
+  "caseId": "B01",
+  "sdkVersion": "1.82.0",
+  "dispatchedInputSha256": "2ba89bde085f0fe92154c7ebfc0bee308c2ee77084f4f437c05595050451641a",
+  "checks": [
+    {
+      "id": "native_reply",
+      "passed": true
+    },
+    {
+      "id": "response_persisted",
+      "passed": true
+    },
+    {
+      "id": "no_investigation",
+      "passed": true
+    },
+    {
+      "id": "no_document_claim_state",
+      "passed": true
+    },
+    {
+      "id": "one_generation",
+      "passed": true
+    }
+  ],
+  "promptSha256": "95226bc28e4cd8c53b069a77c7205d9b4393f13279bba3e0e56f14e12ce99314",
+  "requestSha256": "1be528388e1ff2a5266e76f5ddce037159f73ed5e437f12b9404052ad1a4d99b",
+  "mode": "live",
+  "configurationDigest": "6c860904365142654e85d09211f31f37ed67f03f80380f0b821943b0c79e0d9d",
+  "approvalFileSha256": "eae524052a34a5af4ac82999247205accd10694788dfa1dce41cd829d10a062a",
+  "elapsedMs": 2414,
+  "dispatches": 1,
+  "structuralPassed": true,
+  "semanticReview": "pending independent review; structural score is not a quality pass",
+  "response": {
+    "state": "completed",
+    "decision": {
+      "kind": "reply",
+      "message": "I need the following documents for Aster Quay Holdings LLC's refinance of Aster Quay:\n\n*   **Current rent roll** (as of 2026-09-30, including all units, tenants, monthly rents, and lease start/end dates)\n*   **Leases** (executed copies for each occupied unit, identifying parties, property, rent, and term)\n*   **Property operating statements** (for 2025-01-01 through 2025-12-31 and 2026-01-01 through 2026-09-30)\n*   **Borrower bank statements** (complete statements for July, August, and September 2026 for account ending 7317)\n*   **Entity ownership and signing authority documents** (formation certificate and operating agreement)"
+    },
+    "response_text": "I need the following documents for Aster Quay Holdings LLC's refinance of Aster Quay:\n\n*   **Current rent roll** (as of 2026-09-30, including all units, tenants, monthly rents, and lease start/end dates)\n*   **Leases** (executed copies for each occupied unit, identifying parties, property, rent, and term)\n*   **Property operating statements** (for 2025-01-01 through 2025-12-31 and 2026-01-01 through 2026-09-30)\n*   **Borrower bank statements** (complete statements for July, August, and September 2026 for account ending 7317)\n*   **Entity ownership and signing authority documents** (formation certificate and operating agreement)",
+    "reason_code": null,
+    "actual_micros": "1438"
+  },
+  "trace": {
+    "traceId": "3455824a70406d81547e0387963a0c0f",
+    "spanId": "f51f54d971e29e1a"
+  },
+  "budgetBefore": {
+    "limitMicros": 20000000,
+    "accountedMicros": 1126,
+    "knownMicros": 1126,
+    "heldMicros": 0,
+    "calls": 2
+  },
+  "budgetAfter": {
+    "limitMicros": 20000000,
+    "accountedMicros": 2564,
+    "knownMicros": 2564,
+    "heldMicros": 0,
+    "calls": 3
+  }
+}

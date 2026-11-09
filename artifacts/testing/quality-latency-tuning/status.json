@@ -1,0 +1,135 @@
+{
+  "activeCases": [
+    "EMPTY-REQUESTED",
+    "EMPTY-UPLOADED",
+    "EMPTY-MISSING",
+    "ONE-UPLOAD"
+  ],
+  "results": [
+    {
+      "caseId": "EMPTY-REQUESTED",
+      "baselineCompleteMs": 8177.144208,
+      "lowerReasoningCompleteMs": 3115.2788330000003,
+      "lowerReasoningFirstUsefulMs": 2019.2006660000002,
+      "quality": "pass",
+      "factualAccuracy": "pass",
+      "latencyPassed": false,
+      "combinedPassed": false,
+      "notes": [
+        "Accurate requested groups and periods.",
+        "Completion meets 5 seconds but first useful answer exceeds 3 seconds; single sample only."
+      ],
+      "reviewPath": "/Users/chanrao/Developer/proximity-releases/small-start-tuning-20261108-v2/artifacts/testing/small-live-focused-low-EMPTY-REQUESTED/REVIEW.json",
+      "trace": {
+        "traceId": "1dcb2a7cda3873cdf20aaab58f94e234",
+        "spanId": "482243a2c0b914b6"
+      },
+      "focusedCompleteMs": 4791.356624999999,
+      "focusedFirstUsefulMs": 3651.119542
+    },
+    {
+      "caseId": "EMPTY-UPLOADED",
+      "baselineCompleteMs": 5007.8017500000005,
+      "lowerReasoningCompleteMs": 2040.4111669999998,
+      "lowerReasoningFirstUsefulMs": 1254.061334,
+      "quality": "fail",
+      "factualAccuracy": "pass",
+      "latencyPassed": true,
+      "combinedPassed": false,
+      "notes": [
+        "Correct zero-upload fact and passing latency.",
+        "Answer focus fails: unsolicited full checklist despite explicit short inventory instruction."
+      ],
+      "reviewPath": "/Users/chanrao/Developer/proximity-releases/small-start-tuning-20261108-v2/artifacts/testing/small-live-focused-low-EMPTY-UPLOADED/REVIEW.json",
+      "trace": {
+        "traceId": "113e005e4972f611e065e819004773c7",
+        "spanId": "ea8aeaf62c455e60"
+      },
+      "focusedCompleteMs": 3298.5712919999996,
+      "focusedFirstUsefulMs": 2304.738208
+    },
+    {
+      "caseId": "EMPTY-MISSING",
+      "baselineCompleteMs": 8206.682207999998,
+      "lowerReasoningCompleteMs": 2925.5431250000006,
+      "lowerReasoningFirstUsefulMs": 1805.628459,
+      "quality": "pass",
+      "factualAccuracy": "pass",
+      "latencyPassed": true,
+      "combinedPassed": true,
+      "notes": [
+        "Correct remaining groups and periods; useful and completion latency meet targets."
+      ],
+      "reviewPath": "/Users/chanrao/Developer/proximity-releases/small-start-tuning-20261108-v2/artifacts/testing/small-live-focused-low-EMPTY-MISSING/REVIEW.json",
+      "trace": {
+        "traceId": "c503a2131b09eebc37ca62f435340071",
+        "spanId": "8f3456801deef98d"
+      },
+      "focusedCompleteMs": 3298.187875,
+      "focusedFirstUsefulMs": 2077.190958
+    },
+    {
+      "caseId": "ONE-UPLOAD",
+      "baselineCompleteMs": 58064.786541,
+      "lowerReasoningCompleteMs": 29273.365083999997,
+      "lowerReasoningFirstUsefulMs": null,
+      "quality": "fail",
+      "factualAccuracy": "pass",
+      "latencyPassed": true,
+      "combinedPassed": false,
+      "notes": [
+        "Analysis facts pass: annual 2025 actual statement supported, zero-amendment declaration valid, remaining unchecked criteria preserved.",
+        "Borrower report precision fails: remaining list omits required rent-roll date, executed-lease qualifier, account suffix and exact entity document names.",
+        "16.229 seconds meets 20-second ceiling but exceeds 10\u201315-second aim.",
+        "Actual UI save-to-visible receipt is unmeasured. Initial acknowledgement exposes internal document ID."
+      ],
+      "reviewPath": "/Users/chanrao/Developer/proximity-releases/small-start-tuning-20261108-v2/artifacts/testing/small-live-focused-low-ONE-UPLOAD/REVIEW.json",
+      "trace": {
+        "traceId": "ff6dba8e93468b9fcfc7d7acdc1f4f39",
+        "spanId": "f2b052bb0e9fea61"
+      },
+      "focusedCompleteMs": 16228.703833,
+      "focusedFirstUsefulMs": null
+    }
+  ],
+  "liveAttempts": 12,
+  "paidCalls": 27,
+  "knownEvaluationCostMicros": 136085,
+  "allEvaluationChargesSettled": true,
+  "pilotConfiguration": "v14 deployed by operational owner; medium reasoning / 24k unchanged. Focused low-reasoning candidate remains eval-only.",
+  "reviewProvenance": "Manual evaluation-chat review; separate from evaluated agents, not author-independent; quality/latency scores persisted in native Mastra stores on original traces.",
+  "sampleLimit": "One live run per case/profile; no tail-latency or reliability claim.",
+  "targetsMs": {
+    "emptyFirstUseful": 3000,
+    "emptyComplete": 5000,
+    "uploadReceipt": 1000,
+    "uploadReportTarget": 15000,
+    "uploadReportCeiling": 20000
+  },
+  "uploadReceipt": "UNMEASURED; DB fixture and mocked UI tests do not prove actual save-to-visible receipt timing.",
+  "nextCandidate": {
+    "path": "/Users/chanrao/Developer/proximity-releases/small-start-tuning-20261108-v2",
+    "manifestSha256": "0ca91eea20ec6696ef9a0fb9901e55a2016697d4122a0c74edb89a44dc5ec0c5",
+    "changes": [
+      "Terse answer to empty upload-inventory question",
+      "Avoid redundant structure calls when reading supplies page count; preserve evidence coverage",
+      "Use cited findings for report-only requirement relevance without unnecessary mapping proposal"
+    ],
+    "offline": "165unit tests and TypeScript PASS",
+    "live": "Four cases executed and reviewed; only EMPTY-MISSING passes combined quality and latency. Not promoted."
+  },
+  "failureAttribution": {
+    "EMPTY-UPLOADED": "Agent answer-focus/verbosity; facts correct and latency passes with low reasoning.",
+    "ONE-UPLOAD": "Faithful analysis and passing 20-second ceiling; borrower report loses required remaining-item precision. Agent report fix needed; no contradictory source fact found.",
+    "dataset": "No contradictory fact/expected outcome found in these4cases. Removed duplicated global policy before live to avoid inflating input.",
+    "harness": "First dispatch setup failed before paid call due inherited database environment; fixed and rechecked. Actual UI receipt timing remains a coverage gap.",
+    "EMPTY-REQUESTED": "Latest first useful answer 3.651s exceeds 3s target despite completion under 5s; provider/generation variability requires repeated measurement."
+  },
+  "liveEvaluations": "paused; operational window returned",
+  "nextOfflineProposal": {
+    "scope": "Explicit structured read-only uploaded-inventory intent only",
+    "implementation": "Route authorized fresh inventory through native workflow and durable reply controller without provider reservation; keep idempotency, source attribution and native traces. Arbitrary text and document interpretation remain agent-driven.",
+    "testChanges": "Allow zero provider calls for explicit deterministic intent; verify authorization, stale-state handling, no-upload versus uploaded transitions, duplicate intent idempotency and trace provenance. Do not hardcode fixture answers.",
+    "ownership": "Coordinate service/bridge edits with deployment owner before implementation. No production edits made."
+  }
+}

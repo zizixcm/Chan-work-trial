@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "Choose files auto-starts once and opens panel without Upload button",
+    "Drop auto-starts once; rapid duplicate event suppressed",
+    "Fresh second selection auto-starts once",
+    "Invalid-only opens error panel; no request; removable selection",
+    "Mixed selection uploads valid file only; invalid file remains removable and blocks send",
+    "Registration failure becomes failed selection; explicit retry reuses manifest",
+    "Upload failure preserves explicit Retry and original batch",
+    "Mobile automatic opening and no horizontal overflow"
+  ],
+  "errors": [],
+  "uploadRequests": 8,
+  "registrationAttempts": 9
+}

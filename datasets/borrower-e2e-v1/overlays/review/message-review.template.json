@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "independent-message-review.1",
+  "instructions": "Copy per actual captured message. Reviewer must inspect the entire immutable transcript text and actual evidence. Never load this template into evaluated agent context.",
+  "messages": {
+    "ACTUAL_MESSAGE_ID": {
+      "reviewerId": "INDEPENDENT_REVIEWER_ID",
+      "messageSha256": "SHA256_OF_EXACT_UTF8_TEXT",
+      "allClaimsReviewed": false,
+      "rationale": "Explain grounding, remaining gaps, preservation and alternatives against the actual evidence.",
+      "grounding": "pending",
+      "specificGaps": "pending",
+      "preservesProgress": "pending",
+      "nextActionOwnership": "pending",
+      "clarity": "pending",
+      "unnecessaryQuestions": "pending",
+      "unnecessaryUploads": "pending",
+      "focusedQuestionTopic": null,
+      "claimAssessments": [
+        {
+          "start": 0,
+          "end": 0,
+          "span": "EXACT_TEXT_SEGMENT",
+          "judgment": "pending",
+          "criticalType": null,
+          "sourceLocators": [],
+          "rationale": "Explain why this claim is supported, unsupported, uncertain or nonfactual. Cover every non-whitespace character across segments."
+        }
+      ]
+    }
+  }
+}

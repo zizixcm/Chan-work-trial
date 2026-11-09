@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "2351594ecb7a33908a402fb0e39449b08ad8753bdbfe6198629fbbed1fead63b",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "Has my rent roll been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Answer yes and identify Rent roll.pdf as saved. Do not list unrelated requirements or infer that the rent roll was checked or accepted. No next step is necessary.",
+    "action": {
+      "kind": "reply",
+      "message": "Yes, your rent roll has been uploaded as **Rent roll.pdf**.\n\nPlease note that file receipt confirms it has been saved, but not qualitative acceptance or lender review."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All stated facts are supported by the provided inventory."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers 'yes' and identifies 'Rent roll.pdf' as saved without claiming qualitative approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No unnecessary next steps were provided, adhering to the rubric."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response does not repeat information unnecessarily."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 366,
+    "completion_tokens": 412,
+    "total_tokens": 778,
+    "cost": 0.0018195,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0018195,
+      "upstream_inference_prompt_cost": 0.0002745,
+      "upstream_inference_completions_cost": 0.001545
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 312,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

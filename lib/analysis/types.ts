@@ -1,9 +1,14 @@
 import type { JSONSchema7 } from 'json-schema';
 /** Runtime-neutral contracts shared by web/worker code. No provider, DB or secrets. */
 export const ANALYSIS_MODEL = 'google/gemini-2.5-flash';
-export const ANALYSIS_VERSION = 'document-review.v7';
+export const ANALYSIS_VERSION = 'document-review.v8';
 export class AnalysisError extends Error {
   constructor(public readonly code: 'UNSUPPORTED_INPUT' | 'INVALID_OUTPUT' | 'INPUT_TOO_LARGE') { super(code); }
+}
+/** Static diagnostic identifiers only; never include document or provider text. */
+export type ValidationIssue = 'invalid_requirement' | 'missing_requirements' | 'invalid_shape' | 'too_many_citations' | 'invalid_citation' | 'missing_citation' | 'duplicate_citation' | 'invalid_criterion' | 'missing_criteria' | 'missing_preparation_limitation' | 'missing_evidence_explanation';
+export class AnalysisValidationError extends AnalysisError {
+  constructor(public readonly issue: ValidationIssue) { super('INVALID_OUTPUT'); }
 }
 export type PreparedDocument = { id: string; sha256: string; records: string[][]; format?: string; locations?: string[]; limitations?: string[] };
 export type Criterion = { id: string; description: string };

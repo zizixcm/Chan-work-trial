@@ -1,0 +1,105 @@
+{
+  "role": "judge",
+  "configurationDigest": "a1b7284c382c1063bc446deaac20ffbeddeaea77f1684f29990cadbe2564c971",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "What's been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Identify both saved files. Do not turn the answer into a missing-document checklist, infer completeness or approval, or invent a next step. No action is required by this snapshot.",
+    "action": {
+      "kind": "reply",
+      "message": "You currently have 2 files saved in your application:\n\n- **Rent roll.pdf**\n- **2025 operating statement.pdf**\n\nPlease note that saved files have not yet been reviewed or approved by the lender."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": false,
+      "reason": "The response asserts an actual review status by stating that 'saved files have not yet been reviewed or approved by the lender', which is unsupported by the snapshot data."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response accurately identifies the two saved documents in the application."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No unrequested or invented next steps were suggested."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no repetitive text."
+    },
+    "criticalFailures": [
+      "invented_evidence"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 526,
+    "completion_tokens": 748,
+    "total_tokens": 1274,
+    "cost": 0.0031995,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0031995,
+      "upstream_inference_prompt_cost": 0.0003945,
+      "upstream_inference_completions_cost": 0.002805
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 568,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

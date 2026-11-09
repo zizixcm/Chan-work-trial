@@ -1,0 +1,85 @@
+{
+  "mode": "live",
+  "model": "openrouter/google/gemini-2.5-flash",
+  "configurationDigest": "da95413f9213107fdbe59e2740179d7a7c4d0c66e3f2d978ce9dfba373030f0b",
+  "fixture": {
+    "id": "uploads-detail",
+    "question": "List every uploaded file by name and explain whether saving means lender approval.",
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [
+        {
+          "documentId": "d1",
+          "name": "Rent roll.pdf",
+          "active": true
+        },
+        {
+          "documentId": "d2",
+          "name": "2025 operating statement.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "maxWords": 180,
+    "rubric": "Name both files and explicitly explain that saved does not mean lender approval. Brevity must not omit either part of the question. Do not invent actions."
+  },
+  "createdAt": "2026-11-08T23:58:05.202Z",
+  "action": {
+    "kind": "reply",
+    "message": "You have uploaded the following files:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nSaving a file means it has been received and is part of your loan application. It does not mean the lender has approved it yet."
+  },
+  "actualMicros": 316,
+  "score": {
+    "caseId": "uploads-detail",
+    "wordCount": 38,
+    "maxWords": 180,
+    "checks": [
+      {
+        "id": "direct_reply",
+        "passed": true
+      },
+      {
+        "id": "concise",
+        "passed": true
+      },
+      {
+        "id": "answersQuestion",
+        "passed": false
+      },
+      {
+        "id": "grounded",
+        "passed": false
+      },
+      {
+        "id": "appropriateNextSteps",
+        "passed": false
+      },
+      {
+        "id": "noRepetition",
+        "passed": false
+      }
+    ],
+    "status": "needs_review"
+  }
+}

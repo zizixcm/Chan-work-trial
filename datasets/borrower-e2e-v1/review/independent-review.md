@@ -1,0 +1,37 @@
+# Independent dataset review — CRE E2E v1
+
+Reviewer: `/root/independent_review`, a separate agent from the author, November 8, 2026. This is an independently performed synthetic evidence/oracle review, not external lender review, a live model evaluation, or signature authentication.
+
+## Evidence actually reviewed
+
+I opened and extracted the actual PDF files with pypdf, rather than accepting the generation specification as evidence. The native audit inventory in `independent-native-audit.json` enumerates documents/pages. I checked parties, unit/tenant associations, reporting periods, rent and operating arithmetic, statement pagination, formation/governing documents, manager changes, version and upload availability, and checkpoint findings. I inspected all 18 rendered case contact sheets covering the 250 PDF pages, then enlarged material evidence. Contact sheets establish layout inspection; readable extracted content and enlarged pages support semantic inspection.
+
+Full-page images inspected: D01 lease `f579283d48fd2` p1 and August `fd4d1a1e0d1fe` p1; D02 incomplete August `ffe64a92e0fe1` p1; D03 amendment `f075f94def30d` p1; D06 long lease `f01da45a39edc` p31; D08 manager amendment `f4316505c1615` p1; H01 combined income binder `fe9718b5a12a6` p7; H02 quarterly archive `f255f21eba0d6` p6; H03 amendments `f928d4ead82c6` and `f6ee02caa2a4a` p1; H04 long lease `f10e9bb606c56` p34 and manager amendment `fcadf5ad3082d` p1. All four image-only pages were independently extracted from actual PDFs and visually read: D07 clear lease `fe95c2ee0b84e` p2, obscured lease `f5bd96f6fb9cb` p2, H02 lease `f6fdf7d4d20d3` p4, and archive `f255f21eba0d6` p5.
+
+The intentional D07 obstruction hides substantive text; it is not evidence that the source lacks execution or rent. The clear scan supports rent 2,999 and both fictional execution marks/dates. The H02 scanned fourth lease supports rent 3,890; the archive scan is August statement page 2 of 2. No unexpected clipping, overlapping text, missing rendered pages, or unreadable clear-copy content was found. These are deliberately simple synthetic document facsimiles, not realistic legal instruments.
+
+Independent arithmetic checks: D03 original monthly rents total 4,662; 2025 = 55,944; January–September 2026 = 4,662 × 9 + 125 × 6 = 42,708. H03 original rents total 10,641; current roll total 10,891; 2025 = 127,692; 2026 YTD = 10,641 × 9 + 125 × 6 + 125 × 3 = 96,894. Other annual/YTD values equal original base rent × 12/9. Ownership is 60% + 40% = 100%. Revised statements reconcile sequentially: July 50,000 → 53,000, August 53,000 → 56,000, September 56,000 → 59,000, each with 12,000 deposits and 9,000 withdrawals. Deposits are expressly transfers, so they are not incorrectly equated to accrual rents.
+
+## Findings and corrections
+
+1. **Corrected:** Original monthly statements all opened 50,000 and closed 53,000, creating an unintended cross-month conflict. Author changed the balances to a continuous series; independently re-extracted all 12 packages and visually checked representative revised statements.
+2. **Corrected:** Gap periods defaulted to September for July and entity-document gaps. Exact bank months and null entity periods now appear in the oracle.
+3. **Corrected:** D07 comparison gaps incorrectly described supplied obscured leases as absent. They now identify unreadability, and the readable first tenant page remains available support.
+4. **Corrected:** H04 consistency was `unmet` while an agreement was supplied and a declared amendment was missing. It is now `unknown` pending the amendment, with the documentary-chain gap separately unmet.
+5. **Corrected:** D02 checkpoint 1 referred to a duplicate before its arrival. The duplicate explanation now starts at checkpoint 2.
+6. **Corrected:** No-amendment findings had no explicit source locator. `assertionSupport` now identifies the first borrower turn and limits its evidentiary scope to applicability, not documentary execution or authority.
+7. **Corrected:** Support was initially only page IDs. The oracle now includes visible fact lines and criterion semantic rules. Page membership alone still does not establish entailment; evaluator review must check that cited lines support the actual claim.
+8. **Corrected and independently reverified:** At checkpoint 2, amendment 2 explains the current roll rent even though amendment 1 is absent. `R2.compare=met` with sources and a caveat is defensible, as is cautious unknown; `R2.chain` remains unmet and YTD reconciliation remains unknown. The oracle now records both allowed states and the required remaining-gap caveat. I independently checked the source groups and ran the met-alternative scorer probe successfully. All 12 canonical journeys are admitted; `admission.json` pins the reviewed hashes.
+9. **Corrected:** Early D01 contact sheet mixed stale Poppler files and current pdfium images. The author removed stale files and regenerated the sheet; the latest sheet was inspected.
+
+## Admission limits
+
+Admission concerns the canonical three-checkpoint journeys and authored policy only. Optional budget-interruption/resume diagnostics are not part of canonical admission until their branch-specific oracle and limitation-aware scoring are reviewed. Do not score honest runtime limitations as false confident claims; retain supported findings and measure incomplete useful work separately.
+
+The holdout uses distinct entities, unit counts, packaging and paths: combined income binder, mixed quarterly account archive, two-amendment history, and long leases combined with a late manager-authority issue. It is not an exact renamed development package. Layout differences are modest (type, spacing, color, packaging) and all sources share simplified prose conventions. This is a synthetic generalization check, not a real-world holdout or estimate of population accuracy. The fixed periods and review date are intentional shared policy.
+
+I reviewed the scorer and its negative-test design. It distinguishes citation shape, criterion state/source-group checks and mandatory semantic adjudication. `mvpPassed=None` is appropriate: a real quote from the correct page can still fail to support a claim, and gap wording, reasoning, useful guidance and forbidden-claim detection require independent trace adjudication. Authored baselines are scorer checks, not agent execution. Future runs must use allowlisted checkpoint exports, excluding generator code, private simulator/oracle files, review artifacts and future evidence.
+
+Independent scorer execution: all 13 initial offline tests passed. I also replaced D01 checkpoint 1 `R1.units` citation with the real page title `Occupancy schedule`; structural scoring passed while `mvpPassed` remained null and semantic adjudication remained required. That is a confirmed limitation, not a semantic pass: the title does not establish tenant, rent or term coverage. Future evaluation reports must preserve this distinction. The evaluator specification now explicitly separates optional interruption events from settled checkpoints and requires manual adjudication for that probe.
+
+Final independent rerun: **18/18 offline tests passed** (15 scorer, 3 allowlist-export). No provider calls or application/database mutations were performed. Final admission covers all 12 canonical journeys / 36 settled checkpoints; all optional interruption diagnostics remain separately classified.

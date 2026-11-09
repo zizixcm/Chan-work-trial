@@ -1,0 +1,7 @@
+{
+  "app/api/upload-batches/route.ts": "996a5ef041ae9038d7061534253a638808cbebda0d115c7f8d4aa76a4893184a",
+  "lib/jobs/upload-finalization.ts": "78fce1ff06b129d5e3eb8283b2757629ce69d5e1a1b323b471bae8d96a3c400c",
+  "tests/upload-finalize-http.test.ts": "c6653a484d336366e717f53bc73a2e950de5e3300af6dd620c2d2786240cbab4",
+  "tests/chat-upload-journey.eval.ts": "1f980d7a20ea665fef34a80eca95caa0470b16de2531265993b2213589f95465",
+  "docs/evals/chat-upload.md": "997595e6ac8799b7552f2c0f3c692f281a4ad476053d131ef60b8be6efe8a3b6"
+}

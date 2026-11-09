@@ -1,0 +1,49 @@
+{
+  "caseId": "BATCH-03",
+  "approval": {
+    "status": "approved",
+    "source": "explicit user answer in evaluation chat",
+    "answer": "Approve BATCH-03 as written",
+    "approvedScope": "Four-file D05 initial batch; wrong year and budget not actuals; correct remaining requests; bulk/parallel/stages/barrier/UI/latency."
+  },
+  "files": [
+    {
+      "documentId": "f103456061297",
+      "filename": "f103456061297.pdf",
+      "pageCount": 1,
+      "path": "development/D05/files/f103456061297.pdf",
+      "seriesId": "f103456061297",
+      "sha256": "ea710e528658edf0179e22ba289f95f280e552d6fff435d763a6a97316ac7a13",
+      "version": 1
+    },
+    {
+      "documentId": "f9c7159e3f5b1",
+      "filename": "f9c7159e3f5b1.pdf",
+      "pageCount": 2,
+      "path": "development/D05/files/f9c7159e3f5b1.pdf",
+      "seriesId": "f9c7159e3f5b1",
+      "sha256": "0a00c8db85e2cd2515987c0c14d0ea1ed52781c5468e8900b433b0861164ba81",
+      "version": 1
+    },
+    {
+      "documentId": "f942674fe7c1a",
+      "filename": "f942674fe7c1a.pdf",
+      "pageCount": 1,
+      "path": "development/D05/files/f942674fe7c1a.pdf",
+      "seriesId": "f942674fe7c1a",
+      "sha256": "2c06f2cd967949e788141cc6d2ec4ea663165f16572a71e7aa3e34c9851f1dfa",
+      "version": 1
+    },
+    {
+      "documentId": "fd40c4495f2f4",
+      "filename": "fd40c4495f2f4.pdf",
+      "pageCount": 1,
+      "path": "development/D05/files/fd40c4495f2f4.pdf",
+      "seriesId": "fd40c4495f2f4",
+      "sha256": "88f3be9bdf270e6c3d517fdd163bbfb62a7a142e6a7fc7ed04d8a6cf932644df",
+      "version": 1
+    }
+  ],
+  "specPath": "/Users/chanrao/Documents/ChatGPT/proximity/artifacts/testing/quality-latency-tuning/batch-upload-eval-spec.json",
+  "approvedCaseSha256": "7a64ceb912da0266328f1b11374e5182dce1a440fd78c51c0d990fcf4f8a38ce"
+}

@@ -1,0 +1,91 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "f9c8235aa530d",
+    "fe95c2ee0b84e",
+    "f388078a12c6b",
+    "fe5a03a9509f0",
+    "f4a50710e84f7",
+    "fd815041ba107",
+    "fe8376e83c153",
+    "f3a91c00f849e",
+    "f8733e331630f",
+    "f5bd96f6fb9cb"
+  ],
+  "budgetInterrupt": {
+    "eligible": false,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7419",
+    "baseRents": [
+      2759,
+      2999
+    ],
+    "borrower": "Garnet Walk Holdings LLC",
+    "currentRents": [
+      2759,
+      2999
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 0,
+    "manager": "Nori Fenn",
+    "otherOwner": "Eris Tarn",
+    "property": "Garnet Walk",
+    "tenants": [
+      "Garnet Studio",
+      "Garnet Supply"
+    ],
+    "units": [
+      "101",
+      "102"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 2 units occupied by the tenants listed; only account ending 7419 is requested. There are 0 lease amendments and 0 entity amendments.",
+      "uploadIds": [
+        "f9c8235aa530d",
+        "f5bd96f6fb9cb",
+        "f388078a12c6b",
+        "fe5a03a9509f0"
+      ]
+    },
+    {
+      "borrowerText": "I cannot read that copy either.",
+      "uploadIds": [
+        "f4a50710e84f7",
+        "fd815041ba107",
+        "fe8376e83c153",
+        "f3a91c00f849e",
+        "f8733e331630f"
+      ]
+    },
+    {
+      "borrowerText": "Here is the clearer copy.",
+      "supersedes": {
+        "f5bd96f6fb9cb": "fe95c2ee0b84e"
+      },
+      "uploadIds": [
+        "fe95c2ee0b84e"
+      ]
+    }
+  ]
+}

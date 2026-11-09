@@ -1,0 +1,1570 @@
+{
+  "baseCase": "D03",
+  "baseOracleSha256": "b01450a559678a6e3168129d002ebf2b53fe6a736c38a8c0c2e7434877fd6a9d",
+  "boundaries": [
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "arrived",
+      "expected": {
+        "activeDocumentIds": [
+          "f50b81f335dfa",
+          "fe781762d5d12",
+          "f8aebea604683",
+          "f36aa3d0b29e5"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only. External conversation boundary: arrival",
+              "documentRole": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. External conversation boundary: arrival",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. External conversation boundary: arrival",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f36aa3d0b29e5",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8aebea604683",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Complete August 2026 statement for the declared borrower account and holder. External conversation boundary: arrival",
+              "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-08",
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R4.july": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Complete July 2026 statement for the declared borrower account and holder. External conversation boundary: arrival",
+              "documentRole": "Complete July 2026 statement for the declared borrower account and holder.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-07",
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R4.september": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Complete September 2026 statement for the declared borrower account and holder. External conversation boundary: arrival",
+              "documentRole": "Complete September 2026 statement for the declared borrower account and holder.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-09",
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender. External conversation boundary: arrival",
+              "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Formation certificate identifies the declared borrower. External conversation boundary: arrival",
+              "documentRole": "Formation certificate identifies the declared borrower.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Operating agreement and all declared applicable entity amendments are supplied. External conversation boundary: arrival",
+              "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          }
+        },
+        "currentResultRevision": "1",
+        "evidenceRevision": "1",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "succeeded",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Explain which files arrived and partial support; do not claim amendment inspected."
+      ],
+      "sourceOracleCheckpoint": 1,
+      "transcriptCategory": "arrival",
+      "trigger": "External conversation boundary: arrival"
+    },
+    {
+      "allowedQuestionTopics": [
+        "rent change effective date",
+        "applicable amendment"
+      ],
+      "boundaryId": "focused_question",
+      "expected": {
+        "activeDocumentIds": [
+          "f50b81f335dfa",
+          "fe781762d5d12",
+          "f8aebea604683",
+          "f36aa3d0b29e5"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only. External conversation boundary: clarification",
+              "documentRole": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. External conversation boundary: clarification",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. External conversation boundary: clarification",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f36aa3d0b29e5",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8aebea604683",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Complete August 2026 statement for the declared borrower account and holder. External conversation boundary: clarification",
+              "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-08",
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R4.july": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Complete July 2026 statement for the declared borrower account and holder. External conversation boundary: clarification",
+              "documentRole": "Complete July 2026 statement for the declared borrower account and holder.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-07",
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R4.september": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Complete September 2026 statement for the declared borrower account and holder. External conversation boundary: clarification",
+              "documentRole": "Complete September 2026 statement for the declared borrower account and holder.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-09",
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender. External conversation boundary: clarification",
+              "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Formation certificate identifies the declared borrower. External conversation boundary: clarification",
+              "documentRole": "Formation certificate identifies the declared borrower.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Operating agreement and all declared applicable entity amendments are supplied. External conversation boundary: clarification",
+              "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Copper Finch Holdings LLC"
+            },
+            "supportGroups": []
+          }
+        },
+        "currentResultRevision": "1",
+        "evidenceRevision": "1",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "succeeded",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Ask a focused question about the unexplained rent change; cite both sides without presuming either wrong."
+      ],
+      "sourceOracleCheckpoint": 1,
+      "transcriptCategory": "clarification",
+      "trigger": "External conversation boundary: clarification"
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "incomplete_answer",
+      "expected": {
+        "activeDocumentIds": [
+          "f50b81f335dfa",
+          "fe781762d5d12",
+          "f8aebea604683",
+          "f36aa3d0b29e5",
+          "f53a259b9463b",
+          "f85ba8c80c137",
+          "f668e376e80b5",
+          "f0f74c541e59a",
+          "f8663b151c4c7"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only. External conversation boundary: response",
+              "documentRole": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. External conversation boundary: response",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. External conversation boundary: response",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f36aa3d0b29e5",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8aebea604683",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f85ba8c80c137",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f85ba8c80c137",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f53a259b9463b",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f53a259b9463b",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f668e376e80b5",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f668e376e80b5",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8663b151c4c7",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f0f74c541e59a",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8663b151c4c7",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": "2",
+        "evidenceRevision": "2",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "succeeded",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Treat vague reply as insufficient evidence; retain completed bank/entity findings.",
+        "One focused follow-up or request for applicable amendment is useful; do not restart all questions."
+      ],
+      "sourceOracleCheckpoint": 2,
+      "transcriptCategory": "response",
+      "trigger": "External conversation boundary: response"
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "amendment_arrival",
+      "expected": {
+        "activeDocumentIds": [
+          "f50b81f335dfa",
+          "fe781762d5d12",
+          "f8aebea604683",
+          "f36aa3d0b29e5",
+          "f53a259b9463b",
+          "f85ba8c80c137",
+          "f668e376e80b5",
+          "f0f74c541e59a",
+          "f8663b151c4c7",
+          "f075f94def30d"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only. External conversation boundary: arrival",
+              "documentRole": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. External conversation boundary: arrival",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. External conversation boundary: arrival",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Copper Finch"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f36aa3d0b29e5",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8aebea604683",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f85ba8c80c137",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f85ba8c80c137",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f53a259b9463b",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f53a259b9463b",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f668e376e80b5",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f668e376e80b5",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8663b151c4c7",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f0f74c541e59a",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8663b151c4c7",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": null,
+        "evidenceRevision": "3",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "running",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Acknowledge saved amendment without claiming its effective-date reconciliation before inspection."
+      ],
+      "sourceOracleCheckpoint": 2,
+      "transcriptCategory": "arrival",
+      "trigger": "External conversation boundary: arrival"
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "correction_explained",
+      "expected": {
+        "activeDocumentIds": [
+          "f50b81f335dfa",
+          "fe781762d5d12",
+          "f8aebea604683",
+          "f36aa3d0b29e5",
+          "f53a259b9463b",
+          "f85ba8c80c137",
+          "f668e376e80b5",
+          "f0f74c541e59a",
+          "f8663b151c4c7",
+          "f075f94def30d"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f075f94def30d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 2
+                }
+              ],
+              [
+                {
+                  "documentId": "f075f94def30d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 2
+                }
+              ],
+              [
+                {
+                  "documentId": "f8aebea604683",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f36aa3d0b29e5",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f075f94def30d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f36aa3d0b29e5",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8aebea604683",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f85ba8c80c137",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f85ba8c80c137",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f53a259b9463b",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f53a259b9463b",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f668e376e80b5",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f668e376e80b5",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8663b151c4c7",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f0f74c541e59a",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8663b151c4c7",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": "3",
+        "evidenceRevision": "3",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "succeeded",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Explain effective-date reconciliation and what changed, preserving unaffected findings."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "correction",
+      "trigger": "External conversation boundary: correction"
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "grounded_final",
+      "expected": {
+        "activeDocumentIds": [
+          "f50b81f335dfa",
+          "fe781762d5d12",
+          "f8aebea604683",
+          "f36aa3d0b29e5",
+          "f53a259b9463b",
+          "f85ba8c80c137",
+          "f668e376e80b5",
+          "f0f74c541e59a",
+          "f8663b151c4c7",
+          "f075f94def30d"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f075f94def30d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 2
+                }
+              ],
+              [
+                {
+                  "documentId": "f075f94def30d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f50b81f335dfa",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe781762d5d12",
+                  "page": 2
+                }
+              ],
+              [
+                {
+                  "documentId": "f8aebea604683",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f36aa3d0b29e5",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f075f94def30d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f36aa3d0b29e5",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8aebea604683",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f85ba8c80c137",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f85ba8c80c137",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f53a259b9463b",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f53a259b9463b",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f668e376e80b5",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f668e376e80b5",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8663b151c4c7",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f0f74c541e59a",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8663b151c4c7",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": "3",
+        "evidenceRevision": "3",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "succeeded",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Summarize qualifying evidence for all five requests and any remaining gaps honestly.",
+        "Do not equate documentary completeness with readiness or approval."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "final",
+      "trigger": "External conversation boundary: final"
+    }
+  ],
+  "description": "Full intermediate response rubric, including focused clarification and incomplete borrower answer.",
+  "orderingRule": "Boundaries describe evaluator-controlled input and lifecycle transitions, not prescribed agent actions or tool/page order. All extra responses must also be logged and reviewed.",
+  "overlayId": "DEV-DIALOGUE",
+  "sourceHashes": {
+    "f075f94def30d": "b05601c46bf5e7a6a9f754469ae79f4849e036d87de1bdd72ce860494ec4b408",
+    "f0f74c541e59a": "c6750d8d276edeca0c6c8e75a29289e262155009f1a5ddecbef3be701f2b0e4d",
+    "f36aa3d0b29e5": "fd05e25e1a9ed7789799294d5f820aee1f460d76a71a7669324561153556724a",
+    "f50b81f335dfa": "0bef359ccac7205a0e7674ee3bd1d171d87f77244d429c19c15c9860696bd5c1",
+    "f53a259b9463b": "fba280bc7603daabd4e4045d78d5d88791a77f569b08513e2641c564cc5bf996",
+    "f668e376e80b5": "22b9a84fb5a8eb8db3b79d4d4d6c0539780dfe9c9d57b8ecc4b7bd80945333c7",
+    "f85ba8c80c137": "9e5c82dc561faa6d8c73e5b6bab20932c96a0a7f43cc7bad7840fd6a8849fa08",
+    "f8663b151c4c7": "83672acd318b54818dc30453a5f86031be0d55e8eb5a3b29adcd5a9103988a9a",
+    "f8aebea604683": "110c87280b6dde724f948f32e07e43364c6669c6337662ae6ae7a0b88bf73556",
+    "fe781762d5d12": "69f82abc6a930f516fcaada1cbf60a8c07114406df177bc1f72464e0c88a898f"
+  },
+  "split": "development",
+  "status": "provisional",
+  "version": "journey-overlays.1"
+}

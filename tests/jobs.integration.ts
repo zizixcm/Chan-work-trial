@@ -31,7 +31,7 @@ async function main(){
   for(const app of ['a','b'])await db.query(`INSERT INTO applications(id,borrower_name,property_name,address,transaction_type,requested_amount,loi_reference,created_at) VALUES($1,'Synthetic','Demo','Synthetic','Refinance',1,'LOI',now())`,[app]);
   await db.query("INSERT INTO application_memberships(application_id,user_id,role) VALUES('a','u','borrower'),('b','v','borrower')");
   await db.query("INSERT INTO requirements(id,application_id,title,category,purpose,period,owner,applicability,sort_order) VALUES('r','a','Rent roll','Property','Evidence','Current','Borrower','Required',1)");
-  await service.setPreference(true,'0');
+  assert.equal((await service.status()).preference.enabled,false);
   const doc=token();
   await portal.insertMany({id:doc,application_id:'a',original_name:'synthetic.csv',storage_key:doc,content_type:'text/csv; charset=utf-8',size_bytes:10,sha256:'a'.repeat(64),uploaded_by:'Synthetic',created_at:new Date().toISOString()},[]);
   assert.equal((await service.status()).jobs.length,1,'upload atomically queues supported MIME');
@@ -60,8 +60,7 @@ async function main(){
   assert.equal((await db.query('SELECT count(*)::int n FROM requirement_documents WHERE unlinked_at IS NULL')).rows[0].n,0,'human unlink survives rerun');
   const preference=(await service.status()).preference;
   await service.setPreference(false,preference.epoch);
-  assert.equal((await service.status()).jobs.some(j=>j.state==='queued'||j.state==='running'),false,'off cancels pending jobs');
-  await assert.rejects(service.request('verify_requirement.v1','r',token()));
+  assert.equal((await service.status()).jobs.some(j=>j.state==='queued'||j.state==='running'),true,'old off preference does not cancel automatic jobs');
   const other=new AnalysisService({applicationId:'b',userId:'v',role:'borrower',displayName:'Other'},db);
   await assert.rejects(other.get(recovered.id),{status:404},'job ID does not grant cross-app access');
   const next=(await service.status()).preference;await service.setPreference(true,next.epoch);
@@ -107,7 +106,7 @@ async function main(){
   assert.deepEqual((await service.status()).preference,off,'lender personal toggle does not change borrower');
   await lender.setPreference(false,'1');
   await assert.rejects(lender.request('match_document.v1',doc,token()),{status:403});
-  await assert.rejects(service.request('verify_requirement.v1','r',token()),{status:403});
+  const autoCheck=await service.request('verify_requirement.v1','r',token());assert(autoCheck.id);await service.cancel(autoCheck.id);
   const lenderLease=await repo.claim('interactive','lender');assert(lenderLease);assert.equal(lenderLease.id,lenderRequest.id);
   const verified={schemaVersion:'verify.v1',requirementId:'r',assessment:'unknown',checks:[],missingEvidence:[],conflicts:[],limitations:[]};
   let calls=0;
@@ -119,7 +118,7 @@ async function main(){
     assert.notEqual(borrowerJob.id,lenderLease.id,'dedup separates authorities');
     await assert.rejects(service.retry(lenderLease.id,token()),{status:404});
     await toggle(false);
-    assert.equal((await service.get(borrowerJob.id!)).state,'cancelled');
+    assert.equal((await service.get(borrowerJob.id!)).state,'queued');await service.cancel(borrowerJob.id!);
     assert.equal((await lender.get(lenderLease.id)).state,'running');
     assert.equal(await repo.heartbeat(lenderLease),true);
     return {text:JSON.stringify(verified),usage:{inputTokens:100,outputTokens:100}};
@@ -165,7 +164,7 @@ async function main(){
   assert.equal((await service.get(otherJob.id!)).ownedByCurrentUser,false);
   await sameUserOtherApp.setPreference(false,(await sameUserOtherApp.status()).preference.epoch);
   assert.equal((await service.status()).preference.enabled,false,'personal toggle persists across apps');
-  assert.equal((await service.get(ownJob.id!)).state,'cancelled','own jobs cancelled across apps');
+  assert.equal((await service.get(ownJob.id!)).state,'queued','automatic jobs ignore old preference across apps');
   assert.equal((await otherBorrower.get(otherJob.id!)).state,'queued','other user work survives');
   assert.equal((await otherBorrower.status()).preference.enabled,true);
   const concurrentEpoch=(await service.status()).preference.epoch;
@@ -202,7 +201,7 @@ async function main(){
   const alternateLease=await repo.claim('interactive','model-profile');assert(alternateLease);assert.equal(alternateLease.id,alternate);
   const reserved=await repo.admitDispatch(alternateLease,{...DEFAULT_BUDGET,model:'google/gemini-2.5-flash'});assert(reserved);
   const price=(await db.query('SELECT reserved_usd::float8 cost,input_usd_per_million::float8 input,output_usd_per_million::float8 output FROM analysis_reservations WHERE id=$1',[reserved.id])).rows[0];
-  assert.deepEqual(price,{cost:0.0172,input:0.3,output:2.5},'alternate model reserves its own price ceiling');
+  assert.deepEqual(price,{cost:(DEFAULT_BUDGET.maxInputTokens*0.3+DEFAULT_BUDGET.maxOutputTokens*2.5)/1_000_000,input:0.3,output:2.5},'alternate model reserves its own price ceiling');
   await repo.finishReservation(reserved,{inputTokens:100,outputTokens:100});
   assert.equal((await db.query('SELECT accounted_usd::float8 cost FROM analysis_reservations WHERE id=$1',[reserved.id])).rows[0].cost,0.00028,'usage uses pinned reservation prices');
   await service.cancel(alternateLease.id);
@@ -214,7 +213,7 @@ async function main(){
   process.env.OPENROUTER_MODEL=DEFAULT_BUDGET.model;
   console.log('PASS: latest-snapshot coalescing, interactive priority, user isolation, concurrent dedup, predecessor serialization and stale commit protection.');
   console.log('PASS: independent lender worker dispatch/commit, preference changes, scoped dedup/cache/receipts, cancel/retry ownership, membership and evidence guards.');
-  console.log('PASS: durable upload, concurrent receipt/claim, revocation, recovery fencing, idempotent commit, aggregate enqueue, human rejection, off gate, cross-app privacy, stale definition, blocked recovery. No provider calls.');
+  console.log('PASS: durable upload, concurrent receipt/claim, revocation, recovery fencing, idempotent commit, aggregate enqueue, human rejection, automatic upload authority, cross-app privacy, stale definition, blocked recovery. No provider calls.');
  }finally{
   await pool().end();await db.end();await admin.query(`DROP SCHEMA IF EXISTS ${schema} CASCADE`);await admin.end();
  }

@@ -1,0 +1,2022 @@
+{
+  "checkpoints": [
+    {
+      "activeDocumentIds": [
+        "f436587b9d9c9",
+        "f617d0c2cdedf",
+        "f0d59e534f310",
+        "f557b4ef01666",
+        "f1db9f18acdc7",
+        "fe130401d7c4e",
+        "f1cb5ade214be"
+      ],
+      "checkpoint": 1,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D04-101. Property: Dapple Works; unit 101.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2348.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D04-102. Property: Dapple Works; unit 102.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2588.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7368 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D04-101. Property: Dapple Works; unit 101.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2348.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D04-102. Property: Dapple Works; unit 102.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2588.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f0d59e534f310",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 59232; other income USD 0.",
+                "Operating expenses USD 19744; NOI USD 39488.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f0d59e534f310",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f557b4ef01666",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 44424; other income USD 0.",
+                "Operating expenses USD 14808; NOI USD 29616.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f557b4ef01666",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D04-101. Property: Dapple Works; unit 101.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2348.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D04-102. Property: Dapple Works; unit 102.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2588.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f0d59e534f310",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 59232; other income USD 0.",
+                "Operating expenses USD 19744; NOI USD 39488.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f557b4ef01666",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 44424; other income USD 0.",
+                "Operating expenses USD 14808; NOI USD 29616.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f0d59e534f310",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f557b4ef01666",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f1db9f18acdc7",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f1db9f18acdc7",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Account ending 7368. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f1db9f18acdc7",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f1db9f18acdc7",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f436587b9d9c9",
+              "f617d0c2cdedf",
+              "f0d59e534f310",
+              "f557b4ef01666",
+              "f1db9f18acdc7",
+              "fe130401d7c4e",
+              "f1cb5ade214be"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": {
+            "description": "August upload has a different holder; correct borrower account August statement remains missing.",
+            "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-08",
+            "subject": "Dapple Works Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f7198c6bc028e"
+          ],
+          "reason": "August upload has a different holder; correct borrower account August statement remains missing.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f1cb5ade214be",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f1cb5ade214be",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Account ending 7368. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f1cb5ade214be",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f1cb5ade214be",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f436587b9d9c9",
+              "f617d0c2cdedf",
+              "f0d59e534f310",
+              "f557b4ef01666",
+              "f1db9f18acdc7",
+              "fe130401d7c4e",
+              "f1cb5ade214be"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Formation certificate identifies the declared borrower.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Dapple Works Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f58d620a49571"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f436587b9d9c9",
+              "f617d0c2cdedf",
+              "f0d59e534f310",
+              "f557b4ef01666",
+              "f1db9f18acdc7",
+              "fe130401d7c4e",
+              "f1cb5ade214be"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Dapple Works Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fb2a26f5d74e3"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f436587b9d9c9",
+              "f617d0c2cdedf",
+              "f0d59e534f310",
+              "f557b4ef01666",
+              "f1db9f18acdc7",
+              "fe130401d7c4e",
+              "f1cb5ade214be"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Dapple Works Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fb2a26f5d74e3"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f436587b9d9c9",
+        "f617d0c2cdedf",
+        "f0d59e534f310",
+        "f557b4ef01666",
+        "f1db9f18acdc7",
+        "fe130401d7c4e",
+        "f1cb5ade214be",
+        "f58d620a49571",
+        "fb2a26f5d74e3"
+      ],
+      "checkpoint": 2,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D04-101. Property: Dapple Works; unit 101.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2348.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D04-102. Property: Dapple Works; unit 102.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2588.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7368 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D04-101. Property: Dapple Works; unit 101.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2348.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D04-102. Property: Dapple Works; unit 102.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2588.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f0d59e534f310",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 59232; other income USD 0.",
+                "Operating expenses USD 19744; NOI USD 39488.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f0d59e534f310",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f557b4ef01666",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 44424; other income USD 0.",
+                "Operating expenses USD 14808; NOI USD 29616.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f557b4ef01666",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D04-101. Property: Dapple Works; unit 101.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2348.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D04-102. Property: Dapple Works; unit 102.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2588.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f0d59e534f310",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 59232; other income USD 0.",
+                "Operating expenses USD 19744; NOI USD 39488.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f557b4ef01666",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 44424; other income USD 0.",
+                "Operating expenses USD 14808; NOI USD 29616.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f0d59e534f310",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f557b4ef01666",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f1db9f18acdc7",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f1db9f18acdc7",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Account ending 7368. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f1db9f18acdc7",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f1db9f18acdc7",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f436587b9d9c9",
+              "f617d0c2cdedf",
+              "f0d59e534f310",
+              "f557b4ef01666",
+              "f1db9f18acdc7",
+              "fe130401d7c4e",
+              "f1cb5ade214be",
+              "f58d620a49571",
+              "fb2a26f5d74e3"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": {
+            "description": "August upload has a different holder; correct borrower account August statement remains missing.",
+            "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-08",
+            "subject": "Dapple Works Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f7198c6bc028e"
+          ],
+          "reason": "August upload has a different holder; correct borrower account August statement remains missing.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f1cb5ade214be",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f1cb5ade214be",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Account ending 7368. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f1cb5ade214be",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f1cb5ade214be",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f58d620a49571",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Dapple Works Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Elin Vos. Fictional registry reference D04-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f58d620a49571",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fb2a26f5d74e3",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Dapple Works Holdings LLC. Effective 2024-10-01.",
+                "Members: Elin Vos 60%; Pax Neri 40%. Total ownership 100%.",
+                "Manager: Elin Vos. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Elin Vos; member signature /s/ Pax Neri; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fb2a26f5d74e3",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fb2a26f5d74e3",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Dapple Works Holdings LLC. Effective 2024-10-01.",
+                "Members: Elin Vos 60%; Pax Neri 40%. Total ownership 100%.",
+                "Manager: Elin Vos. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Elin Vos; member signature /s/ Pax Neri; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fb2a26f5d74e3",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": [
+        {
+          "documentId": "fe130401d7c4e",
+          "requirementId": "R4"
+        }
+      ]
+    },
+    {
+      "activeDocumentIds": [
+        "f436587b9d9c9",
+        "f617d0c2cdedf",
+        "f0d59e534f310",
+        "f557b4ef01666",
+        "f1db9f18acdc7",
+        "fe130401d7c4e",
+        "f1cb5ade214be",
+        "f58d620a49571",
+        "fb2a26f5d74e3",
+        "f7198c6bc028e"
+      ],
+      "checkpoint": 3,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D04-101. Property: Dapple Works; unit 101.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2348.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D04-102. Property: Dapple Works; unit 102.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2588.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7368 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D04-101. Property: Dapple Works; unit 101.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2348.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D04-102. Property: Dapple Works; unit 102.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2588.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f0d59e534f310",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 59232; other income USD 0.",
+                "Operating expenses USD 19744; NOI USD 39488.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f0d59e534f310",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f557b4ef01666",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 44424; other income USD 0.",
+                "Operating expenses USD 14808; NOI USD 29616.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f557b4ef01666",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f436587b9d9c9",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D04-101. Property: Dapple Works; unit 101.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2348.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f617d0c2cdedf",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D04-102. Property: Dapple Works; unit 102.",
+                "Landlord: Dapple Works Holdings LLC; tenant: Dapple Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2588.",
+                "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f0d59e534f310",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 59232; other income USD 0.",
+                "Operating expenses USD 19744; NOI USD 39488.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f557b4ef01666",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 44424; other income USD 0.",
+                "Operating expenses USD 14808; NOI USD 29616.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f436587b9d9c9",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f617d0c2cdedf",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f0d59e534f310",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f557b4ef01666",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f1db9f18acdc7",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f1db9f18acdc7",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Account ending 7368. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f1db9f18acdc7",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f1db9f18acdc7",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f7198c6bc028e",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f7198c6bc028e",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Account ending 7368. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f7198c6bc028e",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f7198c6bc028e",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f1cb5ade214be",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f1cb5ade214be",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Dapple Works Holdings LLC. Account ending 7368. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f1cb5ade214be",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f1cb5ade214be",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f58d620a49571",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Dapple Works Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Elin Vos. Fictional registry reference D04-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f58d620a49571",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fb2a26f5d74e3",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Dapple Works Holdings LLC. Effective 2024-10-01.",
+                "Members: Elin Vos 60%; Pax Neri 40%. Total ownership 100%.",
+                "Manager: Elin Vos. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Elin Vos; member signature /s/ Pax Neri; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fb2a26f5d74e3",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fb2a26f5d74e3",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Dapple Works Holdings LLC. Effective 2024-10-01.",
+                "Members: Elin Vos 60%; Pax Neri 40%. Total ownership 100%.",
+                "Manager: Elin Vos. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Elin Vos; member signature /s/ Pax Neri; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fb2a26f5d74e3",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    }
+  ],
+  "crossDocumentArithmetic": {
+    "annualBaseRent": 59232,
+    "calculation": "2025: sum original monthly rents *12. 2026: original *9 plus amendment 1 uplift for April-September and amendment 2 uplift for July-September when applicable.",
+    "currentMonthlyRent": 4936,
+    "currentPeriodBaseRent": 44424
+  },
+  "roles": {
+    "annual": "f0d59e534f310",
+    "bank7": "f1db9f18acdc7",
+    "bank8": "f7198c6bc028e",
+    "bank9": "f1cb5ade214be",
+    "current": "f557b4ef01666",
+    "formation": "f58d620a49571",
+    "governing": "fb2a26f5d74e3",
+    "leases": "f617d0c2cdedf",
+    "roll": "f436587b9d9c9",
+    "wrong_holder": "fe130401d7c4e"
+  },
+  "semanticReviewRequired": true,
+  "sourcePages": {
+    "f0d59e534f310": [
+      {
+        "lines": [
+          "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 59232; other income USD 0.",
+          "Operating expenses USD 19744; NOI USD 39488.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f1cb5ade214be": [
+      {
+        "lines": [
+          "Holder: Dapple Works Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Dapple Works Holdings LLC. Account ending 7368. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f1db9f18acdc7": [
+      {
+        "lines": [
+          "Holder: Dapple Works Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Dapple Works Holdings LLC. Account ending 7368. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f436587b9d9c9": [
+      {
+        "lines": [
+          "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Dapple Studio; monthly base rent USD 2348; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Dapple Supply; monthly base rent USD 2588; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      }
+    ],
+    "f557b4ef01666": [
+      {
+        "lines": [
+          "Property: Dapple Works. Owner: Dapple Works Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 44424; other income USD 0.",
+          "Operating expenses USD 14808; NOI USD 29616.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f58d620a49571": [
+      {
+        "lines": [
+          "Entity: Dapple Works Holdings LLC. Entity type: limited liability company.",
+          "Formed 2024-10-01. Organizer: Elin Vos. Fictional registry reference D04-REG.",
+          "This document establishes the named entity; it does not itself establish current manager authority."
+        ],
+        "title": "Certificate of formation"
+      }
+    ],
+    "f617d0c2cdedf": [
+      {
+        "lines": [
+          "Lease D04-101. Property: Dapple Works; unit 101.",
+          "Landlord: Dapple Works Holdings LLC; tenant: Dapple Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2348.",
+          "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease D04-102. Property: Dapple Works; unit 102.",
+          "Landlord: Dapple Works Holdings LLC; tenant: Dapple Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2588.",
+          "Landlord signature: /s/ Elin Vos, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Pax Neri, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      }
+    ],
+    "f7198c6bc028e": [
+      {
+        "lines": [
+          "Holder: Dapple Works Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Dapple Works Holdings LLC. Account ending 7368. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fb2a26f5d74e3": [
+      {
+        "lines": [
+          "Entity: Dapple Works Holdings LLC. Effective 2024-10-01.",
+          "Members: Elin Vos 60%; Pax Neri 40%. Total ownership 100%.",
+          "Manager: Elin Vos. Manager may execute refinancing documents for this company.",
+          "Member signature /s/ Elin Vos; member signature /s/ Pax Neri; dated 2024-10-01."
+        ],
+        "title": "Operating agreement"
+      }
+    ],
+    "fe130401d7c4e": [
+      {
+        "lines": [
+          "Holder: Stray Orchard Services LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7368.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Stray Orchard Services LLC. Account ending 7368. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ]
+  },
+  "status": "provisional",
+  "version": "CRE-E2E-oracle.1"
+}

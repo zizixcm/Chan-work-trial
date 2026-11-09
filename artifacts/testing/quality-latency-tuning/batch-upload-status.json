@@ -1,0 +1,29 @@
+{
+  "status": "eval implementation ready; production batch runtime/UI adapter pending coordinating owners",
+  "approvedCases": [
+    "BATCH-01",
+    "BATCH-02",
+    "BATCH-03",
+    "BATCH-04"
+  ],
+  "nativeImplementation": [
+    "lib/evaluation-observability/batch-upload.ts",
+    "tests/batch-upload-evaluation.test.ts"
+  ],
+  "verification": {
+    "quick": "177 tests and TypeScript PASS",
+    "nativeWorkflow": "Offline provider-free native Workflow/runEvals/scorer/trace storage regression PASS; offline receipts cannot certify live latency",
+    "buildIntegration": "NOT RUN for new batch flow",
+    "browser": "NOT RUN; UI not implemented",
+    "live": "NOT RUN; current transport cannot safely execute provider calls concurrently; no owner window"
+  },
+  "dependencies": [
+    "Final typed persisted batch/file progress contract from processing owner",
+    "Request-scoped provider transport and per-call budget accounting; preserve caps",
+    "Production controller adapter and show-as-you-go UI integration",
+    "Coordinated bounded live window after v17 corrective release"
+  ],
+  "budget": "$1.20 per-call reservation against $2 investigation cap cannot admit two concurrent model calls. Actual local execution may overlap; queue overlap does not count. No silent cap change or parallel-gate waiver.",
+  "sevenRecoveries": "All seven fail overall journey quality; five no final report, two saved-evidence reasks. Original outputs preserved.",
+  "nextAction": "Integrate final runtime/event adapter, verify offline/browser, run approved cases under existing caps, then tune against both quality and latency."
+}

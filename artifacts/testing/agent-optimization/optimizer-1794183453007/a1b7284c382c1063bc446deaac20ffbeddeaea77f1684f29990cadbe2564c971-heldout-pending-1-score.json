@@ -1,0 +1,32 @@
+{
+  "caseId": "heldout-pending",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "Your upload is not completely finished yet:\n\n* **Saved file (1):** Elm lease.pdf\n* **In progress:** Other uploads are still in progress.\n\nPlease check your upload progress to ensure any remaining files finish transferring."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All factual statements are supported by the input, correctly noting that Elm lease.pdf is saved and pending uploads remain active without claiming an unsupported review or approval status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "Directly answers the user's question regarding whether the upload is finished by clarifying that one file is saved while other uploads are still in progress."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Appropriately suggests checking upload progress without requesting a re-upload of the already saved lease or marking it as pending."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no redundant statements."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 34,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 7853,
+  "elapsedMs": 13623
+}

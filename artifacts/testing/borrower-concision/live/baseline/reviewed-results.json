@@ -1,0 +1,272 @@
+[
+  {
+    "caseId": "uploads-saved",
+    "wordCount": 13,
+    "maxWords": 120,
+    "checks": [
+      {
+        "id": "direct_reply",
+        "passed": true
+      },
+      {
+        "id": "concise",
+        "passed": true
+      },
+      {
+        "id": "answersQuestion",
+        "passed": true
+      },
+      {
+        "id": "grounded",
+        "passed": true
+      },
+      {
+        "id": "appropriateNextSteps",
+        "passed": true
+      },
+      {
+        "id": "noRepetition",
+        "passed": true
+      }
+    ],
+    "status": "passed",
+    "message": "You have uploaded the following documents:\n* Rent roll.pdf\n* 2025 operating statement.pdf",
+    "review": {
+      "reviewer": "Codex evaluator, separate from the responding Gemini agent",
+      "judgments": {
+        "answersQuestion": {
+          "passed": true,
+          "evidence": "Names both saved files, directly answering the upload inventory question."
+        },
+        "grounded": {
+          "passed": true,
+          "evidence": "Both filenames match the synthetic current inventory; no completeness or approval claim."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "evidence": "No action is supported by this snapshot and none is suggested."
+        },
+        "noRepetition": {
+          "passed": true,
+          "evidence": "Short direct response with no repeated gaps, per-file disclaimers, or requirements checklist."
+        }
+      }
+    }
+  },
+  {
+    "caseId": "uploads-empty",
+    "wordCount": 6,
+    "maxWords": 80,
+    "checks": [
+      {
+        "id": "direct_reply",
+        "passed": true
+      },
+      {
+        "id": "concise",
+        "passed": true
+      },
+      {
+        "id": "answersQuestion",
+        "passed": true
+      },
+      {
+        "id": "grounded",
+        "passed": true
+      },
+      {
+        "id": "appropriateNextSteps",
+        "passed": false
+      },
+      {
+        "id": "noRepetition",
+        "passed": true
+      }
+    ],
+    "status": "failed",
+    "message": "No documents have been uploaded yet.",
+    "review": {
+      "reviewer": "Codex evaluator, separate from the responding Gemini agent",
+      "judgments": {
+        "answersQuestion": {
+          "passed": true,
+          "evidence": "Accurately states that no documents have been uploaded."
+        },
+        "grounded": {
+          "passed": true,
+          "evidence": "Matches the empty document inventory."
+        },
+        "appropriateNextSteps": {
+          "passed": false,
+          "evidence": "Fails: omits the concrete upload suggestion despite an empty inventory and an active current rent roll request."
+        },
+        "noRepetition": {
+          "passed": true,
+          "evidence": "Short direct response with no repeated gaps, per-file disclaimers, or requirements checklist."
+        }
+      }
+    }
+  },
+  {
+    "caseId": "uploads-pending",
+    "wordCount": 21,
+    "maxWords": 120,
+    "checks": [
+      {
+        "id": "direct_reply",
+        "passed": true
+      },
+      {
+        "id": "concise",
+        "passed": true
+      },
+      {
+        "id": "answersQuestion",
+        "passed": true
+      },
+      {
+        "id": "grounded",
+        "passed": true
+      },
+      {
+        "id": "appropriateNextSteps",
+        "passed": false
+      },
+      {
+        "id": "noRepetition",
+        "passed": true
+      }
+    ],
+    "status": "failed",
+    "message": "You have uploaded the following documents:\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nI see that more documents are pending upload.",
+    "review": {
+      "reviewer": "Codex evaluator, separate from the responding Gemini agent",
+      "judgments": {
+        "answersQuestion": {
+          "passed": true,
+          "evidence": "Lists both saved files and distinguishes additional pending uploads."
+        },
+        "grounded": {
+          "passed": true,
+          "evidence": "Pending uploads are separate from the two saved files; no review status is inferred."
+        },
+        "appropriateNextSteps": {
+          "passed": false,
+          "evidence": "Fails: no actionable suggestion to check unfinished upload progress."
+        },
+        "noRepetition": {
+          "passed": true,
+          "evidence": "Short direct response with no repeated gaps, per-file disclaimers, or requirements checklist."
+        }
+      }
+    }
+  },
+  {
+    "caseId": "uploads-specific",
+    "wordCount": 6,
+    "maxWords": 60,
+    "checks": [
+      {
+        "id": "direct_reply",
+        "passed": true
+      },
+      {
+        "id": "concise",
+        "passed": true
+      },
+      {
+        "id": "answersQuestion",
+        "passed": true
+      },
+      {
+        "id": "grounded",
+        "passed": true
+      },
+      {
+        "id": "appropriateNextSteps",
+        "passed": true
+      },
+      {
+        "id": "noRepetition",
+        "passed": true
+      }
+    ],
+    "status": "passed",
+    "message": "Yes, \"Rent roll.pdf\" has been uploaded.",
+    "review": {
+      "reviewer": "Codex evaluator, separate from the responding Gemini agent",
+      "judgments": {
+        "answersQuestion": {
+          "passed": true,
+          "evidence": "Directly confirms Rent roll.pdf is uploaded."
+        },
+        "grounded": {
+          "passed": true,
+          "evidence": "Rent roll.pdf is present and active in the fixture; no approval claim."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "evidence": "No action is supported by this snapshot and none is suggested."
+        },
+        "noRepetition": {
+          "passed": true,
+          "evidence": "Short direct response with no repeated gaps, per-file disclaimers, or requirements checklist."
+        }
+      }
+    }
+  },
+  {
+    "caseId": "uploads-detail",
+    "wordCount": 37,
+    "maxWords": 180,
+    "checks": [
+      {
+        "id": "direct_reply",
+        "passed": true
+      },
+      {
+        "id": "concise",
+        "passed": true
+      },
+      {
+        "id": "answersQuestion",
+        "passed": true
+      },
+      {
+        "id": "grounded",
+        "passed": true
+      },
+      {
+        "id": "appropriateNextSteps",
+        "passed": true
+      },
+      {
+        "id": "noRepetition",
+        "passed": true
+      }
+    ],
+    "status": "passed",
+    "message": "You have uploaded the following files:\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nSaving a file means it has been received and is part of your application. It does not mean the lender has approved it yet.",
+    "review": {
+      "reviewer": "Codex evaluator, separate from the responding Gemini agent",
+      "judgments": {
+        "answersQuestion": {
+          "passed": true,
+          "evidence": "Names both files and explains that saving does not mean lender approval."
+        },
+        "grounded": {
+          "passed": true,
+          "evidence": "Both filenames match the synthetic current inventory; no completeness or approval claim."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "evidence": "No action is supported by this snapshot and none is suggested."
+        },
+        "noRepetition": {
+          "passed": true,
+          "evidence": "Short direct response with no repeated gaps, per-file disclaimers, or requirements checklist."
+        }
+      }
+    }
+  }
+]

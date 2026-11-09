@@ -1,0 +1,32 @@
+{
+  "caseId": "heldout-saved",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "We have 1 saved file for your application:\n\n* **Elm lease.pdf**\n\nPlease note that having a file saved does not equate to lender review or approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately identifies Elm lease.pdf from the document inventory and correctly states general policy regarding file saving versus review or approval without asserting an unsupported review status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers which files are saved on the application."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No extraneous or inappropriate next steps were suggested."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetition in the message."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 26,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6975,
+  "elapsedMs": 11538
+}

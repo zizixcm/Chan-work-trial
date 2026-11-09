@@ -1,0 +1,34 @@
+{
+  "caseId": "uploads-saved",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "You currently have 2 files saved in your application:\n\n- **Rent roll.pdf**\n- **2025 operating statement.pdf**\n\nPlease note that saved files have not yet been reviewed or approved by the lender."
+  },
+  "review": {
+    "grounded": {
+      "passed": false,
+      "reason": "The response asserts an actual review status by stating that 'saved files have not yet been reviewed or approved by the lender', which is unsupported by the snapshot data."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response accurately identifies the two saved documents in the application."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No unrequested or invented next steps were suggested."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no repetitive text."
+    },
+    "criticalFailures": [
+      "invented_evidence"
+    ]
+  },
+  "wordCount": 31,
+  "hardPassed": false,
+  "passed": false,
+  "costMicros": 7025,
+  "elapsedMs": 11966
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-pending",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "Here are the 2 files currently saved:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nOther uploads are still in progress. Please check your upload progress to ensure those finish transmitting. (Note that saved files do not equate to review or approval.)"
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements are supported by the input data; stating that saved files do not equate to review or approval explains policy and makes no unsupported status claim."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response correctly identifies both saved documents and notes that additional uploads are pending."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response appropriately suggests checking the progress of unfinished uploads without asking to re-upload saved files."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 41,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6188,
+  "elapsedMs": 9016
+}

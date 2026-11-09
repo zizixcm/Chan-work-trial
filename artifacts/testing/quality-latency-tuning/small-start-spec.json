@@ -1,0 +1,52 @@
+{
+  "version": "small-start.1",
+  "authorization": "User explicitly requested these four flows and tuning before expansion.",
+  "policy": "D01 admitted public lender policy; no private oracle in model context",
+  "cases": [
+    {
+      "id": "EMPTY-REQUESTED",
+      "question": "What's requested?",
+      "expected": "Explain the five requests and exact periods; conditional amendments only; no investigation or extra invented requirements."
+    },
+    {
+      "id": "EMPTY-UPLOADED",
+      "question": "What's been uploaded?",
+      "expected": "Zero saved documents, no pending upload. Brief direct answer and useful upload next step; no invented analysis."
+    },
+    {
+      "id": "EMPTY-MISSING",
+      "question": "What's still missing?",
+      "expected": "All requested document groups remain to be supplied; retain exact periods and declared zero amendments. No claim that files were inspected or requirements fulfilled."
+    },
+    {
+      "id": "ONE-UPLOAD",
+      "question": null,
+      "document": "D01/files/f7dbacda2c2f3.pdf",
+      "sha256": "22f55161bd508ab78385eceb4fc257142b2540b5495e04f874bd485a913065fe",
+      "expected": [
+        "Acknowledge one durably saved file, without claiming analysis is already complete.",
+        "Identify Aster Quay 2025 actual operating statement; explain rental income49368, expenses16456, NOI32912 if mentioning figures.",
+        "Map relevance to R3 operating statements; FY2025 supported, Jan\u2013Sep2026 remains missing. Proposal is valid; automatic committed linking is not required.",
+        "Updated uploaded inventory has exactly this one file; no fictitious rent roll, leases, bank or entity documents.",
+        "Distinguish fulfilled annual criterion from still-incomplete operating-statements requirement; acknowledge declared no-amendment applicability without waiving executed leases.",
+        "Summarize remaining roll9/30/2026, executed leases, YTDJan\u2013Sep2026actuals, completeJul\u2013Sep2026bankaccount7317, formation/governing documents. Do not request nonexistent amendments.",
+        "Give a useful final borrower report based on persisted validated findings, not just a worker success receipt."
+      ]
+    }
+  ],
+  "latencyTargetsMs": {
+    "emptyFirstUseful": 3000,
+    "emptyFinal": 5000,
+    "uploadAcknowledgement": 1000,
+    "uploadFinalReportTarget": 15000,
+    "uploadFinalReportCeiling": 20000
+  },
+  "latencyPolicy": "Targets, not measured guarantees. Track first visible text separately from reviewed useful text; progress does not count as completed analysis. Include queue delay. Quality and latency both must pass. Upload acknowledgement is an upload-system receipt after durable save, not an LLM message. DB-only fixture leaves this UI metric unmeasured.",
+  "scopeLimits": [
+    "Controller/database upload ingestion, not browser multipart/network coverage.",
+    "Three empty cases use independent fresh applications.",
+    "One upload uses same facts/PDF as prior task baseline but adds borrower routing and follow-through.",
+    "No forced model tool order; native direct replies and incremental publication allowed.",
+    "No broad journeys or holdouts until these four work."
+  ]
+}

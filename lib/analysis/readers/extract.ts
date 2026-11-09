@@ -93,7 +93,11 @@ export async function extract(document:{id:string;sha256:string;contentType:stri
         if(sheet.rowCount>500||sheet.columnCount>50)throw new AnalysisError('INPUT_TOO_LARGE');
         if(sheet.getImages().length)limitations.push(`Sheet ${sheet.name}: embedded images are not covered by cell extraction.`);
         sheet.eachRow(row=>row.eachCell(cell=>{
+          // Merged aliases repeat their master's value. Empty merged masters
+          // can also make ExcelJS cell.text throw; neither is new evidence.
+          if(cell.isMerged&&cell.master.address!==cell.address)return;
           const value=cell.value;
+          if(value===null||value===undefined)return;
           if(value&&typeof value==='object'&&('formula' in value||'sharedFormula' in value)){
             add(`Sheet ${sheet.name}!${cell.address}`,JSON.stringify(value));
             limitations.push(`Sheet ${sheet.name}: formulas and cached values are unverified, not recalculated.`);

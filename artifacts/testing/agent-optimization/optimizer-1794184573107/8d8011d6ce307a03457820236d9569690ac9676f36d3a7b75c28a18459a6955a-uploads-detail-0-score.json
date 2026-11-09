@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-detail",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "Here are the 2 saved files currently on record:\n\n* **Rent roll.pdf**\n* **2025 operating statement.pdf**\n\nSaving a document confirms it has been successfully uploaded to your application, but saving does not equate to lender review or approval. Lender approval requires a separate evaluation by the lender against their underwriting requirements."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately lists the active uploaded files and correctly explains the general policy that saving a document does not constitute lender review or approval without asserting unsupported document review statuses."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response lists all uploaded documents by name and clearly explains whether saving documents means they have received lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response answers the prompt directly without proposing inappropriate, unauthorized, or fabricated next steps."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response contains no unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 51,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 2285,
+  "elapsedMs": 13322
+}

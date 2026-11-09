@@ -1,0 +1,18 @@
+[
+  {
+    "caseId": "EMPTY-REQUESTED",
+    "exitCode": 0
+  },
+  {
+    "caseId": "EMPTY-UPLOADED",
+    "exitCode": 0
+  },
+  {
+    "caseId": "EMPTY-MISSING",
+    "exitCode": 0
+  },
+  {
+    "caseId": "ONE-UPLOAD",
+    "exitCode": 0
+  }
+]

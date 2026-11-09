@@ -21,7 +21,7 @@ export class AnalysisService {
    const jobs=[];for(const row of visible)jobs.push(await jobDTO(db,row,{...this.access,role}));
    const links=(await db.query(`SELECT document_id AS "documentId",requirement_id AS "requirementId",origin,analysis_job_id AS "jobId" FROM requirement_documents WHERE application_id=$1 AND unlinked_at IS NULL`,[this.access.applicationId])).rows;
    const visibleLinks=role==='lender'?(await publishedSnapshot(db,this.access.applicationId)).documents.flatMap(d=>d.requirement_ids.map(requirementId=>({documentId:d.id,requirementId,origin:'submitted',jobId:null}))):links;
-   return {preference:await preference(db,this.access.userId),jobs,links:visibleLinks};
+   return {automaticUploads:true,preference:await preference(db,this.access.userId),jobs,links:visibleLinks};
  });}
  async setPreference(enabled:boolean,expectedEpoch:string) {return transaction(this.database,async db=>{
    const role=await authorize(db,this.access);
@@ -30,7 +30,7 @@ export class AnalysisService {
    if(pref.epoch!==expectedEpoch)throw new UploadError('AI preference changed. Refresh before trying again.',409);
    if(pref.enabled!==enabled) {
      await db.query(`INSERT INTO user_ai_preferences(user_id,enabled,epoch) VALUES($1,$2,1) ON CONFLICT(user_id) DO UPDATE SET enabled=excluded.enabled,epoch=user_ai_preferences.epoch+1,updated_at=now()`,[this.access.userId,enabled]);
-     if(!enabled)await db.query(`UPDATE analysis_jobs SET cancel_requested=true,state='cancelled',token=token+1,slot=NULL,lease_expires_at=NULL,revision=revision+1,updated_at=now() WHERE initiated_by=$1 AND consent_scope='borrower' AND state=ANY($2::text[])`,[this.access.userId,liveStates]);
+     if(!enabled)await db.query(`UPDATE analysis_jobs SET cancel_requested=true,state='cancelled',token=token+1,slot=NULL,lease_expires_at=NULL,revision=revision+1,updated_at=now() WHERE initiated_by=$1 AND consent_scope='borrower' AND NOT automatic AND state=ANY($2::text[])`,[this.access.userId,liveStates]);
      await db.query(`INSERT INTO audit_events(id,application_id,actor,action,target_id,created_at,actor_user_id,actor_kind,actor_role_at_event,target_type,details,visibility) VALUES(gen_random_uuid()::text,$1,$2,'ai.preference.changed',$1,now(),$3,'user',$5,'ai_preference',$4,'borrower_visible')`,[this.access.applicationId,this.access.displayName,this.access.userId,JSON.stringify({enabled,consent_text_version:'personal-ai.v1'}),role]);
    }
    return preference(db,this.access.userId);
@@ -40,7 +40,6 @@ export class AnalysisService {
    const operation='analysis.enqueue';const requestHash=digest({task,targetId,expected:expected||{},retryOf:retryOf||null,...(role==='lender'?{consentScope:role}:{})});
    const receipt=(await db.query('SELECT request_hash,result FROM mutation_receipts WHERE application_id=$1 AND actor_user_id=$2 AND operation=$3 AND idempotency_key=$4',[this.access.applicationId,this.access.userId,operation,idempotencyKey])).rows[0];
    if(receipt){if(receipt.request_hash!==requestHash)throw new UploadError('This request key was already used for a different action.',409);return {id:receipt.result.id,reused:true};}
-   if(role==='borrower' && !(await preference(db,this.access.userId)).enabled)throw new UploadError('AI assistance is off. Enable your personal AI preference to request this check.',403);
    if(expected && task==='verify_requirement.v1') {
      const view=role==='lender'?await publishedSnapshot(db,this.access.applicationId):null;
      if(role==='lender'&&(!view?.submission||expected.submissionId!==view.submission.id))throw new UploadError('The submitted package changed. Refresh before checking.',409);

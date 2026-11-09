@@ -1,0 +1,685 @@
+{
+  "results": [
+    {
+      "workspaceRole": "borrower",
+      "view": "bulk",
+      "w": 1280,
+      "h": 720,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 60
+      },
+      "brand": {
+        "x": 24,
+        "y": 12.59375,
+        "width": 160,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 204,
+        "y": 18.296875,
+        "width": 877.34375,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "requirements",
+      "w": 1280,
+      "h": 720,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 60
+      },
+      "brand": {
+        "x": 24,
+        "y": 12.59375,
+        "width": 160,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 204,
+        "y": 18.296875,
+        "width": 877.34375,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "organize",
+      "w": 1280,
+      "h": 720,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 60
+      },
+      "brand": {
+        "x": 24,
+        "y": 12.59375,
+        "width": 160,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 204,
+        "y": 18.296875,
+        "width": 877.34375,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      }
+    },
+    {
+      "workspaceRole": "lender",
+      "view": "review",
+      "w": 1280,
+      "h": 720,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 60
+      },
+      "brand": {
+        "x": 24,
+        "y": 12.59375,
+        "width": 160,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 204,
+        "y": 18.296875,
+        "width": 857.078125,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 242.09375,
+        "height": 30
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "bulk",
+      "w": 1440,
+      "h": 900,
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 60
+      },
+      "brand": {
+        "x": 24,
+        "y": 12.59375,
+        "width": 160,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 204,
+        "y": 18.296875,
+        "width": 1037.34375,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "requirements",
+      "w": 1440,
+      "h": 900,
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 60
+      },
+      "brand": {
+        "x": 24,
+        "y": 12.59375,
+        "width": 160,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 204,
+        "y": 18.296875,
+        "width": 1037.34375,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "organize",
+      "w": 1440,
+      "h": 900,
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 60
+      },
+      "brand": {
+        "x": 24,
+        "y": 12.59375,
+        "width": 160,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 204,
+        "y": 18.296875,
+        "width": 1037.34375,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 225.984375,
+        "height": 30
+      }
+    },
+    {
+      "workspaceRole": "lender",
+      "view": "review",
+      "w": 1440,
+      "h": 900,
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 60
+      },
+      "brand": {
+        "x": 24,
+        "y": 12.59375,
+        "width": 160,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 204,
+        "y": 18.296875,
+        "width": 1017.078125,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 204,
+        "y": 72,
+        "width": 242.09375,
+        "height": 30
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "bulk",
+      "w": 390,
+      "h": 844,
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 2220,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 99.390625
+      },
+      "brand": {
+        "x": 20,
+        "y": 17.09375,
+        "width": 183.34375,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 64,
+        "width": 350,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 186.578125,
+        "width": 274.390625,
+        "height": 35
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "requirements",
+      "w": 390,
+      "h": 844,
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 1632,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 99.390625
+      },
+      "brand": {
+        "x": 20,
+        "y": 17.09375,
+        "width": 183.34375,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 64,
+        "width": 350,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 186.578125,
+        "width": 274.390625,
+        "height": 35
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "organize",
+      "w": 390,
+      "h": 844,
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 2298,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 99.390625
+      },
+      "brand": {
+        "x": 20,
+        "y": 17.09375,
+        "width": 183.34375,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 64,
+        "width": 350,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 186.578125,
+        "width": 274.390625,
+        "height": 35
+      }
+    },
+    {
+      "workspaceRole": "lender",
+      "view": "review",
+      "w": 390,
+      "h": 844,
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 1894,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 99.390625
+      },
+      "brand": {
+        "x": 20,
+        "y": 17.09375,
+        "width": 183,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 64,
+        "width": 350,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 181.390625,
+        "width": 225.984375,
+        "height": 30
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "bulk",
+      "w": 320,
+      "h": 740,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 2451,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 141.1875
+      },
+      "brand": {
+        "x": 20,
+        "y": 12,
+        "width": 280,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 53.796875,
+        "width": 280,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 228.375,
+        "width": 274.390625,
+        "height": 35
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "requirements",
+      "w": 320,
+      "h": 740,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 1721,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 141.1875
+      },
+      "brand": {
+        "x": 20,
+        "y": 12,
+        "width": 280,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 53.796875,
+        "width": 280,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 228.375,
+        "width": 274.390625,
+        "height": 35
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "organize",
+      "w": 320,
+      "h": 740,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 2273,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 141.1875
+      },
+      "brand": {
+        "x": 20,
+        "y": 12,
+        "width": 280,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 53.796875,
+        "width": 280,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 228.375,
+        "width": 274.390625,
+        "height": 35
+      }
+    },
+    {
+      "workspaceRole": "lender",
+      "view": "review",
+      "w": 320,
+      "h": 740,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 1896,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 141.1875
+      },
+      "brand": {
+        "x": 20,
+        "y": 12,
+        "width": 280,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 53.796875,
+        "width": 280,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 223.1875,
+        "width": 225.984375,
+        "height": 30
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "bulk",
+      "w": 640,
+      "h": 360,
+      "width": 640,
+      "height": 360,
+      "scrollWidth": 640,
+      "scrollHeight": 2043,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 99.390625
+      },
+      "brand": {
+        "x": 20,
+        "y": 17.09375,
+        "width": 433.34375,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 64,
+        "width": 600,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 186.578125,
+        "width": 274.390625,
+        "height": 35
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "requirements",
+      "w": 640,
+      "h": 360,
+      "width": 640,
+      "height": 360,
+      "scrollWidth": 640,
+      "scrollHeight": 1467,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 99.390625
+      },
+      "brand": {
+        "x": 20,
+        "y": 17.09375,
+        "width": 433.34375,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 64,
+        "width": 600,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 186.578125,
+        "width": 274.390625,
+        "height": 35
+      }
+    },
+    {
+      "workspaceRole": "borrower",
+      "view": "organize",
+      "w": 640,
+      "h": 360,
+      "width": 640,
+      "height": 360,
+      "scrollWidth": 640,
+      "scrollHeight": 1908,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 99.390625
+      },
+      "brand": {
+        "x": 20,
+        "y": 17.09375,
+        "width": 433.34375,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 64,
+        "width": 600,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 186.578125,
+        "width": 274.390625,
+        "height": 35
+      }
+    },
+    {
+      "workspaceRole": "lender",
+      "view": "review",
+      "w": 640,
+      "h": 360,
+      "width": 640,
+      "height": 360,
+      "scrollWidth": 640,
+      "scrollHeight": 1672,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 99.390625
+      },
+      "brand": {
+        "x": 20,
+        "y": 17.09375,
+        "width": 433,
+        "height": 33.796875
+      },
+      "role": {
+        "x": 20,
+        "y": 64,
+        "width": 600,
+        "height": 22.390625
+      },
+      "heading": {
+        "x": 20,
+        "y": 181.390625,
+        "width": 225.984375,
+        "height": 30
+      }
+    }
+  ],
+  "errors": []
+}

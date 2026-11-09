@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-08T22:52:19.021Z",
+  "scenario": "connectivity-smoke-reply-ok-20261108",
+  "model": "google/gemini-2.5-flash",
+  "outcome": {
+    "status": 200,
+    "providerErrorCode": null,
+    "hasCompletion": true,
+    "reply": "OK",
+    "reportedCost": 0.0000034
+  },
+  "budget": {
+    "limitMicros": 20000000,
+    "accountedMicros": 4,
+    "knownMicros": 4,
+    "heldMicros": 0,
+    "calls": 1
+  },
+  "retries": 0
+}

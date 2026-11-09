@@ -1,0 +1,10 @@
+Automated: npm run test:agent PASS (153 tests and TypeScript).
+Live: completed; development baseline 5/10, candidate 10/10; held-out baseline 4/8, candidate 8/8.
+Judge: v2 passed three calibration cases; separate calls using the same model family. Not independent human certification.
+The initial experiment was invalidated after a false-positive judge review was found. Its charges and the interrupted-call reservation remain in the shared ledger.
+Confirmed total API charges: $0.446405. Unknown retained reservation: $1.20. Accounted total: $1.646405 of $20.
+Full build/integration: NOT RUN; no coordinated quiet window or production promotion.
+Browser checklist: NOT RUN; this change adds a CLI and optional agent configuration, not UI.
+Scope: synthetic borrower response optimization only; investigator and durable two-agent journeys remain to be integrated.
+Promotion: not performed. Candidate requires broader regression evaluation and review. In particular, its phrase "unless verified by current investigation findings" must not be interpreted as permitting investigation findings to establish lender approval; lender approval requires authoritative lender state. This distinction is not exercised by the current inventory-only suite.
+Replay instructions: lib/agent-optimization/README.md. New experiments may reuse the original ledger to preserve this total budget.

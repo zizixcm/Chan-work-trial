@@ -1,0 +1,34 @@
+{
+  "caseId": "heldout-approval",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "No, saving your lease does not mean the lender has approved it.\n\nHere is how the stages differ:\n- **Saved:** Your file (`Elm lease.pdf`) is securely uploaded and stored in your application.\n- **Document review:** The file must still be checked to verify it meets the lender's requirement for a current executed lease.\n- **Lender approval:** Final loan approval is granted by the lender's underwriting team after all necessary documents are reviewed and accepted."
+  },
+  "review": {
+    "grounded": {
+      "passed": false,
+      "reason": "The response asserts an actual status by claiming 'The file must still be checked', implying that Elm lease.pdf has not yet been reviewed, which is not supported by explicit review status evidence in the inventory."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers that saving the lease does not mean the lender has approved it."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response provides clear clarification of the process without unnecessary next steps."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response contains no repetitive text."
+    },
+    "criticalFailures": [
+      "invented_evidence"
+    ]
+  },
+  "wordCount": 74,
+  "hardPassed": false,
+  "passed": false,
+  "costMicros": 11220,
+  "elapsedMs": 17404
+}

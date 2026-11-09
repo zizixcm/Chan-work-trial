@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "a1b7284c382c1063bc446deaac20ffbeddeaea77f1684f29990cadbe2564c971",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "What's been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Identify both saved files. Do not turn the answer into a missing-document checklist, infer completeness or approval, or invent a next step. No action is required by this snapshot.",
+    "action": {
+      "kind": "reply",
+      "message": "You currently have 2 files saved:\n\n- Rent roll.pdf\n- 2025 operating statement.pdf\n\nNote that saved files have not yet been reviewed or approved."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All stated files are present in the inventory, and no ungrounded claims were made."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "Accurately identifies both uploaded files in response to the user's question."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Does not invent any next steps or missing document checklists, adhering to the rubric."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is direct and free of unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 375,
+    "completion_tokens": 487,
+    "total_tokens": 862,
+    "cost": 0.0021075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0021075,
+      "upstream_inference_prompt_cost": 0.00028125,
+      "upstream_inference_completions_cost": 0.00182625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 379,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

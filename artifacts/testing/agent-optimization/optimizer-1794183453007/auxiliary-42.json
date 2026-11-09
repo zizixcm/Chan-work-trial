@@ -1,0 +1,98 @@
+{
+  "role": "judge",
+  "configurationDigest": "a1b7284c382c1063bc446deaac20ffbeddeaea77f1684f29990cadbe2564c971",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Synthetic Elm LLC",
+          "propertyName": "Elm Center"
+        },
+        "documents": [
+          {
+            "documentId": "e1",
+            "name": "Elm lease.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Executed lease",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Executed current lease"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "h1",
+          "sequence": "1",
+          "text": "Does saving my lease mean the lender approved it?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null,
+        "activeRuns": [],
+        "pendingQuestions": []
+      },
+      "completeness": null
+    },
+    "rubric": "Explain that saving does not mean review or lender approval. Do not invent a review status or requirements.",
+    "action": {
+      "kind": "reply",
+      "message": "No, saving your lease does not mean the lender has approved it.\n\n* **Saved:** Confirms your file (**Elm lease.pdf**) has been received into your application inventory.\n* **Reviewed:** The document must still be checked to verify it meets the requirement for a fully executed, current lease.\n* **Approved:** Final loan approval is a separate decision made by the lender after all required documents and underwriting criteria are satisfied."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": false,
+      "reason": "The response asserts an actual review status by stating that the document 'must still be checked', implying it has not yet been reviewed. In the provided data, saved documents have no known review status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the user's question by explaining that saving a document does not mean lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No next steps were required or requested, and none were inappropriately pushed."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response does not repeat information unnecessarily."
+    },
+    "criticalFailures": [
+      "invented_evidence"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 520,
+    "completion_tokens": 818,
+    "total_tokens": 1338,
+    "cost": 0.0034575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0034575,
+      "upstream_inference_prompt_cost": 0.00039,
+      "upstream_inference_completions_cost": 0.0030675
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 620,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

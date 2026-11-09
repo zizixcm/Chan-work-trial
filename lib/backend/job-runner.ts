@@ -2,7 +2,7 @@ import { createConfiguredDebugRecorder } from '../analysis-debug/configured';
 import { ANALYSIS_VERSION } from '../analysis/types';
 import type { AnalysisTask, DispatchBudget, JobLease, JobRepository, ProviderUsage, SafeEvent } from './contracts';
 import { failureDisposition, safeFailure } from './failures';
-import { executeProvider, validateTaskSize, type ProviderTransport } from './provider-executor';
+import { executeProvider, taskInputBudget, validateTaskSize, type ProviderTransport } from './provider-executor';
 
 export interface RunnerDependencies<Input> {
   repository: JobRepository<Input>;
@@ -43,11 +43,12 @@ export async function runJob<Input>(job: JobLease<Input>, deps: RunnerDependenci
     await phase('prepared');
     const task = diagnostic ? diagnostic.wrapTask(preparedTask) : preparedTask;
     validateTaskSize(task, deps.budget);
+    const requestBudget = {...deps.budget, maxInputTokens: taskInputBudget(task)};
     if (signal.aborted) return;
-    reservation = await deps.repository.admitDispatch(job, deps.budget);
+    reservation = await deps.repository.admitDispatch(job, requestBudget);
     if (!reservation) return;
     providerAttempts++;
-    const result = await executeProvider(task, deps.budget, diagnostic ? diagnostic.wrapTransport(deps.transport) : deps.transport, signal, value => { usage = value; });
+    const result = await executeProvider(task, requestBudget, diagnostic ? diagnostic.wrapTransport(deps.transport) : deps.transport, signal, value => { usage = value; });
     if (signal.aborted) return;
     await phase('responded');
     const committed = await deps.repository.commit(job, result);

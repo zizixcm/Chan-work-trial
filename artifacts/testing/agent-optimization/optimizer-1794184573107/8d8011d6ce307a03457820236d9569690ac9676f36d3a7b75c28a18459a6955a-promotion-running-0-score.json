@@ -1,0 +1,32 @@
+{
+  "caseId": "promotion-running",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "Not yet—the review of your uploaded documents is currently in progress.\n\nWe have saved:\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nI will update you as soon as the review is complete."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately reports that document review/investigation is in progress based on the running activeRun, and correctly lists the saved active documents without making unsupported claims about lender review or approval status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The assistant directly answers the user's question about whether the document review has finished by stating it is still in progress."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Appropriately notes that an update will follow once review is complete without initiating duplicate actions or claiming false completion."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and does not repeat information."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 32,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 2894,
+  "elapsedMs": 4373
+}

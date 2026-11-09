@@ -1,0 +1,85 @@
+{
+  "mode": "live",
+  "model": "openrouter/google/gemini-2.5-flash",
+  "configurationDigest": "01209da8670c575c93304ccd968b76d0930d6b9ab693accb414b21d306e57ec6",
+  "fixture": {
+    "id": "uploads-pending",
+    "question": "What's been uploaded?",
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [
+        {
+          "documentId": "d1",
+          "name": "Rent roll.pdf",
+          "active": true
+        },
+        {
+          "documentId": "d2",
+          "name": "2025 operating statement.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": true
+    },
+    "maxWords": 120,
+    "rubric": "Identify both saved files and distinguish pending uploads from saved files. Briefly suggest checking unfinished uploads; do not ask to re-upload saved files or claim all files have been considered."
+  },
+  "createdAt": "2026-11-08T23:58:17.873Z",
+  "action": {
+    "kind": "reply",
+    "message": "Here's what's been uploaded so far:\n\n*   Rent roll.pdf\n*   2025 operating statement.pdf\n\nOther uploads are still in progress. You can check their progress in the application portal."
+  },
+  "actualMicros": 555,
+  "score": {
+    "caseId": "uploads-pending",
+    "wordCount": 28,
+    "maxWords": 120,
+    "checks": [
+      {
+        "id": "direct_reply",
+        "passed": true
+      },
+      {
+        "id": "concise",
+        "passed": true
+      },
+      {
+        "id": "answersQuestion",
+        "passed": false
+      },
+      {
+        "id": "grounded",
+        "passed": false
+      },
+      {
+        "id": "appropriateNextSteps",
+        "passed": false
+      },
+      {
+        "id": "noRepetition",
+        "passed": false
+      }
+    ],
+    "status": "needs_review"
+  }
+}

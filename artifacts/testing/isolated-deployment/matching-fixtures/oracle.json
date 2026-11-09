@@ -1,0 +1,211 @@
+{
+  "version": "deployment-matching.v1",
+  "requirements": [
+    {
+      "id": "M1",
+      "title": "April rent roll - Cedar Court",
+      "entity": "Cedar Court Holdings LLC",
+      "property": "18 Cedar Lane",
+      "period": "April 30, 2026",
+      "criteria": [
+        "Exact property/entity",
+        "As of April 30, 2026",
+        "Unit, tenant and monthly rent for each unit"
+      ]
+    },
+    {
+      "id": "M2",
+      "title": "April B1 bank statement",
+      "entity": "Cedar Court Holdings LLC",
+      "account": "B1",
+      "period": "April 2026",
+      "criteria": [
+        "Exact entity and account B1",
+        "All statement pages for April 2026",
+        "Closing cash balance"
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "April cash balance evidence",
+      "entity": "Cedar Court Holdings LLC",
+      "account": "B1",
+      "period": "April 30, 2026",
+      "criteria": [
+        "Exact entity and account B1",
+        "Cash balance as of April 30, 2026"
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "April rent roll - Cedar Annex",
+      "entity": "Cedar Court Holdings LLC",
+      "property": "22 Cedar Lane",
+      "period": "April 30, 2026",
+      "criteria": [
+        "Exact property/entity",
+        "As of April 30, 2026",
+        "Unit, tenant and monthly rent for each unit"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "C1",
+      "file": "package-01.pdf",
+      "pages": 36,
+      "facts": {
+        "1": [
+          "Document contents",
+          "Property rent schedule: page 32",
+          "Other pages: synthetic administrative notes"
+        ],
+        "32": [
+          "Cedar Court Holdings LLC",
+          "18 Cedar Lane",
+          "Rent roll as of April 30, 2026",
+          "Unit 101 | Synthetic Tenant A | Monthly rent $1250",
+          "Unit 102 | Synthetic Tenant B | Monthly rent $1450"
+        ]
+      },
+      "targets": [
+        "M1"
+      ],
+      "citationPage": 32,
+      "quote": "18 Cedar Lane",
+      "reason": "Clear property/entity/period beyond old 12-page limit",
+      "sha256": "6c83b1a20f03723c825f67537afa771684135c29a898b5548ee8ac17e8cf7437"
+    },
+    {
+      "id": "C2",
+      "file": "cedar-current-rent-roll.pdf",
+      "pages": 1,
+      "facts": {
+        "1": [
+          "Pine Court Properties LLC",
+          "90 Pine Road",
+          "Rent roll as of April 30, 2026",
+          "Unit 101 | Synthetic Tenant A | Monthly rent $1250"
+        ]
+      },
+      "targets": [],
+      "citationPage": 1,
+      "quote": "Pine Court Properties LLC",
+      "reason": "Filename is plausible but entity/property are wrong",
+      "sha256": "247f6ae0b621339d60a433f2a6496dd59d30353de5470194a8326cae0bda3b1e"
+    },
+    {
+      "id": "C3",
+      "file": "package-03.pdf",
+      "pages": 1,
+      "facts": {
+        "1": [
+          "Cedar Court Holdings LLC",
+          "18 Cedar Lane",
+          "Rent roll as of March 31, 2026",
+          "Unit 101 | Synthetic Tenant A | Monthly rent $1250"
+        ]
+      },
+      "targets": [],
+      "citationPage": 1,
+      "quote": "March 31, 2026",
+      "reason": "Wrong exact required period; may suggest M1 with a gap, never auto-link as clear",
+      "sha256": "7264fc5bbe622e474666cd1ccc22d37d4d1572b3a80b2ecb917238d80734458d"
+    },
+    {
+      "id": "C4",
+      "file": "package-04.pdf",
+      "pages": 2,
+      "facts": {
+        "1": [
+          "Bank statement page 1 of 2",
+          "Cedar Court Holdings LLC",
+          "Account B1 | Statement period April 1-30, 2026",
+          "Opening cash balance $60000"
+        ],
+        "2": [
+          "Bank statement page 2 of 2",
+          "Cedar Court Holdings LLC | Account B1",
+          "Closing cash balance as of April 30, 2026: $62000"
+        ]
+      },
+      "targets": [
+        "M2",
+        "M3"
+      ],
+      "citationPage": 2,
+      "quote": "Closing cash balance as of April 30, 2026: $62000",
+      "reason": "One document supports two requests",
+      "sha256": "e745ad1fc1bfbfe5be7669d9958c1743dbed5ba4207624e5db688df4a241923e"
+    },
+    {
+      "id": "C5",
+      "file": "package-05.pdf",
+      "pages": 1,
+      "facts": {
+        "1": [
+          "Cedar Court Holdings LLC",
+          "Property: not specified",
+          "Rent roll as of April 30, 2026",
+          "Unit 101 | Synthetic Tenant A | Monthly rent $1250"
+        ]
+      },
+      "targets": [],
+      "citationPage": 1,
+      "quote": "Property: not specified",
+      "reason": "Ambiguous M1 versus M4; ask which property",
+      "sha256": "9fc736814c3cff4736a3a98d0e95091395db0692497f2e7f95ddd1010ebbb67f"
+    },
+    {
+      "id": "C6",
+      "file": "package-06.pdf",
+      "pages": 1,
+      "scan": true,
+      "facts": {
+        "1": [
+          "Cedar Court Holdings LLC",
+          "18 Cedar Lane",
+          "Rent roll as of April 30, 2026",
+          "Unit 101 | Synthetic Tenant A | Monthly rent $1250",
+          "Unit 102 | Synthetic Tenant B | Monthly rent $1450"
+        ]
+      },
+      "targets": [
+        "M1"
+      ],
+      "citationPage": 1,
+      "quote": "18 Cedar Lane",
+      "reason": "Image-only page, actual visual reading required",
+      "sha256": "051ac0262faa12681caf7172633a3d7beb70665b95334183b30585384a6fdf7d"
+    },
+    {
+      "id": "C7",
+      "file": "renamed-record.pdf",
+      "duplicateOf": "C1",
+      "sha256": "6c83b1a20f03723c825f67537afa771684135c29a898b5548ee8ac17e8cf7437",
+      "targets": [
+        "M1"
+      ],
+      "reason": "Exact renamed duplicate; same evidence identity, no duplicate link/progress"
+    },
+    {
+      "id": "C8",
+      "file": "package-01.pdf",
+      "sha256": "6c83b1a20f03723c825f67537afa771684135c29a898b5548ee8ac17e8cf7437",
+      "targets": [],
+      "precondition": "Borrower explicitly rejected M1 for this document after C1, then retries processing",
+      "reason": "Do not recreate rejected link; preserve manual decision"
+    }
+  ],
+  "gate": {
+    "incorrectAutomaticLinks": 0,
+    "ambiguousMustAsk": true,
+    "clearPositiveCasesRequired": [
+      "C1",
+      "C4",
+      "C6"
+    ],
+    "manualCorrectionsWin": true,
+    "noReadinessClaims": true
+  }
+}

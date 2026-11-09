@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-specific",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "Yes, **Rent roll.pdf** is uploaded and saved to your application. \n\nPlease note that having a document saved does not equate to lender review or approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately confirms that 'Rent roll.pdf' is saved in the inventory and explains the general policy that saving a document does not equate to lender review or approval without asserting an unsubstantiated status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the user's question with 'Yes' and identifies 'Rent roll.pdf' as saved."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No next steps were required by the rubric, and none were unnecessarily provided."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 25,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6960,
+  "elapsedMs": 11688
+}

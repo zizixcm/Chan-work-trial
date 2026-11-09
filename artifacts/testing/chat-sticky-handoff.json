@@ -1,0 +1,10 @@
+{
+  "createdAt": "2026-11-08T23:41:55.796321+00:00",
+  "base": "unified-pilot-20261108-v6",
+  "files": {
+    "app/components/processing-conversation.tsx": "10ab4993f5440f3ae35ae97c7c13ad625a0931804acea17ec74649241f2a0e1a",
+    "app/components/processing-conversation.module.css": "6626d48d2806409a1dcce436778eaa5fb1f850e62be706b75e959f338d514a5e",
+    "tests/chat-conversation-ui.test.ts": "9a7f34e71f2f267180d090237adc7e54d142ceb074e9f457c9ae4ebd5d380733"
+  },
+  "checks": "npm run test:agent PASS; browser synthetic 1280/390 PASS. Mobile Quick questions top/bottom identical before and after scrolling 6 pages; all 3 buttons remain visible. No console errors. No migrations/backend changes."
+}

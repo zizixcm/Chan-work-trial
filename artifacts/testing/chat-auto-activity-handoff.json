@@ -1,0 +1,9 @@
+{
+  "createdAt": "2026-11-08T23:49:01.380706+00:00",
+  "files": {
+    "app/components/response-progress.tsx": "b1f548417dd32ae6e639dde285e8fe5c4862d2b8c27d7ac491bd0a63290263e4",
+    "tests/chat-conversation-ui.test.ts": "5061185bbdc2c83efadc1aea8306a2852dcc106c1e186370101344aaba5de4d8"
+  },
+  "checks": "npm run test:agent PASS; synthetic browser desktop/mobile automatic working\u2192completed transition PASS; no toggle; completed/failed historical stages hidden while idle; queued requests do not show old history; no overflow or console errors.",
+  "scope": "UI only, no backend/migration/model changes"
+}

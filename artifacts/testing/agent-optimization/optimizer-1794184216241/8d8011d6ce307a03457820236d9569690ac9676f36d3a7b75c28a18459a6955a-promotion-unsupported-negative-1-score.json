@@ -1,0 +1,32 @@
+{
+  "caseId": "promotion-unsupported-negative",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "I cannot confirm whether your files are awaiting lender review, as our system does not receive the lender's evaluation status. \n\nAs a general rule, having files saved in your application does not equate to lender review or approval.\n\nYour currently saved files are:\n- **Rent roll.pdf**\n- **2025 operating statement.pdf**"
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements are fully supported; the response clearly states that lender review status cannot be confirmed, explains policy without asserting an unsupported review status, and accurately lists the active saved documents."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the user's question regarding lender review status by stating it cannot be confirmed from the available information."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response provides relevant context regarding saved documents without prescribing unauthorized actions."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text or redundant phrasing."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 50,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 8573,
+  "elapsedMs": 16929
+}

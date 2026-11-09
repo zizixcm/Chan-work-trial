@@ -1,0 +1,8 @@
+{
+  "baseRelease": "unified-pilot-20261108-v11",
+  "path": "lib/agents/definitions.ts",
+  "beforeSha256": "71259a907860085def28c30916cfa0ada649dc44b1be74f6ebe767437e51597f",
+  "afterSha256": "9e07ee93f18825ac71876fc3a733580879a73cafd147b093285083fc2c399901",
+  "change": "One borrower instruction paragraph only. Optimizer injection API stays out of production release.",
+  "borrowerInstructionsIdenticalToValidatedRoot": true
+}

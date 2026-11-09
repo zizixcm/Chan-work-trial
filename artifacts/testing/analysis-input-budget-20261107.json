@@ -1,0 +1,30 @@
+{
+  "candidate": "144f5a8c6ba43bc9dfbeca0fac2eaf690bf2037e plus existing dirty checkout and scoped analysis-input/budget changes",
+  "date": "2026-11-07",
+  "findings": {
+    "pdfs": "One page each, 28559 and 23034 bytes, native text extraction successful. Prepared requests 33314 and 30011 bytes exceeded old 24000-byte guard.",
+    "budget": "Default per-application daily cap 0.05 USD; accounted plus reserved cost 0.0431658 USD left insufficient capacity for the next reservation.",
+    "not_confirmed": "Three reused saved documents have no match job. Duplicate upload does not schedule historical analysis."
+  },
+  "changes": {
+    "input_ceiling_bytes": 96000,
+    "reservation": "Conservative actual request bytes plus framing; output reservation unchanged.",
+    "readability": "Durable prepared event takes precedence over later unsupported-input failure.",
+    "local_daily_usd": 1,
+    "local_application_daily_usd": 0.5,
+    "runtime": "Scoped worker files patched in release-20261107-processing; worker restarted with explicit original PORTAL_DATA_DIR; affected failed jobs retried through AnalysisService. Preview unchanged."
+  },
+  "checks": {
+    "quick": "PASS: 74 unit tests and TypeScript",
+    "jobs": "PASS",
+    "workflow": "PASS: 89 synthetic calls",
+    "http": "PASS",
+    "simulated_ai_complete": "PASS",
+    "full_wrapper": "BLOCKED: preview on port 3001",
+    "default_build": "FAIL: Turbopack cannot resolve /ROOT/scripts/extract-document.ts",
+    "webpack_build": "PASS",
+    "browser_checklist": "NOT RUN: preview is an older separate release",
+    "simulated_ai_missing_rent": "PASS"
+  },
+  "remaining": "Both 2024 PDFs now pass extraction and input admission; live model responses failed exact-citation validation (invalid_citation). No active budget-blocked jobs remain. UI source correction awaits preview rebuild/restart."
+}

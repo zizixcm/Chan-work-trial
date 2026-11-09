@@ -1,0 +1,358 @@
+{
+  "baseCase": "D02",
+  "borrowerPrivateFacts": {
+    "accountSuffix": "7334",
+    "baseRents": [
+      2074,
+      2314
+    ],
+    "borrower": "Brindle Arcade Holdings LLC",
+    "currentRents": [
+      2074,
+      2314
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 0,
+    "manager": "Tavi Orr",
+    "otherOwner": "Nela Kest",
+    "property": "Brindle Arcade",
+    "tenants": [
+      "Brindle Studio",
+      "Brindle Supply"
+    ],
+    "units": [
+      "101",
+      "102"
+    ]
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved.",
+    "Do not request re-upload of qualifying previously saved evidence.",
+    "Boundary release follows external event/answer, not a fixed agent question.",
+    "Never reveal the oracle, expected state, future boundary or authorization test ledger."
+  ],
+  "inputs": [
+    {
+      "borrowerText": "Please use my saved annual report and July/August statements. The older partial August copy was superseded. I have no lease or entity amendments.",
+      "boundaryId": "existing_inventory",
+      "evidenceRevision": "4",
+      "newlySavedDocumentIds": [
+        "f367a4f796b28"
+      ],
+      "pendingUploads": [],
+      "runtimeNotice": null,
+      "savedFiles": [
+        {
+          "activity": "active",
+          "arrival": "newly_saved",
+          "documentId": "f367a4f796b28",
+          "filename": "f367a4f796b28.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "f367a4f796b28",
+          "sha256": "b85ec6ac203efee5003be8ea60dea336769507eb19196ba19eae723afa74426c",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "f143bba0e0f4f",
+          "filename": "f143bba0e0f4f.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "f143bba0e0f4f",
+          "sha256": "6c23501bfb356f718945d1960af964bfde20eea371e68a71269fa207e2dacd27",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "ffcf0f403cac5",
+          "filename": "ffcf0f403cac5.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "ffcf0f403cac5",
+          "sha256": "79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "f9c6bb6de47d5",
+          "filename": "f9c6bb6de47d5.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "f9c6bb6de47d5",
+          "sha256": "7762315ffeb976dabd44fb0a93c1bf16b18948dd566bee9c7ba1d7964bf93a37",
+          "version": 1
+        },
+        {
+          "activity": "superseded",
+          "arrival": "previously_saved",
+          "documentId": "ffe64a92e0fe1",
+          "filename": "ffe64a92e0fe1.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "ffe64a92e0fe1",
+          "sha256": "b62b2e6c08c4b843d2e54d2c5394913756c082ebf26f7129cf9d23ac118cb7c2",
+          "version": 1
+        }
+      ]
+    },
+    {
+      "borrowerText": null,
+      "boundaryId": "incremental_arrival",
+      "evidenceRevision": "5",
+      "newlySavedDocumentIds": [
+        "fecd8a7c31cff",
+        "f786ca0fb2e75",
+        "f5357122b5284",
+        "fe1dc1996b18e"
+      ],
+      "pendingUploads": [],
+      "runtimeNotice": null,
+      "savedFiles": [
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "f367a4f796b28",
+          "filename": "f367a4f796b28.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "f367a4f796b28",
+          "sha256": "b85ec6ac203efee5003be8ea60dea336769507eb19196ba19eae723afa74426c",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "newly_saved",
+          "documentId": "fecd8a7c31cff",
+          "filename": "fecd8a7c31cff.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "fecd8a7c31cff",
+          "sha256": "e03f23cf0a40da7e6888c5d9c7fb54a9b80fd26864f4becb419ca5f8d4ba5f67",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "f143bba0e0f4f",
+          "filename": "f143bba0e0f4f.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "f143bba0e0f4f",
+          "sha256": "6c23501bfb356f718945d1960af964bfde20eea371e68a71269fa207e2dacd27",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "newly_saved",
+          "documentId": "f786ca0fb2e75",
+          "filename": "f786ca0fb2e75.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "f786ca0fb2e75",
+          "sha256": "ca8bcf07e0a05ce8caf12aa83e906a2e5f424899e6336b2760c71eda60676fde",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "ffcf0f403cac5",
+          "filename": "ffcf0f403cac5.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "ffcf0f403cac5",
+          "sha256": "79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "f9c6bb6de47d5",
+          "filename": "f9c6bb6de47d5.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "f9c6bb6de47d5",
+          "sha256": "7762315ffeb976dabd44fb0a93c1bf16b18948dd566bee9c7ba1d7964bf93a37",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "newly_saved",
+          "documentId": "f5357122b5284",
+          "filename": "f5357122b5284.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "f5357122b5284",
+          "sha256": "9b050dee538bc15a0ea5c388cf1bb8178f6bc1acf6b345e3e5e2e2ac68601aa3",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "newly_saved",
+          "documentId": "fe1dc1996b18e",
+          "filename": "fe1dc1996b18e.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "fe1dc1996b18e",
+          "sha256": "79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6",
+          "version": 1
+        },
+        {
+          "activity": "superseded",
+          "arrival": "previously_saved",
+          "documentId": "ffe64a92e0fe1",
+          "filename": "ffe64a92e0fe1.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "ffe64a92e0fe1",
+          "sha256": "b62b2e6c08c4b843d2e54d2c5394913756c082ebf26f7129cf9d23ac118cb7c2",
+          "version": 1
+        }
+      ]
+    },
+    {
+      "borrowerText": null,
+      "boundaryId": "documentary_final",
+      "evidenceRevision": "6",
+      "newlySavedDocumentIds": [
+        "f17dc927cc1b2",
+        "fda71241b691d"
+      ],
+      "pendingUploads": [],
+      "runtimeNotice": null,
+      "savedFiles": [
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "f367a4f796b28",
+          "filename": "f367a4f796b28.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "f367a4f796b28",
+          "sha256": "b85ec6ac203efee5003be8ea60dea336769507eb19196ba19eae723afa74426c",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "fecd8a7c31cff",
+          "filename": "fecd8a7c31cff.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "fecd8a7c31cff",
+          "sha256": "e03f23cf0a40da7e6888c5d9c7fb54a9b80fd26864f4becb419ca5f8d4ba5f67",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "f143bba0e0f4f",
+          "filename": "f143bba0e0f4f.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "f143bba0e0f4f",
+          "sha256": "6c23501bfb356f718945d1960af964bfde20eea371e68a71269fa207e2dacd27",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "f786ca0fb2e75",
+          "filename": "f786ca0fb2e75.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "f786ca0fb2e75",
+          "sha256": "ca8bcf07e0a05ce8caf12aa83e906a2e5f424899e6336b2760c71eda60676fde",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "ffcf0f403cac5",
+          "filename": "ffcf0f403cac5.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "ffcf0f403cac5",
+          "sha256": "79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "f9c6bb6de47d5",
+          "filename": "f9c6bb6de47d5.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "f9c6bb6de47d5",
+          "sha256": "7762315ffeb976dabd44fb0a93c1bf16b18948dd566bee9c7ba1d7964bf93a37",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "f5357122b5284",
+          "filename": "f5357122b5284.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "f5357122b5284",
+          "sha256": "9b050dee538bc15a0ea5c388cf1bb8178f6bc1acf6b345e3e5e2e2ac68601aa3",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "newly_saved",
+          "documentId": "f17dc927cc1b2",
+          "filename": "f17dc927cc1b2.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "f17dc927cc1b2",
+          "sha256": "0c2cd5e03c10b7a0ed68fe13a28b74abc8a76f1693ef1f83056fee553f2a7a88",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "newly_saved",
+          "documentId": "fda71241b691d",
+          "filename": "fda71241b691d.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "fda71241b691d",
+          "sha256": "7a29e6da5664adbc93994035578bd0b48ff382fd1172df32299f89d61a2ae304",
+          "version": 1
+        },
+        {
+          "activity": "active",
+          "arrival": "previously_saved",
+          "documentId": "fe1dc1996b18e",
+          "filename": "fe1dc1996b18e.pdf",
+          "linked": false,
+          "pageCount": 2,
+          "seriesId": "fe1dc1996b18e",
+          "sha256": "79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6",
+          "version": 1
+        },
+        {
+          "activity": "superseded",
+          "arrival": "previously_saved",
+          "documentId": "ffe64a92e0fe1",
+          "filename": "ffe64a92e0fe1.pdf",
+          "linked": false,
+          "pageCount": 1,
+          "seriesId": "ffe64a92e0fe1",
+          "sha256": "b62b2e6c08c4b843d2e54d2c5394913756c082ebf26f7129cf9d23ac118cb7c2",
+          "version": 1
+        }
+      ]
+    }
+  ],
+  "version": "journey-overlays.1"
+}

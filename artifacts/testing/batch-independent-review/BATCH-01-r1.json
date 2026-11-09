@@ -1,0 +1,30 @@
+{
+  "case": "BATCH-01",
+  "attempt": "r1",
+  "verdict": "fail",
+  "reviewer": "coordinating chat, independent artifact review",
+  "report": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v1/artifacts/testing/batch-live-01-r1/report.json",
+  "acknowledgementSeconds": 3.328,
+  "controllerCompletionSeconds": 91.2,
+  "modelCalls": 26,
+  "browserTimingMeasured": false,
+  "checks": {
+    "nextStepsBroadlyCorrect": true,
+    "savedFilesNotRequestedAgain": true,
+    "completedCheckmarkOnLeft": true,
+    "authoritativeStateConsistentWithReply": false,
+    "reportWithin20Seconds": false
+  },
+  "findings": [
+    "Repeated read_batch choices despite existing unchanged observations.",
+    "Only four met findings were published. Other in-scope missing requirements default to not_evaluated/operator unknown while final chat describes bank/entity documents as missing.",
+    "Reply asks for any entity amendments despite explicit zero-amendment declaration; avoid reopening cleared applicability."
+  ],
+  "expectedNextSteps": [
+    "Executed leases for units101 and102",
+    "Actual operating results Jan1\u2013Sep30,2026",
+    "Complete July,August,September2026 statements for account7317",
+    "Formation certificate and operating agreement for Aster Quay Holdings LLC"
+  ],
+  "actualFinalReply": "Here is an update on your loan preparation based on the review of your uploaded files:\n\n### Upload Results\n* **ffa0b3c48c21f.pdf**: Verified as the rent roll / occupancy schedule for Aster Quay dated 2026-09-30, identifying units 101 and 102, tenants, base rents, and lease terms.\n* **f7dbacda2c2f3.pdf**: Verified as the annual property operating statement for Aster Quay covering actual results from 2025-01-01 through 2025-12-31 on an accrual basis.\n\n### Requirement Status\n* \u2705 **Current rent roll**: Fully satisfied by the rent roll dated 2026-09-30.\n* **Property operating statements**: Partially supported. The 2025 actual results are verified. Still needed:\n  * Actual operating results for Aster Quay covering 2026-01-01 through 2026-09-30.\n  * Comparison and reconciliation of contractual rent against reported rental income.\n* **Leases and applicable amendments**: Partially supported. Your confirmation that zero lease amendments exist has been recorded. Still needed:\n  * Executed leases for units 101 and 102 (including signatures, dates, terms, and rents).\n  * Verification between lease terms and the rent roll.\n* **Borrower bank statements**: Missing.\n  * Complete statements for account ending in 7317 for July 2026, August 2026, and September 2026.\n* **Entity ownership and signing authority**: Missing.\n  * Formation certificate for Aster Quay Holdings LLC.\n  * Operating agreement (and any entity amendments) confirming ownership totaling 100% and manager Mira Fen's signing provisions.\n\n**Next step**: Please upload the executed leases for units 101 and 102, the interim 2026 operating statement (Jan\u2013Sep 2026), the July\u2013September 2026 bank statements for account 7317, and the formation certificate and operating agreement for Aster Quay Holdings LLC."
+}

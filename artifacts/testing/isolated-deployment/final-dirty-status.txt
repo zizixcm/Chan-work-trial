@@ -1,0 +1,240 @@
+ M AGENTS.md
+ M README.md
+ M REQUIREMENTS.md
+ M app/api/documents/[id]/route.ts
+ M app/api/upload-batches/route.ts
+ M app/borrower/[applicationId]/page.tsx
+ M app/components/ai-review.tsx
+ M app/components/batch-upload.tsx
+ M app/components/borrower-applications.tsx
+ M app/components/borrower-portal.tsx
+ M app/components/bulk-upload-workspace.tsx
+ M app/components/document-preview.tsx
+ M app/components/organize-files.tsx
+ M app/components/saved-uploads.tsx
+ M app/components/send-for-review.tsx
+ M app/globals.css
+ M app/layout.tsx
+ M app/lender/layout.tsx
+ M app/lender/lender.css
+ M app/lender/page.tsx
+ M app/lender/review/page.tsx
+ M app/lender/review/workspace-dialog.tsx
+ M docs/BACKEND_PLAN.md
+ M docs/UX_REDESIGN.md
+ M lib/analysis-debug/capture.ts
+ M lib/analysis/match.ts
+ M lib/analysis/schema.ts
+ M lib/analysis/types.ts
+ M lib/analysis/validation.ts
+ M lib/analysis/verify.ts
+ M lib/backend/contracts.ts
+ M lib/backend/failures.ts
+ M lib/backend/job-runner.ts
+ M lib/backend/provider-executor.ts
+ M lib/jobs/batches.ts
+ M lib/jobs/core.ts
+ M lib/jobs/postgres.ts
+ M lib/jobs/reconcile.ts
+ M lib/jobs/service.ts
+ M lib/postgres.ts
+ M lib/requirement-catalog.json
+ M lib/requirement-catalog.ts
+ M lib/upload.ts
+ M migrations/postgres/013_analysis_workflow.sql
+ M package-lock.json
+ M package.json
+ M scripts/setup-local.mjs
+ M scripts/update-requirements.ts
+ M scripts/verify-schema.ts
+ M tests/ai.integration.ts
+ M tests/analysis-debug.test.ts
+ M tests/analysis.test.ts
+ M tests/backend.test.ts
+ M tests/http.integration.ts
+ M tests/jobs.integration.ts
+ M tests/workflow.integration.ts
+?? .DS_Store
+?? app/api/applications/[id]/context/
+?? app/api/applications/[id]/conversation/
+?? app/components/application-list.module.css
+?? app/components/application-list.tsx
+?? app/components/connected-processing-conversation.tsx
+?? app/components/conversation-answers.tsx
+?? app/components/conversation-uploads.tsx
+?? app/components/file-preview-pane.tsx
+?? app/components/processing-conversation.module.css
+?? app/components/processing-conversation.tsx
+?? app/components/requirement-workspace.tsx
+?? app/components/upload-processing-panel.module.css
+?? app/components/upload-processing-panel.tsx
+?? app/components/use-file-links.ts
+?? app/components/workspace-header.module.css
+?? app/components/workspace-header.tsx
+?? artifacts/assessment-debugging/
+?? artifacts/frontend-redesign/auto-upload-checks.json
+?? artifacts/frontend-redesign/auto-upload-panel-desktop.png
+?? artifacts/frontend-redesign/auto-upload-panel-mobile.png
+?? artifacts/frontend-redesign/auto-upload-summary-desktop.png
+?? artifacts/frontend-redesign/compact-processing-checks.json
+?? artifacts/frontend-redesign/compact-processing-expanded-1280.png
+?? artifacts/frontend-redesign/compact-processing-expanded-1440.png
+?? artifacts/frontend-redesign/compact-processing-expanded-320.png
+?? artifacts/frontend-redesign/compact-processing-expanded-390.png
+?? artifacts/frontend-redesign/compact-processing-expanded-640.png
+?? artifacts/frontend-redesign/compact-processing-minimized-1280.png
+?? artifacts/frontend-redesign/compact-processing-minimized-1440.png
+?? artifacts/frontend-redesign/compact-processing-minimized-320.png
+?? artifacts/frontend-redesign/compact-processing-minimized-390.png
+?? artifacts/frontend-redesign/compact-processing-minimized-640.png
+?? artifacts/frontend-redesign/minimal-borrower-applications-1280.png
+?? artifacts/frontend-redesign/minimal-borrower-applications-1440.png
+?? artifacts/frontend-redesign/minimal-borrower-applications-320.png
+?? artifacts/frontend-redesign/minimal-borrower-applications-390.png
+?? artifacts/frontend-redesign/minimal-borrower-empty-1280.png
+?? artifacts/frontend-redesign/minimal-borrower-empty-1440.png
+?? artifacts/frontend-redesign/minimal-borrower-empty-320.png
+?? artifacts/frontend-redesign/minimal-borrower-empty-390.png
+?? artifacts/frontend-redesign/minimal-bulk-empty-1280.png
+?? artifacts/frontend-redesign/minimal-bulk-empty-1440.png
+?? artifacts/frontend-redesign/minimal-bulk-empty-320.png
+?? artifacts/frontend-redesign/minimal-bulk-empty-390.png
+?? artifacts/frontend-redesign/minimal-bulk-queue-1280.png
+?? artifacts/frontend-redesign/minimal-bulk-saved-1280.png
+?? artifacts/frontend-redesign/minimal-bulk-saved-1440.png
+?? artifacts/frontend-redesign/minimal-bulk-saved-320.png
+?? artifacts/frontend-redesign/minimal-bulk-saved-390.png
+?? artifacts/frontend-redesign/minimal-interface-checks.json
+?? artifacts/frontend-redesign/minimal-lender-applications-1280.png
+?? artifacts/frontend-redesign/minimal-lender-applications-1440.png
+?? artifacts/frontend-redesign/minimal-lender-applications-320.png
+?? artifacts/frontend-redesign/minimal-lender-applications-390.png
+?? artifacts/frontend-redesign/minimal-lender-empty-1280.png
+?? artifacts/frontend-redesign/minimal-lender-empty-1440.png
+?? artifacts/frontend-redesign/minimal-lender-empty-320.png
+?? artifacts/frontend-redesign/minimal-lender-empty-390.png
+?? artifacts/frontend-redesign/picker-lender-1280.png
+?? artifacts/frontend-redesign/picker-lender-1440.png
+?? artifacts/frontend-redesign/picker-lender-320.png
+?? artifacts/frontend-redesign/picker-lender-390.png
+?? artifacts/frontend-redesign/picker-lender-640.png
+?? artifacts/frontend-redesign/picker-lender-changes-1280.png
+?? artifacts/frontend-redesign/picker-lender-changes-1440.png
+?? artifacts/frontend-redesign/picker-lender-changes-320.png
+?? artifacts/frontend-redesign/picker-lender-changes-390.png
+?? artifacts/frontend-redesign/picker-lender-changes-640.png
+?? artifacts/frontend-redesign/picker-workspace-checks.json
+?? artifacts/frontend-redesign/processing-expanded-1280.png
+?? artifacts/frontend-redesign/processing-expanded-1440.png
+?? artifacts/frontend-redesign/processing-expanded-320.png
+?? artifacts/frontend-redesign/processing-expanded-390.png
+?? artifacts/frontend-redesign/processing-expanded-640.png
+?? artifacts/frontend-redesign/processing-minimized-1280.png
+?? artifacts/frontend-redesign/processing-minimized-1440.png
+?? artifacts/frontend-redesign/processing-minimized-320.png
+?? artifacts/frontend-redesign/processing-minimized-390.png
+?? artifacts/frontend-redesign/processing-minimized-640.png
+?? artifacts/frontend-redesign/processing-ui-checks.json
+?? artifacts/frontend-redesign/shared-borrower-bulk-1280.png
+?? artifacts/frontend-redesign/shared-borrower-bulk-1440.png
+?? artifacts/frontend-redesign/shared-borrower-bulk-320.png
+?? artifacts/frontend-redesign/shared-borrower-bulk-390.png
+?? artifacts/frontend-redesign/shared-borrower-bulk-640.png
+?? artifacts/frontend-redesign/shared-borrower-organize-1280.png
+?? artifacts/frontend-redesign/shared-borrower-organize-1440.png
+?? artifacts/frontend-redesign/shared-borrower-organize-320.png
+?? artifacts/frontend-redesign/shared-borrower-organize-390.png
+?? artifacts/frontend-redesign/shared-borrower-organize-640.png
+?? artifacts/frontend-redesign/shared-borrower-requirements-1280.png
+?? artifacts/frontend-redesign/shared-borrower-requirements-1440.png
+?? artifacts/frontend-redesign/shared-borrower-requirements-320.png
+?? artifacts/frontend-redesign/shared-borrower-requirements-390.png
+?? artifacts/frontend-redesign/shared-borrower-requirements-640.png
+?? artifacts/frontend-redesign/shared-lender-changes-1280.png
+?? artifacts/frontend-redesign/shared-lender-changes-1440.png
+?? artifacts/frontend-redesign/shared-lender-changes-320.png
+?? artifacts/frontend-redesign/shared-lender-changes-390.png
+?? artifacts/frontend-redesign/shared-lender-changes-640.png
+?? artifacts/frontend-redesign/shared-lender-review-1280.png
+?? artifacts/frontend-redesign/shared-lender-review-1440.png
+?? artifacts/frontend-redesign/shared-lender-review-320.png
+?? artifacts/frontend-redesign/shared-lender-review-390.png
+?? artifacts/frontend-redesign/shared-lender-review-640.png
+?? artifacts/frontend-redesign/shared-workspace-checks.json
+?? artifacts/frontend-redesign/simple-borrower-flow-checks.json
+?? artifacts/frontend-redesign/simple-flow-edit-files-1280.png
+?? artifacts/frontend-redesign/simple-flow-edit-files-1440.png
+?? artifacts/frontend-redesign/simple-flow-edit-files-320.png
+?? artifacts/frontend-redesign/simple-flow-edit-files-390.png
+?? artifacts/frontend-redesign/simple-flow-edit-files-640.png
+?? artifacts/frontend-redesign/simple-flow-file-1280.png
+?? artifacts/frontend-redesign/simple-flow-file-1440.png
+?? artifacts/frontend-redesign/simple-flow-file-320.png
+?? artifacts/frontend-redesign/simple-flow-file-390.png
+?? artifacts/frontend-redesign/simple-flow-file-640.png
+?? artifacts/frontend-redesign/simple-flow-file-empty-1280.png
+?? artifacts/frontend-redesign/simple-flow-file-empty-320.png
+?? artifacts/frontend-redesign/simple-flow-remove-confirm-1280.png
+?? artifacts/frontend-redesign/simple-flow-requirement-1280.png
+?? artifacts/frontend-redesign/simple-flow-requirement-1440.png
+?? artifacts/frontend-redesign/simple-flow-requirement-320.png
+?? artifacts/frontend-redesign/simple-flow-requirement-390.png
+?? artifacts/frontend-redesign/simple-flow-requirement-640.png
+?? artifacts/frontend-redesign/simple-flow-requirement-empty-1280.png
+?? artifacts/frontend-redesign/simple-flow-requirement-empty-320.png
+?? artifacts/frontend-redesign/simple-flow-upload-1280.png
+?? artifacts/frontend-redesign/simple-flow-upload-1440.png
+?? artifacts/frontend-redesign/simple-flow-upload-320.png
+?? artifacts/frontend-redesign/simple-flow-upload-390.png
+?? artifacts/frontend-redesign/simple-flow-upload-640.png
+?? artifacts/frontend-redesign/simple-flow-upload-empty-1280.png
+?? artifacts/frontend-redesign/simple-flow-upload-empty-320.png
+?? artifacts/testing/
+?? artifacts/ux-redesign/borrower-workspace-aligned.png
+?? artifacts/ux-redesign/bulk-scroll-fixed.png
+?? artifacts/ux-redesign/lender-workspace-aligned.png
+?? artifacts/ux-redesign/requirement-review-bar-live.png
+?? artifacts/ux-redesign/simple-upload-live.png
+?? docs/AGENTIC_DOCUMENT_PROCESSING_DESIGN.md
+?? docs/BORROWER_CHAT_MVP_IMPLEMENTATION_PLAN.md
+?? docs/BORROWER_CHAT_PLATFORM_DESIGN.md
+?? docs/CHAT_INTEGRATION_STATUS.md
+?? docs/CHAT_PROCESSING_INTEGRATION_REVIEW.md
+?? docs/PROCESSING_INTEGRATION_STATUS.md
+?? docs/TESTING.md
+?? lib/analysis-explanation.ts
+?? lib/borrower-chat/
+?? lib/jobs/batch-status.ts
+?? lib/loan-package-profile.ts
+?? lib/preparation-pilot/
+?? lib/preparation/
+?? migrations/postgres/014_automatic_analysis_and_draft_removal.sql
+?? migrations/postgres/015_explicit_draft_restore.sql
+?? migrations/postgres/016_analysis_pricing_and_context.sql
+?? migrations/postgres/017_borrower_conversations.sql
+?? migrations/postgres/018_conversation_uploads.sql
+?? migrations/postgres/019_grounded_answers.sql
+?? migrations/postgres/020_chat_processing_bridge.sql
+?? migrations/postgres/021_preparation_runtime.sql
+?? scripts/build-deployment-evaluation-fixtures.py
+?? scripts/check-isolated-preview.mjs
+?? scripts/evaluation-ledger.mjs
+?? scripts/live-evaluation-fetch.mjs
+?? scripts/materialize-prep01.ts
+?? scripts/preparation-live-planner.ts
+?? scripts/prepare-isolated-preview.mjs
+?? scripts/run-preparation-evaluation.ts
+?? scripts/test-agent.mjs
+?? tests/analysis-explanation.test.ts
+?? tests/borrower-chat.integration.ts
+?? tests/borrower-chat.test.ts
+?? tests/borrower-retrieval.test.ts
+?? tests/chat-conversation-ui.test.ts
+?? tests/chat-processing-projection.test.ts
+?? tests/deployment-combined.integration.ts
+?? tests/deployment-live-planner.test.ts
+?? tests/fixtures/
+?? tests/preparation-pilot.integration.ts
+?? tests/preparation-pilot.test.ts
+?? tests/preparation-reader.test.ts
+?? tests/preparation-runtime.integration.ts

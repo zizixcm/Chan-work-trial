@@ -6,7 +6,7 @@ export type Slot = 'interactive' | 'shared';
 export type JobState = 'queued' | 'running' | 'retry_wait' | 'blocked' | 'succeeded' |
   'failed' | 'dead_letter' | 'cancelled' | 'stale' | 'expired';
 export type SafeCode = 'provider_timeout' | 'provider_unavailable' | 'rate_limited' |
-  'configuration_required' | 'budget_exhausted' | 'invalid_output' | 'unsupported_input' |
+  'configuration_required' | 'budget_exhausted' | 'invalid_output' | 'unsupported_input' | 'input_too_large' |
   'cancelled' | 'lease_lost' | 'internal_error';
 
 export interface AnalysisTask<T = unknown> {

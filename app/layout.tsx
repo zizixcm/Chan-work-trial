@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 export const metadata: Metadata = {
-  title: "Oak & Elm Plaza | Proximitty",
+  title: "Borrower Portal | Proximitty",
   description: "Local demo borrower document portal",
 };
 export default function RootLayout({

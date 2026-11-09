@@ -1,0 +1,9 @@
+Recorded: 2026-11-08T03:12:02.225084+00:00
+Candidate: 144f5a8c6ba43bc9dfbeca0fac2eaf690bf2037e with existing unrelated dirty work preserved.
+Scope: plan reconciliation; migration 018; conversation upload projection/route; feature-gated upload history; borrower page/portal wiring; isolated integration assertions.
+Automated: 83 unit tests and TypeScript PASS via npm run test:agent in an isolated source view. Workspace dependency reads stalled; stopped only owned test processes. Used identical source inodes and existing release dependencies after verifying package-lock bytes and dependency declarations match. First isolated typecheck failed because the test view omitted workers; added that directory, reran typecheck and quick wrapper successfully. No workspace dependency changes.
+Database: npm run test:chat-integration PASS in disposable PostgreSQL schema. Covers legacy receipt backfill, one anchor under concurrent manifest retries, stable card across saved/queued/running/failed states, 13-card pagination, cross-application FK/access, revoked access, and no dispatch from polling. No provider calls.
+Full: npm run test:agent -- --full BLOCKED by active shared preview port 3001.
+Browser: all checklist items NOT RUN against this candidate; preview does not contain the candidate migration/UI. No UI verification claimed.
+Runtime: no shared migration, preview restart, deployment or feature enablement. BORROWER_CONVERSATION_UPLOADS defaults off; apply pending migrations through coordinated procedure before enabling.
+Result: backend behavior and static checks verified within listed scope; production build/HTTP/browser acceptance remain blocked/unrun.

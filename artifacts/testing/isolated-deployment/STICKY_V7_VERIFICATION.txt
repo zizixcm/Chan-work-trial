@@ -1,0 +1,10 @@
+Sticky starter-question deployment — 2026-11-08
+Stable app http://localhost:3102/; Studio http://127.0.0.1:4111/.
+Release /Users/chanrao/Developer/proximity-releases/unified-pilot-20261108-v7; previous v6 retained.
+Exactly 3 source changes from verified v6, matching chat-sticky-handoff.json; no backend/model/migration changes.
+All eight full-equivalent automated stages PASS: quick tests/TypeScript, production Webpack build, HTTP/jobs/workflow/chat, complete/missing simulated AI.
+Browser actual deployed PASS: exactly3 quick questions, desktop1280 row top688/bottom726 unchanged after timeline scroll2481px; mobile390 row top627.203125/bottom674 unchanged after timeline scroll4516.5px. No horizontal overflow or warning/error logs. Original questions were not clicked (no paid calls).
+Both endpoints healthy; portal32854, Studio/worker32857. Snapshot fingerprints identical before/after for app/doc/requirements/turns/conversations/messages, work states and authoritative ledger. New manual user activity before this deployment is preserved. No live evaluation or model switch performed.
+Broader borrower/lender/upload checklist not rerun for this three-file layout change. Native integration baseline from v6 remains applicable (backend byte-identical).
+Screenshots: unified-v7-desktop.png and unified-v7-mobile.png. Detailed test logs and preservation.json in release verification/.
+Stable pointer selects v7; guarded startup command unchanged: node /Users/chanrao/Developer/proximity-releases/start-stable-pilot.cjs. Sole deployment owner unchanged.

@@ -1,0 +1,96 @@
+{
+  "role": "judge",
+  "configurationDigest": "8d8011d6ce307a03457820236d9569690ac9676f36d3a7b75c28a18459a6955a",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Synthetic Elm LLC",
+          "propertyName": "Elm Center"
+        },
+        "documents": [
+          {
+            "documentId": "e1",
+            "name": "Elm lease.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Executed lease",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Executed current lease"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "h1",
+          "sequence": "1",
+          "text": "Which files do you have?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null,
+        "activeRuns": [],
+        "pendingQuestions": []
+      },
+      "completeness": null
+    },
+    "rubric": "Name Elm lease.pdf as saved. No unsupported review, approval, missing-document or next-step claim.",
+    "action": {
+      "kind": "reply",
+      "message": "You currently have 1 saved file:\n\n- **Elm lease.pdf**\n\nPlease note that having a file saved does not equate to lender review or approval."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately identifies 'Elm lease.pdf' as the single saved document and states the policy distinction that saving a file does not equate to review or approval without asserting an unsupported status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the user's question by listing the saved file."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No unnecessary or unauthorized next steps were introduced."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response contains no repetitive content."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 466,
+    "completion_tokens": 460,
+    "total_tokens": 926,
+    "cost": 0.0020745,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0020745,
+      "upstream_inference_prompt_cost": 0.0003495,
+      "upstream_inference_completions_cost": 0.001725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 286,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

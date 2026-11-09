@@ -15,8 +15,10 @@ writeFileSync(file, content, { mode: 0o600 });
 chmodSync(file, 0o600);
 mkdirSync('.data', { recursive: true, mode: 0o700 });
 const accounts = '.data/local-accounts.json';
+const profileFile = '.data/loan-package-profile.json';
+const profile = existsSync(profileFile) ? JSON.parse(readFileSync(profileFile, 'utf8')) : null;
 if (!existsSync(accounts)) writeFileSync(accounts, JSON.stringify([
-  { email: 'borrower@proximitty.example', name: 'Alex Morgan', role: 'borrower', password: randomBytes(18).toString('base64url') },
-  { email: 'lender@proximitty.example', name: 'Jordan Lee', role: 'lender', password: randomBytes(18).toString('base64url') },
+  { email: 'borrower@proximitty.example', name: profile?.accounts?.borrower || 'Demo borrower', role: 'borrower', password: randomBytes(18).toString('base64url') },
+  { email: 'lender@proximitty.example', name: profile?.accounts?.lender || 'Demo lender', role: 'lender', password: randomBytes(18).toString('base64url') },
 ], null, 2) + '\n', { mode: 0o600 });
 console.log('Local configuration ready. Secrets preserved in ignored local files. Next: npm run db:up, npm run db:migrate, npm run db:seed.');

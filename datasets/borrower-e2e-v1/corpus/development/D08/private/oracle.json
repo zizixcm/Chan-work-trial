@@ -1,0 +1,1902 @@
+{
+  "checkpoints": [
+    {
+      "activeDocumentIds": [
+        "f337c508518bd",
+        "f4cb6f542628a"
+      ],
+      "checkpoint": 1,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Hollowmere"
+          },
+          "missingDocumentIds": [
+            "f8a20fbdc8e4a"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7436 is requested. There are 0 lease amendments and 1 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Hollowmere"
+          },
+          "missingDocumentIds": [
+            "f8a20fbdc8e4a"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f4cb6f542628a",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 72384; other income USD 0.",
+                "Operating expenses USD 24128; NOI USD 48256.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f4cb6f542628a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Hollowmere"
+          },
+          "missingDocumentIds": [
+            "f26d32391ba1e"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Hollowmere"
+          },
+          "missingDocumentIds": [
+            "f26d32391ba1e",
+            "f8a20fbdc8e4a"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f4cb6f542628a",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 72384; other income USD 0.",
+                "Operating expenses USD 24128; NOI USD 48256.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f4cb6f542628a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete July 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-07",
+            "subject": "Hollowmere Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f000517da5b29"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-08",
+            "subject": "Hollowmere Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fe404719acad7"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete September 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09",
+            "subject": "Hollowmere Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fccdc73783d69"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Formation certificate identifies the declared borrower.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Hollowmere Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f2a90bebc1d41"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Hollowmere Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f4316505c1615",
+            "fe819948771de"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Hollowmere Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f4316505c1615",
+            "fe819948771de"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f337c508518bd",
+        "f4cb6f542628a",
+        "f8a20fbdc8e4a",
+        "f26d32391ba1e",
+        "f000517da5b29",
+        "fe404719acad7",
+        "fccdc73783d69"
+      ],
+      "checkpoint": 2,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D08-101. Property: Hollowmere; unit 101.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2896.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D08-102. Property: Hollowmere; unit 102.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3136.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7436 is requested. There are 0 lease amendments and 1 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D08-101. Property: Hollowmere; unit 101.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2896.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D08-102. Property: Hollowmere; unit 102.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3136.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f4cb6f542628a",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 72384; other income USD 0.",
+                "Operating expenses USD 24128; NOI USD 48256.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f4cb6f542628a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f26d32391ba1e",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 54288; other income USD 0.",
+                "Operating expenses USD 18096; NOI USD 36192.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f26d32391ba1e",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D08-101. Property: Hollowmere; unit 101.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2896.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D08-102. Property: Hollowmere; unit 102.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3136.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f4cb6f542628a",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 72384; other income USD 0.",
+                "Operating expenses USD 24128; NOI USD 48256.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f26d32391ba1e",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 54288; other income USD 0.",
+                "Operating expenses USD 18096; NOI USD 36192.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f4cb6f542628a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f26d32391ba1e",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f000517da5b29",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7436.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f000517da5b29",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Account ending 7436. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f000517da5b29",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f000517da5b29",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe404719acad7",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7436.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "fe404719acad7",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Account ending 7436. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe404719acad7",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe404719acad7",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fccdc73783d69",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7436.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fccdc73783d69",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Account ending 7436. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fccdc73783d69",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fccdc73783d69",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a",
+              "f8a20fbdc8e4a",
+              "f26d32391ba1e",
+              "f000517da5b29",
+              "fe404719acad7",
+              "fccdc73783d69"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Formation certificate identifies the declared borrower.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Hollowmere Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f2a90bebc1d41"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a",
+              "f8a20fbdc8e4a",
+              "f26d32391ba1e",
+              "f000517da5b29",
+              "fe404719acad7",
+              "fccdc73783d69"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Hollowmere Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f4316505c1615",
+            "fe819948771de"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f337c508518bd",
+              "f4cb6f542628a",
+              "f8a20fbdc8e4a",
+              "f26d32391ba1e",
+              "f000517da5b29",
+              "fe404719acad7",
+              "fccdc73783d69"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Hollowmere Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f4316505c1615",
+            "fe819948771de"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f337c508518bd",
+        "f4cb6f542628a",
+        "f8a20fbdc8e4a",
+        "f26d32391ba1e",
+        "f000517da5b29",
+        "fe404719acad7",
+        "fccdc73783d69",
+        "f2a90bebc1d41",
+        "fe819948771de",
+        "f4316505c1615"
+      ],
+      "checkpoint": 3,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D08-101. Property: Hollowmere; unit 101.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2896.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D08-102. Property: Hollowmere; unit 102.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3136.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7436 is requested. There are 0 lease amendments and 1 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D08-101. Property: Hollowmere; unit 101.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2896.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D08-102. Property: Hollowmere; unit 102.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3136.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f4cb6f542628a",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 72384; other income USD 0.",
+                "Operating expenses USD 24128; NOI USD 48256.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f4cb6f542628a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f26d32391ba1e",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 54288; other income USD 0.",
+                "Operating expenses USD 18096; NOI USD 36192.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f26d32391ba1e",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f337c508518bd",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D08-101. Property: Hollowmere; unit 101.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2896.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f8a20fbdc8e4a",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D08-102. Property: Hollowmere; unit 102.",
+                "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3136.",
+                "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f4cb6f542628a",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 72384; other income USD 0.",
+                "Operating expenses USD 24128; NOI USD 48256.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f26d32391ba1e",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 54288; other income USD 0.",
+                "Operating expenses USD 18096; NOI USD 36192.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f337c508518bd",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f8a20fbdc8e4a",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f4cb6f542628a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f26d32391ba1e",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f000517da5b29",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7436.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f000517da5b29",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Account ending 7436. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f000517da5b29",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f000517da5b29",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe404719acad7",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7436.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "fe404719acad7",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Account ending 7436. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe404719acad7",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe404719acad7",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fccdc73783d69",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7436.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fccdc73783d69",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Hollowmere Holdings LLC. Account ending 7436. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fccdc73783d69",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fccdc73783d69",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f2a90bebc1d41",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Hollowmere Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Vela Rusk. Fictional registry reference D08-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f2a90bebc1d41",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe819948771de",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Hollowmere Holdings LLC. Effective 2024-10-01.",
+                "Members: Vela Rusk 60%; Ari Noll 40%. Total ownership 100%.",
+                "Manager: Vela Rusk. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Vela Rusk; member signature /s/ Ari Noll; dated 2024-10-01."
+              ]
+            },
+            {
+              "documentId": "f4316505c1615",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Hollowmere Holdings LLC. Amendment 1 effective 2026-09-01.",
+                "Members remain Vela Rusk 60%; Ari Noll 40%.",
+                "Manager is now Ari Noll. Prior manager Vela Rusk remains proposed refinance signer.",
+                "Signing authority of the former manager for this refinance is not specified.",
+                "Member /s/ Vela Rusk; member /s/ Ari Noll; dated 2026-09-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe819948771de",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f4316505c1615",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Amendment names a new manager; authority of former manager as proposed signer is unclear. Lender must resolve.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "lender_decision",
+            "owner": "lender",
+            "period": null,
+            "subject": "Hollowmere Holdings LLC"
+          },
+          "missingDocumentIds": [],
+          "reason": "Amendment names a new manager; authority of former manager as proposed signer is unclear. Lender must resolve.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "fe819948771de",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Hollowmere Holdings LLC. Effective 2024-10-01.",
+                "Members: Vela Rusk 60%; Ari Noll 40%. Total ownership 100%.",
+                "Manager: Vela Rusk. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Vela Rusk; member signature /s/ Ari Noll; dated 2024-10-01."
+              ]
+            },
+            {
+              "documentId": "f4316505c1615",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Hollowmere Holdings LLC. Amendment 1 effective 2026-09-01.",
+                "Members remain Vela Rusk 60%; Ari Noll 40%.",
+                "Manager is now Ari Noll. Prior manager Vela Rusk remains proposed refinance signer.",
+                "Signing authority of the former manager for this refinance is not specified.",
+                "Member /s/ Vela Rusk; member /s/ Ari Noll; dated 2026-09-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe819948771de",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f4316505c1615",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    }
+  ],
+  "crossDocumentArithmetic": {
+    "annualBaseRent": 72384,
+    "calculation": "2025: sum original monthly rents *12. 2026: original *9 plus amendment 1 uplift for April-September and amendment 2 uplift for July-September when applicable.",
+    "currentMonthlyRent": 6032,
+    "currentPeriodBaseRent": 54288
+  },
+  "roles": {
+    "annual": "f4cb6f542628a",
+    "bank7": "f000517da5b29",
+    "bank8": "fe404719acad7",
+    "bank9": "fccdc73783d69",
+    "current": "f26d32391ba1e",
+    "entity_amendment": "f4316505c1615",
+    "formation": "f2a90bebc1d41",
+    "governing": "fe819948771de",
+    "leases": "f8a20fbdc8e4a",
+    "roll": "f337c508518bd"
+  },
+  "semanticReviewRequired": true,
+  "sourcePages": {
+    "f000517da5b29": [
+      {
+        "lines": [
+          "Holder: Hollowmere Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7436.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Hollowmere Holdings LLC. Account ending 7436. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f26d32391ba1e": [
+      {
+        "lines": [
+          "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 54288; other income USD 0.",
+          "Operating expenses USD 18096; NOI USD 36192.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f2a90bebc1d41": [
+      {
+        "lines": [
+          "Entity: Hollowmere Holdings LLC. Entity type: limited liability company.",
+          "Formed 2024-10-01. Organizer: Vela Rusk. Fictional registry reference D08-REG.",
+          "This document establishes the named entity; it does not itself establish current manager authority."
+        ],
+        "title": "Certificate of formation"
+      }
+    ],
+    "f337c508518bd": [
+      {
+        "lines": [
+          "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Hollowmere Studio; monthly base rent USD 2896; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Hollowmere Supply; monthly base rent USD 3136; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      }
+    ],
+    "f4316505c1615": [
+      {
+        "lines": [
+          "Entity: Hollowmere Holdings LLC. Amendment 1 effective 2026-09-01.",
+          "Members remain Vela Rusk 60%; Ari Noll 40%.",
+          "Manager is now Ari Noll. Prior manager Vela Rusk remains proposed refinance signer.",
+          "Signing authority of the former manager for this refinance is not specified.",
+          "Member /s/ Vela Rusk; member /s/ Ari Noll; dated 2026-09-01."
+        ],
+        "title": "Operating agreement amendment"
+      }
+    ],
+    "f4cb6f542628a": [
+      {
+        "lines": [
+          "Property: Hollowmere. Owner: Hollowmere Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 72384; other income USD 0.",
+          "Operating expenses USD 24128; NOI USD 48256.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f8a20fbdc8e4a": [
+      {
+        "lines": [
+          "Lease D08-101. Property: Hollowmere; unit 101.",
+          "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2896.",
+          "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease D08-102. Property: Hollowmere; unit 102.",
+          "Landlord: Hollowmere Holdings LLC; tenant: Hollowmere Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3136.",
+          "Landlord signature: /s/ Vela Rusk, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Ari Noll, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      }
+    ],
+    "fccdc73783d69": [
+      {
+        "lines": [
+          "Holder: Hollowmere Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7436.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Hollowmere Holdings LLC. Account ending 7436. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fe404719acad7": [
+      {
+        "lines": [
+          "Holder: Hollowmere Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7436.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Hollowmere Holdings LLC. Account ending 7436. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fe819948771de": [
+      {
+        "lines": [
+          "Entity: Hollowmere Holdings LLC. Effective 2024-10-01.",
+          "Members: Vela Rusk 60%; Ari Noll 40%. Total ownership 100%.",
+          "Manager: Vela Rusk. Manager may execute refinancing documents for this company.",
+          "Member signature /s/ Vela Rusk; member signature /s/ Ari Noll; dated 2024-10-01."
+        ],
+        "title": "Operating agreement"
+      }
+    ]
+  },
+  "status": "provisional",
+  "version": "CRE-E2E-oracle.1"
+}

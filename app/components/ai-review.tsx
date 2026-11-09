@@ -1,15 +1,16 @@
 'use client';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Requirement } from '@/lib/model';
+import {assessmentExplanation, failureExplanation, type AssessmentOutput} from '@/lib/analysis-explanation';
 import styles from './ai-review.module.css';
 
-type Job = {id:string;consentScope?:'borrower'|'lender';ownedByCurrentUser?:boolean;task:string;state:string;requirementId?:string;documentId?:string;message?:string;result?:unknown;freshness?:string;revision?:string;canCancel?:boolean;canRetry?:boolean};
-type State = {preference:{enabled:boolean;epoch:string};jobs:Job[];links?:Array<{documentId:string;requirementId:string;origin:string}>};
-const active = new Set(['queued','running','retry_wait']);
-const labels:Record<string,string>={queued:'Waiting to check',running:'Checking documents',retry_wait:'Waiting to retry',succeeded:'Check finished',failed:'Could not complete check',blocked:'Checks unavailable',stale:'Documents changed; check again',cancelled:'Check cancelled',expired:'Check interrupted; try again',dead_letter:'Check failed; try again'};
+type Job = {id:string;consentScope?:'borrower'|'lender';ownedByCurrentUser?:boolean;task:string;state:string;requirementId?:string;documentId?:string;message?:string;result?:unknown;freshness?:string;revision?:string;canCancel?:boolean;canRetry?:boolean;safeCode?:string;updatedAt?:string};
+type State = {automaticUploads?:boolean;jobs:Job[];links?:Array<{documentId:string;requirementId:string;origin:string}>};
+const labels:Record<string,string>={queued:'Waiting to check',running:'Checking documents',retry_wait:'Waiting to retry',succeeded:'Check finished',failed:'Could not complete check',blocked:'Checks unavailable',stale:'Assessment out of date',cancelled:'Check cancelled',expired:'Check interrupted',dead_letter:'Check failed'};
 
 export default function AiReview({applicationId,requirement,borrower=false,onUpdated,compact=false,submissionId}:{applicationId:string;requirement?:Requirement;borrower?:boolean;onUpdated?:()=>unknown;compact?:boolean;submissionId?:string}) {
-  const [state,setState]=useState<State|null>(null),[error,setError]=useState(''),[busy,setBusy]=useState(false);
+  const [retrying,setRetrying]=useState(false);
+  const [state,setState]=useState<State|null>(null),[error,setError]=useState('');
   const updated=useRef(onUpdated); updated.current=onUpdated;
   const lastCompleted=useRef<string|null>(null);
   const load=useCallback(async()=>{
@@ -24,30 +25,36 @@ export default function AiReview({applicationId,requirement,borrower=false,onUpd
     const tick=async()=>{if(!stopped&&document.visibilityState!=='hidden'){try{await load();setError('');}catch(e){if(!stopped)setError(e instanceof Error?e.message:'Could not load checks.');}}if(!stopped)timer=setTimeout(tick,4000);};
     void tick();return()=>{stopped=true;clearTimeout(timer);};
   },[load]);
-  async function command(url:string,method:string,body:unknown){setBusy(true);setError('');try{
-    const response=await fetch(url,{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
-    const value=await response.json();if(!response.ok)throw new Error(value.error||'Could not start the check.');await load();
-  }catch(e){setError(e instanceof Error?e.message:'Please try again.');}finally{setBusy(false);}}
-  const jobs=(state?.jobs||[]).filter(j=>j.ownedByCurrentUser === true && (j.consentScope || 'borrower') === (borrower ? 'borrower' : 'lender') && (!requirement||j.requirementId===requirement.id));
+  const jobs=(state?.jobs||[]).filter(j=>j.ownedByCurrentUser === true && (j.consentScope || 'borrower') === (borrower ? 'borrower' : 'lender') && (!requirement||(j.task==='verify_requirement.v1'&&j.requirementId===requirement.id)));
   const current=jobs[0];
-  const output=current?.result as {value?:unknown;assessment?:string;fulfillment?:string;checks?:Array<{criterionId:string;state:string;reason:string;evidence?:Array<{documentId:string;record:number;column:number;quote:string}>}>;missingEvidence?:string[];limitations?:string[];conflicts?:Array<{reason:string}>}|undefined;
-  const result=(output?.value||output) as typeof output;
+  const output=current?.result as AssessmentOutput|undefined;
+  const result=output?.value||output;
+  const failed=current&&['failed','dead_letter','blocked','expired'].includes(current.state);
+  async function retry(){
+    if(!current||retrying)return;
+    setRetrying(true);setError('');
+    try{
+      const response=await fetch(`/api/jobs/${encodeURIComponent(current.id)}/retry?applicationId=${encodeURIComponent(applicationId)}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({idempotencyKey:crypto.randomUUID()})});
+      const body=await response.json();if(!response.ok)throw new Error(body.error||'Could not retry the check.');
+      await load();
+    }catch(e){setError(e instanceof Error?e.message:'Could not retry the check.');}finally{setRetrying(false);}
+  }
   return <section className={compact ? styles.compact : styles.panel} aria-label={requirement?'AI requirement assessment':'AI assistance'}>
     <div className={styles.heading}><strong>{requirement?'AI assessment':'AI assistance'}</strong>
-      {!requirement&&borrower&&state&&<label><input type="checkbox" checked={state.preference.enabled} disabled={busy} onChange={e=>void command(`/api/ai/preference?applicationId=${encodeURIComponent(applicationId)}`,'PUT',{enabled:e.target.checked,expectedEpoch:state.preference.epoch})}/> AI mode for my uploads</label>}
     </div>
-    {!requirement&&<p>Your personal setting applies across applications. Optional: send supported CSV rent rolls to OpenRouter and its model provider to suggest document links and check requirements. PDF, XLSX and photos remain available for manual review. Turning off stops your automatic checks; it does not change other users’ AI settings. Already-started processing may not be retractable.</p>}
-    {borrower&&state&&!state.preference.enabled&&<p>AI checks are off. You can continue uploading and organizing files manually.</p>}
-    {requirement&&!borrower&&<p>Uses supported CSV evidence with OpenRouter and its model provider. AI findings support your review; they do not accept the requirement.</p>}
-    {requirement&&<button type="button" disabled={busy||!state||(borrower&&!state.preference.enabled)||!!current&&active.has(current.state)} onClick={()=>void command(`/api/requirements/${requirement.id}/verify-completeness?applicationId=${applicationId}`,'POST',{...(submissionId ? {expectedSubmissionId:submissionId} : {}),expectedDefinitionRevision:requirement.definition_revision,expectedEvidenceRevision:requirement.evidence_revision,...(borrower ? {consentEpoch:state?.preference.epoch} : {}),idempotencyKey:crypto.randomUUID()})}>{busy?'Starting…':borrower?'Verify completeness':'Use AI to verify completeness'}</button>}
-    {current&&<p role="status">{current.freshness==='stale'?'Documents changed; check again':labels[current.state]||current.state}{current.message?` — ${current.message}`:''}</p>}
-    {current&&(current.canCancel||current.canRetry)&&<button type="button" disabled={busy} onClick={()=>void command(`/api/jobs/${current.id}/${current.canCancel?'cancel':'retry'}?applicationId=${applicationId}`,'POST',{expectedJobRevision:current.revision,idempotencyKey:crypto.randomUUID()})}>{current.canCancel?'Cancel check':'Retry check'}</button>}
+    {!requirement&&<p>{borrower?"New supported CSV uploads are checked automatically through OpenRouter and its model provider. PDFs, spreadsheets and photos remain available for manual review.":"Assessments appear here when available. Lender review is separate."}</p>}
+    {requirement&&state&&!current&&<p>No AI assessment is available for this requirement yet. Check the linked files; you can continue with manual review.</p>}
+    {current&&<p role="status">{current.freshness==='stale'?'Assessment out of date':labels[current.state]||current.state}{current.message?` — ${current.message}`:''}</p>}
+    {failed&&<div><p><strong>The check could not finish. This is not a decision that the requirement is unmet.</strong></p><p>{failureExplanation(current.safeCode)}</p></div>}
+    {current?.state==='retry_wait'&&<p>{failureExplanation(current.safeCode)} An automatic retry is pending.</p>}
+    {current?.canRetry&&<button disabled={retrying} onClick={()=>void retry()}>{retrying?'Requesting check…':'Retry check'}</button>}
+    {current&&<details><summary>Diagnostic details</summary><p>Check ID: <code>{current.id}</code></p><p>State: {current.state} · Freshness: {current.freshness||'unknown'}</p>{current.safeCode&&<p>Reason code: <code>{current.safeCode}</code></p>}{current.updatedAt&&<p>Last updated: {current.updatedAt}</p>}</details>}
     {requirement&&state?.links?.filter(link=>link.requirementId===requirement.id&&link.origin==='model').map(link=><p key={link.documentId}><a href={`/api/documents/${link.documentId}?applicationId=${encodeURIComponent(applicationId)}`}>Document</a> · Linked by AI. You can remove an incorrect link in the document list.</p>)}
-    {requirement&&result&&<div><strong>{current?.freshness==='stale'?'Previous assessment — outdated':({fulfilled:'Appears fulfilled',partially_fulfilled:'Partially fulfilled',not_fulfilled:'Not fulfilled',unable_to_determine:'Unable to determine'}[result.fulfillment||'']||'Needs review')}</strong><p>This is an AI assessment, not lender acceptance.</p>
+    {requirement&&result&&<div><strong>{current?.freshness==='stale'?'Previous assessment — outdated':({fulfilled:'Appears fulfilled',partially_fulfilled:'Partially fulfilled',not_fulfilled:'Not fulfilled',unable_to_determine:'Unable to determine'}[result.fulfillment||'']||({appears_complete:'Appears fulfilled',incomplete:'Missing information',unknown:'Unable to determine'}[result.assessment||''])||'Needs review')}</strong><p>This is an AI assessment, not lender acceptance.</p><p><strong>Why:</strong> {assessmentExplanation(result)}</p>
       {result.missingEvidence?.map((item,i)=><p key={`missing-${i}`}>Missing: {item}</p>)}
       {result.limitations?.map((item,i)=><p key={`limitation-${i}`}>{item}</p>)}
       {result.conflicts?.map((item,i)=><p key={`conflict-${i}`}>Conflict: {item.reason}</p>)}
-      <details><summary>View checks and evidence</summary>{result.checks?.map(check=><div key={check.criterionId}><strong>{check.state==='met'?'Supported':check.state==='unmet'?'Missing':'Uncertain'}</strong><p>{check.reason}</p>{check.evidence?.map((source,i)=><p key={i}><a href={`/api/documents/${encodeURIComponent(source.documentId)}?applicationId=${encodeURIComponent(applicationId)}`}>Source document</a> · row {source.record}, column {source.column}: “{source.quote}”</p>)}</div>)}</details></div>}
+      <details open><summary>Checks and evidence</summary>{result.checks?.map(check=><div key={check.criterionId}><p><strong>{requirement.criteria?.find((_,index)=>`${requirement.id}:criterion:${index+1}`===check.criterionId)||check.criterionId}</strong></p><strong>{check.state==='met'?'Supported':check.state==='unmet'?'Missing':'Uncertain'}</strong><p>{check.reason}</p>{check.evidence?.map((source,i)=><p key={i}><a href={`/api/documents/${encodeURIComponent(source.documentId)}?applicationId=${encodeURIComponent(applicationId)}`}>Source document</a> · {source.sourceLocation||`extracted record ${source.record}, column ${source.column}`}: “{source.quote}”</p>)}</div>)}</details></div>}
     {!requirement&&jobs.length>0&&<details><summary>Recent checks ({jobs.length})</summary>{jobs.slice(0,10).map(job=><p key={job.id}>{job.task==='match_document.v1'?'Document matching':'Requirement check'}: {labels[job.state]||job.state}{job.message?` — ${job.message}`:''}</p>)}</details>}
     {error&&<p role="alert">{error}</p>}
   </section>;

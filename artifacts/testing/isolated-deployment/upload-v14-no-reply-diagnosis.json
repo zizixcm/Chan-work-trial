@@ -1,0 +1,38 @@
+{
+  "release": "unified-pilot-20261108-v14",
+  "workerPid": 81826,
+  "workerPaused": false,
+  "automaticPreference": {
+    "enabled": false,
+    "epoch": "0"
+  },
+  "mode": [
+    {
+      "mode": "adaptive",
+      "execution_epoch": "1"
+    }
+  ],
+  "latestUploads": [
+    {
+      "batchId": "6645bc55-d71c-4d57-b67f-11c575c61038",
+      "documentId": "f08aa9b9-acb2-40d4-ac4d-89e8b2805cb0",
+      "batchState": "finalized",
+      "memberState": "saved",
+      "admitted": false
+    },
+    {
+      "batchId": "892f7840-df37-4b16-94f4-a6e2d14106ea",
+      "documentId": "b21724b0-653b-4b2c-a988-05bfc4e5dfe9",
+      "batchState": "finalized",
+      "memberState": "saved",
+      "admitted": false
+    }
+  ],
+  "diagnosis": "enqueueEvents requires automaticPreference.enabled before admitting explicit upload batches. Manual messages succeed; no upload turns or investigations exist for these batches.",
+  "ledger": {
+    "knownMicros": 692044,
+    "heldMicros": 0,
+    "calls": 101
+  },
+  "actions": "Read-only diagnosis; no preference changes, retriggers, paid requests or restarts."
+}

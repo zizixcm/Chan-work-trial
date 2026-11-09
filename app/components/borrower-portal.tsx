@@ -1,10 +1,14 @@
 "use client";
+import ConnectedProcessingConversation from "./connected-processing-conversation";
+import ConversationAnswers from "./conversation-answers";
+import ConversationUploads from "./conversation-uploads";
 import SendForReview from "./send-for-review";
 import BulkUploadWorkspace from "./bulk-upload-workspace";
+import RequirementWorkspace from "./requirement-workspace";
 import OrganizeFiles from "./organize-files";
 import AiReview from "./ai-review";
 import RequirementGuidance from "./requirement-guidance";
-import AccountMenu from "../account-menu";
+import WorkspaceHeader from "./workspace-header";
 import BatchUpload from "./batch-upload";
 import DocumentPreview from "./document-preview";
 import { reviewState } from "@/lib/review-state";
@@ -14,8 +18,9 @@ import type { ApplicationSnapshot, PublicDocument, Requirement } from "@/lib/mod
 
 function size(bytes: number) { return bytes < 1024 * 1024 ? `${Math.max(1, Math.round(bytes / 1024))} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`; }
 function date(value: string) { return new Date(value).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); }
-export default function Portal({ applicationId }: { applicationId: string }) {
-  const [view,setView]=useState<"Bulk upload"|"By requirement"|"Organize files">("Bulk upload");
+export default function Portal({ applicationId, conversationUploads = false, groundedRetrieval = false, processingChat = false }: { applicationId: string; conversationUploads?: boolean; groundedRetrieval?: boolean; processingChat?: boolean }) {
+  const [view,setView]=useState<"Upload"|"By requirement"|"By file">("Upload");
+  const [focusedRequirement,setFocusedRequirement]=useState({id:"",request:0});
   const viewButtons=useRef<(HTMLButtonElement|null)[]>([]);
   const [bulkBusy,setBulkBusy]=useState(false);
   const [bulkPending,setBulkPending]=useState(0);
@@ -143,7 +148,7 @@ export default function Portal({ applicationId }: { applicationId: string }) {
     return !r.files.length && r.collection === "lender" ? "Lender / provider item" : !r.files.length && r.condition ? "If applicable" : !r.files.length && r.stage === "Before funding" ? "Before funding" : r.status === "Accepted" ? "Accepted by lender" : r.status === "Changes requested" ? "Change requested" : r.files.length ? "Files saved" : "Needed";
   }
   return <div className="portal-simple borrower-workspace">
-    <header className="simple-header"><a className="brand" href="/">proximitty<span className="brand-dot">.</span></a><div><span>Borrower portal</span><AccountMenu /></div></header>
+    <WorkspaceHeader role="borrower" />
     <main className="simple-main">
       <a className="simple-link borrower-back" href="/">← Back to applications</a>
       {loadError && <div className="alert error" role="alert">{loadError}<button onClick={() => load().catch(e => setLoadError(e.message))}>Retry</button></div>}
@@ -151,27 +156,10 @@ export default function Portal({ applicationId }: { applicationId: string }) {
       {!data && !loadError && <p role="status">Loading your application…</p>}
       {data && <>
         <div className="simple-identity"><div><h1>{data.application.property_name}</h1><p>{data.application.borrower_name} · {data.application.transaction_type}</p></div><details><summary>Application details</summary><p>{data.application.address}</p><p>Requested loan: ${data.application.requested_amount.toLocaleString()}</p><p>Letter of intent: {data.application.loi_reference}</p></details></div>
-        <div className="borrower-view-tabs" role="tablist" aria-label="Document views">{(["Bulk upload","By requirement","Organize files"] as const).map((name,index)=><button key={name} role="tab" id={`borrower-tab-${index}`} aria-controls={`borrower-view-${index}`} aria-selected={view===name} tabIndex={view===name?0:-1} ref={element=>{viewButtons.current[index]=element;}} onClick={()=>setView(name)} onKeyDown={event=>{const names=["Bulk upload","By requirement","Organize files"] as const;let next=index;if(event.key==="ArrowRight")next=(index+1)%3;else if(event.key==="ArrowLeft")next=(index+2)%3;else if(event.key==="Home")next=0;else if(event.key==="End")next=2;else return;event.preventDefault();setView(names[next]);viewButtons.current[next]?.focus();}}>{name}</button>)}</div>
-        <div id="borrower-view-0" role="tabpanel" aria-labelledby="borrower-tab-0" hidden={view!=="Bulk upload"}><BulkUploadWorkspace data={data} disabled={sending||organizing} onBusy={setBulkBusy} onPendingChange={setBulkPending} onUpdated={load} onDetails={requirement=>open(requirement,"details")} /></div>
-        <div id="borrower-view-1" role="tabpanel" aria-labelledby="borrower-tab-1" hidden={view!=="By requirement"}>
-        <section className="upload-entry" aria-label="Upload documents and requirement coverage">
-          <div className="upload-entry-heading"><div><h2>Upload your documents</h2><p>Add files or photos. Choose a request, or let AI suggest links when enabled.</p></div><button className="primary" disabled={sending} onClick={() => open()}>Upload documents</button></div>
-          <p className="coverage-summary"><strong>{withFiles} of {requests.length} requests have files.</strong> Uploads stay private until you send them for review.</p>
-          <dl className="coverage-list">{coverage.map(item => <div key={item.label}><dt>{item.label}</dt><dd>{item.count}</dd></div>)}</dl>
-          <button className="simple-link" onClick={() => {setShowAll(!showAll); requestAnimationFrame(() => document.getElementById("request-list-title")?.focus());}}>{showAll ? "Show requests needing attention" : `View all document requests (${requests.length})`}</button>
-        </section>
-        <h2 className="simple-summary" id="request-list-title" tabIndex={-1}>{showAll ? "All document requests" : attention.length ? `${attention.length} document${attention.length === 1 ? " needs" : "s need"} your attention` : "You’re up to date"}</h2>
-        {!showAll && !attention.length && <p className="simple-empty">{requests.every(r => r.status === "Accepted") ? "Your lender has accepted the documents for every request." : "No unconditional underwriting uploads need your attention. View all requests for conditional, closing and lender-managed items."}</p>}
-        <section className="simple-list" aria-labelledby="request-list-title">
-          {visible.map(r => <article className="simple-request" key={r.id}>
-            <div><span className="request-category">{r.category}</span><h3>{r.title}</h3><p>{r.purpose}</p><div className="simple-meta"><span className={r.status === "Changes requested" ? "simple-status needs-change" : "simple-status"}>{status(r)}</span><span>{r.period}</span></div></div>
-            <div className="request-actions">{r.collection !== "lender" && <button className="secondary" aria-label={`Upload ${r.title.toLowerCase()}`} onClick={() => open(r, "upload")}>Upload</button>}<button className="simple-link" aria-label={`View details for ${r.title.toLowerCase()}`} onClick={() => open(r, "details")}>Details</button></div>
-          </article>)}
-        </section>
-        </div>
-        <div id="borrower-view-2" role="tabpanel" aria-labelledby="borrower-tab-2" hidden={view!=="Organize files"}><OrganizeFiles data={data} onUpdated={load} disabled={sending||busy||bulkBusy} onBusy={setOrganizing} /></div>
-        <p className="simple-bottom">Send for review when you are ready to share your saved files with your lender.</p>
-        <footer className="simple-footer">Synthetic application · Use sample documents only</footer>
+        <div className="borrower-view-tabs" role="tablist" aria-label="Document views">{(["Upload","By file","By requirement"] as const).map((name,index)=><button key={name} role="tab" id={`borrower-tab-${index}`} aria-controls={`borrower-view-${index}`} aria-selected={view===name} tabIndex={view===name?0:-1} ref={element=>{viewButtons.current[index]=element;}} onClick={()=>setView(name)} onKeyDown={event=>{const names=["Upload","By file","By requirement"] as const;let next=index;if(event.key==="ArrowRight")next=(index+1)%3;else if(event.key==="ArrowLeft")next=(index+2)%3;else if(event.key==="Home")next=0;else if(event.key==="End")next=2;else return;event.preventDefault();setView(names[next]);viewButtons.current[next]?.focus();}}>{name}</button>)}</div>
+        <div id="borrower-view-0" role="tabpanel" aria-labelledby="borrower-tab-0" hidden={view!=="Upload"}>{processingChat?<ConnectedProcessingConversation key={applicationId} applicationId={applicationId} onUpdated={load} uploadSlot={<BulkUploadWorkspace showProcessing={false} data={data} disabled={sending||organizing} onBusy={setBulkBusy} onPendingChange={setBulkPending} onUpdated={load} onDetails={requirement=>{setFocusedRequirement(previous=>({id:requirement.id,request:previous.request+1}));setView("By requirement");requestAnimationFrame(()=>viewButtons.current[2]?.focus());}} />}/>:<><BulkUploadWorkspace data={data} disabled={sending||organizing} onBusy={setBulkBusy} onPendingChange={setBulkPending} onUpdated={load} onDetails={requirement=>{setFocusedRequirement(previous=>({id:requirement.id,request:previous.request+1}));setView("By requirement");requestAnimationFrame(()=>viewButtons.current[2]?.focus());}} />{groundedRetrieval&&<ConversationAnswers key={`answers-${applicationId}`} applicationId={applicationId}/>} {conversationUploads&&<ConversationUploads key={applicationId} applicationId={applicationId}/>}</>}</div>
+        <div id="borrower-view-1" role="tabpanel" aria-labelledby="borrower-tab-1" hidden={view!=="By file"}><OrganizeFiles data={data} onUpdated={load} disabled={sending||busy||bulkBusy||pendingFiles>0||bulkPending>0} onBusy={setOrganizing} /></div>
+        <div id="borrower-view-2" role="tabpanel" aria-labelledby="borrower-tab-2" hidden={view!=="By requirement"}><RequirementWorkspace focus={focusedRequirement} data={data} disabled={sending||busy||bulkBusy||organizing} onBusy={setOrganizing} onUpdated={load} onUpload={r=>open(r,"upload")} /></div>
       </>}
     </main>
     {data && <SendForReview snapshot={data} blocked={busy || bulkBusy || removing || organizing || pendingFiles > 0 || bulkPending > 0} onBusy={setSending} onSent={setData} onRefresh={load} />}
@@ -192,21 +180,21 @@ export default function Portal({ applicationId }: { applicationId: string }) {
       <button className="simple-link task-back" disabled={busy || removing} onClick={close}>{previewId ? "Close document details" : "← Back to your documents"}</button>
       <h2 id="upload-title" tabIndex={-1}>{generalUpload && mode === "upload" ? "Upload documents" : selected?.title}</h2>
       <div hidden={!!previewId}>
-      {selected && <><p className="task-purpose">{selected.purpose}</p><p><strong>Required period:</strong> {selected.period}</p><RequirementGuidance requirement={task || selected} /></>}
+      {selected && <details className="compact-guidance"><summary>Requirement guidance</summary><p>{selected.purpose}</p><p><strong>Required period:</strong> {selected.period}</p><RequirementGuidance requirement={task || selected} /></details>}
       {task?.review?.message && <div className="task-feedback"><strong>{task.current ? "From your lender" : "Earlier lender feedback"}</strong><p>{task.review.message}</p>{!task.current && <p>Send your updated files for a new lender review.</p>}</div>}
       {actionError && <div role="alert" className="inline-error">{actionError}<button className="simple-link" disabled={removing} onClick={() => load().then(() => {setRemoveTarget(null);setActionError("");}).catch(error => setActionError(error.message))}>Refresh uploaded files</button></div>}
       {notice && <p className="batch-notice" role="status">{notice}</p>}
 
       {mode === "upload" && selected && <button className="simple-link" disabled={busy} onClick={viewDetails}>View request details and uploaded files ({task?.files.length || 0})</button>}
-      <BatchUpload disabled={sending||bulkBusy||organizing} onPendingChange={setPendingFiles} applicationId={applicationId} mapping={generalUpload && <div className="upload-mapping"><label className="field-label" htmlFor="upload-request">Which request are these files for?</label><select id="upload-request" value={selected?.id || ""} disabled={busy || batchLocked} onChange={event => {setGeneralRequirementId(event.target.value);setSelected(data?.requirements.find(request => request.id === event.target.value) || null);}}><option value="">Let AI find requests / organize later</option>{uploadRequests.map(request => <option key={request.id} value={request.id}>{request.title} — {status(request)}</option>)}</select><p>Choosing a request is optional. With AI enabled, supported CSV files are also checked for other relevant requests.</p></div>} batchKey={generalUpload ? "general" : selected?.id || "general"} requirementId={selected?.id || null} hidden={mode !== "upload" || selected?.collection === "lender"} general={generalUpload} onBusy={setBusy} onLocked={setBatchLocked} onComplete={load} onStartNew={() => {setGeneralRequirementId("");setSelected(null);}} />
+      <BatchUpload disabled={sending||bulkBusy||organizing} onPendingChange={setPendingFiles} applicationId={applicationId} mapping={generalUpload && <div className="upload-mapping"><label className="field-label" htmlFor="upload-request">Which request are these files for?</label><select id="upload-request" value={selected?.id || ""} disabled={busy || batchLocked} onChange={event => {setGeneralRequirementId(event.target.value);setSelected(data?.requirements.find(request => request.id === event.target.value) || null);}}><option value="">Let AI find requests / organize later</option>{uploadRequests.map(request => <option key={request.id} value={request.id}>{request.title} — {status(request)}</option>)}</select><p>Choosing a request is optional. New supported CSV uploads are automatically checked for relevant requests.</p></div>} batchKey={generalUpload ? "general" : selected?.id || "general"} requirementId={selected?.id || null} hidden={mode !== "upload" || selected?.collection === "lender"} general={generalUpload} onBusy={setBusy} onLocked={setBatchLocked} onComplete={load} onStartNew={() => {setGeneralRequirementId("");setSelected(null);}} />
       {mode === "details" && task && <>
-        <AiReview applicationId={data!.application.id} requirement={task} borrower onUpdated={load} />
-        <section className="task-files"><div className="task-files-heading"><h3 id="uploaded-documents-title" tabIndex={-1}>Uploaded documents ({task.files.length})</h3>{task.collection !== "lender" && <button className="primary" disabled={removing} onClick={() => {setMode("upload");setRemoveTarget(null);requestAnimationFrame(() => document.querySelector<HTMLButtonElement>(".batch-upload > button")?.focus());}}>Add more documents</button>}</div>
+        <section className="task-files"><div className="task-files-heading"><h3 id="uploaded-documents-title" tabIndex={-1}>Uploaded documents ({task.files.length})</h3>{task.collection !== "lender" && <button className="primary" disabled={removing} onClick={() => {setMode("upload");setRemoveTarget(null);requestAnimationFrame(() => dialog.current?.querySelector<HTMLButtonElement>(".batch-upload > button")?.focus());}}>Add more documents</button>}</div>
           {task.files.length ? <p className="simple-status">{status(task)}</p> : <p>No documents are linked to this request yet.</p>}
           {task.files.map(document => <article className="borrower-file-card" key={document.id}><div className="borrower-file-heading"><div><h4>{document.original_name}</h4><p>{size(document.size_bytes)} · Uploaded {date(document.created_at)}</p>{document.requirement_ids.length > 1 && <p>Also linked to {document.requirement_ids.length - 1} other request{document.requirement_ids.length > 2 ? "s" : ""}.</p>}</div><div className="borrower-file-actions"><button className="secondary" aria-label={`Preview ${document.original_name}`} aria-pressed={previewId === document.id} onClick={event => {previewOpener.current = event.currentTarget;listScroll.current = dialog.current?.scrollTop || 0;setPreviewId(document.id);requestAnimationFrame(() => {if (dialog.current) dialog.current.scrollTop = 0;window.document.getElementById("borrower-preview-title")?.focus({preventScroll:true});});}}>Preview</button><button className="simple-link" disabled={downloading === document.id} aria-label={`Download ${document.original_name}`} onClick={() => download(document)}>{downloading === document.id ? "Downloading…" : "Download"}</button><button className="simple-link remove-file-action" disabled={removing} aria-label={`Remove ${document.original_name} from this request`} onClick={event => {removeOpener.current = event.currentTarget;setActionError("");if (!task.evidence_revision) {setActionError("Refresh this request before removing a document.");return;}setRemoveTarget({document,requirementId:task.id,revision:task.evidence_revision});}}>Remove document</button></div></div>
             {removeTarget?.document.id === document.id && <div className="remove-document-confirm" role="group" aria-label={`Confirm removal of ${document.original_name}`}><p><strong>Remove this document from {task.title}?</strong></p><p>The original stays saved. Links to other requests and any earlier submitted copies or history are kept. This request may need another document.</p><div><button className="secondary" disabled={removing} onClick={() => {setRemoveTarget(null);requestAnimationFrame(() => removeOpener.current?.focus());}}>Keep document</button><button className="primary" disabled={removing} onClick={removeDocument}>{removing ? "Removing…" : "Remove from this request"}</button></div></div>}
           </article>)}
         </section>
+        <details className="compact-guidance"><summary>Automatic assessment</summary><AiReview applicationId={data!.application.id} requirement={task} borrower onUpdated={load} compact /></details>
       </>}
       </div>
       {mode === "details" && task?.files.find(document => document.id === previewId) && <section className="borrower-document-preview">

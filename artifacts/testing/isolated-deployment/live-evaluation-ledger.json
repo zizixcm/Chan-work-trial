@@ -1,0 +1,12 @@
+{
+  "evaluationId": "chat-processing-first-integrated-trial",
+  "authorization": "Human authorized up to $20 total for broader evaluation on synthetic documents; deployment chat sole execution owner",
+  "limitUsd": 20,
+  "knownUsd": 0,
+  "reservedUsd": 0,
+  "uncertainUsd": 0,
+  "providerCalls": [],
+  "scope": "Real adaptive document/requirement completeness including scans and long PDFs; no submission readiness",
+  "mappingGate": "Auto-link clear matches only after focused live evaluation passes; visible/reversible; manual rejections win; ambiguous cases require borrower clarification",
+  "status": "No live calls yet. Awaiting integrated runtime and bounded provider accounting hook."
+}

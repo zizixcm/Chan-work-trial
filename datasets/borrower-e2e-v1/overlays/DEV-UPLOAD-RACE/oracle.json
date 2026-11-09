@@ -1,0 +1,1245 @@
+{
+  "baseCase": "D07",
+  "baseOracleSha256": "d6eace08ad5aaf943e38a6349c41328987ce5ebe520f572b448ba39946e5deea",
+  "boundaries": [
+    {
+      "allowedQuestionTopics": [
+        "clearer execution page"
+      ],
+      "boundaryId": "unclear_copy",
+      "expected": {
+        "activeDocumentIds": [
+          "f9c8235aa530d",
+          "f5bd96f6fb9cb",
+          "f388078a12c6b",
+          "fe5a03a9509f0",
+          "f4a50710e84f7",
+          "fd815041ba107",
+          "fe8376e83c153",
+          "f3a91c00f849e",
+          "f8733e331630f"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. Original assessment completed on obscured lease version.",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "unreadable",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term. Original assessment completed on obscured lease version.",
+              "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "kind": "unreadable",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. Original assessment completed on obscured lease version.",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "unreadable",
+              "owner": "borrower",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe5a03a9509f0",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f388078a12c6b",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fd815041ba107",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fd815041ba107",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f4a50710e84f7",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f4a50710e84f7",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe8376e83c153",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe8376e83c153",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8733e331630f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f3a91c00f849e",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8733e331630f",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": "2",
+        "evidenceRevision": "2",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": "borrower",
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "partial",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Request a clearer last-tenant execution page; do not call it a missing lease."
+      ],
+      "sourceOracleCheckpoint": 2,
+      "transcriptCategory": "clarification",
+      "trigger": "Original assessment completed on obscured lease version."
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "upload_in_flight",
+      "expected": {
+        "activeDocumentIds": [
+          "f9c8235aa530d",
+          "f5bd96f6fb9cb",
+          "f388078a12c6b",
+          "fe5a03a9509f0",
+          "f4a50710e84f7",
+          "fd815041ba107",
+          "fe8376e83c153",
+          "f3a91c00f849e",
+          "f8733e331630f"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. Clear-copy upload begins; no new bytes durably saved yet. Inventory revision changes.",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "unreadable",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term. Clear-copy upload begins; no new bytes durably saved yet. Inventory revision changes.",
+              "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "kind": "unreadable",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. Clear-copy upload begins; no new bytes durably saved yet. Inventory revision changes.",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "unreadable",
+              "owner": "operator",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe5a03a9509f0",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f388078a12c6b",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fd815041ba107",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fd815041ba107",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f4a50710e84f7",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f4a50710e84f7",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe8376e83c153",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe8376e83c153",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8733e331630f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f3a91c00f849e",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8733e331630f",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": null,
+        "evidenceRevision": "3",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": "operator",
+        "pendingUploadIds": [
+          "fe95c2ee0b84e"
+        ],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "running",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Acknowledge in-flight upload without claiming it saved or inspected.",
+        "Historical revision-2 findings may be described with scope; no current result yet."
+      ],
+      "sourceOracleCheckpoint": 2,
+      "transcriptCategory": "arrival",
+      "trigger": "Clear-copy upload begins; no new bytes durably saved yet. Inventory revision changes."
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "clear_copy_saved",
+      "expected": {
+        "activeDocumentIds": [
+          "f9c8235aa530d",
+          "fe95c2ee0b84e",
+          "f388078a12c6b",
+          "fe5a03a9509f0",
+          "f4a50710e84f7",
+          "fd815041ba107",
+          "fe8376e83c153",
+          "f3a91c00f849e",
+          "f8733e331630f"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. Upload durably saves and supersedes obscured copy; old worker is still finishing.",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term. Upload durably saves and supersedes obscured copy; old worker is still finishing.",
+              "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. Upload durably saves and supersedes obscured copy; old worker is still finishing.",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe5a03a9509f0",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f388078a12c6b",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fd815041ba107",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fd815041ba107",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f4a50710e84f7",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f4a50710e84f7",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe8376e83c153",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe8376e83c153",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8733e331630f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f3a91c00f849e",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8733e331630f",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": null,
+        "evidenceRevision": "4",
+        "inactiveDocumentIds": [
+          "f5bd96f6fb9cb"
+        ],
+        "nextActionOwner": "operator",
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "running",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Saved does not mean assessed. Keep prior independent findings; lease remains unchecked."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "progress",
+      "trigger": "Upload durably saves and supersedes obscured copy; old worker is still finishing."
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "stale_result_rejected",
+      "expected": {
+        "activeDocumentIds": [
+          "f9c8235aa530d",
+          "fe95c2ee0b84e",
+          "f388078a12c6b",
+          "fe5a03a9509f0",
+          "f4a50710e84f7",
+          "fd815041ba107",
+          "fe8376e83c153",
+          "f3a91c00f849e",
+          "f8733e331630f"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. Revision-2 worker attempts publication after revision-4 save; trusted commit rejects stale result.",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term. Revision-2 worker attempts publication after revision-4 save; trusted commit rejects stale result.",
+              "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. Revision-2 worker attempts publication after revision-4 save; trusted commit rejects stale result.",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Garnet Walk"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe5a03a9509f0",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f388078a12c6b",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fd815041ba107",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fd815041ba107",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f4a50710e84f7",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f4a50710e84f7",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe8376e83c153",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe8376e83c153",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8733e331630f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f3a91c00f849e",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8733e331630f",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": null,
+        "evidenceRevision": "4",
+        "inactiveDocumentIds": [
+          "f5bd96f6fb9cb"
+        ],
+        "nextActionOwner": "operator",
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "running",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Never expose revision-2 completion as current. Do not discard the clear copy or restore superseded links."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "correction",
+      "trigger": "Revision-2 worker attempts publication after revision-4 save; trusted commit rejects stale result."
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "current_final",
+      "expected": {
+        "activeDocumentIds": [
+          "f9c8235aa530d",
+          "fe95c2ee0b84e",
+          "f388078a12c6b",
+          "fe5a03a9509f0",
+          "f4a50710e84f7",
+          "fd815041ba107",
+          "fe8376e83c153",
+          "f3a91c00f849e",
+          "f8733e331630f"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe95c2ee0b84e",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe95c2ee0b84e",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe95c2ee0b84e",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe95c2ee0b84e",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c8235aa530d",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe95c2ee0b84e",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe95c2ee0b84e",
+                  "page": 2
+                }
+              ],
+              [
+                {
+                  "documentId": "f388078a12c6b",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe5a03a9509f0",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe5a03a9509f0",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f388078a12c6b",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fd815041ba107",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fd815041ba107",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f4a50710e84f7",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f4a50710e84f7",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fe8376e83c153",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fe8376e83c153",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8733e331630f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f3a91c00f849e",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f8733e331630f",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": "4",
+        "evidenceRevision": "4",
+        "inactiveDocumentIds": [
+          "f5bd96f6fb9cb"
+        ],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "succeeded",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Explain resolved unreadability and preserve independent findings.",
+        "Citations use the current readable version, never the superseded obscured page."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "final",
+      "trigger": "New worker inspects clear scan and commits revision-4 result."
+    }
+  ],
+  "description": "In-flight upload and stale-publication fence with explicit evidence revisions.",
+  "orderingRule": "Boundaries describe evaluator-controlled input and lifecycle transitions, not prescribed agent actions or tool/page order. All extra responses must also be logged and reviewed.",
+  "overlayId": "DEV-UPLOAD-RACE",
+  "sourceHashes": {
+    "f388078a12c6b": "68fb0f847dbfc228608245e5715668c5b1ee76820357ac02ad668fdcc9077dd8",
+    "f3a91c00f849e": "5419ba8ba6c684a234c97215fe772888c431eb8f0ff4358e7a1792ef378e442b",
+    "f4a50710e84f7": "c95d55fdf3aa118c1177de6a8ed936a078c8856d919ffa09745b803d8f18e391",
+    "f5bd96f6fb9cb": "5d64d7047d635afa25edfc67c425ddf549a001bf358b79e089d0367b946e5d9b",
+    "f8733e331630f": "03494ea863bf22eb7eaf159f3e05a9ebe3a416e1c93eb20818c86c27487c6401",
+    "f9c8235aa530d": "1b5cda07a6f443563aee449dfea629838938854257e7ef5264057e165af02cbf",
+    "fd815041ba107": "4829e6806e7e56d86b110e81bba3ca4566e7b86110fcde94c40b63d46babc0b2",
+    "fe5a03a9509f0": "68d3f516ebc4278a978a06c2893eeab9bf84e99c953091d430a45fcf7d75e769",
+    "fe8376e83c153": "79974dbc503d35475973dd998b32128c3baf279d233ccad3a4719de2a34fc7f7",
+    "fe95c2ee0b84e": "f11ccc69c180d06fdbbc989353a4128662e004adc40f377703dac0b2ca54242f"
+  },
+  "split": "development",
+  "status": "provisional",
+  "version": "journey-overlays.1"
+}

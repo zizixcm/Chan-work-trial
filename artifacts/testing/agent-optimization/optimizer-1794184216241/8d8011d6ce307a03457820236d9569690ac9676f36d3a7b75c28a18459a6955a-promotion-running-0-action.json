@@ -1,0 +1,68 @@
+{
+  "candidateId": "8d8011d6ce307a03457820236d9569690ac9676f36d3a7b75c28a18459a6955a",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [
+        {
+          "documentId": "d1",
+          "name": "Rent roll.pdf",
+          "active": true
+        },
+        {
+          "documentId": "d2",
+          "name": "2025 operating statement.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "messages": [
+      {
+        "id": "production-check",
+        "sequence": "1",
+        "text": "Have you finished reviewing the documents?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null,
+      "activeRuns": [
+        {
+          "id": "synthetic-run",
+          "state": "running",
+          "goal": "Investigate saved evidence"
+        }
+      ],
+      "pendingQuestions": []
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "Not yet—the review of your uploaded documents is currently in progress.\n\nWe have saved:\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nI will update you as soon as the review is complete."
+  },
+  "actualMicros": 4238,
+  "replyText": "Not yet—the review of your uploaded documents is currently in progress.\n\nWe have saved:\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nI will update you as soon as the review is complete.",
+  "executed": true
+}

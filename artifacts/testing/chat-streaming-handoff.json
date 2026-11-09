@@ -1,0 +1,25 @@
+{
+  "createdAt": "2026-11-09T00:07:54.206289+00:00",
+  "files": {
+    "app/components/processing-conversation.tsx": "3e194530b45b31fbc4b939868b64f09b2e4ab34f3f7cbb93b529b634fe722794",
+    "app/components/processing-conversation.module.css": "ea1ca7a9fd755ca4f20e56884fed5d2fde5bb6f671ba75f72bea87e3ba35e7b9",
+    "app/api/applications/[id]/conversation/stream/route.ts": "902814da62861aad4f64e4777ec11a1a2c04b956edc732e9a8790b9777a4fa76",
+    "lib/agents/borrower-service.ts": "b808f14163254c30731a63fe8e21524e6e1b3b9f0381fd684fa29580b0de71f9",
+    "lib/agents/runtime.ts": "2d0c9b0fe02ac9c3f4821d1e4b44737e29205530bf276ed8cc7bf2ef6cbf9738",
+    "lib/borrower-chat/bridge-browser.ts": "801c3dfe21b13c53370de2253a3d17d93a01a638bff268f1062756e6e7e44fb7",
+    "lib/borrower-chat/conversation-ui.ts": "92a565ef5caf13ecc890000f3771fd941ff05a3a2eb41eb16dac6539a91957b2",
+    "lib/borrower-chat/stream-browser.ts": "de18277a1cf3aab7240ea18b5922bbc0a95275b8ae8b70d0eae4409d14ffefdb",
+    "migrations/postgres/025_borrower_reply_stream.sql": "dca4d8238f046b174ad5eda2169189df6fa01311d9f6f82e27e7061f648e9a4a",
+    "tests/chat-stream.test.ts": "a05e26868cdb9419c4c4a499d3736e07fbfc4b3ca811732041a410dfb46adc5a",
+    "tests/native-agents.test.ts": "a7a568ef2ee6d49da643abbb3566a29bf8296f4e0bdc11ec28218f5c17813ec5",
+    "tests/borrower-agents.integration.ts": "de633b84178ad94ce9d873265e37bf770a6bb51a64c847f31224e6098dafa307"
+  },
+  "checks": {
+    "quick": "PASS 148 tests + TypeScript",
+    "native": "PASS including draft before commit, final reconciliation, unauthorized scope, changed fingerprint and result cursor, expired draft lease, investigator180s lease coverage",
+    "browser": "PASS controlled synthetic pending-send before ACK, first/second text chunks before terminal, exact single final question/reply, hidden idle activity, failed-send retry, desktop/mobile no overflow or console errors"
+  },
+  "requiredMigration": "025_borrower_reply_stream.sql before portal/worker",
+  "transportOwner": "01a1bd6d-ba0a-71c0-8822-1693f82da243 supplied Mastra streaming/parser/meter guard; deployment owns final3.8 model config/timing",
+  "livePaidTesting": "Not performed by this chat"
+}

@@ -1,0 +1,20 @@
+Four user-selected cases only; no broad suite/holdouts.
+Snapshot: /Users/chanrao/Developer/proximity-releases/small-start-tuning-20261108-v1
+Runtime source: frozen unified-pilot-20261108-v11. Do not edit pilot/source/stores from this eval.
+Manifest: artifacts/testing/small-manifest.json
+Manifest SHA256: c7722a21d59528a571053cba01d301e650b46e345be725d81dcb9274837c1f94
+Four offline controller cases PASS. Native SDK mock proves low reasoning/24k/image and reservation/settlement. Final quick checks log: artifacts/testing/small-final-quick.log (wait for PASS before dispatch).
+
+Use existing credential, local preview DB and shared ledger environment. Existing first-pilot-20261108 batch5000000, cumulative20000000, per application/run2000000 unchanged. Sole owner establishes idle/exclusive window; restore worker between cases if needed. No automatic retries or cap changes. Before each case check held0 and available batch reservation headroom1.2M.
+
+First profile baseline: medium reasoning both agents, 24k. Each command invokes:
+  node --import tsx scripts/evaluate-small-start.ts
+with SMALL_EVAL_EXECUTION=live, SMALL_EVAL_PROFILE=baseline,
+SMALL_EVAL_CASE one of EMPTY-REQUESTED, EMPTY-UPLOADED, EMPTY-MISSING, ONE-UPLOAD,
+and SMALL_EVAL_OUTPUT_DIR=artifacts/testing/small-live-baseline-<case> (new directory).
+
+One case per idle window is fine. Send each report/results to evaluation chat before tuning. Do not run low variants automatically: they are prepared for controlled follow-up after baseline content/latency review. Profiles borrower-low and both-low alter only isolated reasoning effort, not pilot settings, output cap, source policy or model. User authorized tuning within these four cases.
+
+Question targets: useful answer<=3s, complete<=5s. One simple upload target10–15s, ceiling20s end-to-end. Upload receipt visible<=1s after save must be established through actual UI/API evidence; DB fixture does not claim it. First visible text is not automatically first useful answer; reply-chunks preserve content/timestamps for adjudication. Unmeasured first-useful timing and semantic review stay pending, never a fabricated pass. Offline timings are not live quality/latency.
+
+Reports capture both agents, native calls/tools/validation errors, controller state, source hashes, Mastra traces/scores, monotonic request elapsed timings and known/held cost. Quality-plus-latency gate is fail-closed until reviewed. CLI success only means execution, not model pass. The output root has no prior live case results.

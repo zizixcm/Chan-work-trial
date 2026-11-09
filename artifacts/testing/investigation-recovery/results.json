@@ -1,0 +1,42 @@
+[
+  {
+    "name": "quick",
+    "command": "npm run test:agent",
+    "exitCode": 0
+  },
+  {
+    "name": "build",
+    "command": "npm run build -- --webpack",
+    "exitCode": 0
+  },
+  {
+    "name": "http",
+    "command": "npm run test:integration",
+    "exitCode": 0
+  },
+  {
+    "name": "jobs",
+    "command": "npm run test:jobs-integration",
+    "exitCode": 0
+  },
+  {
+    "name": "workflow",
+    "command": "npm run test:workflow-integration",
+    "exitCode": 0
+  },
+  {
+    "name": "chat",
+    "command": "npm run test:chat-integration",
+    "exitCode": 0
+  },
+  {
+    "name": "ai-complete",
+    "command": "npm run test:ai-integration",
+    "exitCode": 0
+  },
+  {
+    "name": "ai-missing",
+    "command": "npm run test:ai-integration",
+    "exitCode": 0
+  }
+]

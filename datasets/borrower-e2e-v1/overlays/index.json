@@ -1,0 +1,12 @@
+{
+  "frozenHoldoutUnchanged": true,
+  "overlays": [
+    "DEV-HISTORY",
+    "DEV-BUDGET",
+    "DEV-UPLOAD-RACE",
+    "DEV-DIALOGUE"
+  ],
+  "split": "development",
+  "status": "provisional",
+  "version": "journey-overlays.1"
+}

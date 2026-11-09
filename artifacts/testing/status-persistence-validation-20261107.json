@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-07",
+  "candidate": {
+    "lib/jobs/batch-status.ts": "f21cf4cf086b4a19ea10a29e99c0da2f10fb37d5b34cfc65e0968ffea9366eb2",
+    "lib/jobs/batches.ts": "61399b154f26f8fc4a6c6548cb7f4260dc2beb955515b1e746f9ccd6844c813b",
+    "app/api/upload-batches/route.ts": "094c83a49155cc8be4df5f23796a4ee7dc529782ef93eaba508b55b9551220f2",
+    "app/components/batch-upload.tsx": "b02a5b5dea57b0d26ac357468b09d711dccf129a49bc96ca34ec5724e5706a6b",
+    "app/components/upload-processing-panel.tsx": "41b0855abc56f71d24a0f52fa9071ef54140a6200874360a2d762ecbe03d42bb",
+    "app/components/bulk-upload-workspace.tsx": "bd9658f940d40ccd5397a6f39f4340e1d27c9c7cea13f744947f1cfddc6c5f1c",
+    "lib/analysis/verify.ts": "c2d28e453274a7aeb100781b64ffc586f6dabb3078a10fc7c2ddc44be1171141",
+    "tests/analysis.test.ts": "97c4b0aa6c46957aad36e60496fdac0a34c33d78ed7dbd910f41d76515e3f83b",
+    "tests/workflow.integration.ts": "29337f656726c7de13bc6a0c1db5018718b6cc224f6376a7360b2e7536523440"
+  },
+  "changes": [
+    "Reuse durable prepared events for exact document hash and MIME across retries and matching context changes.",
+    "Persisted latest upload batch restored on refresh, scoped to signed-in borrower and application.",
+    "Duplicate uploads preserve recorded matching outcome; explicit reselection of legacy unprocessed file queues one check.",
+    "Application-owned preparation warnings merged into validated output, preserving unknown assessment regardless of model omissions."
+  ],
+  "checks": {
+    "quick": "PASS: 75 tests and TypeScript",
+    "webpack_build": "PASS before final validator-only change",
+    "browser_changed_behavior": "PASS on candidate port 3002: latest batch restored, reload retained statuses, popup initially minimized, expand and Escape focus restoration",
+    "browser_layout": "PASS desktop 1280 and mobile 390; no warning/error console messages",
+    "other_browser_checklist": "NOT RUN: sign-in/access, new uploads, link/unlink, submission/lender review; no claim of full UI verification",
+    "captured_response_replay": "PASS: check 73ad23fa-127f-447f-a91a-f882a2747fff passes corrected validator with all original preparation warnings; assessment unknown, fulfillment unable_to_determine",
+    "workflow": "BLOCKED: final shared-source run failed PDF extraction during offloaded dependency reads; isolated copy also has empty offloaded source files (scripts/env.ts copied as 0 bytes). No full workflow pass claimed.",
+    "full_wrapper": "Not completed; shared preview active, repository/dependency files offloaded"
+  },
+  "runtime": {
+    "validator": "Patched running worker with backup; fresh retry 27c0fba4-6772-456b-8aa9-37b251ad3243 ended cancelled/lease_lost before provider dispatch",
+    "status_ui": "Candidate verified on port 3002; shared preview not restarted"
+  },
+  "environment": "macOS flags node_modules/@next/env/package.json and .git/HEAD as dataless; read lengths 0 despite nonzero stat sizes. Repository copied to temporary validation directory with release dependencies."
+}

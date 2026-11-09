@@ -1,0 +1,88 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "f337c508518bd",
+    "f8a20fbdc8e4a",
+    "f4cb6f542628a",
+    "f26d32391ba1e",
+    "f000517da5b29",
+    "fe404719acad7",
+    "fccdc73783d69",
+    "f2a90bebc1d41",
+    "fe819948771de",
+    "f4316505c1615"
+  ],
+  "budgetInterrupt": {
+    "eligible": false,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7436",
+    "baseRents": [
+      2896,
+      3136
+    ],
+    "borrower": "Hollowmere Holdings LLC",
+    "currentRents": [
+      2896,
+      3136
+    ],
+    "entityAmendments": 1,
+    "leaseAmendments": 0,
+    "manager": "Vela Rusk",
+    "otherOwner": "Ari Noll",
+    "property": "Hollowmere",
+    "tenants": [
+      "Hollowmere Studio",
+      "Hollowmere Supply"
+    ],
+    "units": [
+      "101",
+      "102"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 2 units occupied by the tenants listed; only account ending 7436 is requested. There are 0 lease amendments and 1 entity amendments.",
+      "uploadIds": [
+        "f337c508518bd",
+        "f4cb6f542628a"
+      ]
+    },
+    {
+      "borrowerText": "Here are leases, current results and statements.",
+      "uploadIds": [
+        "f8a20fbdc8e4a",
+        "f26d32391ba1e",
+        "f000517da5b29",
+        "fe404719acad7",
+        "fccdc73783d69"
+      ]
+    },
+    {
+      "borrowerText": "Here is the company file. I have no further authority evidence.",
+      "uploadIds": [
+        "f2a90bebc1d41",
+        "fe819948771de",
+        "f4316505c1615"
+      ]
+    }
+  ]
+}

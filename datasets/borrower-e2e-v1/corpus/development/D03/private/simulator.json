@@ -1,0 +1,88 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "f50b81f335dfa",
+    "fe781762d5d12",
+    "f075f94def30d",
+    "f8aebea604683",
+    "f36aa3d0b29e5",
+    "f53a259b9463b",
+    "f85ba8c80c137",
+    "f668e376e80b5",
+    "f0f74c541e59a",
+    "f8663b151c4c7"
+  ],
+  "budgetInterrupt": {
+    "eligible": false,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7351",
+    "baseRents": [
+      2211,
+      2451
+    ],
+    "borrower": "Copper Finch Holdings LLC",
+    "currentRents": [
+      2336,
+      2451
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 1,
+    "manager": "Ivo Pell",
+    "otherOwner": "Runa Dax",
+    "property": "Copper Finch",
+    "tenants": [
+      "Copper Studio",
+      "Copper Supply"
+    ],
+    "units": [
+      "101",
+      "102"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 2 units occupied by the tenants listed; only account ending 7351 is requested. There are 1 lease amendments and 0 entity amendments. I will look for the amendments.",
+      "uploadIds": [
+        "f50b81f335dfa",
+        "fe781762d5d12",
+        "f8aebea604683",
+        "f36aa3d0b29e5"
+      ]
+    },
+    {
+      "borrowerText": "I think the rent changed; I do not recall when.",
+      "uploadIds": [
+        "f53a259b9463b",
+        "f85ba8c80c137",
+        "f668e376e80b5",
+        "f0f74c541e59a",
+        "f8663b151c4c7"
+      ]
+    },
+    {
+      "borrowerText": "These are all the declared lease amendments. Please compare the effective dates.",
+      "uploadIds": [
+        "f075f94def30d"
+      ]
+    }
+  ]
+}

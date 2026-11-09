@@ -1,0 +1,2472 @@
+{
+  "checkpoints": [
+    {
+      "activeDocumentIds": [
+        "f9d15c9423b38",
+        "ffa3cc8d0fabe",
+        "f1b51320d6f2a",
+        "f93cd0ef17d25",
+        "fc6f1a6dc0028"
+      ],
+      "checkpoint": 1,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9d15c9423b38",
+              "ffa3cc8d0fabe",
+              "f1b51320d6f2a",
+              "f93cd0ef17d25",
+              "fc6f1a6dc0028"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Mossglass Court"
+          },
+          "missingDocumentIds": [
+            "f97538014eeac"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9d15c9423b38",
+              "ffa3cc8d0fabe",
+              "f1b51320d6f2a",
+              "f93cd0ef17d25",
+              "fc6f1a6dc0028"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Mossglass Court"
+          },
+          "missingDocumentIds": [
+            "f97538014eeac"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9d15c9423b38",
+              "ffa3cc8d0fabe",
+              "f1b51320d6f2a",
+              "f93cd0ef17d25",
+              "fc6f1a6dc0028"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Mossglass Court"
+          },
+          "missingDocumentIds": [
+            "f10e9bb606c56"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 4 units occupied by the tenants listed; only account ending 7504 is requested. There are 0 lease amendments and 1 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Mossglass Court"
+          },
+          "missingDocumentIds": [
+            "f10e9bb606c56",
+            "f97538014eeac"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9d15c9423b38",
+              "ffa3cc8d0fabe",
+              "f1b51320d6f2a",
+              "f93cd0ef17d25",
+              "fc6f1a6dc0028"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2025-01-01/2025-12-31",
+            "subject": "Mossglass Court"
+          },
+          "missingDocumentIds": [
+            "f05b42723083f"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9d15c9423b38",
+              "ffa3cc8d0fabe",
+              "f1b51320d6f2a",
+              "f93cd0ef17d25",
+              "fc6f1a6dc0028"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Mossglass Court"
+          },
+          "missingDocumentIds": [
+            "f7935a5129e9e"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Mossglass Court"
+          },
+          "missingDocumentIds": [
+            "f05b42723083f",
+            "f10e9bb606c56",
+            "f7935a5129e9e",
+            "f97538014eeac"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f1b51320d6f2a",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f1b51320d6f2a",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f1b51320d6f2a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f1b51320d6f2a",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f93cd0ef17d25",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f93cd0ef17d25",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f93cd0ef17d25",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f93cd0ef17d25",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fc6f1a6dc0028",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fc6f1a6dc0028",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fc6f1a6dc0028",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fc6f1a6dc0028",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "ffa3cc8d0fabe",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Tera Nix. Fictional registry reference H04-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "ffa3cc8d0fabe",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9d15c9423b38",
+              "ffa3cc8d0fabe",
+              "f1b51320d6f2a",
+              "f93cd0ef17d25",
+              "fc6f1a6dc0028"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Mossglass Court Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fcadf5ad3082d"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [
+            {
+              "documentId": "f9d15c9423b38",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Effective 2024-10-01.",
+                "Members: Tera Nix 60%; Uvo Renn 40%. Total ownership 100%.",
+                "Manager: Tera Nix. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Tera Nix; member signature /s/ Uvo Renn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9d15c9423b38",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Declared entity amendment is not supplied; current manager and signing provisions cannot yet be reconciled.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Mossglass Court Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fcadf5ad3082d"
+          ],
+          "reason": "Declared entity amendment is not supplied; current manager and signing provisions cannot yet be reconciled.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f9d15c9423b38",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Effective 2024-10-01.",
+                "Members: Tera Nix 60%; Uvo Renn 40%. Total ownership 100%.",
+                "Manager: Tera Nix. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Tera Nix; member signature /s/ Uvo Renn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9d15c9423b38",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f9d15c9423b38",
+        "ffa3cc8d0fabe",
+        "f1b51320d6f2a",
+        "f93cd0ef17d25",
+        "fc6f1a6dc0028",
+        "f97538014eeac",
+        "f10e9bb606c56",
+        "f05b42723083f"
+      ],
+      "checkpoint": 2,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f97538014eeac",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Mossglass Studio; monthly base rent USD 3444; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Mossglass Supply; monthly base rent USD 3684; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Mossglass Atelier; monthly base rent USD 3924; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Mossglass Market; monthly base rent USD 4164; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f97538014eeac",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f97538014eeac",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Mossglass Studio; monthly base rent USD 3444; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Mossglass Supply; monthly base rent USD 3684; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Mossglass Atelier; monthly base rent USD 3924; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Mossglass Market; monthly base rent USD 4164; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f97538014eeac",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 31,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H04-101. Property: Mossglass Court; unit 101.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3444.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 32,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H04-102. Property: Mossglass Court; unit 102.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3684.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 33,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H04-103. Property: Mossglass Court; unit 103.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3924.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 34,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H04-104. Property: Mossglass Court; unit 104.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Market.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 4164.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 32
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 33
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 34
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 4 units occupied by the tenants listed; only account ending 7504 is requested. There are 0 lease amendments and 1 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f97538014eeac",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Mossglass Studio; monthly base rent USD 3444; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Mossglass Supply; monthly base rent USD 3684; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Mossglass Atelier; monthly base rent USD 3924; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Mossglass Market; monthly base rent USD 4164; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 31,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H04-101. Property: Mossglass Court; unit 101.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3444.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 32,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H04-102. Property: Mossglass Court; unit 102.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3684.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 33,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H04-103. Property: Mossglass Court; unit 103.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3924.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 34,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H04-104. Property: Mossglass Court; unit 104.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Market.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 4164.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f97538014eeac",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 32
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 33
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 34
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f05b42723083f",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 182592; other income USD 0.",
+                "Operating expenses USD 60864; NOI USD 121728.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f05b42723083f",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9d15c9423b38",
+              "ffa3cc8d0fabe",
+              "f1b51320d6f2a",
+              "f93cd0ef17d25",
+              "fc6f1a6dc0028",
+              "f97538014eeac",
+              "f10e9bb606c56",
+              "f05b42723083f"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Mossglass Court"
+          },
+          "missingDocumentIds": [
+            "f7935a5129e9e"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Mossglass Court"
+          },
+          "missingDocumentIds": [
+            "f7935a5129e9e"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f97538014eeac",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Mossglass Studio; monthly base rent USD 3444; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Mossglass Supply; monthly base rent USD 3684; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Mossglass Atelier; monthly base rent USD 3924; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Mossglass Market; monthly base rent USD 4164; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 31,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H04-101. Property: Mossglass Court; unit 101.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3444.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 32,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H04-102. Property: Mossglass Court; unit 102.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3684.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 33,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H04-103. Property: Mossglass Court; unit 103.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3924.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 34,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H04-104. Property: Mossglass Court; unit 104.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Market.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 4164.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f05b42723083f",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 182592; other income USD 0.",
+                "Operating expenses USD 60864; NOI USD 121728.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f97538014eeac",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 32
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 33
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 34
+              }
+            ],
+            [
+              {
+                "documentId": "f05b42723083f",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f1b51320d6f2a",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f1b51320d6f2a",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f1b51320d6f2a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f1b51320d6f2a",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f93cd0ef17d25",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f93cd0ef17d25",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f93cd0ef17d25",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f93cd0ef17d25",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fc6f1a6dc0028",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fc6f1a6dc0028",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fc6f1a6dc0028",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fc6f1a6dc0028",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "ffa3cc8d0fabe",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Tera Nix. Fictional registry reference H04-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "ffa3cc8d0fabe",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9d15c9423b38",
+              "ffa3cc8d0fabe",
+              "f1b51320d6f2a",
+              "f93cd0ef17d25",
+              "fc6f1a6dc0028",
+              "f97538014eeac",
+              "f10e9bb606c56",
+              "f05b42723083f"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Mossglass Court Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fcadf5ad3082d"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [
+            {
+              "documentId": "f9d15c9423b38",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Effective 2024-10-01.",
+                "Members: Tera Nix 60%; Uvo Renn 40%. Total ownership 100%.",
+                "Manager: Tera Nix. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Tera Nix; member signature /s/ Uvo Renn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9d15c9423b38",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Declared entity amendment is not supplied; current manager and signing provisions cannot yet be reconciled.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Mossglass Court Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fcadf5ad3082d"
+          ],
+          "reason": "Declared entity amendment is not supplied; current manager and signing provisions cannot yet be reconciled.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f9d15c9423b38",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Effective 2024-10-01.",
+                "Members: Tera Nix 60%; Uvo Renn 40%. Total ownership 100%.",
+                "Manager: Tera Nix. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Tera Nix; member signature /s/ Uvo Renn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9d15c9423b38",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f9d15c9423b38",
+        "ffa3cc8d0fabe",
+        "f1b51320d6f2a",
+        "f93cd0ef17d25",
+        "fc6f1a6dc0028",
+        "f97538014eeac",
+        "f10e9bb606c56",
+        "f05b42723083f",
+        "fcadf5ad3082d",
+        "f7935a5129e9e"
+      ],
+      "checkpoint": 3,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f97538014eeac",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Mossglass Studio; monthly base rent USD 3444; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Mossglass Supply; monthly base rent USD 3684; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Mossglass Atelier; monthly base rent USD 3924; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Mossglass Market; monthly base rent USD 4164; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f97538014eeac",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f97538014eeac",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Mossglass Studio; monthly base rent USD 3444; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Mossglass Supply; monthly base rent USD 3684; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Mossglass Atelier; monthly base rent USD 3924; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Mossglass Market; monthly base rent USD 4164; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f97538014eeac",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 31,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H04-101. Property: Mossglass Court; unit 101.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3444.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 32,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H04-102. Property: Mossglass Court; unit 102.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3684.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 33,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H04-103. Property: Mossglass Court; unit 103.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3924.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 34,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H04-104. Property: Mossglass Court; unit 104.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Market.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 4164.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 32
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 33
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 34
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 4 units occupied by the tenants listed; only account ending 7504 is requested. There are 0 lease amendments and 1 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f97538014eeac",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Mossglass Studio; monthly base rent USD 3444; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Mossglass Supply; monthly base rent USD 3684; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Mossglass Atelier; monthly base rent USD 3924; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Mossglass Market; monthly base rent USD 4164; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 31,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H04-101. Property: Mossglass Court; unit 101.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3444.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 32,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H04-102. Property: Mossglass Court; unit 102.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3684.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 33,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H04-103. Property: Mossglass Court; unit 103.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3924.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 34,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H04-104. Property: Mossglass Court; unit 104.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Market.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 4164.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f97538014eeac",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 32
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 33
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 34
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f05b42723083f",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 182592; other income USD 0.",
+                "Operating expenses USD 60864; NOI USD 121728.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f05b42723083f",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f7935a5129e9e",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 136944; other income USD 0.",
+                "Operating expenses USD 45648; NOI USD 91296.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f7935a5129e9e",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f97538014eeac",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Mossglass Studio; monthly base rent USD 3444; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Mossglass Supply; monthly base rent USD 3684; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Mossglass Atelier; monthly base rent USD 3924; lease 2025-01-01 to 2029-12-31.",
+                "Unit 104: Mossglass Market; monthly base rent USD 4164; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 31,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H04-101. Property: Mossglass Court; unit 101.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3444.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 32,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H04-102. Property: Mossglass Court; unit 102.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3684.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 33,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H04-103. Property: Mossglass Court; unit 103.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3924.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f10e9bb606c56",
+              "page": 34,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H04-104. Property: Mossglass Court; unit 104.",
+                "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Market.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 4164.",
+                "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f05b42723083f",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 182592; other income USD 0.",
+                "Operating expenses USD 60864; NOI USD 121728.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f7935a5129e9e",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 136944; other income USD 0.",
+                "Operating expenses USD 45648; NOI USD 91296.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f97538014eeac",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 31
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 32
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 33
+              }
+            ],
+            [
+              {
+                "documentId": "f10e9bb606c56",
+                "page": 34
+              }
+            ],
+            [
+              {
+                "documentId": "f05b42723083f",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f7935a5129e9e",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f1b51320d6f2a",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f1b51320d6f2a",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f1b51320d6f2a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f1b51320d6f2a",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f93cd0ef17d25",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f93cd0ef17d25",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f93cd0ef17d25",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f93cd0ef17d25",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fc6f1a6dc0028",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fc6f1a6dc0028",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fc6f1a6dc0028",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fc6f1a6dc0028",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "ffa3cc8d0fabe",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Tera Nix. Fictional registry reference H04-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "ffa3cc8d0fabe",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9d15c9423b38",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Effective 2024-10-01.",
+                "Members: Tera Nix 60%; Uvo Renn 40%. Total ownership 100%.",
+                "Manager: Tera Nix. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Tera Nix; member signature /s/ Uvo Renn; dated 2024-10-01."
+              ]
+            },
+            {
+              "documentId": "fcadf5ad3082d",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Amendment 1 effective 2026-09-01.",
+                "Members remain Tera Nix 60%; Uvo Renn 40%.",
+                "Manager is now Uvo Renn. Prior manager Tera Nix remains proposed refinance signer.",
+                "Signing authority of the former manager for this refinance is not specified.",
+                "Member /s/ Tera Nix; member /s/ Uvo Renn; dated 2026-09-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9d15c9423b38",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fcadf5ad3082d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Amendment names a new manager; authority of former manager as proposed signer is unclear. Lender must resolve.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "lender_decision",
+            "owner": "lender",
+            "period": null,
+            "subject": "Mossglass Court Holdings LLC"
+          },
+          "missingDocumentIds": [],
+          "reason": "Amendment names a new manager; authority of former manager as proposed signer is unclear. Lender must resolve.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f9d15c9423b38",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Effective 2024-10-01.",
+                "Members: Tera Nix 60%; Uvo Renn 40%. Total ownership 100%.",
+                "Manager: Tera Nix. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Tera Nix; member signature /s/ Uvo Renn; dated 2024-10-01."
+              ]
+            },
+            {
+              "documentId": "fcadf5ad3082d",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Mossglass Court Holdings LLC. Amendment 1 effective 2026-09-01.",
+                "Members remain Tera Nix 60%; Uvo Renn 40%.",
+                "Manager is now Uvo Renn. Prior manager Tera Nix remains proposed refinance signer.",
+                "Signing authority of the former manager for this refinance is not specified.",
+                "Member /s/ Tera Nix; member /s/ Uvo Renn; dated 2026-09-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9d15c9423b38",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fcadf5ad3082d",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    }
+  ],
+  "crossDocumentArithmetic": {
+    "annualBaseRent": 182592,
+    "calculation": "2025: sum original monthly rents *12. 2026: original *9 plus amendment 1 uplift for April-September and amendment 2 uplift for July-September when applicable.",
+    "currentMonthlyRent": 15216,
+    "currentPeriodBaseRent": 136944
+  },
+  "roles": {
+    "annual": "f05b42723083f",
+    "bank7": "f1b51320d6f2a",
+    "bank8": "f93cd0ef17d25",
+    "bank9": "fc6f1a6dc0028",
+    "current": "f7935a5129e9e",
+    "entity_amendment": "fcadf5ad3082d",
+    "formation": "ffa3cc8d0fabe",
+    "governing": "f9d15c9423b38",
+    "leases": "f10e9bb606c56",
+    "roll": "f97538014eeac"
+  },
+  "semanticReviewRequired": true,
+  "sourcePages": {
+    "f05b42723083f": [
+      {
+        "lines": [
+          "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 182592; other income USD 0.",
+          "Operating expenses USD 60864; NOI USD 121728.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f10e9bb606c56": [
+      {
+        "lines": [
+          "Pages 2-30: operating provisions.",
+          "Pages 31-34: lease parties, economics and execution pages.",
+          "Contents identifies locations only; inspect the cited evidence."
+        ],
+        "title": "Lease collection contents"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 1.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 1 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 2.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 2 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 3.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 3 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 4.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 4 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 5.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 5 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 6.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 6 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 7.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 7 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 8.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 8 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 9.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 9 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 10.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 10 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 11.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 11 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 12.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 12 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 13.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 13 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 14.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 14 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 15.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 15 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 16.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 16 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 17.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 17 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 18.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 18 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 19.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 19 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 20.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 20 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 21.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 21 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 22.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 22 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 23.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 23 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 24.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 24 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 25.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 25 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 26.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 26 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 27.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 27 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 28.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 28 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Property: Mossglass Court. Lease appendix section 29.",
+          "Premises maintenance: tenant keeps interior fixtures in orderly condition. Section 29 covers routine notice and inspection scheduling.",
+          "This provision does not change rent, term, parties or signing provisions."
+        ],
+        "title": "Lease operating provision"
+      },
+      {
+        "lines": [
+          "Lease H04-101. Property: Mossglass Court; unit 101.",
+          "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3444.",
+          "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H04-102. Property: Mossglass Court; unit 102.",
+          "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3684.",
+          "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H04-103. Property: Mossglass Court; unit 103.",
+          "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Atelier.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3924.",
+          "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H04-104. Property: Mossglass Court; unit 104.",
+          "Landlord: Mossglass Court Holdings LLC; tenant: Mossglass Market.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 4164.",
+          "Landlord signature: /s/ Tera Nix, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Uvo Renn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      }
+    ],
+    "f1b51320d6f2a": [
+      {
+        "lines": [
+          "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f7935a5129e9e": [
+      {
+        "lines": [
+          "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 136944; other income USD 0.",
+          "Operating expenses USD 45648; NOI USD 91296.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f93cd0ef17d25": [
+      {
+        "lines": [
+          "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f97538014eeac": [
+      {
+        "lines": [
+          "Property: Mossglass Court. Owner: Mossglass Court Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Mossglass Studio; monthly base rent USD 3444; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Mossglass Supply; monthly base rent USD 3684; lease 2025-01-01 to 2029-12-31.",
+          "Unit 103: Mossglass Atelier; monthly base rent USD 3924; lease 2025-01-01 to 2029-12-31.",
+          "Unit 104: Mossglass Market; monthly base rent USD 4164; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      }
+    ],
+    "f9d15c9423b38": [
+      {
+        "lines": [
+          "Entity: Mossglass Court Holdings LLC. Effective 2024-10-01.",
+          "Members: Tera Nix 60%; Uvo Renn 40%. Total ownership 100%.",
+          "Manager: Tera Nix. Manager may execute refinancing documents for this company.",
+          "Member signature /s/ Tera Nix; member signature /s/ Uvo Renn; dated 2024-10-01."
+        ],
+        "title": "Operating agreement"
+      }
+    ],
+    "fc6f1a6dc0028": [
+      {
+        "lines": [
+          "Holder: Mossglass Court Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7504.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Mossglass Court Holdings LLC. Account ending 7504. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fcadf5ad3082d": [
+      {
+        "lines": [
+          "Entity: Mossglass Court Holdings LLC. Amendment 1 effective 2026-09-01.",
+          "Members remain Tera Nix 60%; Uvo Renn 40%.",
+          "Manager is now Uvo Renn. Prior manager Tera Nix remains proposed refinance signer.",
+          "Signing authority of the former manager for this refinance is not specified.",
+          "Member /s/ Tera Nix; member /s/ Uvo Renn; dated 2026-09-01."
+        ],
+        "title": "Operating agreement amendment"
+      }
+    ],
+    "ffa3cc8d0fabe": [
+      {
+        "lines": [
+          "Entity: Mossglass Court Holdings LLC. Entity type: limited liability company.",
+          "Formed 2024-10-01. Organizer: Tera Nix. Fictional registry reference H04-REG.",
+          "This document establishes the named entity; it does not itself establish current manager authority."
+        ],
+        "title": "Certificate of formation"
+      }
+    ]
+  },
+  "status": "provisional",
+  "version": "CRE-E2E-oracle.1"
+}

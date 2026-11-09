@@ -1,0 +1,5 @@
+
+> proximity-borrower-portal@0.1.0 test:agent
+> node scripts/test-agent.mjs --full
+
+Port 3001 is in use. Coordinate stopping the preview before --full; it rebuilds the shared .next directory. Quick checks remain available.

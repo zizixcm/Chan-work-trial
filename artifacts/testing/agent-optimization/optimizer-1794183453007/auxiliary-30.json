@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": true
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "What's been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Identify both saved files and distinguish pending uploads from saved files. Briefly suggest checking unfinished uploads; do not ask to re-upload saved files or claim all files have been considered.",
+    "action": {
+      "kind": "reply",
+      "message": "Here are the 2 files currently saved:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nOther uploads are still in progress. Please check your upload progress to ensure those finish transmitting. (Note that saved files do not equate to review or approval.)"
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements are supported by the input data; stating that saved files do not equate to review or approval explains policy and makes no unsupported status claim."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response correctly identifies both saved documents and notes that additional uploads are pending."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response appropriately suggests checking the progress of unfinished uploads without asking to re-upload saved files."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 536,
+    "completion_tokens": 539,
+    "total_tokens": 1075,
+    "cost": 0.00242325,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00242325,
+      "upstream_inference_prompt_cost": 0.000402,
+      "upstream_inference_completions_cost": 0.00202125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 422,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

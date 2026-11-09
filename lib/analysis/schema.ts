@@ -7,7 +7,9 @@ const object=(properties:Record<string,JSONSchema7>):JSONSchema7=>({type:'object
 const array=(items:JSONSchema7,maxItems:number):JSONSchema7=>({type:'array',items});
 const enumeration=(values:string[]):JSONSchema7=>({type:'string',enum:values});
 const source=object({documentId:id,record:{type:'integer'},column:{type:'integer'},quote:{type:'string'}});
-const sources=array(source,8);
+// Bound only the citation leaf array. Bounding every nested array makes Gemini's
+// constrained decoder exceed its state budget; the remaining limits stay local.
+const sources:JSONSchema7={...array(source,8),maxItems:8};
 const check=object({criterionId:id,state:enumeration(['met','unmet','unknown']),reason:text,evidence:sources});
 export const matchOutputSchema:JSONSchema7=object({
  schemaVersion:{type:'string',const:'match.v1'},
@@ -18,3 +20,12 @@ export const verifyOutputSchema:JSONSchema7=object({
  schemaVersion:{type:'string',const:'verify.v1'},requirementId:id,assessment:enumeration(['appears_complete','incomplete','unknown']),
  checks:array(check,20),missingEvidence:array(text,20),conflicts:array(object({reason:text,evidence:sources}),20),limitations:array(text,20),
 });
+
+/** Opaque IDs must be copied verbatim, including version suffixes. */
+export function scopedMatchSchema(requirementIds: string[]): JSONSchema7 {
+ const schema=structuredClone(matchOutputSchema);
+ const requirements=schema.properties!.requirements as JSONSchema7;
+ const item=requirements.items as JSONSchema7;
+ if(requirementIds.length)item.properties!.requirementId={type:'string',enum:requirementIds};
+ return schema;
+}

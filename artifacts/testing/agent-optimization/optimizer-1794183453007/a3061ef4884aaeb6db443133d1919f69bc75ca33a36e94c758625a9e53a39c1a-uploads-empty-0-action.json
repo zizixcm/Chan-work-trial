@@ -1,0 +1,48 @@
+{
+  "candidateId": "a3061ef4884aaeb6db443133d1919f69bc75ca33a36e94c758625a9e53a39c1a",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "messages": [
+      {
+        "id": "m1",
+        "sequence": "1",
+        "text": "What's been uploaded?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "No documents have been uploaded yet.\n\n**Next step:**\n* Please upload your current rent roll."
+  },
+  "actualMicros": 2133,
+  "executed": true
+}

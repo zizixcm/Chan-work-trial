@@ -9,10 +9,10 @@
     "applicability": "Required",
     "sort_order": 0,
     "criteria": [
-      "Exact legal names, entity type and ownership are complete.",
-      "Loan amount, purpose and collateral are identified.",
-      "Disclosure questions are answered; authorized signers sign and date.",
-      "Borrower and guarantor roles match the accepted LOI and legal documents."
+      "Legal borrower name, entity type and ownership/management information are complete.",
+      "Requested amount, loan purpose and property address/unit are identified.",
+      "Disclosure questions are answered and authorized signatures and dates are present.",
+      "Signer and ownership information reconcile with governing documents; material discrepancies are resolved."
     ],
     "condition": "",
     "collection": "borrower",
@@ -120,10 +120,11 @@
     "applicability": "Required",
     "sort_order": 6,
     "criteria": [
-      "Income statement start/end dates and balance-sheet as-of date are clear.",
-      "Entity and accounting basis are consistent.",
-      "Statements meet lender freshness policy.",
-      "Unusual income, expenses, distributions and related-party balances are explained."
+      "YTD income statement and balance sheet identify the same borrower and accounting basis.",
+      "Income statement start/end dates and balance-sheet as-of date align and meet lender freshness requirements.",
+      "Balance sheet totals balance; material liabilities and related-party balances are identified.",
+      "Rental income and expenses reconcile with the rent roll and leases, with timing differences explained.",
+      "Bank balances and unusual deposits, expenses or distributions are reconciled with supporting evidence."
     ],
     "condition": "",
     "collection": "borrower",
@@ -265,19 +266,19 @@
   },
   {
     "id": "33000000-0000-4000-8000-000000000007",
-    "title": "Formation, ownership & signing authority",
-    "category": "Borrower Package",
-    "purpose": "Establish the entity\u2019s identity, ownership and authority to borrow.",
-    "period": "Current governing documents and all relevant amendments",
+    "title": "Entity governing documents & signing authority",
+    "category": "Legal Documents",
+    "purpose": "Verify who owns and manages the borrowing entity and who may sign for it.",
+    "period": "Current executed operating agreement, relevant amendments and ownership/signing-authority evidence",
     "owner": "Borrower / authorized representative",
     "applicability": "Required",
     "sort_order": 14,
     "criteria": [
-      "Applicable formation and governing documents are complete and executed.",
-      "Legal name, ownership/control and authorized signers reconcile across the package.",
-      "EIN evidence or applicable explanation is supplied.",
-      "Lender verifies legal status and applicable beneficial-owner information.",
-      "Apply current customer-due-diligence rules; do not universally require a FinCEN BOI filing."
+      "Borrowing entity legal name matches the loan application and formation evidence.",
+      "Executed governing agreement and all relevant amendments are supplied.",
+      "Current members, ownership percentages and managers are identifiable; ownership totals reconcile.",
+      "The application signer has authority under the agreement or an appropriate resolution.",
+      "Conflicting ownership or authority information is resolved by lender/legal review."
     ],
     "condition": "",
     "collection": "borrower",
@@ -293,11 +294,11 @@
     "applicability": "Required",
     "sort_order": 15,
     "criteria": [
-      "Assets, liabilities, income and contingent obligations are disclosed.",
-      "Totals reconcile and joint/partial ownership is clear.",
-      "Required declarations and signatures are complete.",
-      "Self-prepared attachments include completed lender-form identity, declarations and signatures.",
-      "Cash, retirement assets, securities and entity interests are distinguished."
+      "Statement is signed and dated; required declarations and supporting schedules are complete.",
+      "Assets, liabilities, annual income and contingent obligations are disclosed; totals reconcile.",
+      "Personal, joint, trust and entity interests are distinguished and ownership percentages are clear.",
+      "Cash, securities, retirement assets and real estate are classified separately; restrictions and associated debt are disclosed.",
+      "Reported income and entity interests reconcile with tax returns; unsupported values are flagged for follow-up."
     ],
     "condition": "",
     "collection": "borrower",
@@ -332,10 +333,10 @@
     "applicability": "Required",
     "sort_order": 17,
     "criteria": [
-      "Correct taxpayer and all requested years are covered.",
-      "All schedules and amendments are included.",
-      "Recurring income and losses are identified; unusual gains/losses explained.",
-      "Income reconciles with PFS and tax verification results."
+      "Correct taxpayer and all three requested tax years are covered.",
+      "Complete returns include applicable Schedule E, K-1s and other supporting schedules; amendments are identified.",
+      "Recurring income and losses are distinguished from unusual gains, with material differences explained.",
+      "Income, entity interests and real estate holdings reconcile with the personal financial statement."
     ],
     "condition": "",
     "collection": "borrower",
@@ -596,11 +597,11 @@
     "applicability": "Required",
     "sort_order": 31,
     "criteria": [
-      "Correct property/unit, parcel and property rights are appraised.",
-      "Intended user/use and effective date are appropriate.",
-      "Complete analysis and appraiser certification are present.",
-      "Valuation assumptions, leases, occupancy and condition are reviewed.",
-      "Required valuation bases are included; collateral value is distinct from insurance replacement cost."
+      "Latest complete appraisal identifies the correct property/unit, parcel, property rights and intended lender/user.",
+      "Report and valuation effective dates are clear; material revisions are identified and lender review covers the version used.",
+      "Value conclusion and supporting valuation analysis are present; assumptions and hypothetical conditions are disclosed.",
+      "Tenancy, occupancy, rent and lease terms reconcile with the rent roll and lease documents.",
+      "Property condition and material deficiencies are addressed; market value is distinguished from insurance replacement cost."
     ],
     "condition": "",
     "collection": "lender",
@@ -704,7 +705,7 @@
   {
     "id": "33000000-0000-4000-8000-000000000001",
     "title": "Current rent roll",
-    "category": "Property & Refinance Support",
+    "category": "Leases",
     "purpose": "Support current rental income and occupancy.",
     "period": "Current as-of date acceptable to lender",
     "owner": "Borrower / authorized representative",
@@ -742,16 +743,17 @@
   {
     "id": "33000000-0000-4000-8000-000000000003",
     "title": "Lease agreements & amendments",
-    "category": "Property & Refinance Support",
+    "category": "Leases",
     "purpose": "Verify enforceable tenancy terms and landlord obligations.",
     "period": "All current executed leases and amendments",
     "owner": "Borrower / authorized representative",
     "applicability": "Required",
     "sort_order": 39,
     "criteria": [
-      "All parties, premises and lease terms are identified.",
-      "Required signatures and all amendments are included.",
-      "Rent, renewal/termination rights and expense responsibilities reconcile with underwriting."
+      "Complete executed lease, assignments and amendments identify the tenant, landlord and correct premises.",
+      "Current term, expiration, renewal/termination rights and any changes from amendments are identifiable.",
+      "Base rent, escalations, concessions and expense responsibilities can be determined.",
+      "Tenant, occupied area, rent and term reconcile with the rent roll and property income; discrepancies are explained."
     ],
     "condition": "",
     "collection": "borrower",

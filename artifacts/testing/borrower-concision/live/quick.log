@@ -1,0 +1,849 @@
+
+> proximity-borrower-portal@0.1.0 test:agent
+> node scripts/test-agent.mjs
+
+Agent checks: quick. Keep source unchanged during this run.
+
+>>> Unit tests: npm run test
+
+> proximity-borrower-portal@0.1.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: developer allowlist denies absent config, role names, prefix matches and missing identity
+ok 1 - developer allowlist denies absent config, role names, prefix matches and missing identity
+  ---
+  duration_ms: 0.597208
+  type: 'test'
+  ...
+# Subtest: raw malformed JSON is persisted before executor rejection without error-object leaks
+ok 2 - raw malformed JSON is persisted before executor rejection without error-object leaks
+  ---
+  duration_ms: 3.472208
+  type: 'test'
+  ...
+# Subtest: schema rejection preserves parsed response; successful validation does not imply application
+ok 3 - schema rejection preserves parsed response; successful validation does not imply application
+  ---
+  duration_ms: 2.005917
+  type: 'test'
+  ...
+# Subtest: captured text is bounded and redacts credential patterns
+ok 4 - captured text is bounded and redacts credential patterns
+  ---
+  duration_ms: 0.199541
+  type: 'test'
+  ...
+# Subtest: diagnostic write failure does not turn valid provider output into failure
+ok 5 - diagnostic write failure does not turn valid provider output into failure
+  ---
+  duration_ms: 0.366458
+  type: 'test'
+  ...
+# Subtest: aborted transport late response cannot overwrite terminal diagnostic state
+ok 6 - aborted transport late response cannot overwrite terminal diagnostic state
+  ---
+  duration_ms: 47.836416
+  type: 'test'
+  ...
+# Subtest: private store persists across instances, hides expired runs, prunes and rejects paths/symlinks
+ok 7 - private store persists across instances, hides expired runs, prunes and rejects paths/symlinks
+  ---
+  duration_ms: 7.906292
+  type: 'test'
+  ...
+# Subtest: HTTP denies access before touching storage and sends no-store for every outcome
+ok 8 - HTTP denies access before touching storage and sends no-store for every outcome
+  ---
+  duration_ms: 398.273583
+  type: 'test'
+  ...
+# Subtest: validation diagnostics retain safe issue identifiers rather than upstream error text
+ok 9 - validation diagnostics retain safe issue identifiers rather than upstream error text
+  ---
+  duration_ms: 31.65075
+  type: 'test'
+  ...
+# Subtest: explains uncertainty even when some criteria are supported
+ok 10 - explains uncertainty even when some criteria are supported
+  ---
+  duration_ms: 0.76875
+  type: 'test'
+  ...
+# Subtest: surfaces preparation limitations and conflicts instead of implying missing evidence
+ok 11 - surfaces preparation limitations and conflicts instead of implying missing evidence
+  ---
+  duration_ms: 0.132375
+  type: 'test'
+  ...
+# Subtest: handles wrapped results and missing result details
+ok 12 - handles wrapped results and missing result details
+  ---
+  duration_ms: 0.085292
+  type: 'test'
+  ...
+# Subtest: validation failure means no accepted assessment, not an unmet requirement
+ok 13 - validation failure means no accepted assessment, not an unmet requirement
+  ---
+  duration_ms: 0.219875
+  type: 'test'
+  ...
+# Subtest: unknown diagnostics do not echo arbitrary provider text
+ok 14 - unknown diagnostics do not echo arbitrary provider text
+  ---
+  duration_ms: 0.090334
+  type: 'test'
+  ...
+# Subtest: CSV preserves logical records, quoted newlines and literal formula/injection cells
+ok 15 - CSV preserves logical records, quoted newlines and literal formula/injection cells
+  ---
+  duration_ms: 1.244041
+  type: 'test'
+  ...
+# Subtest: CSV rejects wrong hash, corrupt/ragged data and excess scope
+ok 16 - CSV rejects wrong hash, corrupt/ragged data and excess scope
+  ---
+  duration_ms: 0.48175
+  type: 'test'
+  ...
+# Subtest: matching validates real cited output without converting relevance to acceptance
+ok 17 - matching validates real cited output without converting relevance to acceptance
+  ---
+  duration_ms: 0.603583
+  type: 'test'
+  ...
+# Subtest: matching rejects invented IDs, citations, duplicate/omitted requirements and extra instructions
+ok 18 - matching rejects invented IDs, citations, duplicate/omitted requirements and extra instructions
+  ---
+  duration_ms: 1.143708
+  type: 'test'
+  ...
+# Subtest: matching supports multiple requirement links and ambiguous matches without automatic confirmation
+ok 19 - matching supports multiple requirement links and ambiguous matches without automatic confirmation
+  ---
+  duration_ms: 0.303292
+  type: 'test'
+  ...
+# Subtest: verification validates complete evidence and rejects unsupported positive claims
+ok 20 - verification validates complete evidence and rejects unsupported positive claims
+  ---
+  duration_ms: 10.036291
+  type: 'test'
+  ...
+# Subtest: empty criteria, no evidence and unsupported linked files cannot appear complete
+ok 21 - empty criteria, no evidence and unsupported linked files cannot appear complete
+  ---
+  duration_ms: 17.404333
+  type: 'test'
+  ...
+# Subtest: preparation warnings survive omitted document prefixes and empty model limitations
+ok 22 - preparation warnings survive omitted document prefixes and empty model limitations
+  ---
+  duration_ms: 6.985792
+  type: 'test'
+  ...
+# Subtest: verification accepts complementary files but requires both cited sides of conflicts
+ok 23 - verification accepts complementary files but requires both cited sides of conflicts
+  ---
+  duration_ms: 0.64775
+  type: 'test'
+  ...
+# Subtest: unmet check needs a concrete gap and preserves incomplete status
+ok 24 - unmet check needs a concrete gap and preserves incomplete status
+  ---
+  duration_ms: 1.153166
+  type: 'test'
+  ...
+# Subtest: two partial documents can jointly support all explicit criteria
+ok 25 - two partial documents can jointly support all explicit criteria
+  ---
+  duration_ms: 0.346875
+  type: 'test'
+  ...
+# Subtest: task preparation refuses oversized combined input rather than truncating evidence
+ok 26 - task preparation refuses oversized combined input rather than truncating evidence
+  ---
+  duration_ms: 0.499459
+  type: 'test'
+  ...
+# Subtest: no linked documents still requires a reason for every criterion
+ok 27 - no linked documents still requires a reason for every criterion
+  ---
+  duration_ms: 1.183084
+  type: 'test'
+  ...
+# Subtest: citation limit reports an actionable diagnostic without weakening exact evidence validation
+ok 28 - citation limit reports an actionable diagnostic without weakening exact evidence validation
+  ---
+  duration_ms: 14.478375
+  type: 'test'
+  ...
+# Subtest: matching schema preserves opaque requirement IDs with version suffixes
+ok 29 - matching schema preserves opaque requirement IDs with version suffixes
+  ---
+  duration_ms: 1.076417
+  type: 'test'
+  ...
+# Subtest: one bounded call validates JSON and reports only safe usage
+ok 30 - one bounded call validates JSON and reports only safe usage
+  ---
+  duration_ms: 1.519125
+  type: 'test'
+  ...
+# Subtest: oversize input and pre-cancelled requests never call provider
+ok 31 - oversize input and pre-cancelled requests never call provider
+  ---
+  duration_ms: 0.696334
+  type: 'test'
+  ...
+# Subtest: timeout bounds an abort-ignoring transport without consuming late output
+ok 32 - timeout bounds an abort-ignoring transport without consuming late output
+  ---
+  duration_ms: 53.129417
+  type: 'test'
+  ...
+# Subtest: invalid JSON/output fails once without leaking source or repairing
+ok 33 - invalid JSON/output fails once without leaking source or repairing
+  ---
+  duration_ms: 3.147833
+  type: 'test'
+  ...
+# Subtest: retry policy respects Retry-After, exhausts attempts and blocks configuration
+ok 34 - retry policy respects Retry-After, exhausts attempts and blocks configuration
+  ---
+  duration_ms: 31.12125
+  type: 'test'
+  ...
+# Subtest: fenced worker authorizes, admits, commits and accounts in order
+ok 35 - fenced worker authorizes, admits, commits and accounts in order
+  ---
+  duration_ms: 0.671834
+  type: 'test'
+  ...
+# Subtest: denied dispatch never calls provider
+ok 36 - denied dispatch never calls provider
+  ---
+  duration_ms: 0.268417
+  type: 'test'
+  ...
+# Subtest: worker reserves the same conservative request bound used for dispatch
+ok 37 - worker reserves the same conservative request bound used for dispatch
+  ---
+  duration_ms: 4.132
+  type: 'test'
+  ...
+# Subtest: stale commit is discarded but provider usage is still accounted
+ok 38 - stale commit is discarded but provider usage is still accounted
+  ---
+  duration_ms: 1.321
+  type: 'test'
+  ...
+# Subtest: lost heartbeat prevents a late provider response from committing
+ok 39 - lost heartbeat prevents a late provider response from committing
+  ---
+  duration_ms: 5.228417
+  type: 'test'
+  ...
+# Subtest: shutdown is not recorded as user cancellation and malformed output accounts usage
+ok 40 - shutdown is not recorded as user cancellation and malformed output accounts usage
+  ---
+  duration_ms: 0.788291
+  type: 'test'
+  ...
+# Subtest: shared slot gives background its turn and ages old work
+ok 41 - shared slot gives background its turn and ages old work
+  ---
+  duration_ms: 0.7975
+  type: 'test'
+  ...
+# Subtest: unsupported linked file is an explicit Verify limitation, never silently omitted
+ok 42 - unsupported linked file is an explicit Verify limitation, never silently omitted
+  ---
+  duration_ms: 1.390917
+  type: 'test'
+  ...
+# Subtest: real CSV task preparation and provider validation compose for both job kinds
+ok 43 - real CSV task preparation and provider validation compose for both job kinds
+  ---
+  duration_ms: 4.037458
+  type: 'test'
+  ...
+# Subtest: phase telemetry failure cannot fail an otherwise valid analysis
+ok 44 - phase telemetry failure cannot fail an otherwise valid analysis
+  ---
+  duration_ms: 0.749458
+  type: 'test'
+  ...
+# Subtest: SDK structured output failures are classified without leaking response contents
+ok 45 - SDK structured output failures are classified without leaking response contents
+  ---
+  duration_ms: 0.339208
+  type: 'test'
+  ...
+# Subtest: prepared statement requests larger than 24 KB reach the provider
+ok 46 - prepared statement requests larger than 24 KB reach the provider
+  ---
+  duration_ms: 0.785834
+  type: 'test'
+  ...
+# Subtest: message accepts literal text but rejects identity injection and oversized input
+ok 47 - message accepts literal text but rejects identity injection and oversized input
+  ---
+  duration_ms: 2.385167
+  type: 'test'
+  ...
+# Subtest: message cursor preserves bigint precision and enforces bounded pages
+ok 48 - message cursor preserves bigint precision and enforces bounded pages
+  ---
+  duration_ms: 0.440042
+  type: 'test'
+  ...
+# Subtest: saved evidence without an assessment is not complete
+ok 49 - saved evidence without an assessment is not complete
+  ---
+  duration_ms: 0.207792
+  type: 'test'
+  ...
+# Subtest: current positive assessment exposes only scoped citations and allowlisted fields
+ok 50 - current positive assessment exposes only scoped citations and allowlisted fields
+  ---
+  duration_ms: 0.217333
+  type: 'test'
+  ...
+# Subtest: stale, pending and failed checks cannot leak old findings as current
+ok 51 - stale, pending and failed checks cannot leak old findings as current
+  ---
+  duration_ms: 0.13025
+  type: 'test'
+  ...
+# Subtest: coverage uncertainty overrides an optimistic summary
+ok 52 - coverage uncertainty overrides an optimistic summary
+  ---
+  duration_ms: 0.126667
+  type: 'test'
+  ...
+# Subtest: known unmet checks stay incomplete, distinct from technical uncertainty
+ok 53 - known unmet checks stay incomplete, distinct from technical uncertainty
+  ---
+  duration_ms: 0.105542
+  type: 'test'
+  ...
+# Subtest: malformed, incomplete criterion coverage or cross-file references fail closed
+ok 54 - malformed, incomplete criterion coverage or cross-file references fail closed
+  ---
+  duration_ms: 0.152208
+  type: 'test'
+  ...
+# Subtest: concision gate rejects a verbose checklist even when its factual review passes
+ok 55 - concision gate rejects a verbose checklist even when its factual review passes
+  ---
+  duration_ms: 0.568083
+  type: 'test'
+  ...
+# Subtest: shortness cannot compensate for ignoring the question, inventing actions, unsupported claims or repetition
+ok 56 - shortness cannot compensate for ignoring the question, inventing actions, unsupported claims or repetition
+  ---
+  duration_ms: 0.19275
+  type: 'test'
+  ...
+# Subtest: native evaluation exercises every case without leaking evaluator expectations
+ok 57 - native evaluation exercises every case without leaking evaluator expectations
+  ---
+  duration_ms: 578.526125
+  type: 'test'
+  ...
+# Subtest: inventory-only questions fail if delegated instead of answered
+ok 58 - inventory-only questions fail if delegated instead of answered
+  ---
+  duration_ms: 0.289375
+  type: 'test'
+  ...
+# Subtest: retrieval accepts only three explicit intents and rejects injected authority/sources
+ok 59 - retrieval accepts only three explicit intents and rejects injected authority/sources
+  ---
+  duration_ms: 1.09125
+  type: 'test'
+  ...
+# Subtest: requested explains recorded criteria/conditions and excludes lender-owned request inventory
+ok 60 - requested explains recorded criteria/conditions and excludes lender-owned request inventory
+  ---
+  duration_ms: 0.762916
+  type: 'test'
+  ...
+# Subtest: uploaded enumerates current files without treating save or association as approval
+ok 61 - uploaded enumerates current files without treating save or association as approval
+  ---
+  duration_ms: 0.127917
+  type: 'test'
+  ...
+# Subtest: missing never equates unlinked or pending evidence to a proven gap
+ok 62 - missing never equates unlinked or pending evidence to a proven gap
+  ---
+  duration_ms: 0.06425
+  type: 'test'
+  ...
+# Subtest: pending, unavailable and stale assessments suppress historical claims and evidence
+ok 63 - pending, unavailable and stale assessments suppress historical claims and evidence
+  ---
+  duration_ms: 0.354166
+  type: 'test'
+  ...
+# Subtest: current findings cite assessment revisions and immutable evidence with real locators
+ok 64 - current findings cite assessment revisions and immutable evidence with real locators
+  ---
+  duration_ms: 0.195334
+  type: 'test'
+  ...
+# Subtest: empty inventories disclose their scope without a readiness claim
+ok 65 - empty inventories disclose their scope without a readiness claim
+  ---
+  duration_ms: 0.109917
+  type: 'test'
+  ...
+# Subtest: delegation selector cannot inject trusted authority or request readiness
+ok 66 - delegation selector cannot inject trusted authority or request readiness
+  ---
+  duration_ms: 0.226166
+  type: 'test'
+  ...
+# Subtest: upload answer eval: answers inventory succinctly, with conditional next steps and no gap checklist
+ok 67 - upload answer eval: answers inventory succinctly, with conditional next steps and no gap checklist
+  ---
+  duration_ms: 0.784583
+  type: 'test'
+  ...
+# Subtest: conversation renders disconnected, simulated, pending and source-aware findings honestly
+ok 68 - conversation renders disconnected, simulated, pending and source-aware findings honestly
+  ---
+  duration_ms: 967.222042
+  type: 'test'
+  ...
+# Subtest: shared schemas hydrate exact revisions and summarize settled findings once
+ok 69 - shared schemas hydrate exact revisions and summarize settled findings once
+  ---
+  duration_ms: 130.804291
+  type: 'test'
+  ...
+# Subtest: invalidation needs no fabricated run and suppresses late current results
+ok 70 - invalidation needs no fabricated run and suppresses late current results
+  ---
+  duration_ms: 3.265833
+  type: 'test'
+  ...
+# Subtest: wrong scope, revision hydration and display anchor changes fail closed
+ok 71 - wrong scope, revision hydration and display anchor changes fail closed
+  ---
+  duration_ms: 8.224375
+  type: 'test'
+  ...
+# Subtest: question actions preserve assertions, reject stale input, and separate mapping confirmation
+ok 72 - question actions preserve assertions, reject stale input, and separate mapping confirmation
+  ---
+  duration_ms: 11.278875
+  type: 'test'
+  ...
+# Subtest: reconnect hydrates exact application completeness and pending question refs without replaying events
+ok 73 - reconnect hydrates exact application completeness and pending question refs without replaying events
+  ---
+  duration_ms: 5.21775
+  type: 'test'
+  ...
+# Subtest: all 12 admitted journeys and 4 overlays load with pinned sources and 54 boundaries
+ok 74 - all 12 admitted journeys and 4 overlays load with pinned sources and 54 boundaries
+  ---
+  duration_ms: 458.677
+  type: 'test'
+  ...
+# Subtest: native semantic scorer rejects missing/stale review, false states, irrelevant sources and fabricated quotes
+ok 75 - native semantic scorer rejects missing/stale review, false states, irrelevant sources and fabricated quotes
+  ---
+  duration_ms: 52.354708
+  type: 'test'
+  ...
+# Subtest: live dataset rejects holdouts and unbounded limits before database or provider access
+ok 76 - live dataset rejects holdouts and unbounded limits before database or provider access
+  ---
+  duration_ms: 1.063917
+  type: 'test'
+  ...
+# Subtest: live planner uses actual image parts and reserves before network; invalid action keeps accounted spend
+ok 77 - live planner uses actual image parts and reserves before network; invalid action keeps accounted spend
+  ---
+  duration_ms: 826.039709
+  type: 'test'
+  ...
+# Subtest: PDF native text preserves page locations and validated citations
+ok 78 - PDF native text preserves page locations and validated citations
+  ---
+  duration_ms: 2425.897042
+  type: 'test'
+  ...
+# Subtest: XLSX reads hidden sheets, preserves cell addresses, flags formulas rather than executing
+ok 79 - XLSX reads hidden sheets, preserves cell addresses, flags formulas rather than executing
+  ---
+  duration_ms: 808.922916
+  type: 'test'
+  ...
+# Subtest: PNG, JPEG, WebP and scanned PDF use local OCR with original source locations
+ok 80 - PNG, JPEG, WebP and scanned PDF use local OCR with original source locations
+  ---
+  duration_ms: 4427.697917
+  type: 'test'
+  ...
+# Subtest: blank image, oversized PDF, damaged file, bad hash, unsupported format and cancellation fail conservatively
+ok 81 - blank image, oversized PDF, damaged file, bad hash, unsupported format and cancellation fail conservatively
+  ---
+  duration_ms: 1671.426292
+  type: 'test'
+  ...
+# Subtest: Word paragraphs including headers, UTF-8 text, and EML headers/body/attachments are readable
+ok 82 - Word paragraphs including headers, UTF-8 text, and EML headers/body/attachments are readable
+  ---
+  duration_ms: 1749.037833
+  type: 'test'
+  ...
+# Subtest: each package family has a baseline and every unique required-evidence omission
+ok 83 - each package family has a baseline and every unique required-evidence omission
+  ---
+  duration_ms: 0.83375
+  type: 'test'
+  ...
+# Subtest: omission scorer rejects false completion, generic/negated reasons, and unrelated citations
+ok 84 - omission scorer rejects false completion, generic/negated reasons, and unrelated citations
+  ---
+  duration_ms: 1.18275
+  type: 'test'
+  ...
+# Subtest: fixtures do not leak expected labels or withheld source prose through prompts
+ok 85 - fixtures do not leak expected labels or withheld source prose through prompts
+  ---
+  duration_ms: 2.802542
+  type: 'test'
+  ...
+# Subtest: missing reason screen accepts useful paraphrases and sends ambiguous prose to review
+ok 86 - missing reason screen accepts useful paraphrases and sends ambiguous prose to review
+  ---
+  duration_ms: 0.534459
+  type: 'test'
+  ...
+# Subtest: mixed and negated explanations require semantic review
+ok 87 - mixed and negated explanations require semantic review
+  ---
+  duration_ms: 0.148458
+  type: 'test'
+  ...
+# Subtest: duplicate evidence can satisfy its own component but cannot substitute another
+ok 88 - duplicate evidence can satisfy its own component but cannot substitute another
+  ---
+  duration_ms: 0.535792
+  type: 'test'
+  ...
+# Subtest: matching scorer rejects false met even with correct relevance
+ok 89 - matching scorer rejects false met even with correct relevance
+  ---
+  duration_ms: 0.792333
+  type: 'test'
+  ...
+# Subtest: conflict scorer accepts defensible uncertainty but rejects unsupported absence
+ok 90 - conflict scorer accepts defensible uncertainty but rejects unsupported absence
+  ---
+  duration_ms: 23.812458
+  type: 'test'
+  ...
+# Subtest: native Mastra tool, eval score, redacted trace, error and durable parent survive reopen
+ok 91 - native Mastra tool, eval score, redacted trace, error and durable parent survive reopen
+  ---
+  duration_ms: 1134.677167
+  type: 'test'
+  ...
+# Subtest: required native scorer rejects omitted, duplicated, failed and incomplete checks
+ok 92 - required native scorer rejects omitted, duplicated, failed and incomplete checks
+  ---
+  duration_ms: 3.362042
+  type: 'test'
+  ...
+# Subtest: native workflow harness records per-case failure instead of averaging or skipping
+ok 93 - native workflow harness records per-case failure instead of averaging or skipping
+  ---
+  duration_ms: 232.173333
+  type: 'test'
+  ...
+# Subtest: reader scope cannot disappear; informational notices do not block
+ok 94 - reader scope cannot disappear; informational notices do not block
+  ---
+  duration_ms: 2.293167
+  type: 'test'
+  ...
+# Subtest: selective visual inspection resolves OCR uncertainty only on the same version and page
+ok 95 - selective visual inspection resolves OCR uncertainty only on the same version and page
+  ---
+  duration_ms: 0.246625
+  type: 'test'
+  ...
+# Subtest: failed reads preserve uncertainty until usable evidence is available
+ok 96 - failed reads preserve uncertainty until usable evidence is available
+  ---
+  duration_ms: 0.080375
+  type: 'test'
+  ...
+# Subtest: F17: mandatory criterion findings determine full, partial and unfulfilled assessments
+ok 97 - F17: mandatory criterion findings determine full, partial and unfulfilled assessments
+  ---
+  duration_ms: 0.556791
+  type: 'test'
+  ...
+# Subtest: F17: missing criteria, unknowns, contradictory gaps and incomplete processing cannot appear fulfilled
+ok 98 - F17: missing criteria, unknowns, contradictory gaps and incomplete processing cannot appear fulfilled
+  ---
+  duration_ms: 0.09675
+  type: 'test'
+  ...
+# Subtest: validates pictures by decoded content, including JPEG extension alias
+ok 99 - validates pictures by decoded content, including JPEG extension alias
+  ---
+  duration_ms: 144.596375
+  type: 'test'
+  ...
+# Subtest: metrics distinguish waiting, phase samples, pending jobs, retries and unknown charges
+ok 100 - metrics distinguish waiting, phase samples, pending jobs, retries and unknown charges
+  ---
+  duration_ms: 1.525417
+  type: 'test'
+  ...
+# Subtest: exports defend spreadsheet formulas and do not export evidence
+ok 101 - exports defend spreadsheet formulas and do not export evidence
+  ---
+  duration_ms: 0.276
+  type: 'test'
+  ...
+# Subtest: metrics authorization precedes DB reads; invalid filters and downloads are handled safely
+ok 102 - metrics authorization precedes DB reads; invalid filters and downloads are handled safely
+  ---
+  duration_ms: 41.501792
+  type: 'test'
+  ...
+# Subtest: both agents register native tools and Mastra executes the durable handler
+ok 103 - both agents register native tools and Mastra executes the durable handler
+  ---
+  duration_ms: 412.015167
+  type: 'test'
+  ...
+# Subtest: investigation receives goal/scope and executes native selective reading
+ok 104 - investigation receives goal/scope and executes native selective reading
+  ---
+  duration_ms: 29.637916
+  type: 'test'
+  ...
+# Subtest: native tools propagate backend rejection instead of inventing a successful action
+ok 105 - native tools propagate backend rejection instead of inventing a successful action
+  ---
+  duration_ms: 18.857375
+  type: 'test'
+  ...
+# Subtest: a confirmed generation with no tool keeps its known cost
+ok 106 - a confirmed generation with no tool keeps its known cost
+  ---
+  duration_ms: 0.699458
+  type: 'test'
+  ...
+# Subtest: a provider failure remains an unknown outcome rather than a known tool charge
+ok 107 - a provider failure remains an unknown outcome rather than a known tool charge
+  ---
+  duration_ms: 0.315834
+  type: 'test'
+  ...
+# Subtest: MSG upload validates and extracts Unicode headers/plain body with source locations
+ok 108 - MSG upload validates and extracts Unicode headers/plain body with source locations
+  ---
+  duration_ms: 1132.5845
+  type: 'test'
+  ...
+# Subtest: MSG HTML is text-only and attachment contents are not silently treated as reviewed
+ok 109 - MSG HTML is text-only and attachment contents are not silently treated as reviewed
+  ---
+  duration_ms: 470.306083
+  type: 'test'
+  ...
+# Subtest: MSG RTF-only evidence remains unknown; damaged files and non-email containers are rejected
+ok 110 - MSG RTF-only evidence remains unknown; damaged files and non-email containers are rejected
+  ---
+  duration_ms: 1708.707834
+  type: 'test'
+  ...
+# Subtest: package completeness requires all current criteria and supporting citations
+ok 111 - package completeness requires all current criteria and supporting citations
+  ---
+  duration_ms: 1.116
+  type: 'test'
+  ...
+# Subtest: PDF upload accepts no-password encrypted evidence without rewriting it
+ok 112 - PDF upload accepts no-password encrypted evidence without rewriting it
+  ---
+  duration_ms: 3359.74725
+  type: 'test'
+  ...
+# Subtest: PDF upload still rejects a password-required encrypted document
+ok 113 - PDF upload still rejects a password-required encrypted document
+  ---
+  duration_ms: 1265.286667
+  type: 'test'
+  ...
+# Subtest: batch cap is atomic within cumulative ledger and unknown costs stay reserved
+ok 114 - batch cap is atomic within cumulative ledger and unknown costs stay reserved
+  ---
+  duration_ms: 44.630875
+  type: 'test'
+  ...
+# Subtest: Excel evidence handles blank merges and cites populated masters once without losing zero values
+ok 115 - Excel evidence handles blank merges and cites populated masters once without losing zero values
+  ---
+  duration_ms: 1580.411375
+  type: 'test'
+  ...
+# Subtest: selective evidence tools support Word, Excel, TXT, CSV, EML and MSG with source locations
+ok 116 - selective evidence tools support Word, Excel, TXT, CSV, EML and MSG with source locations
+  ---
+  duration_ms: 6167.753292
+  type: 'test'
+  ...
+# Subtest: PDF late-page search and selective image/OCR inspect only requested pages
+ok 117 - PDF late-page search and selective image/OCR inspect only requested pages
+  ---
+  duration_ms: 3619.926333
+  type: 'test'
+  ...
+# Subtest: PREP-01 bytes, independent fact locators, duplicate identity and long/scan variants
+ok 118 - PREP-01 bytes, independent fact locators, duplicate identity and long/scan variants
+  ---
+  duration_ms: 1746.896208
+  type: 'test'
+  ...
+# Subtest: C0–C5 simulated ledger matches independent oracle; no fixed tool ordering
+ok 119 - C0–C5 simulated ledger matches independent oracle; no fixed tool ordering
+  ---
+  duration_ms: 16.561083
+  type: 'test'
+  ...
+# Subtest: citation, complete-ledger, removal and unknown policy guardrails
+ok 120 - citation, complete-ledger, removal and unknown policy guardrails
+  ---
+  duration_ms: 1.342084
+  type: 'test'
+  ...
+# Subtest: shared protocol distinguishes revisions, invalidation and readiness scope
+ok 121 - shared protocol distinguishes revisions, invalidation and readiness scope
+  ---
+  duration_ms: 12.81775
+  type: 'test'
+  ...
+# Subtest: isolated PDF reader accepts a valid PDF above 20 MiB and preserves the 25 MiB bound
+ok 122 - isolated PDF reader accepts a valid PDF above 20 MiB and preserves the 25 MiB bound
+  ---
+  duration_ms: 2567.455375
+  type: 'test'
+  ...
+# Subtest: actual PDF reader selects pages beyond page 12 and exposes scan images without inventing OCR
+ok 123 - actual PDF reader selects pages beyond page 12 and exposes scan images without inventing OCR
+  ---
+  duration_ms: 966.50625
+  type: 'test'
+  ...
+# (node:42549) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: lender reviews persist, preserve history, share feedback, and new uploads require review
+ok 124 - lender reviews persist, preserve history, share feedback, and new uploads require review
+  ---
+  duration_ms: 34.34475
+  type: 'test'
+  ...
+# Subtest: an unchanged file set cannot resurrect a revision-invalidated acceptance
+ok 125 - an unchanged file set cannot resurrect a revision-invalidated acceptance
+  ---
+  duration_ms: 0.24925
+  type: 'test'
+  ...
+# Subtest: recovery accepts only exact correlated, known provider costs
+ok 126 - recovery accepts only exact correlated, known provider costs
+  ---
+  duration_ms: 1.278375
+  type: 'test'
+  ...
+# Subtest: reconciliation preserves $5 cap, charges actual costs, and releases only fully accounted reservations
+ok 127 - reconciliation preserves $5 cap, charges actual costs, and releases only fully accounted reservations
+  ---
+  duration_ms: 1.390209
+  type: 'test'
+  ...
+# Subtest: retire only failed event reactions with matching investigation scope, preserving user intents
+ok 128 - retire only failed event reactions with matching investigation scope, preserving user intents
+  ---
+  duration_ms: 0.6085
+  type: 'test'
+  ...
+# Subtest: second resume preserves total call and spend bounds, and rejects unsettled cost
+ok 129 - second resume preserves total call and spend bounds, and rejects unsettled cost
+  ---
+  duration_ms: 0.360125
+  type: 'test'
+  ...
+# Subtest: duplicate retirement requires reviewed intent and exact evidence/requirement/authority scope
+ok 130 - duplicate retirement requires reviewed intent and exact evidence/requirement/authority scope
+  ---
+  duration_ms: 50.048375
+  type: 'test'
+  ...
+# (node:42554) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: real file bytes and relational records survive a database reopen; duplicates leave no new record
+ok 131 - real file bytes and relational records survive a database reopen; duplicates leave no new record
+  ---
+  duration_ms: 35.912792
+  type: 'test'
+  ...
+# Subtest: all three supported formats are structurally validated
+ok 132 - all three supported formats are structurally validated
+  ---
+  duration_ms: 19.991667
+  type: 'test'
+  ...
+# Subtest: empty, unsupported, oversized, corrupt, protected and inconsistent files give recoverable errors
+ok 133 - empty, unsupported, oversized, corrupt, protected and inconsistent files give recoverable errors
+  ---
+  duration_ms: 2.204958
+  type: 'test'
+  ...
+# Subtest: database failure removes newly stored blob; storage failure creates no metadata
+ok 134 - database failure removes newly stored blob; storage failure creates no metadata
+  ---
+  duration_ms: 10.288792
+  type: 'test'
+  ...
+# Subtest: local guards and bounded multipart parsing reject foreign origins and oversized bodies
+ok 135 - local guards and bounded multipart parsing reject foreign origins and oversized bodies
+  ---
+  duration_ms: 89.874416
+  type: 'test'
+  ...
+# Subtest: native Studio exposes agent configs and traces but cannot bypass the metered controller
+ok 136 - native Studio exposes agent configs and traces but cannot bypass the metered controller
+  ---
+  duration_ms: 6185.058583
+  type: 'test'
+  ...
+1..136
+# tests 136
+# suites 0
+# pass 136
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 15888.659833
+
+>>> TypeScript: npm run typecheck
+
+> proximity-borrower-portal@0.1.0 typecheck
+> tsc --noEmit
+
+
+PASS: quick checks only; build/integration checks not run. Browser verification is still required: docs/TESTING.md

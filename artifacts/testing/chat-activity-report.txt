@@ -1,0 +1,6 @@
+Candidate: dirty shared workspace, exact source SHA256 manifest in chat-stable-pilot-handoff.json.
+Automated: PASS npm run test:agent (131 tests and TypeScript); PASS npm run test:borrower-agents (disposable local schema, simulated model, no paid calls). Native test verifies real reader running stage, completed/failed history, unauthorized denial, expired-lease failure, durable reload.
+Browser: UI quality and changed behavior PASS within synthetic component fixture at 1280x900 / 390x844; Activity expand/collapse, wrapping, compact composer and no console errors. Screenshots chat-activity-desktop.png and chat-activity-mobile.png.
+Other browser checklist items (sign-in/access, navigation, upload persistence, validation/recovery, organization, submission/lender review, live AI): NOT RUN here. Deployment owner owns final integrated browser checks and full build.
+Changes: concise composer and removed taglines/private label; durable stage labels/history; existing validated final reply behavior unchanged. Progress uses existing 3-second authorized polling; it is not token streaming.
+Additive migration 024 must run before new portal/worker. No changes to existing pilot data, budgets or live runtime by this chat. Stable deployment remains owned by Integrated borrower platform deployment.

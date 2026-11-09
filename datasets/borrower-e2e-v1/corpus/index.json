@@ -1,0 +1,101 @@
+{
+  "cases": [
+    {
+      "caseId": "D01",
+      "checkpoints": 3,
+      "documents": 9,
+      "layout": "plain",
+      "mode": "gradual",
+      "split": "development"
+    },
+    {
+      "caseId": "D02",
+      "checkpoints": 3,
+      "documents": 11,
+      "layout": "plain",
+      "mode": "bank_gap",
+      "split": "development"
+    },
+    {
+      "caseId": "D03",
+      "checkpoints": 3,
+      "documents": 10,
+      "layout": "plain",
+      "mode": "amendment",
+      "split": "development"
+    },
+    {
+      "caseId": "D04",
+      "checkpoints": 3,
+      "documents": 10,
+      "layout": "plain",
+      "mode": "wrong_entity",
+      "split": "development"
+    },
+    {
+      "caseId": "D05",
+      "checkpoints": 3,
+      "documents": 11,
+      "layout": "plain",
+      "mode": "wrong_period",
+      "split": "development"
+    },
+    {
+      "caseId": "D06",
+      "checkpoints": 3,
+      "documents": 9,
+      "layout": "plain",
+      "mode": "long",
+      "split": "development"
+    },
+    {
+      "caseId": "D07",
+      "checkpoints": 3,
+      "documents": 10,
+      "layout": "plain",
+      "mode": "scan",
+      "split": "development"
+    },
+    {
+      "caseId": "D08",
+      "checkpoints": 3,
+      "documents": 10,
+      "layout": "plain",
+      "mode": "authority",
+      "split": "development"
+    },
+    {
+      "caseId": "H01",
+      "checkpoints": 3,
+      "documents": 10,
+      "layout": "ledger",
+      "mode": "merged",
+      "split": "holdout"
+    },
+    {
+      "caseId": "H02",
+      "checkpoints": 3,
+      "documents": 10,
+      "layout": "folio",
+      "mode": "quarter",
+      "split": "holdout"
+    },
+    {
+      "caseId": "H03",
+      "checkpoints": 3,
+      "documents": 11,
+      "layout": "cards",
+      "mode": "two_amendments",
+      "split": "holdout"
+    },
+    {
+      "caseId": "H04",
+      "checkpoints": 3,
+      "documents": 10,
+      "layout": "memo",
+      "mode": "conflict_long",
+      "split": "holdout"
+    }
+  ],
+  "version": "1.0.0"
+}

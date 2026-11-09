@@ -1,0 +1,203 @@
+{
+  "results": [
+    {
+      "w": 1280,
+      "h": 720,
+      "before": {
+        "outerHeight": 720,
+        "outerWidth": 1280,
+        "viewportHeight": 720,
+        "viewportWidth": 1280,
+        "panel": {
+          "x": 301,
+          "y": 246.96875,
+          "width": 954,
+          "height": 396.03125
+        },
+        "iframe": {
+          "x": 313,
+          "y": 290.0625,
+          "width": 930,
+          "height": 340.9375
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 60
+        }
+      },
+      "after": {
+        "outerHeight": 720,
+        "outerWidth": 1280,
+        "viewportHeight": 720,
+        "viewportWidth": 1280,
+        "panel": {
+          "x": 301,
+          "y": 267,
+          "width": 954,
+          "height": 440
+        },
+        "iframe": {
+          "x": 309,
+          "y": 306.09375,
+          "width": 938,
+          "height": 392.90625
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 60
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "before": {
+        "outerHeight": 900,
+        "outerWidth": 1440,
+        "viewportHeight": 900,
+        "viewportWidth": 1440,
+        "panel": {
+          "x": 301,
+          "y": 224.578125,
+          "width": 1114,
+          "height": 598.421875
+        },
+        "iframe": {
+          "x": 313,
+          "y": 267.671875,
+          "width": 1090,
+          "height": 543.328125
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 60
+        }
+      },
+      "after": {
+        "outerHeight": 900,
+        "outerWidth": 1440,
+        "viewportHeight": 900,
+        "viewportWidth": 1440,
+        "panel": {
+          "x": 301,
+          "y": 267,
+          "width": 1114,
+          "height": 620
+        },
+        "iframe": {
+          "x": 309,
+          "y": 306.09375,
+          "width": 1098,
+          "height": 572.90625
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 60
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "after": {
+        "outerHeight": 1594,
+        "outerWidth": 390,
+        "viewportHeight": 844,
+        "viewportWidth": 390,
+        "panel": {
+          "x": 21,
+          "y": 741.765625,
+          "width": 348,
+          "height": 619.171875
+        },
+        "iframe": {
+          "x": 39,
+          "y": 836.546875,
+          "width": 312,
+          "height": 506.390625
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 99.390625
+        }
+      }
+    },
+    {
+      "w": 320,
+      "h": 740,
+      "after": {
+        "outerHeight": 1626,
+        "outerWidth": 320,
+        "viewportHeight": 740,
+        "viewportWidth": 320,
+        "panel": {
+          "x": 21,
+          "y": 835.5625,
+          "width": 278,
+          "height": 556.78125
+        },
+        "iframe": {
+          "x": 39,
+          "y": 930.34375,
+          "width": 242,
+          "height": 444
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 141.1875
+        }
+      }
+    },
+    {
+      "w": 640,
+      "h": 360,
+      "after": {
+        "outerHeight": 1421,
+        "outerWidth": 640,
+        "viewportHeight": 360,
+        "viewportWidth": 640,
+        "panel": {
+          "x": 21,
+          "y": 741.765625,
+          "width": 598,
+          "height": 446.390625
+        },
+        "iframe": {
+          "x": 39,
+          "y": 810.15625,
+          "width": 562,
+          "height": 360
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 640,
+          "height": 99.390625
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "picker bounds",
+    "next/previous",
+    "scoped draft persistence",
+    "modal Back/Escape",
+    "no manual AI controls",
+    "no submission state",
+    "no horizontal overflow",
+    "desktop no outer scroll"
+  ]
+}

@@ -1,0 +1,24 @@
+Recorded: 2026-11-08T04:58:57.249797+00:00
+Candidate: 144f5a8c6ba43bc9dfbeca0fac2eaf690bf2037e + dirty workspace; unrelated work preserved.
+Scope: requested/uploaded/missing deterministic retrieval, persistent question/answer, authorized source resolver, stale snapshot fencing, feature-gated question/history UI. No model or readiness work.
+Automated: npm run test:agent PASS (90 unit tests + TypeScript) in an isolated view with identical source inodes and the existing release dependency tree. Verified package-lock bytes and dependency declarations matched. This uses the prior workaround for workspace dependency reads; no dependency replacements.
+Database: npm run test:chat-integration PASS in disposable schemas only. Verifies concurrent idempotent answers, conflicting keys, persisted history, sources, cross-application/wrong-role/revoked access, stale replay/source rejection, pagination and zero retrieval-caused job dispatch. Existing upload/context integration remains passing.
+Full: npm run test:agent -- --full BLOCKED by active port 3001 preview; no restart attempted.
+Browser checklist: sign-in/access, navigation, upload/persistence, recovery, organization, submission, AI behavior, mobile/desktop/keyboard quality and changed retrieval behavior all NOT RUN against this candidate. HTTP/build checks NOT RUN. No visual/UI verification claimed.
+Enablement: migration 019 and prior pending migrations must be applied in a coordinated window before BORROWER_GROUNDED_RETRIEVAL=1. Flag defaults off. No shared data migration, provider call, commit or deployment.
+Limits: three explicit intents only; current draft files only; entire snapshot changes conservatively invalidate old answers. Historical JSON is retained but withheld from current answers and source resolution. Existing validated record/column citations are reused; no new byte-reading or entailment verification claimed.
+Result: verified backend/static scope; release/UI acceptance remains pending coordinated full/browser checks.
+
+Candidate source SHA-256:
+0cc7eaa7f29208a328bb4b3d2908c8c0dab6e9c7f2c89f473a00d92eea4996ca  lib/borrower-chat/context.ts
+abf2d8ddfe0cd3bfcff36eeb83e6b4e1ae6e6f4354a2bf7a76c101e51b04db03  lib/borrower-chat/contracts.ts
+6472d757bcfba78ec4c9c40d248909fd5a7f80936ecabc428ad03ef14983b41b  lib/borrower-chat/repository.ts
+ec80ee938b5ce98326988cfbe22ba932fec2cad39327919f2635a2e423f1e8e5  lib/borrower-chat/retrieval.ts
+36aaa938b090feb82bf8a6ae61919c3c71dd035241a7b4a227625c9eba58ad64  lib/borrower-chat/answers.ts
+64c8841ec6776c789d7b5f77d7f5fcefcf38b3bba7beb876f528a0ec0db1b866  migrations/postgres/019_grounded_answers.sql
+7962c2f6f85dfb12e17885eacd30ab5c2c67e6ae56423e8bec9425094a2f3304  app/api/applications/[id]/conversation/answers/route.ts
+c0ccb4e77e0f7e5ca13aaf78104bdea8247a1ff2e3f624657263d1879cf8800e  app/components/conversation-answers.tsx
+4778795c049ed48b343c4d04e5e428afcdb862d6a739c4dfee5da5793d9fc8c6  app/components/borrower-portal.tsx
+80c373802b6078ba82428ed4be9bc057fb6e87e666ed8773d141f96f9415272e  app/borrower/[applicationId]/page.tsx
+9d96d1f8c405877fa652eae59dc3ae5b6bf70a1de8b7c01996da8bbfacb20b72  tests/borrower-retrieval.test.ts
+a2d7c1ab64e8b60a862a1c615fa866853fc89d184149f636b378638452527548  tests/borrower-chat.integration.ts

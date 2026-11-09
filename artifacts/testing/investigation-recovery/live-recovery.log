@@ -1,0 +1,6 @@
+{"starting":"1481616c-346b-47b8-9ba1-148a8be20ef6"}
+{"finished":{"id":"1481616c-346b-47b8-9ba1-148a8be20ef6","state":"waiting_input","spent_micros":"8553"},"budget":{"limitMicros":20000000,"accountedMicros":34138,"knownMicros":34138,"heldMicros":0,"calls":19}}
+{"starting":"40899326-38e2-4e2e-81e5-fe63eb412ecd"}
+{"finished":{"id":"40899326-38e2-4e2e-81e5-fe63eb412ecd","state":"waiting_input","spent_micros":"6885"},"budget":{"limitMicros":20000000,"accountedMicros":39357,"knownMicros":39357,"heldMicros":0,"calls":22}}
+{"starting":"9693e6a8-6810-4b5f-a568-0947f39fa324"}
+{"finished":{"id":"9693e6a8-6810-4b5f-a568-0947f39fa324","state":"waiting_input","spent_micros":"5921"},"budget":{"limitMicros":20000000,"accountedMicros":43597,"knownMicros":43597,"heldMicros":0,"calls":25}}

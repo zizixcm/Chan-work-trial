@@ -1,0 +1,32 @@
+{
+  "caseId": "heldout-saved",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "You have 1 saved file in your application for Elm Center:\n\n* **Elm lease.pdf**\n\nPlease note that a file being saved does not equate to lender review or approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements are grounded in the inventory facts, and the note clarifies policy without claiming an unverified review status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly identifies 'Elm lease.pdf' as the saved document in the application."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No inappropriate or premature next steps are pushed."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no repetitive content."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 29,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6872,
+  "elapsedMs": 10425
+}

@@ -1,0 +1,101 @@
+{
+  "caseId": "BATCH-04",
+  "title": "Obscured execution page remains unknown",
+  "reviewer": "coordinating chat, independent actual-output and gold review",
+  "artifact": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v2/artifacts/testing/batch-live-04-r1/report.json",
+  "overallPassed": false,
+  "nativeReview": {
+    "provenance": "evaluator",
+    "status": "complete",
+    "checks": [
+      {
+        "id": "file_identity",
+        "passed": true
+      },
+      {
+        "id": "readability_grounded",
+        "passed": true
+      },
+      {
+        "id": "mapping_grounded",
+        "passed": true
+      },
+      {
+        "id": "document_errors_grounded",
+        "passed": true
+      },
+      {
+        "id": "all_files_covered",
+        "passed": true
+      },
+      {
+        "id": "all_requirements_covered",
+        "passed": true
+      },
+      {
+        "id": "saved_not_missing",
+        "passed": false
+      },
+      {
+        "id": "unknown_not_fulfilled",
+        "passed": true
+      },
+      {
+        "id": "partial_not_complete",
+        "passed": true
+      },
+      {
+        "id": "no_internal_ids",
+        "passed": true
+      },
+      {
+        "id": "no_approval_claim",
+        "passed": true
+      },
+      {
+        "id": "citations_valid",
+        "passed": true
+      },
+      {
+        "id": "completed_requirement_checkmark",
+        "passed": true
+      }
+    ]
+  },
+  "nativeReviewScope": "Only named checks; not a full semantic pass. Supplemental next-step and gold-state checks below remain independently binding. Citation references accepted by unchanged backend validator; semantic support reviewed against private gold.",
+  "nextStepsVerdict": "incorrect correction request",
+  "supplementalNextStepsPassed": false,
+  "goldStateMismatches": [
+    {
+      "criterion": "R2.leases",
+      "expected": "unknown",
+      "actual": "unmet",
+      "explanation": "Executed lease provided for unit 101, but unit 102 lease is obscured."
+    }
+  ],
+  "notes": [
+    "Correctly detects partly readable lease with obscured page2 and preserves valid roll/operating evidence.",
+    "Lease criterion wrongly unmet instead of unknown; saved Unit102 lease called missing.",
+    "Requests complete executed Unit102 lease instead of clearer copy of obscured page2."
+  ],
+  "durableAcknowledgementSeconds": 3.593,
+  "controllerCompletionSeconds": 54.673,
+  "finalReplyCommitSeconds": 54.646,
+  "reportCeilingSeconds": 20,
+  "latencyPassed": false,
+  "modelCalls": 5,
+  "costUSD": 0.06256,
+  "browserTimingMeasured": false,
+  "actualFinalReply": "The investigation of your uploaded files is complete. Here is what they established and what remains needed:\n\n### Upload Findings\n* **`f9c8235aa530d.pdf`**: Satisfies the rent roll requirement for Garnet Walk as of 2026-09-30.\n* **`f388078a12c6b.pdf` & `fe5a03a9509f0.pdf`**: Provide actual accrual operating results for 2025 (2025-01-01 through 2025-12-31) and 2026 year-to-date (2026-01-01 through 2026-09-30). However, full contractual rent reconciliation remains pending verification against the unit 102 lease.\n* **`f5bd96f6fb9cb.pdf`**: Confirms the executed lease for Unit 101, but page 2 is obscured, leaving the Unit 102 lease unreadable and unverified.\n\n---\n\n### Requirement Status\n\n* \u2705 **Current rent roll**: Fully satisfied by your rent roll dated 2026-09-30.\n* **Leases and applicable amendments**: Partially supported. Your declaration confirms no lease amendments exist, and Unit 101 is verified. A legible executed copy of the lease for Unit 102 is still required.\n* **Property operating statements**: Partially supported. Operating figures for 2025 and 2026 YTD are supplied, but full contractual rent reconciliation requires the missing Unit 102 lease.\n* **Borrower bank statements**: Outstanding. Complete monthly bank statements for account ending in 7419 are required for July 2026, August 2026, and September 2026.\n* **Entity ownership and signing authority**: Outstanding. A formation certificate and operating agreement for Garnet Walk Holdings LLC verifying 100% ownership and manager/signing authority are required.\n\n---\n\n### Next Steps\n1. Upload a complete, legible executed lease for **Unit 102**.\n2. Upload complete bank statements for **account ending in 7419** covering **July, August, and September 2026**.\n3. Upload the **Certificate of Formation** and **Operating Agreement** for **Garnet Walk Holdings LLC**.",
+  "costAttribution": {
+    "source": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v2/artifacts/testing/batch-live-04-r1/case-cost.json",
+    "callIds": [
+      "c73a1b23-e56f-47a2-84ce-2979b26e93e9",
+      "f7ae53ad-e51c-423d-8681-97e678b0d76d",
+      "9da53fc8-7f1b-4f9b-a098-fa38e9fba4bc",
+      "46ceb373-17f4-49ea-97e3-36efb339ec0f",
+      "a6e4a9fa-3e2f-4263-92dc-edd8c7e2cd1d"
+    ],
+    "heldMicros": 0
+  }
+}

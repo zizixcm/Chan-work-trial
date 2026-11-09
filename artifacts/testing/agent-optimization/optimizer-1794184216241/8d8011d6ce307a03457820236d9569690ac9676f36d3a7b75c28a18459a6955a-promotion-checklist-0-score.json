@@ -1,0 +1,32 @@
+{
+  "caseId": "promotion-checklist",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "You currently need to upload the following document:\n\n* **Rent roll**: Current rent roll for Example Plaza\n\nPlease upload a current copy of your rent roll to get started."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately identifies the required current rent roll for Example Plaza from the inventory requirements without inventing facts or review statuses."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers what document needs to be uploaded by specifying the current rent roll."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response provides clear, appropriate next steps asking the user to upload a current copy of the rent roll."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 29,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 4239,
+  "elapsedMs": 6601
+}

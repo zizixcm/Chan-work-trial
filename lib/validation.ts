@@ -1,6 +1,6 @@
 import {wordParts,plainText} from './analysis/readers/office-text';
 import sharp from "sharp";
-import { PDFDocument } from "pdf-lib";
+import { PDFDocument, EncryptedPDFError } from "pdf-lib";
 import { unzipSync } from "fflate";
 import Papa from "papaparse";
 import { XMLValidator } from "fast-xml-parser";
@@ -81,9 +81,23 @@ export async function validateFile(
         "This does not appear to be a PDF. Export a new PDF and try again.",
       );
     try {
-      const pdf = await PDFDocument.load(bytes, { throwOnInvalidObject: true });
-      if (pdf.isEncrypted || pdf.getPageCount() < 1)
-        throw new Error("Encrypted or empty");
+      try {
+        const pdf = await PDFDocument.load(bytes, { throwOnInvalidObject: true });
+        if (pdf.isEncrypted || pdf.getPageCount() < 1)
+          throw new Error("Encrypted or empty");
+      } catch (error) {
+        // pdf-lib's compiled Error subclass does not preserve instanceof.
+        if (!(error instanceof Error) || error.message !== new EncryptedPDFError().message) throw error;
+        // Some bank PDFs restrict editing but open with no password. Prove
+        // readability through the bounded, credential-free reader; never use
+        // ignoreEncryption or supply/guess a password. Keep original bytes.
+        const {DocumentEvidenceTools} = await import('./preparation/evidence-tools');
+        const {createHash} = await import('node:crypto');
+        const result = await new DocumentEvidenceTools().inspect(
+          bytes, 'upload-pdf-validation', createHash('sha256').update(bytes).digest('hex'),
+        );
+        if(result.pageCount < 1) throw new Error('Empty PDF');
+      }
     } catch {
       throw new UploadError(
         "This PDF is damaged, empty, or password-protected. Open it locally and export an unlocked PDF.",

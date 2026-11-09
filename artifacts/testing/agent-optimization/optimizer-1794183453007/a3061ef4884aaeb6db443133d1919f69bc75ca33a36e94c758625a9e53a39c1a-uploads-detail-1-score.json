@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-detail",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "Here are the files currently saved:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nSaving a file does not mean lender approval. It confirms that the document has been uploaded and stored, but the lender still needs to review it against your loan requirements."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All factual statements are supported by the inventory. The explanation of saving vs. lender approval accurately states policy without claiming an unverified review status for specific files."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response lists both uploaded files by name and clearly explains that saving a file does not constitute lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response provides the requested information clearly without fabricating or imposing unauthorized next steps."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 43,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 8051,
+  "elapsedMs": 13381
+}

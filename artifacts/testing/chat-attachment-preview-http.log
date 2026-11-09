@@ -1,0 +1,5 @@
+
+> proximity-borrower-portal@0.1.0 test:integration
+> tsx tests/http.integration.ts
+
+PASS: HTTP upload and exact-byte download for PDF/XLSX/CSV/JPG/PNG/WebP, duplicate/invalid/empty/oversize/origin rejection, persisted state across full server restart, recoverable missing-file response, scoped borrower link/unlink, application listing/isolation, submission publication and draft URL denial, idempotent/stale sends, frozen reviews, shared-file/receipt preservation and stale-review invalidation.

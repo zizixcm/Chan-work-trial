@@ -1,0 +1,86 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "f13c2af39b8a4",
+    "f01da45a39edc",
+    "f09524dc31cd0",
+    "f768ba10c4c5f",
+    "fb11105d8fc0c",
+    "f75a8d5130dde",
+    "f2e07f9bf42c9",
+    "f9313bb961834",
+    "f610681203a7d"
+  ],
+  "budgetInterrupt": {
+    "eligible": true,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7402",
+    "baseRents": [
+      2622,
+      2862
+    ],
+    "borrower": "Fable Yard Holdings LLC",
+    "currentRents": [
+      2622,
+      2862
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 0,
+    "manager": "Zena Tor",
+    "otherOwner": "Bram Uli",
+    "property": "Fable Yard",
+    "tenants": [
+      "Fable Studio",
+      "Fable Supply"
+    ],
+    "units": [
+      "101",
+      "102"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 2 units occupied by the tenants listed; only account ending 7402 is requested. There are 0 lease amendments and 0 entity amendments.",
+      "uploadIds": [
+        "f13c2af39b8a4",
+        "f09524dc31cd0"
+      ]
+    },
+    {
+      "borrowerText": "Here are leases, current results and statements.",
+      "uploadIds": [
+        "f01da45a39edc",
+        "f768ba10c4c5f",
+        "fb11105d8fc0c",
+        "f75a8d5130dde",
+        "f2e07f9bf42c9"
+      ]
+    },
+    {
+      "borrowerText": "Here is the company file.",
+      "uploadIds": [
+        "f9313bb961834",
+        "f610681203a7d"
+      ]
+    }
+  ]
+}

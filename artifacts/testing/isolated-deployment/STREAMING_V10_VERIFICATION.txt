@@ -1,0 +1,14 @@
+Candidate: unified-pilot-20261108-v10; source HEAD 144f5a8c6ba43bc9dfbeca0fac2eaf690bf2037e + frozen manifest857 files.
+Preview: http://localhost:3102/; Studio http://127.0.0.1:4111/; both HTTP200.
+Scope: v9 baseline + six streaming handback files + ordinary borrower text instruction. Removed unrelated eval-only runtime supplement parameter to match baseline definitions. Incremental assessment work excluded.
+Automated: PASS quick153 unit tests+TypeScript, fresh webpack build, HTTP/jobs/workflow/chat/complete-AI/missing-rent simulated integrations; expanded native agent integration PASS.
+Initial freeze TypeScript failure: unrelated optional eval parameter absent in baseline definitions. Removed from isolated candidate only, then all checks rerun PASS. No source code edits after final checks; all manifest hashes match.
+Live verification: Nov8 2026, question submitted16:27:02 PST. Bubble visible455ms after Send. Working indicator observed during pending generation.
+Native provider/Mastra text:10 deltas; first73chars at9958ms; final985chars at10954ms; finish11175ms. Real application SSE:73,399,747,908,985 chars while pending, then same985 completed. One generation, no typewriter simulation or second model call.
+Browser: final response once; draft removed; activity absent after completion. Reload retains exactly one test question and one answer. Desktop no overflow; mobile390x844 no overflow and visible composer. Existing controlled UI tests verified partial rendering and failure/withdrawal; live partial screenshot was not captured because the stream completed during tool round-trip. Real SSE and native chunk timings are recorded, not inferred from a screenshot.
+Data: before/after restart table hashes/counts, work states and ledger identical. Existing blocked agent step and waiting-input investigation preserved; this release does not repair or rerun them.
+Cost: live check $0.015961; shared cumulative $0.375458,64calls,held0,existing $20 ceiling intact. Gemini3.8Flash, medium reasoning,24k output unchanged.
+Latency limit: first text still takes about11seconds from queued state; streaming fixes display, not model reasoning latency. No claim of a5second answer target.
+Browser checklist: changed behavior PASS within evidence above; responsive layout PASS. Full sign-in/lender/upload/organization/submission workflows NOT RERUN in browser this release; automated coverage passed. Broad live document quality NOT VERIFIED by this single chat check.
+Evidence: release verification/{results.json,quick.log,native-agents.log,preservation.json,live-stream-1.ndjson,native-stream-timing.json}; source artifacts streaming-v10-{question,completed,mobile}.png.
+Result: requested question immediacy, real progressive streaming and working-only activity verified on deployed local app.

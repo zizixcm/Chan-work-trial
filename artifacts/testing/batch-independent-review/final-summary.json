@@ -1,0 +1,83 @@
+{
+  "candidate": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v2",
+  "deployment": "not promoted; failing latency and semantic gates",
+  "cases": [
+    {
+      "caseId": "BATCH-01",
+      "title": "Readable initial batch with partial package support",
+      "nextStepsVerdict": "mostly correct; unsupported qualifier",
+      "durableAcknowledgementSeconds": 5.472,
+      "controllerCompletionSeconds": 25.294,
+      "finalReplyCommitSeconds": 25.265,
+      "costUSD": 0.029018,
+      "modelCalls": 4,
+      "goldStateMismatches": [
+        {
+          "criterion": "R5.consistency",
+          "expected": "unmet",
+          "actual": "unknown",
+          "explanation": "Entity ownership and manager signing authority cannot be evaluated without entity documents."
+        }
+      ],
+      "notes": [
+        "Correct exact remaining documents and dates; reconciliation remains unknown.",
+        "Unsupported additional executed qualifier on requested operating agreement.",
+        "Entity consistency unknown versus gold unmet is conservative, not false completeness."
+      ]
+    },
+    {
+      "caseId": "BATCH-02",
+      "title": "Incomplete bank statement pages",
+      "nextStepsVerdict": "mostly correct; unsupported qualifier",
+      "durableAcknowledgementSeconds": 3.05,
+      "controllerCompletionSeconds": 37.972,
+      "finalReplyCommitSeconds": 37.948,
+      "costUSD": 0.044595,
+      "modelCalls": 4,
+      "goldStateMismatches": [],
+      "notes": [
+        "All criterion states match gold; August page2 identified, July retained, September and entity requests correct.",
+        "Unsupported additional executed qualifier on requested operating agreement."
+      ]
+    },
+    {
+      "caseId": "BATCH-03",
+      "title": "Wrong reporting year and budget instead of actuals",
+      "nextStepsVerdict": "correct",
+      "durableAcknowledgementSeconds": 3.241,
+      "controllerCompletionSeconds": 26.08,
+      "finalReplyCommitSeconds": 26.05,
+      "costUSD": 0.034252,
+      "modelCalls": 4,
+      "goldStateMismatches": [],
+      "notes": [
+        "All criterion states match gold; wrong2024 year and2026budget distinguished; correct actual periods requested.",
+        "Conditional amendment parenthetical is redundant after zero-amendment confirmation but does not require another upload."
+      ]
+    },
+    {
+      "caseId": "BATCH-04",
+      "title": "Obscured execution page remains unknown",
+      "nextStepsVerdict": "incorrect correction request",
+      "durableAcknowledgementSeconds": 3.593,
+      "controllerCompletionSeconds": 54.673,
+      "finalReplyCommitSeconds": 54.646,
+      "costUSD": 0.06256,
+      "modelCalls": 5,
+      "goldStateMismatches": [
+        {
+          "criterion": "R2.leases",
+          "expected": "unknown",
+          "actual": "unmet",
+          "explanation": "Executed lease provided for unit 101, but unit 102 lease is obscured."
+        }
+      ],
+      "notes": [
+        "Correctly detects partly readable lease with obscured page2 and preserves valid roll/operating evidence.",
+        "Lease criterion wrongly unmet instead of unknown; saved Unit102 lease called missing.",
+        "Requests complete executed Unit102 lease instead of clearer copy of obscured page2."
+      ]
+    }
+  ],
+  "totalFinalCaseCostUSD": 0.170425
+}

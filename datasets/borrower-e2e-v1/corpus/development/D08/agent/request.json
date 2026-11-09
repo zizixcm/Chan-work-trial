@@ -1,0 +1,52 @@
+{
+  "application": {
+    "accountSuffix": "7436",
+    "borrower": "Hollowmere Holdings LLC",
+    "manager": "Vela Rusk",
+    "property": "Hollowmere",
+    "units": [
+      "101",
+      "102"
+    ]
+  },
+  "initialMessage": "I declare all 2 units occupied by the tenants listed; only account ending 7436 is requested. There are 0 lease amendments and 1 entity amendments.",
+  "policy": {
+    "criteria": {
+      "R1.identity": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+      "R1.units": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+      "R2.chain": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+      "R2.compare": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+      "R2.leases": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+      "R3.compare": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+      "R3.current": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+      "R3.year": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+      "R4.august": "Complete August 2026 statement for the declared borrower account and holder.",
+      "R4.july": "Complete July 2026 statement for the declared borrower account and holder.",
+      "R4.september": "Complete September 2026 statement for the declared borrower account and holder.",
+      "R5.consistency": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+      "R5.formation": "Formation certificate identifies the declared borrower.",
+      "R5.governing": "Operating agreement and all declared applicable entity amendments are supplied."
+    },
+    "requests": [
+      "Current rent roll",
+      "Leases and applicable amendments",
+      "Property operating statements",
+      "Borrower bank statements",
+      "Entity ownership and signing authority"
+    ],
+    "reviewDate": "2026-10-15",
+    "rules": [
+      "Authored fictional test policy, not general lending law.",
+      "Completion is qualifying documentary evidence only; not acceptance, authenticity, enforceability, submission readiness or approval.",
+      "Executed-copy evidence means both fictional party signature marks and dates appear; never authenticate them.",
+      "All declared units are occupied. Only the declared account is requested. Formation certificate and operating agreement are requested for every LLC.",
+      "All rent differences are material for these authored cases. Operating income is accrual base rent; bank deposits may differ and do not replace operating results.",
+      "No amendment applicability requires explicit borrower declaration; a declaration does not replace an applicable amendment.",
+      "State met/unmet/unknown per criterion. Mixed states express partial satisfaction; public assessment is appears_complete/incomplete/unknown.",
+      "No automatic linking, deletion, submission, lender messaging, or authority decisions."
+    ],
+    "transaction": "income-producing commercial real estate refinance",
+    "version": "CRE-E2E-policy.1"
+  },
+  "schemaVersion": "borrower-e2e-input.1"
+}

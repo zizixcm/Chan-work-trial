@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-empty",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "No documents have been uploaded yet.\n\n**Next step:**\n* Please upload a current rent roll for Example Plaza to get started."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All claims are supported by the input context: no documents are present in the inventory, and a current rent roll is an open requirement for Example Plaza."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers what has been uploaded by stating that no documents have been uploaded yet."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "It appropriately suggests uploading the outstanding current rent roll required for Example Plaza."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is clear, concise, and contains no unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 21,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 4410,
+  "elapsedMs": 6540
+}

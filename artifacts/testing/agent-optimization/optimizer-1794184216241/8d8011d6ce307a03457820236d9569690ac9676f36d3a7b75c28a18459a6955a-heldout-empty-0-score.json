@@ -1,0 +1,32 @@
+{
+  "caseId": "heldout-empty",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "No, we do not have any documents saved for your application yet.\n\n**Next step:**\n* Please upload your current **Executed Lease** for Elm Center to get started."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements accurately reflect the input inventory, which contains no saved documents and requires a current Executed Lease for Elm Center."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "Directly answers the user's question by stating that no documents are currently saved."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Provides a clear and actionable next step instructing the borrower to upload the current Executed Lease."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no redundant statements."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 27,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 4068,
+  "elapsedMs": 6839
+}

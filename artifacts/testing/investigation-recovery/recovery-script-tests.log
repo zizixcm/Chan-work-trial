@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: recovery accepts only exact correlated, known provider costs
+ok 1 - recovery accepts only exact correlated, known provider costs
+  ---
+  duration_ms: 1.350167
+  type: 'test'
+  ...
+# Subtest: reconciliation preserves $5 cap, charges actual costs, and releases only fully accounted reservations
+ok 2 - reconciliation preserves $5 cap, charges actual costs, and releases only fully accounted reservations
+  ---
+  duration_ms: 1.719042
+  type: 'test'
+  ...
+# Subtest: retire only failed event reactions with matching investigation scope, preserving user intents
+ok 3 - retire only failed event reactions with matching investigation scope, preserving user intents
+  ---
+  duration_ms: 0.660875
+  type: 'test'
+  ...
+# Subtest: second resume preserves total call and spend bounds, and rejects unsettled cost
+ok 4 - second resume preserves total call and spend bounds, and rejects unsettled cost
+  ---
+  duration_ms: 0.416667
+  type: 'test'
+  ...
+# Subtest: duplicate retirement requires reviewed intent and exact evidence/requirement/authority scope
+ok 5 - duplicate retirement requires reviewed intent and exact evidence/requirement/authority scope
+  ---
+  duration_ms: 13.862667
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 638.985584

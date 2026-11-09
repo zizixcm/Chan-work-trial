@@ -1,0 +1,85 @@
+{
+  "mode": "live",
+  "model": "openrouter/google/gemini-2.5-flash",
+  "configurationDigest": "da95413f9213107fdbe59e2740179d7a7c4d0c66e3f2d978ce9dfba373030f0b",
+  "fixture": {
+    "id": "uploads-specific",
+    "question": "Has my rent roll been uploaded?",
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [
+        {
+          "documentId": "d1",
+          "name": "Rent roll.pdf",
+          "active": true
+        },
+        {
+          "documentId": "d2",
+          "name": "2025 operating statement.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "maxWords": 60,
+    "rubric": "Answer yes and identify Rent roll.pdf as saved. Do not list unrelated requirements or infer that the rent roll was checked or accepted. No next step is necessary."
+  },
+  "createdAt": "2026-11-08T23:58:04.498Z",
+  "action": {
+    "kind": "reply",
+    "message": "Yes, \"Rent roll.pdf\" has been uploaded."
+  },
+  "actualMicros": 441,
+  "score": {
+    "caseId": "uploads-specific",
+    "wordCount": 6,
+    "maxWords": 60,
+    "checks": [
+      {
+        "id": "direct_reply",
+        "passed": true
+      },
+      {
+        "id": "concise",
+        "passed": true
+      },
+      {
+        "id": "answersQuestion",
+        "passed": false
+      },
+      {
+        "id": "grounded",
+        "passed": false
+      },
+      {
+        "id": "appropriateNextSteps",
+        "passed": false
+      },
+      {
+        "id": "noRepetition",
+        "passed": false
+      }
+    ],
+    "status": "needs_review"
+  }
+}

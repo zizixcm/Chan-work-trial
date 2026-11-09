@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Papa from "papaparse";
+import PdfPagePreview from "./pdf-page-preview";
 import type { PublicDocument } from "@/lib/model";
 
 type Preview =
@@ -11,7 +12,7 @@ type Preview =
   | { kind: "text"; text: string; truncated: boolean };
 
 // Read only the authorized original. Never send document bytes to another service.
-export default function DocumentPreview({ document: doc, applicationId }: { document: PublicDocument; applicationId?: string }) {
+export default function DocumentPreview({ document: doc, applicationId, portablePdf=false }: { document: PublicDocument; applicationId?: string; portablePdf?:boolean }) {
   const [preview, setPreview] = useState<Preview>({ kind: "loading" });
   const [attempt, setAttempt] = useState(0);
   const [renderError, setRenderError] = useState(false);
@@ -35,7 +36,7 @@ export default function DocumentPreview({ document: doc, applicationId }: { docu
         setPreview({ kind: "unsupported", message: "This file is too large for an in-page preview. Download the original to review it." });
         return;
       }
-      if (pdf && navigator.pdfViewerEnabled === false) {
+      if (pdf && !portablePdf && navigator.pdfViewerEnabled === false) {
         setPreview({ kind: "unsupported", message: "Your browser cannot preview PDFs. Download the original to open it." });
         return;
       }
@@ -79,14 +80,15 @@ export default function DocumentPreview({ document: doc, applicationId }: { docu
     }, 30000);
     void load().finally(() => window.clearTimeout(timeout));
     return () => { window.clearTimeout(timeout); controller.abort(); if (objectUrl) URL.revokeObjectURL(objectUrl); };
-  }, [applicationId, doc.id, doc.sha256, doc.content_type, doc.original_name, doc.size_bytes, attempt]);
+  }, [applicationId, doc.id, doc.sha256, doc.content_type, doc.original_name, doc.size_bytes, attempt, portablePdf]);
 
   if (preview.kind === "loading") return <p role="status" className="preview-message">Loading document preview…</p>;
   if (preview.kind === "error" || preview.kind === "unsupported" || renderError) return <div className="preview-message" role={preview.kind === "error" || renderError ? "alert" : "status"}><p>{renderError ? "The document could not be displayed. Download the original or retry." : "message" in preview ? preview.message : "Preview unavailable."}</p><button className="l-secondary" onClick={() => setAttempt(value => value + 1)}>Retry preview</button></div>;
   if (preview.kind === "image") return <div className="document-image"><img src={preview.url} alt={`Document preview: ${doc.original_name}`} onError={() => setRenderError(true)} /></div>;
+  if (preview.kind === "pdf" && portablePdf) return <PdfPagePreview url={preview.url} name={doc.original_name}/>;
   // Only verified PDF bytes in a typed blob reach the native PDF viewer.
   // iframe sandbox prevents built-in PDF viewers from loading (MDN iframe reference).
-  if (preview.kind === "pdf") return <div className="document-pdf"><p>If the PDF does not display, use Download original above.</p><iframe title={`PDF preview: ${doc.original_name}`} src={preview.url} referrerPolicy="no-referrer" onError={() => setRenderError(true)} /></div>;
+  if (preview.kind === "pdf") return <div className="document-pdf"><iframe title={`PDF preview: ${doc.original_name}`} src={preview.url} referrerPolicy="no-referrer" onError={() => setRenderError(true)} /></div>;
   if (preview.kind === "text") return <><p>{preview.truncated ? "Partial text preview. Download the original for all content." : "Text preview"}</p><pre className="document-text">{preview.text}</pre></>;
   if (preview.kind === "csv") return <><p className="preview-caption">{preview.truncated ? "Partial table: up to 100 rows, 20 columns and 1,000 characters per cell. Download the original for all content." : "Table preview · Cell values shown as text."} Formulas are not calculated.</p><div className="document-table" tabIndex={0} role="region" aria-label="Document table, scroll horizontally to view more columns"><table><caption>{doc.original_name}</caption><tbody>{preview.rows.map((row, index) => <tr key={index}>{row.map((cell, column) => index === 0 ? <th scope="col" key={column}>{cell}</th> : <td key={column}>{cell}</td>)}</tr>)}</tbody></table></div></>;
   return null;

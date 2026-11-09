@@ -1,0 +1,59 @@
+{
+  "candidateId": "a1b7284c382c1063bc446deaac20ffbeddeaea77f1684f29990cadbe2564c971",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [
+        {
+          "documentId": "d1",
+          "name": "Rent roll.pdf",
+          "active": true
+        },
+        {
+          "documentId": "d2",
+          "name": "2025 operating statement.pdf",
+          "active": true
+        }
+      ],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "messages": [
+      {
+        "id": "m1",
+        "sequence": "1",
+        "text": "Has my rent roll been uploaded?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "Yes, your rent roll has been uploaded. **Rent roll.pdf** is saved in your file inventory. \n\nPlease note that a saved file has not yet been reviewed or approved by the lender."
+  },
+  "actualMicros": 7557,
+  "executed": true
+}

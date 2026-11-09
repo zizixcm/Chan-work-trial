@@ -1,0 +1,84 @@
+{
+  "status": "superseded_in_scope_by_small_start_spec",
+  "model": "google/gemini-3.8-flash",
+  "outputAllowance": 24000,
+  "initialReasoning": "medium",
+  "targetsMs": {
+    "borrowerFirstUseful": 3000,
+    "borrowerComplete": 5000,
+    "smallInvestigationComplete": 20000,
+    "ordinaryInvestigationComplete": 120000,
+    "longOrScannedInvestigationComplete": 180000
+  },
+  "targetsAre": "proposed engineering gates, not measured guarantees",
+  "fairness": [
+    {
+      "issue": "Mandatory 14 model-emitted findings",
+      "disposition": "obsolete under incremental contract",
+      "rule": "Judge all 14 backend-merged criterion outcomes at settled canonical checkpoints. Allow changed findings, safe reuse and compact reaffirmation; tool output need not repeat unchanged findings."
+    },
+    {
+      "issue": "Mandatory reply_to_borrower call for ordinary answer",
+      "disposition": "obsolete under new native text-reply path",
+      "rule": "Judge authorized durable borrower reply and correct tool use for delegation/forwarding. Plain native reply is valid; rebind B01 card to current interface without changing requested policy content."
+    },
+    {
+      "issue": "Exact wording and structured gap atoms",
+      "disposition": "structural diagnostic, requires semantic review",
+      "rule": "Equivalent supported wording can be correct. Literal atom mismatch alone is not proof of bad reasoning. Do not silently alter gold after seeing output."
+    },
+    {
+      "issue": "Global missing-evidence claims",
+      "disposition": "retain conservative coverage rule and report cost",
+      "rule": "Positive support may use selective reading; absence requires sufficiently inspected scope. Honest uncertainty is a limitation, not fabricated completion. Do not demand fast guessed absence."
+    },
+    {
+      "issue": "Historical saved evidence in B02",
+      "disposition": "revise stale context assumption",
+      "rule": "New upload invalidates current package result. Borrower acknowledges saved files; investigator revalidates observations and prior findings."
+    },
+    {
+      "issue": "Unsupported overlays",
+      "disposition": "blocked, not agent failure",
+      "cases": [
+        "DEV-BUDGET",
+        "DEV-UPLOAD-RACE",
+        "DEV-DIALOGUE"
+      ]
+    },
+    {
+      "issue": "Quality review missing",
+      "disposition": "review-required, not observed agent failure",
+      "rule": "Never label a scripted/offline pass or missing semantic review as live model accuracy."
+    },
+    {
+      "issue": "Latency excludes queue or failures",
+      "disposition": "reject",
+      "rule": "Measure from accepted work; record queue, first useful reply, result publication and final reply separately. Count timeout/cancel/failure/unknown timing, retain slow attempts. Exclude human thinking between separate journey requests."
+    }
+  ],
+  "experimentOrder": [
+    "Freeze completed streaming plus incremental runtime; no partial shared-checkout candidate.",
+    "Validate native schema, incremental saved outcomes, stale-source and conflicting-new-evidence negatives offline.",
+    "Run bounded development baseline at medium/24k: D01 gradual, D02 supersession, D03 amendment; D07 scans and D08 authority after core correctness.",
+    "Compare lower reasoning only as separately pinned development variant if incremental runtime still misses latency targets; no live-pilot setting changes implied.",
+    "Choose only a candidate passing reviewed quality and latency; repeat small set for variability within existing spend limits.",
+    "Freeze winner, then run unseen holdouts once; if holdout failures guide fixes, retire them from unseen validation."
+  ],
+  "existingBaseline": {
+    "case": "ONE-PDF-RECOVERY-COMPARISON",
+    "quality": "reviewed-pass",
+    "wallMs": 75747,
+    "finalGenerationMs": 58047,
+    "reasoningTokensFinal": 9304,
+    "visibleTokensFinal": 2418,
+    "newSmallCaseLatencyTarget": "exceeds20s; historical total evaluation wall time is not newly instrumented request timing"
+  },
+  "liveStatus": "blocked_pending_owner_window_and_final_candidate",
+  "activeScope": [
+    "EMPTY-REQUESTED",
+    "EMPTY-UPLOADED",
+    "EMPTY-MISSING",
+    "ONE-UPLOAD"
+  ]
+}

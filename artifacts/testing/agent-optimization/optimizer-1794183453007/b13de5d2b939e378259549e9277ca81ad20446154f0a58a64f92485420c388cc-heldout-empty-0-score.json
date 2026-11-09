@@ -1,0 +1,32 @@
+{
+  "caseId": "heldout-empty",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "No, we do not have any saved documents for your application yet.\n\n**Next step:**\n* Please upload your current executed lease for Elm Center."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements match the inventory: documents list is empty, and the pending requirement is a current executed lease for Elm Center."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "Directly confirms that no documents have been saved yet."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Provides a concrete next step to upload the current executed lease."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and does not repeat information."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 24,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 3784,
+  "elapsedMs": 6561
+}

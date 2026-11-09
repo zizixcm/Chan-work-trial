@@ -1,0 +1,32 @@
+{
+  "caseId": "heldout-approval",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "No, saving your document does not mean the lender has approved it.\n\nSaving confirms that your file (*Elm lease.pdf*) is recorded in your application, but saving does not equate to review or approval by the lender. Approval is a separate evaluation process by the lender."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately distinguishes saving from lender review/approval as a policy explanation without asserting an unverified review status for the document."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the borrower's question by clarifying that saving the lease does not mean it has been approved by the lender."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response properly addresses the conceptual question without imposing unnecessary or ungrounded next steps."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 45,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6786,
+  "elapsedMs": 11636
+}

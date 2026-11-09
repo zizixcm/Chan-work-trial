@@ -1,0 +1,30 @@
+{
+  "applied": false,
+  "alreadyApplied": false,
+  "budget": {
+    "knownMicros": 39205,
+    "limitMicros": 5000000,
+    "unknownCost": false,
+    "reservedMicros": 0
+  },
+  "preparationRevision": "8",
+  "runs": [
+    {
+      "id": "1481616c-346b-47b8-9ba1-148a8be20ef6",
+      "observations": 2
+    },
+    {
+      "id": "40899326-38e2-4e2e-81e5-fe63eb412ecd",
+      "observations": 2
+    },
+    {
+      "id": "9693e6a8-6810-4b5f-a568-0947f39fa324",
+      "observations": 2
+    }
+  ],
+  "resolvedObligationIds": [
+    "7e3e7181-1362-4a75-abb9-29b36d7c73d6",
+    "801c9c17-0d4b-4301-b747-fdab51478215",
+    "c66dcd2a-0290-485a-b30d-359f4aabdc0f"
+  ]
+}

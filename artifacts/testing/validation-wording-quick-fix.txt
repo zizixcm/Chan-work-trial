@@ -1,0 +1,9 @@
+Change: three borrower instruction replacements in lib/agents/definitions.ts.
+Approved status: Your document requires additional verification.
+Deployment: active worker-verification-wording-20261108 serves portal localhost:3102; portal release unchanged.
+Automated: npm run test:agent PASS (188 tests, TypeScript); staged prompt import PASS.
+Runtime: portal and Studio HTTP200; worker idle ticks healthy; no held calls at graceful restart.
+Full build/integration: NOT RUN.
+Browser checklist (all items, including changed behavior): NOT RUN.
+Live model validation-failure reproduction: NOT RUN; prompt loaded, generated wording not empirically verified.
+Existing data and budget preserved; previous worker available through previousStudioRelease.

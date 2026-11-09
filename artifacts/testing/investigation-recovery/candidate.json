@@ -1,0 +1,26 @@
+{
+  "baseCommit": "144f5a8c6ba43bc9dfbeca0fac2eaf690bf2037e",
+  "baseRelease": "mastra-agents-preview-20261108-v2 with Heritage reader/runtime patches",
+  "release": "/Users/chanrao/Developer/proximity-releases/mastra-agents-recovery-20261108-v4",
+  "createdAt": "2026-11-08T23:26:45.760688+00:00",
+  "patchFiles": {
+    "app/components/processing-conversation.tsx": "76079678e69de5da9779152846294cad4017e7736bbfce7cc84295b9d9e13084",
+    "lib/agents/execution-error.ts": "8f7d0428034c2fb715a24c42c8c1875ae6745c032b411c9e26d552187fbe5ef4",
+    "lib/agents/runtime.ts": "241a1b61238d3882bb0bdf32f76ddb2ebba885592a8f2c74f014cc446ebf53e5",
+    "lib/agents/borrower-service.ts": "ceae607bbea19a6cac8fff3b7fdbab22612a2f0779803907c7cc52bcc5628067",
+    "lib/preparation/worker.ts": "cc7d66957c4f6ee39cd3f33e2c8619df2458f6c849f0b174a1056bed85649917",
+    "lib/preparation/actions.ts": "c124371c595ea94bc02a22124923d551604ee9ef2067a70bc1a17eadc2ca7c4a",
+    "tests/native-agents.test.ts": "4120ff2d7f873d00d1a41a41637f6d7d3e19664634b2a9de239fe9944bf8a25e",
+    "tests/borrower-agents.integration.ts": "4eaf1f9a7d6adf7225d9c62ad5df5b7e69e70276594b1b3dc572340d83ace543",
+    "tests/chat-conversation-ui.test.ts": "3ca20faf894b50bb84bac7e19d41bda93e0a70795795670e0e28f50bc645b07f",
+    "scripts/recover-stalled-investigations.ts": "cfc1ca7a2251df6f601950026a48032dd4b929ea602a520ad35f5bbe48214d58",
+    "scripts/resume-repaired-investigations.ts": "6f771c404a933adb4feeee986539625078443a465a8719369fb6b6463c9d8149",
+    "tests/stalled-investigation-recovery.test.ts": "77b87027b5c36e6044ab7871a1ea5d42a3e7e380827e9d8b87d0ca62885ba323",
+    "scripts/finalize-investigation-recovery.ts": "e8c4b0f2c05505f4ffdf3e242ff94530f3de8d25134988f54eddf2343881964d"
+  },
+  "sourceDivergence": [
+    "app/components/processing-conversation.tsx",
+    "tests/chat-conversation-ui.test.ts"
+  ],
+  "sourceDivergenceNote": "Other chats continue UI work in shared source. Frozen repair candidate excludes those later changes; shared edits preserved."
+}

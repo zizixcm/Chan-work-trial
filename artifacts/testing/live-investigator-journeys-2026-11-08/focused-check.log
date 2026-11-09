@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: all 12 admitted journeys and 4 overlays load with pinned sources and 54 boundaries
+ok 1 - all 12 admitted journeys and 4 overlays load with pinned sources and 54 boundaries
+  ---
+  duration_ms: 1280.37475
+  type: 'test'
+  ...
+# Subtest: native semantic scorer rejects missing/stale review, false states, irrelevant sources and fabricated quotes
+ok 2 - native semantic scorer rejects missing/stale review, false states, irrelevant sources and fabricated quotes
+  ---
+  duration_ms: 216.640208
+  type: 'test'
+  ...
+# Subtest: live dataset rejects holdouts and unbounded limits before database or provider access
+ok 3 - live dataset rejects holdouts and unbounded limits before database or provider access
+  ---
+  duration_ms: 3.202042
+  type: 'test'
+  ...
+# Subtest: native Mastra tool, eval score, redacted trace, error and durable parent survive reopen
+ok 4 - native Mastra tool, eval score, redacted trace, error and durable parent survive reopen
+  ---
+  duration_ms: 4392.074375
+  type: 'test'
+  ...
+# Subtest: required native scorer rejects omitted, duplicated, failed and incomplete checks
+ok 5 - required native scorer rejects omitted, duplicated, failed and incomplete checks
+  ---
+  duration_ms: 53.834
+  type: 'test'
+  ...
+# Subtest: native workflow harness records per-case failure instead of averaging or skipping
+ok 6 - native workflow harness records per-case failure instead of averaging or skipping
+  ---
+  duration_ms: 509.778917
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 15640.875916

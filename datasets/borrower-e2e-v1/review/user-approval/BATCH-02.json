@@ -1,0 +1,67 @@
+{
+  "caseId": "BATCH-02",
+  "approval": {
+    "status": "approved",
+    "source": "explicit user answer in evaluation chat",
+    "answer": "Approve BATCH-02 as written",
+    "approvedScope": "Six-file D02 initial batch; readable August statement missing page2; preserve other valid findings, request September and entity evidence; bulk/parallel/stages/barrier/UI/latency."
+  },
+  "files": [
+    {
+      "documentId": "f367a4f796b28",
+      "filename": "f367a4f796b28.pdf",
+      "pageCount": 1,
+      "path": "development/D02/files/f367a4f796b28.pdf",
+      "seriesId": "f367a4f796b28",
+      "sha256": "b85ec6ac203efee5003be8ea60dea336769507eb19196ba19eae723afa74426c",
+      "version": 1
+    },
+    {
+      "documentId": "fecd8a7c31cff",
+      "filename": "fecd8a7c31cff.pdf",
+      "pageCount": 2,
+      "path": "development/D02/files/fecd8a7c31cff.pdf",
+      "seriesId": "fecd8a7c31cff",
+      "sha256": "e03f23cf0a40da7e6888c5d9c7fb54a9b80fd26864f4becb419ca5f8d4ba5f67",
+      "version": 1
+    },
+    {
+      "documentId": "f143bba0e0f4f",
+      "filename": "f143bba0e0f4f.pdf",
+      "pageCount": 1,
+      "path": "development/D02/files/f143bba0e0f4f.pdf",
+      "seriesId": "f143bba0e0f4f",
+      "sha256": "6c23501bfb356f718945d1960af964bfde20eea371e68a71269fa207e2dacd27",
+      "version": 1
+    },
+    {
+      "documentId": "f786ca0fb2e75",
+      "filename": "f786ca0fb2e75.pdf",
+      "pageCount": 1,
+      "path": "development/D02/files/f786ca0fb2e75.pdf",
+      "seriesId": "f786ca0fb2e75",
+      "sha256": "ca8bcf07e0a05ce8caf12aa83e906a2e5f424899e6336b2760c71eda60676fde",
+      "version": 1
+    },
+    {
+      "documentId": "ffcf0f403cac5",
+      "filename": "ffcf0f403cac5.pdf",
+      "pageCount": 2,
+      "path": "development/D02/files/ffcf0f403cac5.pdf",
+      "seriesId": "ffcf0f403cac5",
+      "sha256": "79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6",
+      "version": 1
+    },
+    {
+      "documentId": "ffe64a92e0fe1",
+      "filename": "ffe64a92e0fe1.pdf",
+      "pageCount": 1,
+      "path": "development/D02/files/ffe64a92e0fe1.pdf",
+      "seriesId": "ffe64a92e0fe1",
+      "sha256": "b62b2e6c08c4b843d2e54d2c5394913756c082ebf26f7129cf9d23ac118cb7c2",
+      "version": 1
+    }
+  ],
+  "specPath": "/Users/chanrao/Documents/ChatGPT/proximity/artifacts/testing/quality-latency-tuning/batch-upload-eval-spec.json",
+  "approvedCaseSha256": "a00665af957ebb25f10fdef8d8b688d38b837b65b6ea5cf4b9723b8e26219919"
+}

@@ -1,0 +1,18 @@
+{
+  "baseCandidate": "chat-processing-preview-20261107-v4",
+  "preview": "http://localhost:3101",
+  "pid": 74227,
+  "files": {
+    "app/page.tsx": "e1c3f0e55d68b1598329cda2c78dd72e1178b8c17897c4b24a61029c9f625d00",
+    "app/borrower/[applicationId]/page.tsx": "a91228a6a34228351c8640e3fc9f8bea05a96458bdc459258afd16facb51b68c",
+    "app/components/loan-chat-workspace.tsx": "6302d54d4cf9ec4d22675c9a4a7dd887a5c7a025ed15c2f843a662db946c0d72",
+    "app/components/loan-chat-workspace.module.css": "93a3250754e8576a39dea46df8f66fe51a46b679861d6b6db901a9f61aac0350",
+    "app/components/processing-conversation.tsx": "8f604149433f0a6a73728b665764282181b0ee3e0dd9a0ba83654a06ba518002",
+    "app/components/processing-conversation.module.css": "3d2e1009bf2a8faa766dd41510773483a44f08077a256e438197e2821ad178d7",
+    "app/components/document-preview.tsx": "87917ad4ede2634e1dce39113de833653d8d5cd3e2eaf33ca434f801bf978408",
+    "app/components/pdf-page-preview.tsx": "2af7ffa289c335d519de47c67ff40f5b604bcec42964ace22a7f193060d8335b",
+    "lib/borrower-chat/conversation-ui.ts": "47a325a5ada7bfe49a6dc2f62afb33446c219b4f86035e24366cc0cf454c50a1",
+    "public/borrower-avatar.svg": "93d8d41c5a977c5ef7021d493763ff33e78c2cadc203c80069f273cd8b7c1b27",
+    "public/pdf.worker.min.mjs": "1e64c8240e54735ec5913b37acd5134747799cb8c6bb3777c70adbc01232d2aa"
+  }
+}

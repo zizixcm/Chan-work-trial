@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "List every uploaded file by name and explain whether saving means lender approval."
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Name both files and explicitly explain that saved does not mean lender approval. Brevity must not omit either part of the question. Do not invent actions.",
+    "action": {
+      "kind": "reply",
+      "message": "Here are your 2 currently saved files:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nSaving a file confirms it has been received in your application, but as a general principle, saving does not equate to review or lender approval."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All listed document names match the active documents in the inventory, and the statement regarding saving correctly addresses policy without asserting an unsupported review or approval status for the specific files."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response lists both active files by name and clearly explains that saving does not equate to lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response answers the factual question directly without inventing actions or giving inappropriate directions."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no unnecessary repetition or redundant phrasing."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 537,
+    "completion_tokens": 602,
+    "total_tokens": 1139,
+    "cost": 0.00266025,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00266025,
+      "upstream_inference_prompt_cost": 0.00040275,
+      "upstream_inference_completions_cost": 0.0022575
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 420,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

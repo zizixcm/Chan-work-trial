@@ -1,0 +1,9 @@
+Live release: unified-pilot-20261108-v13, app localhost3102, Studio127.0.0.1:4111 bothHTTP200.
+Scope: v12 (streaming+incrementalfindings+Enter) plus one borrower paragraph requiring authoritative lender records for lender-review/approval statements. Upload staging/migration026 excluded.
+Definitions SHA2569e07ee93f18825ac71876fc3a733580879a73cafd147b093285083fc2c399901; all859 manifest hashes match.
+Automated PASS:159units+TS, freshwebpackbuild, HTTP/jobs/workflow/chat/completeAI/missingAI, nativeagent integration, incrementalfindings integration.
+Prompt evidence:28/28 synthetic borrower-turn outputs (14x2) passed calibratedv3 modelreview; originalv2score retained. Samefamily independentjudge, nothuman certification or newfulljourney validation. Exact frozen prompt matches evaluated artifact. No newprovider calls for deploymentverification.
+Live verification: Studio /api/agents exposes authoritative-lender-records paragraph; browser loads chat/composer, idle activityabsent, nohorizontaloverflow. Broader auth/upload/lender browserchecklist NOT RERUN; no UIcode changed since Enterv12 verified.
+Restart: tables/work/ledgeridentical. Shared26hash registry and saveddata retained. Prior blocked agentstep remains; notsilentlyretried.
+Evidence: releaseverification/results.json,native-agents.log,incremental-findings.log,prompt-validation-summary.json,preservation.json; prompt-v13-live.png.
+At promotion portal74270, Studiolauncher74271; operational evalwindow may subsequently restartworker. Stablepointer remainsauthoritative.

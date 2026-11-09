@@ -3,7 +3,7 @@ import { AnalysisFailure, safeFailure } from './failures';
 
 export const DEFAULT_ANALYSIS_MODEL = 'google/gemini-2.5-flash';
 export const DEFAULT_BUDGET: Readonly<DispatchBudget> = Object.freeze({
-  model: DEFAULT_ANALYSIS_MODEL, maxInputTokens: 24_000, maxOutputTokens: 4_000, timeoutMs: 60_000,
+  model: DEFAULT_ANALYSIS_MODEL, maxInputTokens: 96_000, maxOutputTokens: 12_000, timeoutMs: 60_000,
 });
 export interface ProviderTransport {
   generate(input: {instructions: string; prompt: string; outputSchema?: AnalysisTask['outputSchema']; budget: DispatchBudget; signal: AbortSignal}):
@@ -17,13 +17,16 @@ export function validateBudget(budget: DispatchBudget): void {
   }
 }
 
-/** Conservative UTF-8 byte ceiling rather than a guessed chars/4 token estimate.
- * The extra allowance covers the fixed message framing; repository admission
- * reserves the full configured input/output maximum, not this estimate. */
+/** Conservative token upper bound: one token per UTF-8 byte, plus framing. */
+export function taskInputBudget(task: AnalysisTask): number {
+  return Buffer.byteLength(task.instructions, 'utf8') + Buffer.byteLength(task.prompt, 'utf8') + Buffer.byteLength(JSON.stringify(task.outputSchema ?? {}), 'utf8') + 512;
+}
+
+/** Admission reserves this request's conservative bound, not the unused ceiling. */
 export function validateTaskSize(task: AnalysisTask, budget: DispatchBudget): void {
   validateBudget(budget);
-  if (Buffer.byteLength(task.instructions, 'utf8') + Buffer.byteLength(task.prompt, 'utf8') + Buffer.byteLength(JSON.stringify(task.outputSchema ?? {}), 'utf8') + 512 > budget.maxInputTokens) {
-    throw new AnalysisFailure('unsupported_input');
+  if (taskInputBudget(task) > budget.maxInputTokens) {
+    throw new AnalysisFailure('input_too_large');
   }
 }
 

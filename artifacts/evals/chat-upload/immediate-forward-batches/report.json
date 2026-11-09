@@ -1,0 +1,129 @@
+{
+  "caseId": "CHAT-UPLOAD-01",
+  "version": "chat-upload-v4",
+  "fileCount": 1,
+  "mode": "offline-scripted-native",
+  "configurationDigest": "1f17a1b4f9549b725559ff5f571fb7b4e3f11861b85b6cb11d460a09bd97fc58",
+  "trace": {
+    "traceId": "6a55d348e48f45a2d5809e07caa8c67c",
+    "spanId": "5b7dda09d0e28669"
+  },
+  "passed": true,
+  "checks": {
+    "queued-at-upload-commit": true,
+    "receipt-before-agent": true,
+    "explicit-upload-with-auto-disabled": true,
+    "new-files-trigger": true,
+    "activity-lifecycle": true,
+    "focused-delegation": true,
+    "prior-finding-retained": true,
+    "validated-change": true,
+    "new-file-inspected": true,
+    "borrower-update": true,
+    "no-duplicate-work": true,
+    "linked-native-trace": true
+  },
+  "captured": [
+    {
+      "stage": "upload-receipt",
+      "batchId": "new-upload",
+      "files": [
+        "Rent roll.txt"
+      ]
+    },
+    {
+      "stage": "upload-trigger",
+      "trigger": {
+        "sourceKey": "upload:new-upload:21ea8228743ac4ee225c001edb41a543",
+        "sourceMessageId": null,
+        "event": null,
+        "upload": {
+          "kind": "files_uploaded",
+          "files": [
+            {
+              "id": "member-new",
+              "name": "Rent roll.txt",
+              "documentId": "new"
+            }
+          ],
+          "grant": {
+            "kind": "explicit_upload",
+            "modeEpoch": "1"
+          },
+          "uploadBatchId": "new-upload",
+          "newDocumentIds": [
+            "new"
+          ]
+        }
+      }
+    },
+    {
+      "stage": "investigator",
+      "tool": "read_evidence",
+      "documentId": "new",
+      "criterionId": "r:criterion:2"
+    },
+    {
+      "stage": "investigator",
+      "tool": "publish_assessment",
+      "documentId": "new",
+      "criterionId": "r:criterion:2"
+    },
+    {
+      "stage": "result-trigger",
+      "trigger": {
+        "sourceKey": "event:cfc1ca92-5ee5-43b6-8a88-d11bedcb671e",
+        "sourceMessageId": null,
+        "event": {
+          "data": {
+            "resultId": "eebb83f6-48b5-49ee-a0e0-75df9c50a1a7",
+            "terminal": true,
+            "coverageRef": {
+              "id": "128e3d8c-2b32-4b5f-bcd4-166e15dcd3d6",
+              "revision": "3"
+            },
+            "resultRevision": "1"
+          },
+          "type": "run.result_committed",
+          "runId": "128e3d8c-2b32-4b5f-bcd4-166e15dcd3d6",
+          "state": "succeeded",
+          "cursor": "275bd6ca-b5b9-47f7-a1d5-7f57f8fad591",
+          "eventId": "cfc1ca92-5ee5-43b6-8a88-d11bedcb671e",
+          "artifactId": "418ec9a9-c23b-4fcf-9629-d53fae940abb",
+          "occurredAt": "2026-11-09T01:52:31.711Z",
+          "runRevision": "4",
+          "applicationId": "a",
+          "schemaVersion": "processing-event.v1",
+          "inputFingerprint": "cc29f2cfc8803881b790ea13e71aa03f8903ad2a8b4451f6bea35effee102a9d"
+        },
+        "upload": {
+          "kind": "files_uploaded",
+          "files": [
+            {
+              "id": "member-new",
+              "name": "Rent roll.txt",
+              "documentId": "new"
+            }
+          ],
+          "grant": {
+            "kind": "explicit_upload",
+            "modeEpoch": "1"
+          },
+          "uploadBatchId": "new-upload",
+          "newDocumentIds": [
+            "new"
+          ]
+        }
+      }
+    },
+    {
+      "stage": "borrower-update",
+      "text": "I reviewed Rent roll.txt. Your uploaded rent roll records Acme’s monthly rent of 5000. Your prior operating statement remains supported. Another upload is still unfinished, so the application is not yet complete.",
+      "resultId": "eebb83f6-48b5-49ee-a0e0-75df9c50a1a7"
+    }
+  ],
+  "limitations": [
+    "Synthetic files and scripted generation; does not establish live model judgment.",
+    "Browser staging/receipt display verified separately; real save-to-visible latency not measured."
+  ]
+}

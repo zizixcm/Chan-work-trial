@@ -33,7 +33,7 @@ export default function SendForReview({snapshot,blocked,onBusy,onSent,onRefresh}
   const unchanged=!!submission && !draft?.hasUnsentChanges;
   return <section className="borrower-send-dock" aria-label="Send application for review">
     <div className="borrower-send-content"><div>
-      <p role="status">{busy?"Please wait…":submission?draft?.hasUnsentChanges?"You have changes that have not been sent. Your lender sees the last sent version.":`Sent for review on ${new Date(submission.submittedAt).toLocaleString()}.`:"Your saved files are private until you send them for review."}</p>
+      <p role="status">{busy?"Please wait…":submission?draft?.hasUnsentChanges?"Unsent changes":"Sent":"Private draft"}</p>
       {blocked && <p>Finish uploading or remove selected files before sending.</p>}
       {!draft && <p>Refresh the application to load its send status.</p>}
       {!submission && snapshot.documents.length===0 && <p>No files saved yet. You can send the application with documents still missing.</p>}

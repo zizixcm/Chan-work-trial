@@ -1,0 +1,92 @@
+{
+  "caseId": "BATCH-02",
+  "title": "Incomplete bank statement pages",
+  "reviewer": "coordinating chat, independent actual-output and gold review",
+  "artifact": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v2/artifacts/testing/batch-live-02-r1/report.json",
+  "overallPassed": false,
+  "nativeReview": {
+    "provenance": "evaluator",
+    "status": "complete",
+    "checks": [
+      {
+        "id": "file_identity",
+        "passed": true
+      },
+      {
+        "id": "readability_grounded",
+        "passed": true
+      },
+      {
+        "id": "mapping_grounded",
+        "passed": true
+      },
+      {
+        "id": "document_errors_grounded",
+        "passed": true
+      },
+      {
+        "id": "all_files_covered",
+        "passed": true
+      },
+      {
+        "id": "all_requirements_covered",
+        "passed": true
+      },
+      {
+        "id": "saved_not_missing",
+        "passed": true
+      },
+      {
+        "id": "unknown_not_fulfilled",
+        "passed": true
+      },
+      {
+        "id": "partial_not_complete",
+        "passed": true
+      },
+      {
+        "id": "no_internal_ids",
+        "passed": true
+      },
+      {
+        "id": "no_approval_claim",
+        "passed": true
+      },
+      {
+        "id": "citations_valid",
+        "passed": true
+      },
+      {
+        "id": "completed_requirement_checkmark",
+        "passed": true
+      }
+    ]
+  },
+  "nativeReviewScope": "Only named checks; not a full semantic pass. Supplemental next-step and gold-state checks below remain independently binding. Citation references accepted by unchanged backend validator; semantic support reviewed against private gold.",
+  "nextStepsVerdict": "mostly correct; unsupported qualifier",
+  "supplementalNextStepsPassed": false,
+  "goldStateMismatches": [],
+  "notes": [
+    "All criterion states match gold; August page2 identified, July retained, September and entity requests correct.",
+    "Unsupported additional executed qualifier on requested operating agreement."
+  ],
+  "durableAcknowledgementSeconds": 3.05,
+  "controllerCompletionSeconds": 37.972,
+  "finalReplyCommitSeconds": 37.948,
+  "reportCeilingSeconds": 20,
+  "latencyPassed": false,
+  "modelCalls": 4,
+  "costUSD": 0.044595,
+  "browserTimingMeasured": false,
+  "actualFinalReply": "Here is an update on your uploaded documents and the current status of your requirements:\n\n### What Your Uploads Established\n* **f367a4f796b28.pdf**: Satisfies the rent roll request with property details, reporting date of 2026-09-30, and occupancy schedule for units 101 and 102.\n* **fecd8a7c31cff.pdf**: Provides executed leases for units 101 and 102 matching the rent roll, alongside your confirmation of zero lease amendments.\n* **f143bba0e0f4f.pdf** & **f786ca0fb2e75.pdf**: Provide actual accrual operating statements for Brindle Arcade for calendar year 2025 and 2026 YTD through September 30, reconciling with contractual rent.\n* **ffcf0f403cac5.pdf**: Satisfies the complete July 2026 bank statement for account ending 7334.\n* **ffe64a92e0fe1.pdf**: Partially covers August 2026 for account ending 7334, but is missing page 2 of 2.\n\n---\n\n### Requirement Status\n* \u2705 **Current rent roll**\n* \u2705 **Leases and applicable amendments**\n* \u2705 **Property operating statements**\n* **Borrower bank statements** (Partially satisfied; July 2026 complete)\n* **Entity ownership and signing authority** (Unmet; no entity documents evaluated)\n\n---\n\n### Outstanding Items Needed\n* **Borrower bank statements**:\n  * Complete August 2026 statement including page 2 of 2 for account ending 7334 (to replace the incomplete copy).\n  * Complete September 2026 statement for account ending 7334.\n* **Entity ownership and signing authority**:\n  * Certificate of formation identifying Brindle Arcade Holdings LLC.\n  * Executed operating agreement for Brindle Arcade Holdings LLC demonstrating 100% ownership and manager/signing authority provisions.",
+  "costAttribution": {
+    "source": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v2/artifacts/testing/batch-live-02-r1/case-cost.json",
+    "callIds": [
+      "b298f021-633f-4969-bc8d-66313bf92ec1",
+      "11194ca2-0e01-404d-9298-ee5e759c3d76",
+      "5e531707-9d67-42d3-b0a4-86a88d6a670f",
+      "427f9b43-56e0-4c63-9675-a6be2d1f41e9"
+    ],
+    "heldMicros": 0
+  }
+}

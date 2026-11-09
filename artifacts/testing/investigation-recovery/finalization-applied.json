@@ -1,0 +1,22 @@
+{
+  "applied": true,
+  "alreadyApplied": false,
+  "budget": {
+    "knownMicros": 89542,
+    "limitMicros": 5000000,
+    "unknownCost": false,
+    "reservedMicros": 0
+  },
+  "preparationRevision": "8",
+  "resultRef": {
+    "id": "55f4ea61-52df-4dd1-82d8-6967048496a8",
+    "revision": "1"
+  },
+  "successorRunId": "9693e6a8-6810-4b5f-a568-0947f39fa324",
+  "successorState": "partial",
+  "supersededRunIds": [
+    "1481616c-346b-47b8-9ba1-148a8be20ef6",
+    "40899326-38e2-4e2e-81e5-fe63eb412ecd"
+  ],
+  "coveredRequirements": 5
+}

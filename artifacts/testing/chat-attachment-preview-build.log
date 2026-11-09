@@ -1,0 +1,86 @@
+
+> proximity-borrower-portal@0.1.0 build
+> next build
+
+▲ Next.js 16.4.5 (Turbopack)
+- Environments: .env.local
+✓ Running next.config took 17ms
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./lib/analysis/prepare-document.ts:18:17
+Error: Module not found: Can't resolve '/ROOT/scripts/extract-document.ts'
+  [90m16 |[0m   [36mconst[0m cached=cache.get(key);[36mif[0m(cached)[36mreturn[0m structuredClone(cached);
+  [90m17 |[0m   [36mreturn[0m [36mnew[0m [33mPromise[0m((resolve,reject)=>{
+[31m[1m>[0m [90m18 |[0m     [36mconst[0m child=fork(path.join(process.cwd(),[32m'scripts/extract-document.ts'[0m),[],{
+  [90m   |[0m                 [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m19 |[0m       execArgv:[[32m'--max-old-space-size=256'[0m,[32m'--import'[0m,[32m'tsx'[0m],stdio:[[32m'ignore'[0m,[32m'ignore'[0m,[32m'ign...[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m20 |[0m       env:{[33mPATH[0m:process.env.[33mPATH[0m,[33mNODE_ENV[0m:process.env.[33mNODE_ENV[0m},
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m21 |[0m     });
+  [90m   |[0m [31m[1m^^^^^^[0m
+  [90m22 |[0m     [36mlet[0m done=[36mfalse[0m;
+  [90m23 |[0m     [36mconst[0m finish=(error?:[33mAnalysisFailure[0m,result?:[33mPreparedDocument[0m)=>{
+  [90m24 |[0m       [36mif[0m(done)[36mreturn[0m;done=[36mtrue[0m;clearTimeout(timer);signal.removeEventListener([32m'abort'[0m,abor...
+
+
+
+Import traces:
+  #1 [App Route]:
+    ./lib/analysis/prepare-document.ts
+    ./lib/validation.ts
+    ./app/api/demo/role/route.ts
+
+  #2 [App Route]:
+    ./lib/analysis/prepare-document.ts
+    ./lib/storage/local.ts
+    ./lib/runtime.ts
+    ./app/api/lender/route.ts
+
+  #3 [Server Component]:
+    ./lib/analysis/prepare-document.ts
+    ./lib/validation.ts
+    ./lib/analysis-debug/server.ts
+    ./app/internal/analysis-runs/[id]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./lib/preparation/evidence-tools.ts:16:16
+Error: Module not found: Can't resolve '/ROOT/scripts/read-preparation-evidence.ts'
+  [90m14 |[0m ...sh([32m'sha256'[0m).update(bytes).digest([32m'hex'[0m)!==command.sha256)[36mthrow[0m [33mError[0m([32m'Unsupported or c...[0m
+  [90m15 |[0m ...
+[31m[1m>[0m [90m16 |[0m ...,{execArgv:[[32m'--max-old-space-size=384'[0m,[32m'--import'[0m,[32m'tsx'[0m],stdio:[[32m'ignore'[0m,[32m'ignore'[0m,[32m'igno...[0m
+  [90m   |[0m    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m ...
+  [90m18 |[0m ...rTimeout(timer);child.kill([32m'SIGKILL'[0m);error?reject(error):resolve(result!);};
+  [90m19 |[0m ...Ms);
+
+
+
+Import traces:
+  #1 [App Route]:
+    ./lib/preparation/evidence-tools.ts
+    ./lib/validation.ts
+    ./app/api/demo/role/route.ts
+
+  #2 [App Route]:
+    ./lib/preparation/evidence-tools.ts
+    ./lib/storage/local.ts
+    ./lib/runtime.ts
+    ./app/api/lender/route.ts
+
+  #3 [Server Component]:
+    ./lib/preparation/evidence-tools.ts
+    ./lib/validation.ts
+    ./lib/analysis-debug/server.ts
+    ./app/internal/analysis-runs/[id]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

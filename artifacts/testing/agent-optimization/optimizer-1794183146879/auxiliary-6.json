@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "a1b7284c382c1063bc446deaac20ffbeddeaea77f1684f29990cadbe2564c971",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": true
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "What's been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Identify both saved files and distinguish pending uploads from saved files. Briefly suggest checking unfinished uploads; do not ask to re-upload saved files or claim all files have been considered.",
+    "action": {
+      "kind": "reply",
+      "message": "Here are the 2 files currently saved:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nPlease note that saved files have not yet been reviewed or approved.\n\nOther uploads are still in progress. Please check your upload progress to ensure any remaining files finish uploading."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All facts stated, including the two active documents and the existence of pending uploads, are grounded in the provided inventory."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response identifies both uploaded files and clearly clarifies that there are other uploads still pending."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response appropriately suggests checking the status of unfinished uploads without asking to re-upload saved files or claiming completion."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 398,
+    "completion_tokens": 570,
+    "total_tokens": 968,
+    "cost": 0.002436,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002436,
+      "upstream_inference_prompt_cost": 0.0002985,
+      "upstream_inference_completions_cost": 0.0021375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 397,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

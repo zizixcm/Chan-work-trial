@@ -1,4 +1,5 @@
 import '../scripts/env';
+import {PDFDocument} from 'pdf-lib';
 import {Pool} from 'pg';
 import {betterAuth} from 'better-auth';
 import {randomUUID,createHash} from 'node:crypto';
@@ -61,7 +62,7 @@ async function main(){
   const status=async(cookie=borrowerCookie)=>{const r=await request('/api/applications/ai-app/analysis',cookie);assert.equal(r.status,200);return r.json();};
   assert.equal((await status()).preference.enabled,false);
   assert.equal((await request('/api/internal/analysis-runs',borrowerCookie)).status,403);
-  let r=await request('/api/applications/ai-app/ai-preference',borrowerCookie,{enabled:true,expectedEpoch:(await status()).preference.epoch},'PUT');assert.equal(r.status,200);
+  let r:Response;assert.equal((await status()).automaticUploads,true);
   const fileText=missingRent?'Property,Tenant,As of date\nDemo Plaza,Synthetic Bakery,2026-11-01\n':'Property,Tenant,Monthly rent,As of date\nDemo Plaza,Synthetic Bakery,3500,2026-11-01\n';
   const batchId=randomUUID(),memberId=randomUUID();
   const manifest={id:batchId,members:[{id:memberId,name:'synthetic-rent-roll.csv',sha256:createHash('sha256').update(fileText).digest('hex')}]};
@@ -89,7 +90,8 @@ async function main(){
   r=await request('/api/applications/ai-app/submit',borrowerCookie,{idempotencyKey:randomUUID(),expectedRevision:snapshot.draft.revision,expectedContentRevision:snapshot.draft.contentRevision});assert.equal(r.status,200,await r.clone().text());const sent=(await r.json()).submission;
   const personal=(await status()).preference;
   r=await request('/api/ai/preference?applicationId=ai-app',borrowerCookie,{enabled:false,expectedEpoch:personal.epoch},'PUT');assert.equal(r.status,200);
-  const privateForm=new FormData();privateForm.set('file',new File(['Property,Tenant,Monthly rent,As of date\nPrivate Draft,Private Tenant,9999,2026-11-02\n'],'private-draft.csv',{type:'text/csv'}));
+  const privatePdf=await PDFDocument.create();privatePdf.addPage();
+  const privateForm=new FormData();privateForm.set('file',new File([Buffer.from(await privatePdf.save())],'private-draft.pdf',{type:'application/pdf'}));
   r=await fetch(base+'/api/documents?applicationId=ai-app',{method:'POST',headers:{cookie:borrowerCookie,origin:base},body:privateForm});assert.equal(r.status,201);privateDocumentId=(await r.json()).id;
   assert.equal((await request('/api/documents/'+privateDocumentId,lenderCookie)).status,404);
   r=await request('/api/requirements/ai-req/verify-completeness?applicationId=ai-app',lenderCookie,{idempotencyKey:randomUUID(),expectedSubmissionId:sent.id,expectedDefinitionRevision:req.definition_revision,expectedEvidenceRevision:req.evidence_revision});assert.equal(r.status,202,await r.clone().text());
@@ -100,8 +102,8 @@ async function main(){
   assert.equal((await request('/internal/analysis-runs',lenderCookie)).status,200);
   const pref=(await status()).preference;
   r=await request('/api/applications/ai-app/ai-preference',borrowerCookie,{enabled:false,expectedEpoch:pref.epoch},'PUT');assert.equal(r.status,200);
-  const before=calls;r=await request(`/api/documents/${upload.id}/coverage-analysis?applicationId=ai-app`,borrowerCookie,{idempotencyKey:randomUUID()});assert(r.status>=400);assert.equal(calls,before);
-  console.log(JSON.stringify({ok:true,provider:real?'real OpenRouter':'simulated',fixture:missingRent?'missing-rent':'complete',providerCalls:calls,checks:['authenticated batch upload and replay','background match','AI link provenance','labeled full/partial fulfillment','multi-requirement aggregate verification and current borrower result DTO','borrower and lender Verify','developer inspector authorization','AI off gate','submitted-only lender prompt','unsent document and diagnostic URL denial']}));
+  const before=calls;r=await request(`/api/documents/${upload.id}/coverage-analysis?applicationId=ai-app`,borrowerCookie,{idempotencyKey:randomUUID()});assert.equal(r.status,202);assert.equal(calls,before,'matching cache reused even with preference off');
+  console.log(JSON.stringify({ok:true,provider:real?'real OpenRouter':'simulated',fixture:missingRent?'missing-rent':'complete',providerCalls:calls,checks:['authenticated batch upload and replay','background match','AI link provenance','labeled full/partial fulfillment','multi-requirement aggregate verification and current borrower result DTO','borrower and lender Verify','developer inspector authorization','automatic uploads with old preference off','submitted-only lender prompt','unsent document and diagnostic URL denial']}));
  }finally{
   shutdown.abort();await worker?.catch(()=>{});
   if(server&&server.exitCode===null){const stopped=once(server,'exit');server.kill('SIGTERM');await stopped;}

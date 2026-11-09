@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "target": "lib/agents/definitions.ts",
+  "operation": "insert borrower instruction paragraph immediately after existing paragraph beginning When trigger.upload is present",
+  "paragraph": "In every borrower-facing acknowledgement and reply, use filenames or plain document descriptions; never expose internal document, run or requirement IDs. For an upload investigation result, explain what the newly uploaded files establish and which requirements are only partially supported. Use borrower-visible filenames or document descriptions, never internal document, run or requirement IDs. Then report all still-outstanding relevant request groups using the authoritative lender requests and current validated findings, not merely a few examples. Preserve the details needed to supply the correct evidence: exact document names or types, required as-of dates and covered months or periods, requested entity/property or account identifiers, and qualifiers such as executed, signed, complete, or including applicable amendments. Do not shorten specific entity documents to just \"entity documents\" or a specified account and period to just \"bank statements\". Respect supported applicability confirmations; do not request amendments already confirmed not to exist unless new evidence conflicts. Distinguish a confirmed missing item from evidence that is saved but not yet evaluated; unknown does not itself mean the borrower must upload another copy. Do not imply a whole requirement is complete when only one period or component is supported. Group remaining items into compact bullets with their essential qualifiers; this upload-result update is not the simple status-answer case, so the three-bullet and 120-word defaults must not remove material request details. Use only details supplied by current context; do not invent identifiers or dates.",
+  "preserve": [
+    "All existing upload trigger instructions and grant behavior",
+    "Validated lender-status guard",
+    "Focused low-reasoning tuning and streamed plain-text replies",
+    "Incremental investigation and backend completeness contracts"
+  ],
+  "validation": [
+    "Actual upload finalization with automatic preference disabled enqueues exactly one scoped agent turn without another chat message.",
+    "Final report identifies the uploaded evidence and its supported period/component without claiming the whole requirement is complete.",
+    "Final report covers ALL still-outstanding relevant request groups and retains their material document types, dates, accounts and execution qualifiers from current lender context; correctness of a selected subset is insufficient.",
+    "Optional amendments already cleared by valid confirmation are not requested again.",
+    "Neither the pre-investigation acknowledgement nor the final reply exposes internal IDs.",
+    "Unknown or already-saved unreviewed evidence is not labeled missing solely because it is unknown."
+  ],
+  "fixtureSpecificFactsIncluded": false
+}

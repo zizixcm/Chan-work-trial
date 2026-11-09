@@ -1,0 +1,11 @@
+Candidate: 144f5a8c6ba43bc9dfbeca0fac2eaf690bf2037e + dirty shared workspace; unrelated edits preserved.
+Scope: borrower concision fixtures/scorer/CLI, agent instructions, upload retrieval summary, collapsed completeness panel, regression tests and eval documentation.
+Check time: 2026-11-08T15:52:35.566408-08:00
+Preview: http://127.0.0.1:3001; existing shared process, candidate match not established.
+Automated: npm run test:agent PASS (136 tests and TypeScript).
+Full: BLOCKED by running preview on port 3001; guard exited before build/integration. No process stopped.
+Browser: all docs/TESTING.md checklist items NOT RUN (sign-in/access, navigation, uploads/persistence, validation/recovery, organization, submission/review, AI behavior, UI quality, changed behavior).
+Regression: upload summaries retain all filenames, use one disclaimer, avoid metadata/checklist repetition, and suggest steps conditionally; native eval harness isolates rubrics and requires independent semantic review. SSR verifies findings are collapsed while details remain available.
+Live model evaluation: NOT RUN. Scripted responses verify wiring only; semantic quality remains unverified.
+Reverification: final quick suite PASS after final code/test edits; git diff --check PASS.
+Result: verified within offline test scope; full build, integration, browser and live model quality unverified.

@@ -1,0 +1,1738 @@
+{
+  "checkpoints": [
+    {
+      "activeDocumentIds": [
+        "f464d19c9cb88",
+        "f15b50f9857ef"
+      ],
+      "checkpoint": 1,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 3 units occupied by the tenants listed; only account ending 7453 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2025-01-01/2025-12-31",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete July 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-07",
+            "subject": "Juniper Loom Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fbf47f089d3dd"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-08",
+            "subject": "Juniper Loom Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f093596343f77"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete September 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09",
+            "subject": "Juniper Loom Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f344b48098254"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f464d19c9cb88",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Juniper Loom Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Kira Mott. Fictional registry reference H01-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f464d19c9cb88",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f15b50f9857ef",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Juniper Loom Holdings LLC. Effective 2024-10-01.",
+                "Members: Kira Mott 60%; Davi Senn 40%. Total ownership 100%.",
+                "Manager: Kira Mott. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Kira Mott; member signature /s/ Davi Senn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f15b50f9857ef",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f15b50f9857ef",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Juniper Loom Holdings LLC. Effective 2024-10-01.",
+                "Members: Kira Mott 60%; Davi Senn 40%. Total ownership 100%.",
+                "Manager: Kira Mott. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Kira Mott; member signature /s/ Davi Senn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f15b50f9857ef",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f464d19c9cb88",
+        "f15b50f9857ef",
+        "fbf47f089d3dd",
+        "f344b48098254"
+      ],
+      "checkpoint": 2,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef",
+              "fbf47f089d3dd",
+              "f344b48098254"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef",
+              "fbf47f089d3dd",
+              "f344b48098254"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef",
+              "fbf47f089d3dd",
+              "f344b48098254"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 3 units occupied by the tenants listed; only account ending 7453 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef",
+              "fbf47f089d3dd",
+              "f344b48098254"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2025-01-01/2025-12-31",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef",
+              "fbf47f089d3dd",
+              "f344b48098254"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Juniper Loom"
+          },
+          "missingDocumentIds": [
+            "fe9718b5a12a6"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fbf47f089d3dd",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Juniper Loom Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7453.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "fbf47f089d3dd",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Juniper Loom Holdings LLC. Account ending 7453. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fbf47f089d3dd",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fbf47f089d3dd",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f464d19c9cb88",
+              "f15b50f9857ef",
+              "fbf47f089d3dd",
+              "f344b48098254"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-08",
+            "subject": "Juniper Loom Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f093596343f77"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f344b48098254",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Juniper Loom Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7453.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f344b48098254",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Juniper Loom Holdings LLC. Account ending 7453. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f344b48098254",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f344b48098254",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f464d19c9cb88",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Juniper Loom Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Kira Mott. Fictional registry reference H01-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f464d19c9cb88",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f15b50f9857ef",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Juniper Loom Holdings LLC. Effective 2024-10-01.",
+                "Members: Kira Mott 60%; Davi Senn 40%. Total ownership 100%.",
+                "Manager: Kira Mott. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Kira Mott; member signature /s/ Davi Senn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f15b50f9857ef",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f15b50f9857ef",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Juniper Loom Holdings LLC. Effective 2024-10-01.",
+                "Members: Kira Mott 60%; Davi Senn 40%. Total ownership 100%.",
+                "Manager: Kira Mott. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Kira Mott; member signature /s/ Davi Senn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f15b50f9857ef",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f464d19c9cb88",
+        "f15b50f9857ef",
+        "fbf47f089d3dd",
+        "f344b48098254",
+        "fe9718b5a12a6",
+        "f093596343f77"
+      ],
+      "checkpoint": 3,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 2,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Juniper Studio; monthly base rent USD 3033; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Juniper Supply; monthly base rent USD 3273; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Juniper Atelier; monthly base rent USD 3513; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 2,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Juniper Studio; monthly base rent USD 3033; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Juniper Supply; monthly base rent USD 3273; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Juniper Atelier; monthly base rent USD 3513; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 3,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H01-101. Property: Juniper Loom; unit 101.",
+                "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3033.",
+                "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 4,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H01-102. Property: Juniper Loom; unit 102.",
+                "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3273.",
+                "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 5,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H01-103. Property: Juniper Loom; unit 103.",
+                "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3513.",
+                "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 4
+              }
+            ],
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 5
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 3 units occupied by the tenants listed; only account ending 7453 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Juniper Studio; monthly base rent USD 3033; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Juniper Supply; monthly base rent USD 3273; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Juniper Atelier; monthly base rent USD 3513; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 3,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H01-101. Property: Juniper Loom; unit 101.",
+                "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3033.",
+                "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 4,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H01-102. Property: Juniper Loom; unit 102.",
+                "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3273.",
+                "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 5,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H01-103. Property: Juniper Loom; unit 103.",
+                "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3513.",
+                "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 4
+              }
+            ],
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 5
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 6,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 117828; other income USD 0.",
+                "Operating expenses USD 39276; NOI USD 78552.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 6
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 7,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 88371; other income USD 0.",
+                "Operating expenses USD 29457; NOI USD 58914.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 7
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Juniper Studio; monthly base rent USD 3033; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Juniper Supply; monthly base rent USD 3273; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Juniper Atelier; monthly base rent USD 3513; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 3,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H01-101. Property: Juniper Loom; unit 101.",
+                "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3033.",
+                "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 4,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H01-102. Property: Juniper Loom; unit 102.",
+                "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3273.",
+                "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 5,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H01-103. Property: Juniper Loom; unit 103.",
+                "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3513.",
+                "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 6,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 117828; other income USD 0.",
+                "Operating expenses USD 39276; NOI USD 78552.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "fe9718b5a12a6",
+              "page": 7,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 88371; other income USD 0.",
+                "Operating expenses USD 29457; NOI USD 58914.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 4
+              }
+            ],
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 5
+              }
+            ],
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 6
+              }
+            ],
+            [
+              {
+                "documentId": "fe9718b5a12a6",
+                "page": 7
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fbf47f089d3dd",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Juniper Loom Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7453.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "fbf47f089d3dd",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Juniper Loom Holdings LLC. Account ending 7453. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fbf47f089d3dd",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fbf47f089d3dd",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f093596343f77",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Juniper Loom Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7453.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f093596343f77",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Juniper Loom Holdings LLC. Account ending 7453. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f093596343f77",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f093596343f77",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f344b48098254",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Juniper Loom Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7453.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f344b48098254",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Juniper Loom Holdings LLC. Account ending 7453. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f344b48098254",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f344b48098254",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f464d19c9cb88",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Juniper Loom Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Kira Mott. Fictional registry reference H01-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f464d19c9cb88",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f15b50f9857ef",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Juniper Loom Holdings LLC. Effective 2024-10-01.",
+                "Members: Kira Mott 60%; Davi Senn 40%. Total ownership 100%.",
+                "Manager: Kira Mott. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Kira Mott; member signature /s/ Davi Senn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f15b50f9857ef",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f15b50f9857ef",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Juniper Loom Holdings LLC. Effective 2024-10-01.",
+                "Members: Kira Mott 60%; Davi Senn 40%. Total ownership 100%.",
+                "Manager: Kira Mott. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Kira Mott; member signature /s/ Davi Senn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f15b50f9857ef",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    }
+  ],
+  "crossDocumentArithmetic": {
+    "annualBaseRent": 117828,
+    "calculation": "2025: sum original monthly rents *12. 2026: original *9 plus amendment 1 uplift for April-September and amendment 2 uplift for July-September when applicable.",
+    "currentMonthlyRent": 9819,
+    "currentPeriodBaseRent": 88371
+  },
+  "roles": {
+    "annual": "ff6f79b564b4d",
+    "bank7": "fbf47f089d3dd",
+    "bank8": "f093596343f77",
+    "bank9": "f344b48098254",
+    "current": "f962bb18ef1e7",
+    "formation": "f464d19c9cb88",
+    "governing": "f15b50f9857ef",
+    "income_bundle": "fe9718b5a12a6",
+    "leases": "f0db90ec5efdd",
+    "roll": "fd24848d5cf71"
+  },
+  "semanticReviewRequired": true,
+  "sourcePages": {
+    "f093596343f77": [
+      {
+        "lines": [
+          "Holder: Juniper Loom Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7453.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Juniper Loom Holdings LLC. Account ending 7453. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f0db90ec5efdd": [
+      {
+        "lines": [
+          "Lease H01-101. Property: Juniper Loom; unit 101.",
+          "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3033.",
+          "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H01-102. Property: Juniper Loom; unit 102.",
+          "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3273.",
+          "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H01-103. Property: Juniper Loom; unit 103.",
+          "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Atelier.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3513.",
+          "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      }
+    ],
+    "f15b50f9857ef": [
+      {
+        "lines": [
+          "Entity: Juniper Loom Holdings LLC. Effective 2024-10-01.",
+          "Members: Kira Mott 60%; Davi Senn 40%. Total ownership 100%.",
+          "Manager: Kira Mott. Manager may execute refinancing documents for this company.",
+          "Member signature /s/ Kira Mott; member signature /s/ Davi Senn; dated 2024-10-01."
+        ],
+        "title": "Operating agreement"
+      }
+    ],
+    "f344b48098254": [
+      {
+        "lines": [
+          "Holder: Juniper Loom Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7453.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Juniper Loom Holdings LLC. Account ending 7453. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f464d19c9cb88": [
+      {
+        "lines": [
+          "Entity: Juniper Loom Holdings LLC. Entity type: limited liability company.",
+          "Formed 2024-10-01. Organizer: Kira Mott. Fictional registry reference H01-REG.",
+          "This document establishes the named entity; it does not itself establish current manager authority."
+        ],
+        "title": "Certificate of formation"
+      }
+    ],
+    "f962bb18ef1e7": [
+      {
+        "lines": [
+          "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 88371; other income USD 0.",
+          "Operating expenses USD 29457; NOI USD 58914.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "fbf47f089d3dd": [
+      {
+        "lines": [
+          "Holder: Juniper Loom Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7453.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Juniper Loom Holdings LLC. Account ending 7453. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fd24848d5cf71": [
+      {
+        "lines": [
+          "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Juniper Studio; monthly base rent USD 3033; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Juniper Supply; monthly base rent USD 3273; lease 2025-01-01 to 2029-12-31.",
+          "Unit 103: Juniper Atelier; monthly base rent USD 3513; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      }
+    ],
+    "fe9718b5a12a6": [
+      {
+        "lines": [
+          "Page 2: rent roll. Pages 3-5: leases. Page 6: prior year. Page 7: current period."
+        ],
+        "title": "Income binder contents"
+      },
+      {
+        "lines": [
+          "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Juniper Studio; monthly base rent USD 3033; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Juniper Supply; monthly base rent USD 3273; lease 2025-01-01 to 2029-12-31.",
+          "Unit 103: Juniper Atelier; monthly base rent USD 3513; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      },
+      {
+        "lines": [
+          "Lease H01-101. Property: Juniper Loom; unit 101.",
+          "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3033.",
+          "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H01-102. Property: Juniper Loom; unit 102.",
+          "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3273.",
+          "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H01-103. Property: Juniper Loom; unit 103.",
+          "Landlord: Juniper Loom Holdings LLC; tenant: Juniper Atelier.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3513.",
+          "Landlord signature: /s/ Kira Mott, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Davi Senn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 117828; other income USD 0.",
+          "Operating expenses USD 39276; NOI USD 78552.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      },
+      {
+        "lines": [
+          "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 88371; other income USD 0.",
+          "Operating expenses USD 29457; NOI USD 58914.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "ff6f79b564b4d": [
+      {
+        "lines": [
+          "Property: Juniper Loom. Owner: Juniper Loom Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 117828; other income USD 0.",
+          "Operating expenses USD 39276; NOI USD 78552.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ]
+  },
+  "status": "provisional",
+  "version": "CRE-E2E-oracle.1"
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-detail",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "Here are your currently saved files (2 total):\n\n* **Rent roll.pdf**\n* **2025 operating statement.pdf**\n\nSaving a file confirms that it has been received, but it does not mean lender approval or acceptance. The contents must still be reviewed to ensure they satisfy the lender's requirements."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All stated file names match the inventory and the explanation of saved status aligns with system facts."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response lists both uploaded files by name and explicitly clarifies that saving does not imply lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The explanation of the subsequent review process is appropriate and no unauthorized actions or steps are forced."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is direct and contains no repetitive content."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 46,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 5376,
+  "elapsedMs": 9981
+}

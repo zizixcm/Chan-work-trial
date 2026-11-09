@@ -180,6 +180,20 @@ These requirements begin in M2. M1 must work without an AI key or model calls an
 - Turning AI back on does not silently reprocess existing files; offer an explicit analysis action.
 - AI or extraction failures preserve the upload and provide manual recovery. No borrower should be trapped waiting for the assistant.
 
+### Help: explanations and guided manual completion
+
+**Help is a core chat-agent capability.** Generalize any “Explain this” entry point to **Help**, with both explanations and actionable manual override. Successful automation can parse/identify documents, match them to requirements, and check completeness. If any stage fails, is unsupported, is uncertain, or is disputed, Help guides the borrower or an authorized customer support agent through completing the package manually. Do not require repeated unsuccessful AI retries before offering this path.
+
+- **Explain:** describe the selected requirement, processing result, evidence, uncertainty, and next step in plain language, using the current application context.
+- **Parsing / identification recovery:** preserve the saved original; help the human inspect it, supply or correct its identity and relevant facts, or upload a readable replacement. Ask only for information needed to proceed. Human-entered information must not be presented as successfully extracted or independently verified.
+- **Matching recovery:** help the human choose, add, or remove requirement links using existing saved files, including one-to-many and many-to-one relationships. Show the proposed change before applying it and preserve human corrections against repeated processing of unchanged evidence.
+- **Completeness recovery:** walk through the requirement criteria and linked evidence, record human assertions and unresolved gaps, and help add evidence, correct an interpretation, or explain an exception. A failed check means no reliable automated conclusion; it does not establish that evidence is missing. Manual completion can prepare a package for submission with disclosed exceptions; it cannot invent supporting evidence or grant lender acceptance.
+- **Human assistance:** retain the affected file, requirement, failed step, corrections, and remaining questions when a customer support agent assists. Support actions require application authorization and retain the actual human actor; this requirement does not grant support lender acceptance/waiver authority. Direct human escalation and messaging follow M3; the borrower’s manual path must remain available independently.
+
+Help should take the user to the relevant action and confirm saved results, not end with an explanation of why automation failed. Keep manual controls and non-AI guidance available when AI is off or unavailable. Record human decisions separately from automated results, with source/version, actor, reason, timestamp, and review status. Do not label a package complete while criteria or exceptions remain unresolved.
+
+Acceptance: exercise a parsing/identification failure, an incorrect or ambiguous match, and a failed or disputed completeness check. In each case, the user can open Help, understand the issue, perform the relevant manual action, refresh without losing it, and continue toward submission without a successful AI retry. Verify that corrections reach the reviewer, stale AI results do not overwrite them, and human assertions remain distinct from AI assessments and lender decisions. Repeat the manual journey with AI disabled. These are target acceptance checks, not an implementation claim.
+
 ### Generalized override
 
 For any agent finding, offer: **provide missing information**, **correct the interpretation**, **explain an exception**, or **ask the lender**. This applies to dates, entities, classification, numerical facts, missing pages, and conditional requirements, not just tax schedules.

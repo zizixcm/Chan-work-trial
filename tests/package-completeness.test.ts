@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {packageCompleteness} from '../lib/preparation/completeness';
+import type {PreparationInventory} from '../lib/preparation/service';
+import type {ProcessingResult} from '../lib/preparation/protocol';
+const inventory={requirements:[{requirementId:'r',collection:'borrower',definitionRevision:'1',evidenceRevision:'1',criteria:[{id:'c'}]}],pendingUploads:false} as PreparationInventory;
+const result={freshness:'current',requirements:[{requirementId:'r',definitionRevision:'1',evidenceRevision:'1',checks:[{criterionId:'c',state:'met',citationIds:['source']}],gaps:[]}],citations:[{citationId:'source'}],limitations:[],conflicts:[]} as unknown as ProcessingResult;
+test('package completeness requires all current criteria and supporting citations',()=>{
+ assert.equal(packageCompleteness(inventory,result).status,'complete');
+ assert.equal(packageCompleteness(inventory,null).status,'unknown');
+ assert.equal(packageCompleteness(inventory,{...result,freshness:'historical'}).status,'unknown');
+ assert.equal(packageCompleteness({...inventory,pendingUploads:true},result).status,'unknown');
+ assert.equal(packageCompleteness(inventory,{...result,citations:[]}).status,'unknown');
+ assert.equal(packageCompleteness(inventory,{...result,requirements:[]}).status,'unknown');
+ assert.equal(packageCompleteness({...inventory,requirements:[]},result).status,'unknown');
+ assert.equal(packageCompleteness(inventory,{...result,requirements:[{...result.requirements[0],evidenceRevision:'old'}]}).status,'unknown');
+ const gap={...result,requirements:[{...result.requirements[0],checks:[{...result.requirements[0].checks[0],state:'unmet' as const}]}]};
+ assert.equal(packageCompleteness(inventory,gap).status,'incomplete');
+ assert.equal(packageCompleteness(inventory,{...result,limitations:[{} as never]}).status,'unknown');
+ assert.equal(packageCompleteness(inventory,{...result,conflicts:[{} as never]}).status,'unknown');
+});

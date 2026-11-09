@@ -1,0 +1,90 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "f103456061297",
+    "f9c7159e3f5b1",
+    "fb8037fe234fe",
+    "f990bde92b501",
+    "f531f0d7e1784",
+    "f180e5ed9be4f",
+    "fa02adc1a80eb",
+    "ffb1d54c50ef5",
+    "f8a4700c81f6e",
+    "f942674fe7c1a",
+    "fd40c4495f2f4"
+  ],
+  "budgetInterrupt": {
+    "eligible": false,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7385",
+    "baseRents": [
+      2485,
+      2725
+    ],
+    "borrower": "Ember Landing Holdings LLC",
+    "currentRents": [
+      2485,
+      2725
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 0,
+    "manager": "Oren Valee",
+    "otherOwner": "Lysa Quill",
+    "property": "Ember Landing",
+    "tenants": [
+      "Ember Studio",
+      "Ember Supply"
+    ],
+    "units": [
+      "101",
+      "102"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 2 units occupied by the tenants listed; only account ending 7385 is requested. There are 0 lease amendments and 0 entity amendments.",
+      "uploadIds": [
+        "f103456061297",
+        "f9c7159e3f5b1",
+        "f942674fe7c1a",
+        "fd40c4495f2f4"
+      ]
+    },
+    {
+      "borrowerText": "Here is last year and the other records.",
+      "uploadIds": [
+        "f531f0d7e1784",
+        "f180e5ed9be4f",
+        "fa02adc1a80eb",
+        "ffb1d54c50ef5",
+        "f8a4700c81f6e",
+        "fb8037fe234fe"
+      ]
+    },
+    {
+      "borrowerText": "Here are the actual current-year results.",
+      "uploadIds": [
+        "f990bde92b501"
+      ]
+    }
+  ]
+}

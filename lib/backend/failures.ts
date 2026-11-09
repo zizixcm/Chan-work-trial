@@ -21,7 +21,10 @@ function retryAfter(headers: unknown, now: number): number | undefined {
 export function safeFailure(error: unknown, now = Date.now()): AnalysisFailure {
   if (error instanceof AnalysisFailure) return error;
   if (!error || typeof error !== 'object') return new AnalysisFailure('internal_error');
-  const e = error as {status?: unknown; statusCode?: unknown; responseHeaders?: unknown; code?: unknown};
+  const e = error as {status?: unknown; statusCode?: unknown; responseHeaders?: unknown; code?: unknown; id?: unknown};
+  // Mastra throws structured-output errors before the transport can return text.
+  // Match stable SDK identifiers, never raw error messages or response contents.
+  if (['STRUCTURED_OUTPUT_TRUNCATED','STRUCTURED_OUTPUT_OBJECT_UNDEFINED','STRUCTURED_OUTPUT_SCHEMA_VALIDATION_FAILED'].includes(String(e.id))) return new AnalysisFailure('invalid_output');
   const status = e.statusCode ?? e.status;
   if (status === 429) return new AnalysisFailure('rate_limited', retryAfter(e.responseHeaders, now));
   if (status === 401 || status === 403) return new AnalysisFailure('configuration_required');

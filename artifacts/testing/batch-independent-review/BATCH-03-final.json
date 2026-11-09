@@ -1,0 +1,92 @@
+{
+  "caseId": "BATCH-03",
+  "title": "Wrong reporting year and budget instead of actuals",
+  "reviewer": "coordinating chat, independent actual-output and gold review",
+  "artifact": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v2/artifacts/testing/batch-live-03-r1/report.json",
+  "overallPassed": false,
+  "nativeReview": {
+    "provenance": "evaluator",
+    "status": "complete",
+    "checks": [
+      {
+        "id": "file_identity",
+        "passed": true
+      },
+      {
+        "id": "readability_grounded",
+        "passed": true
+      },
+      {
+        "id": "mapping_grounded",
+        "passed": true
+      },
+      {
+        "id": "document_errors_grounded",
+        "passed": true
+      },
+      {
+        "id": "all_files_covered",
+        "passed": true
+      },
+      {
+        "id": "all_requirements_covered",
+        "passed": true
+      },
+      {
+        "id": "saved_not_missing",
+        "passed": true
+      },
+      {
+        "id": "unknown_not_fulfilled",
+        "passed": true
+      },
+      {
+        "id": "partial_not_complete",
+        "passed": true
+      },
+      {
+        "id": "no_internal_ids",
+        "passed": true
+      },
+      {
+        "id": "no_approval_claim",
+        "passed": true
+      },
+      {
+        "id": "citations_valid",
+        "passed": true
+      },
+      {
+        "id": "completed_requirement_checkmark",
+        "passed": true
+      }
+    ]
+  },
+  "nativeReviewScope": "Only named checks; not a full semantic pass. Supplemental next-step and gold-state checks below remain independently binding. Citation references accepted by unchanged backend validator; semantic support reviewed against private gold.",
+  "nextStepsVerdict": "correct",
+  "supplementalNextStepsPassed": true,
+  "goldStateMismatches": [],
+  "notes": [
+    "All criterion states match gold; wrong2024 year and2026budget distinguished; correct actual periods requested.",
+    "Conditional amendment parenthetical is redundant after zero-amendment confirmation but does not require another upload."
+  ],
+  "durableAcknowledgementSeconds": 3.241,
+  "controllerCompletionSeconds": 26.08,
+  "finalReplyCommitSeconds": 26.05,
+  "reportCeilingSeconds": 20,
+  "latencyPassed": false,
+  "modelCalls": 4,
+  "costUSD": 0.034252,
+  "browserTimingMeasured": false,
+  "actualFinalReply": "The review of your uploaded files is complete. Here is what they established:\n\n* **f103456061297.pdf** satisfied the rent roll request as of September 30, 2026.\n* **f9c7159e3f5b1.pdf** provided fully executed leases for units 101 and 102, which match the rent roll and satisfy the leases request alongside your confirmed declaration of no lease amendments.\n* **f942674fe7c1a.pdf** covers operating figures for 2024 rather than the requested periods.\n* **fd40c4495f2f4.pdf** provides a budget projection rather than actual operating results for 2026.\n\n### Current Status\n\n* \u2705 **Current rent roll**\n* \u2705 **Leases and applicable amendments**\n\n### Outstanding Requests\n\n* **Property operating statements**: Actual operating results for Ember Landing covering 2025-01-01 through 2025-12-31, and actual year-to-date operating results covering 2026-01-01 through 2026-09-30 (budget projections and 2024 reports cannot be used).\n* **Borrower bank statements**: Complete statements for July 2026, August 2026, and September 2026 for account ending in 7385.\n* **Entity ownership and signing authority**: Formation certificate and operating agreement for Ember Landing Holdings LLC demonstrating 100% ownership and manager signing authority (along with any applicable entity amendments, though you declared zero).",
+  "costAttribution": {
+    "source": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v2/artifacts/testing/batch-live-03-r1/case-cost.json",
+    "callIds": [
+      "7617f860-b757-4070-b104-11bb85cdd6ec",
+      "95fee38b-6c1f-4b8d-8e6b-3dd267334138",
+      "ee1570c5-d550-4df2-b661-62367438da27",
+      "74f21109-bb59-4ec6-8669-89e0ae3353b7"
+    ],
+    "heldMicros": 0
+  }
+}

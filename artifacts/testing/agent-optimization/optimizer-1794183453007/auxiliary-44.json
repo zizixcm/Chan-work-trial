@@ -1,0 +1,96 @@
+{
+  "role": "judge",
+  "configurationDigest": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Synthetic Elm LLC",
+          "propertyName": "Elm Center"
+        },
+        "documents": [
+          {
+            "documentId": "e1",
+            "name": "Elm lease.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Executed lease",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Executed current lease"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "h1",
+          "sequence": "1",
+          "text": "Which files do you have?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null,
+        "activeRuns": [],
+        "pendingQuestions": []
+      },
+      "completeness": null
+    },
+    "rubric": "Name Elm lease.pdf as saved. No unsupported review, approval, missing-document or next-step claim.",
+    "action": {
+      "kind": "reply",
+      "message": "We have 1 saved file for your application:\n\n* **Elm lease.pdf**\n\nPlease note that having a file saved does not equate to lender review or approval."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately identifies Elm lease.pdf from the document inventory and correctly states general policy regarding file saving versus review or approval without asserting an unsupported review status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers which files are saved on the application."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No extraneous or inappropriate next steps were suggested."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetition in the message."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 367,
+    "total_tokens": 835,
+    "cost": 0.00172725,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00172725,
+      "upstream_inference_prompt_cost": 0.000351,
+      "upstream_inference_completions_cost": 0.00137625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 202,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.next/types/routes.d 2.ts(70,13): error TS2428: All declarations of 'PageProps' must have identical type parameters.
+.next/types/routes.d 2.ts(71,5): error TS2717: Subsequent property declarations must have the same type.  Property 'params' must be of type 'Promise<ParamMap[AppRoute]>', but here has type 'Promise<ParamMap[AppRoute]>'.
+.next/types/routes.d 2.ts(71,21): error TS2536: Type 'AppRoute' cannot be used to index type 'ParamMap'.
+.next/types/routes.d 2.ts(84,8): error TS2300: Duplicate identifier 'LayoutProps'.
+.next/types/routes.d 2.ts(101,13): error TS2428: All declarations of 'RouteContext' must have identical type parameters.
+.next/types/routes.d 2.ts(102,5): error TS2717: Subsequent property declarations must have the same type.  Property 'params' must be of type 'Promise<ParamMap[AppRouteHandlerRoute]>', but here has type 'Promise<ParamMap[AppRouteHandlerRoute]>'.
+.next/types/routes.d 2.ts(102,21): error TS2536: Type 'AppRouteHandlerRoute' cannot be used to index type 'ParamMap'.

@@ -1,0 +1,8 @@
+{
+  "lib/agents/runtime.ts": "cc606a87a78ccd436111366b28df09ce26aa7a1fc666c7d1c3af2652e698912b",
+  "scripts/mastra-evaluation-transport.ts": "1404aceb84a0640a14322ed45b5cdad7690d280a340e4cda92ffcf3ac4dfb720",
+  "lib/agents/reply-stream.ts": "60632b4ba12d859b7c4ff3da2925b85c4d9ee226f09001b07065cc4d217f88f3",
+  "lib/agents/borrower-service.ts": "dd600aa175d40d186bc2b8365cb308fea28a857717d3445a96bece50297ca8b7",
+  "tests/native-agents.test.ts": "e95e75085f71927f2d4dfdb087786a8312ad30f4acdd17cff1d088cf098654fc",
+  "tests/reply-stream.test.ts": "1a4847af9463f7877ac765fb1a7bdd116592e0b2580c5f3ea749abe03f9dc98e"
+}

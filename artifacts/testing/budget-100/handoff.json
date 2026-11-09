@@ -1,0 +1,14 @@
+{
+  "createdAt": "2026-11-09T02:04:29.235Z",
+  "authorization": "User requested $100 and publication in chat 01a1be07-827c-7053-a357-3191d700a136; explicitly authorized coordination with deployment owner.",
+  "files": {
+    "scripts/evaluation-ledger.mjs": "4e8762820999641ae3ee97f0d125dfbbbc9bc96070e00e36bec1ce1799a52683",
+    "scripts/borrower-agents-worker.ts": "30272ccfc29b0cc07c6ba7863140fb48bac7257b9bca39130d1ccfd0ae5bc9eb",
+    "tests/evaluation-budget-amendment.test.ts": "1cb288455da0e7f7c4e0fd45d702c036fbe8658fd457f73281e0a3ab9cf71b0a"
+  },
+  "quick": "PASS",
+  "focused": "4 PASS",
+  "full": "NOT RUN: shared preview on port 3001; deployment owner handling isolated checks",
+  "browser": "NOT RUN: no UI edits; pending deployment owner health verification",
+  "deployment": "Pending owner 01a1b986-f2db-7551-993b-905946b69c64"
+}

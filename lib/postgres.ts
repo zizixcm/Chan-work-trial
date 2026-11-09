@@ -1,3 +1,4 @@
+import { processorMode } from './preparation/ownership';
 import { createHash, randomUUID } from 'node:crypto';
 import type { PoolClient } from 'pg';
 import { pool } from './db';
@@ -39,7 +40,7 @@ export class PostgresRepository implements DocumentRepository, ReviewRepository 
     if(this.access.role==='lender')return publishedSnapshot(db,id);
     const application = (await db.query('SELECT id,borrower_name,property_name,address,transaction_type,requested_amount::float8,loi_reference,created_at FROM applications WHERE id=$1', [id])).rows[0];
     const requirements = (await db.query('SELECT id,application_id,title,category,purpose,period,owner,applicability,sort_order,criteria,collection,stage,condition,evidence_revision::text,definition_revision::text FROM requirements WHERE application_id=$1 AND lifecycle=\'active\' ORDER BY sort_order,id', [id])).rows;
-    const docs = (await db.query('SELECT id,application_id,original_name,content_type,size_bytes::float8,sha256,uploaded_by,created_at FROM documents WHERE application_id=$1 ORDER BY created_at DESC,id', [id])).rows;
+    const docs = (await db.query('SELECT id,application_id,original_name,content_type,size_bytes::float8,sha256,uploaded_by,created_at FROM documents WHERE application_id=$1 AND NOT EXISTS(SELECT 1 FROM draft_document_removals removed WHERE removed.application_id=documents.application_id AND removed.document_id=documents.id AND removed.restored_at IS NULL) ORDER BY created_at DESC,id', [id])).rows;
     const links = (await db.query('SELECT requirement_id,document_id FROM requirement_documents WHERE application_id=$1 AND unlinked_at IS NULL', [id])).rows;
     const documents = docs.map(d => ({ ...d, created_at: iso(d.created_at), requirement_ids: links.filter(l => l.document_id === d.id).map(l => l.requirement_id) }));
     const reviews = (await db.query("SELECT v.id,v.application_id,v.requirement_id,v.decision,v.message,v.document_ids,v.reviewer,v.created_at,(v.evidence_revision=r.evidence_revision AND v.definition_revision=r.definition_revision) AS is_current FROM requirement_reviews v JOIN requirements r ON r.id=v.requirement_id AND r.application_id=v.application_id WHERE v.application_id=$1  ORDER BY v.sequence DESC,v.id DESC", [id])).rows.map(({reviewer_user_id: _user,...r})=>({...r,created_at:iso(r.created_at),document_ids:JSON.parse(r.document_ids)}));
@@ -56,7 +57,7 @@ export class PostgresRepository implements DocumentRepository, ReviewRepository 
     return row ? {body: row.body, updated_at: iso(row.updated_at)} : null;
   }
   async requirement(id: string) { return this.tx(['borrower','lender'], async db=>this.access.role==='lender'?(await publishedSnapshot(db,this.access.applicationId)).requirements.find(r=>r.id===id):(await db.query('SELECT * FROM requirements WHERE id=$1 AND application_id=$2',[id,this.access.applicationId])).rows[0]); }
-  async document(id: string): Promise<DocumentRecord | undefined> { return this.tx(['borrower','lender'], async db=>{if(this.access.role==='lender' && !(await publishedSnapshot(db,this.access.applicationId)).documents.some(d=>d.id===id))return undefined;return (await db.query('SELECT * FROM documents WHERE id=$1 AND application_id=$2',[id,this.access.applicationId])).rows[0];}); }
+  async document(id: string): Promise<DocumentRecord | undefined> { return this.tx(['borrower','lender'], async db=>{if(this.access.role==='borrower'&&(await db.query('SELECT 1 FROM draft_document_removals WHERE application_id=$1 AND document_id=$2 AND restored_at IS NULL',[this.access.applicationId,id])).rowCount)return undefined;if(this.access.role==='lender' && !(await publishedSnapshot(db,this.access.applicationId)).documents.some(d=>d.id===id))return undefined;return (await db.query('SELECT * FROM documents WHERE id=$1 AND application_id=$2',[id,this.access.applicationId])).rows[0];}); }
   async byChecksum(hash: string): Promise<DocumentRecord | undefined> { return this.tx(['borrower'], async db=>(await db.query('SELECT * FROM documents WHERE sha256=$1 AND application_id=$2',[hash,this.access.applicationId])).rows[0]); }
   async insert(d: DocumentRecord, requirementId: string) { return this.insertMany(d, requirementId ? [requirementId] : []); }
   async insertMany(d: DocumentRecord, requirementIds: string[]) {
@@ -80,7 +81,7 @@ export class PostgresRepository implements DocumentRepository, ReviewRepository 
       if(member)await db.query("UPDATE upload_batch_members SET state='saved',document_id=$3 WHERE batch_id=$1 AND id=$2",[this.uploadBatch!.batchId,this.uploadBatch!.memberId,d.id]);
       await resolveSavedBatchMembers(db,this.access,d.id,d.sha256);
       const job=await enqueueForDocument(db,this.access.applicationId,this.access.userId,d.id);
-      if(!job)for(const requirementId of requirementIds)await enqueueForRequirement(db,this.access.applicationId,this.access.userId,requirementId);
+      if(!job&&(await processorMode(db,this.access.applicationId)).mode==='baseline')for(const requirementId of requirementIds)await enqueueForRequirement(db,this.access.applicationId,this.access.userId,requirementId);
     });
   }
   /** Change only this request's current mapping; never delete the file or history. */
@@ -88,7 +89,7 @@ export class PostgresRepository implements DocumentRepository, ReviewRepository 
     return this.tx(['borrower'], async db => {
       const app = this.access.applicationId;
       const requirement = (await db.query('SELECT evidence_revision::text,lifecycle,collection FROM requirements WHERE application_id=$1 AND id=$2', [app, requirementId])).rows[0];
-      const document = (await db.query('SELECT id FROM documents WHERE application_id=$1 AND id=$2', [app, documentId])).rows[0];
+      const document = (await db.query('SELECT id FROM documents WHERE application_id=$1 AND id=$2 AND NOT EXISTS(SELECT 1 FROM draft_document_removals removed WHERE removed.application_id=documents.application_id AND removed.document_id=documents.id AND removed.restored_at IS NULL)', [app, documentId])).rows[0];
       if (!requirement || !document) throw new UploadError('Document or request not found.', 404);
       if(requirement.collection==='lender')throw new UploadError('Your lender supplies this document.',403);
       if (requirement.lifecycle !== 'active') throw new UploadError('This request is no longer active. Refresh before changing its documents.', 409);
@@ -113,6 +114,31 @@ export class PostgresRepository implements DocumentRepository, ReviewRepository 
         [randomUUID(),app,this.access.displayName,linked ? 'document.linked' : 'document.unlinked',documentId,this.access.userId,
           JSON.stringify({requirement_id:requirementId,document_id:documentId,previously_linked:active,linked})]);
       return { changed: true, snapshot: await this.readSnapshot(db) };
+    });
+  }
+  /** Remove only the live draft; immutable bytes and published packages survive. */
+  async removeDocument(documentId:string,expectedContentRevision:string) {
+    return this.tx(['borrower'],async db=>{
+      const app=this.access.applicationId;
+      if(!(await db.query('SELECT 1 FROM documents WHERE application_id=$1 AND id=$2',[app,documentId])).rowCount)throw new UploadError('Document not found.',404);
+      if((await db.query('SELECT 1 FROM draft_document_removals WHERE application_id=$1 AND document_id=$2 AND restored_at IS NULL',[app,documentId])).rowCount)return {changed:false,snapshot:await this.readSnapshot(db)};
+      const current=(await db.query('SELECT content_revision::text FROM applications WHERE id=$1',[app])).rows[0];
+      if(current.content_revision!==expectedContentRevision)throw new UploadError('The application changed. Refresh before removing this file.',409);
+      const links=(await db.query('SELECT requirement_id FROM requirement_documents WHERE application_id=$1 AND document_id=$2 AND unlinked_at IS NULL',[app,documentId])).rows;
+      await db.query('INSERT INTO draft_document_removals(application_id,document_id,removed_by) VALUES($1,$2,$3) ON CONFLICT(application_id,document_id) DO UPDATE SET removed_by=excluded.removed_by,removed_at=clock_timestamp(),restored_at=NULL,restored_by=NULL',[app,documentId,this.access.userId]);
+      await db.query(`INSERT INTO draft_document_selections(application_id,document_id,included,updated_by_user_id) VALUES($1,$2,false,$3)
+        ON CONFLICT(application_id,document_id) DO UPDATE SET included=false,updated_by_user_id=excluded.updated_by_user_id,updated_at=now()`,[app,documentId,this.access.userId]);
+      await db.query('UPDATE requirement_documents SET unlinked_at=now() WHERE application_id=$1 AND document_id=$2 AND unlinked_at IS NULL',[app,documentId]);
+      for(const link of links)await db.query('INSERT INTO document_match_rejections(application_id,document_id,requirement_id,rejected_by) VALUES($1,$2,$3,$4) ON CONFLICT DO NOTHING',[app,documentId,link.requirement_id,this.access.userId]);
+      await db.query(`UPDATE analysis_jobs SET state='cancelled',cancel_requested=true,token=token+1,slot=NULL,lease_expires_at=NULL,revision=revision+1,updated_at=now()
+        WHERE application_id=$1 AND consent_scope='borrower' AND state IN ('queued','running','retry_wait','blocked')
+          AND (document_id=$2 OR input->'documents' @> $3::jsonb)`,[app,documentId,JSON.stringify([{id:documentId}])]);
+      for(const link of links) {
+        const r=(await db.query("SELECT 1 FROM requirements WHERE application_id=$1 AND id=$2 AND lifecycle='active' AND collection='borrower'",[app,link.requirement_id])).rowCount;
+        if(r)await enqueueForRequirement(db,app,this.access.userId,link.requirement_id);
+      }
+      await this.audit(db,'document.removed_from_draft',documentId);
+      return {changed:true,snapshot:await this.readSnapshot(db)};
     });
   }
   async saveReview(requirementId: string, decision: RequirementReview['decision'], message: string, documentIds: string[], expectedReviewId: string | null, expectedSubmissionId?: string) {

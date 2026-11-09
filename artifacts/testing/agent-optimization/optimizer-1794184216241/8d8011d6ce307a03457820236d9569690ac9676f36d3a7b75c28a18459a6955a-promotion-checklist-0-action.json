@@ -1,0 +1,51 @@
+{
+  "candidateId": "8d8011d6ce307a03457820236d9569690ac9676f36d3a7b75c28a18459a6955a",
+  "input": {
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "messages": [
+      {
+        "id": "production-check",
+        "sequence": "1",
+        "text": "What document do I need to upload?"
+      }
+    ],
+    "replies": [],
+    "processing": {
+      "currentResult": null,
+      "activeRuns": [],
+      "pendingQuestions": []
+    },
+    "completeness": null
+  },
+  "action": {
+    "kind": "reply",
+    "message": "You currently need to upload the following document:\n\n* **Rent roll**: Current rent roll for Example Plaza\n\nPlease upload a current copy of your rent roll to get started."
+  },
+  "actualMicros": 2480,
+  "replyText": "You currently need to upload the following document:\n\n* **Rent roll**: Current rent roll for Example Plaza\n\nPlease upload a current copy of your rent roll to get started.",
+  "executed": true
+}

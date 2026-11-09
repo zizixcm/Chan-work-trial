@@ -1,0 +1,10 @@
+Reviewed default borrower prompt: 28/28 live responses passed independent v3 re-scoring.
+All five reviewer calibration cases passed. The v2 result (27/28) is preserved; its sole false-negative conflated an explicitly active assistant investigation with lender review. No agent response or production prompt changed during re-scoring.
+Quick tests: 170 tests + TypeScript PASS.
+Exact v11-relative patch: ../optimizer-1794184216241/production-prompt.patch
+Expected production lib/agents/definitions.ts SHA256: 9e07ee93f18825ac71876fc3a733580879a73cafd147b093285083fc2c399901
+Copy artifact production-definitions.ts.txt only if base hash matches manifest. Do not copy optimizer injection API into release.
+Validated root borrowerInstructions exactly match patched release borrowerInstructions.
+No model/tool/transport/investigator/schema/data changes in this patch.
+Global confirmed API charges $0.712752, retained uncertain reservation $1.20, accounted total $1.912752 of $20.
+Deployment/full-check/browser verification pending release owner.

@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "8d8011d6ce307a03457820236d9569690ac9676f36d3a7b75c28a18459a6955a",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": true
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "What's been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Identify both saved files and distinguish pending uploads from saved files. Briefly suggest checking unfinished uploads; do not ask to re-upload saved files or claim all files have been considered.",
+    "action": {
+      "kind": "reply",
+      "message": "You have 2 saved documents:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nPlease note that having documents saved does not equate to lender review or approval. Other uploads are still in progress, so please check your upload progress to ensure everything finishes uploading."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All claims are supported by the input inventory, correctly identifying the two active documents and noting that other uploads are pending based on pendingUploads=true. The disclaimer about saved files explains policy rather than asserting an unverified status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers what has been uploaded by listing the two saved documents and clarifying that additional uploads are still pending."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Suggesting that the user check their upload progress to ensure in-progress uploads finish aligns with the pendingUploads status and the rubric requirements without requesting re-uploads."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is clear, concise, and does not repeat information."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 536,
+    "completion_tokens": 570,
+    "total_tokens": 1106,
+    "cost": 0.0025395,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0025395,
+      "upstream_inference_prompt_cost": 0.000402,
+      "upstream_inference_completions_cost": 0.0021375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 351,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

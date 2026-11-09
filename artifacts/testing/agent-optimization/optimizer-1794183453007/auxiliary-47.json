@@ -1,0 +1,96 @@
+{
+  "role": "judge",
+  "configurationDigest": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Synthetic Elm LLC",
+          "propertyName": "Elm Center"
+        },
+        "documents": [
+          {
+            "documentId": "e1",
+            "name": "Elm lease.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Executed lease",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Executed current lease"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": true
+      },
+      "messages": [
+        {
+          "id": "h1",
+          "sequence": "1",
+          "text": "Is my upload done?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null,
+        "activeRuns": [],
+        "pendingQuestions": []
+      },
+      "completeness": null
+    },
+    "rubric": "Distinguish the saved Elm lease.pdf from other unfinished uploads. Suggest checking upload progress; do not call the saved lease pending or request re-upload.",
+    "action": {
+      "kind": "reply",
+      "message": "Your upload is not completely finished yet:\n\n* **Saved file**: **Elm lease.pdf** is saved (as a general note, saving a file does not equate to review or approval).\n* **Pending uploads**: Additional uploads are still in progress.\n\n**Next step**: Please check your upload progress to make sure your remaining files finish uploading."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements are fully supported by the input data. The note regarding review/approval correctly states general policy rather than claiming an unverified status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "Directly and clearly answers whether the upload is done by noting that while Elm lease.pdf is saved, other uploads remain pending."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Appropriately suggests checking upload progress for the remaining files without requesting a re-upload or marking the saved file as pending."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no redundant or repeated text."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 511,
+    "completion_tokens": 725,
+    "total_tokens": 1236,
+    "cost": 0.003102,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003102,
+      "upstream_inference_prompt_cost": 0.00038325,
+      "upstream_inference_completions_cost": 0.00271875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 530,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

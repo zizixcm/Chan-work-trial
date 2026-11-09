@@ -1,0 +1,504 @@
+{
+  "schemaVersion": "two-agent-compatibility.1",
+  "date": "2026-11-08",
+  "status": "source_audit_execution_pending",
+  "scope": "32 turn seeds,16 task families,12 journeys,4 overlays; format variants separately pending",
+  "cases": [
+    {
+      "caseId": "B01",
+      "title": "New borrower asks what is needed",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B02",
+      "title": "Qualifying historical evidence already saved/unlinked",
+      "role": "borrower",
+      "status": "revision_required",
+      "note": "New upload invalidates package currentResult. Borrower can acknowledge active saved files and historical replies, then delegate source revalidation; it cannot claim absent structured historical findings are current.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B03",
+      "title": "New durable upload not assessed",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B04",
+      "title": "Upload in flight",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B05",
+      "title": "Investigation already running on same dependencies",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B06",
+      "title": "Validated partially fulfilled bank request",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B07",
+      "title": "Current result unknown because scan obscured",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B08",
+      "title": "Wrong entity or period with a rejected match",
+      "role": "borrower",
+      "status": "fixture_constraint",
+      "note": "Human rejection must be in authorized borrower message/context; backend rejection table alone is not visible to this agent.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B09",
+      "title": "Renamed identical duplicate",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B10",
+      "title": "Specialist asks focused clarification",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B11",
+      "title": "Borrower gives exact answer to current question",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Forward exact current answer with actual pending question and source message IDs.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B12",
+      "title": "Borrower reply incomplete or \u201cnot sure\u201d",
+      "role": "borrower",
+      "status": "revision_required",
+      "note": "Forward incomplete answer verbatim through answer_investigation_question; specialist determines remaining uncertainty. Do not silently replace answer with another question.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B13",
+      "title": "Evidence changes while a result is arriving",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B14",
+      "title": "Reader/budget blocked; independent findings remain",
+      "role": "borrower",
+      "status": "fixture_constraint",
+      "note": "Only validated published findings can be described as established; raw reader observations are not borrower-visible findings.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B15",
+      "title": "Backend says complete; user asks whether loan is approved",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "B16",
+      "title": "Borrower/document asks to waive, delete, auto-link, or disregard rules",
+      "role": "borrower",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I01",
+      "title": "Unknown file type/structure",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I02",
+      "title": "Clean native evidence already observed",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I03",
+      "title": "Search hit points to evidence",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I04",
+      "title": "Long scan, useful contents",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I05",
+      "title": "Identity established but execution/economics late",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I06",
+      "title": "OCR ambiguity in material amount/name",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I07",
+      "title": "File clearly relevant but incomplete",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I08",
+      "title": "Wrong property/entity/account/period",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I09",
+      "title": "Original lease/roll differ, amendment missing",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I10",
+      "title": "Current amendment explains rent; historical chain incomplete",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I11",
+      "title": "Duplicate cannot replace a distinct missing component",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I12",
+      "title": "Prior evidence active; newer copy inactive",
+      "role": "investigator",
+      "status": "fixture_constraint",
+      "note": "Investigator sees documentId/name/contentType/active; do not require unavailable version timestamps. Use explicit active flag and source-bound observations.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I13",
+      "title": "Borrower assertion/no-amendment applicability",
+      "role": "investigator",
+      "status": "fixture_constraint",
+      "note": "Only R2.chain seeded confirmationPolicy=no_amendments. Exact same-actor message assertion citation, never executed lease proof.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I14",
+      "title": "Focused scope requires other authorized files",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I15",
+      "title": "Reading limit reached before sufficient coverage",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "I16",
+      "title": "Embedded prompt injection or malicious tool instructions",
+      "role": "investigator",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T01",
+      "title": "Identify document and candidate request",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T02",
+      "title": "Fulfill one simple rent-roll criterion",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T03",
+      "title": "Establish three-month account coverage",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T04",
+      "title": "Reconcile lease chain and roll",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T05",
+      "title": "Establish annual and current actual results",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T06",
+      "title": "Establish company documentary support",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T07",
+      "title": "Find late evidence efficiently",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T08",
+      "title": "Resolve unreadable evidence",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T09",
+      "title": "Reuse historical saved evidence",
+      "role": "controller_task",
+      "status": "fixture_constraint",
+      "note": "Reuse observed bytes through PreparationService.accept and expose priorAssessment as historical; do not seed a current global result after new evidence.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T10",
+      "title": "Handle many-to-many mapping",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T11",
+      "title": "Ask, receive and apply clarification",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T12",
+      "title": "Reassess only changed dependencies",
+      "role": "controller_task",
+      "status": "fixture_constraint",
+      "note": "Focused delegation still publishes all active criteria; revalidate prior sources and preserve byte-identical observations, not unsafe automatic merge.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T13",
+      "title": "Pause and resume investigation",
+      "role": "controller_task",
+      "status": "controller_gap",
+      "note": "Reading-limit block currently produces waiting_input without the overlay-required partial assessment. Retry can reuse observations; partial-result expectation needs controller work.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T14",
+      "title": "Recover from bounded reader/provider failure",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T15",
+      "title": "Produce borrower progress/final summary",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Use actual controller-generated context and native tool schema; fixture and executable case validation remain pending.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "T16",
+      "title": "Aggregate full package",
+      "role": "controller_task",
+      "status": "design_compatible",
+      "note": "Backend packageCompleteness owns aggregate. Unknown-only remains unknown; known unmet is incomplete; no result/pending/limitations prevent complete.",
+      "fixtureStatus": "not_yet_instantiated"
+    },
+    {
+      "caseId": "D01",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "D02",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "D03",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "D04",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "D05",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "D06",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "D07",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "D08",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "H01",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "H02",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "H03",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "H04",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "DEV-HISTORY",
+      "role": "both_agents_and_controller",
+      "status": "driver_verification_pending",
+      "note": "Both production agents/controllers, real readers and actual persisted state; no oracle/model self-report substitution.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "DEV-BUDGET",
+      "role": "both_agents_and_controller",
+      "status": "controller_gap",
+      "note": "Partial result at reading limit and deterministic in-progress capture not yet supported by driver/controller combination; must not claim passed.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "DEV-UPLOAD-RACE",
+      "role": "both_agents_and_controller",
+      "status": "driver_gap",
+      "note": "Must inject concurrent stale worker with actual revision fence and captured rejected effect; serial arrival simulation alone is insufficient.",
+      "fixtureStatus": "independently_admitted"
+    },
+    {
+      "caseId": "DEV-DIALOGUE",
+      "role": "both_agents_and_controller",
+      "status": "driver_gap",
+      "note": "Capture each response boundary without manufacturing borrower utterances or forcing agent questions; raw questions/answers retain actual IDs.",
+      "fixtureStatus": "independently_admitted"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "a3061ef4884aaeb6db443133d1919f69bc75ca33a36e94c758625a9e53a39c1a",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "Has my rent roll been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Answer yes and identify Rent roll.pdf as saved. Do not list unrelated requirements or infer that the rent roll was checked or accepted. No next step is necessary.",
+    "action": {
+      "kind": "reply",
+      "message": "Yes, **Rent roll.pdf** has been uploaded and is saved in your files."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately identifies Rent roll.pdf as uploaded and saved based on the documents inventory without making any unsupported claims about review status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the user's question by confirming that the rent roll has been uploaded and naming the file."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No next steps were required or provided."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no repetitive information."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 489,
+    "completion_tokens": 394,
+    "total_tokens": 883,
+    "cost": 0.00184425,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00184425,
+      "upstream_inference_prompt_cost": 0.00036675,
+      "upstream_inference_completions_cost": 0.0014775
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 222,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,5 @@
+Release unified-pilot-20261108-v15 was promoted before v16 per requested sequence.
+Changes: both agents Gemini3.8Flash LOW reasoning/24k output; terse empty inventory answer; PDF first-page identification without redundant inspection; report-only relevance does not require mapping proposal. Existing lender-status guard and streaming retained.
+Verification: full8 isolated stages + focused6 PASS; native outbound reasoning assertions LOW for borrower/investigator. Source manifest867 matched. HTTP3102/4111 both200. Before/after promotion counts unchanged:3applications,8documents,14requirements,39turns,2conversations,33messages; work idle and no provider holds.
+Limits: focused eval was one sample/case, not full optimization. Requested first-useful3.651s exceeded3s goal; uploaded response focus and one-upload report precision had unresolved quality misses; one-upload16.229s exceeded10–15s aim though under20s ceiling. Save-to-receipt<=1s unmeasured. v16 addresses detail wording and upload triggering, not a proven solution to all latency/quality targets.
+Superseded by v16 on same local URLs. Existing data, registry and shared budget preserved; no public deployment.

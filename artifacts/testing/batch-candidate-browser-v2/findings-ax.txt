@@ -1,0 +1,3 @@
+Browser tab: 10, Title: "Borrower Portal | Proximitty", URL: "http://127.0.0.1:3113/".
+There has been no change in the accessibility tree.
+The focused UI element is 128 button (expanded) Current completeness findings, Secondary Actions: Collapse

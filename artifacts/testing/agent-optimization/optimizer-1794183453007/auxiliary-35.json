@@ -1,0 +1,98 @@
+{
+  "role": "judge",
+  "configurationDigest": "a1b7284c382c1063bc446deaac20ffbeddeaea77f1684f29990cadbe2564c971",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Synthetic Elm LLC",
+          "propertyName": "Elm Center"
+        },
+        "documents": [
+          {
+            "documentId": "e1",
+            "name": "Elm lease.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Executed lease",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Executed current lease"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "h1",
+          "sequence": "1",
+          "text": "Which files do you have?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null,
+        "activeRuns": [],
+        "pendingQuestions": []
+      },
+      "completeness": null
+    },
+    "rubric": "Name Elm lease.pdf as saved. No unsupported review, approval, missing-document or next-step claim.",
+    "action": {
+      "kind": "reply",
+      "message": "We currently have 1 saved file on record:\n\n* **Elm lease.pdf**\n\nPlease note that saved files have not yet been reviewed or approved by the lender."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": false,
+      "reason": "The claim that 'saved files have not yet been reviewed or approved by the lender' asserts an actual review status for the documents, which is not established by the inventory data."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response accurately identifies 'Elm lease.pdf' as the saved file on record."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No unauthorized or inappropriate next steps were offered."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text."
+    },
+    "criticalFailures": [
+      "invented_evidence"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 676,
+    "total_tokens": 1144,
+    "cost": 0.002886,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002886,
+      "upstream_inference_prompt_cost": 0.000351,
+      "upstream_inference_completions_cost": 0.002535
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 492,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,7 @@
+Focused four-case tuning candidate
+Snapshot: /Users/chanrao/Developer/proximity-releases/small-start-tuning-20261108-v2
+Manifest SHA256: 0ca91eea20ec6696ef9a0fb9901e55a2016697d4122a0c74edb89a44dc5ec0c5
+Native model3.8Flash/24k; use borrower-low for EMPTY-REQUESTED, EMPTY-UPLOADED, EMPTY-MISSING and both-low for ONE-UPLOAD. Same facts, documents, goals and quality/latency expectations. Changes are three general agent instructions, no policy waiver, no prescribed tool sequence, no pilot changes.
+Quick165unit+TypeScript PASS: focused-prompt-quick.log. Six previouslyverified nativeguard/latencyscorer tests retained. Existing4-caseoffline wiring verified on unchangedinterfaces.
+Await exclusiveownerwindow afterv14health. New output directories: artifacts/testing/small-live-focused-low-<case>. Run node --import tsx scripts/evaluate-small-start.ts with SMALL_EVAL_EXECUTION=live and appropriate SMALL_EVAL_CASE/PROFILE/OUTPUT_DIR; existingledger/batch/key/caps only.
+No publication/configpromotion is implied. Restore currentpilotworker between cases and returnwindow explicitly. UIreceipt latency remains separatebrowsercheck, not claimed byDBfixture.

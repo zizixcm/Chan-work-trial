@@ -1,0 +1,2391 @@
+{
+  "checkpoints": [
+    {
+      "activeDocumentIds": [
+        "f8d1144ce753c",
+        "f3821243f8687",
+        "f3ea3694aec15",
+        "fe50f7c40bd97"
+      ],
+      "checkpoint": 1,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f3821243f8687",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3307.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H03-102. Property: Lumen Forge; unit 102.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3547.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 3,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H03-103. Property: Lumen Forge; unit 103.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3787.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 3
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f8d1144ce753c",
+              "f3821243f8687",
+              "f3ea3694aec15",
+              "fe50f7c40bd97"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.chain",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Lumen Forge"
+          },
+          "missingDocumentIds": [
+            "f6ee02caa2a4a",
+            "f928d4ead82c6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Lumen Forge"
+          },
+          "missingDocumentIds": [
+            "f6ee02caa2a4a",
+            "f928d4ead82c6"
+          ],
+          "reason": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3307.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-102. Property: Lumen Forge; unit 102.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3547.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 3,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-103. Property: Lumen Forge; unit 103.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3787.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 3
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f3ea3694aec15",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 127692; other income USD 0.",
+                "Operating expenses USD 42564; NOI USD 85128.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f3ea3694aec15",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe50f7c40bd97",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 96894; other income USD 0.",
+                "Operating expenses USD 32298; NOI USD 64596.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe50f7c40bd97",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Lumen Forge"
+          },
+          "missingDocumentIds": [
+            "f6ee02caa2a4a",
+            "f928d4ead82c6"
+          ],
+          "reason": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3307.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-102. Property: Lumen Forge; unit 102.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3547.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 3,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-103. Property: Lumen Forge; unit 103.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3787.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3ea3694aec15",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 127692; other income USD 0.",
+                "Operating expenses USD 42564; NOI USD 85128.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "fe50f7c40bd97",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 96894; other income USD 0.",
+                "Operating expenses USD 32298; NOI USD 64596.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "f3ea3694aec15",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe50f7c40bd97",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f8d1144ce753c",
+              "f3821243f8687",
+              "f3ea3694aec15",
+              "fe50f7c40bd97"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete July 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-07",
+            "subject": "Lumen Forge Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fe1ecc1e00c99"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f8d1144ce753c",
+              "f3821243f8687",
+              "f3ea3694aec15",
+              "fe50f7c40bd97"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-08",
+            "subject": "Lumen Forge Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fd5fa6474cdbc"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f8d1144ce753c",
+              "f3821243f8687",
+              "f3ea3694aec15",
+              "fe50f7c40bd97"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete September 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09",
+            "subject": "Lumen Forge Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fa28fbf4a529a"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f8d1144ce753c",
+              "f3821243f8687",
+              "f3ea3694aec15",
+              "fe50f7c40bd97"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Formation certificate identifies the declared borrower.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Lumen Forge Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f51544d6f7564"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f8d1144ce753c",
+              "f3821243f8687",
+              "f3ea3694aec15",
+              "fe50f7c40bd97"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Lumen Forge Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f6a5432e4398b"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f8d1144ce753c",
+              "f3821243f8687",
+              "f3ea3694aec15",
+              "fe50f7c40bd97"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Lumen Forge Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f6a5432e4398b"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f8d1144ce753c",
+        "f3821243f8687",
+        "f3ea3694aec15",
+        "fe50f7c40bd97",
+        "fe1ecc1e00c99",
+        "fd5fa6474cdbc",
+        "fa28fbf4a529a",
+        "f51544d6f7564",
+        "f6a5432e4398b",
+        "f6ee02caa2a4a"
+      ],
+      "checkpoint": 2,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f3821243f8687",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3307.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H03-102. Property: Lumen Forge; unit 102.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3547.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 3,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H03-103. Property: Lumen Forge; unit 103.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3787.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 3
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f8d1144ce753c",
+              "f3821243f8687",
+              "f3ea3694aec15",
+              "fe50f7c40bd97",
+              "fe1ecc1e00c99",
+              "fd5fa6474cdbc",
+              "fa28fbf4a529a",
+              "f51544d6f7564",
+              "f6a5432e4398b",
+              "f6ee02caa2a4a"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.chain",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Lumen Forge"
+          },
+          "missingDocumentIds": [
+            "f928d4ead82c6"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [
+            {
+              "documentId": "f6ee02caa2a4a",
+              "page": 1,
+              "semanticRule": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+                "Amendment 2, effective 2026-07-01: monthly base rent becomes USD 3557.",
+                "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-06-20."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f6ee02caa2a4a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "allowedStates": [
+            "unknown",
+            "met"
+          ],
+          "alternativeRationale": "Amendment 2 explicitly sets current rent and can explain the current roll. Amendment 1 remains missing for complete chain and historical YTD comparison; retain those gaps. A conservative unknown pending the complete chain is also defensible.",
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Lumen Forge"
+          },
+          "missingDocumentIds": [
+            "f928d4ead82c6"
+          ],
+          "reason": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3307.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-102. Property: Lumen Forge; unit 102.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3547.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 3,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-103. Property: Lumen Forge; unit 103.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3787.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f6ee02caa2a4a",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+                "Amendment 2, effective 2026-07-01: monthly base rent becomes USD 3557.",
+                "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-06-20."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "f6ee02caa2a4a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f3ea3694aec15",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 127692; other income USD 0.",
+                "Operating expenses USD 42564; NOI USD 85128.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f3ea3694aec15",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe50f7c40bd97",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 96894; other income USD 0.",
+                "Operating expenses USD 32298; NOI USD 64596.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe50f7c40bd97",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Lumen Forge"
+          },
+          "missingDocumentIds": [
+            "f928d4ead82c6"
+          ],
+          "reason": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3307.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-102. Property: Lumen Forge; unit 102.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3547.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 3,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-103. Property: Lumen Forge; unit 103.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3787.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3ea3694aec15",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 127692; other income USD 0.",
+                "Operating expenses USD 42564; NOI USD 85128.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "fe50f7c40bd97",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 96894; other income USD 0.",
+                "Operating expenses USD 32298; NOI USD 64596.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f6ee02caa2a4a",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+                "Amendment 2, effective 2026-07-01: monthly base rent becomes USD 3557.",
+                "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-06-20."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "f3ea3694aec15",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe50f7c40bd97",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f6ee02caa2a4a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe1ecc1e00c99",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7487.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "fe1ecc1e00c99",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Account ending 7487. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe1ecc1e00c99",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe1ecc1e00c99",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fd5fa6474cdbc",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7487.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "fd5fa6474cdbc",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Account ending 7487. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fd5fa6474cdbc",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fd5fa6474cdbc",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fa28fbf4a529a",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7487.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fa28fbf4a529a",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Account ending 7487. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fa28fbf4a529a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fa28fbf4a529a",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f51544d6f7564",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Lumen Forge Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Mavi Esk. Fictional registry reference H03-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f51544d6f7564",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f6a5432e4398b",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Lumen Forge Holdings LLC. Effective 2024-10-01.",
+                "Members: Mavi Esk 60%; Olin Raye 40%. Total ownership 100%.",
+                "Manager: Mavi Esk. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Mavi Esk; member signature /s/ Olin Raye; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f6a5432e4398b",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f6a5432e4398b",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Lumen Forge Holdings LLC. Effective 2024-10-01.",
+                "Members: Mavi Esk 60%; Olin Raye 40%. Total ownership 100%.",
+                "Manager: Mavi Esk. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Mavi Esk; member signature /s/ Olin Raye; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f6a5432e4398b",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f8d1144ce753c",
+        "f3821243f8687",
+        "f3ea3694aec15",
+        "fe50f7c40bd97",
+        "fe1ecc1e00c99",
+        "fd5fa6474cdbc",
+        "fa28fbf4a529a",
+        "f51544d6f7564",
+        "f6a5432e4398b",
+        "f6ee02caa2a4a",
+        "f928d4ead82c6"
+      ],
+      "checkpoint": 3,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f3821243f8687",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3307.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H03-102. Property: Lumen Forge; unit 102.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3547.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 3,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease H03-103. Property: Lumen Forge; unit 103.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3787.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 3
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f928d4ead82c6",
+              "page": 1,
+              "semanticRule": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+                "Amendment 1, effective 2026-04-01: monthly base rent becomes USD 3432.",
+                "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-03-20."
+              ]
+            },
+            {
+              "documentId": "f6ee02caa2a4a",
+              "page": 1,
+              "semanticRule": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+                "Amendment 2, effective 2026-07-01: monthly base rent becomes USD 3557.",
+                "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-06-20."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f928d4ead82c6",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f6ee02caa2a4a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3307.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-102. Property: Lumen Forge; unit 102.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3547.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 3,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-103. Property: Lumen Forge; unit 103.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3787.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f928d4ead82c6",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+                "Amendment 1, effective 2026-04-01: monthly base rent becomes USD 3432.",
+                "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-03-20."
+              ]
+            },
+            {
+              "documentId": "f6ee02caa2a4a",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+                "Amendment 2, effective 2026-07-01: monthly base rent becomes USD 3557.",
+                "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-06-20."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "f928d4ead82c6",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f6ee02caa2a4a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f3ea3694aec15",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 127692; other income USD 0.",
+                "Operating expenses USD 42564; NOI USD 85128.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f3ea3694aec15",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe50f7c40bd97",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 96894; other income USD 0.",
+                "Operating expenses USD 32298; NOI USD 64596.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe50f7c40bd97",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8d1144ce753c",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+                "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3307.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-102. Property: Lumen Forge; unit 102.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3547.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3821243f8687",
+              "page": 3,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-103. Property: Lumen Forge; unit 103.",
+                "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Atelier.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3787.",
+                "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f3ea3694aec15",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 127692; other income USD 0.",
+                "Operating expenses USD 42564; NOI USD 85128.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "fe50f7c40bd97",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 96894; other income USD 0.",
+                "Operating expenses USD 32298; NOI USD 64596.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f928d4ead82c6",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+                "Amendment 1, effective 2026-04-01: monthly base rent becomes USD 3432.",
+                "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-03-20."
+              ]
+            },
+            {
+              "documentId": "f6ee02caa2a4a",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+                "Amendment 2, effective 2026-07-01: monthly base rent becomes USD 3557.",
+                "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-06-20."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8d1144ce753c",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f3821243f8687",
+                "page": 3
+              }
+            ],
+            [
+              {
+                "documentId": "f3ea3694aec15",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe50f7c40bd97",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f928d4ead82c6",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f6ee02caa2a4a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe1ecc1e00c99",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7487.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "fe1ecc1e00c99",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Account ending 7487. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe1ecc1e00c99",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe1ecc1e00c99",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fd5fa6474cdbc",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7487.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "fd5fa6474cdbc",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Account ending 7487. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fd5fa6474cdbc",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fd5fa6474cdbc",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fa28fbf4a529a",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7487.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fa28fbf4a529a",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Lumen Forge Holdings LLC. Account ending 7487. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fa28fbf4a529a",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fa28fbf4a529a",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f51544d6f7564",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Lumen Forge Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Mavi Esk. Fictional registry reference H03-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f51544d6f7564",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f6a5432e4398b",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Lumen Forge Holdings LLC. Effective 2024-10-01.",
+                "Members: Mavi Esk 60%; Olin Raye 40%. Total ownership 100%.",
+                "Manager: Mavi Esk. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Mavi Esk; member signature /s/ Olin Raye; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f6a5432e4398b",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f6a5432e4398b",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Lumen Forge Holdings LLC. Effective 2024-10-01.",
+                "Members: Mavi Esk 60%; Olin Raye 40%. Total ownership 100%.",
+                "Manager: Mavi Esk. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Mavi Esk; member signature /s/ Olin Raye; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f6a5432e4398b",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    }
+  ],
+  "crossDocumentArithmetic": {
+    "annualBaseRent": 127692,
+    "calculation": "2025: sum original monthly rents *12. 2026: original *9 plus amendment 1 uplift for April-September and amendment 2 uplift for July-September when applicable.",
+    "currentMonthlyRent": 10891,
+    "currentPeriodBaseRent": 96894
+  },
+  "roles": {
+    "amend0": "f928d4ead82c6",
+    "amend1": "f6ee02caa2a4a",
+    "annual": "f3ea3694aec15",
+    "bank7": "fe1ecc1e00c99",
+    "bank8": "fd5fa6474cdbc",
+    "bank9": "fa28fbf4a529a",
+    "current": "fe50f7c40bd97",
+    "formation": "f51544d6f7564",
+    "governing": "f6a5432e4398b",
+    "leases": "f3821243f8687",
+    "roll": "f8d1144ce753c"
+  },
+  "semanticReviewRequired": true,
+  "sourcePages": {
+    "f3821243f8687": [
+      {
+        "lines": [
+          "Lease H03-101. Property: Lumen Forge; unit 101.",
+          "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3307.",
+          "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H03-102. Property: Lumen Forge; unit 102.",
+          "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3547.",
+          "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease H03-103. Property: Lumen Forge; unit 103.",
+          "Landlord: Lumen Forge Holdings LLC; tenant: Lumen Atelier.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 3787.",
+          "Landlord signature: /s/ Mavi Esk, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Olin Raye, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      }
+    ],
+    "f3ea3694aec15": [
+      {
+        "lines": [
+          "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 127692; other income USD 0.",
+          "Operating expenses USD 42564; NOI USD 85128.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f51544d6f7564": [
+      {
+        "lines": [
+          "Entity: Lumen Forge Holdings LLC. Entity type: limited liability company.",
+          "Formed 2024-10-01. Organizer: Mavi Esk. Fictional registry reference H03-REG.",
+          "This document establishes the named entity; it does not itself establish current manager authority."
+        ],
+        "title": "Certificate of formation"
+      }
+    ],
+    "f6a5432e4398b": [
+      {
+        "lines": [
+          "Entity: Lumen Forge Holdings LLC. Effective 2024-10-01.",
+          "Members: Mavi Esk 60%; Olin Raye 40%. Total ownership 100%.",
+          "Manager: Mavi Esk. Manager may execute refinancing documents for this company.",
+          "Member signature /s/ Mavi Esk; member signature /s/ Olin Raye; dated 2024-10-01."
+        ],
+        "title": "Operating agreement"
+      }
+    ],
+    "f6ee02caa2a4a": [
+      {
+        "lines": [
+          "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+          "Amendment 2, effective 2026-07-01: monthly base rent becomes USD 3557.",
+          "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-06-20."
+        ],
+        "title": "Lease amendment"
+      }
+    ],
+    "f8d1144ce753c": [
+      {
+        "lines": [
+          "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Lumen Studio; monthly base rent USD 3557; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Lumen Supply; monthly base rent USD 3547; lease 2025-01-01 to 2029-12-31.",
+          "Unit 103: Lumen Atelier; monthly base rent USD 3787; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      }
+    ],
+    "f928d4ead82c6": [
+      {
+        "lines": [
+          "Lease H03-101. Property: Lumen Forge; unit 101; landlord Lumen Forge Holdings LLC; tenant Lumen Studio.",
+          "Amendment 1, effective 2026-04-01: monthly base rent becomes USD 3432.",
+          "Other terms unchanged. Landlord /s/ Mavi Esk; tenant /s/ Olin Raye; both dated 2026-03-20."
+        ],
+        "title": "Lease amendment"
+      }
+    ],
+    "fa28fbf4a529a": [
+      {
+        "lines": [
+          "Holder: Lumen Forge Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7487.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Lumen Forge Holdings LLC. Account ending 7487. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fd5fa6474cdbc": [
+      {
+        "lines": [
+          "Holder: Lumen Forge Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7487.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Lumen Forge Holdings LLC. Account ending 7487. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fe1ecc1e00c99": [
+      {
+        "lines": [
+          "Holder: Lumen Forge Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7487.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Lumen Forge Holdings LLC. Account ending 7487. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fe50f7c40bd97": [
+      {
+        "lines": [
+          "Property: Lumen Forge. Owner: Lumen Forge Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 96894; other income USD 0.",
+          "Operating expenses USD 32298; NOI USD 64596.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ]
+  },
+  "status": "provisional",
+  "version": "CRE-E2E-oracle.1"
+}

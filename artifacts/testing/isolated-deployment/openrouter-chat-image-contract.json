@@ -1,0 +1,117 @@
+{
+  "ChatContentImage": {
+    "description": "Image content part for vision models",
+    "example": {
+      "image_url": {
+        "detail": "auto",
+        "url": "https://example.com/image.jpg"
+      },
+      "type": "image_url"
+    },
+    "properties": {
+      "image_url": {
+        "properties": {
+          "detail": {
+            "description": "Image detail level for vision models. `original` is an OpenRouter extension (not in the OpenAI Chat Completions spec) requesting true original-resolution media; it is downgraded to `high` for providers that lack an original-resolution tier.",
+            "enum": [
+              "auto",
+              "low",
+              "high",
+              "original"
+            ],
+            "type": "string",
+            "x-speakeasy-unknown-values": "allow"
+          },
+          "url": {
+            "description": "URL of the image (data: URLs supported)",
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "type": "object"
+      },
+      "type": {
+        "enum": [
+          "image_url"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "type",
+      "image_url"
+    ],
+    "type": "object"
+  },
+  "ChatContentText": {
+    "description": "Text content part",
+    "example": {
+      "text": "Hello, world!",
+      "type": "text"
+    },
+    "properties": {
+      "cache_control": {
+        "$ref": "#/components/schemas/ChatContentCacheControl"
+      },
+      "prompt_cache_breakpoint": {
+        "$ref": "#/components/schemas/PromptCacheBreakpoint"
+      },
+      "text": {
+        "type": "string"
+      },
+      "type": {
+        "enum": [
+          "text"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "type",
+      "text"
+    ],
+    "type": "object"
+  },
+  "ChatUserMessage": {
+    "description": "User message",
+    "example": {
+      "content": "What is the capital of France?",
+      "role": "user"
+    },
+    "properties": {
+      "content": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "items": {
+              "$ref": "#/components/schemas/ChatContentItems"
+            },
+            "type": "array"
+          }
+        ],
+        "description": "User message content",
+        "example": "What is the capital of France?"
+      },
+      "name": {
+        "description": "Optional name for the user",
+        "example": "User",
+        "type": "string"
+      },
+      "role": {
+        "enum": [
+          "user"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "role",
+      "content"
+    ],
+    "type": "object"
+  }
+}

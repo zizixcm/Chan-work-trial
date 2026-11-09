@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-empty",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "No documents have been uploaded or saved yet.\n\n**Next step:**\n* Please upload your **current rent roll** to get started."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements are directly supported by the inventory data showing an empty document list and an outstanding rent roll requirement."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response clearly answers what has been uploaded by stating that no documents have been uploaded or saved yet."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response properly suggests uploading the current rent roll as requested in the rubric and requirements."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text or duplicate messaging."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 20,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 4019,
+  "elapsedMs": 7048
+}

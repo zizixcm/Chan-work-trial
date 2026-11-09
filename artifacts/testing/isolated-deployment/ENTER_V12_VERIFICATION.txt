@@ -1,0 +1,8 @@
+Release: /Users/chanrao/Developer/proximity-releases/unified-pilot-20261108-v12
+Change: Enter submits through existing form, Shift+Enter newline, composing/repeated/blank Enter ignored. Only component changed from v11; SHA256fe1be0da8c6152cfb31a3a8994e1579e244c71074dd630f80485c673965a0b50.
+Automated PASS:159unit+TypeScript, fresh build, HTTP/jobs/workflow/chat/completeAI/missingAI; native-agent and incremental-findings integrations.
+Browser PASS: final candidate component in isolated no-network adapter: Shift+Enter adds newline without submit, Enter immediately displays user bubble and clears/disables composer, blank Enter does nothing. Deployed app: Shift+Enter and blank Enter repeated successfully without a model call. Full nonblank send against live provider not rerun for this key-only change.
+HTTP3102 and4111 both200. Before/afterrestart tables/work/ledger identical; existing26-file authorization registry preserved. No paid calls for this verification. Manifest hashes all match after tests.
+Live portal70719, Studio launcher70720/worker70722 at promotion. Evalowner later owns bounded worker restart window; current pids may change.
+Evidence: release verification/results.json, native-agents.log, incremental-findings.log, preservation.json. Screenshots enter-v12-sent.png and enter-v12-live.png.
+Broader sign-in/upload/lender browser checklist NOT RERUN; unrelated staged-upload UX and optimizer prompt explicitly excluded.

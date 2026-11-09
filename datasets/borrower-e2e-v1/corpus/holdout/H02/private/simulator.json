@@ -1,0 +1,93 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "fdd8a7b2899dd",
+    "f6fdf7d4d20d3",
+    "f447b92b54259",
+    "fa1678da85c28",
+    "ffcf70ee8cf6e",
+    "f3b31cd4a67d0",
+    "ffd19e3beddf7",
+    "fb477645f50fa",
+    "f5d6e97d44fbd",
+    "f255f21eba0d6"
+  ],
+  "budgetInterrupt": {
+    "eligible": false,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7470",
+    "baseRents": [
+      3170,
+      3410,
+      3650,
+      3890
+    ],
+    "borrower": "Kestrel Basin Holdings LLC",
+    "currentRents": [
+      3170,
+      3410,
+      3650,
+      3890
+    ],
+    "entityAmendments": 0,
+    "leaseAmendments": 0,
+    "manager": "Fenn Arlo",
+    "otherOwner": "Zuri Hask",
+    "property": "Kestrel Basin",
+    "tenants": [
+      "Kestrel Studio",
+      "Kestrel Supply",
+      "Kestrel Atelier",
+      "Kestrel Market"
+    ],
+    "units": [
+      "101",
+      "102",
+      "103",
+      "104"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 4 units occupied by the tenants listed; only account ending 7470 is requested. There are 0 lease amendments and 0 entity amendments. Can this quarterly archive cover the months?",
+      "uploadIds": [
+        "f255f21eba0d6",
+        "f447b92b54259"
+      ]
+    },
+    {
+      "borrowerText": "Here is the roll and company paperwork.",
+      "uploadIds": [
+        "f5d6e97d44fbd",
+        "fb477645f50fa",
+        "fdd8a7b2899dd"
+      ]
+    },
+    {
+      "borrowerText": "Here are the remaining operating and lease records.",
+      "uploadIds": [
+        "f6fdf7d4d20d3",
+        "fa1678da85c28"
+      ]
+    }
+  ]
+}

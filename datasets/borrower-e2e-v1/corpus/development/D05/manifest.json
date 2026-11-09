@@ -1,0 +1,112 @@
+{
+  "caseId": "D05",
+  "datasetVersion": "1.0.0",
+  "documents": [
+    {
+      "documentId": "f103456061297",
+      "filename": "f103456061297.pdf",
+      "pageCount": 1,
+      "path": "development/D05/files/f103456061297.pdf",
+      "seriesId": "f103456061297",
+      "sha256": "ea710e528658edf0179e22ba289f95f280e552d6fff435d763a6a97316ac7a13",
+      "version": 1
+    },
+    {
+      "documentId": "f9c7159e3f5b1",
+      "filename": "f9c7159e3f5b1.pdf",
+      "pageCount": 2,
+      "path": "development/D05/files/f9c7159e3f5b1.pdf",
+      "seriesId": "f9c7159e3f5b1",
+      "sha256": "0a00c8db85e2cd2515987c0c14d0ea1ed52781c5468e8900b433b0861164ba81",
+      "version": 1
+    },
+    {
+      "documentId": "fb8037fe234fe",
+      "filename": "fb8037fe234fe.pdf",
+      "pageCount": 1,
+      "path": "development/D05/files/fb8037fe234fe.pdf",
+      "seriesId": "fb8037fe234fe",
+      "sha256": "42bc17aa092a533403b80119d9abe30cf702d039537346037f45e61e79c8f6c2",
+      "version": 1
+    },
+    {
+      "documentId": "f990bde92b501",
+      "filename": "f990bde92b501.pdf",
+      "pageCount": 1,
+      "path": "development/D05/files/f990bde92b501.pdf",
+      "seriesId": "f990bde92b501",
+      "sha256": "6738ea93a81e52a39aa8953765b411e3fdfc4195e4c0ac4d15a00f820ca84cd2",
+      "version": 1
+    },
+    {
+      "documentId": "f531f0d7e1784",
+      "filename": "f531f0d7e1784.pdf",
+      "pageCount": 2,
+      "path": "development/D05/files/f531f0d7e1784.pdf",
+      "seriesId": "f531f0d7e1784",
+      "sha256": "3627dab0abd9760d3b12e01c501edd79ced8223f94ea62851adac2743500ef6f",
+      "version": 1
+    },
+    {
+      "documentId": "f180e5ed9be4f",
+      "filename": "f180e5ed9be4f.pdf",
+      "pageCount": 2,
+      "path": "development/D05/files/f180e5ed9be4f.pdf",
+      "seriesId": "f180e5ed9be4f",
+      "sha256": "193dd4d29d6e873927009ecc2154e464049336418481e05e73b632ff7ab5d9bc",
+      "version": 1
+    },
+    {
+      "documentId": "fa02adc1a80eb",
+      "filename": "fa02adc1a80eb.pdf",
+      "pageCount": 2,
+      "path": "development/D05/files/fa02adc1a80eb.pdf",
+      "seriesId": "fa02adc1a80eb",
+      "sha256": "dd7ab07f04501c58f23f9f2d3f2ba47e89829b3b6974be774991191756bb845c",
+      "version": 1
+    },
+    {
+      "documentId": "ffb1d54c50ef5",
+      "filename": "ffb1d54c50ef5.pdf",
+      "pageCount": 1,
+      "path": "development/D05/files/ffb1d54c50ef5.pdf",
+      "seriesId": "ffb1d54c50ef5",
+      "sha256": "83f7779e9cc6fa09027433b105f8ca47ba8d71545eb9498d314c12dffa759f05",
+      "version": 1
+    },
+    {
+      "documentId": "f8a4700c81f6e",
+      "filename": "f8a4700c81f6e.pdf",
+      "pageCount": 1,
+      "path": "development/D05/files/f8a4700c81f6e.pdf",
+      "seriesId": "f8a4700c81f6e",
+      "sha256": "a471ec63cfd572d3085260d4b2bf310f9fb4b29207703df1e9785efce569163f",
+      "version": 1
+    },
+    {
+      "documentId": "f942674fe7c1a",
+      "filename": "f942674fe7c1a.pdf",
+      "pageCount": 1,
+      "path": "development/D05/files/f942674fe7c1a.pdf",
+      "seriesId": "f942674fe7c1a",
+      "sha256": "2c06f2cd967949e788141cc6d2ec4ea663165f16572a71e7aa3e34c9851f1dfa",
+      "version": 1
+    },
+    {
+      "documentId": "fd40c4495f2f4",
+      "filename": "fd40c4495f2f4.pdf",
+      "pageCount": 1,
+      "path": "development/D05/files/fd40c4495f2f4.pdf",
+      "seriesId": "fd40c4495f2f4",
+      "sha256": "88f3be9bdf270e6c3d517fdd163bbfb62a7a142e6a7fc7ed04d8a6cf932644df",
+      "version": 1
+    }
+  ],
+  "layoutFamily": "plain",
+  "leakageGroup": "D05",
+  "mode": "wrong_period",
+  "provenance": "Fictional facts authored from scratch; no private source bytes or excerpts. Shared domain families only.",
+  "split": "development",
+  "status": "provisional",
+  "synthetic": true
+}

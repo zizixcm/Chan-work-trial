@@ -1,0 +1,322 @@
+[
+  {
+    "caseId": "uploads-saved",
+    "repeat": 0,
+    "action": {
+      "kind": "reply",
+      "message": "You currently have 2 files saved:\n\n- Rent roll.pdf\n- 2025 operating statement.pdf\n\nNote that saved files have not yet been reviewed or approved."
+    },
+    "review": {
+      "grounded": {
+        "passed": true,
+        "reason": "All stated files are present in the inventory, and no ungrounded claims were made."
+      },
+      "answersQuestion": {
+        "passed": true,
+        "reason": "Accurately identifies both uploaded files in response to the user's question."
+      },
+      "appropriateNextSteps": {
+        "passed": true,
+        "reason": "Does not invent any next steps or missing document checklists, adhering to the rubric."
+      },
+      "noRepetition": {
+        "passed": true,
+        "reason": "The response is direct and free of unnecessary repetition."
+      },
+      "criticalFailures": []
+    },
+    "wordCount": 24,
+    "hardPassed": true,
+    "passed": true,
+    "costMicros": 5521,
+    "elapsedMs": 10455
+  },
+  {
+    "caseId": "uploads-saved",
+    "repeat": 1,
+    "action": {
+      "kind": "reply",
+      "message": "You currently have 2 files saved in your application:\n\n- Rent roll.pdf\n- 2025 operating statement.pdf\n\nThere are no uploads in progress. Please note that saved files have not yet been reviewed or approved."
+    },
+    "review": {
+      "grounded": {
+        "passed": true,
+        "reason": "All facts, including the names of the two saved files and the lack of pending uploads, directly reflect the inventory."
+      },
+      "answersQuestion": {
+        "passed": true,
+        "reason": "The response directly answers what has been uploaded by identifying both saved files."
+      },
+      "appropriateNextSteps": {
+        "passed": true,
+        "reason": "The response correctly avoids inventing unprompted next steps or turning the answer into a missing documents checklist."
+      },
+      "noRepetition": {
+        "passed": true,
+        "reason": "There is no unnecessary repetition in the response."
+      },
+      "criticalFailures": []
+    },
+    "wordCount": 34,
+    "hardPassed": true,
+    "passed": true,
+    "costMicros": 5079,
+    "elapsedMs": 8493
+  },
+  {
+    "caseId": "uploads-empty",
+    "repeat": 0,
+    "action": {
+      "kind": "reply",
+      "message": "No documents have been uploaded yet (0 files saved).\n\n**Next step:**\n* Please upload your current rent roll for Example Plaza to get started."
+    },
+    "review": {
+      "grounded": {
+        "passed": true,
+        "reason": "All stated facts are directly supported by the inventory; no files are saved and current rent roll is requested for Example Plaza."
+      },
+      "answersQuestion": {
+        "passed": true,
+        "reason": "The response clearly answers what has been uploaded by stating that no documents have been uploaded yet."
+      },
+      "appropriateNextSteps": {
+        "passed": true,
+        "reason": "The response provides the appropriate next step to upload the current rent roll as specified in the requirements and rubric."
+      },
+      "noRepetition": {
+        "passed": true,
+        "reason": "There is no repetitive text or duplicate statements."
+      },
+      "criticalFailures": []
+    },
+    "wordCount": 24,
+    "hardPassed": true,
+    "passed": true,
+    "costMicros": 4361,
+    "elapsedMs": 8001
+  },
+  {
+    "caseId": "uploads-empty",
+    "repeat": 1,
+    "action": {
+      "kind": "reply",
+      "message": "No documents have been uploaded yet.\n\n**Next step:**\n* Please upload a **current rent roll** for Example Plaza."
+    },
+    "review": {
+      "grounded": {
+        "passed": true,
+        "reason": "The response accurately reflects that no documents are present in the inventory and references the required current rent roll."
+      },
+      "answersQuestion": {
+        "passed": true,
+        "reason": "It directly and clearly answers what has been uploaded by stating that no documents have been uploaded yet."
+      },
+      "appropriateNextSteps": {
+        "passed": true,
+        "reason": "It accurately advises uploading the current rent roll as the next step."
+      },
+      "noRepetition": {
+        "passed": true,
+        "reason": "There is no repetition in the message."
+      },
+      "criticalFailures": []
+    },
+    "wordCount": 18,
+    "hardPassed": true,
+    "passed": true,
+    "costMicros": 4838,
+    "elapsedMs": 7874
+  },
+  {
+    "caseId": "uploads-pending",
+    "repeat": 0,
+    "action": {
+      "kind": "reply",
+      "message": "You currently have 2 files saved:\n\n* **Rent roll.pdf**\n* **2025 operating statement.pdf**\n\nOther uploads are still in progress, so please check your upload progress to make sure they complete. Please note that saved files have not yet been reviewed or approved."
+    },
+    "review": {
+      "grounded": {
+        "passed": true,
+        "reason": "All facts cited, including the two active documents and the pending uploads status, accurately reflect the inventory."
+      },
+      "answersQuestion": {
+        "passed": true,
+        "reason": "The response directly answers what has been uploaded by listing the two saved files and distinguishing them from in-progress uploads."
+      },
+      "appropriateNextSteps": {
+        "passed": true,
+        "reason": "The response properly suggests checking upload progress without requesting re-upload of saved documents or claiming all uploads are complete."
+      },
+      "noRepetition": {
+        "passed": true,
+        "reason": "There is no unnecessary repetition."
+      },
+      "criticalFailures": []
+    },
+    "wordCount": 42,
+    "hardPassed": true,
+    "passed": true,
+    "costMicros": 5650,
+    "elapsedMs": 10369
+  },
+  {
+    "caseId": "uploads-pending",
+    "repeat": 1,
+    "action": {
+      "kind": "reply",
+      "message": "Here are the 2 files currently saved:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nPlease note that saved files have not yet been reviewed or approved.\n\nOther uploads are still in progress. Please check your upload progress to ensure any remaining files finish uploading."
+    },
+    "review": {
+      "grounded": {
+        "passed": true,
+        "reason": "All facts stated, including the two active documents and the existence of pending uploads, are grounded in the provided inventory."
+      },
+      "answersQuestion": {
+        "passed": true,
+        "reason": "The response identifies both uploaded files and clearly clarifies that there are other uploads still pending."
+      },
+      "appropriateNextSteps": {
+        "passed": true,
+        "reason": "The response appropriately suggests checking the status of unfinished uploads without asking to re-upload saved files or claiming completion."
+      },
+      "noRepetition": {
+        "passed": true,
+        "reason": "There is no unnecessary repetition."
+      },
+      "criticalFailures": []
+    },
+    "wordCount": 44,
+    "hardPassed": true,
+    "passed": true,
+    "costMicros": 7266,
+    "elapsedMs": 10674
+  },
+  {
+    "caseId": "uploads-specific",
+    "repeat": 0,
+    "action": {
+      "kind": "reply",
+      "message": "Yes, **Rent roll.pdf** has been uploaded and saved to your application. Please note that a saved document has not yet been reviewed or approved by the lender."
+    },
+    "review": {
+      "grounded": {
+        "passed": true,
+        "reason": "All statements are fully supported by the inventory data, accurately identifying Rent roll.pdf without asserting that it has been approved or reviewed."
+      },
+      "answersQuestion": {
+        "passed": true,
+        "reason": "The response clearly answers 'yes' and specifies the file name Rent roll.pdf as requested."
+      },
+      "appropriateNextSteps": {
+        "passed": true,
+        "reason": "No unnecessary next steps were suggested, adhering to the rubric."
+      },
+      "noRepetition": {
+        "passed": true,
+        "reason": "The response is concise and contains no repetitive information."
+      },
+      "criticalFailures": []
+    },
+    "wordCount": 27,
+    "hardPassed": true,
+    "passed": true,
+    "costMicros": 11396,
+    "elapsedMs": 19974
+  },
+  {
+    "caseId": "uploads-specific",
+    "repeat": 1,
+    "action": {
+      "kind": "reply",
+      "message": "Yes, **Rent roll.pdf** has been uploaded and is saved in your application files.\n\nPlease note that a saved file has not yet been reviewed or approved by the lender."
+    },
+    "review": {
+      "grounded": {
+        "passed": true,
+        "reason": "The response accurately references Rent roll.pdf from the document inventory and correctly notes that saved files have not yet been reviewed or approved."
+      },
+      "answersQuestion": {
+        "passed": true,
+        "reason": "The response clearly answers 'yes' and identifies Rent roll.pdf as saved in the application files without claiming review or acceptance."
+      },
+      "appropriateNextSteps": {
+        "passed": true,
+        "reason": "In accordance with the rubric, no next steps were necessary, and none were provided."
+      },
+      "noRepetition": {
+        "passed": true,
+        "reason": "The response is concise and does not repeat information."
+      },
+      "criticalFailures": []
+    },
+    "wordCount": 29,
+    "hardPassed": true,
+    "passed": true,
+    "costMicros": 11028,
+    "elapsedMs": 19970
+  },
+  {
+    "caseId": "uploads-detail",
+    "repeat": 0,
+    "action": {
+      "kind": "reply",
+      "message": "Here are the 2 files currently saved in your inventory:\n\n- **Rent roll.pdf**\n- **2025 operating statement.pdf**\n\nSaving a document only confirms that the file has been received and stored. It does not mean it has been reviewed or approved by the lender; documents must still be evaluated against the lender's requirements."
+    },
+    "review": {
+      "grounded": {
+        "passed": true,
+        "reason": "All referenced files match the inventory and the explanation of saved status is accurate."
+      },
+      "answersQuestion": {
+        "passed": true,
+        "reason": "The response lists both files by name and explicitly explains that saving does not mean lender approval."
+      },
+      "appropriateNextSteps": {
+        "passed": true,
+        "reason": "The response does not suggest any unnecessary or incorrect next steps."
+      },
+      "noRepetition": {
+        "passed": true,
+        "reason": "There is no repetitive text in the response."
+      },
+      "criticalFailures": []
+    },
+    "wordCount": 52,
+    "hardPassed": true,
+    "passed": true,
+    "costMicros": 5866,
+    "elapsedMs": 9413
+  },
+  {
+    "caseId": "uploads-detail",
+    "repeat": 1,
+    "action": {
+      "kind": "reply",
+      "message": "Here are the 2 files currently saved in your application:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nSaving a file does not mean lender approval. It simply confirms the document has been uploaded. The files still must be reviewed against the lender's criteria, and final approval is granted by the lender upon completing their review."
+    },
+    "review": {
+      "grounded": {
+        "passed": true,
+        "reason": "All listed files and statements accurately reflect the application inventory and loan documentation status."
+      },
+      "answersQuestion": {
+        "passed": true,
+        "reason": "The response lists every uploaded file by name and explicitly explains that saving a file does not mean lender approval."
+      },
+      "appropriateNextSteps": {
+        "passed": true,
+        "reason": "Appropriately explains the upcoming review process without inventing actions."
+      },
+      "noRepetition": {
+        "passed": true,
+        "reason": "The response contains no unnecessary repetition."
+      },
+      "criticalFailures": []
+    },
+    "wordCount": 55,
+    "hardPassed": true,
+    "passed": true,
+    "costMicros": 5001,
+    "elapsedMs": 7945
+  }
+]

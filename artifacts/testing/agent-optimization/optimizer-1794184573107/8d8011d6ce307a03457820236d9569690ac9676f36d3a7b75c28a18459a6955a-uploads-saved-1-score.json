@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-saved",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "You currently have 2 saved documents:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nThere are no uploads currently in progress. Please note that saving a document does not equate to lender review or approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All claims are supported by the input, including the list of active documents, the lack of in-progress uploads, and the policy statement regarding saving versus review/approval."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the user's question by identifying the two uploaded documents."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No unrequested next steps or actions were suggested, adhering to the rubric."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is clear and free of unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 34,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 2443,
+  "elapsedMs": 3324
+}

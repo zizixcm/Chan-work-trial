@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "b13de5d2b939e378259549e9277ca81ad20446154f0a58a64f92485420c388cc",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "Has my rent roll been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Answer yes and identify Rent roll.pdf as saved. Do not list unrelated requirements or infer that the rent roll was checked or accepted. No next step is necessary.",
+    "action": {
+      "kind": "reply",
+      "message": "Yes, **Rent roll.pdf** is uploaded and saved to your application. \n\nPlease note that having a document saved does not equate to lender review or approval."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately confirms that 'Rent roll.pdf' is saved in the inventory and explains the general policy that saving a document does not equate to lender review or approval without asserting an unsubstantiated status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the user's question with 'Yes' and identifies 'Rent roll.pdf' as saved."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No next steps were required by the rubric, and none were unnecessarily provided."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 506,
+    "completion_tokens": 546,
+    "total_tokens": 1052,
+    "cost": 0.002427,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002427,
+      "upstream_inference_prompt_cost": 0.0003795,
+      "upstream_inference_completions_cost": 0.0020475
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 355,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

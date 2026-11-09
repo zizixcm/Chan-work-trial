@@ -1,0 +1,42 @@
+{
+  "version": "v16-one-upload-regression.1",
+  "status": "prepared; awaiting final v16 runtime and owner window; not executed",
+  "gold": {
+    "path": "/Users/chanrao/Documents/ChatGPT/proximity/artifacts/testing/quality-latency-tuning/small-start-spec.json",
+    "sha256": "6fed3bb1bca973d01f4bf69dea29a8cbf87b8e8418ad5dd71abed1be28bd8c23",
+    "unchanged": true
+  },
+  "detailDeltaSha256": "37cefc60ac43525ead4a61f049646e3efde61f513aef9e9b2e968ff003aafd92",
+  "runtimeGate": [
+    "Owner identifies final v16 release after Heritage recovery and grants bounded window.",
+    "Snapshot final deployed definitions, native runtime, upload admission contracts and actual outbound model options; hash them before execution. Do not substitute old v2 prompts.",
+    "Run driver compatibility/offline checks before paid dispatch; preserve native streaming, incremental findings, all caps and budget reconciliation."
+  ],
+  "case": "ONE-UPLOAD",
+  "semanticChecks": [
+    "Acknowledge durable receipt without premature completed-analysis claim or internal IDs.",
+    "Identify actual FY2025 statement and supported annual component from inspected cited evidence.",
+    "Report one saved file; distinguish annual support from whole operating requirement completeness.",
+    "Cover all remaining request groups with exact context-derived dates, account, document types and execution qualifiers.",
+    "Respect no-amendments declaration; never waive executed leases.",
+    "Preserve unknown versus missing and saved versus unreviewed distinction."
+  ],
+  "latency": {
+    "reportTargetMs": 15000,
+    "reportCeilingMs": 20000,
+    "uiReceiptMs": 1000,
+    "uiReceiptStatus": "unmeasured by DB fixture; requires separate real save-to-visible measurement"
+  },
+  "separateUploadIntegration": [
+    "Actual upload finalization with automatic preference disabled enqueues exactly one authorized scoped turn.",
+    "Duplicate finalization/idempotency does not enqueue a second turn.",
+    "Trace correlates save/admission, borrower delegation, investigator publication and final borrower reply."
+  ],
+  "evidence": [
+    "Immutable raw model inputs/outputs, actions, validation results and actual outbound options.",
+    "Monotonic queue-inclusive timing, source observations, final ledger reconciliation and native Mastra trace IDs.",
+    "Digest-bound manual review and native quality/latency scores; manual reviewer is not author-independent."
+  ],
+  "heritage": "Evaluate real Heritage recovery against its own policy/files/context; never reuse Aster account, dates or expected criteria.",
+  "operations": "No live dispatch, restart or production mutation authorized by this plan; sole deployment owner coordinates window."
+}

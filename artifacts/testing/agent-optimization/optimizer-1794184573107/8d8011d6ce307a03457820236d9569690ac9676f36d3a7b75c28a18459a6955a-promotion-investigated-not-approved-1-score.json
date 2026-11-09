@@ -1,0 +1,32 @@
+{
+  "caseId": "promotion-investigated-not-approved",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "Document completeness means your required documents have been provided and verified against the current checklist, but it does not equate to lender review or approval. \n\nLender approval is a separate determination made by your lender, and their formal evaluation or approval status is not reflected in document completeness."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response explains the distinction between document completeness and lender review/approval without asserting any specific ungrounded status for the lender's actual review."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "It directly clarifies that document completeness does not equate to or indicate lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "It appropriately explains the distinction without initiating an unnecessary investigation."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and does not repeat previous statements or phrasing."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 48,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 2220,
+  "elapsedMs": 4051
+}

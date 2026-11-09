@@ -108,8 +108,9 @@ async function main() {
       VALUES('33000000-0000-4000-8000-000000000010',$1,'Application','Application & LOI','Purpose','Current','Borrower','Required',0)`, [APPLICATION_ID]);
     await applyRequirementCatalog(db);
     assert.equal((await query("SELECT lifecycle FROM requirements WHERE id='33000000-0000-4000-8000-000000000010'")).rows[0].lifecycle, 'superseded'); checks++;
+    assert.equal((await query("SELECT supersedes_requirement_id FROM requirements WHERE id='33000000-0000-4000-8000-000000000010:demo-v4'")).rows[0].supersedes_requirement_id, '33000000-0000-4000-8000-000000000010'); checks++;
     const firstCatalog = (await query('SELECT id,definition_revision FROM requirements WHERE application_id=$1 AND lifecycle=\'active\' ORDER BY id',[APPLICATION_ID])).rows;
-    assert.equal(firstCatalog.length,7); checks++;
+    assert.equal(firstCatalog.length,9); checks++;
     await applyRequirementCatalog(db);
     assert.deepEqual((await query('SELECT id,definition_revision FROM requirements WHERE application_id=$1 AND lifecycle=\'active\' ORDER BY id',[APPLICATION_ID])).rows, firstCatalog); checks++;
     assert.equal((await query("SELECT count(*)::int n FROM review_documents WHERE review_id='legacy'")).rows[0].n,1); checks++;

@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-detail",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "Here are the 2 files currently saved in your application:\n\n* **Rent roll.pdf**\n* **2025 operating statement.pdf**\n\nSaving a document confirms it has been stored in your file inventory, but saving does not equate to lender review or approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately lists the active documents from the inventory and correctly describes the general policy that saving does not equate to lender review or approval without asserting unverified file statuses."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response explicitly names both uploaded files and directly answers whether saving means lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response answers the prompt directly without inventing extraneous or unauthorized actions."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no unnecessary repetition in the response."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 39,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6867,
+  "elapsedMs": 11760
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-specific",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "Yes, **Rent roll.pdf** is saved in your application files. \n\nPlease note that having a document saved does not equate to lender review or approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately identifies Rent roll.pdf as saved and includes a policy explanation clarifying that saving does not equate to lender review or approval without asserting an unsupported review status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the borrower's question by confirming that the rent roll has been uploaded and naming the specific file."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No next steps were required or inappropriately pushed."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response contains no repetitive phrases or redundant information."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 24,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 9513,
+  "elapsedMs": 15239
+}

@@ -1,3 +1,4 @@
+import { routeAdaptiveObligation } from '../preparation/ownership';
 import { supportsAnalysis } from '../analysis/formats';
 import { createHash, randomUUID } from 'node:crypto';
 import type { Pool, PoolClient } from 'pg';
@@ -12,9 +13,9 @@ import { deriveFulfillment } from '../analysis/fulfillment';
 import type { VerifyResult } from '../analysis/types';
 
 export type ConsentScope = 'borrower' | 'lender';
-export function analysisFingerprint(input: PinnedSnapshot, task: TaskKind, scope: ConsentScope, epoch: string, userId: string) {
+export function analysisFingerprint(input: PinnedSnapshot, task: TaskKind, scope: ConsentScope, epoch: string, userId: string, automatic = false) {
   // Scope both cached results and live work to the initiating user.
-  return digest(scope==='lender' ? {input,authority:'lender',userId,task} : {input,epoch,userId,task});
+  return digest(scope==='lender' ? {input,authority:'lender',userId,task} : automatic ? {input,authority:'automatic-upload.v1',userId,task} : {input,epoch,userId,task});
 }
 export const liveStates = ['queued','running','retry_wait','blocked'];
 export interface PinnedSnapshot extends AnalysisSnapshot {
@@ -47,15 +48,15 @@ export async function snapshot(db: PoolClient, applicationId: string, task: Task
     if(task!=='verify_requirement.v1'||!r)throw new UploadError('Submitted request not found.',404);
     return {version:ANALYSIS_VERSION,model:configuredModel(),
       documents:view.documents.filter(d=>d.requirement_ids.includes(targetId)).map(d=>({id:d.id,sha256:d.sha256,contentType:d.content_type})),
-      requirements:[{id:r.id,title:r.title,subject:`Application property: ${view.application.property_name}; Borrower: ${view.application.borrower_name}`,period:r.period,criteria:(r.criteria||[]).map((description,index)=>({id:`${r.id}:criterion:${index+1}`,description}))}],
+      requirements:[{id:r.id,title:r.title,subject:`Responsible party / subject: ${r.owner}; Application property: ${view.application.property_name}; Address: ${view.application.address}; Borrower: ${view.application.borrower_name}`,period:r.period,criteria:(r.criteria||[]).map((description,index)=>({id:`${r.id}:criterion:${index+1}`,description}))}],
       observed:{submissionId:sent.id,definition:r.definition_revision,evidence:r.evidence_revision}};
   }
   const requirements = (await db.query(`SELECT r.id,r.title,r.purpose,r.period,r.criteria,r.collection,r.definition_revision::text,r.evidence_revision::text,
-    coalesce(s.label,'Requirement subject not specified') || '; Application property: ' || a.property_name || '; Borrower: ' || a.borrower_name AS subject FROM requirements r JOIN applications a ON a.id=r.application_id LEFT JOIN application_subjects s ON s.id=r.subject_id AND s.application_id=r.application_id
+    coalesce(s.label,r.owner,'Requirement subject not specified') || '; Responsible party: ' || r.owner || '; Application property: ' || a.property_name || '; Address: ' || a.address || '; Borrower: ' || a.borrower_name AS subject FROM requirements r JOIN applications a ON a.id=r.application_id LEFT JOIN application_subjects s ON s.id=r.subject_id AND s.application_id=r.application_id
     WHERE r.application_id=$1 AND r.lifecycle='active' AND ($2::text IS NULL OR r.id=$2) ORDER BY r.id`,
     [applicationId,task==='verify_requirement.v1'?targetId:null])).rows;
   if (task==='verify_requirement.v1' && !requirements.length) throw new UploadError('Request not found.',404);
-  const documents = (await db.query(`SELECT d.id,d.sha256,d.content_type,d.series_id,d.version_number FROM documents d WHERE d.application_id=$1 AND
+  const documents = (await db.query(`SELECT d.id,d.sha256,d.content_type,d.series_id,d.version_number,(SELECT restored_at::text FROM draft_document_removals removed WHERE removed.application_id=d.application_id AND removed.document_id=d.id) restored_at FROM documents d WHERE d.application_id=$1 AND NOT EXISTS(SELECT 1 FROM draft_document_removals removed WHERE removed.application_id=d.application_id AND removed.document_id=d.id AND removed.restored_at IS NULL) AND
     (($2='match_document.v1' AND d.id=$3 AND NOT EXISTS(SELECT 1 FROM documents successor WHERE successor.replaces_document_id=d.id)) OR
      ($2='verify_requirement.v1' AND NOT EXISTS(SELECT 1 FROM documents successor WHERE successor.replaces_document_id=d.id)
        AND EXISTS(SELECT 1 FROM requirement_documents rd WHERE rd.application_id=$1 AND rd.requirement_id=$3 AND rd.document_id=d.id AND rd.unlinked_at IS NULL))) ORDER BY d.id`, [applicationId,task,targetId])).rows;
@@ -77,13 +78,14 @@ export async function snapshot(db: PoolClient, applicationId: string, task: Task
     // user's job happens to be newest. Old definitions/consent cannot resolve it.
     const matches=(await db.query(`SELECT DISTINCT ON (j.document_id,j.initiated_by)
       j.document_id,j.initiated_by,j.state,j.result,j.fingerprint,j.result_fingerprint,
-      j.consent_epoch::text,p.epoch::text,
+      j.consent_epoch::text,p.epoch::text,j.automatic,
       EXISTS(SELECT 1 FROM requirement_documents rd WHERE rd.document_id=j.document_id
         AND rd.unlinked_at IS NULL) AS linked
       FROM analysis_jobs j JOIN application_memberships m ON m.application_id=j.application_id
         AND m.user_id=j.initiated_by AND m.active AND m.role='borrower'
-      JOIN user_ai_preferences p ON p.user_id=j.initiated_by AND p.enabled
-      WHERE j.application_id=$1 AND j.task='match_document.v1' AND j.consent_scope='borrower'
+      LEFT JOIN user_ai_preferences p ON p.user_id=j.initiated_by
+      WHERE j.application_id=$1 AND j.task='match_document.v1' AND j.consent_scope='borrower' AND (j.automatic OR p.enabled)
+        AND NOT EXISTS(SELECT 1 FROM draft_document_removals removed WHERE removed.application_id=j.application_id AND removed.document_id=j.document_id AND removed.restored_at IS NULL)
         AND NOT EXISTS(SELECT 1 FROM documents successor WHERE successor.replaces_document_id=j.document_id)
       ORDER BY j.document_id,j.initiated_by,j.created_at DESC,j.id DESC`,[applicationId])).rows;
     const inputs=new Map<string,PinnedSnapshot>();
@@ -91,8 +93,8 @@ export async function snapshot(db: PoolClient, applicationId: string, task: Task
     for(const match of matches) {
       let input=inputs.get(match.document_id);
       if(!input){input=await snapshot(db,applicationId,'match_document.v1',match.document_id);inputs.set(match.document_id,input);}
-      const current=match.consent_epoch===match.epoch &&
-        analysisFingerprint(input,'match_document.v1','borrower',match.epoch,match.initiated_by)===(match.result_fingerprint||match.fingerprint);
+      const current=(match.automatic || match.consent_epoch===match.epoch) &&
+        analysisFingerprint(input,'match_document.v1','borrower',match.epoch,match.initiated_by,match.automatic)===(match.result_fingerprint||match.fingerprint);
       const ambiguous=match.state==='succeeded' && match.result?.requirements?.some(
         (candidate:{requirementId:string;relevance:{state:string}})=>candidate.requirementId===targetId && candidate.relevance.state==='ambiguous');
       if(!current || ambiguous || (!match.linked && ['failed','dead_letter','expired','cancelled','stale'].includes(match.state)))unresolved.add(match.document_id);
@@ -112,7 +114,7 @@ export async function snapshot(db: PoolClient, applicationId: string, task: Task
     ...(task==='verify_requirement.v1'?{processingLimitations}:{}),
     documents: documents.map(d=>({id:d.id,sha256:d.sha256,contentType:d.content_type})),
     requirements: requirements.map(r=>({id:r.id,title:r.title,subject:r.subject,period:r.period,criteria:r.criteria.map((description:string,index:number)=>({id:`${r.id}:criterion:${index+1}`,description}))})),
-    observed: {definitions:requirements.map(r=>({id:r.id,definition:r.definition_revision,evidence:task==='verify_requirement.v1'?r.evidence_revision:undefined,collection:r.collection,purpose:r.purpose})),versions:documents.map(d=>({id:d.id,series:d.series_id,version:d.version_number})),mapping,rejected,...(task==='verify_requirement.v1'?{batches,pendingMatches,unresolvedMatches,replacedLinks}:{})},
+    observed: {definitions:requirements.map(r=>({id:r.id,definition:r.definition_revision,evidence:task==='verify_requirement.v1'?r.evidence_revision:undefined,collection:r.collection,purpose:r.purpose})),versions:documents.map(d=>({id:d.id,series:d.series_id,version:d.version_number,...(d.restored_at?{restoredAt:d.restored_at}:{})})),mapping,rejected,...(task==='verify_requirement.v1'?{batches,pendingMatches,unresolvedMatches,replacedLinks}:{})},
   };
 }
 export async function enqueue(db: PoolClient, applicationId: string, userId: string, task: TaskKind, targetId: string, lane: Lane, retryOf?: string, scope: ConsentScope = 'borrower') {
@@ -120,10 +122,11 @@ export async function enqueue(db: PoolClient, applicationId: string, userId: str
   await db.query('SELECT id FROM applications WHERE id=$1 FOR UPDATE',[applicationId]);
   const member=(await db.query('SELECT role FROM application_memberships WHERE application_id=$1 AND user_id=$2 AND active FOR SHARE',[applicationId,userId])).rows[0];
   if(!member || member.role!==scope || (scope==='lender' && (task!=='verify_requirement.v1' || lane!=='interactive')))throw new UploadError('Your account cannot request this analysis.',403);
+  if(scope==='borrower' && await routeAdaptiveObligation(db,applicationId,userId,`${task}:${targetId}:${(await db.query('SELECT content_revision::text FROM applications WHERE id=$1',[applicationId])).rows[0].content_revision}`))return null;
   const pref = await preference(db,userId);
-  if (scope==='borrower' && !pref.enabled) return null;
+  const automatic=scope==='borrower';
   const input = await snapshot(db,applicationId,task,targetId,scope);
-  const fingerprint = analysisFingerprint(input,task,scope,pref.epoch,userId);
+  const fingerprint = analysisFingerprint(input,task,scope,pref.epoch,userId,automatic);
   if(task==='verify_requirement.v1') {
     // Preserve immutable attempt inputs and history. Only pending obsolete work is
     // superseded; a running attempt is fenced by the normal freshness gate.
@@ -147,8 +150,8 @@ export async function enqueue(db: PoolClient, applicationId: string, userId: str
     if (cached) return cached.id as string;
   }
   const id = randomUUID();
-  await db.query(`INSERT INTO analysis_jobs(id,application_id,initiated_by,task,target_id,document_id,requirement_id,lane,input,fingerprint,consent_epoch,retry_of,consent_scope)
-    VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)`,[id,applicationId,userId,task,targetId,task==='match_document.v1'?targetId:null,task==='verify_requirement.v1'?targetId:null,lane,JSON.stringify(input),fingerprint,scope==='lender'?'0':pref.epoch,retryOf||null,scope]);
+  await db.query(`INSERT INTO analysis_jobs(id,application_id,initiated_by,task,target_id,document_id,requirement_id,lane,input,fingerprint,consent_epoch,retry_of,consent_scope,automatic)
+    VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)`,[id,applicationId,userId,task,targetId,task==='match_document.v1'?targetId:null,task==='verify_requirement.v1'?targetId:null,lane,JSON.stringify(input),fingerprint,'0',retryOf||null,scope,automatic]);
   await db.query("INSERT INTO analysis_events(application_id,job_id,event,token) VALUES($1,$2,'queued',0)",[applicationId,id]);
   if(task==='match_document.v1')await db.query(`INSERT INTO analysis_invalidations(application_id) VALUES($1)
     ON CONFLICT(application_id) DO UPDATE SET changed_at=clock_timestamp()`,[applicationId]);
@@ -156,6 +159,7 @@ export async function enqueue(db: PoolClient, applicationId: string, userId: str
 }
 export async function enqueueForDocument(db:PoolClient, applicationId:string, userId:string, documentId:string) {
   const d = (await db.query('SELECT content_type FROM documents WHERE application_id=$1 AND id=$2',[applicationId,documentId])).rows[0];
+  if(d?.content_type && await routeAdaptiveObligation(db,applicationId,userId,`match_document.v1:${documentId}:${(await db.query('SELECT content_revision::text FROM applications WHERE id=$1',[applicationId])).rows[0].content_revision}`))return null;
   if (d?.content_type && supportsAnalysis(d.content_type)) return enqueue(db,applicationId,userId,'match_document.v1',documentId,'background');
   return null;
 }
@@ -168,7 +172,7 @@ export async function jobDTO(db:PoolClient, row:Record<string,any>, viewer:Acces
   try {
     const pref=await preference(db,row.initiated_by);
     const input=await snapshot(db,row.application_id,row.task,row.target_id,row.consent_scope);
-    current = (row.consent_scope==='lender' || (pref.enabled && pref.epoch===String(row.consent_epoch))) && analysisFingerprint(input,row.task,row.consent_scope,pref.epoch,row.initiated_by)===(row.result_fingerprint||row.fingerprint);
+    current = (row.consent_scope==='lender' || row.automatic || (pref.enabled && pref.epoch===String(row.consent_epoch))) && analysisFingerprint(input,row.task,row.consent_scope,pref.epoch,row.initiated_by,row.automatic)===(row.result_fingerprint||row.fingerprint);
   } catch { current=false; }
   const message:Record<string,string> = {queued:'Waiting to check',running:'Checking documents',retry_wait:'Waiting to retry',blocked:'Checks unavailable; your documents are saved',succeeded:'Check complete',failed:'Check could not finish; continue manually or retry',dead_letter:'Check could not finish; retry when ready',cancelled:'Check cancelled',stale:'Documents changed; check again',expired:'Check expired; try again'};
   const result=row.state==='succeeded'?row.result:undefined;
@@ -176,5 +180,5 @@ export async function jobDTO(db:PoolClient, row:Record<string,any>, viewer:Acces
   return {id:row.id,ownedByCurrentUser:owns,consentScope:row.consent_scope,task:row.task,targetId:row.target_id,documentId:row.document_id||undefined,requirementId:row.requirement_id||undefined,state:row.state,
     revision:String(row.revision),createdAt:row.created_at,updatedAt:row.updated_at,safeCode:row.safe_code||undefined,message:message[row.state],
     freshness:current?'current':'stale',result:presented,cancellationRequested:row.cancel_requested,
-    canCancel:owns && liveStates.includes(row.state),canRetry:owns && ['failed','dead_letter','cancelled','stale','expired','blocked'].includes(row.state),pollAfterMs:2000};
+    canCancel:owns && liveStates.includes(row.state),canRetry:owns && (['failed','dead_letter','cancelled','stale','expired','blocked'].includes(row.state) || (row.state==='succeeded' && !current)),pollAfterMs:2000};
 }

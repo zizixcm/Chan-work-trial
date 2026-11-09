@@ -1,0 +1,22 @@
+{
+  "caseId": "DISPLAY-01",
+  "status": "explicitly requested by user; native scorer and regression tests implemented",
+  "rule": "Whenever a complete requirement is displayed, show \u2705 immediately to the LEFT of its name.",
+  "scope": [
+    "Borrower agent replies",
+    "Streaming and final upload reports",
+    "Requirement cards and summaries",
+    "Restored conversation and reconnect views"
+  ],
+  "positiveExample": "\u2705 Current rent roll",
+  "negativeExamples": [
+    "Current rent roll \u2014 complete",
+    "\u2705 Property operating statements (when only the annual component is supported)",
+    "Current rent roll \u2705"
+  ],
+  "statusSource": "Current validated whole-requirement status; file receipt, finished processing, a single criterion or lender approval are distinct.",
+  "coverage": "Check every displayed occurrence, including repeated names; evaluator must verify extraction covers the full visible output.",
+  "nativeScorer": "lib/evaluation-observability/requirement-display.ts",
+  "batchGate": "completed_requirement_checkmark",
+  "deployment": "Not deployed by evaluation chat; UI and agent owners notified."
+}

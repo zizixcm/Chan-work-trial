@@ -1,0 +1,53 @@
+{
+  "candidate": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v2",
+  "url": "http://127.0.0.1:3113/",
+  "fixture": "BATCH-01 R3 synthetic b01-app",
+  "configurationDigest": "4b73c7c9b2b82dc07cd84eb11a662e11616ef9c1409f4cadff3edb289b8c4a14",
+  "identity": {
+    "candidate.json": "ccde6df05f571f2e923f9cb8290993c39dcdd195f8a0214ec02c06d00bac14fb",
+    "artifacts/testing/batch-manifest.json": "3ef6756b443f11451064fcabe237f2c8c75446d1fe6247025566fcf82662c144"
+  },
+  "pass": [
+    "Synthetic sign-in",
+    "Saved two-file review shows received/readability/requirement match/document checks in order",
+    "Completed-state reload retains one visible receipt and final reply; review reopens with both saved files",
+    "Desktop1280x900 and mobile390x844 have no horizontal overflow; stage rows scroll into view above sticky composer/quick questions",
+    "Left-side \u2705 immediately before Current rent roll in reply and current findings; no completion check for other requirements",
+    "No active processing indicator in completed fixture; saved review collapsed initially",
+    "Captured browser warnings/errors empty"
+  ],
+  "statusLabels": {
+    "reply": {
+      "rent_roll": "fully satisfied",
+      "operating_statements": "Partially satisfied; reconciliation pending",
+      "leases": "Unsatisfied; executed lease copies still needed",
+      "entity": "Unsatisfied; formation/operating documents requested"
+    },
+    "currentFindings": {
+      "rent_roll": "Appears complete",
+      "operating_statements": "Cannot determine yet",
+      "leases": "Cannot determine yet",
+      "entity": "Cannot determine yet"
+    },
+    "assessment": "Terminology differs across reply and findings. Unknown comparison and known missing documents are both explicitly described; this is a clarity issue, not proof of fabricated missing evidence or false whole-requirement completion."
+  },
+  "notMeasured": [
+    "Live stage visibility or progress before completion",
+    "Browser receipt latency",
+    "Active reconnect"
+  ],
+  "notRun": [
+    "Fresh upload-to-queue browser action",
+    "Single-file browser case",
+    "Replay/failure recovery browser case"
+  ],
+  "limits": [
+    "No provider calls, worker activation or stable Heritage mutations",
+    "These results apply only to this frozen v2 R3 candidate",
+    "R3 report still records latencyPassed=false and semanticReview pending; this UI check does not waive them"
+  ],
+  "screenshots": [
+    "desktop-stages.png",
+    "mobile-stages.png"
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "status": "preflight-only-no-live-results",
+  "cases": [
+    {
+      "caseId": "D01",
+      "documents": 9,
+      "pages": 13,
+      "sourceHashes": {
+        "manifest.json": "6e16c7f7cb6883d88d367c201cfbd1b763accfbe1c217791ba586c5aa3a6c500",
+        "agent/request.json": "1be528388e1ff2a5266e76f5ddce037159f73ed5e437f12b9404052ad1a4d99b",
+        "private/oracle.json": "bb8946a30305df86a35a3353f3c234654bbb6910936133a22d1b0a21bf87d801",
+        "private/simulator.json": "0496ecebef1d4104d526bbff31d969445d2793bb696f40960a1c1b8bc62d882c"
+      },
+      "checkpoints": [
+        {
+          "checkpoint": 1,
+          "activeDocuments": 2,
+          "expectedStates": {
+            "R1.identity": "met",
+            "R1.units": "met",
+            "R2.leases": "unmet",
+            "R2.chain": "met",
+            "R2.compare": "unknown",
+            "R3.year": "met",
+            "R3.current": "unmet",
+            "R3.compare": "unknown",
+            "R4.july": "unmet",
+            "R4.august": "unmet",
+            "R4.september": "unmet",
+            "R5.formation": "unmet",
+            "R5.governing": "unmet",
+            "R5.consistency": "unmet"
+          }
+        },
+        {
+          "checkpoint": 2,
+          "activeDocuments": 7,
+          "expectedStates": {
+            "R1.identity": "met",
+            "R1.units": "met",
+            "R2.leases": "met",
+            "R2.chain": "met",
+            "R2.compare": "met",
+            "R3.year": "met",
+            "R3.current": "met",
+            "R3.compare": "met",
+            "R4.july": "met",
+            "R4.august": "met",
+            "R4.september": "met",
+            "R5.formation": "unmet",
+            "R5.governing": "unmet",
+            "R5.consistency": "unmet"
+          }
+        },
+        {
+          "checkpoint": 3,
+          "activeDocuments": 9,
+          "expectedStates": {
+            "R1.identity": "met",
+            "R1.units": "met",
+            "R2.leases": "met",
+            "R2.chain": "met",
+            "R2.compare": "met",
+            "R3.year": "met",
+            "R3.current": "met",
+            "R3.compare": "met",
+            "R4.july": "met",
+            "R4.august": "met",
+            "R4.september": "met",
+            "R5.formation": "met",
+            "R5.governing": "met",
+            "R5.consistency": "met"
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "D03",
+      "documents": 10,
+      "pages": 14,
+      "sourceHashes": {
+        "manifest.json": "931c85dafcdc37c67de18358beb660dfb458f6ee710bf6af37c5025f3bf986eb",
+        "agent/request.json": "e0154dc0b1acd4e314ef55bfdd0b22783ce2c131ab6eaf5b067af73ca45748eb",
+        "private/oracle.json": "b01450a559678a6e3168129d002ebf2b53fe6a736c38a8c0c2e7434877fd6a9d",
+        "private/simulator.json": "6abf33af8fee6244ba471311e907a7ca13202023c9c6e326b5a56307cee4c5f8"
+      },
+      "checkpoints": [
+        {
+          "checkpoint": 1,
+          "activeDocuments": 4,
+          "expectedStates": {
+            "R1.identity": "met",
+            "R1.units": "met",
+            "R2.leases": "met",
+            "R2.chain": "unmet",
+            "R2.compare": "unknown",
+            "R3.year": "met",
+            "R3.current": "met",
+            "R3.compare": "unknown",
+            "R4.july": "unmet",
+            "R4.august": "unmet",
+            "R4.september": "unmet",
+            "R5.formation": "unmet",
+            "R5.governing": "unmet",
+            "R5.consistency": "unmet"
+          }
+        },
+        {
+          "checkpoint": 2,
+          "activeDocuments": 9,
+          "expectedStates": {
+            "R1.identity": "met",
+            "R1.units": "met",
+            "R2.leases": "met",
+            "R2.chain": "unmet",
+            "R2.compare": "unknown",
+            "R3.year": "met",
+            "R3.current": "met",
+            "R3.compare": "unknown",
+            "R4.july": "met",
+            "R4.august": "met",
+            "R4.september": "met",
+            "R5.formation": "met",
+            "R5.governing": "met",
+            "R5.consistency": "met"
+          }
+        },
+        {
+          "checkpoint": 3,
+          "activeDocuments": 10,
+          "expectedStates": {
+            "R1.identity": "met",
+            "R1.units": "met",
+            "R2.leases": "met",
+            "R2.chain": "met",
+            "R2.compare": "met",
+            "R3.year": "met",
+            "R3.current": "met",
+            "R3.compare": "met",
+            "R4.july": "met",
+            "R4.august": "met",
+            "R4.september": "met",
+            "R5.formation": "met",
+            "R5.governing": "met",
+            "R5.consistency": "met"
+          }
+        }
+      ]
+    }
+  ]
+}

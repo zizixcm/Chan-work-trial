@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import type { AnalysisTask, JobLease, JobRepository, ProviderResult, FailureDisposition } from '../lib/backend/contracts';
 import { AnalysisFailure, failureDisposition, safeFailure } from '../lib/backend/failures';
-import { DEFAULT_BUDGET, executeProvider, type ProviderTransport } from '../lib/backend/provider-executor';
+import { DEFAULT_BUDGET, executeProvider, taskInputBudget, type ProviderTransport } from '../lib/backend/provider-executor';
 import { runJob } from '../lib/backend/job-runner';
 import { selectSharedLane } from '../lib/backend/scheduler';
 import { createAnalysisPreparer, type AnalysisSnapshot } from '../lib/backend/prepare-analysis';
@@ -43,8 +43,8 @@ test('one bounded call validates JSON and reports only safe usage', async () => 
 test('oversize input and pre-cancelled requests never call provider', async () => {
   let calls = 0;
   const never: ProviderTransport = {generate: async () => {calls++; throw Error('must not call');}};
-  await assert.rejects(executeProvider({...task, prompt: 'x'.repeat(30_000)}, DEFAULT_BUDGET, never, signal()), {code: 'unsupported_input'});
-  await assert.rejects(executeProvider({...task, outputSchema: {type: 'object', description: 'x'.repeat(30_000)}}, DEFAULT_BUDGET, never, signal()), {code: 'unsupported_input'});
+  await assert.rejects(executeProvider({...task, prompt: 'x'.repeat(DEFAULT_BUDGET.maxInputTokens)}, DEFAULT_BUDGET, never, signal()), {code: 'input_too_large'});
+  await assert.rejects(executeProvider({...task, outputSchema: {type: 'object', description: 'x'.repeat(DEFAULT_BUDGET.maxInputTokens)}}, DEFAULT_BUDGET, never, signal()), {code: 'input_too_large'});
   const cancel = new AbortController(); cancel.abort();
   await assert.rejects(executeProvider(task, DEFAULT_BUDGET, never, cancel.signal), {code: 'cancelled'});
   assert.equal(calls, 0);
@@ -88,6 +88,24 @@ test('denied dispatch never calls provider', async () => {
   await runJob(lease(), {repository: store.repo, prepare: async () => task, budget: DEFAULT_BUDGET,
     transport: {generate: async () => {providerCalls++; return {text: '{}'};}}}, signal());
   assert.equal(providerCalls, 0); assert.equal(store.committed(), undefined);
+});
+
+test('worker reserves the same conservative request bound used for dispatch', async () => {
+  const store = repository();
+  const large = {...task, prompt: 'Statement evidence'.repeat(2000)};
+  const bound = taskInputBudget(large);
+  assert.ok(bound > 24_000 && bound < DEFAULT_BUDGET.maxInputTokens);
+  store.repo.admitDispatch = async (_job, budget) => {
+    assert.equal(budget.maxInputTokens, bound);
+    assert.equal(budget.maxOutputTokens, DEFAULT_BUDGET.maxOutputTokens);
+    return {id: 'reservation'};
+  };
+  await runJob(lease(), {repository: store.repo, prepare: async () => large, budget: DEFAULT_BUDGET,
+    transport: {generate: async ({budget}) => {
+      assert.equal(budget.maxInputTokens, bound);
+      return {text: '{"ok":true}', usage: {inputTokens: 100, outputTokens: 5}};
+    }}}, signal());
+  assert.ok(store.committed());
 });
 
 test('stale commit is discarded but provider usage is still accounted', async () => {
@@ -164,4 +182,25 @@ test('phase telemetry failure cannot fail an otherwise valid analysis',async()=>
  const state=repository();state.repo.recordPhase=async()=>{throw Error('metrics unavailable');};
  await runJob(lease(),{repository:state.repo,prepare:async()=>task,transport,budget:DEFAULT_BUDGET},signal());
  assert(state.committed());assert.equal(state.failure(),undefined);
+});
+
+test('SDK structured output failures are classified without leaking response contents', () => {
+  for(const id of ['STRUCTURED_OUTPUT_TRUNCATED','STRUCTURED_OUTPUT_OBJECT_UNDEFINED','STRUCTURED_OUTPUT_SCHEMA_VALIDATION_FAILED']) {
+    const failure=safeFailure({id,message:'private model output',details:{value:'private response'}});
+    assert.equal(failure.code,'invalid_output');
+    assert.equal(failure.message,'invalid_output');
+  }
+  assert.equal(safeFailure({id:'UNRECOGNIZED_FAILURE'}).code,'internal_error');
+});
+
+// A one-page statement plus the nine-requirement checklist exceeded the old
+// 24 KB request guard even though PDF extraction had already succeeded.
+test('prepared statement requests larger than 24 KB reach the provider', async () => {
+  for (const bytes of [30_011, 33_314, 85_000]) {
+    let calls = 0;
+    await executeProvider({...task, prompt: 'x'.repeat(bytes)}, DEFAULT_BUDGET, {generate: async () => {
+      calls++; return {text: '{"ok":true}'};
+    }}, signal());
+    assert.equal(calls, 1);
+  }
 });

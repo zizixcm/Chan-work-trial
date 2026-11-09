@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "2351594ecb7a33908a402fb0e39449b08ad8753bdbfe6198629fbbed1fead63b",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": true
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "What's been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Identify both saved files and distinguish pending uploads from saved files. Briefly suggest checking unfinished uploads; do not ask to re-upload saved files or claim all files have been considered.",
+    "action": {
+      "kind": "reply",
+      "message": "You have 2 saved files:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nOther uploads are still in progress, so please check your upload progress to make sure remaining files finish transferring. Note that having files saved confirms receipt, but does not mean they have been reviewed or approved yet."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All facts, including the two active documents and the pending uploads status, are accurate and supported by the input."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers what has been uploaded by listing the two saved files and noting that additional uploads are pending."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "It appropriately advises checking on in-progress uploads without requesting re-uploads or falsely claiming complete review."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and does not repeat information."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 402,
+    "completion_tokens": 582,
+    "total_tokens": 984,
+    "cost": 0.002484,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002484,
+      "upstream_inference_prompt_cost": 0.0003015,
+      "upstream_inference_completions_cost": 0.0021825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 403,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

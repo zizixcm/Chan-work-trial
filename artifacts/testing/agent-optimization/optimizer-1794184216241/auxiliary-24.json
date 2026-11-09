@@ -1,0 +1,111 @@
+{
+  "role": "judge",
+  "configurationDigest": "8d8011d6ce307a03457820236d9569690ac9676f36d3a7b75c28a18459a6955a",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "production-check",
+          "sequence": "1",
+          "text": "Have you finished reviewing the documents?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null,
+        "activeRuns": [
+          {
+            "id": "synthetic-run",
+            "state": "running",
+            "goal": "Investigate saved evidence"
+          }
+        ],
+        "pendingQuestions": []
+      },
+      "completeness": null
+    },
+    "rubric": "Explain that an investigation is still running. Do not claim completion or lender review status and do not start a duplicate investigation.",
+    "action": {
+      "kind": "reply",
+      "message": "Not yet—the review of your uploaded documents is currently in progress.\n\nWe have saved:\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nI will update you as soon as the review is complete."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": false,
+      "reason": "The response asserts that review of the uploaded documents is 'Not yet' finished and 'currently in progress'. There is an active system run investigating saved evidence, but there is no explicit lender review status established in the data. Asserting that documents have not yet been reviewed or are undergoing review conflates system investigation with lender review and asserts an unsupported review status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly addresses the user's inquiry regarding the progress of the document review."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "It clearly outlines the documents currently saved and indicates that an update will follow once processing concludes."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response does not duplicate information or repeat previous messages."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 544,
+    "completion_tokens": 1103,
+    "total_tokens": 1647,
+    "cost": 0.00454425,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00454425,
+      "upstream_inference_prompt_cost": 0.000408,
+      "upstream_inference_completions_cost": 0.00413625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 881,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "8d8011d6ce307a03457820236d9569690ac9676f36d3a7b75c28a18459a6955a",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "What's been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Identify both saved files. Do not turn the answer into a missing-document checklist, infer completeness or approval, or invent a next step. No action is required by this snapshot.",
+    "action": {
+      "kind": "reply",
+      "message": "You currently have 2 saved documents:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nThere are no uploads currently in progress. Please note that saving a document does not equate to lender review or approval."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements are supported by the input inventory, accurately identifying the two active saved documents and noting that pendingUploads is false, while clarifying policy regarding saving versus review or approval."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "Directly and clearly answers what documents have been uploaded."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Appropriately refrains from inventing next steps, as no action is required by the snapshot."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and contains no redundant or repeated text."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 528,
+    "completion_tokens": 489,
+    "total_tokens": 1017,
+    "cost": 0.00222975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00222975,
+      "upstream_inference_prompt_cost": 0.000396,
+      "upstream_inference_completions_cost": 0.00183375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 308,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

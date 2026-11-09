@@ -1,0 +1,396 @@
+{
+  "results": [
+    {
+      "name": "upload",
+      "w": 1280,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "preview": []
+    },
+    {
+      "name": "file",
+      "w": 1280,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "preview": [
+        {
+          "height": 449.015625,
+          "bottom": 641
+        }
+      ]
+    },
+    {
+      "name": "requirement",
+      "w": 1280,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "preview": [
+        {
+          "height": 303.421875,
+          "bottom": 626
+        }
+      ]
+    },
+    {
+      "name": "edit-files",
+      "w": 1280,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "preview": []
+    },
+    {
+      "name": "upload",
+      "w": 1440,
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "preview": []
+    },
+    {
+      "name": "file",
+      "w": 1440,
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "preview": [
+        {
+          "height": 629.015625,
+          "bottom": 821
+        }
+      ]
+    },
+    {
+      "name": "requirement",
+      "w": 1440,
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "preview": [
+        {
+          "height": 483.421875,
+          "bottom": 806
+        }
+      ]
+    },
+    {
+      "name": "edit-files",
+      "w": 1440,
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "preview": []
+    },
+    {
+      "name": "upload",
+      "w": 390,
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 1770,
+      "preview": []
+    },
+    {
+      "name": "file",
+      "w": 390,
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 1979,
+      "preview": [
+        {
+          "height": 665.5625,
+          "bottom": 1358.515625
+        }
+      ]
+    },
+    {
+      "name": "requirement",
+      "w": 390,
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 1652,
+      "preview": [
+        {
+          "height": 626.375,
+          "bottom": 1490.921875
+        }
+      ]
+    },
+    {
+      "name": "edit-files",
+      "w": 390,
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 1883,
+      "preview": []
+    },
+    {
+      "name": "upload",
+      "w": 320,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 1887,
+      "preview": []
+    },
+    {
+      "name": "file",
+      "w": 320,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 1989,
+      "preview": [
+        {
+          "height": 633.96875,
+          "bottom": 1368.71875
+        }
+      ]
+    },
+    {
+      "name": "requirement",
+      "w": 320,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 1686,
+      "preview": [
+        {
+          "height": 594.78125,
+          "bottom": 1525.125
+        }
+      ]
+    },
+    {
+      "name": "edit-files",
+      "w": 320,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 2007,
+      "preview": []
+    },
+    {
+      "name": "upload",
+      "w": 640,
+      "width": 640,
+      "height": 360,
+      "scrollWidth": 640,
+      "scrollHeight": 1695,
+      "preview": []
+    },
+    {
+      "name": "file",
+      "w": 640,
+      "width": 640,
+      "height": 360,
+      "scrollWidth": 640,
+      "scrollHeight": 1784,
+      "preview": [
+        {
+          "height": 495.78125,
+          "bottom": 1163.140625
+        }
+      ]
+    },
+    {
+      "name": "requirement",
+      "w": 640,
+      "width": 640,
+      "height": 360,
+      "scrollWidth": 640,
+      "scrollHeight": 1415,
+      "preview": [
+        {
+          "height": 456.59375,
+          "bottom": 1254.546875
+        }
+      ]
+    },
+    {
+      "name": "edit-files",
+      "w": 640,
+      "width": 640,
+      "height": 360,
+      "scrollWidth": 640,
+      "scrollHeight": 1851,
+      "preview": []
+    },
+    {
+      "name": "remove-confirm",
+      "w": 1280,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "preview": [
+        {
+          "height": 327.421875,
+          "bottom": 641
+        }
+      ]
+    },
+    {
+      "name": "upload-empty",
+      "w": 1280,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "preview": []
+    },
+    {
+      "name": "file-empty",
+      "w": 1280,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "preview": []
+    },
+    {
+      "name": "requirement-empty",
+      "w": 1280,
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "scrollHeight": 720,
+      "preview": []
+    },
+    {
+      "name": "upload-empty",
+      "w": 320,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 1963,
+      "preview": []
+    },
+    {
+      "name": "file-empty",
+      "w": 320,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 750,
+      "preview": []
+    },
+    {
+      "name": "requirement-empty",
+      "w": 320,
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "scrollHeight": 1242,
+      "preview": []
+    }
+  ],
+  "errors": [],
+  "calls": [
+    {
+      "p": "/api/documents/b5a765d5-71d3-4156-adcc-a677ca436931/requirements/33000000-0000-4000-8000-000000000001",
+      "method": "DELETE"
+    },
+    {
+      "p": "/api/documents/b5a765d5-71d3-4156-adcc-a677ca436931/requirements/33000000-0000-4000-8000-000000000001",
+      "method": "PUT"
+    },
+    {
+      "p": "/api/documents/b5a765d5-71d3-4156-adcc-a677ca436931/requirements/33000000-0000-4000-8000-000000000015",
+      "method": "PUT"
+    },
+    {
+      "p": "/api/documents/b5a765d5-71d3-4156-adcc-a677ca436931/requirements/33000000-0000-4000-8000-000000000001",
+      "method": "DELETE"
+    },
+    {
+      "p": "/api/documents/b5a765d5-71d3-4156-adcc-a677ca436931/requirements/33000000-0000-4000-8000-000000000001",
+      "method": "PUT"
+    },
+    {
+      "p": "/api/documents/b5a765d5-71d3-4156-adcc-a677ca436931",
+      "method": "DELETE"
+    },
+    {
+      "p": "/api/documents/b5a765d5-71d3-4156-adcc-a677ca436931",
+      "method": "DELETE"
+    },
+    {
+      "p": "/api/upload-batches",
+      "method": "POST",
+      "body": {
+        "id": "f4640293-b56f-4a1c-845f-8146b4391085",
+        "members": [
+          {
+            "id": "5edf094b-97f0-4b44-8d2d-1dacdfbf1dc4",
+            "name": "new.csv",
+            "sha256": "944af5e88f777449cb3408b0714a8dd173344b4b77534879ae89482c58c90bbd"
+          }
+        ]
+      }
+    },
+    {
+      "p": "/api/documents",
+      "method": "POST"
+    },
+    {
+      "p": "/api/upload-batches",
+      "method": "POST",
+      "body": {
+        "action": "finalize",
+        "id": "f4640293-b56f-4a1c-845f-8146b4391085"
+      }
+    },
+    {
+      "p": "/api/upload-batches",
+      "method": "POST",
+      "body": {
+        "id": "64534726-f256-4a2a-86cc-5a68c851c26a",
+        "members": [
+          {
+            "id": "ff67daa8-4246-4d9e-a433-419083397fdc",
+            "name": "new.csv",
+            "sha256": "944af5e88f777449cb3408b0714a8dd173344b4b77534879ae89482c58c90bbd"
+          }
+        ]
+      }
+    },
+    {
+      "p": "/api/documents",
+      "method": "POST"
+    },
+    {
+      "p": "/api/upload-batches",
+      "method": "POST",
+      "body": {
+        "action": "finalize",
+        "id": "64534726-f256-4a2a-86cc-5a68c851c26a"
+      }
+    }
+  ],
+  "checks": [
+    "five viewports",
+    "no AI settings/manual checks",
+    "zero/many links",
+    "requirement association edit",
+    "targeted upload dialog",
+    "revision guarded removal",
+    "409 refresh recovery",
+    "pending upload removal guard",
+    "saved queue clears"
+  ]
+}

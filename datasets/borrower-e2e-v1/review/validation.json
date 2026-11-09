@@ -1,0 +1,11 @@
+{
+  "cases": 12,
+  "documents": 121,
+  "pages": 250,
+  "scanPages": 4,
+  "nativePageChecks": 250,
+  "freeze": "pass",
+  "crossSplitExactDuplicates": 0,
+  "rendered": false,
+  "semanticReview": "separate independent review required"
+}

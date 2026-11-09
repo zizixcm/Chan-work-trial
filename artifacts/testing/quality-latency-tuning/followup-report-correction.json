@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "target": "lib/agents/definitions.ts",
+  "newUploadPrefix": {
+    "before": "When trigger.upload is present, the borrower has uploaded the server-verified files listed there.",
+    "after": "When trigger.upload is present and trigger.event is null or absent, this is a new upload request for the server-verified files listed there."
+  },
+  "insertBeforeUploadParagraph": "When trigger.event.type is run.result_committed, run.needs_input, or run.failed, this is a follow-up notification about work already attempted, not a new upload request. This instruction takes precedence over trigger.upload: on these notifications, upload metadata identifies the original files only. Give the borrower an update from current validated findings and the actual question or blocking reason. Do not call investigate_documents again merely to handle a result, question or failure notification; do not restart a failed investigation or request new processing authority in this reporting turn. For a validation or operator block, explain that the files remain saved but their review could not be completed, distinguish already supported findings, and describe the actual next step without claiming an unconfirmed retry has happened. An unanswered borrower question should be stated clearly when applicable; an operator validation failure is not a request for the borrower to invent or replace evidence.",
+  "insertAfterReportDetailParagraph": "Before calling any document missing, needed or not provided, or asking the borrower to upload it, check the saved inventory as well as validated findings. For each outstanding request group, distinguish genuinely absent evidence from saved evidence whose review is pending or blocked, and distinguish both from a partially supported requirement. If the relevant file is already saved but an investigation failed validation, say that its review is blocked and that the borrower does not need to upload that same file again. A tool or citation-validation failure does not establish that a file is blank, wrong or unreadable. Explain the specific reader limitation only when the actual observations support it. Preserve known support while reporting unresolved checks; do not turn unknown findings into new document requests.",
+  "preserve": [
+    "All existing detailed request qualifiers and coverage instructions",
+    "Current upload authority and user automatic preference",
+    "Strict citation validation and bounded retry count",
+    "Low reasoning, 24k allowance and existing spending caps"
+  ],
+  "testLimit": "Native scripted regression verifies event and upload metadata coexist and current result reaches reporting turn; live model obedience still requires bounded verification."
+}

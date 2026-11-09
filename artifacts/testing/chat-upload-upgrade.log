@@ -1,0 +1,1 @@
+PASS migration026 upgrade: historical finalized saved batch baselined with zero turns/provider dispatch; new finalized batch admitted exactly once

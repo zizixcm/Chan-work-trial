@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-empty",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "No documents have been uploaded yet, and there are no uploads currently in progress.\n\n**Next step:**\n* Please upload a current rent roll for Example Plaza."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All statements match the input state: documents list is empty, pendingUploads is false, and the outstanding requirement is a current rent roll for Example Plaza."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers what has been uploaded by stating that no documents have been uploaded yet."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response clearly and concisely suggests uploading the requested current rent roll as the next step."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetition in the response."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 26,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 1725,
+  "elapsedMs": 3384
+}

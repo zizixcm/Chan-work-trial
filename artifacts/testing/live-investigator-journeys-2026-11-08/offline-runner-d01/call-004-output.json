@@ -1,0 +1,247 @@
+{
+  "text": "",
+  "toolCalls": [
+    {
+      "type": "tool-call",
+      "runId": "30c0182c-9162-4cfe-8ac6-eeb2f394166f",
+      "from": "AGENT",
+      "payload": {
+        "toolCallId": "offline-call",
+        "toolName": "reply_to_borrower",
+        "args": {
+          "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+        }
+      },
+      "traceId": "11f61aab34c931035ce5f43e4cc834b8"
+    }
+  ],
+  "toolResults": [
+    {
+      "type": "tool-result",
+      "runId": "30c0182c-9162-4cfe-8ac6-eeb2f394166f",
+      "from": "AGENT",
+      "payload": {
+        "args": {
+          "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+        },
+        "toolCallId": "offline-call",
+        "toolName": "reply_to_borrower",
+        "result": {
+          "kind": "reply"
+        }
+      },
+      "traceId": "11f61aab34c931035ce5f43e4cc834b8"
+    }
+  ],
+  "steps": [
+    {
+      "stepType": "initial",
+      "sources": [],
+      "files": [],
+      "toolCalls": [
+        {
+          "type": "tool-call",
+          "runId": "30c0182c-9162-4cfe-8ac6-eeb2f394166f",
+          "from": "AGENT",
+          "payload": {
+            "toolCallId": "offline-call",
+            "toolName": "reply_to_borrower",
+            "args": {
+              "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+            }
+          },
+          "traceId": "11f61aab34c931035ce5f43e4cc834b8"
+        }
+      ],
+      "toolResults": [
+        {
+          "type": "tool-result",
+          "runId": "30c0182c-9162-4cfe-8ac6-eeb2f394166f",
+          "from": "AGENT",
+          "payload": {
+            "args": {
+              "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+            },
+            "toolCallId": "offline-call",
+            "toolName": "reply_to_borrower",
+            "result": {
+              "kind": "reply"
+            }
+          },
+          "traceId": "11f61aab34c931035ce5f43e4cc834b8"
+        }
+      ],
+      "content": [
+        {
+          "type": "tool-call",
+          "toolCallId": "offline-call",
+          "toolName": "reply_to_borrower",
+          "input": {
+            "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+          }
+        },
+        {
+          "type": "tool-result",
+          "input": {
+            "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+          },
+          "output": {
+            "type": "json",
+            "value": {
+              "kind": "reply"
+            }
+          },
+          "toolCallId": "offline-call",
+          "toolName": "reply_to_borrower"
+        }
+      ],
+      "text": "",
+      "reasoningText": "",
+      "reasoning": [],
+      "staticToolCalls": [],
+      "dynamicToolCalls": [],
+      "staticToolResults": [],
+      "dynamicToolResults": [],
+      "finishReason": "tool-calls",
+      "usage": {
+        "inputTokens": 1,
+        "outputTokens": 1,
+        "totalTokens": 2,
+        "raw": {
+          "inputTokens": 1,
+          "outputTokens": 1,
+          "totalTokens": 2
+        }
+      },
+      "warnings": [],
+      "request": {},
+      "response": {
+        "id": "5e5dc02d-a99c-4550-b433-74382cd74b1d",
+        "timestamp": "2026-11-08T23:16:42.498Z",
+        "modelId": "scripted-tools",
+        "modelMetadata": {
+          "modelId": "scripted-tools",
+          "modelVersion": "v2",
+          "modelProvider": "offline"
+        },
+        "messages": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool-call",
+                "toolCallId": "offline-call",
+                "toolName": "reply_to_borrower",
+                "input": {
+                  "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "offline-call",
+                "toolName": "reply_to_borrower",
+                "output": {
+                  "type": "json",
+                  "value": {
+                    "kind": "reply"
+                  }
+                },
+                "input": {
+                  "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+                }
+              }
+            ]
+          }
+        ],
+        "dbMessages": [
+          {
+            "id": "a3963bd6-4acb-4562-9c14-64adc16f04d9",
+            "role": "assistant",
+            "content": {
+              "format": 2,
+              "parts": [
+                {
+                  "type": "tool-invocation",
+                  "toolInvocation": {
+                    "state": "result",
+                    "result": {
+                      "kind": "reply"
+                    },
+                    "toolCallId": "offline-call",
+                    "toolName": "reply_to_borrower",
+                    "args": {
+                      "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+                    }
+                  },
+                  "updatedAt": 1794179802577,
+                  "createdAt": 1794179802585
+                }
+              ],
+              "metadata": {
+                "modelId": "scripted-tools",
+                "provider": "offline",
+                "traceId": "11f61aab34c931035ce5f43e4cc834b8"
+              },
+              "toolInvocations": [
+                {
+                  "state": "result",
+                  "result": {
+                    "kind": "reply"
+                  },
+                  "toolCallId": "offline-call",
+                  "toolName": "reply_to_borrower",
+                  "args": {
+                    "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+                  }
+                }
+              ]
+            },
+            "createdAt": "2026-11-08T23:16:42.508Z"
+          }
+        ],
+        "uiMessages": [
+          {
+            "id": "a3963bd6-4acb-4562-9c14-64adc16f04d9",
+            "role": "assistant",
+            "metadata": {
+              "modelId": "scripted-tools",
+              "provider": "offline",
+              "traceId": "11f61aab34c931035ce5f43e4cc834b8",
+              "createdAt": "2026-11-08T23:16:42.508Z"
+            },
+            "parts": [
+              {
+                "type": "tool-reply_to_borrower",
+                "toolCallId": "offline-call",
+                "input": {
+                  "message": "The saved documents remain available. Unresolved evidence requires further investigation; this is not approval."
+                },
+                "output": {
+                  "kind": "reply"
+                },
+                "state": "output-available"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "finishReason": "tool-calls",
+  "usage": {
+    "inputTokens": 1,
+    "outputTokens": 1,
+    "totalTokens": 2,
+    "raw": {
+      "inputTokens": 1,
+      "outputTokens": 1,
+      "totalTokens": 2
+    }
+  },
+  "error": null
+}

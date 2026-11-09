@@ -2,6 +2,14 @@
 
 The approved local runtime is **PostgreSQL 17 in Docker Compose, with Next.js running on the Mac host**. It is not a fully containerized application or a public deployment. REQUIREMENTS.md defines product scope; docs/DATA_DESIGN.md defines the evolving domain contract; docs/PLATFORM_PLAN.md defines runtime ownership and coordination.
 
+## Agent testing
+
+Run `npm run test:agent` for unit tests and TypeScript, or
+`npm run test:agent -- --full` for a fresh build and all simulated integration
+suites. The full run requires local PostgreSQL and a stopped preview. Follow the
+[testing checklist and fix/reverify workflow](docs/TESTING.md) for prerequisites,
+browser verification, and reporting.
+
 ## Canonical configuration
 
 | Component | Current configuration |
@@ -33,6 +41,8 @@ npm run db:seed
 - `db:up` uses `scripts/compose.mjs`, explicitly loads `.env.local`, and waits for database health. The wrapper supports Docker Desktop's bundled CLI/credential helper even if the CLI is not on PATH.
 - `db:migrate` applies checked-in `migrations/postgres/*.sql` in order under a lock with checksum tracking. Auth SQL is already checked in: do not regenerate it during normal setup. A missing checked-in migration is a checkout/integration issue, not permission to invent or bypass it.
 - `db:seed` creates missing synthetic borrower/lender accounts and memberships. On first import it preserves existing SQLite application/file metadata, reviews, notes, and audit history. Reruns preserve existing accounts and application data; this is not a reset command. Original SQLite/files remain intact.
+
+For a real local sample package, `.data/loan-package-profile.json` (or the configured `PORTAL_DATA_DIR`) overrides the synthetic application identity, named requirement subjects, owners and exact periods. Private names stay outside Git. `npx tsx scripts/update-requirements.ts` applies it transactionally; `db:seed` also respects it. The profile must cover all nine active demo occurrences. It preserves uploads, review history, operational timestamps, credentials and immutable submissions. Repeated application is a no-op. After changing a package, use **Send for review** to publish a new lender snapshot; previously sent snapshots retain their original identities and evidence. Synthetic evaluation fixtures and the legacy SQLite import remain separate from this PostgreSQL configuration.
 
 Sign-in credentials are stored in `.data/local-accounts.json`, ignored by Git and owner-readable. Account identities are `borrower@proximitty.example` and `lender@proximitty.example`; passwords are not published here. Public registration is disabled. Use separate browser profiles or sign out to switch roles. Authentication remains enabled; evaluating an unauthenticated demo is not authorization to remove it.
 
@@ -138,3 +148,5 @@ Current AI capabilities and remaining work: [AI feature support](docs/AI_FEATURE
 AI reader formats, prompt strategy, evaluation commands, human-feedback API and metrics plan: [AI prompts, evaluations and metrics](docs/AI_PROMPTS_EVALS_AND_METRICS.md).
 
 Workflow visibility: `/internal/ai-workflows`. Download JSON/CSV there, or run `npm run metrics:export`. See [metrics access and definitions](docs/AI_WORKFLOW_METRICS.md).
+
+Analysis input admission uses a conservative UTF-8 byte ceiling of 96,000, including instructions and the response schema (the evidence payload itself is capped at 80,000 bytes). A larger prepared request reports an analysis input limit rather than a failed readability check. Daily spend includes actual usage plus conservative reservations for calls with unknown usage. The fallback limits remain $0.10 globally and $0.05 per application per UTC day; for multi-file local demonstrations, explicitly set `AI_DAILY_BUDGET_USD=1.00` and `AI_APPLICATION_DAILY_BUDGET_USD=0.50` in `.env.local`, then restart the worker to load the configuration. These are spending ceilings, not prepaid credit.

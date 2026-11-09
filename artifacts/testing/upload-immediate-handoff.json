@@ -1,0 +1,7 @@
+{
+  "lib/jobs/batches.ts": "dae9520d5b92f3e687a4a5b33c265d42b02591a332de568626da6228e39325de",
+  "lib/agents/upload-admission.ts": "192daa7e251ea6526a9021568701d9494cf729094010e55b074ea34ddea1252e",
+  "tests/chat-upload-agents.integration.ts": "b8e9f3c963bb91beaa941b2810af927c7520685e846fa5a8f272fe1cb25f899b",
+  "tests/chat-upload-journey.eval.ts": "9a6091d6a3c3a5916a39e80c03f5ddc3bb1ae00700d31ddff459fbf7bdbc259a",
+  "docs/evals/chat-upload.md": "5855894dfea80f88a46a77faa9808cf3a581971e6388462c68921db9bdbf0fc8"
+}

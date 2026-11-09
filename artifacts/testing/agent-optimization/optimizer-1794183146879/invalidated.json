@@ -1,0 +1,4 @@
+{
+  "status": "invalidated",
+  "reason": "Manual audit found false positive on unsupported review/approval status. Judge calibration required. Interrupted request reservation remains held. No scores from this run select a prompt."
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "user-case-review.1",
+  "caseId": "B01",
+  "tier": "turn",
+  "status": "approved",
+  "fixtureStatus": "proposed",
+  "title": "Initial document guidance",
+  "input": {
+    "baseCase": "D01",
+    "savedDocumentIds": [],
+    "pendingUploadIds": [],
+    "borrowerMessage": "What documents do I need to upload?",
+    "context": "Fixed lender policy and declared property/account information; no uploaded or assessed evidence."
+  },
+  "expected": {
+    "nativeTool": "reply_to_borrower",
+    "requests": [
+      "September 30, 2026 rent roll",
+      "Executed-copy leases and applicable amendments; borrower confirmation may establish that no amendments exist, but cannot replace required leases",
+      "Actual operating statements for full-year 2025 and January\u2013September 2026",
+      "Complete July\u2013September 2026 statements for the declared borrower account",
+      "Formation/governing documents and applicable entity amendments"
+    ],
+    "pass": [
+      "Accurate requirements and periods",
+      "Clear next steps",
+      "No unnecessary question for information already supplied",
+      "Equivalent wording accepted"
+    ],
+    "fail": [
+      "Invented extra requirements",
+      "Claiming uploaded or verified evidence when none exists",
+      "Equating documentary completeness with approval",
+      "Waiving required leases"
+    ],
+    "scope": "One response, not subsequent document verification"
+  },
+  "approval": {
+    "decision": "Approve B01 as written",
+    "source": "explicit user reply in this chat",
+    "date": "2026-11-08",
+    "specSha256": "bfd6a81321d3b0d5ce734dfce10be0731f6a0382eb43a7c9bc913f006a81a222",
+    "scope": "case specification only; live execution remains paused"
+  }
+}

@@ -1,0 +1,1947 @@
+{
+  "checkpoints": [
+    {
+      "activeDocumentIds": [
+        "f103456061297",
+        "f9c7159e3f5b1",
+        "f942674fe7c1a",
+        "fd40c4495f2f4"
+      ],
+      "checkpoint": 1,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D05-101. Property: Ember Landing; unit 101.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2485.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D05-102. Property: Ember Landing; unit 102.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2725.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7385 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D05-101. Property: Ember Landing; unit 101.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2485.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D05-102. Property: Ember Landing; unit 102.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2725.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f103456061297",
+              "f9c7159e3f5b1",
+              "f942674fe7c1a",
+              "fd40c4495f2f4"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": {
+            "description": "2025 actual full-year statement required; supplied 2024 report does not qualify.",
+            "documentRole": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2025-01-01/2025-12-31",
+            "subject": "Ember Landing"
+          },
+          "missingDocumentIds": [
+            "fb8037fe234fe"
+          ],
+          "reason": "2025 actual full-year statement required; supplied 2024 report does not qualify.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f103456061297",
+              "f9c7159e3f5b1",
+              "f942674fe7c1a",
+              "fd40c4495f2f4"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": {
+            "description": "Current-year actual results required; budget is not actual results.",
+            "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Ember Landing"
+          },
+          "missingDocumentIds": [
+            "f990bde92b501"
+          ],
+          "reason": "Current-year actual results required; budget is not actual results.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Ember Landing"
+          },
+          "missingDocumentIds": [
+            "f990bde92b501",
+            "fb8037fe234fe"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D05-101. Property: Ember Landing; unit 101.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2485.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D05-102. Property: Ember Landing; unit 102.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2725.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f103456061297",
+              "f9c7159e3f5b1",
+              "f942674fe7c1a",
+              "fd40c4495f2f4"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete July 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-07",
+            "subject": "Ember Landing Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f531f0d7e1784"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f103456061297",
+              "f9c7159e3f5b1",
+              "f942674fe7c1a",
+              "fd40c4495f2f4"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-08",
+            "subject": "Ember Landing Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f180e5ed9be4f"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f103456061297",
+              "f9c7159e3f5b1",
+              "f942674fe7c1a",
+              "fd40c4495f2f4"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete September 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09",
+            "subject": "Ember Landing Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fa02adc1a80eb"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f103456061297",
+              "f9c7159e3f5b1",
+              "f942674fe7c1a",
+              "fd40c4495f2f4"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Formation certificate identifies the declared borrower.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Ember Landing Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "ffb1d54c50ef5"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f103456061297",
+              "f9c7159e3f5b1",
+              "f942674fe7c1a",
+              "fd40c4495f2f4"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Ember Landing Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f8a4700c81f6e"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f103456061297",
+              "f9c7159e3f5b1",
+              "f942674fe7c1a",
+              "fd40c4495f2f4"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Ember Landing Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f8a4700c81f6e"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f103456061297",
+        "f9c7159e3f5b1",
+        "f942674fe7c1a",
+        "fd40c4495f2f4",
+        "f531f0d7e1784",
+        "f180e5ed9be4f",
+        "fa02adc1a80eb",
+        "ffb1d54c50ef5",
+        "f8a4700c81f6e",
+        "fb8037fe234fe"
+      ],
+      "checkpoint": 2,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D05-101. Property: Ember Landing; unit 101.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2485.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D05-102. Property: Ember Landing; unit 102.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2725.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7385 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D05-101. Property: Ember Landing; unit 101.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2485.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D05-102. Property: Ember Landing; unit 102.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2725.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fb8037fe234fe",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 62520; other income USD 0.",
+                "Operating expenses USD 20840; NOI USD 41680.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fb8037fe234fe",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f103456061297",
+              "f9c7159e3f5b1",
+              "f942674fe7c1a",
+              "fd40c4495f2f4",
+              "f531f0d7e1784",
+              "f180e5ed9be4f",
+              "fa02adc1a80eb",
+              "ffb1d54c50ef5",
+              "f8a4700c81f6e",
+              "fb8037fe234fe"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": {
+            "description": "Current-year actual results required; budget is not actual results.",
+            "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Ember Landing"
+          },
+          "missingDocumentIds": [
+            "f990bde92b501"
+          ],
+          "reason": "Current-year actual results required; budget is not actual results.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Ember Landing"
+          },
+          "missingDocumentIds": [
+            "f990bde92b501"
+          ],
+          "reason": "Comparison cannot yet be completed; required comparison sources are not supplied.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D05-101. Property: Ember Landing; unit 101.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2485.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D05-102. Property: Ember Landing; unit 102.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2725.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fb8037fe234fe",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 62520; other income USD 0.",
+                "Operating expenses USD 20840; NOI USD 41680.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "fb8037fe234fe",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f531f0d7e1784",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7385.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f531f0d7e1784",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Account ending 7385. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f531f0d7e1784",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f531f0d7e1784",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f180e5ed9be4f",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7385.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f180e5ed9be4f",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Account ending 7385. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f180e5ed9be4f",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f180e5ed9be4f",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fa02adc1a80eb",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7385.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fa02adc1a80eb",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Account ending 7385. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fa02adc1a80eb",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fa02adc1a80eb",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "ffb1d54c50ef5",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Ember Landing Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Oren Valee. Fictional registry reference D05-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "ffb1d54c50ef5",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8a4700c81f6e",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Ember Landing Holdings LLC. Effective 2024-10-01.",
+                "Members: Oren Valee 60%; Lysa Quill 40%. Total ownership 100%.",
+                "Manager: Oren Valee. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Oren Valee; member signature /s/ Lysa Quill; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8a4700c81f6e",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8a4700c81f6e",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Ember Landing Holdings LLC. Effective 2024-10-01.",
+                "Members: Oren Valee 60%; Lysa Quill 40%. Total ownership 100%.",
+                "Manager: Oren Valee. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Oren Valee; member signature /s/ Lysa Quill; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8a4700c81f6e",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f103456061297",
+        "f9c7159e3f5b1",
+        "f942674fe7c1a",
+        "fd40c4495f2f4",
+        "f531f0d7e1784",
+        "f180e5ed9be4f",
+        "fa02adc1a80eb",
+        "ffb1d54c50ef5",
+        "f8a4700c81f6e",
+        "fb8037fe234fe",
+        "f990bde92b501"
+      ],
+      "checkpoint": 3,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D05-101. Property: Ember Landing; unit 101.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2485.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D05-102. Property: Ember Landing; unit 102.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2725.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7385 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D05-101. Property: Ember Landing; unit 101.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2485.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D05-102. Property: Ember Landing; unit 102.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2725.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fb8037fe234fe",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 62520; other income USD 0.",
+                "Operating expenses USD 20840; NOI USD 41680.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fb8037fe234fe",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f990bde92b501",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 46890; other income USD 0.",
+                "Operating expenses USD 15630; NOI USD 31260.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f990bde92b501",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f103456061297",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D05-101. Property: Ember Landing; unit 101.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2485.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f9c7159e3f5b1",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D05-102. Property: Ember Landing; unit 102.",
+                "Landlord: Ember Landing Holdings LLC; tenant: Ember Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2725.",
+                "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fb8037fe234fe",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 62520; other income USD 0.",
+                "Operating expenses USD 20840; NOI USD 41680.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f990bde92b501",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 46890; other income USD 0.",
+                "Operating expenses USD 15630; NOI USD 31260.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f103456061297",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f9c7159e3f5b1",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "fb8037fe234fe",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f990bde92b501",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f531f0d7e1784",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7385.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f531f0d7e1784",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Account ending 7385. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f531f0d7e1784",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f531f0d7e1784",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f180e5ed9be4f",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7385.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f180e5ed9be4f",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Account ending 7385. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f180e5ed9be4f",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f180e5ed9be4f",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fa02adc1a80eb",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7385.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fa02adc1a80eb",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Ember Landing Holdings LLC. Account ending 7385. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fa02adc1a80eb",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fa02adc1a80eb",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "ffb1d54c50ef5",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Ember Landing Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Oren Valee. Fictional registry reference D05-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "ffb1d54c50ef5",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8a4700c81f6e",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Ember Landing Holdings LLC. Effective 2024-10-01.",
+                "Members: Oren Valee 60%; Lysa Quill 40%. Total ownership 100%.",
+                "Manager: Oren Valee. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Oren Valee; member signature /s/ Lysa Quill; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8a4700c81f6e",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8a4700c81f6e",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Ember Landing Holdings LLC. Effective 2024-10-01.",
+                "Members: Oren Valee 60%; Lysa Quill 40%. Total ownership 100%.",
+                "Manager: Oren Valee. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Oren Valee; member signature /s/ Lysa Quill; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8a4700c81f6e",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    }
+  ],
+  "crossDocumentArithmetic": {
+    "annualBaseRent": 62520,
+    "calculation": "2025: sum original monthly rents *12. 2026: original *9 plus amendment 1 uplift for April-September and amendment 2 uplift for July-September when applicable.",
+    "currentMonthlyRent": 5210,
+    "currentPeriodBaseRent": 46890
+  },
+  "roles": {
+    "annual": "fb8037fe234fe",
+    "bank7": "f531f0d7e1784",
+    "bank8": "f180e5ed9be4f",
+    "bank9": "fa02adc1a80eb",
+    "budget": "fd40c4495f2f4",
+    "current": "f990bde92b501",
+    "formation": "ffb1d54c50ef5",
+    "governing": "f8a4700c81f6e",
+    "leases": "f9c7159e3f5b1",
+    "old_period": "f942674fe7c1a",
+    "roll": "f103456061297"
+  },
+  "semanticReviewRequired": true,
+  "sourcePages": {
+    "f103456061297": [
+      {
+        "lines": [
+          "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Ember Studio; monthly base rent USD 2485; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Ember Supply; monthly base rent USD 2725; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      }
+    ],
+    "f180e5ed9be4f": [
+      {
+        "lines": [
+          "Holder: Ember Landing Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7385.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Ember Landing Holdings LLC. Account ending 7385. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f531f0d7e1784": [
+      {
+        "lines": [
+          "Holder: Ember Landing Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7385.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Ember Landing Holdings LLC. Account ending 7385. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f8a4700c81f6e": [
+      {
+        "lines": [
+          "Entity: Ember Landing Holdings LLC. Effective 2024-10-01.",
+          "Members: Oren Valee 60%; Lysa Quill 40%. Total ownership 100%.",
+          "Manager: Oren Valee. Manager may execute refinancing documents for this company.",
+          "Member signature /s/ Oren Valee; member signature /s/ Lysa Quill; dated 2024-10-01."
+        ],
+        "title": "Operating agreement"
+      }
+    ],
+    "f942674fe7c1a": [
+      {
+        "lines": [
+          "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Period: 2024-01-01 to 2024-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 62520; other income USD 0.",
+          "Operating expenses USD 20840; NOI USD 41680.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f990bde92b501": [
+      {
+        "lines": [
+          "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 46890; other income USD 0.",
+          "Operating expenses USD 15630; NOI USD 31260.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f9c7159e3f5b1": [
+      {
+        "lines": [
+          "Lease D05-101. Property: Ember Landing; unit 101.",
+          "Landlord: Ember Landing Holdings LLC; tenant: Ember Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2485.",
+          "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease D05-102. Property: Ember Landing; unit 102.",
+          "Landlord: Ember Landing Holdings LLC; tenant: Ember Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2725.",
+          "Landlord signature: /s/ Oren Valee, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Lysa Quill, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      }
+    ],
+    "fa02adc1a80eb": [
+      {
+        "lines": [
+          "Holder: Ember Landing Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7385.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Ember Landing Holdings LLC. Account ending 7385. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fb8037fe234fe": [
+      {
+        "lines": [
+          "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 62520; other income USD 0.",
+          "Operating expenses USD 20840; NOI USD 41680.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "fd40c4495f2f4": [
+      {
+        "lines": [
+          "Property: Ember Landing. Owner: Ember Landing Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. BUDGET ONLY - projected, not actual.",
+          "Rental income USD 46890; other income USD 0.",
+          "Operating expenses USD 15630; NOI USD 31260.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "ffb1d54c50ef5": [
+      {
+        "lines": [
+          "Entity: Ember Landing Holdings LLC. Entity type: limited liability company.",
+          "Formed 2024-10-01. Organizer: Oren Valee. Fictional registry reference D05-REG.",
+          "This document establishes the named entity; it does not itself establish current manager authority."
+        ],
+        "title": "Certificate of formation"
+      }
+    ]
+  },
+  "status": "provisional",
+  "version": "CRE-E2E-oracle.1"
+}

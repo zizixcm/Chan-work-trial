@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-specific",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "Yes, **Rent roll.pdf** has been uploaded and saved to your application."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately confirms that 'Rent roll.pdf' is uploaded and saved based on the documents inventory."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the borrower's question by confirming the upload and naming the specific file."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No next steps were required by the rubric or context, and none were unnecessarily provided."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no repetitive text."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 11,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 5975,
+  "elapsedMs": 9493
+}

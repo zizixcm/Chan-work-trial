@@ -1,0 +1,526 @@
+{
+  "baseline": [
+    {
+      "caseId": "heldout-saved",
+      "repeat": 0,
+      "action": {
+        "kind": "reply",
+        "message": "We currently have 1 saved file on record:\n\n* **Elm lease.pdf**\n\nPlease note that saved files have not yet been reviewed or approved by the lender."
+      },
+      "review": {
+        "grounded": {
+          "passed": false,
+          "reason": "The claim that 'saved files have not yet been reviewed or approved by the lender' asserts an actual review status for the documents, which is not established by the inventory data."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response accurately identifies 'Elm lease.pdf' as the saved file on record."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "No unauthorized or inappropriate next steps were offered."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "There is no repetitive text."
+        },
+        "criticalFailures": [
+          "invented_evidence"
+        ]
+      },
+      "wordCount": 26,
+      "hardPassed": false,
+      "passed": false,
+      "costMicros": 7741,
+      "elapsedMs": 13288
+    },
+    {
+      "caseId": "heldout-saved",
+      "repeat": 1,
+      "action": {
+        "kind": "reply",
+        "message": "We have 1 saved file for your application:\n\n* **Elm lease.pdf**\n\nPlease note that saved files have not yet been reviewed or approved by the lender."
+      },
+      "review": {
+        "grounded": {
+          "passed": false,
+          "reason": "The claim that 'saved files have not yet been reviewed or approved by the lender' asserts an actual review/approval status, which is not supported by the provided data."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response directly answers the user's question by naming 'Elm lease.pdf' as the saved file."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "No unauthorized or inappropriate next steps were offered."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The response is concise and does not repeat information."
+        },
+        "criticalFailures": [
+          "invented_evidence"
+        ]
+      },
+      "wordCount": 26,
+      "hardPassed": false,
+      "passed": false,
+      "costMicros": 7209,
+      "elapsedMs": 12532
+    },
+    {
+      "caseId": "heldout-empty",
+      "repeat": 0,
+      "action": {
+        "kind": "reply",
+        "message": "We do not have any documents saved for your application yet.\n\n**Next step:**\n* Please upload your **current executed lease** for Elm Center to get started."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "The response accurately reflects that no documents are saved in the inventory and references the required executed lease without inventing any details or review statuses."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response directly answers the user's question by stating that no documents are saved yet."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "The response provides a clear and concrete next step requesting the upload of the current executed lease."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "There is no unnecessary repetition."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 26,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 4335,
+      "elapsedMs": 7849
+    },
+    {
+      "caseId": "heldout-empty",
+      "repeat": 1,
+      "action": {
+        "kind": "reply",
+        "message": "No, we do not have any saved documents for your application yet.\n\n**Next step:**\n* Please upload your **current executed lease** for Elm Center."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "All claims are supported by the input: there are no saved documents in the inventory, the requirement is an executed current lease, and the property name is Elm Center."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "Directly and accurately answers whether any documents are currently saved."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "Provides a concrete and appropriate next step to upload the current executed lease in accordance with the outstanding requirement and rubric."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The response is concise and contains no repetitive content."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 24,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 3963,
+      "elapsedMs": 6576
+    },
+    {
+      "caseId": "heldout-pending",
+      "repeat": 0,
+      "action": {
+        "kind": "reply",
+        "message": "Not yet—other uploads are still in progress.\n\n* **Saved file:** **Elm lease.pdf** has been saved.\n* **Pending uploads:** Additional uploads are still in progress.\n\n**Next step:**\nPlease check your upload progress to ensure any remaining files finish uploading."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "All statements are fully supported by the inventory data, accurately distinguishing the saved file from the pending uploads flag without assuming review statuses."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "Directly and accurately answers the user's question by stating that uploads are not completely finished while distinguishing the successfully saved Elm lease.pdf from other in-progress uploads."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "Appropriately suggests monitoring or checking the upload progress for remaining files without asking for unnecessary re-uploads."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The response is clear and does not repeat information unnecessarily."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 38,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 8090,
+      "elapsedMs": 13152
+    },
+    {
+      "caseId": "heldout-pending",
+      "repeat": 1,
+      "action": {
+        "kind": "reply",
+        "message": "Your upload is not completely finished yet:\n\n* **Saved file (1):** Elm lease.pdf\n* **In progress:** Other uploads are still in progress.\n\nPlease check your upload progress to ensure any remaining files finish transferring."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "All factual statements are supported by the input, correctly noting that Elm lease.pdf is saved and pending uploads remain active without claiming an unsupported review or approval status."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "Directly answers the user's question regarding whether the upload is finished by clarifying that one file is saved while other uploads are still in progress."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "Appropriately suggests checking upload progress without requesting a re-upload of the already saved lease or marking it as pending."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The response is concise and contains no redundant statements."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 34,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 7853,
+      "elapsedMs": 13623
+    },
+    {
+      "caseId": "heldout-approval",
+      "repeat": 0,
+      "action": {
+        "kind": "reply",
+        "message": "No, saving your lease does not mean the lender has approved it.\n\nHere is how the stages differ:\n- **Saved:** Your file (`Elm lease.pdf`) is securely uploaded and stored in your application.\n- **Document review:** The file must still be checked to verify it meets the lender's requirement for a current executed lease.\n- **Lender approval:** Final loan approval is granted by the lender's underwriting team after all necessary documents are reviewed and accepted."
+      },
+      "review": {
+        "grounded": {
+          "passed": false,
+          "reason": "The response asserts an actual status by claiming 'The file must still be checked', implying that Elm lease.pdf has not yet been reviewed, which is not supported by explicit review status evidence in the inventory."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response directly answers that saving the lease does not mean the lender has approved it."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "The response provides clear clarification of the process without unnecessary next steps."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The response contains no repetitive text."
+        },
+        "criticalFailures": [
+          "invented_evidence"
+        ]
+      },
+      "wordCount": 74,
+      "hardPassed": false,
+      "passed": false,
+      "costMicros": 11220,
+      "elapsedMs": 17404
+    },
+    {
+      "caseId": "heldout-approval",
+      "repeat": 1,
+      "action": {
+        "kind": "reply",
+        "message": "No, saving your lease does not mean the lender has approved it.\n\n* **Saved:** Confirms your file (**Elm lease.pdf**) has been received into your application inventory.\n* **Reviewed:** The document must still be checked to verify it meets the requirement for a fully executed, current lease.\n* **Approved:** Final loan approval is a separate decision made by the lender after all required documents and underwriting criteria are satisfied."
+      },
+      "review": {
+        "grounded": {
+          "passed": false,
+          "reason": "The response asserts an actual review status by stating that the document 'must still be checked', implying it has not yet been reviewed. In the provided data, saved documents have no known review status."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response directly answers the user's question by explaining that saving a document does not mean lender approval."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "No next steps were required or requested, and none were inappropriately pushed."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The response does not repeat information unnecessarily."
+        },
+        "criticalFailures": [
+          "invented_evidence"
+        ]
+      },
+      "wordCount": 68,
+      "hardPassed": false,
+      "passed": false,
+      "costMicros": 10307,
+      "elapsedMs": 16171
+    }
+  ],
+  "candidate": [
+    {
+      "caseId": "heldout-saved",
+      "repeat": 0,
+      "action": {
+        "kind": "reply",
+        "message": "You have 1 saved file in your application for Elm Center:\n\n* **Elm lease.pdf**\n\nPlease note that a file being saved does not equate to lender review or approval."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "All statements are grounded in the inventory facts, and the note clarifies policy without claiming an unverified review status."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response directly identifies 'Elm lease.pdf' as the saved document in the application."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "No inappropriate or premature next steps are pushed."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The response is concise and contains no repetitive content."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 29,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 6872,
+      "elapsedMs": 10425
+    },
+    {
+      "caseId": "heldout-saved",
+      "repeat": 1,
+      "action": {
+        "kind": "reply",
+        "message": "We have 1 saved file for your application:\n\n* **Elm lease.pdf**\n\nPlease note that having a file saved does not equate to lender review or approval."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "The response accurately identifies Elm lease.pdf from the document inventory and correctly states general policy regarding file saving versus review or approval without asserting an unsupported review status."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response directly answers which files are saved on the application."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "No extraneous or inappropriate next steps were suggested."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "There is no repetition in the message."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 26,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 6975,
+      "elapsedMs": 11538
+    },
+    {
+      "caseId": "heldout-empty",
+      "repeat": 0,
+      "action": {
+        "kind": "reply",
+        "message": "No, we do not have any saved documents for your application yet.\n\n**Next step:**\n* Please upload your current executed lease for Elm Center."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "All statements match the inventory: documents list is empty, and the pending requirement is a current executed lease for Elm Center."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "Directly confirms that no documents have been saved yet."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "Provides a concrete next step to upload the current executed lease."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The response is concise and does not repeat information."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 24,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 3784,
+      "elapsedMs": 6561
+    },
+    {
+      "caseId": "heldout-empty",
+      "repeat": 1,
+      "action": {
+        "kind": "reply",
+        "message": "No documents have been saved yet for your application.\n\nTo get started, please upload:\n* **Executed lease** (Current)"
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "The response accurately reflects that no documents are in the inventory and references the open requirement for an Executed lease (Current)."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response directly answers the borrower's inquiry about whether any documents have been received."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "The response provides clear and appropriate next steps by requesting the upload of the current executed lease."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "There is no repeated text or looping information."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 18,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 4249,
+      "elapsedMs": 6891
+    },
+    {
+      "caseId": "heldout-pending",
+      "repeat": 0,
+      "action": {
+        "kind": "reply",
+        "message": "Your upload is not completely finished yet:\n\n* **Saved file**: **Elm lease.pdf** is saved (as a general note, saving a file does not equate to review or approval).\n* **Pending uploads**: Additional uploads are still in progress.\n\n**Next step**: Please check your upload progress to make sure your remaining files finish uploading."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "All statements are fully supported by the input data. The note regarding review/approval correctly states general policy rather than claiming an unverified status."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "Directly and clearly answers whether the upload is done by noting that while Elm lease.pdf is saved, other uploads remain pending."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "Appropriately suggests checking upload progress for the remaining files without requesting a re-upload or marking the saved file as pending."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The response is concise and contains no redundant or repeated text."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 52,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 8326,
+      "elapsedMs": 14544
+    },
+    {
+      "caseId": "heldout-pending",
+      "repeat": 1,
+      "action": {
+        "kind": "reply",
+        "message": "**Elm lease.pdf** is saved, but additional uploads are still in progress. \n\n**Next step:**\n* Check your upload progress to ensure any remaining files finish uploading."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "All factual claims are supported by the input: 'Elm lease.pdf' is an active saved document and pendingUploads is true."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response directly answers whether the upload is done by clarifying that 'Elm lease.pdf' is saved while other uploads are still in progress."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "The response suggests checking upload progress without requesting a re-upload or marking the saved document as pending."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The response is concise and does not repeat information."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 25,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 7468,
+      "elapsedMs": 11486
+    },
+    {
+      "caseId": "heldout-approval",
+      "repeat": 0,
+      "action": {
+        "kind": "reply",
+        "message": "No, saving your document does not mean the lender has approved it.\n\nSaving confirms that your file (*Elm lease.pdf*) is recorded in your application, but saving does not equate to review or approval by the lender. Approval is a separate evaluation process by the lender."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "The response accurately distinguishes saving from lender review/approval as a policy explanation without asserting an unverified review status for the document."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response directly answers the borrower's question by clarifying that saving the lease does not mean it has been approved by the lender."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "The response properly addresses the conceptual question without imposing unnecessary or ungrounded next steps."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "There is no unnecessary repetition."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 45,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 6786,
+      "elapsedMs": 11636
+    },
+    {
+      "caseId": "heldout-approval",
+      "repeat": 1,
+      "action": {
+        "kind": "reply",
+        "message": "No. Saving a document does not mean the lender has approved it.\n\nSaving a file confirms it has been received and stored in your application, but saving does not equate to lender review or approval."
+      },
+      "review": {
+        "grounded": {
+          "passed": true,
+          "reason": "The response clarifies the distinction between saving a document and lender review/approval as a general policy without asserting any unsupported review status for the specific file."
+        },
+        "answersQuestion": {
+          "passed": true,
+          "reason": "The response directly answers the borrower's question by confirming that saving a document does not mean it has been approved by the lender."
+        },
+        "appropriateNextSteps": {
+          "passed": true,
+          "reason": "No extraneous or inappropriate next steps were offered; the response straightforwardly addresses the user's inquiry."
+        },
+        "noRepetition": {
+          "passed": true,
+          "reason": "The message is concise and does not engage in unnecessary repetition."
+        },
+        "criticalFailures": []
+      },
+      "wordCount": 35,
+      "hardPassed": true,
+      "passed": true,
+      "costMicros": 7670,
+      "elapsedMs": 13634
+    }
+  ]
+}

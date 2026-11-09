@@ -1,0 +1,1930 @@
+{
+  "checkpoints": [
+    {
+      "activeDocumentIds": [
+        "f9c8235aa530d",
+        "f5bd96f6fb9cb",
+        "f388078a12c6b",
+        "fe5a03a9509f0"
+      ],
+      "checkpoint": 1,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": {
+            "description": "Last tenant execution page is obscured; request a clearer copy, not a new lease.",
+            "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+            "kind": "unreadable",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Garnet Walk"
+          },
+          "missingDocumentIds": [
+            "fe95c2ee0b84e"
+          ],
+          "reason": "Last tenant execution page is obscured; request a clearer copy, not a new lease.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f5bd96f6fb9cb",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D07-101. Property: Garnet Walk; unit 101.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f5bd96f6fb9cb",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7419 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Lease collection is supplied, but the last tenant page is obscured; comparison remains uncertain pending a clearer copy.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "unreadable",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Garnet Walk"
+          },
+          "missingDocumentIds": [
+            "fe95c2ee0b84e"
+          ],
+          "reason": "Lease collection is supplied, but the last tenant page is obscured; comparison remains uncertain pending a clearer copy.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f5bd96f6fb9cb",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D07-101. Property: Garnet Walk; unit 101.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f5bd96f6fb9cb",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f388078a12c6b",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 69096; other income USD 0.",
+                "Operating expenses USD 23032; NOI USD 46064.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f388078a12c6b",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe5a03a9509f0",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 51822; other income USD 0.",
+                "Operating expenses USD 17274; NOI USD 34548.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe5a03a9509f0",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Lease collection is supplied, but the last tenant page is obscured; comparison remains uncertain pending a clearer copy.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "unreadable",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Garnet Walk"
+          },
+          "missingDocumentIds": [
+            "fe95c2ee0b84e"
+          ],
+          "reason": "Lease collection is supplied, but the last tenant page is obscured; comparison remains uncertain pending a clearer copy.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f388078a12c6b",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 69096; other income USD 0.",
+                "Operating expenses USD 23032; NOI USD 46064.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "fe5a03a9509f0",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 51822; other income USD 0.",
+                "Operating expenses USD 17274; NOI USD 34548.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f5bd96f6fb9cb",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D07-101. Property: Garnet Walk; unit 101.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f388078a12c6b",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe5a03a9509f0",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f5bd96f6fb9cb",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9c8235aa530d",
+              "f5bd96f6fb9cb",
+              "f388078a12c6b",
+              "fe5a03a9509f0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete July 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-07",
+            "subject": "Garnet Walk Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f4a50710e84f7"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9c8235aa530d",
+              "f5bd96f6fb9cb",
+              "f388078a12c6b",
+              "fe5a03a9509f0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-08",
+            "subject": "Garnet Walk Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fd815041ba107"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9c8235aa530d",
+              "f5bd96f6fb9cb",
+              "f388078a12c6b",
+              "fe5a03a9509f0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete September 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09",
+            "subject": "Garnet Walk Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "fe8376e83c153"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9c8235aa530d",
+              "f5bd96f6fb9cb",
+              "f388078a12c6b",
+              "fe5a03a9509f0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Formation certificate identifies the declared borrower.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Garnet Walk Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f3a91c00f849e"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9c8235aa530d",
+              "f5bd96f6fb9cb",
+              "f388078a12c6b",
+              "fe5a03a9509f0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Garnet Walk Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f8733e331630f"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f9c8235aa530d",
+              "f5bd96f6fb9cb",
+              "f388078a12c6b",
+              "fe5a03a9509f0"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Garnet Walk Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f8733e331630f"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f9c8235aa530d",
+        "f5bd96f6fb9cb",
+        "f388078a12c6b",
+        "fe5a03a9509f0",
+        "f4a50710e84f7",
+        "fd815041ba107",
+        "fe8376e83c153",
+        "f3a91c00f849e",
+        "f8733e331630f"
+      ],
+      "checkpoint": 2,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": {
+            "description": "Last tenant execution page is obscured; request a clearer copy, not a new lease.",
+            "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+            "kind": "unreadable",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Garnet Walk"
+          },
+          "missingDocumentIds": [
+            "fe95c2ee0b84e"
+          ],
+          "reason": "Last tenant execution page is obscured; request a clearer copy, not a new lease.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f5bd96f6fb9cb",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D07-101. Property: Garnet Walk; unit 101.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f5bd96f6fb9cb",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7419 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Lease collection is supplied, but the last tenant page is obscured; comparison remains uncertain pending a clearer copy.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "unreadable",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Garnet Walk"
+          },
+          "missingDocumentIds": [
+            "fe95c2ee0b84e"
+          ],
+          "reason": "Lease collection is supplied, but the last tenant page is obscured; comparison remains uncertain pending a clearer copy.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f5bd96f6fb9cb",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D07-101. Property: Garnet Walk; unit 101.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f5bd96f6fb9cb",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f388078a12c6b",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 69096; other income USD 0.",
+                "Operating expenses USD 23032; NOI USD 46064.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f388078a12c6b",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe5a03a9509f0",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 51822; other income USD 0.",
+                "Operating expenses USD 17274; NOI USD 34548.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe5a03a9509f0",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Lease collection is supplied, but the last tenant page is obscured; comparison remains uncertain pending a clearer copy.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "unreadable",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Garnet Walk"
+          },
+          "missingDocumentIds": [
+            "fe95c2ee0b84e"
+          ],
+          "reason": "Lease collection is supplied, but the last tenant page is obscured; comparison remains uncertain pending a clearer copy.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "f388078a12c6b",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 69096; other income USD 0.",
+                "Operating expenses USD 23032; NOI USD 46064.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "fe5a03a9509f0",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 51822; other income USD 0.",
+                "Operating expenses USD 17274; NOI USD 34548.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f5bd96f6fb9cb",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D07-101. Property: Garnet Walk; unit 101.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f388078a12c6b",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe5a03a9509f0",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f5bd96f6fb9cb",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f4a50710e84f7",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7419.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f4a50710e84f7",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Account ending 7419. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f4a50710e84f7",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f4a50710e84f7",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fd815041ba107",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7419.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "fd815041ba107",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Account ending 7419. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fd815041ba107",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fd815041ba107",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe8376e83c153",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7419.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fe8376e83c153",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Account ending 7419. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe8376e83c153",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe8376e83c153",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f3a91c00f849e",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Garnet Walk Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Nori Fenn. Fictional registry reference D07-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f3a91c00f849e",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8733e331630f",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Garnet Walk Holdings LLC. Effective 2024-10-01.",
+                "Members: Nori Fenn 60%; Eris Tarn 40%. Total ownership 100%.",
+                "Manager: Nori Fenn. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Nori Fenn; member signature /s/ Eris Tarn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8733e331630f",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8733e331630f",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Garnet Walk Holdings LLC. Effective 2024-10-01.",
+                "Members: Nori Fenn 60%; Eris Tarn 40%. Total ownership 100%.",
+                "Manager: Nori Fenn. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Nori Fenn; member signature /s/ Eris Tarn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8733e331630f",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f9c8235aa530d",
+        "f388078a12c6b",
+        "fe5a03a9509f0",
+        "f4a50710e84f7",
+        "fd815041ba107",
+        "fe8376e83c153",
+        "f3a91c00f849e",
+        "f8733e331630f",
+        "fe95c2ee0b84e"
+      ],
+      "checkpoint": 3,
+      "correction": {
+        "f5bd96f6fb9cb": "fe95c2ee0b84e"
+      },
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe95c2ee0b84e",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D07-101. Property: Garnet Walk; unit 101.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe95c2ee0b84e",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D07-102. Property: Garnet Walk; unit 102.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2999.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe95c2ee0b84e",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe95c2ee0b84e",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [
+            {
+              "field": "borrowerText",
+              "quote": "I declare all 2 units occupied by the tenants listed; only account ending 7419 is requested. There are 0 lease amendments and 0 entity amendments.",
+              "scope": "amendment applicability only",
+              "turn": 1
+            }
+          ],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Borrower explicitly declares no lease amendments; no amendment upload applies.",
+          "state": "met",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "fe95c2ee0b84e",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D07-101. Property: Garnet Walk; unit 101.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe95c2ee0b84e",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D07-102. Property: Garnet Walk; unit 102.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2999.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe95c2ee0b84e",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe95c2ee0b84e",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f388078a12c6b",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 69096; other income USD 0.",
+                "Operating expenses USD 23032; NOI USD 46064.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f388078a12c6b",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe5a03a9509f0",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 51822; other income USD 0.",
+                "Operating expenses USD 17274; NOI USD 34548.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe5a03a9509f0",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f9c8235aa530d",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "fe95c2ee0b84e",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D07-101. Property: Garnet Walk; unit 101.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe95c2ee0b84e",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D07-102. Property: Garnet Walk; unit 102.",
+                "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2999.",
+                "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f388078a12c6b",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 69096; other income USD 0.",
+                "Operating expenses USD 23032; NOI USD 46064.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "fe5a03a9509f0",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 51822; other income USD 0.",
+                "Operating expenses USD 17274; NOI USD 34548.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f9c8235aa530d",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe95c2ee0b84e",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe95c2ee0b84e",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f388078a12c6b",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe5a03a9509f0",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f4a50710e84f7",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7419.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f4a50710e84f7",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Account ending 7419. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f4a50710e84f7",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f4a50710e84f7",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fd815041ba107",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7419.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "fd815041ba107",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Account ending 7419. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fd815041ba107",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fd815041ba107",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe8376e83c153",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7419.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "fe8376e83c153",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Garnet Walk Holdings LLC. Account ending 7419. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe8376e83c153",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe8376e83c153",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f3a91c00f849e",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Garnet Walk Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Nori Fenn. Fictional registry reference D07-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f3a91c00f849e",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8733e331630f",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Garnet Walk Holdings LLC. Effective 2024-10-01.",
+                "Members: Nori Fenn 60%; Eris Tarn 40%. Total ownership 100%.",
+                "Manager: Nori Fenn. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Nori Fenn; member signature /s/ Eris Tarn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8733e331630f",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8733e331630f",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Garnet Walk Holdings LLC. Effective 2024-10-01.",
+                "Members: Nori Fenn 60%; Eris Tarn 40%. Total ownership 100%.",
+                "Manager: Nori Fenn. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Nori Fenn; member signature /s/ Eris Tarn; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8733e331630f",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    }
+  ],
+  "crossDocumentArithmetic": {
+    "annualBaseRent": 69096,
+    "calculation": "2025: sum original monthly rents *12. 2026: original *9 plus amendment 1 uplift for April-September and amendment 2 uplift for July-September when applicable.",
+    "currentMonthlyRent": 5758,
+    "currentPeriodBaseRent": 51822
+  },
+  "roles": {
+    "annual": "f388078a12c6b",
+    "bank7": "f4a50710e84f7",
+    "bank8": "fd815041ba107",
+    "bank9": "fe8376e83c153",
+    "current": "fe5a03a9509f0",
+    "formation": "f3a91c00f849e",
+    "governing": "f8733e331630f",
+    "leases": "fe95c2ee0b84e",
+    "obscured": "f5bd96f6fb9cb",
+    "roll": "f9c8235aa530d"
+  },
+  "semanticReviewRequired": true,
+  "sourcePages": {
+    "f388078a12c6b": [
+      {
+        "lines": [
+          "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 69096; other income USD 0.",
+          "Operating expenses USD 23032; NOI USD 46064.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f3a91c00f849e": [
+      {
+        "lines": [
+          "Entity: Garnet Walk Holdings LLC. Entity type: limited liability company.",
+          "Formed 2024-10-01. Organizer: Nori Fenn. Fictional registry reference D07-REG.",
+          "This document establishes the named entity; it does not itself establish current manager authority."
+        ],
+        "title": "Certificate of formation"
+      }
+    ],
+    "f4a50710e84f7": [
+      {
+        "lines": [
+          "Holder: Garnet Walk Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7419.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Garnet Walk Holdings LLC. Account ending 7419. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f5bd96f6fb9cb": [
+      {
+        "lines": [
+          "Lease D07-101. Property: Garnet Walk; unit 101.",
+          "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+          "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease D07-102. Property: Garnet Walk; unit 102.",
+          "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2999.",
+          "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "obscured": true,
+        "scan": true,
+        "title": "Lease instrument"
+      }
+    ],
+    "f8733e331630f": [
+      {
+        "lines": [
+          "Entity: Garnet Walk Holdings LLC. Effective 2024-10-01.",
+          "Members: Nori Fenn 60%; Eris Tarn 40%. Total ownership 100%.",
+          "Manager: Nori Fenn. Manager may execute refinancing documents for this company.",
+          "Member signature /s/ Nori Fenn; member signature /s/ Eris Tarn; dated 2024-10-01."
+        ],
+        "title": "Operating agreement"
+      }
+    ],
+    "f9c8235aa530d": [
+      {
+        "lines": [
+          "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Garnet Studio; monthly base rent USD 2759; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Garnet Supply; monthly base rent USD 2999; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      }
+    ],
+    "fd815041ba107": [
+      {
+        "lines": [
+          "Holder: Garnet Walk Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7419.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Garnet Walk Holdings LLC. Account ending 7419. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fe5a03a9509f0": [
+      {
+        "lines": [
+          "Property: Garnet Walk. Owner: Garnet Walk Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 51822; other income USD 0.",
+          "Operating expenses USD 17274; NOI USD 34548.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "fe8376e83c153": [
+      {
+        "lines": [
+          "Holder: Garnet Walk Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7419.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Garnet Walk Holdings LLC. Account ending 7419. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "fe95c2ee0b84e": [
+      {
+        "lines": [
+          "Lease D07-101. Property: Garnet Walk; unit 101.",
+          "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2759.",
+          "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease D07-102. Property: Garnet Walk; unit 102.",
+          "Landlord: Garnet Walk Holdings LLC; tenant: Garnet Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2999.",
+          "Landlord signature: /s/ Nori Fenn, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Eris Tarn, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "scan": true,
+        "title": "Lease instrument"
+      }
+    ]
+  },
+  "status": "provisional",
+  "version": "CRE-E2E-oracle.1"
+}

@@ -1,0 +1,103 @@
+{
+  "role": "judge",
+  "configurationDigest": "2351594ecb7a33908a402fb0e39449b08ad8753bdbfe6198629fbbed1fead63b",
+  "input": {
+    "input": {
+      "inventory": {
+        "application": {
+          "borrowerName": "Example LLC",
+          "propertyName": "Example Plaza",
+          "address": "1 Example St",
+          "transactionType": "Refinance"
+        },
+        "contentRevision": "1",
+        "documents": [
+          {
+            "documentId": "d1",
+            "name": "Rent roll.pdf",
+            "active": true
+          },
+          {
+            "documentId": "d2",
+            "name": "2025 operating statement.pdf",
+            "active": true
+          }
+        ],
+        "requirements": [
+          {
+            "requirementId": "r1",
+            "title": "Rent roll",
+            "owner": "Borrower",
+            "period": "Current",
+            "criteria": [
+              {
+                "id": "c1",
+                "description": "Current rent roll"
+              }
+            ]
+          }
+        ],
+        "pendingUploads": false
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "sequence": "1",
+          "text": "What's been uploaded?"
+        }
+      ],
+      "replies": [],
+      "processing": {
+        "currentResult": null
+      },
+      "completeness": null
+    },
+    "rubric": "Identify both saved files. Do not turn the answer into a missing-document checklist, infer completeness or approval, or invent a next step. No action is required by this snapshot.",
+    "action": {
+      "kind": "reply",
+      "message": "You have 2 saved files:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nPlease note that having these files saved confirms receipt, but does not mean they have been reviewed or approved yet."
+    }
+  },
+  "output": {
+    "grounded": {
+      "passed": true,
+      "reason": "All facts, including the names of the two uploaded files and the note regarding review/approval status, are accurate and supported by the context."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers the user's question by listing both saved documents."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No unnecessary or invented next steps were provided, following the rubric instructions."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and does not repeat information."
+    },
+    "criticalFailures": []
+  },
+  "usage": {
+    "prompt_tokens": 383,
+    "completion_tokens": 464,
+    "total_tokens": 847,
+    "cost": 0.00202725,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00202725,
+      "upstream_inference_prompt_cost": 0.00028725,
+      "upstream_inference_completions_cost": 0.00174
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 292,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

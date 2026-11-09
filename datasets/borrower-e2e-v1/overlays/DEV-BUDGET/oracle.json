@@ -1,0 +1,1042 @@
+{
+  "baseCase": "D06",
+  "baseOracleSha256": "5348ac0540395a45e6c3fe330e38aa1d09d84572058eface8740965eee018f92",
+  "boundaries": [
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "identified_before_limit",
+      "expected": {
+        "activeDocumentIds": [
+          "f13c2af39b8a4",
+          "f01da45a39edc",
+          "f09524dc31cd0",
+          "f768ba10c4c5f",
+          "fb11105d8fc0c",
+          "f75a8d5130dde",
+          "f2e07f9bf42c9",
+          "f9313bb961834",
+          "f610681203a7d"
+        ],
+        "budgetLimitMicros": 1000,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f13c2af39b8a4",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f13c2af39b8a4",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. All files saved; independent short documents assessed; lease identified but execution pages unchecked.",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Fable Yard"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term. All files saved; independent short documents assessed; lease identified but execution pages unchecked.",
+              "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Fable Yard"
+            },
+            "supportGroups": []
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. All files saved; independent short documents assessed; lease identified but execution pages unchecked.",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Fable Yard"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f768ba10c4c5f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f09524dc31cd0",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f75a8d5130dde",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f75a8d5130dde",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fb11105d8fc0c",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fb11105d8fc0c",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f2e07f9bf42c9",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f2e07f9bf42c9",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f610681203a7d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9313bb961834",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f610681203a7d",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": null,
+        "evidenceRevision": "1",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": "operator",
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 400,
+        "retainedObservationIds": [
+          "roll-proof",
+          "annual-proof",
+          "current-proof",
+          "bank-proof",
+          "entity-proof",
+          "lease-identification"
+        ],
+        "runState": "running",
+        "spentMicros": 600
+      },
+      "semanticRequirements": [
+        "Identification alone does not prove tenant execution.",
+        "Preserve completed independent criteria and describe unchecked lease scope."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "progress",
+      "trigger": "All files saved; independent short documents assessed; lease identified but execution pages unchecked."
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "budget_exhausted",
+      "expected": {
+        "activeDocumentIds": [
+          "f13c2af39b8a4",
+          "f01da45a39edc",
+          "f09524dc31cd0",
+          "f768ba10c4c5f",
+          "fb11105d8fc0c",
+          "f75a8d5130dde",
+          "f2e07f9bf42c9",
+          "f9313bb961834",
+          "f610681203a7d"
+        ],
+        "budgetLimitMicros": 1000,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f13c2af39b8a4",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f13c2af39b8a4",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. Trusted reading reservation exhausts remaining limit before execution evidence is observed.",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Fable Yard"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term. Trusted reading reservation exhausts remaining limit before execution evidence is observed.",
+              "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Fable Yard"
+            },
+            "supportGroups": []
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. Trusted reading reservation exhausts remaining limit before execution evidence is observed.",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Fable Yard"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f768ba10c4c5f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f09524dc31cd0",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f75a8d5130dde",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f75a8d5130dde",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fb11105d8fc0c",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fb11105d8fc0c",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f2e07f9bf42c9",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f2e07f9bf42c9",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f610681203a7d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9313bb961834",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f610681203a7d",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": "1",
+        "evidenceRevision": "1",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": "operator",
+        "pendingUploadIds": [],
+        "preserveCriteria": [
+          "R1.identity",
+          "R1.units",
+          "R3.year",
+          "R3.current",
+          "R4.july",
+          "R4.august",
+          "R4.september",
+          "R5.formation",
+          "R5.governing",
+          "R5.consistency"
+        ],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [
+          "roll-proof",
+          "annual-proof",
+          "current-proof",
+          "bank-proof",
+          "entity-proof",
+          "lease-identification"
+        ],
+        "runState": "partial",
+        "spentMicros": 1000
+      },
+      "semanticRequirements": [
+        "Name unchecked lease evidence and operator-owned continuation.",
+        "Do not invent absence, completion or ask borrower to upload existing readable files."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "interruption",
+      "trigger": "Trusted reading reservation exhausts remaining limit before execution evidence is observed."
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "resumed_with_observations",
+      "expected": {
+        "activeDocumentIds": [
+          "f13c2af39b8a4",
+          "f01da45a39edc",
+          "f09524dc31cd0",
+          "f768ba10c4c5f",
+          "fb11105d8fc0c",
+          "f75a8d5130dde",
+          "f2e07f9bf42c9",
+          "f9313bb961834",
+          "f610681203a7d"
+        ],
+        "budgetLimitMicros": 2000,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f13c2af39b8a4",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f13c2af39b8a4",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. Operator explicitly grants additional reading budget; same immutable evidence revision resumes.",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Fable Yard"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term. Operator explicitly grants additional reading budget; same immutable evidence revision resumes.",
+              "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-09-30",
+              "subject": "Fable Yard"
+            },
+            "supportGroups": []
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. Operator explicitly grants additional reading budget; same immutable evidence revision resumes.",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "clarification",
+              "owner": "operator",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Fable Yard"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f768ba10c4c5f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f09524dc31cd0",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f75a8d5130dde",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f75a8d5130dde",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fb11105d8fc0c",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fb11105d8fc0c",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f2e07f9bf42c9",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f2e07f9bf42c9",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f610681203a7d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9313bb961834",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f610681203a7d",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": "1",
+        "evidenceRevision": "1",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": "operator",
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": true,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 400,
+        "retainedObservationIds": [
+          "roll-proof",
+          "annual-proof",
+          "current-proof",
+          "bank-proof",
+          "entity-proof",
+          "lease-identification"
+        ],
+        "runState": "running",
+        "spentMicros": 1000
+      },
+      "semanticRequirements": [
+        "Reuse persisted observations and preserve progress without restarting investigation.",
+        "Any additional reading order/mode is acceptable if justified."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "resumption",
+      "trigger": "Operator explicitly grants additional reading budget; same immutable evidence revision resumes."
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "deep_evidence_final",
+      "expected": {
+        "activeDocumentIds": [
+          "f13c2af39b8a4",
+          "f01da45a39edc",
+          "f09524dc31cd0",
+          "f768ba10c4c5f",
+          "fb11105d8fc0c",
+          "f75a8d5130dde",
+          "f2e07f9bf42c9",
+          "f9313bb961834",
+          "f610681203a7d"
+        ],
+        "budgetLimitMicros": 2000,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f13c2af39b8a4",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f13c2af39b8a4",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f13c2af39b8a4",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f01da45a39edc",
+                  "page": 31
+                }
+              ],
+              [
+                {
+                  "documentId": "f01da45a39edc",
+                  "page": 32
+                }
+              ]
+            ]
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f01da45a39edc",
+                  "page": 31
+                }
+              ],
+              [
+                {
+                  "documentId": "f01da45a39edc",
+                  "page": 32
+                }
+              ]
+            ]
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f13c2af39b8a4",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f01da45a39edc",
+                  "page": 31
+                }
+              ],
+              [
+                {
+                  "documentId": "f01da45a39edc",
+                  "page": 32
+                }
+              ],
+              [
+                {
+                  "documentId": "f09524dc31cd0",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f768ba10c4c5f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f768ba10c4c5f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f09524dc31cd0",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f75a8d5130dde",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f75a8d5130dde",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fb11105d8fc0c",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fb11105d8fc0c",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f2e07f9bf42c9",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f2e07f9bf42c9",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f610681203a7d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9313bb961834",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f610681203a7d",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": "2",
+        "evidenceRevision": "1",
+        "inactiveDocumentIds": [],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": true,
+        "requiredReuseDocumentIds": [],
+        "reservedMicros": 0,
+        "retainedObservationIds": [
+          "roll-proof",
+          "annual-proof",
+          "current-proof",
+          "bank-proof",
+          "entity-proof",
+          "lease-identification",
+          "lease-execution-proof"
+        ],
+        "runState": "succeeded",
+        "spentMicros": 1400
+      },
+      "semanticRequirements": [
+        "Support tenant execution and rent comparison with actual late pages.",
+        "Report all five requests documented without lender/approval claims."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "final",
+      "trigger": "Qualifying late lease evidence inspected; same evidence revision, new immutable result revision."
+    }
+  ],
+  "description": "Scored interrupt/resume ledger; cumulative costs and retained observations; no fixed tool order.",
+  "orderingRule": "Boundaries describe evaluator-controlled input and lifecycle transitions, not prescribed agent actions or tool/page order. All extra responses must also be logged and reviewed.",
+  "overlayId": "DEV-BUDGET",
+  "sourceHashes": {
+    "f01da45a39edc": "af3e6b77822746722a14a2d543f1bceed2a29065aa98e5b40d2174d90bd6098b",
+    "f09524dc31cd0": "270354b1ee49b905c2dc0e8f8fc7648ffe06682af809c221c0585dca59f8c2bc",
+    "f13c2af39b8a4": "c322ea22f613bd503321a5b70d94d72975b5112aa6cedbac60ff4f9e5e937260",
+    "f2e07f9bf42c9": "068e5372ff9e4f8b9f2feb5e8fd0b7a013046040ee029bccbd7954387a46d187",
+    "f610681203a7d": "94ed7247e26f863f2ae3fbc22d8394c699610182deb69306f69bc09d9b65dac5",
+    "f75a8d5130dde": "0891a197872547fe859b770476582e7598d3883f31b3ddd15ed6e497c85b0550",
+    "f768ba10c4c5f": "6cca01f85a4141447608e337923fb8d90970584ebc18c8653c7c63bdb636b9d4",
+    "f9313bb961834": "54c990329c59b7454ee08cab4bb02d50876484208d67c6d8a5c4aa47da34eeee",
+    "fb11105d8fc0c": "aade797adf6c92beebf2d7bfe3636b799e4eca936a0f027e0949f06339efbcb4"
+  },
+  "split": "development",
+  "status": "provisional",
+  "version": "journey-overlays.1"
+}

@@ -1,0 +1,34 @@
+{
+  "mode": "offline-scripted",
+  "caseId": "D01",
+  "sdkVersion": "1.82.0",
+  "agentConfigurationDigest": "6c860904365142654e85d09211f31f37ed67f03f80380f0b821943b0c79e0d9d",
+  "sourceHashes": {
+    "lib/evaluation-observability/index.ts": "6f80867794014bf6a2b9bdde701933497a95c56b2b02fadb69e5e0ddea061518",
+    "lib/evaluation-observability/evals.ts": "7b573edf87f64ec1a3b493f9a5992246e0bc6d29fe4f2b3fc33d105c0a07f1c7",
+    "lib/evaluation-observability/dataset.ts": "8d3f3c560ca73ce7e84e04b6f288b2aefa0a6934a373365b3efd1086808b91f3",
+    "lib/evaluation-observability/dataset-driver.ts": "391c6c35135b0323dc4fd657886700b4651b0bd9b6c8e9244c881131e00b26ab",
+    "lib/evaluation-observability/dataset-scorers.ts": "c361feec841b8e48995372fa53dcc6e0f24c924d9d2655c361e0ea2c87052c94",
+    "lib/agents/runtime.ts": "241a1b61238d3882bb0bdf32f76ddb2ebba885592a8f2c74f014cc446ebf53e5",
+    "lib/agents/definitions.ts": "bbf377816f739f77fe9fae0bf0100143a53637a82dfe593e6c5d720faef9b1f0",
+    "lib/agents/borrower-service.ts": "ceae607bbea19a6cac8fff3b7fdbab22612a2f0779803907c7cc52bcc5628067",
+    "lib/preparation/worker.ts": "5c5f13ff7ac71b67b3d0ea7946a96a5cf5641730f0cc3d0cd80bba479f34b959",
+    "lib/preparation/service.ts": "eb98aea50e810d404d14aa61412803c5c5b462f02b47ea48ce3d8fad33852f49",
+    "scripts/evaluate-dataset-journey.ts": "a2f10c99d5e59c788ad386267d3c523fb142235a69d554e89b415c28b5ac07f4",
+    "scripts/mastra-evaluation-transport.ts": "cdf691915d32a783968432e0e29a51fac432219a06fa8a109c73c1e44a77d95e",
+    "scripts/live-evaluation-fetch.mjs": "43e2a78ecfb122026ca3450b5fc9e039edf4adc91c06026b7fc014cf3bd4928b",
+    "scripts/evaluation-ledger.mjs": "efa6273308f414a3c5d7938dc342b9f7c62fea8fac3ca276c7646b3770c78e92"
+  },
+  "model": "scripted",
+  "applicationLimitMicros": 2000000,
+  "worker": {
+    "runLimitMicros": 2000000,
+    "maxCalls": 24,
+    "timeoutMs": 180000
+  },
+  "batchId": "first-pilot-20261108",
+  "batchLimitMicros": 5000000,
+  "cumulativeLimitMicros": 20000000,
+  "configurationDigest": "bcb96be6bea29999793a2f37728b6691bbdc8f26b18ff2fd9067f6b9d6008388",
+  "budgetBefore": null
+}

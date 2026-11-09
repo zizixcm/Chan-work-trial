@@ -1,0 +1,114 @@
+{
+  "execution": "completed",
+  "exitCode": 0,
+  "caseCount": 16,
+  "boundaryCount": 54,
+  "mode": "offline-scripted",
+  "modelQualityPassClaim": false,
+  "liveCalls": 0,
+  "storageClosed": true,
+  "reportDirectory": "/Users/chanrao/Developer/proximity-releases/mastra-agents-preview-20261108-v1/artifacts/testing/dataset-native-offline-final",
+  "cases": [
+    {
+      "caseId": "D01",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "D02",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "D03",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "D04",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "D05",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "D06",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "D07",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "D08",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "DEV-BUDGET",
+      "boundaries": 4,
+      "qualityPassed": false,
+      "diagnostics": [
+        "C-lifecycle:partial-publication-and-identification-pause-not-forced",
+        "C-lifecycle:partial-publication-and-identification-pause-not-forced"
+      ]
+    },
+    {
+      "caseId": "DEV-DIALOGUE",
+      "boundaries": 6,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "DEV-HISTORY",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "DEV-UPLOAD-RACE",
+      "boundaries": 5,
+      "qualityPassed": false,
+      "diagnostics": [
+        "C-lifecycle:stale-worker-interleaving-requires-injected-worker-race"
+      ]
+    },
+    {
+      "caseId": "H01",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "H02",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "H03",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    },
+    {
+      "caseId": "H04",
+      "boundaries": 3,
+      "qualityPassed": false,
+      "diagnostics": []
+    }
+  ]
+}

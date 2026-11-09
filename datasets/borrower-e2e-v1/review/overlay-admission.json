@@ -1,0 +1,110 @@
+{
+  "canonicalCorpusUnchanged": true,
+  "holdoutFreezeSha256": "8d072bbfa04fd6634a30116b8f371122e96c9a5486147d03a8d8a70cc49e7147",
+  "independentOfAuthor": true,
+  "independentTests": {
+    "canonicalExport": 3,
+    "canonicalScorer": 15,
+    "overlayAuthorization": 32,
+    "passed": 50
+  },
+  "limitations": [
+    "Actual future transcripts require independent semantic adjudication.",
+    "Trusted audit and reviewer identity must be enforced by external runner.",
+    "No runtime integration, live evaluation, paid execution or automatic linking."
+  ],
+  "overlays": [
+    {
+      "baseOracleSha256": "9724f2c384f246679358c6da3b7cfaf92946efafe99f19248078df04e165c9aa",
+      "boundaries": 3,
+      "oracleSha256": "f6474d519173c26d9ebc084a3f1d7ad41cb534aaa6065e51a9310a71bac703b4",
+      "overlayId": "DEV-HISTORY",
+      "scenarioSha256": "ca2ef0772df2ca8571c2e48792658044f4a04a8c3627bf18950b6ee520d4cfd1",
+      "sourceHashes": {
+        "f143bba0e0f4f": "6c23501bfb356f718945d1960af964bfde20eea371e68a71269fa207e2dacd27",
+        "f17dc927cc1b2": "0c2cd5e03c10b7a0ed68fe13a28b74abc8a76f1693ef1f83056fee553f2a7a88",
+        "f367a4f796b28": "b85ec6ac203efee5003be8ea60dea336769507eb19196ba19eae723afa74426c",
+        "f5357122b5284": "9b050dee538bc15a0ea5c388cf1bb8178f6bc1acf6b345e3e5e2e2ac68601aa3",
+        "f786ca0fb2e75": "ca8bcf07e0a05ce8caf12aa83e906a2e5f424899e6336b2760c71eda60676fde",
+        "f9c6bb6de47d5": "7762315ffeb976dabd44fb0a93c1bf16b18948dd566bee9c7ba1d7964bf93a37",
+        "fda71241b691d": "7a29e6da5664adbc93994035578bd0b48ff382fd1172df32299f89d61a2ae304",
+        "fe1dc1996b18e": "79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6",
+        "fecd8a7c31cff": "e03f23cf0a40da7e6888c5d9c7fb54a9b80fd26864f4becb419ca5f8d4ba5f67",
+        "ffcf0f403cac5": "79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6",
+        "ffe64a92e0fe1": "b62b2e6c08c4b843d2e54d2c5394913756c082ebf26f7129cf9d23ac118cb7c2"
+      },
+      "status": "admitted"
+    },
+    {
+      "baseOracleSha256": "5348ac0540395a45e6c3fe330e38aa1d09d84572058eface8740965eee018f92",
+      "boundaries": 4,
+      "oracleSha256": "0c5b2f5635b85e49199646bb0ea6f9c43e333d973b9d1bfc5f6a3297b8040560",
+      "overlayId": "DEV-BUDGET",
+      "scenarioSha256": "35df612a080de4a6185f63d3b99ee0551f3be35ec7e81e5afdc2092d4c0cf4c4",
+      "sourceHashes": {
+        "f01da45a39edc": "af3e6b77822746722a14a2d543f1bceed2a29065aa98e5b40d2174d90bd6098b",
+        "f09524dc31cd0": "270354b1ee49b905c2dc0e8f8fc7648ffe06682af809c221c0585dca59f8c2bc",
+        "f13c2af39b8a4": "c322ea22f613bd503321a5b70d94d72975b5112aa6cedbac60ff4f9e5e937260",
+        "f2e07f9bf42c9": "068e5372ff9e4f8b9f2feb5e8fd0b7a013046040ee029bccbd7954387a46d187",
+        "f610681203a7d": "94ed7247e26f863f2ae3fbc22d8394c699610182deb69306f69bc09d9b65dac5",
+        "f75a8d5130dde": "0891a197872547fe859b770476582e7598d3883f31b3ddd15ed6e497c85b0550",
+        "f768ba10c4c5f": "6cca01f85a4141447608e337923fb8d90970584ebc18c8653c7c63bdb636b9d4",
+        "f9313bb961834": "54c990329c59b7454ee08cab4bb02d50876484208d67c6d8a5c4aa47da34eeee",
+        "fb11105d8fc0c": "aade797adf6c92beebf2d7bfe3636b799e4eca936a0f027e0949f06339efbcb4"
+      },
+      "status": "admitted"
+    },
+    {
+      "baseOracleSha256": "d6eace08ad5aaf943e38a6349c41328987ce5ebe520f572b448ba39946e5deea",
+      "boundaries": 5,
+      "oracleSha256": "ce5b4a5178e0fccf869a1a6a8a0c6cf9456c07839ca64ac0ab4005ed66ee794a",
+      "overlayId": "DEV-UPLOAD-RACE",
+      "scenarioSha256": "23e6ffb588c6b23d58fc2fdeda6be281cb926b837348aa8448735d4ff02019aa",
+      "sourceHashes": {
+        "f388078a12c6b": "68fb0f847dbfc228608245e5715668c5b1ee76820357ac02ad668fdcc9077dd8",
+        "f3a91c00f849e": "5419ba8ba6c684a234c97215fe772888c431eb8f0ff4358e7a1792ef378e442b",
+        "f4a50710e84f7": "c95d55fdf3aa118c1177de6a8ed936a078c8856d919ffa09745b803d8f18e391",
+        "f5bd96f6fb9cb": "5d64d7047d635afa25edfc67c425ddf549a001bf358b79e089d0367b946e5d9b",
+        "f8733e331630f": "03494ea863bf22eb7eaf159f3e05a9ebe3a416e1c93eb20818c86c27487c6401",
+        "f9c8235aa530d": "1b5cda07a6f443563aee449dfea629838938854257e7ef5264057e165af02cbf",
+        "fd815041ba107": "4829e6806e7e56d86b110e81bba3ca4566e7b86110fcde94c40b63d46babc0b2",
+        "fe5a03a9509f0": "68d3f516ebc4278a978a06c2893eeab9bf84e99c953091d430a45fcf7d75e769",
+        "fe8376e83c153": "79974dbc503d35475973dd998b32128c3baf279d233ccad3a4719de2a34fc7f7",
+        "fe95c2ee0b84e": "f11ccc69c180d06fdbbc989353a4128662e004adc40f377703dac0b2ca54242f"
+      },
+      "status": "admitted"
+    },
+    {
+      "baseOracleSha256": "b01450a559678a6e3168129d002ebf2b53fe6a736c38a8c0c2e7434877fd6a9d",
+      "boundaries": 6,
+      "oracleSha256": "11579134bb76b8c5a07b5e1b5ac7fda00eb4e2970ddd0ba2eee896c9204ebb9e",
+      "overlayId": "DEV-DIALOGUE",
+      "scenarioSha256": "263da9e6fef8f39a87df210073403b26ef37152b07e0cd5e8c1b34f99101a560",
+      "sourceHashes": {
+        "f075f94def30d": "b05601c46bf5e7a6a9f754469ae79f4849e036d87de1bdd72ce860494ec4b408",
+        "f0f74c541e59a": "c6750d8d276edeca0c6c8e75a29289e262155009f1a5ddecbef3be701f2b0e4d",
+        "f36aa3d0b29e5": "fd05e25e1a9ed7789799294d5f820aee1f460d76a71a7669324561153556724a",
+        "f50b81f335dfa": "0bef359ccac7205a0e7674ee3bd1d171d87f77244d429c19c15c9860696bd5c1",
+        "f53a259b9463b": "fba280bc7603daabd4e4045d78d5d88791a77f569b08513e2641c564cc5bf996",
+        "f668e376e80b5": "22b9a84fb5a8eb8db3b79d4d4d6c0539780dfe9c9d57b8ecc4b7bd80945333c7",
+        "f85ba8c80c137": "9e5c82dc561faa6d8c73e5b6bab20932c96a0a7f43cc7bad7840fd6a8849fa08",
+        "f8663b151c4c7": "83672acd318b54818dc30453a5f86031be0d55e8eb5a3b29adcd5a9103988a9a",
+        "f8aebea604683": "110c87280b6dde724f948f32e07e43364c6669c6337662ae6ae7a0b88bf73556",
+        "fe781762d5d12": "69f82abc6a930f516fcaada1cbf60a8c07114406df177bc1f72464e0c88a898f"
+      },
+      "status": "admitted"
+    }
+  ],
+  "reviewDate": "2026-11-08",
+  "reviewer": "/root/independent_review",
+  "scope": "Offline development overlay definitions and authorization/scoring/export tools; no runtime or provider execution.",
+  "toolHashes": {
+    "tools/authorization.py": "88559429c92c65c1d1ec6052a907b4d27fcb7e5674ba5edd7bffd9be059bc2a1",
+    "tools/build_overlays.py": "d9065573310af4bc7392f81c6c9a65f82a9d1aa635d30f06fd302c944759e7c9",
+    "tools/export_overlay.py": "24f1c35f8f882b9ffe6c94d50505a9d9a4a4cb0db8f233c28d9673390e412151",
+    "tools/score.py": "56c513375f0ce023655f0b8ba44d2163135a5e9442ef59b1b8c0dafdef5cb734",
+    "tools/score_overlay.py": "3201c3b701c4e5ba6397155148ff3bd08dd435d9b750950e6ecfcd8599ea7d29",
+    "tools/test_overlays.py": "a1cd2d5840e5fa1bdeaa266aca8c8dac9c70483170f6a7b5436b2ac73446f991"
+  },
+  "version": "overlay-independent-review.1"
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-detail",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "Here are your 2 currently saved files:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nSaving a file confirms it has been received in your application, but as a general principle, saving does not equate to review or lender approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All listed document names match the active documents in the inventory, and the statement regarding saving correctly addresses policy without asserting an unsupported review or approval status for the specific files."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response lists both active files by name and clearly explains that saving does not equate to lender approval."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "The response answers the factual question directly without inventing actions or giving inappropriate directions."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "There is no unnecessary repetition or redundant phrasing."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 39,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6664,
+  "elapsedMs": 11319
+}

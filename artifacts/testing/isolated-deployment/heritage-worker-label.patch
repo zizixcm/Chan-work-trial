@@ -1,0 +1,38 @@
+--- a/scripts/borrower-agents-worker.ts
++++ b/scripts/borrower-agents-worker.ts
+@@ -1,4 +1,4 @@
+-/** Explicit isolated synthetic worker. Never started by the app or a GET. */
++/** Explicit isolated allowlisted pilot worker. Never started by the app or a GET. */
+ import './env';
+ import {createLocalMastraObservability} from '../lib/evaluation-observability';
+ import path from 'node:path';
+@@ -20,17 +20,17 @@
+ export async function createBorrowerPilot(observer:LocalMastraObservability){
+  if(process.env.BORROWER_AGENT_EXECUTION!=='live')throw Error('Live execution is disabled; use offline tests until candidate review');
+  const url=new URL(process.env.DATABASE_URL!);
+- if(url.hostname!=='127.0.0.1'||url.port!=='5434'||url.pathname!=='/preview')throw Error('Only the isolated synthetic deployment database is allowed');
++ if(url.hostname!=='127.0.0.1'||url.port!=='5434'||url.pathname!=='/preview')throw Error('Only the isolated pilot deployment database is allowed');
+  const registryPath=process.env.PREPARATION_EVALUATION_REGISTRY,ledger=process.env.PREPARATION_EVALUATION_LEDGER,scenario=process.env.PREPARATION_EVALUATION_SCENARIO,apiKey=process.env.OPENROUTER_API_KEY;
+  const cap=Number(process.env.PREPARATION_APPLICATION_BUDGET_MICROS),runCap=Number(process.env.PREPARATION_RUN_BUDGET_MICROS);
+  const batchId=process.env.PREPARATION_EVALUATION_BATCH_ID,batchLimitMicros=Number(process.env.PREPARATION_EVALUATION_BATCH_LIMIT_MICROS);
+  if(!batchId||batchLimitMicros!==5000000||runCap>2000000)throw Error('Approved pilot batch and run caps required');
+  if(!registryPath||!ledger||!scenario||!apiKey||!Number.isSafeInteger(cap)||cap<1||cap>20000000||!Number.isSafeInteger(runCap)||runCap<600000||runCap>cap)throw Error('Explicit registry, shared ledger, credentials and bounded budgets are required');
+  const registry=JSON.parse(await readFile(registryPath,'utf8'));
+- if(typeof registry.applicationId!=='string'||typeof registry.userId!=='string'||!Array.isArray(registry.sha256))throw Error('Invalid synthetic registry');
++ if(typeof registry.applicationId!=='string'||typeof registry.userId!=='string'||!Array.isArray(registry.sha256))throw Error('Invalid pilot registry');
+  const database=new Pool({connectionString:url.toString()}),service=new BorrowerAgentService(database),storage=new LocalBlobStorage();
+  const observability=observer;
+- const access={applicationId:registry.applicationId,userId:registry.userId,role:'borrower' as const,displayName:'Synthetic borrower'};
++ const access={applicationId:registry.applicationId,userId:registry.userId,role:'borrower' as const,displayName:'Pilot borrower'};
+  const verify=()=>service.preparation.transaction(access,async db=>{const inventory=await service.preparation.inventory(db,access.applicationId);if(inventory.documents.some(d=>!registry.sha256.includes(d.sha256)))throw Error('Unregistered evidence; paid dispatch denied');});
+  try{
+   await verify();
+@@ -40,7 +40,7 @@
+    if(state.budget.limitMicros!==cap)throw Error('Existing application budget differs; reconcile explicitly without resetting accounting');
+   });
+   const options={ledger,scenario,apiKey,observability,batchId,batchLimitMicros},borrower=createMastraBorrowerPlanner(withAgentObservability(createEvaluationAgentTransport(options),observability));
+-  const worker=new PreparationWorker(service.preparation,createLivePreparationPlanner(options),new DocumentEvidenceTools(),async key=>{const bytes=await storage.get(key);if(!registry.sha256.includes(createHash('sha256').update(bytes).digest('hex')))throw Error('Blob outside synthetic registry');return bytes;},{runLimitMicros:runCap,maxCalls:24,timeoutMs:60000});
++  const worker=new PreparationWorker(service.preparation,createLivePreparationPlanner(options),new DocumentEvidenceTools(),async key=>{const bytes=await storage.get(key);if(!registry.sha256.includes(createHash('sha256').update(bytes).digest('hex')))throw Error('Blob outside pilot registry');return bytes;},{runLimitMicros:runCap,maxCalls:24,timeoutMs:60000});
+   return {async tick(){await verify();return {outcome:await runBorrowerAgentsTick(access,service,borrower,worker),budget:evaluationSummary(ledger)};},async close(){await database.end();}};
+  }catch(error){await database.end();throw error;}
+ }

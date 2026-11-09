@@ -1,0 +1,79 @@
+[
+  {
+    "caseId": "EMPTY-REQUESTED",
+    "profile": "focused-low",
+    "quality": "pass",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": 3651.119542,
+    "completionMs": 4791.356624999999,
+    "latencyPassed": false,
+    "combinedPassed": false,
+    "costMicros": 4536,
+    "trace": {
+      "traceId": "1dcb2a7cda3873cdf20aaab58f94e234",
+      "spanId": "482243a2c0b914b6"
+    },
+    "notes": [
+      "Accurate requested groups and periods.",
+      "Completion meets 5 seconds but first useful answer exceeds 3 seconds; single sample only."
+    ]
+  },
+  {
+    "caseId": "EMPTY-UPLOADED",
+    "profile": "focused-low",
+    "quality": "fail",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": 2304.738208,
+    "completionMs": 3298.5712919999996,
+    "latencyPassed": true,
+    "combinedPassed": false,
+    "costMicros": 2680,
+    "trace": {
+      "traceId": "113e005e4972f611e065e819004773c7",
+      "spanId": "ea8aeaf62c455e60"
+    },
+    "notes": [
+      "Correct zero-upload fact and passing latency.",
+      "Answer focus fails: unsolicited full checklist despite explicit short inventory instruction."
+    ]
+  },
+  {
+    "caseId": "EMPTY-MISSING",
+    "profile": "focused-low",
+    "quality": "pass",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": 2077.190958,
+    "completionMs": 3298.187875,
+    "latencyPassed": true,
+    "combinedPassed": true,
+    "costMicros": 2898,
+    "trace": {
+      "traceId": "c503a2131b09eebc37ca62f435340071",
+      "spanId": "8f3456801deef98d"
+    },
+    "notes": [
+      "Correct remaining groups and periods; useful and completion latency meet targets."
+    ]
+  },
+  {
+    "caseId": "ONE-UPLOAD",
+    "profile": "focused-low",
+    "quality": "fail",
+    "factualAccuracy": "pass",
+    "firstUsefulMs": null,
+    "completionMs": 16228.703833,
+    "latencyPassed": true,
+    "combinedPassed": false,
+    "costMicros": 21241,
+    "trace": {
+      "traceId": "ff6dba8e93468b9fcfc7d7acdc1f4f39",
+      "spanId": "f2b052bb0e9fea61"
+    },
+    "notes": [
+      "Analysis facts pass: annual 2025 actual statement supported, zero-amendment declaration valid, remaining unchecked criteria preserved.",
+      "Borrower report precision fails: remaining list omits required rent-roll date, executed-lease qualifier, account suffix and exact entity document names.",
+      "16.229 seconds meets 20-second ceiling but exceeds 10–15-second aim.",
+      "Actual UI save-to-visible receipt is unmeasured. Initial acknowledgement exposes internal document ID."
+    ]
+  }
+]

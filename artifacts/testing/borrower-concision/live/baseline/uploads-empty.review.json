@@ -1,0 +1,21 @@
+{
+  "reviewer": "Codex evaluator, separate from the responding Gemini agent",
+  "judgments": {
+    "answersQuestion": {
+      "passed": true,
+      "evidence": "Accurately states that no documents have been uploaded."
+    },
+    "grounded": {
+      "passed": true,
+      "evidence": "Matches the empty document inventory."
+    },
+    "appropriateNextSteps": {
+      "passed": false,
+      "evidence": "Fails: omits the concrete upload suggestion despite an empty inventory and an active current rent roll request."
+    },
+    "noRepetition": {
+      "passed": true,
+      "evidence": "Short direct response with no repeated gaps, per-file disclaimers, or requirements checklist."
+    }
+  }
+}

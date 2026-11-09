@@ -1,0 +1,6 @@
+Source candidate: exact owned-file hashes in chat-streaming-handoff.json; shared dirty workspace, unrelated changes preserved.
+PASS npm run test:agent (148 tests + tsc); PASS npm run test:borrower-agents with disposable PostgreSQL schema and scripted provider.
+Native regression: provisional draft visible before final response exists; completed final replaces draft; revoked/unauthorized actor denied; input fingerprint/result cursor/expired lease withdraw partials; stream drafts do not commit answers;180s generation lease has210s coverage. Known-cost tool error retains usage.
+Browser synthetic: send promise held unresolved, question appears immediately; ACK reconciles once; first then second cumulative chunks visible; completed reply exactlyonce and no Assistant working; send failure preserves text/retry. Desktop/mobile390 no overflow/console errors. Screenshots chat-streaming-partial.png and chat-streaming-mobile.png.
+Browser streaming adapter: first SSE frame before EOF, splitUTF8/CRLF, unauthorized/malformed streams and cancellation tested.
+Final integrated deployment/full build/live browser checks owned by deployment chat; not claimed by this fixture. Broader browser checklist sign-in/roles, uploads, organization, submission/lender, live agent quality NOT RUN here. No paid model calls.

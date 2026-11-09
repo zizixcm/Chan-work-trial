@@ -1,0 +1,8 @@
+Automatic activity deployment — 2026-11-08
+Stable app http://localhost:3102/; Studio http://127.0.0.1:4111/.
+Release /Users/chanrao/Developer/proximity-releases/unified-pilot-20261108-v8; previous v7 retained. Exactly two hash-verified source changes: response-progress.tsx and UI regression test. No backend/model/migration changes.
+All eight full-equivalent stages PASS: quick tests/TypeScript, production Webpack build, HTTP/jobs/workflow/chat, complete/missing simulated AI.
+Deployed browser PASS at1280/390: idle Agent activity panel absent despite stored history; zero Activity toggles; no overflow or observed console warnings/errors; sticky questions retained. Working-to-completed transitions covered by owner's synthetic browser fixtures and unit regression; no new paid message initiated for UI verification. Broad upload/lender checklist not rerun.
+Portal38373; Studio/worker38377. Data/work/ledger fingerprints identical across restart; 3 apps,1 doc,14 requirements,15 turns,2 conversations,10 messages. User messages sent before restart preserved. Model/budget configuration unchanged.
+Separate authorized single3.8Flash one-PDF evaluation completed before deployment:5calls,$0.052394,held0,waiting_input/invalid_model_output/no assessment; fifth generation length limit with7680 reasoning tokens/no tool. Failure artifacts retained in investigator-model-comparison-20261108-v1/artifacts/testing/live-quality-3_8-flash. No automatic rerun; no quality pass claimed. Worker restored in finally and pending user message processed.
+Detailed logs/preservation.json in release verification/. Screenshot unified-v8-mobile.png. Stable pointer and guarded launcher select v8.

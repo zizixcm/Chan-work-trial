@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, type ReactNode } from "react";
 
-export default function WorkspaceDialog({ open, title, busy, onClose, children }: { open: boolean; title: string; busy: boolean; onClose: () => void; children: ReactNode }) {
+export default function WorkspaceDialog({ open, title, busy, onClose, children, footer }: { open: boolean; title: string; busy: boolean; onClose: () => void; children: ReactNode; footer?: ReactNode }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
   const pointer = useRef<number | null>(null);
@@ -29,6 +29,7 @@ export default function WorkspaceDialog({ open, title, busy, onClose, children }
     onPointerUp={event => {const started=pointer.current===event.pointerId;pointer.current=null;const r=event.currentTarget.getBoundingClientRect();if(started && event.target===event.currentTarget && (event.clientX<r.left || event.clientX>r.right || event.clientY<r.top || event.clientY>r.bottom))close();}}
     onPointerCancel={() => {pointer.current=null;}}>
     <div className="l-dialog-heading"><h2 ref={heading} tabIndex={-1}>{title}</h2><button className="l-secondary" disabled={busy} onClick={close}>Close</button></div>
-    {children}
+    <div className="l-dialog-body">{children}</div>
+    {footer&&<div className="l-dialog-footer">{footer}</div>}
   </dialog>;
 }

@@ -1,0 +1,31 @@
+{
+  "caseId": "BATCH-01",
+  "approval": {
+    "status": "approved",
+    "source": "explicit user answer in evaluation chat",
+    "answer": "Approve BATCH-01 as written",
+    "approvedScope": "Two-file D01 initial batch and expected sequence, parallel execution, final assessment, quality and latency checks as presented."
+  },
+  "files": [
+    {
+      "documentId": "ffa0b3c48c21f",
+      "filename": "ffa0b3c48c21f.pdf",
+      "pageCount": 1,
+      "path": "development/D01/files/ffa0b3c48c21f.pdf",
+      "seriesId": "ffa0b3c48c21f",
+      "sha256": "4004a3f98cb87ff6708084b1c11fcda73ab3281cee365a69617311672f726587",
+      "version": 1
+    },
+    {
+      "documentId": "f7dbacda2c2f3",
+      "filename": "f7dbacda2c2f3.pdf",
+      "pageCount": 1,
+      "path": "development/D01/files/f7dbacda2c2f3.pdf",
+      "seriesId": "f7dbacda2c2f3",
+      "sha256": "22f55161bd508ab78385eceb4fc257142b2540b5495e04f874bd485a913065fe",
+      "version": 1
+    }
+  ],
+  "specPath": "/Users/chanrao/Documents/ChatGPT/proximity/artifacts/testing/quality-latency-tuning/batch-upload-eval-spec.json",
+  "approvedCaseSha256": "31b974669fcccd524e72457444348850c6ccc02fb93c161edd149079b9822631"
+}

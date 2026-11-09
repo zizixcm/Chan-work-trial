@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-saved",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "You currently have 2 saved documents:\n\n* Rent roll.pdf\n* 2025 operating statement.pdf\n\nPlease note that a saved document does not equate to lender review or approval."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All facts match the inventory, listing both active documents accurately and correctly stating the policy regarding saved documents without claiming an unverified review status."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response directly answers what has been uploaded by naming both saved files."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "No next steps are required and none were inappropriately invented."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response does not repeat information."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 27,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 6066,
+  "elapsedMs": 9049
+}

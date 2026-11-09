@@ -1,0 +1,96 @@
+{
+  "allowedQuestionTopics": [
+    "missing requested period or page",
+    "lease amendment dates",
+    "unclear scan",
+    "manager authority",
+    "document identity"
+  ],
+  "availableFileIds": [
+    "f97538014eeac",
+    "f10e9bb606c56",
+    "f05b42723083f",
+    "f7935a5129e9e",
+    "f1b51320d6f2a",
+    "f93cd0ef17d25",
+    "fc6f1a6dc0028",
+    "ffa3cc8d0fabe",
+    "f9d15c9423b38",
+    "fcadf5ad3082d"
+  ],
+  "budgetInterrupt": {
+    "eligible": true,
+    "expected": "Retain supported findings; mark uninspected criteria unknown and operator-owned reading limit; resume with prior observations.",
+    "noForcedToolOrder": true,
+    "trigger": "Evaluator may pause after document identification before deep evidence inspection."
+  },
+  "disclosureRules": [
+    "Initial declaration is public. Release only current turn files and message.",
+    "Advance after agent response or a focused relevant request; equivalent question wording is allowed.",
+    "If asked about unavailable facts say I do not know; never invent files, waivers, signatures or authority.",
+    "If an earlier turn question is repeated, repeat the same answer and record unnecessaryQuestion.",
+    "Do not reveal oracle, expected states, internal modes, future files or complete catalog.",
+    "At each upload or reply capture an agent checkpoint. Tool order and wording are unconstrained.",
+    "After final turn no additional files exist. A lender or operator obligation remains unresolved."
+  ],
+  "facts": {
+    "accountSuffix": "7504",
+    "baseRents": [
+      3444,
+      3684,
+      3924,
+      4164
+    ],
+    "borrower": "Mossglass Court Holdings LLC",
+    "currentRents": [
+      3444,
+      3684,
+      3924,
+      4164
+    ],
+    "entityAmendments": 1,
+    "leaseAmendments": 0,
+    "manager": "Tera Nix",
+    "otherOwner": "Uvo Renn",
+    "property": "Mossglass Court",
+    "tenants": [
+      "Mossglass Studio",
+      "Mossglass Supply",
+      "Mossglass Atelier",
+      "Mossglass Market"
+    ],
+    "units": [
+      "101",
+      "102",
+      "103",
+      "104"
+    ]
+  },
+  "turns": [
+    {
+      "borrowerText": "I declare all 4 units occupied by the tenants listed; only account ending 7504 is requested. There are 0 lease amendments and 1 entity amendments. I am the proposed signer.",
+      "uploadIds": [
+        "f9d15c9423b38",
+        "ffa3cc8d0fabe",
+        "f1b51320d6f2a",
+        "f93cd0ef17d25",
+        "fc6f1a6dc0028"
+      ]
+    },
+    {
+      "borrowerText": "I also found a later company amendment.",
+      "uploadIds": [
+        "f97538014eeac",
+        "f10e9bb606c56",
+        "f05b42723083f"
+      ]
+    },
+    {
+      "borrowerText": "The amendment changes the manager; I have no further authority documents.",
+      "uploadIds": [
+        "fcadf5ad3082d",
+        "f7935a5129e9e"
+      ]
+    }
+  ]
+}

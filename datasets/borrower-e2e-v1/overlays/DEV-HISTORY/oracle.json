@@ -1,0 +1,844 @@
+{
+  "baseCase": "D02",
+  "baseOracleSha256": "9724f2c384f246679358c6da3b7cfaf92946efafe99f19248078df04e165c9aa",
+  "boundaries": [
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "existing_inventory",
+      "expected": {
+        "activeDocumentIds": [
+          "f367a4f796b28",
+          "f143bba0e0f4f",
+          "ffcf0f403cac5",
+          "f9c6bb6de47d5"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f367a4f796b28",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f367a4f796b28",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain. Conversation opens with existing saved evidence and a new roll.",
+              "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Brindle Arcade"
+            },
+            "supportGroups": []
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term. Conversation opens with existing saved evidence and a new roll.",
+              "documentRole": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-09-30",
+              "subject": "Brindle Arcade"
+            },
+            "supportGroups": []
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "unknown"
+            ],
+            "gapExpectation": {
+              "description": "Not yet established at this boundary: Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error. Conversation opens with existing saved evidence and a new roll.",
+              "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "kind": "clarification",
+              "owner": "borrower",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Brindle Arcade"
+            },
+            "supportGroups": []
+          },
+          "R3.current": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Actual operating results for the declared property, 2026-01-01 through 2026-09-30. Conversation opens with existing saved evidence and a new roll.",
+              "documentRole": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-01-01/2026-09-30",
+              "subject": "Brindle Arcade"
+            },
+            "supportGroups": []
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f143bba0e0f4f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c6bb6de47d5",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f9c6bb6de47d5",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "ffcf0f403cac5",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "ffcf0f403cac5",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Complete September 2026 statement for the declared borrower account and holder. Conversation opens with existing saved evidence and a new roll.",
+              "documentRole": "Complete September 2026 statement for the declared borrower account and holder.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": "2026-09",
+              "subject": "Brindle Arcade Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender. Conversation opens with existing saved evidence and a new roll.",
+              "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Brindle Arcade Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Formation certificate identifies the declared borrower. Conversation opens with existing saved evidence and a new roll.",
+              "documentRole": "Formation certificate identifies the declared borrower.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Brindle Arcade Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Operating agreement and all declared applicable entity amendments are supplied. Conversation opens with existing saved evidence and a new roll.",
+              "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Brindle Arcade Holdings LLC"
+            },
+            "supportGroups": []
+          }
+        },
+        "currentResultRevision": "4",
+        "evidenceRevision": "4",
+        "inactiveDocumentIds": [
+          "ffe64a92e0fe1"
+        ],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [
+          "f143bba0e0f4f",
+          "ffcf0f403cac5",
+          "f9c6bb6de47d5"
+        ],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "succeeded",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Distinguish previously saved active evidence from new roll and superseded partial August.",
+        "Reuse qualifying annual and bank evidence; do not request their re-upload.",
+        "Identify remaining lease/current-period/September/entity pieces."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "initial",
+      "trigger": "Conversation opens with existing saved evidence and a new roll."
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "incremental_arrival",
+      "expected": {
+        "activeDocumentIds": [
+          "f367a4f796b28",
+          "fecd8a7c31cff",
+          "f143bba0e0f4f",
+          "f786ca0fb2e75",
+          "ffcf0f403cac5",
+          "f9c6bb6de47d5",
+          "f5357122b5284",
+          "fe1dc1996b18e"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f367a4f796b28",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f367a4f796b28",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f367a4f796b28",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f367a4f796b28",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 2
+                }
+              ],
+              [
+                {
+                  "documentId": "f143bba0e0f4f",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f786ca0fb2e75",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f786ca0fb2e75",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f143bba0e0f4f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c6bb6de47d5",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f9c6bb6de47d5",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "ffcf0f403cac5",
+                  "page": 1
+                },
+                {
+                  "documentId": "fe1dc1996b18e",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "ffcf0f403cac5",
+                  "page": 2
+                },
+                {
+                  "documentId": "fe1dc1996b18e",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f5357122b5284",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f5357122b5284",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender. Additional files saved, including a renamed July duplicate.",
+              "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Brindle Arcade Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Formation certificate identifies the declared borrower. Additional files saved, including a renamed July duplicate.",
+              "documentRole": "Formation certificate identifies the declared borrower.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Brindle Arcade Holdings LLC"
+            },
+            "supportGroups": []
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "unmet"
+            ],
+            "gapExpectation": {
+              "description": "Not yet supplied: Operating agreement and all declared applicable entity amendments are supplied. Additional files saved, including a renamed July duplicate.",
+              "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "kind": "missing_evidence",
+              "owner": "borrower",
+              "period": null,
+              "subject": "Brindle Arcade Holdings LLC"
+            },
+            "supportGroups": []
+          }
+        },
+        "currentResultRevision": "5",
+        "evidenceRevision": "5",
+        "inactiveDocumentIds": [
+          "ffe64a92e0fe1"
+        ],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [
+          "R1.identity",
+          "R1.units",
+          "R3.year",
+          "R4.july",
+          "R4.august"
+        ],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [
+          "f143bba0e0f4f",
+          "f9c6bb6de47d5"
+        ],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "succeeded",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Explain new support and duplicate with no new month coverage.",
+        "Only entity evidence remains; retain earlier bank evidence."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "correction",
+      "trigger": "Additional files saved, including a renamed July duplicate."
+    },
+    {
+      "allowedQuestionTopics": [],
+      "boundaryId": "documentary_final",
+      "expected": {
+        "activeDocumentIds": [
+          "f367a4f796b28",
+          "fecd8a7c31cff",
+          "f143bba0e0f4f",
+          "f786ca0fb2e75",
+          "ffcf0f403cac5",
+          "f9c6bb6de47d5",
+          "f5357122b5284",
+          "f17dc927cc1b2",
+          "fda71241b691d",
+          "fe1dc1996b18e"
+        ],
+        "budgetLimitMicros": 0,
+        "criterionConstraints": {
+          "R1.identity": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f367a4f796b28",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R1.units": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f367a4f796b28",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R2.chain": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": []
+          },
+          "R2.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f367a4f796b28",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R2.leases": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R3.compare": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f367a4f796b28",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "fecd8a7c31cff",
+                  "page": 2
+                }
+              ],
+              [
+                {
+                  "documentId": "f143bba0e0f4f",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f786ca0fb2e75",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.current": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f786ca0fb2e75",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R3.year": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f143bba0e0f4f",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R4.august": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f9c6bb6de47d5",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f9c6bb6de47d5",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.july": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "ffcf0f403cac5",
+                  "page": 1
+                },
+                {
+                  "documentId": "fe1dc1996b18e",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "ffcf0f403cac5",
+                  "page": 2
+                },
+                {
+                  "documentId": "fe1dc1996b18e",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R4.september": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f5357122b5284",
+                  "page": 1
+                }
+              ],
+              [
+                {
+                  "documentId": "f5357122b5284",
+                  "page": 2
+                }
+              ]
+            ]
+          },
+          "R5.consistency": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fda71241b691d",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.formation": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "f17dc927cc1b2",
+                  "page": 1
+                }
+              ]
+            ]
+          },
+          "R5.governing": {
+            "allowedStates": [
+              "met"
+            ],
+            "supportGroups": [
+              [
+                {
+                  "documentId": "fda71241b691d",
+                  "page": 1
+                }
+              ]
+            ]
+          }
+        },
+        "currentResultRevision": "6",
+        "evidenceRevision": "6",
+        "inactiveDocumentIds": [
+          "ffe64a92e0fe1"
+        ],
+        "nextActionOwner": null,
+        "pendingUploadIds": [],
+        "preserveCriteria": [],
+        "requireNonzeroReuse": false,
+        "requiredReuseDocumentIds": [
+          "f143bba0e0f4f",
+          "f9c6bb6de47d5"
+        ],
+        "reservedMicros": 0,
+        "retainedObservationIds": [],
+        "runState": "succeeded",
+        "spentMicros": 0
+      },
+      "semanticRequirements": [
+        "Ground final documentary completeness in all five requests.",
+        "Do not imply acceptance, authenticity, approval or readiness."
+      ],
+      "sourceOracleCheckpoint": 3,
+      "transcriptCategory": "final",
+      "trigger": "Formation and operating agreement saved."
+    }
+  ],
+  "description": "Previously saved current and historical-period evidence, unlinked but reusable; inactive superseded copy excluded.",
+  "orderingRule": "Boundaries describe evaluator-controlled input and lifecycle transitions, not prescribed agent actions or tool/page order. All extra responses must also be logged and reviewed.",
+  "overlayId": "DEV-HISTORY",
+  "sourceHashes": {
+    "f143bba0e0f4f": "6c23501bfb356f718945d1960af964bfde20eea371e68a71269fa207e2dacd27",
+    "f17dc927cc1b2": "0c2cd5e03c10b7a0ed68fe13a28b74abc8a76f1693ef1f83056fee553f2a7a88",
+    "f367a4f796b28": "b85ec6ac203efee5003be8ea60dea336769507eb19196ba19eae723afa74426c",
+    "f5357122b5284": "9b050dee538bc15a0ea5c388cf1bb8178f6bc1acf6b345e3e5e2e2ac68601aa3",
+    "f786ca0fb2e75": "ca8bcf07e0a05ce8caf12aa83e906a2e5f424899e6336b2760c71eda60676fde",
+    "f9c6bb6de47d5": "7762315ffeb976dabd44fb0a93c1bf16b18948dd566bee9c7ba1d7964bf93a37",
+    "fda71241b691d": "7a29e6da5664adbc93994035578bd0b48ff382fd1172df32299f89d61a2ae304",
+    "fe1dc1996b18e": "79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6",
+    "fecd8a7c31cff": "e03f23cf0a40da7e6888c5d9c7fb54a9b80fd26864f4becb419ca5f8d4ba5f67",
+    "ffcf0f403cac5": "79dd135fa1b7eb91f46958f98f63bd5b9826a1360efabe2cec9e0103be16b4b6",
+    "ffe64a92e0fe1": "b62b2e6c08c4b843d2e54d2c5394913756c082ebf26f7129cf9d23ac118cb7c2"
+  },
+  "split": "development",
+  "status": "provisional",
+  "version": "journey-overlays.1"
+}

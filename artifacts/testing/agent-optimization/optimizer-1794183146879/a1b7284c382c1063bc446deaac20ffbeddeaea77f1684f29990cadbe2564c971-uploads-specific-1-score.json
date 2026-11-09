@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-specific",
+  "repeat": 1,
+  "action": {
+    "kind": "reply",
+    "message": "Yes, **Rent roll.pdf** has been uploaded and is saved in your application files.\n\nPlease note that a saved file has not yet been reviewed or approved by the lender."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "The response accurately references Rent roll.pdf from the document inventory and correctly notes that saved files have not yet been reviewed or approved."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "The response clearly answers 'yes' and identifies Rent roll.pdf as saved in the application files without claiming review or acceptance."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "In accordance with the rubric, no next steps were necessary, and none were provided."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is concise and does not repeat information."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 29,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 11028,
+  "elapsedMs": 19970
+}

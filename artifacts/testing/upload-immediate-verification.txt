@@ -1,0 +1,7 @@
+Candidate: exact five-file SHA256 manifest upload-immediate-handoff.json over v18 compatibility fix.
+Quick: npm run test:agent PASS, 182 tests + TypeScript.
+Focused: chat-upload-agents.integration PASS including first upload conversation, current batch only, atomic durable message, replay dedup.
+Native eval: v4 single-file + three-file cases PASS, 12 gates each; immediate queued turn asserted before any worker enqueueEvents; all newly uploaded files read; one investigation and current borrower update; no extra message; automatic preference remains disabled.
+Final eval reports: artifacts/evals/chat-upload/immediate-forward-batches-final/report.json and multi-file/report.json.
+Synthetic native agents, no provider calls; does not establish live model quality or real browser latency.
+Full build/integration and live release: owned by isolated deployment chat. Browser checklist NOT RUN in source checkout.

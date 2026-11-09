@@ -20,18 +20,30 @@
     "test:ai-integration": "tsx tests/ai.integration.ts",
     "test:jobs-integration": "tsx tests/jobs.integration.ts",
     "test:workflow-integration": "tsx tests/workflow.integration.ts",
+    "test:chat-integration": "tsx tests/borrower-chat.integration.ts",
     "eval:ai": "tsx scripts/evaluate-models.ts",
-    "metrics:export": "tsx scripts/export-ai-metrics.ts"
+    "metrics:export": "tsx scripts/export-ai-metrics.ts",
+    "test:agent": "node scripts/test-agent.mjs",
+    "mastra:pilot": "tsx scripts/mastra-pilot-server.ts",
+    "test:borrower-agents": "tsx tests/borrower-agents.integration.ts",
+    "test:incremental-findings": "tsx tests/incremental-findings.integration.ts",
+    "eval:chat-upload": "tsx tests/chat-upload-journey.eval.ts"
   },
   "dependencies": {
+    "@hono/node-server": "1.19.18",
     "@kenjiuno/msgreader": "^1.29.0",
     "@mastra/core": "^1.82.0",
+    "@mastra/duckdb": "1.18.0",
+    "@mastra/hono": "1.7.24",
+    "@mastra/libsql": "1.29.0",
+    "@mastra/observability": "1.23.1",
     "@napi-rs/canvas": "^1.1.0",
     "@tesseract.js-data/eng": "^1.0.0",
     "better-auth": "^1.7.18",
     "exceljs": "^4.4.0",
     "fast-xml-parser": "^5.12.0",
     "fflate": "^0.8.2",
+    "hono": "4.13.5",
     "html-to-text": "^10.0.1",
     "lucide-react": "^0.468.0",
     "next": "^16.0.0",
@@ -42,9 +54,11 @@
     "postal-mime": "^4.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
     "server-only": "^0.0.1",
     "sharp": "^0.35.5",
-    "tesseract.js": "^7.0.0"
+    "tesseract.js": "^7.0.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/html-to-text": "^9.0.4",
@@ -54,6 +68,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "cfb": "^1.2.2",
+    "mastra": "1.38.0",
     "tsx": "^4.20.0",
     "typescript": "^5.9.3"
   },

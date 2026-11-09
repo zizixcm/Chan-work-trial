@@ -1,0 +1,74 @@
+{
+  "mode": "live",
+  "model": "openrouter/google/gemini-2.5-flash",
+  "configurationDigest": "01209da8670c575c93304ccd968b76d0930d6b9ab693accb414b21d306e57ec6",
+  "fixture": {
+    "id": "uploads-empty",
+    "question": "What's been uploaded?",
+    "inventory": {
+      "application": {
+        "borrowerName": "Example LLC",
+        "propertyName": "Example Plaza",
+        "address": "1 Example St",
+        "transactionType": "Refinance"
+      },
+      "contentRevision": "1",
+      "documents": [],
+      "requirements": [
+        {
+          "requirementId": "r1",
+          "title": "Rent roll",
+          "owner": "Borrower",
+          "period": "Current",
+          "criteria": [
+            {
+              "id": "c1",
+              "description": "Current rent roll"
+            }
+          ]
+        }
+      ],
+      "pendingUploads": false
+    },
+    "maxWords": 80,
+    "rubric": "Say no files are saved. Briefly suggest uploading the requested current rent roll. Do not pretend to inspect evidence or report an assessment."
+  },
+  "createdAt": "2026-11-08T23:58:17.224Z",
+  "action": {
+    "kind": "reply",
+    "message": "No documents have been uploaded yet."
+  },
+  "actualMicros": 188,
+  "score": {
+    "caseId": "uploads-empty",
+    "wordCount": 6,
+    "maxWords": 80,
+    "checks": [
+      {
+        "id": "direct_reply",
+        "passed": true
+      },
+      {
+        "id": "concise",
+        "passed": true
+      },
+      {
+        "id": "answersQuestion",
+        "passed": false
+      },
+      {
+        "id": "grounded",
+        "passed": false
+      },
+      {
+        "id": "appropriateNextSteps",
+        "passed": false
+      },
+      {
+        "id": "noRepetition",
+        "passed": false
+      }
+    ],
+    "status": "needs_review"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "uploads-saved",
+  "repeat": 0,
+  "action": {
+    "kind": "reply",
+    "message": "You currently have 2 files saved:\n\n- Rent roll.pdf\n- 2025 operating statement.pdf\n\nNote that saved files have not yet been reviewed or approved."
+  },
+  "review": {
+    "grounded": {
+      "passed": true,
+      "reason": "All stated files are present in the inventory, and no ungrounded claims were made."
+    },
+    "answersQuestion": {
+      "passed": true,
+      "reason": "Accurately identifies both uploaded files in response to the user's question."
+    },
+    "appropriateNextSteps": {
+      "passed": true,
+      "reason": "Does not invent any next steps or missing document checklists, adhering to the rubric."
+    },
+    "noRepetition": {
+      "passed": true,
+      "reason": "The response is direct and free of unnecessary repetition."
+    },
+    "criticalFailures": []
+  },
+  "wordCount": 24,
+  "hardPassed": true,
+  "passed": true,
+  "costMicros": 5521,
+  "elapsedMs": 10455
+}

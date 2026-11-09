@@ -1,0 +1,35 @@
+{
+  "candidate": "/Users/chanrao/Developer/proximity-releases/batch-upload-tuning-20261108-v1",
+  "url": "http://127.0.0.1:3112/",
+  "fixture": "BATCH-01 R2 synthetic b01-app",
+  "identityFiles": {
+    "candidate.json": "ba752fea0af2bf03975bbddc4432733f52c568f061f6b08e4a5264f2c72fa512",
+    "artifacts/testing/batch-manifest.json": "200589bd214d0eec25b5c2658bc144dcdbe1ea63d707fad64615e8958bf36426"
+  },
+  "checks": {
+    "synthetic_signin": "PASS",
+    "saved_two_file_progress": "PASS: each file shows received, readability, requirement match and document checks in order",
+    "refresh_persistence": "PASS: same receipt, response and two-file review available after reload; no visible duplicated receipt",
+    "desktop_1280x900": "PASS within inspected review: scrollWidth=1280; sticky quick questions/composer; rows accessible by scrolling",
+    "mobile_390x844": "PASS within inspected review: scrollWidth=390; stacked stages; sticky quick questions/composer",
+    "left_checkmark": "PASS observed in final Current rent roll status and current-findings heading; operating statements have no completion check",
+    "idle_activity": "PASS for observed terminal fixture: no working indicator; saved Upload review is collapsed initially and expandable",
+    "terminal_status_consistency": "FAIL: final chat calls leases Not satisfied while current findings say Cannot determine yet",
+    "live_stage_visibility": "NOT MEASURED: review completed before browser observation; no worker on schema",
+    "receipt_latency": "NOT MEASURED: fixture prepopulated by eval",
+    "upload_commit_to_queue": "NOT RUN through browser in this retained fixture",
+    "single_file": "NOT RUN through browser",
+    "replay_and_failure_recovery": "NOT RUN through browser",
+    "active_reconnect": "NOT RUN; completed-state reload only",
+    "console_errors": "NOT RUN"
+  },
+  "screenshots": [
+    "desktop-stages.png",
+    "mobile-stages.png"
+  ],
+  "limits": [
+    "No provider calls or stable Heritage mutations by this browser check.",
+    "Candidate R2 remains unpromoted; reported semantic and latency failures are not waived by presentation checks.",
+    "These observations do not transfer to revised v2 or another build."
+  ]
+}

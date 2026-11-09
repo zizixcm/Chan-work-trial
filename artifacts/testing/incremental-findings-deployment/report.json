@@ -1,0 +1,25 @@
+{
+  "release": "/Users/chanrao/Developer/proximity-releases/unified-pilot-20261108-v11",
+  "automated": "8 full-equivalent stages, native Mastra integration and incremental database integration PASS",
+  "tablesPreserved": true,
+  "workPreserved": true,
+  "ledgerPreserved": true,
+  "manifestMismatches": [],
+  "browser": "BLOCKED: browser.user unavailable; no UI code changes",
+  "liveEval": "Not run for incremental change; timing improvement unmeasured",
+  "migrationRequired": false,
+  "app": "http://localhost:3102/",
+  "studio": "http://127.0.0.1:4111/",
+  "httpHealth": {
+    "pilot": 200,
+    "studio": 200
+  },
+  "worker": "bounded-live; idle ticks confirmed",
+  "registryChange": {
+    "file": "2026 YTD Balance Sheet.pdf",
+    "sha256": "73604b491643854e870c8fac53ddaf89f3861b91c122fb34d6c1f88f7ccb022c",
+    "reason": "User uploaded a byte-identical file from the previously authorized Heritage source folder. Admit only that hash; caps and provider permission unchanged.",
+    "beforeCount": 25,
+    "afterCount": 26
+  }
+}

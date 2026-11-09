@@ -1,0 +1,1 @@
+PASS: native Mastra Workflow/runEvals/scorer drives real controllers: delegation, TXT reader, clarification/answer, completeness, source locations, shared cost, replay/access/stale fences and local traces. Simulated model only; no provider calls.

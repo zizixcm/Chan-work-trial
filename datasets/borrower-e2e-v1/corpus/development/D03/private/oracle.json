@@ -1,0 +1,2076 @@
+{
+  "checkpoints": [
+    {
+      "activeDocumentIds": [
+        "f50b81f335dfa",
+        "fe781762d5d12",
+        "f8aebea604683",
+        "f36aa3d0b29e5"
+      ],
+      "checkpoint": 1,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe781762d5d12",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2211.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D03-102. Property: Copper Finch; unit 102.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2451.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f50b81f335dfa",
+              "fe781762d5d12",
+              "f8aebea604683",
+              "f36aa3d0b29e5"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.chain",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Copper Finch"
+          },
+          "missingDocumentIds": [
+            "f075f94def30d"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Copper Finch"
+          },
+          "missingDocumentIds": [
+            "f075f94def30d"
+          ],
+          "reason": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2211.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D03-102. Property: Copper Finch; unit 102.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2451.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8aebea604683",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 55944; other income USD 0.",
+                "Operating expenses USD 18648; NOI USD 37296.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8aebea604683",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f36aa3d0b29e5",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 42708; other income USD 0.",
+                "Operating expenses USD 14236; NOI USD 28472.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f36aa3d0b29e5",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Copper Finch"
+          },
+          "missingDocumentIds": [
+            "f075f94def30d"
+          ],
+          "reason": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2211.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D03-102. Property: Copper Finch; unit 102.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2451.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f8aebea604683",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 55944; other income USD 0.",
+                "Operating expenses USD 18648; NOI USD 37296.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f36aa3d0b29e5",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 42708; other income USD 0.",
+                "Operating expenses USD 14236; NOI USD 28472.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f8aebea604683",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f36aa3d0b29e5",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f50b81f335dfa",
+              "fe781762d5d12",
+              "f8aebea604683",
+              "f36aa3d0b29e5"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete July 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-07",
+            "subject": "Copper Finch Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f53a259b9463b"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f50b81f335dfa",
+              "fe781762d5d12",
+              "f8aebea604683",
+              "f36aa3d0b29e5"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete August 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-08",
+            "subject": "Copper Finch Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f85ba8c80c137"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f50b81f335dfa",
+              "fe781762d5d12",
+              "f8aebea604683",
+              "f36aa3d0b29e5"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Complete September 2026 statement for the declared borrower account and holder.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09",
+            "subject": "Copper Finch Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f668e376e80b5"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f50b81f335dfa",
+              "fe781762d5d12",
+              "f8aebea604683",
+              "f36aa3d0b29e5"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Formation certificate identifies the declared borrower.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Copper Finch Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f0f74c541e59a"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f50b81f335dfa",
+              "fe781762d5d12",
+              "f8aebea604683",
+              "f36aa3d0b29e5"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Operating agreement and all declared applicable entity amendments are supplied.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Copper Finch Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f8663b151c4c7"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f50b81f335dfa",
+              "fe781762d5d12",
+              "f8aebea604683",
+              "f36aa3d0b29e5"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": null,
+            "subject": "Copper Finch Holdings LLC"
+          },
+          "missingDocumentIds": [
+            "f8663b151c4c7"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f50b81f335dfa",
+        "fe781762d5d12",
+        "f8aebea604683",
+        "f36aa3d0b29e5",
+        "f53a259b9463b",
+        "f85ba8c80c137",
+        "f668e376e80b5",
+        "f0f74c541e59a",
+        "f8663b151c4c7"
+      ],
+      "checkpoint": 2,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe781762d5d12",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2211.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D03-102. Property: Copper Finch; unit 102.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2451.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": {
+            "inventory": [
+              "f50b81f335dfa",
+              "fe781762d5d12",
+              "f8aebea604683",
+              "f36aa3d0b29e5",
+              "f53a259b9463b",
+              "f85ba8c80c137",
+              "f668e376e80b5",
+              "f0f74c541e59a",
+              "f8663b151c4c7"
+            ],
+            "rule": "For global absence inspect every supplied active page; targeted missing-page finding also requires explicit statement pagination. Uninspected evidence supports uncertainty, never confident absence."
+          },
+          "assertionSupport": [],
+          "criterionId": "R2.chain",
+          "gap": {
+            "description": "Required documentary component is not yet supplied.",
+            "documentRole": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+            "kind": "missing_evidence",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Copper Finch"
+          },
+          "missingDocumentIds": [
+            "f075f94def30d"
+          ],
+          "reason": "Required documentary component is not yet supplied.",
+          "state": "unmet",
+          "supportFacts": [],
+          "supportGroups": []
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": {
+            "description": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+            "documentRole": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-09-30",
+            "subject": "Copper Finch"
+          },
+          "missingDocumentIds": [
+            "f075f94def30d"
+          ],
+          "reason": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2211.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D03-102. Property: Copper Finch; unit 102.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2451.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8aebea604683",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 55944; other income USD 0.",
+                "Operating expenses USD 18648; NOI USD 37296.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8aebea604683",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f36aa3d0b29e5",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 42708; other income USD 0.",
+                "Operating expenses USD 14236; NOI USD 28472.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f36aa3d0b29e5",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": {
+            "description": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+            "documentRole": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+            "kind": "clarification",
+            "owner": "borrower",
+            "period": "2026-01-01/2026-09-30",
+            "subject": "Copper Finch"
+          },
+          "missingDocumentIds": [
+            "f075f94def30d"
+          ],
+          "reason": "Current roll differs from original lease; applicable amendment effective dates are not fully documented. Neither source is presumed wrong.",
+          "state": "unknown",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2211.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D03-102. Property: Copper Finch; unit 102.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2451.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f8aebea604683",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 55944; other income USD 0.",
+                "Operating expenses USD 18648; NOI USD 37296.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f36aa3d0b29e5",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 42708; other income USD 0.",
+                "Operating expenses USD 14236; NOI USD 28472.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f8aebea604683",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f36aa3d0b29e5",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f53a259b9463b",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7351.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f53a259b9463b",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Account ending 7351. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f53a259b9463b",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f53a259b9463b",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f85ba8c80c137",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7351.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f85ba8c80c137",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Account ending 7351. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f85ba8c80c137",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f85ba8c80c137",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f668e376e80b5",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7351.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f668e376e80b5",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Account ending 7351. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f668e376e80b5",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f668e376e80b5",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f0f74c541e59a",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Copper Finch Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Ivo Pell. Fictional registry reference D03-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f0f74c541e59a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8663b151c4c7",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Copper Finch Holdings LLC. Effective 2024-10-01.",
+                "Members: Ivo Pell 60%; Runa Dax 40%. Total ownership 100%.",
+                "Manager: Ivo Pell. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Ivo Pell; member signature /s/ Runa Dax; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8663b151c4c7",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8663b151c4c7",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Copper Finch Holdings LLC. Effective 2024-10-01.",
+                "Members: Ivo Pell 60%; Runa Dax 40%. Total ownership 100%.",
+                "Manager: Ivo Pell. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Ivo Pell; member signature /s/ Runa Dax; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8663b151c4c7",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    },
+    {
+      "activeDocumentIds": [
+        "f50b81f335dfa",
+        "fe781762d5d12",
+        "f8aebea604683",
+        "f36aa3d0b29e5",
+        "f53a259b9463b",
+        "f85ba8c80c137",
+        "f668e376e80b5",
+        "f0f74c541e59a",
+        "f8663b151c4c7",
+        "f075f94def30d"
+      ],
+      "checkpoint": 3,
+      "correction": {},
+      "expectedBehavior": [
+        "Explain arrivals and their supported requests.",
+        "Describe partial support and precise remaining pieces.",
+        "Preserve earlier supported findings unless relevant evidence changed.",
+        "Give focused next actions with borrower/lender/operator ownership."
+      ],
+      "findings": [
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.identity",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Rent roll identifies the declared property and reporting date 2026-09-30.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R1.units",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Roll includes all declared units, tenants, monthly rents and lease start/end dates.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.leases",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "fe781762d5d12",
+              "page": 1,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2211.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 2,
+              "semanticRule": "Executed-copy evidence for each declared occupied unit, identifying parties, property, rent and term.",
+              "visibleLines": [
+                "Lease D03-102. Property: Copper Finch; unit 102.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2451.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.chain",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f075f94def30d",
+              "page": 1,
+              "semanticRule": "Applicable lease amendments are supplied; an explicit no-amendments declaration resolves applicability only.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101; landlord Copper Finch Holdings LLC; tenant Copper Studio.",
+                "Amendment 1, effective 2026-04-01: monthly base rent becomes USD 2336.",
+                "Other terms unchanged. Landlord /s/ Ivo Pell; tenant /s/ Runa Dax; both dated 2026-03-20."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f075f94def30d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R2.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2211.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 2,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D03-102. Property: Copper Finch; unit 102.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2451.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f075f94def30d",
+              "page": 1,
+              "semanticRule": "Explain material lease/roll differences using the applicable document chain; unresolved contradictions remain uncertain.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101; landlord Copper Finch Holdings LLC; tenant Copper Studio.",
+                "Amendment 1, effective 2026-04-01: monthly base rent becomes USD 2336.",
+                "Other terms unchanged. Landlord /s/ Ivo Pell; tenant /s/ Runa Dax; both dated 2026-03-20."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f075f94def30d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.year",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8aebea604683",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2025-01-01 through 2025-12-31.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 55944; other income USD 0.",
+                "Operating expenses USD 18648; NOI USD 37296.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8aebea604683",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.current",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f36aa3d0b29e5",
+              "page": 1,
+              "semanticRule": "Actual operating results for the declared property, 2026-01-01 through 2026-09-30.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 42708; other income USD 0.",
+                "Operating expenses USD 14236; NOI USD 28472.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f36aa3d0b29e5",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R3.compare",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f50b81f335dfa",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+                "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+                "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Studio.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2211.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "fe781762d5d12",
+              "page": 2,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D03-102. Property: Copper Finch; unit 102.",
+                "Landlord: Copper Finch Holdings LLC; tenant: Copper Supply.",
+                "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2451.",
+                "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+                "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+                "Signature marks are fictional; this is an executed-copy simulation."
+              ]
+            },
+            {
+              "documentId": "f8aebea604683",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 55944; other income USD 0.",
+                "Operating expenses USD 18648; NOI USD 37296.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f36aa3d0b29e5",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+                "Basis: accrual. ACTUAL RESULTS.",
+                "Rental income USD 42708; other income USD 0.",
+                "Operating expenses USD 14236; NOI USD 28472.",
+                "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+                "Cash deposits in bank statements are not a measure of accrual income."
+              ]
+            },
+            {
+              "documentId": "f075f94def30d",
+              "page": 1,
+              "semanticRule": "Compare contractual rent with reported rental income on stated bases; explain material differences without assuming error.",
+              "visibleLines": [
+                "Lease D03-101. Property: Copper Finch; unit 101; landlord Copper Finch Holdings LLC; tenant Copper Studio.",
+                "Amendment 1, effective 2026-04-01: monthly base rent becomes USD 2336.",
+                "Other terms unchanged. Landlord /s/ Ivo Pell; tenant /s/ Runa Dax; both dated 2026-03-20."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f50b81f335dfa",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "fe781762d5d12",
+                "page": 2
+              }
+            ],
+            [
+              {
+                "documentId": "f8aebea604683",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f36aa3d0b29e5",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f075f94def30d",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.july",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f53a259b9463b",
+              "page": 1,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7351.",
+                "Statement month: 2026-07. Statement page 1 of 2.",
+                "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+              ]
+            },
+            {
+              "documentId": "f53a259b9463b",
+              "page": 2,
+              "semanticRule": "Complete July 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Account ending 7351. Statement month: 2026-07. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f53a259b9463b",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f53a259b9463b",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.august",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f85ba8c80c137",
+              "page": 1,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7351.",
+                "Statement month: 2026-08. Statement page 1 of 2.",
+                "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+              ]
+            },
+            {
+              "documentId": "f85ba8c80c137",
+              "page": 2,
+              "semanticRule": "Complete August 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Account ending 7351. Statement month: 2026-08. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f85ba8c80c137",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f85ba8c80c137",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R4.september",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f668e376e80b5",
+              "page": 1,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7351.",
+                "Statement month: 2026-09. Statement page 1 of 2.",
+                "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+              ]
+            },
+            {
+              "documentId": "f668e376e80b5",
+              "page": 2,
+              "semanticRule": "Complete September 2026 statement for the declared borrower account and holder.",
+              "visibleLines": [
+                "Holder: Copper Finch Holdings LLC. Account ending 7351. Statement month: 2026-09. Statement page 2 of 2.",
+                "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+                "End of statement. Deposits are transfers, not rent receipts."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f668e376e80b5",
+                "page": 1
+              }
+            ],
+            [
+              {
+                "documentId": "f668e376e80b5",
+                "page": 2
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.formation",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f0f74c541e59a",
+              "page": 1,
+              "semanticRule": "Formation certificate identifies the declared borrower.",
+              "visibleLines": [
+                "Entity: Copper Finch Holdings LLC. Entity type: limited liability company.",
+                "Formed 2024-10-01. Organizer: Ivo Pell. Fictional registry reference D03-REG.",
+                "This document establishes the named entity; it does not itself establish current manager authority."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f0f74c541e59a",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.governing",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8663b151c4c7",
+              "page": 1,
+              "semanticRule": "Operating agreement and all declared applicable entity amendments are supplied.",
+              "visibleLines": [
+                "Entity: Copper Finch Holdings LLC. Effective 2024-10-01.",
+                "Members: Ivo Pell 60%; Runa Dax 40%. Total ownership 100%.",
+                "Manager: Ivo Pell. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Ivo Pell; member signature /s/ Runa Dax; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8663b151c4c7",
+                "page": 1
+              }
+            ]
+          ]
+        },
+        {
+          "absenceCoverage": null,
+          "assertionSupport": [],
+          "criterionId": "R5.consistency",
+          "gap": null,
+          "missingDocumentIds": [],
+          "reason": "Supplied evidence covers the criterion.",
+          "state": "met",
+          "supportFacts": [
+            {
+              "documentId": "f8663b151c4c7",
+              "page": 1,
+              "semanticRule": "Ownership totals 100%; current manager and signing provisions are consistent across supplied entity documents. Unclear legal authority goes to lender.",
+              "visibleLines": [
+                "Entity: Copper Finch Holdings LLC. Effective 2024-10-01.",
+                "Members: Ivo Pell 60%; Runa Dax 40%. Total ownership 100%.",
+                "Manager: Ivo Pell. Manager may execute refinancing documents for this company.",
+                "Member signature /s/ Ivo Pell; member signature /s/ Runa Dax; dated 2024-10-01."
+              ]
+            }
+          ],
+          "supportGroups": [
+            [
+              {
+                "documentId": "f8663b151c4c7",
+                "page": 1
+              }
+            ]
+          ]
+        }
+      ],
+      "forbiddenClaims": [
+        "lender accepted",
+        "loan approved",
+        "signature authenticated",
+        "legally enforceable",
+        "ready to submit",
+        "deleted rejected file",
+        "automatic linking enabled"
+      ],
+      "rejectedMatches": []
+    }
+  ],
+  "crossDocumentArithmetic": {
+    "annualBaseRent": 55944,
+    "calculation": "2025: sum original monthly rents *12. 2026: original *9 plus amendment 1 uplift for April-September and amendment 2 uplift for July-September when applicable.",
+    "currentMonthlyRent": 4787,
+    "currentPeriodBaseRent": 42708
+  },
+  "roles": {
+    "amend0": "f075f94def30d",
+    "annual": "f8aebea604683",
+    "bank7": "f53a259b9463b",
+    "bank8": "f85ba8c80c137",
+    "bank9": "f668e376e80b5",
+    "current": "f36aa3d0b29e5",
+    "formation": "f0f74c541e59a",
+    "governing": "f8663b151c4c7",
+    "leases": "fe781762d5d12",
+    "roll": "f50b81f335dfa"
+  },
+  "semanticReviewRequired": true,
+  "sourcePages": {
+    "f075f94def30d": [
+      {
+        "lines": [
+          "Lease D03-101. Property: Copper Finch; unit 101; landlord Copper Finch Holdings LLC; tenant Copper Studio.",
+          "Amendment 1, effective 2026-04-01: monthly base rent becomes USD 2336.",
+          "Other terms unchanged. Landlord /s/ Ivo Pell; tenant /s/ Runa Dax; both dated 2026-03-20."
+        ],
+        "title": "Lease amendment"
+      }
+    ],
+    "f0f74c541e59a": [
+      {
+        "lines": [
+          "Entity: Copper Finch Holdings LLC. Entity type: limited liability company.",
+          "Formed 2024-10-01. Organizer: Ivo Pell. Fictional registry reference D03-REG.",
+          "This document establishes the named entity; it does not itself establish current manager authority."
+        ],
+        "title": "Certificate of formation"
+      }
+    ],
+    "f36aa3d0b29e5": [
+      {
+        "lines": [
+          "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2026-01-01 to 2026-09-30.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 42708; other income USD 0.",
+          "Operating expenses USD 14236; NOI USD 28472.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "f50b81f335dfa": [
+      {
+        "lines": [
+          "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Reporting date: 2026-09-30.",
+          "Unit 101: Copper Studio; monthly base rent USD 2336; lease 2025-01-01 to 2029-12-31.",
+          "Unit 102: Copper Supply; monthly base rent USD 2451; lease 2025-01-01 to 2029-12-31."
+        ],
+        "title": "Occupancy schedule"
+      }
+    ],
+    "f53a259b9463b": [
+      {
+        "lines": [
+          "Holder: Copper Finch Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7351.",
+          "Statement month: 2026-07. Statement page 1 of 2.",
+          "Opening USD 50000; deposits USD 12000; withdrawals USD 9000; closing USD 53000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Copper Finch Holdings LLC. Account ending 7351. Statement month: 2026-07. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f668e376e80b5": [
+      {
+        "lines": [
+          "Holder: Copper Finch Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7351.",
+          "Statement month: 2026-09. Statement page 1 of 2.",
+          "Opening USD 56000; deposits USD 12000; withdrawals USD 9000; closing USD 59000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Copper Finch Holdings LLC. Account ending 7351. Statement month: 2026-09. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f85ba8c80c137": [
+      {
+        "lines": [
+          "Holder: Copper Finch Holdings LLC. Fictional bank: Paper Lantern Test Bank. Account ending 7351.",
+          "Statement month: 2026-08. Statement page 1 of 2.",
+          "Opening USD 53000; deposits USD 12000; withdrawals USD 9000; closing USD 56000."
+        ],
+        "title": "Account statement"
+      },
+      {
+        "lines": [
+          "Holder: Copper Finch Holdings LLC. Account ending 7351. Statement month: 2026-08. Statement page 2 of 2.",
+          "Deposits: transfers USD 12000. Withdrawals: operating payments USD 9000.",
+          "End of statement. Deposits are transfers, not rent receipts."
+        ],
+        "title": "Account activity"
+      }
+    ],
+    "f8663b151c4c7": [
+      {
+        "lines": [
+          "Entity: Copper Finch Holdings LLC. Effective 2024-10-01.",
+          "Members: Ivo Pell 60%; Runa Dax 40%. Total ownership 100%.",
+          "Manager: Ivo Pell. Manager may execute refinancing documents for this company.",
+          "Member signature /s/ Ivo Pell; member signature /s/ Runa Dax; dated 2024-10-01."
+        ],
+        "title": "Operating agreement"
+      }
+    ],
+    "f8aebea604683": [
+      {
+        "lines": [
+          "Property: Copper Finch. Owner: Copper Finch Holdings LLC. Period: 2025-01-01 to 2025-12-31.",
+          "Basis: accrual. ACTUAL RESULTS.",
+          "Rental income USD 55944; other income USD 0.",
+          "Operating expenses USD 18648; NOI USD 37296.",
+          "Income is base rent earned; no vacancies, concessions or other rent adjustments.",
+          "Cash deposits in bank statements are not a measure of accrual income."
+        ],
+        "title": "Property operating report"
+      }
+    ],
+    "fe781762d5d12": [
+      {
+        "lines": [
+          "Lease D03-101. Property: Copper Finch; unit 101.",
+          "Landlord: Copper Finch Holdings LLC; tenant: Copper Studio.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2211.",
+          "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      },
+      {
+        "lines": [
+          "Lease D03-102. Property: Copper Finch; unit 102.",
+          "Landlord: Copper Finch Holdings LLC; tenant: Copper Supply.",
+          "Term: 2025-01-01 to 2029-12-31. Monthly base rent USD 2451.",
+          "Landlord signature: /s/ Ivo Pell, manager; dated 2024-12-20.",
+          "Tenant signature: /s/ Runa Dax, authorized tenant representative; dated 2024-12-20.",
+          "Signature marks are fictional; this is an executed-copy simulation."
+        ],
+        "title": "Lease instrument"
+      }
+    ]
+  },
+  "status": "provisional",
+  "version": "CRE-E2E-oracle.1"
+}
